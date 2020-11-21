@@ -13,6 +13,9 @@ server-dev:
 build-dev-api-ts:
 	 npx swagger-typescript-api -p swagger.yaml -o ./
 
+server-dev-2:
+	/bin/sh -c 'php -S localhost:8000 -t web &'
+
 database-export:
 	php wp-cli.phar db export base.sql  --allow-root
 

@@ -7,18 +7,20 @@ use App\Action\ActionInterface;
 
 class ActionService
 {
+    /**
+     * @var ActionInterface[]
+     */
     private array $actions;
 
     public function registerActions(): void
     {
         foreach ($this->actions as $action) {
-            [$event, $action] = $action;
-            add_action($event, $action);
+            add_action($action::getAction(), $action);
         }
     }
 
-    public function addAction(string $event, ActionInterface $action): void
+    public function addAction(ActionInterface $action): void
     {
-        $this->actions []= [$event, $action];
+        $this->actions []= $action;
     }
 }

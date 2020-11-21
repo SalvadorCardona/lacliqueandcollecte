@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 
+use App\Action\ActionInterface;
 use App\Action\ApiLoaderAction;
 use App\Model\Config;
 use App\Routing\CompositeRoutingContext;
@@ -13,8 +14,8 @@ return function (ContainerBuilder $containerBuilder) {
         ActionService::class => function (ContainerInterface $container) {
             $actionService = new ActionService();
 
-            foreach ($container->get(Config::ACTION) as $event => $action) {
-                $actionService->addAction($event, $container->get($action));
+            foreach ($container->get(Config::ACTION) as $action) {
+                $actionService->addAction($container->get($action));
             }
 
             return $actionService;

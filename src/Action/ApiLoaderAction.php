@@ -39,4 +39,9 @@ class ApiLoaderAction implements ActionInterface
             'blocking' => $api->isBlocking()
         ]);
     }
+
+    public static function getAction(): string
+    {
+        return 'rest_api_init';
+    }
 }

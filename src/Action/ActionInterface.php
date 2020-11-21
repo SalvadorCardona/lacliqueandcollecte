@@ -7,4 +7,6 @@ namespace App\Action;
 interface ActionInterface
 {
     public function __invoke(): void;
+
+    public static function getAction(): string;
 }

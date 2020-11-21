@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
+use App\Action\AddAssets;
 use App\Action\ApiLoaderAction;
 use App\Action\PostTypeSeller;
+use App\Action\RegisterElementorWidget;
 use App\Action\WordpressFeatureAction;
 use App\Api\MenuApi;
 use App\Api\PostByIdApi;
@@ -26,9 +28,11 @@ return [
         RoutingApi::class
     ],
     Config::ACTION => [
-        'rest_api_init' => ApiLoaderAction::class,
-        'after_setup_theme' => WordpressFeatureAction::class,
-        'init' => PostTypeSeller::class
+        ApiLoaderAction::class,
+        WordpressFeatureAction::class,
+        PostTypeSeller::class,
+        AddAssets::class,
+        RegisterElementorWidget::class
     ],
     Config::ROUTING_CONTEXT => [
         PostContext::class,
