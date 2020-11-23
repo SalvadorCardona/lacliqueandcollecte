@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 use App\Action\ActionInterface;
 use App\Action\ApiLoaderAction;
+use App\Elementor\WidgetsRegister;
 use App\Model\Config;
 use App\Routing\CompositeRoutingContext;
 use App\Service\ActionService;
@@ -39,6 +40,17 @@ return function (ContainerBuilder $containerBuilder) {
             }
 
             return $compositeRoutingContext;
-        }
+        },
+
+        WidgetsRegister::class => function (ContainerInterface $container) {
+            $widgetsRegister = WidgetsRegister::getInstance();
+
+            foreach ($container->get(Config::ELEMENTOR_WIDGETS) as $widget) {
+                dump($widget);
+                $widgetsRegister->addWidget($container->get($widget));
+            }
+
+            return $widgetsRegister;
+        },
     ]);
 };

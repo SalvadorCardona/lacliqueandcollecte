@@ -1302,7 +1302,7 @@ if ( ! function_exists( 'generate_customize_register' ) ) {
 			'generate_settings[footer_widget_setting]',
 			array(
 				'type' => 'select',
-				'label' => __( 'Footer Widgets', 'generatepress' ),
+				'label' => __( 'Footer WidgetsRegister', 'generatepress' ),
 				'section' => 'generate_layout_footer',
 				'choices' => array(
 					'0' => '0',

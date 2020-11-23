@@ -27,7 +27,7 @@ final class Modules_Manager {
 			'usage',
 			'screenshots',
 
-			// Modules with Widgets.
+			// Modules with WidgetsRegister.
 			'theme-builder',
 			'posts',
 			'gallery',

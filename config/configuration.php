@@ -12,6 +12,7 @@ use App\Api\PostByIdApi;
 use App\Api\PostSlugApi;
 use App\Api\RoutingApi;
 use App\Api\TranslationApi;
+use App\Elementor\Widgets\TestWidget;
 use App\Model\Config;
 use App\Routing\Contexts\PostContext;
 use App\Routing\Contexts\ProductContext;
@@ -25,19 +26,22 @@ return [
         PostByIdApi::class,
         PostSlugApi::class,
         TranslationApi::class,
-        RoutingApi::class
+        RoutingApi::class,
     ],
     Config::ACTION => [
+        RegisterElementorWidget::class,
         ApiLoaderAction::class,
         WordpressFeatureAction::class,
         PostTypeSeller::class,
         AddAssets::class,
-        RegisterElementorWidget::class
     ],
     Config::ROUTING_CONTEXT => [
         PostContext::class,
         ProductContext::class,
         SearchContext::class,
         TaxomanyContext::class
+    ],
+    Config::ELEMENTOR_WIDGETS => [
+        TestWidget::class,
     ]
 ];

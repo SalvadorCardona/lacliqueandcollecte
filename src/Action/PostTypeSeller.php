@@ -4,7 +4,7 @@
 namespace App\Action;
 
 
-use App\Elementor\Widgets;
+use App\Elementor\WidgetsRegister;
 
 class PostTypeSeller implements ActionInterface
 {

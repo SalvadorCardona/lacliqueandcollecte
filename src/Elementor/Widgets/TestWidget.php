@@ -1,13 +1,12 @@
 <?php
 
 
-namespace App\Elementor;
+namespace App\Elementor\Widgets;
 
-use Elementor\Widget_Base;
+use App\Elementor\WidgetBase;
 
-class TestWidget extends Widget_Base
+class TestWidget extends WidgetBase
 {
-
     /**
      * @inheritDoc
      */

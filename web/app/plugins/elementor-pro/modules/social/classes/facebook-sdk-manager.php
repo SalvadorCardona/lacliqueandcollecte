@@ -95,7 +95,7 @@ class Facebook_SDK_Manager {
 				echo '<hr><h2>' . esc_html__( 'Facebook SDK', 'elementor-pro' ) . '</h2>';
 
 				/* translators: %s: Facebook App Setting link. */
-				echo sprintf( __( 'Facebook SDK lets you connect to your <a href="%s" target="_blank">dedicated application</a> so you can track the Facebook Widgets analytics on your site.', 'elementor-pro' ), 'https://developers.facebook.com/docs/apps/register/' ) .
+				echo sprintf( __( 'Facebook SDK lets you connect to your <a href="%s" target="_blank">dedicated application</a> so you can track the Facebook WidgetsRegister analytics on your site.', 'elementor-pro' ), 'https://developers.facebook.com/docs/apps/register/' ) .
 					 '<br>' .
 					 '<br>' .
 					 __( 'If you are using the Facebook Comments Widget, you can add moderating options through your application. Note that this option will not work on local sites and on domains that don\'t have public access.', 'elementor-pro' );

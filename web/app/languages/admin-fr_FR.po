@@ -460,7 +460,7 @@ msgid "<a href=\"https://wordpress.org/support/article/settings-media-screen/\">
 msgstr "<a href=\"https://wordpress.org/support/article/settings-media-screen/\">Documentation sur les réglages des médias</a>"
 
 #: wp-admin/widgets.php:83
-msgid "<a href=\"https://wordpress.org/support/article/appearance-widgets-screen/\">Documentation on Widgets</a>"
+msgid "<a href=\"https://wordpress.org/support/article/appearance-widgets-screen/\">Documentation on WidgetsRegister</a>"
 msgstr "<a href=\"https://wordpress.org/support/article/appearance-widgets-screen/\">Documentation sur les widgets</a>"
 
 #: wp-admin/import.php:31
@@ -2494,7 +2494,7 @@ msgstr "<a href=\"%s\" target=\"_blank\">Cliquez ici pour en apprendre davantage
 msgid "Add widget: %s"
 msgstr "Ajouter le widget : %s"
 
-#. translators: %s: Widgets sidebar name.
+#. translators: %s: WidgetsRegister sidebar name.
 #: wp-admin/includes/widgets.php:95
 msgid "Add to: %s"
 msgstr "Ajouter à : %s"
@@ -4460,8 +4460,8 @@ msgid "Blog"
 msgstr "Blog"
 
 #: wp-admin/includes/theme.php:289
-msgid "Footer Widgets"
-msgstr "Widgets de pied de page"
+msgid "Footer WidgetsRegister"
+msgstr "WidgetsRegister de pied de page"
 
 #: wp-admin/includes/theme.php:297
 msgid "Grid Layout"
@@ -5219,7 +5219,7 @@ msgid "This will clear all items from the inactive widgets list. You will not be
 msgstr "Cela supprimera tous les éléments de la liste des widgets désactivés. Vous ne pourrez récupérer aucune personnalisation."
 
 #: wp-admin/widgets.php:482
-msgid "Clear Inactive Widgets"
+msgid "Clear Inactive WidgetsRegister"
 msgstr "Vider les widgets désactivés"
 
 #: wp-admin/users.php:146
@@ -7048,16 +7048,16 @@ msgstr "Le commentaire doit être approuvé manuellement"
 msgid "<strong>Clicking the arrow to the right of any menu item</strong> in the editor will reveal a standard group of settings. Additional settings such as link target, CSS classes, link relationships, and link descriptions can be enabled and disabled via the Screen Options tab."
 msgstr "<strong>En cliquant sur le titre de n’importe élément du menu</strong> dans l’éditeur, un ensemble de réglages standards s’ouvrira. D’autres réglages, tels que la cible du lien, les classes CSS, les relations du lien et la description du lien, peuvent être activés et désactivés dans l’onglet « Options de l’écran »."
 
-#. translators: 1: URL to Widgets screen, 2 and 3: The names of the default
+#. translators: 1: URL to WidgetsRegister screen, 2 and 3: The names of the default
 #. themes.
 #: wp-admin/nav-menus.php:543
-msgid "Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%1$s\">Widgets</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the Documentation link to the side."
-msgstr "Les menus peuvent être affichés à des emplacements définis par votre thème, et même dans les colonnes latérales grâce au widget « Menus personnalisés » de l’écran <a href=\"%1$s\">Widgets</a>. Si votre thème ne reconnaît pas encore cette fonctionnalité (les thèmes par défaut, %2$s and %3$s, les intègrent très bien), vous pouvez apprendre à ajouter cette reconnaissance vous-même en suivant le lien de documentation situé sur le côté."
+msgid "Menus can be displayed in locations defined by your theme, even used in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%1$s\">WidgetsRegister</a> screen. If your theme does not support the navigation menus feature (the default themes, %2$s and %3$s, do), you can learn about adding this support by following the Documentation link to the side."
+msgstr "Les menus peuvent être affichés à des emplacements définis par votre thème, et même dans les colonnes latérales grâce au widget « Menus personnalisés » de l’écran <a href=\"%1$s\">WidgetsRegister</a>. Si votre thème ne reconnaît pas encore cette fonctionnalité (les thèmes par défaut, %2$s and %3$s, les intègrent très bien), vous pouvez apprendre à ajouter cette reconnaissance vous-même en suivant le lien de documentation situé sur le côté."
 
-#. translators: %s: URL to Widgets screen.
+#. translators: %s: URL to WidgetsRegister screen.
 #: wp-admin/nav-menus.php:534
-msgid "Your theme does not natively support menus, but you can use them in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%s\">Widgets</a> screen."
-msgstr "Votre thème ne prend pas en charge nativement les menus, mais vous pouvez les utiliser dans la colonne latérale en ajoutant le widget « Menu de navigation » depuis l’écran <a href=\"%s\">Widgets</a>."
+msgid "Your theme does not natively support menus, but you can use them in sidebars by adding a &#8220;Navigation Menu&#8221; widget on the <a href=\"%s\">WidgetsRegister</a> screen."
+msgstr "Votre thème ne prend pas en charge nativement les menus, mais vous pouvez les utiliser dans la colonne latérale en ajoutant le widget « Menu de navigation » depuis l’écran <a href=\"%s\">WidgetsRegister</a>."
 
 #: wp-admin/install.php:385
 msgid "Sorry, that isn&#8217;t a valid email address. Email addresses look like <code>username@example.com</code>."
@@ -7650,7 +7650,7 @@ msgid "If you are looking to use the link manager, please install the <a href=\"
 msgstr "Si vous souhaitez utiliser le gestionnaire de liens, veuillez installer l’extension <a href=\"%s\">Link Manager</a>."
 
 #: wp-admin/widgets.php:77
-msgid "When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive Widgets area, where all of your widgets and their settings will have been saved."
+msgid "When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive WidgetsRegister area, where all of your widgets and their settings will have been saved."
 msgstr "En changeant de thème, il y a souvent des variations sur le nombre et l’agencement des zones de widgets et des colonnes latérales, et parfois tout cela entre en conflit, rendant la transition moins aisée. Si vous avez changé de thème et que certains widgets semblent manquer, faites défiler cet écran jusqu’en bas pour les retrouver dans la zone des widgets inactifs, où ils ont été conservés avec leurs derniers réglages."
 
 #: wp-admin/edit-tags.php:288
@@ -8805,8 +8805,8 @@ msgid "Inactive Sidebar (not used)"
 msgstr "Colonne latérale inactive (inutilisée)"
 
 #: wp-admin/widgets.php:74
-msgid "Missing Widgets"
-msgstr "Widgets manquants"
+msgid "Missing WidgetsRegister"
+msgstr "WidgetsRegister manquants"
 
 #: wp-admin/edit-tags.php:256
 msgid "You can assign keywords to your posts using <strong>tags</strong>. Unlike categories, tags have no hierarchy, meaning there&#8217;s no relationship from one tag to another."
@@ -9773,8 +9773,8 @@ msgid "Remember to click Update Media to save metadata entered or changed."
 msgstr "Pensez bien à cliquer sur le bouton « Mettre à jour le fichier » afin de conserver les métadonnées ajoutées ou modifiées."
 
 #: wp-admin/widgets.php:58
-msgid "The Available Widgets section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget."
-msgstr "La section « Widgets disponibles » contient tous les widgets que vous pouvez utiliser. Une fois le widget glissé dans la colonne latérale, il s’ouvrira pour vous permettre d’en modifier les réglages. Quand vos réglages vous satisfont, cliquez sur le bouton « Enregistrer » et le widget sera lancé sur votre site. Si vous cliquez sur « Supprimer », le widget sera retiré du site."
+msgid "The Available WidgetsRegister section contains all the widgets you can choose from. Once you drag a widget into a sidebar, it will open to allow you to configure its settings. When you are happy with the widget settings, click the Save button and the widget will go live on your site. If you click Delete, it will remove the widget."
+msgstr "La section « WidgetsRegister disponibles » contient tous les widgets que vous pouvez utiliser. Une fois le widget glissé dans la colonne latérale, il s’ouvrira pour vous permettre d’en modifier les réglages. Quand vos réglages vous satisfont, cliquez sur le bouton « Enregistrer » et le widget sera lancé sur votre site. Si vous cliquez sur « Supprimer », le widget sera retiré du site."
 
 #: wp-admin/user-new.php:393
 msgid "Email or Username"
@@ -9932,8 +9932,8 @@ msgid "FTP Password"
 msgstr "Mot de passe FTP"
 
 #: wp-admin/widgets.php:76
-msgid "Many themes show some sidebar widgets by default until you edit your sidebars, but they are not automatically displayed in your sidebar management tool. After you make your first widget change, you can re-add the default widgets by adding them from the Available Widgets area."
-msgstr "De nombreux thèmes affichent par défaut quelques widgets dans la colonne latérale, jusqu’à ce que vous la modifiez vous-mêmes. Ces widgets par défaut ne sont pas automatiquement affichés dans le gestionnaire de colonne latérale. Après avoir fait vos propres modifications de widgets, vous pouvez rajouter les widgets par défaut depuis la section « Widgets Disponibles »."
+msgid "Many themes show some sidebar widgets by default until you edit your sidebars, but they are not automatically displayed in your sidebar management tool. After you make your first widget change, you can re-add the default widgets by adding them from the Available WidgetsRegister area."
+msgstr "De nombreux thèmes affichent par défaut quelques widgets dans la colonne latérale, jusqu’à ce que vous la modifiez vous-mêmes. Ces widgets par défaut ne sont pas automatiquement affichés dans le gestionnaire de colonne latérale. Après avoir fait vos propres modifications de widgets, vous pouvez rajouter les widgets par défaut depuis la section « WidgetsRegister Disponibles »."
 
 #. translators: %s: Percent sign (%).
 #: wp-admin/options-permalink.php:36
@@ -9959,8 +9959,8 @@ msgid "To add a new user for your site, click the Add New button at the top of t
 msgstr "Pour ajouter un nouvel utilisateur à votre site, cliquez sur le bouton « Ajouter » en haut de l’écran, ou l’option « Ajouter » du menu « Utilisateurs »."
 
 #: wp-admin/widgets.php:66
-msgid "If you want to remove the widget but save its setting for possible future use, just drag it into the Inactive Widgets area. You can add them back anytime from there. This is especially helpful when you switch to a theme with fewer or different widget areas."
-msgstr "Si vous voulez retirer le widget, mais conserver ses réglages pour un possible usage futur, glissez-le simplement dans la zone « Widgets désactivés ». De là, vous pouvez les réajouter n’importe quand. C’est particulièrement utile quand vous passez à un thème avec moins de zones à widgets, ou des zones différentes."
+msgid "If you want to remove the widget but save its setting for possible future use, just drag it into the Inactive WidgetsRegister area. You can add them back anytime from there. This is especially helpful when you switch to a theme with fewer or different widget areas."
+msgstr "Si vous voulez retirer le widget, mais conserver ses réglages pour un possible usage futur, glissez-le simplement dans la zone « WidgetsRegister désactivés ». De là, vous pouvez les réajouter n’importe quand. C’est particulièrement utile quand vous passez à un thème avec moins de zones à widgets, ou des zones différentes."
 
 #: wp-admin/options-general.php:27
 msgid "Most themes display the site title at the top of every page, in the title bar of the browser, and as the identifying name for syndicated feeds. The tagline is also displayed by many themes."
@@ -10003,9 +10003,9 @@ msgstr "<strong>Envoyer des rétroliens</strong> &mdash; Un rétrolien est une m
 msgid "If you delete a link, it will be removed permanently, as Links do not have a Trash function yet."
 msgstr "Si vous supprimez un lien, il sera supprimé définitivement, car les liens n’ont pas accès à la corbeille pour le moment."
 
-#. translators: %s: URL to Widgets screen.
+#. translators: %s: URL to WidgetsRegister screen.
 #: wp-admin/link-manager.php:60
-msgid "You can add links here to be displayed on your site, usually using <a href=\"%s\">Widgets</a>. By default, links to several sites in the WordPress community are included as examples."
+msgid "You can add links here to be displayed on your site, usually using <a href=\"%s\">WidgetsRegister</a>. By default, links to several sites in the WordPress community are included as examples."
 msgstr "Vous pouvez ici ajouter les liens que vous voulez voir affichés sur votre site, généralement par le biais de <a href=\"%s\">widgets</a>. Des liens vers de nombreux sites de la communauté WordPress sont inclus par défaut."
 
 #: wp-admin/plugin-editor.php:126
@@ -10163,7 +10163,7 @@ msgid "<strong>Advice:</strong> Think very carefully about your site crashing if
 msgstr "<strong>Conseil :</strong> gardez bien en tête que si vous modifiez le thème actuellement utilisé, vos visiteurs pourraient avoir une vision déroutante de votre site."
 
 #: wp-admin/widgets.php:57
-msgid "Widgets are independent sections of content that can be placed into any widgetized area provided by your theme (commonly called sidebars). To populate your sidebars/widget areas with individual widgets, drag and drop the title bars into the desired area. By default, only the first widget area is expanded. To populate additional widget areas, click on their title bars to expand them."
+msgid "WidgetsRegister are independent sections of content that can be placed into any widgetized area provided by your theme (commonly called sidebars). To populate your sidebars/widget areas with individual widgets, drag and drop the title bars into the desired area. By default, only the first widget area is expanded. To populate additional widget areas, click on their title bars to expand them."
 msgstr "Les widgets sont des conteneurs de contenu indépendants, qui peuvent être placés dans n’importe quelle zone à widgets de votre thème (le plus souvent, la colonne latérale). Pour remplir les zones à widgets de votre colonne latérale, glissez/déposez les barres de titre dans la zone désirée. Par défaut, seule la première zone de widgets sera ouverte. Pour remplir les autres zones à widgets, cliquez sur leur barre de titre afin de les ouvrir."
 
 #: wp-admin/theme-editor.php:30
@@ -10179,7 +10179,7 @@ msgid "Enabling Accessibility Mode, via Screen Options, allows you to use Add an
 msgstr "En activant le mode « Accessibilité », via les options d’écrans, vous autorisez l’utilisation des boutons « Ajouter » et « Modifier » à la place du glisser/déposer."
 
 #: wp-admin/widgets.php:67
-msgid "Widgets may be used multiple times. You can give each widget a title, to display on your site, but it&#8217;s not required."
+msgid "WidgetsRegister may be used multiple times. You can give each widget a title, to display on your site, but it&#8217;s not required."
 msgstr "Les widgets peuvent être utilisés à plusieurs reprises. Vous pouvez donner un titre pour chaque widget, afin de l’afficher sur votre site, mais ce n’est pas obligatoire."
 
 #: wp-admin/includes/meta-boxes.php:933
@@ -10893,8 +10893,8 @@ msgid "Drag widgets here to remove them from the sidebar but keep their settings
 msgstr "Glissez ici les widgets que vous voulez retirer de la colonne latérale, tout en conservant leurs réglages actuels."
 
 #: wp-admin/widgets.php:438 wp-admin/widgets.php:441
-msgid "Available Widgets"
-msgstr "Widgets disponibles"
+msgid "Available WidgetsRegister"
+msgstr "WidgetsRegister disponibles"
 
 #: wp-admin/widgets.php:379
 msgid "Error in displaying the widget settings form."
@@ -10923,8 +10923,8 @@ msgid "Widget %s"
 msgstr "Widget %s"
 
 #: wp-admin/widgets.php:126
-msgid "Inactive Widgets"
-msgstr "Widgets désactivés"
+msgid "Inactive WidgetsRegister"
+msgstr "WidgetsRegister désactivés"
 
 #: wp-admin/includes/class-wp-users-list-table.php:300
 msgid "Change"

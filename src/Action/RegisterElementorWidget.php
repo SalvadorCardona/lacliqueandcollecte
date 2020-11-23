@@ -4,14 +4,14 @@
 namespace App\Action;
 
 
-use App\Elementor\Widgets;
+use App\Elementor\WidgetsRegister;
 
 class RegisterElementorWidget implements ActionInterface
 {
 
     public function __invoke(): void
     {
-        Widgets::get_instance();
+        WidgetsRegister::getInstance();
     }
 
     public static function getAction(): string

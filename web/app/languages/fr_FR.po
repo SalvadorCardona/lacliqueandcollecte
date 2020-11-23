@@ -887,7 +887,7 @@ msgid "Whether theme opts in to the dark editor style UI."
 msgstr "Détermine si le thème opte pour l’interface utilisateur sombre pour l’éditeur."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php:336
-msgid "Whether the theme enables Selective Refresh for Widgets being managed with the Customizer."
+msgid "Whether the theme enables Selective Refresh for WidgetsRegister being managed with the Customizer."
 msgstr "Détermine si le thème autorise le rafraîchissement sélectif des widgets par l’outil de personnalisation."
 
 #: wp-includes/rest-api/endpoints/class-wp-rest-themes-controller.php:311
@@ -5937,7 +5937,7 @@ msgstr "Type de valeur non supporté (%s)."
 
 #. translators: %s: register_widget()
 #: wp-includes/widgets.php:1143
-msgid "Widgets need to be registered using %s, before they can be displayed."
+msgid "WidgetsRegister need to be registered using %s, before they can be displayed."
 msgstr "Les widgets nécessitent d’être enregistrés en utilisant %s avant qu’ils ne puissent être affichés."
 
 #: wp-includes/widgets/class-wp-widget-media-image.php:337
@@ -6597,10 +6597,10 @@ msgstr "Créer un nouveau menu"
 msgid "New Menu"
 msgstr "Nouveau menu"
 
-#. translators: URL to the Widgets panel of the Customizer.
+#. translators: URL to the WidgetsRegister panel of the Customizer.
 #: wp-includes/class-wp-customize-nav-menus.php:633
-msgid "If your theme has widget areas, you can also add menus there. Visit the <a href=\"%s\">Widgets panel</a> and add a &#8220;Navigation Menu widget&#8221; to display a menu in a sidebar or footer."
-msgstr "Si votre thème possède des zones de widgets, vous pouvez aussi y ajouter des menus. Consultez le <a href=\"%s\">panneau Widgets</a> et ajoutez un « Widget de menu de navigation » pour afficher un menu en colonne latérale ou en pied de page."
+msgid "If your theme has widget areas, you can also add menus there. Visit the <a href=\"%s\">WidgetsRegister panel</a> and add a &#8220;Navigation Menu widget&#8221; to display a menu in a sidebar or footer."
+msgstr "Si votre thème possède des zones de widgets, vous pouvez aussi y ajouter des menus. Consultez le <a href=\"%s\">panneau WidgetsRegister</a> et ajoutez un « Widget de menu de navigation » pour afficher un menu en colonne latérale ou en pied de page."
 
 #: wp-includes/class-wp-customize-nav-menus.php:454
 msgid "If your theme has multiple menus, giving them clear names will help you manage them."
@@ -6900,7 +6900,7 @@ msgstr "Widget média"
 msgid "Media Widget (%d)"
 msgid_plural "Media Widget (%d)"
 msgstr[0] "Widget média (%d)"
-msgstr[1] "Widgets média (%d)"
+msgstr[1] "WidgetsRegister média (%d)"
 
 #. translators: %s: URL to media library.
 #: wp-includes/widgets/class-wp-widget-media.php:76
@@ -6943,7 +6943,7 @@ msgstr "Widget vidéo"
 msgid "Video Widget (%d)"
 msgid_plural "Video Widget (%d)"
 msgstr[0] "Widget vidéo (%d)"
-msgstr[1] "Widgets vidéo (%d)"
+msgstr[1] "WidgetsRegister vidéo (%d)"
 
 #. translators: %s: URL to media library.
 #: wp-includes/widgets/class-wp-widget-media-video.php:44
@@ -6978,7 +6978,7 @@ msgstr "Widget image"
 msgid "Image Widget (%d)"
 msgid_plural "Image Widget (%d)"
 msgstr[0] "Widget image (%d)"
-msgstr[1] "Widgets image (%d)"
+msgstr[1] "WidgetsRegister image (%d)"
 
 #. translators: %s: URL to media library.
 #: wp-includes/widgets/class-wp-widget-media-image.php:44
@@ -7028,7 +7028,7 @@ msgstr "Widget de son"
 msgid "Audio Widget (%d)"
 msgid_plural "Audio Widget (%d)"
 msgstr[0] "Widget de son (%d)"
-msgstr[1] "Widgets de son (%d)"
+msgstr[1] "WidgetsRegister de son (%d)"
 
 #. translators: %s: URL to media library.
 #: wp-includes/widgets/class-wp-widget-media-audio.php:44
@@ -10715,7 +10715,7 @@ msgstr "Thème actif"
 msgid "Menus can be displayed in locations defined by your theme."
 msgstr "Les menus peuvent être affichés dans les emplacements définis par votre thème."
 
-#. translators: %s: URL to the Widgets panel of the Customizer.
+#. translators: %s: URL to the WidgetsRegister panel of the Customizer.
 #: wp-includes/class-wp-customize-nav-menus.php:597
 msgid "Menus can be displayed in locations defined by your theme or in <a href=\"%s\">widget areas</a> by adding a &#8220;Navigation Menu&#8221; widget."
 msgstr "Les menus peuvent être affichés dans les emplacements définis par votre thème ou dans des <a href=\"%s\">zones de widget</a> en ajoutant un widget de « Menu de navigation »."
@@ -11920,7 +11920,7 @@ msgid "Bitrate"
 msgstr "Débit"
 
 #: wp-includes/class-wp-customize-widgets.php:418
-msgid "Widgets are independent sections of content that can be placed into widgetized areas provided by your theme (commonly called sidebars)."
+msgid "WidgetsRegister are independent sections of content that can be placed into widgetized areas provided by your theme (commonly called sidebars)."
 msgstr "Les widgets sont des sections de contenu indépendants qui peuvent être placés dans les zones à widgets prévues dans votre thème (généralement, les colonnes latérales)."
 
 #. translators: %s: The site/panel title in the Customizer.
@@ -12081,7 +12081,7 @@ msgid "Search widgets&hellip;"
 msgstr "Rechercher des widgets…"
 
 #: wp-includes/class-wp-customize-widgets.php:836
-msgid "Search Widgets"
+msgid "Search WidgetsRegister"
 msgstr "Rechercher des widgets"
 
 #: wp-includes/class-wp-customize-widgets.php:778
@@ -17171,8 +17171,8 @@ msgstr "Les commentaires sont fermés pour cet article."
 
 #: wp-includes/admin-bar.php:965 wp-includes/class-wp-customize-widgets.php:417
 #: wp-includes/functions.php:4595 wp-includes/js/dist/blocks.js:5957
-msgid "Widgets"
-msgstr "Widgets"
+msgid "WidgetsRegister"
+msgstr "WidgetsRegister"
 
 #. translators: %s: Number of confirmed requests.
 #: wp-includes/post.php:441

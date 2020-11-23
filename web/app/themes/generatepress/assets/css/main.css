@@ -13,7 +13,7 @@
 # Post Navigation
 # Header
 # Post Content
-# Widgets
+# WidgetsRegister
 # Content Layout
 # Sidebars
 # Footer
@@ -1100,7 +1100,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# WidgetsRegister
 --------------------------------------------------------------*/
 .widget-area .widget {
 	padding: 40px;

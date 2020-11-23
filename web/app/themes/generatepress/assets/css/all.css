@@ -471,7 +471,7 @@
 # Post Navigation
 # Header
 # Post Content
-# Widgets
+# WidgetsRegister
 # Content Layout
 # Footer
 # Featured Images
@@ -1775,7 +1775,7 @@ ol.comment-list {
 }
 
 /*--------------------------------------------------------------
-# Widgets
+# WidgetsRegister
 --------------------------------------------------------------*/
 .widget-area .widget {
 	padding: 40px;
