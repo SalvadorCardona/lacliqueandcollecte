@@ -5,13 +5,15 @@ namespace App\Action;
 
 
 use App\Elementor\WidgetsRegister;
+use App\Kernel;
 
 class RegisterElementorWidget implements ActionInterface
 {
 
     public function __invoke(): void
     {
-        WidgetsRegister::getInstance();
+        $widgetRegister = Kernel::getAPP()->getContainer()->get(WidgetsRegister::class);
+        add_action('elementor/widgets/widgets_registered', [ $widgetRegister, 'registerWidget' ]);
     }
 
     public static function getAction(): string

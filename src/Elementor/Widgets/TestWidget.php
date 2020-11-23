@@ -4,6 +4,7 @@
 namespace App\Elementor\Widgets;
 
 use App\Elementor\WidgetBase;
+use Elementor\Controls_Manager;
 
 class TestWidget extends WidgetBase
 {
@@ -33,7 +34,7 @@ class TestWidget extends WidgetBase
             'content_section',
             [
                 'label' => __( 'Content', 'plugin-name' ),
-                'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
@@ -41,7 +42,7 @@ class TestWidget extends WidgetBase
             'url',
             [
                 'label' => __( 'URL to embed', 'plugin-name' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'type' => Controls_Manager::TEXT,
                 'input_type' => 'url',
                 'placeholder' => __( 'https://your-link.com', 'plugin-name' ),
             ]

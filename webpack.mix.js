@@ -11,7 +11,7 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('assets/scripts/app.js', 'web/app/themes/generatepress_child/dist/')
+mix.ts('assets/scripts/app.ts', 'web/app/themes/generatepress_child/dist/')
     .sass('assets/styles/app.scss', 'web/app/themes/generatepress_child/dist/');
 
 // Full API

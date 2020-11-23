@@ -8,24 +8,10 @@ use Elementor\Plugin;
 
 class WidgetsRegister
 {
-    protected static $instance = null;
-
     /**
      * @var WidgetBase[]
      */
     private array $widgets;
-
-    public static function getInstance(): self {
-        if ( ! isset( static::$instance ) ) {
-            static::$instance = new static;
-        }
-
-        return static::$instance;
-    }
-
-    protected function __construct() {
-        add_action('elementor/widgets/widgets_registered', [ $this, 'registerWidget' ]);
-    }
 
     public function registerWidget() {
         foreach ($this->widgets as $widget) {

@@ -1,11 +1,9 @@
 <?php
 declare(strict_types=1);
 
-use App\Action\ActionInterface;
 use App\Action\ApiLoaderAction;
 use App\Elementor\WidgetsRegister;
 use App\Model\Config;
-use App\Routing\CompositeRoutingContext;
 use App\Service\ActionService;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
@@ -32,21 +30,10 @@ return function (ContainerBuilder $containerBuilder) {
             return $apiLoaderAction;
         },
 
-        CompositeRoutingContext::class => function (ContainerInterface $container) {
-            $compositeRoutingContext = new CompositeRoutingContext();
-
-            foreach ($container->get(Config::ROUTING_CONTEXT) as $routingContext) {
-                $compositeRoutingContext->addRoutingContext($container->get($routingContext));
-            }
-
-            return $compositeRoutingContext;
-        },
-
         WidgetsRegister::class => function (ContainerInterface $container) {
-            $widgetsRegister = WidgetsRegister::getInstance();
+            $widgetsRegister = new WidgetsRegister();
 
             foreach ($container->get(Config::ELEMENTOR_WIDGETS) as $widget) {
-                dump($widget);
                 $widgetsRegister->addWidget($container->get($widget));
             }
 

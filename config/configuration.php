@@ -14,10 +14,6 @@ use App\Api\RoutingApi;
 use App\Api\TranslationApi;
 use App\Elementor\Widgets\TestWidget;
 use App\Model\Config;
-use App\Routing\Contexts\PostContext;
-use App\Routing\Contexts\ProductContext;
-use App\Routing\Contexts\SearchContext;
-use App\Routing\Contexts\TaxomanyContext;
 
 return [
     Config::API => [
@@ -26,7 +22,6 @@ return [
         PostByIdApi::class,
         PostSlugApi::class,
         TranslationApi::class,
-        RoutingApi::class,
     ],
     Config::ACTION => [
         RegisterElementorWidget::class,
@@ -34,12 +29,6 @@ return [
         WordpressFeatureAction::class,
         PostTypeSeller::class,
         AddAssets::class,
-    ],
-    Config::ROUTING_CONTEXT => [
-        PostContext::class,
-        ProductContext::class,
-        SearchContext::class,
-        TaxomanyContext::class
     ],
     Config::ELEMENTOR_WIDGETS => [
         TestWidget::class,
