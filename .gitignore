@@ -3,7 +3,7 @@ web/app/plugins/*
 !web/app/plugins/.gitkeep
 web/app/mu-plugins/*/
 web/app/upgrade
-web/app/uploads/*
+!web/app/uploads/*
 !web/app/uploads/.gitkeep
 !web/app/plugins/elementor-pro
 # WordPress
@@ -16,7 +16,6 @@ node_modules
 
 # Dotenv
 .env
-.env.*
 !.env.example
 
 # Composer
