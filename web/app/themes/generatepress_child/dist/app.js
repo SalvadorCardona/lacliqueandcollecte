@@ -95,10 +95,9 @@
 
 "use strict";
 
-// import Timer from "./components/Timer";
+Object.defineProperty(exports, "__esModule", { value: true });
 // import Timer from ""
 // customElements.define('second-timer', Timer);
-console.log('test');
 
 
 /***/ }),

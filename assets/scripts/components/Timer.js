@@ -1,3 +1,0 @@
-@CustomElement()
-class myClass {
-}

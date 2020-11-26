@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94c7c239da93eda0adb26174c6489987",
+    "content-hash": "9cf15633eddf1c938571f931d55dd1c5",
     "packages": [
         {
             "name": "composer/installers",
@@ -1913,6 +1913,66 @@
             "time": "2020-04-12T15:20:09+00:00"
         },
         {
+            "name": "wordplate/acf",
+            "version": "9.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/extended-acf.git",
+                "reference": "586f406d601a7205a986c3d701808f8351bda38d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/extended-acf/zipball/586f406d601a7205a986c3d701808f8351bda38d",
+                "reference": "586f406d601a7205a986c3d701808f8351bda38d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3 || ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.4",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "9.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WordPlate\\Acf\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@doubledip.se"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se"
+                }
+            ],
+            "description": "Register advanced custom fields with object oriented PHP",
+            "keywords": [
+                "acf",
+                "advanced",
+                "custom",
+                "fields",
+                "wordplate",
+                "wordpress"
+            ],
+            "time": "2020-11-26T19:03:15+00:00"
+        },
+        {
             "name": "wpackagist-plugin/advanced-custom-fields",
             "version": "5.8.12",
             "source": {
@@ -1947,6 +2007,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/elementor/"
+        },
+        {
+            "name": "wpackagist-plugin/loco-translate",
+            "version": "2.4.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/loco-translate/",
+                "reference": "tags/2.4.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/loco-translate.2.4.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/loco-translate/"
         },
         {
             "name": "wpackagist-plugin/woocommerce",

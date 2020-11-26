@@ -62,7 +62,9 @@
     "laminas/laminas-diactoros": "^2.3",
     "php-di/php-di": "^6.2",
     "php-di/slim-bridge": "^3.0",
-    "wpackagist-plugin/elementor": "^3.0"
+    "wpackagist-plugin/elementor": "^3.0",
+    "wpackagist-plugin/loco-translate": "^2.4",
+    "wordplate/acf": "^9.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.4",

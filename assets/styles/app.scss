@@ -1,0 +1,16 @@
+@import 'variables';
+
+.text-color-{
+  &1 {
+    color: $one-color;
+  }
+  &2 {
+    color: $two-color;
+  }
+  &3 {
+    color: $three-color;
+  }
+  &4 {
+    color: $four-color;
+  }
+}

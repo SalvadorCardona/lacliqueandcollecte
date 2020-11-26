@@ -37,6 +37,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.21.0",
+    "custom-elements-ts": "^0.0.16"
   }
 }

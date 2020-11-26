@@ -2315,6 +2315,11 @@ csso@^4.0.2:
   dependencies:
     css-tree "^1.0.0"
 
+custom-elements-ts@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/custom-elements-ts/-/custom-elements-ts-0.0.16.tgz#a271707c7b897d78a4e9f26271dcfb0f7d35c24d"
+  integrity sha512-dIWEwGlpVdm8vPRWXXVALTE1rHWwZfJIUd9JPaYDzmrcfni61Z0NkxCcx2dcg6sM0WvW8RUFxxZ5dL8VDd0gwA==
+
 cyclist@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
