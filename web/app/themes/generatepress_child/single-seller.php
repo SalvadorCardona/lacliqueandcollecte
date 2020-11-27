@@ -10,38 +10,57 @@
  * @package GeneratePress
  */
 
+use App\Action\PostTypeSeller;
+use App\Helper\Template;
+
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
 
-get_header(); dump(get_post_meta( get_post()->ID ))?>
+$post = get_post();
+$metaPost = get_post_meta( $post->ID );
 
-    <div id="primary" <?php generate_do_element_classes( 'content' ); ?>>
+get_header()?>
+
+    <div id="primary page-partner" <?php generate_do_element_classes( 'content' ); ?>>
         <main id="main" <?php generate_do_element_classes( 'main' ); ?>>
-            <span class="text-color-1">me touche pas</span>
+
             <?php
-            /**
-             * generate_before_main_content hook.
-             *
-             * @since 0.1
-             */
             do_action( 'generate_before_main_content' );
+            ?>
 
-            if ( generate_has_default_loop() ) {
-                while ( have_posts() ) :
+            <?php if (Template::exist(PostTypeSeller::FIELD_SHOP_PICTURE, $metaPost)): ?>
+                <div id="wrapper-shop-picture"
+                     style="background-image: url('<?php echo wp_get_attachment_url( Template::getValue(PostTypeSeller::FIELD_SHOP_PICTURE, $metaPost) ) ?>')"
+                >
+                </div>
+            <?php endif; ?>
 
-                    the_post();
+            <div id="wrapper-social" class="row">
+                <div id="face-picture" class="col-3">
+                    <div id="picture"
+                         style="background-image: url('<?php echo wp_get_attachment_url( Template::getValue(PostTypeSeller::FIELD_FACE_PICTURE, $metaPost) ) ?>')"
+                    >
+                    </div>
+                    <div id="last-name" class="text-center">
+                        <div>
+                            <?php Template::print(PostTypeSeller::FIELD_LAST_NAME, $metaPost); ?>
+                        </div>
+                        <div>
+                            <?php Template::print(PostTypeSeller::FIELD_CITY, $metaPost); ?>
+                        </div>
+                    </div>
+                </div>
+                <div id="partner" class="col-9">
+                    <div>
+                        <h1>
+                            <?php Template::print(PostTypeSeller::FIELD_SHOP_NAME, $metaPost); ?>
+                        </h1>
+                    </div>
+                </div>
+            </div>
 
-                    generate_do_template_part( 'page' );
-
-                endwhile;
-            }
-
-            /**
-             * generate_after_main_content hook.
-             *
-             * @since 0.1
-             */
+            <?php
             do_action( 'generate_after_main_content' );
             ?>
         </main>

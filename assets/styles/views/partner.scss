@@ -1,0 +1,46 @@
+$shopPictureHeight: 200px;
+
+.single-seller {
+  #content {
+    display: block;
+  }
+  #page {
+    .content-area {
+      width: 100%;
+    }
+    margin-top: 30px;
+    max-width: 960px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px #a7a7a7;
+    position: relative;
+    #wrapper-shop-picture {
+      width: 100%;
+      height: $shopPictureHeight;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #ccc;
+      background-size: cover;
+    }
+    #wrapper-social {
+      margin-top: $shopPictureHeight - 50px;
+      #face-picture {
+        #picture {
+          border-radius: 50%;
+          height: 150px;
+          width: 150px;
+          border: 4px solid #ccc;
+          background: #ccc;
+          background-size: cover;
+          margin-top: -60px;
+        }
+        #last-name {
+
+        }
+        #partner {
+
+        }
+      }
+    }
+  }
+}
