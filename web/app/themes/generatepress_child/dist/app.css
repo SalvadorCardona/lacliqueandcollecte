@@ -8224,6 +8224,21 @@ a.text-dark:focus {
   margin-top: -60px;
 }
 
+#masthead {
+  box-shadow: 0 1px 5px #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#masthead .inside-header {
+  padding: 0 20px;
+}
+
+#masthead .inside-header .main-title {
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
 .text-color-1 {
   color: #e76f51;
 }

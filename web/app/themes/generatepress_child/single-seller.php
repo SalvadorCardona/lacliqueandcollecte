@@ -37,12 +37,11 @@ get_header()?>
             <?php endif; ?>
 
             <div id="wrapper-social" class="row">
-                <div id="face-picture" class="col-3">
-                    <div id="picture"
-                         style="background-image: url('<?php echo wp_get_attachment_url( Template::getValue(PostTypeSeller::FIELD_FACE_PICTURE, $metaPost) ) ?>')"
-                    >
-                    </div>
-                    <div id="last-name" class="text-center">
+                <div id="face-picture" class="col-3 text-center">
+                    <img id="picture"
+                         src="<?php echo wp_get_attachment_url( Template::getValue(PostTypeSeller::FIELD_FACE_PICTURE, $metaPost) ) ?>"
+                         alt="face-picture">
+                    <div id="last-name" >
                         <div>
                             <?php Template::print(PostTypeSeller::FIELD_LAST_NAME, $metaPost); ?>
                         </div>
