@@ -13,9 +13,9 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
-class PostTypeSeller implements ActionInterface
+class PostTypePartner implements ActionInterface
 {
-    const POST_TYPE_NAME = 'seller';
+    const POST_TYPE_NAME = 'partner';
 
     const FIELD_LAST_NAME = 'lastName';
     const FIELD_FIRST_NAME = 'firstName';
@@ -76,7 +76,7 @@ class PostTypeSeller implements ActionInterface
         $args = [
             'label'  => WH::trans( 'City'),
             'labels' => [
-                'menu_name'                  => WH::trans( 'city'),
+                'menu_name'                  => WH::trans( 'City'),
                 'all_items'                  => WH::trans( 'All city'),
                 'edit_item'                  => WH::trans( 'Edit city'),
                 'view_item'                  => WH::trans( 'View city'),

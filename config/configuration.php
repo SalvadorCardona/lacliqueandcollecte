@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use App\Action\AddAssets;
 use App\Action\ApiLoaderAction;
-use App\Action\PostTypeSeller;
+use App\Action\PostTypePartner;
 use App\Action\RegisterElementorWidget;
 use App\Action\WordpressFeatureAction;
 use App\Api\MenuApi;
@@ -26,7 +26,7 @@ return [
         RegisterElementorWidget::class,
         ApiLoaderAction::class,
         WordpressFeatureAction::class,
-        PostTypeSeller::class,
+        PostTypePartner::class,
         AddAssets::class,
     ],
     Config::ELEMENTOR_WIDGETS => [

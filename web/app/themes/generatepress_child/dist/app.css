@@ -4414,23 +4414,23 @@ button.bg-dark:focus {
 }
 
 .border {
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid #ccc !important;
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #ccc !important;
 }
 
 .border-right {
-  border-right: 1px solid #dee2e6 !important;
+  border-right: 1px solid #ccc !important;
 }
 
 .border-bottom {
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid #ccc !important;
 }
 
 .border-left {
-  border-left: 1px solid #dee2e6 !important;
+  border-left: 1px solid #ccc !important;
 }
 
 .border-0 {
@@ -4494,27 +4494,27 @@ button.bg-dark:focus {
 }
 
 .rounded {
-  border-radius: 0.25rem !important;
+  border-radius: 5px !important;
 }
 
 .rounded-top {
-  border-top-left-radius: 0.25rem !important;
-  border-top-right-radius: 0.25rem !important;
+  border-top-left-radius: 5px !important;
+  border-top-right-radius: 5px !important;
 }
 
 .rounded-right {
-  border-top-right-radius: 0.25rem !important;
-  border-bottom-right-radius: 0.25rem !important;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-bottom-right-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 
 .rounded-left {
-  border-top-left-radius: 0.25rem !important;
-  border-bottom-left-radius: 0.25rem !important;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 
 .rounded-lg {
@@ -5682,7 +5682,7 @@ button.bg-dark:focus {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0 0 4px #a7a7a7 !important;
 }
 
 .shadow-lg {
@@ -8184,41 +8184,53 @@ a.text-dark:focus {
   visibility: hidden !important;
 }
 
-.single-seller #content {
+.single-partner {
+  font-family: "lato" !important;
+}
+
+.single-partner h1,
+.single-partner h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+.single-partner h1 {
+  color: #e76f51;
+}
+
+.single-partner h2 {
+  color: #2a9d8f;
+}
+
+.single-partner #content {
   display: block;
 }
 
-.single-seller #page {
-  margin-top: 30px;
+.single-partner #page {
+  background: none;
   max-width: 960px;
-  border-radius: 3px;
-  box-shadow: 0 0 4px #a7a7a7;
-  position: relative;
 }
 
-.single-seller #page .content-area {
+.single-partner #page .content-area {
   width: 100%;
 }
 
-.single-seller #page #wrapper-shop-picture {
-  width: 100%;
+.single-partner #partner-header {
+  margin-top: 45px;
+}
+
+.single-partner #partner-header #wrapper-shop-picture {
+  min-width: 115%;
   height: 200px;
-  position: absolute;
-  left: 0;
-  top: 0;
   background: #ccc;
   background-size: cover;
+  margin: -30px -30px 0 -30px;
 }
 
-.single-seller #page #wrapper-social {
-  margin-top: 150px;
-}
-
-.single-seller #page #wrapper-social #face-picture #picture {
+.single-partner #partner-header #face-picture #picture {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  border: 4px solid #ccc;
+  border: 8px solid white;
   background: #ccc;
   background-size: cover;
   margin-top: -60px;
@@ -8253,5 +8265,15 @@ a.text-dark:focus {
 
 .text-color-4 {
   color: #2a9d8f;
+}
+
+.app-wrapper {
+  margin: 15px 0 15px 0;
+  padding: 30px;
+  box-shadow: 0 0 4px #a7a7a7;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
 }
 

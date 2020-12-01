@@ -22,3 +22,13 @@
     color: $four-color;
   }
 }
+
+.app-wrapper {
+  margin: 15px 0 15px 0;
+  padding: 30px;
+  box-shadow: $box-shadow;
+  background: white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+}

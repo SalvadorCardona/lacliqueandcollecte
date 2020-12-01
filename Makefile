@@ -25,3 +25,6 @@ database-import:
 
 test:
 	php vendor/bin/phpunit
+
+wp-rewrite-url:
+	php wp-cli.phar  rewrite flush   --allow-root
