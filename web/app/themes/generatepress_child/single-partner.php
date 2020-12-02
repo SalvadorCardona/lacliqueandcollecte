@@ -49,7 +49,8 @@ get_header()?>
             <h1>
                 <?php Template::print(PostTypePartner::FIELD_SHOP_NAME, $metaPost); ?>
             </h1>
-            <span>
+
+            <span><app-icon domain="fas" icon="map-marked-alt"></app-icon>
                 Situé dans la ville de Lyon
             </span>
         </div>

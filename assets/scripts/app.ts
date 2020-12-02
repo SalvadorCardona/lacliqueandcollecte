@@ -1,8 +1,3 @@
-import Timer from "./components/Icon";
+import Icon from "./components/Icon";
+new Icon();
 
-//
-// library.add(faCamera)
-//
-// library.add(fas)
-// import Timer from ""
-// customElements.define('second-timer', Timer);

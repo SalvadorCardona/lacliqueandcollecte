@@ -55,7 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	 */
 	do_action( 'generate_after_header' );
 	?>
-
 	<div id="page" <?php generate_do_element_classes( 'page' ); ?>>
 		<?php
 		/**
