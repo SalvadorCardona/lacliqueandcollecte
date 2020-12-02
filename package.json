@@ -37,6 +37,9 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@types/node": "^14.14.10",
     "axios": "^0.21.0",
     "bootstrap": "^4.5.3",
     "custom-elements-ts": "^0.0.16"

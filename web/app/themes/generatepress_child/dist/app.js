@@ -90,12 +90,18 @@
 /*!*******************************!*\
   !*** ./assets/scripts/app.ts ***!
   \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+__webpack_require__.r(__webpack_exports__);
 
-Object.defineProperty(exports, "__esModule", { value: true });
+// import { library, icon } from '@fortawesome/fontawesome-svg-core'
+// import { faCamera } from '@fortawesome/free-solid-svg-icons'
+//
+// library.add(faCamera)
+//
+// library.add(fas)
 // import Timer from ""
 // customElements.define('second-timer', Timer);
 

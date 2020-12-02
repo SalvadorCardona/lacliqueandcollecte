@@ -65,12 +65,12 @@ get_header()?>
             </div>
         </div>
         <div class="col-8 ml-lg-0">
-            <div class="app-wrapper">
+
                 <h2><?php echo WH::trans('Les produits de Céline')?></h2>
                 <p>
                     <?php Template::print(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
                 </p>
-            </div>
+
         </div>
     </div>
 
