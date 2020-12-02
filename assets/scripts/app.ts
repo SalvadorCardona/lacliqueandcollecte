@@ -1,6 +1,5 @@
-import Timer from "./components/Timer";
-// import { library, icon } from '@fortawesome/fontawesome-svg-core'
-// import { faCamera } from '@fortawesome/free-solid-svg-icons'
+import Timer from "./components/Icon";
+
 //
 // library.add(faCamera)
 //
