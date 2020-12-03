@@ -1,3 +1,3 @@
-import Icon from "./components/Icon";
-new Icon();
-
+import IconComponent from "./components/icon.component";
+console.log(IconComponent)
+new IconComponent();

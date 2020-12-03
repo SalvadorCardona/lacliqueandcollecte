@@ -10,7 +10,7 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-
+mix.sourceMaps(true)
 mix.ts('assets/scripts/app.ts', 'web/app/themes/hello-theme-master/dist/')
     .sass('assets/styles/app.scss', 'web/app/themes/hello-theme-master/dist/');
 

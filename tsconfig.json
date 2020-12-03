@@ -1,7 +1,6 @@
 {
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./assets/scripts",
     "sourceMap": true,
     "module": "esnext",
     "moduleResolution": "node",
@@ -11,12 +10,13 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "@app/*": ["./*"]
-    }
+    ]
   },
   "typeRoots": [
     "./node_modules/@types"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
+  }
 }

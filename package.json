@@ -43,7 +43,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@types/node": "^14.14.10",
     "axios": "^0.21.0",
-    "bootstrap": "^4.5.3",
-    "custom-elements-ts": "^0.0.16"
+    "bootstrap": "^4.5.3"
   }
 }

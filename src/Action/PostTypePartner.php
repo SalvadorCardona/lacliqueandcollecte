@@ -40,7 +40,7 @@ class PostTypePartner implements ActionInterface
             'public' => true,
             'menu_position' => 3,
             'menu_icon' => 'dashicons-building',
-            'supports' => ['title', 'editor', 'thumbnail'],
+            'supports' => ['*'],
             'show_in_rest' => true,
             'has_archive' => false,
         ]);
@@ -74,25 +74,25 @@ class PostTypePartner implements ActionInterface
         ]);
 
         $args = [
-            'label'  => WH::trans( 'City'),
+            'label'  => WH::trans('City'),
             'labels' => [
-                'menu_name'                  => WH::trans( 'City'),
-                'all_items'                  => WH::trans( 'All city'),
-                'edit_item'                  => WH::trans( 'Edit city'),
-                'view_item'                  => WH::trans( 'View city'),
-                'update_item'                => WH::trans( 'Update city'),
-                'add_new_item'               => WH::trans( 'Add new city'),
-                'new_item'                   => WH::trans( 'New city'),
-                'parent_item'                => WH::trans( 'Parent city'),
-                'parent_item_colon'          => WH::trans( 'Parent city'),
-                'search_items'               => WH::trans( 'Search city'),
-                'popular_items'              => WH::trans( 'Popular city'),
-                'separate_items_with_commas' => WH::trans( 'Separate city with commas'),
-                'add_or_remove_items'        => WH::trans( 'Add or remove city'),
-                'choose_from_most_used'      => WH::trans( 'Choose most used city'),
-                'not_found'                  => WH::trans( 'No city found'),
-                'name'                       => WH::trans( 'city'),
-                'singular_name'              => WH::trans( 'city'),
+                'menu_name'                  => WH::trans('City'),
+                'all_items'                  => WH::trans('All city'),
+                'edit_item'                  => WH::trans('Edit city'),
+                'view_item'                  => WH::trans('View city'),
+                'update_item'                => WH::trans('Update city'),
+                'add_new_item'               => WH::trans('Add new city'),
+                'new_item'                   => WH::trans('New city'),
+                'parent_item'                => WH::trans('Parent city'),
+                'parent_item_colon'          => WH::trans('Parent city'),
+                'search_items'               => WH::trans('Search city'),
+                'popular_items'              => WH::trans('Popular city'),
+                'separate_items_with_commas' => WH::trans('Separate city with commas'),
+                'add_or_remove_items'        => WH::trans('Add or remove city'),
+                'choose_from_most_used'      => WH::trans('Choose most used city'),
+                'not_found'                  => WH::trans('No city found'),
+                'name'                       => WH::trans('city'),
+                'singular_name'              => WH::trans('city'),
             ],
             'public'               => true,
             'show_ui'              => true,
@@ -109,7 +109,7 @@ class PostTypePartner implements ActionInterface
             'rewrite_hierarchical' => false,
             'rewrite' => true
         ];
-        register_taxonomy( 'city', [ self::POST_TYPE_NAME ], $args );
+        register_taxonomy('city', [ self::POST_TYPE_NAME ], $args);
     }
 
     public static function getAction(): string

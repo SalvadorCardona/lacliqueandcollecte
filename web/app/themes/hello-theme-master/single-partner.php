@@ -14,27 +14,27 @@ use App\Action\PostTypePartner;
 use App\Helper\Template;
 use App\Helper\WordpressHelper as WH;
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
 $post = get_post();
-$metaPost = get_post_meta( $post->ID );
+$metaPost = get_post_meta($post->ID);
 
 get_header()?>
 <main id="main" class="container">
 
     <div id="partner-header" class="app-wrapper row">
-        <?php if (Template::exist(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)): ?>
+        <?php if (Template::exist(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)) : ?>
             <div class="col-12" id="wrapper-shop-picture"
-                 style="background-image: url('<?php echo wp_get_attachment_url( Template::getValue(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost) ) ?>')"
+                 style="background-image: url('<?php echo wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)) ?>')"
             >
             </div>
         <?php endif; ?>
 
         <div id="face-picture" class="col-3 text-center">
             <img id="picture"
-                 src="<?php echo wp_get_attachment_url( Template::getValue(PostTypePartner::FIELD_FACE_PICTURE, $metaPost) ) ?>"
+                 src="<?php echo wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_FACE_PICTURE, $metaPost)) ?>"
                  alt="face-picture">
             <div id="last-name" >
                 <div>
@@ -51,7 +51,7 @@ get_header()?>
             </h1>
 
             <span>
-<!--                <app-icon domain="fas" icon="map-marked-alt"></app-icon>-->
+                <app-icon domain="fas" icon="map-marked-alt"></app-icon>
                 Situé dans la ville de Lyon
             </span>
         </div>
@@ -77,7 +77,7 @@ get_header()?>
     </div>
 
     <?php
-    do_action( 'generate_after_main_content' );
+    do_action('generate_after_main_content');
     ?>
 </main>
 <?php

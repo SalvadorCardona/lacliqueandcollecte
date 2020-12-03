@@ -1,6 +1,10 @@
 ENV ?= "dev"
 
-install: install-php database-import
+install: install-php database-import install-asset
+
+install-asset:
+	yarn install
+	yarn development
 
 install-php:
 	composer install
@@ -8,7 +12,7 @@ install-php:
 	cp .env.dev .env
 
 server-dev:
-	/bin/sh -c 'php  -ddisplay_errors=1 -dzend_extension=xdebug.so -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1 -dxdebug.remote_port=3004 wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
+	/bin/sh -c 'php  -ddisplay_errors=1 -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1  wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
 	/bin/sh -c 'yarn watch'
 
 server-dev-no-debug:
