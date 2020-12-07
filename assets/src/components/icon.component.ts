@@ -1,6 +1,6 @@
-import {CustomElement} from './custom.element';
+import {CustomElement} from 'App/components/custom.element';
 import {icon, findIconDefinition, IconPrefix, IconName, library} from '@fortawesome/fontawesome-svg-core'
-import iconLoad from './../shared/icon.loaded'
+import iconLoad from 'App/shared/icon.loaded'
 
 library.add(...iconLoad);
 
@@ -25,7 +25,9 @@ export default class IconComponent extends HTMLElement {
     }
 
     connectedCallback() {
+        // @ts-ignore
         const iconResult = findIconDefinition({ prefix: this.domain || this.defaultDomain, iconName: this.icon || this.defaultIcon });
-        this.innerHTML = icon(iconResult).html[0];
+        this.innerHTML = iconResult ? icon(iconResult).html[0] : 'not find';
     }
 }
+

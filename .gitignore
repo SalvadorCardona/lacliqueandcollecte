@@ -33,3 +33,4 @@ wp-cli.phar
 
 .cache
 dist
+assets/mix-manifest.json
