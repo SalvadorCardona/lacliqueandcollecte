@@ -7,6 +7,7 @@
     "test": "tests"
   },
   "scripts": {
+    "parcel": "parcel ./assets/index.html",
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
@@ -29,6 +30,7 @@
     "@tsconfig/node14": "^1.0.0",
     "cross-env": "^7.0.2",
     "laravel-mix": "^5.0.9",
+    "parcel-bundler": "^1.12.4",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.29.0",
     "sass-loader": "^8.0.2",
@@ -43,6 +45,12 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@types/node": "^14.14.10",
     "axios": "^0.21.0",
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "browserslist": "^4.15.0",
+    "custom-elements-ts": "^0.0.16"
+  },
+  "resolutions": {
+    "browserslist": "4.14.2",
+    "caniuse-lite": "1.0.30001129"
   }
 }
