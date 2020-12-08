@@ -30,3 +30,7 @@ wp-cli.phar
 /angular/dist
 
 .idea/**
+
+.cache
+dist
+assets/mix-manifest.json

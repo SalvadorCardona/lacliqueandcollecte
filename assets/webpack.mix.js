@@ -11,8 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 mix.sourceMaps(true)
-mix.ts('assets/scripts/app.ts', 'web/app/themes/hello-theme-master/dist/')
-    .sass('assets/styles/app.scss', 'web/app/themes/hello-theme-master/dist/');
+mix.ts('./src/app.ts', '../web/app/themes/hello-theme-master/dist/')
+    .sass('./styles/app.scss', '../web/app/themes/hello-theme-master/dist/');
 
 // Full API
 // mix.js(src, output);

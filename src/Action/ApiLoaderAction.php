@@ -32,7 +32,9 @@ class ApiLoaderAction implements ActionInterface
 
     private function addRouting(ApiInterface $api)
     {
-        register_rest_route($api->getNamespace(), $api->getEndPoint(), [
+        register_rest_route($api->getNamespace(),
+            $api->getEndPoint(),
+            [
             'methods' => $api->getMethod(),
             'callback' => [$api, 'init'],
             'body' => $api->getBody(),
