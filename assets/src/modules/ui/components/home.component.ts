@@ -1,4 +1,4 @@
-let homeTemplateComponent = `
+export const homeTemplateComponent = `
 <main id="main" class="container mt-5">
     <div class="row">
         <div class="col-4">
@@ -31,9 +31,16 @@ let homeTemplateComponent = `
                 <p class="font-weight-bold">Size 3</p>
                 <p class="font-weight-bold">Size 4</p>
             </div>
+        </div>     
+        <div class="col-4">
+             <div class="app-wrapper">
+                <div class="title">Font Size</div>
+                <p class="font-weight-bold">Size 1</p>
+                <p class="font-weight-bold">Size 2</p>
+                <p class="font-weight-bold">Size 3</p>
+                <p class="font-weight-bold">Size 4</p>
+            </div>
         </div>        
     </div>
 </main>
 `;
-
-export default homeTemplateComponent;
