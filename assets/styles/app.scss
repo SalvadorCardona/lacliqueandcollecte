@@ -3,6 +3,8 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";
 
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/utilities";
@@ -55,6 +57,7 @@ path {
     border-bottom: 1px solid $gray-200;
     margin-bottom: 1em;
     padding-bottom: 1em;
+    font-size: $font-size-lg;
   }
 }
 
