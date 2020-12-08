@@ -13,7 +13,7 @@ install-php:
 
 server-dev:
 	/bin/sh -c 'php  -ddisplay_errors=1 -dxdebug.remote_enable=1 -dxdebug.remote_autostart=1  wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
-	/bin/sh -c 'cd assets && yarn watch'
+	/bin/sh -c 'cd assets && yarn parcel'
 
 server-dev-no-debug:
 	php  wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root
