@@ -49,6 +49,13 @@ path {
   //border: 1px solid $border-color;
   border-radius: $border-radius;
   overflow: hidden;
+  .title {
+    color: $one-color;
+    font-weight: bold;
+    border-bottom: 1px solid $gray-200;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
 }
 
 a {

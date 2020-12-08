@@ -2,4 +2,7 @@ parameters:
   level: max
   paths:
     - src
+  autoload_directories:
     - web/wp
+  ignoreErrors:
+    - '#Function pcntl_open not found\.#'

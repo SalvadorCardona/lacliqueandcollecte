@@ -30,16 +30,18 @@ class ApiLoaderAction implements ActionInterface
         }
     }
 
-    private function addRouting(ApiInterface $api)
+    private function addRouting(ApiInterface $api): void
     {
-        register_rest_route($api->getNamespace(),
+        register_rest_route(
+            $api->getNamespace(),
             $api->getEndPoint(),
             [
             'methods' => $api->getMethod(),
             'callback' => [$api, 'init'],
             'body' => $api->getBody(),
             'blocking' => $api->isBlocking()
-        ]);
+            ]
+        );
     }
 
     public static function getAction(): string
