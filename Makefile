@@ -19,7 +19,7 @@ server-dev-no-debug:
 	php  wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root
 
 server-dev-stop:
-	killall -9 php && ps a|grep 'php[0-9]\? -S'|awk '{print $1}'|xargs -r kill
+	kill -9 $(lsof -t -i:8000 -sTCP:LISTEN) && kill -9 $(lsof -t -i:8080) && killall -9 php
 
 database-export:
 	php wp-cli.phar db export base.sql  --allow-root

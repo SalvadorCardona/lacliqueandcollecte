@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace App\Action;
+namespace App;
 
 interface ActionInterface
 {

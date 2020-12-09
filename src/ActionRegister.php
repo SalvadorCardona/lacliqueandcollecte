@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\Action\ActionInterface;
+use App\ActionInterface;
 
 class ActionRegister
 {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Action;
 
+use App\ActionInterface;
 use App\ApiControllerInterface;
 use Exception;
 
@@ -32,16 +33,16 @@ class ApiLoaderAction implements ActionInterface
 
     private function addRouting(ApiControllerInterface $api): void
     {
-        register_rest_route(
-            $api->getNamespace(),
-            $api->getEndPoint(),
-            [
-            'methods' => $api->getMethod(),
-            'callback' => [$api, 'init'],
-            'body' => $api->getBody(),
-            'blocking' => $api->isBlocking()
-            ]
-        );
+//        register_rest_route(
+//            $api->getNamespace(),
+//            $api->getEndPoint(),
+//            [
+//            'methods' => $api->getMethod(),
+//            'callback' => [$api, 'init'],
+//            'body' => $api->getBody(),
+//            'blocking' => $api->isBlocking()
+//            ]
+//        );
     }
 
     public static function getAction(): string

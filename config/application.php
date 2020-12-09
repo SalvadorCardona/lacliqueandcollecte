@@ -45,6 +45,8 @@ if (file_exists($root_dir . '/.env')) {
     }
 }
 
+define( 'WP_MEMORY_LIMIT', '96M' );
+
 /**
  * Set up our global environment constant and load its config first
  * Default: production
