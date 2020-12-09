@@ -5,6 +5,8 @@
   background: white;
   box-shadow: $box-shadow;
   border-bottom: 1px solid #ccc;
+  justify-content: space-between;
+  height: 60px;
   a {
     font-weight: 600;
     text-transform: uppercase;
@@ -37,29 +39,30 @@
 }
 
 
-.site-navigation {
+.site-navigation > .menu {
   grid-area: nav-menu;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   flex-grow: 1;
 
-  ul.menu, ul.menu ul {
+  ul, ul ul {
     list-style-type: none;
     padding: 0;
   }
 
-  ul.menu {
+  ul:first-child {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     li {
       position: relative;
       display: flex;
-
+      font-size: $h6-font-size;
       a {
         display: block;
         padding: 8px 15px;
+
       }
 
       &.menu-item-has-children {
