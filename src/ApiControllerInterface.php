@@ -7,7 +7,7 @@ namespace App\Api;
 
 use WP_REST_Request;
 
-interface ApiInterface
+interface ApiControllerInterface
 {
     public function getBody(): array;
 

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App;
 
 use App\Action\ActionInterface;
 
-class ActionService
+class ActionRegister
 {
     /**
      * @var ActionInterface[]

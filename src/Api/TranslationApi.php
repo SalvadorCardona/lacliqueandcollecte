@@ -6,7 +6,7 @@ namespace App\Api;
 
 use App\Helper\WordpressHelper;
 
-class TranslationApi extends AbstractApi
+class TranslationApi extends AbstractApiController
 {
     protected string $endPoint = 'translation';
 

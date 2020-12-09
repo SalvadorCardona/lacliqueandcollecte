@@ -4,14 +4,14 @@ declare(strict_types=1);
 use App\Action\ApiLoaderAction;
 use App\Elementor\WidgetsRegister;
 use App\Model\Config;
-use App\Service\ActionService;
+use App\ActionRegister;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
 
 return function (ContainerBuilder $containerBuilder) {
     $containerBuilder->addDefinitions([
-        ActionService::class => function (ContainerInterface $container) {
-            $actionService = new ActionService();
+        ActionRegister::class => function (ContainerInterface $container) {
+            $actionService = new ActionRegister();
 
             foreach ($container->get(Config::ACTION) as $action) {
                 $actionService->addAction($container->get($action));

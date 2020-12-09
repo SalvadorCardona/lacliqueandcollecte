@@ -6,7 +6,7 @@ namespace App\Api;
 
 use App\Helper\WordpressHelper;
 
-class PostByIdApi extends AbstractApi
+class PostByIdApi extends AbstractApiController
 {
     protected string $endPoint = 'post/(?P<id>\d+)/all';
 

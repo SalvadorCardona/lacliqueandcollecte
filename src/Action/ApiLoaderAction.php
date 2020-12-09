@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Api\ApiInterface;
+use App\Api\ApiControllerInterface;
 use Exception;
 
 class ApiLoaderAction implements ActionInterface
 {
     /**
-     * @var ApiInterface[]
+     * @var ApiControllerInterface[]
      */
     private array $apis;
 
-    public function addApi(ApiInterface $api): void
+    public function addApi(ApiControllerInterface $api): void
     {
         $this->apis []= $api;
     }
@@ -30,7 +30,7 @@ class ApiLoaderAction implements ActionInterface
         }
     }
 
-    private function addRouting(ApiInterface $api): void
+    private function addRouting(ApiControllerInterface $api): void
     {
         register_rest_route(
             $api->getNamespace(),
