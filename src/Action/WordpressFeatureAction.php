@@ -16,10 +16,6 @@ class WordpressFeatureAction implements ActionInterface
         register_nav_menus([
             'navigation' => __('Navigation', 'wordplate'),
         ]);
-
-        add_filter('jpeg_quality', function () {
-            return 100;
-        }, 10, 2);
     }
 
     public static function getAction(): string

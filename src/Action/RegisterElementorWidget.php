@@ -5,7 +5,6 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-
 use App\Elementor\WidgetsRegister;
 use App\Kernel;
 
