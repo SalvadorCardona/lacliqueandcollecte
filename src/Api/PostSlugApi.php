@@ -6,7 +6,7 @@ namespace App\Api;
 
 use App\Helper\WordpressHelper;
 
-class PostSlugApi extends AbstractApi
+class PostSlugApi extends AbstractApiController
 {
     protected string $endPoint = 'post/(?P<name>[^/]+)/slug';
 

@@ -6,7 +6,7 @@ namespace App\Api;
 
 use WP_REST_Request;
 
-abstract class AbstractApi implements ApiInterface
+abstract class AbstractApiController implements ApiControllerInterface
 {
     protected array $body = [];
     protected string $method = 'GET';
@@ -21,10 +21,16 @@ abstract class AbstractApi implements ApiInterface
         return $this->__invoke();
     }
 
+    /**
+     *
+     */
     public function action()
     {
     }
 
+    /**
+     * @return array
+     */
     public function getBody(): array
     {
         return $this->body;

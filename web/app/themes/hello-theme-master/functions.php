@@ -7,12 +7,12 @@
 
 use App\Action\PostTypePartner;
 use App\Kernel;
-use App\Service\ActionService;
+use App\ActionRegister;
 
-/** @var ActionService $eventService */
+/** @var ActionRegister $eventService */
 $eventService = Kernel::getAPP()
     ->getContainer()
-    ->get(ActionService::class);
+    ->get(ActionRegister::class);
 
 $eventService->registerActions();
 
