@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Api;
 
+use App\AbstractApiController;
 use App\Helper\WordpressHelper;
 
 class PostByIdApi extends AbstractApiController

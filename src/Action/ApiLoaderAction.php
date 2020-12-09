@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\Api\ApiControllerInterface;
+use App\ApiControllerInterface;
 use Exception;
 
 class ApiLoaderAction implements ActionInterface

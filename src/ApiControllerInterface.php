@@ -3,9 +3,7 @@
 declare(strict_types=1);
 
 
-namespace App\Api;
-
-use WP_REST_Request;
+namespace App;
 
 interface ApiControllerInterface
 {
