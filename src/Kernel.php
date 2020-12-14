@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App;
 
+use DI\Bridge\Slim\Bridge;
+use DI\ContainerBuilder;
+use Exception;
 use Slim\App;
 
 class Kernel
@@ -11,21 +14,41 @@ class Kernel
     /**
      * @var App;
      */
-    private static $APP;
+    private static $App;
 
     /**
      * @return App
      */
-    public static function getAPP(): App
+    public static function getApp(): App
     {
-        return self::$APP;
+        return self::$App;
     }
 
     /**
-     * @param App $APP
+     * @param App $App
      */
-    public static function setAPP(App $APP): void
+    private function setApp(App $App): void
     {
-        self::$APP = $APP;
+        self::$App = $App;
+    }
+
+    public static function boot(): void
+    {
+        $containerBuilder = new ContainerBuilder();
+        $containerBuilder->useAutowiring(true);
+
+        $containerBuilder->addDefinitions(require  './../config/configuration.php');
+
+        $services = require __DIR__ . '/services.php';
+        $services($containerBuilder);
+
+        try {
+            $container = $containerBuilder->build();
+        } catch (Exception $e) {
+        }
+
+        $app = Bridge::create($container);
+
+        self::setApp($app);
     }
 }

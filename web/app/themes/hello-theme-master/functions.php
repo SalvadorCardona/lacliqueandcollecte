@@ -10,7 +10,7 @@ use App\Kernel;
 use App\ActionRegister;
 
 /** @var ActionRegister $eventService */
-$eventService = Kernel::getAPP()
+$eventService = Kernel::getApp()
     ->getContainer()
     ->get(ActionRegister::class);
 

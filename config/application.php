@@ -139,16 +139,4 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
 
-$containerBuilder = new ContainerBuilder();
-$containerBuilder->useAutowiring(true);
-
-$containerBuilder->addDefinitions(require __DIR__ . '/configuration.php');
-
-$services = require __DIR__ . '/services.php';
-$services($containerBuilder);
-
-$container = $containerBuilder->build();
-
-$app = Bridge::create($container);
-
-Kernel::setAPP($app);
+Kernel::boot();
