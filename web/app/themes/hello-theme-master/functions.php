@@ -5,22 +5,14 @@
  * @package HelloElementor
  */
 
-use App\Action\PostTypePartner;
 use App\Kernel;
-use App\ActionRegister;
 
-/** @var ActionRegister $eventService */
-$eventService = Kernel::getApp()
-    ->getContainer()
-    ->get(ActionRegister::class);
-
-$eventService->registerActions();
+Kernel::boot();
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-define('HELLO_ELEMENTOR_VERSION', '2.2.0');
 
 if (! isset($content_width)) {
     $content_width = 800; // Pixels.
@@ -149,11 +141,6 @@ if (! function_exists('hello_elementor_check_hide_title')) {
     }
 }
 add_filter('hello_elementor_page_title', 'hello_elementor_check_hide_title');
-
-/** TODO: refaire ce truc moche */
-add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
-    return [PostTypePartner::POST_TYPE_NAME, ...$args];
-}, 1);
 
 /**
  * Wrapper function to deal with backwards compatibility.

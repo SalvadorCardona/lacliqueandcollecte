@@ -18,4 +18,6 @@ interface ApiControllerInterface
     public function getEndPoint(): string;
 
     public function getNamespace(): string;
+
+    public function getProtectedCallBack(): bool;
 }

@@ -3,15 +3,14 @@
 declare(strict_types=1);
 
 
-namespace App\Action;
+namespace App\Service;
 
 use App\ActionInterface;
 use App\Elementor\WidgetsRegister;
 use App\Kernel;
 
-class RegisterElementorWidget implements ActionInterface
+class ElementorWidgetRegister implements ActionInterface
 {
-
     public function __invoke(): void
     {
         $widgetRegister = Kernel::getAPP()->getContainer()->get(WidgetsRegister::class);

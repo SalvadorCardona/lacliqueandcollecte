@@ -60,4 +60,9 @@ abstract class AbstractApiController implements ApiControllerInterface
     {
         return $this->namespace;
     }
+
+    public function getProtectedCallBack(): bool
+    {
+        return true;
+    }
 }

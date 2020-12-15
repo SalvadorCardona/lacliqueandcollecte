@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-use App\Action\ApiLoaderAction;
+use App\Action\ApiLoaderRegister;
 use App\Elementor\WidgetsRegister;
 use App\Model\Config;
-use App\ActionRegister;
+use App\Service\ActionRegister;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
 
@@ -20,8 +20,8 @@ return function (ContainerBuilder $containerBuilder) {
             return $actionService;
         },
 
-        ApiLoaderAction::class => function (ContainerInterface $container) {
-            $apiLoaderAction = new ApiLoaderAction();
+        ApiLoaderRegister::class => function (ContainerInterface $container) {
+            $apiLoaderAction = new ApiLoaderRegister();
 
             foreach ($container->get(Config::API) as $api) {
                 $apiLoaderAction->addApi($container->get($api));

@@ -1,8 +1,12 @@
 parameters:
-  level: 3
-  paths:
-    - src
-  autoload_directories:
-    - web/wp
-  ignoreErrors:
-    - '#Function pcntl_open not found\.#'
+    level: 3
+    paths:
+        - src
+        - web/app
+        - web/wp
+    autoload_directories:
+        - web/wp
+        - web/app
+    ignoreErrors:
+        - '#Function pcntl_open not found\.#'
+        - '#Function __ not found.\.#'

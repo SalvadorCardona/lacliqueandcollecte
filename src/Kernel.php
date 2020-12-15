@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App;
 
+use App\Service\ActionRegister;
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
 use Exception;
@@ -27,9 +28,14 @@ class Kernel
     /**
      * @param App $App
      */
-    private function setApp(App $App): void
+    private static function setApp(App $App): void
     {
         self::$App = $App;
+    }
+
+    public static function getDirConfig(): string
+    {
+        return __DIR__ . './../config';
     }
 
     public static function boot(): void
@@ -37,9 +43,9 @@ class Kernel
         $containerBuilder = new ContainerBuilder();
         $containerBuilder->useAutowiring(true);
 
-        $containerBuilder->addDefinitions(require  './../config/configuration.php');
+        $containerBuilder->addDefinitions(require self::getDirConfig() . '/configuration.php');
 
-        $services = require __DIR__ . '/services.php';
+        $services = require self::getDirConfig() . '/services.php';
         $services($containerBuilder);
 
         try {
@@ -50,5 +56,13 @@ class Kernel
         $app = Bridge::create($container);
 
         self::setApp($app);
+
+        /** @var ActionRegister $eventService */
+        $eventService = self::getApp()
+            ->getContainer()
+            ->get(ActionRegister::class);
+
+        $eventService->registerActions();
     }
+
 }

@@ -15,7 +15,7 @@
 
 body {
   margin: 0; //Remove the margin in all browsers.
-  font-family: 'Open Sans', arial;
+  font-family: 'Open Sans', arial, serif;
   font-weight: 400;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
@@ -56,7 +56,7 @@ path {
     font-weight: bold;
     border-bottom: 1px solid $gray-200;
     margin-bottom: 1em;
-    padding-bottom: 1em;
+    padding-bottom: 0.2em;
     font-size: $h4-font-size;
   }
 }

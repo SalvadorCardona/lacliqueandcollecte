@@ -2,23 +2,18 @@
 
 declare(strict_types=1);
 
-namespace App\Action;
+namespace App\Service;
 
 use App\ActionInterface;
 use App\ApiControllerInterface;
 use Exception;
 
-class ApiLoaderAction implements ActionInterface
+class ApiLoaderRegister implements ActionInterface
 {
     /**
      * @var ApiControllerInterface[]
      */
     private array $apis;
-
-    public function addApi(ApiControllerInterface $api): void
-    {
-        $this->apis []= $api;
-    }
 
     public function __invoke(): void
     {
@@ -31,18 +26,24 @@ class ApiLoaderAction implements ActionInterface
         }
     }
 
+    public function addApi(ApiControllerInterface $api): void
+    {
+        $this->apis []= $api;
+    }
+
     private function addRouting(ApiControllerInterface $api): void
     {
-//        register_rest_route(
-//            $api->getNamespace(),
-//            $api->getEndPoint(),
-//            [
-//            'methods' => $api->getMethod(),
-//            'callback' => [$api, 'init'],
-//            'body' => $api->getBody(),
-//            'blocking' => $api->isBlocking()
-//            ]
-//        );
+        register_rest_route(
+            $api->getNamespace(),
+            $api->getEndPoint(),
+            [
+                'methods' => $api->getMethod(),
+                'callback' => [$api, 'init'],
+                'body' => $api->getBody(),
+                'blocking' => $api->isBlocking(),
+                'permission_callback' => fn() => $api->getProtectedCallBack(),
+            ]
+        );
     }
 
     public static function getAction(): string

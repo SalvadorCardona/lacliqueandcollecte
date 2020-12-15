@@ -5,5 +5,7 @@ namespace App;
 
 interface FilterInterface
 {
+    public function __invoke(): mixed;
 
+    public function getFilterName(): string;
 }
