@@ -28,6 +28,10 @@ class WordpressThemeSupport implements ActionInterface
         add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
             return [PostTypePartner::POST_TYPE_NAME, ...$args];
         }, 1);
+
+//        add_filter( 'woocommerce_api_check_authentication', function($args, $args2) {
+//            return true;
+//        });
     }
 
     public static function getAction(): string

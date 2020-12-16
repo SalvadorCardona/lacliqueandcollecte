@@ -18,6 +18,22 @@ if (! isset($content_width)) {
     $content_width = 800; // Pixels.
 }
 
+//add_filter( 'woocommerce_rest_check_permissions', function($args, $args2) {
+//    return true;
+//}, 1 );
+
+function wc_authenticate_alter(){
+        //return wp_get_current_user();
+    return new WP_User( 1 );
+//    if( 'GET' ==  WC()->api->server->method ){
+//        return new WP_User( 1 );
+//    } else {
+//        throw new Exception( __( 'You dont have permission', 'woocommerce' ), 401 );
+//    }
+}
+
+add_filter( 'woocommerce_rest_check_permissions', 'wc_authenticate_alter', 1 );
+
 if (! function_exists('hello_elementor_setup')) {
     /**
      * Set up theme support.
@@ -26,6 +42,8 @@ if (! function_exists('hello_elementor_setup')) {
      */
     function hello_elementor_setup()
     {
+
+
         $hook_result = apply_filters_deprecated('elementor_hello_theme_load_textdomain', [ true ], '2.0', 'hello_elementor_load_textdomain');
         if (apply_filters('hello_elementor_load_textdomain', $hook_result)) {
             load_theme_textdomain('hello-elementor', get_template_directory() . '/languages');

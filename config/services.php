@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-use App\Action\ApiLoaderRegister;
-use App\Elementor\WidgetsRegister;
-use App\Model\Config;
+use App\Service\ApiLoaderRegister;
+use App\Service\WidgetsRegister;
 use App\Service\ActionRegister;
+use App\Model\Config;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;
 

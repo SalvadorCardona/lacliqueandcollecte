@@ -1,3 +1,5 @@
+import {camelCase} from "lodash";
+
 interface CustomElementConfig {
     selector:string;
     template: string;
@@ -35,3 +37,13 @@ export const CustomElement = (config: CustomElementConfig) => (cls: any) => {
 
     window.customElements.define(config.selector, cls);
 };
+
+export class AppHtmlElement extends HTMLElement {
+    attributeChangedCallback (key: string, oldValue: any, newValue: any) {
+        let name = camelCase(key);
+
+        if (oldValue !== newValue && this.hasOwnProperty(name)) {
+            this[name] = newValue;
+        }
+    }
+}

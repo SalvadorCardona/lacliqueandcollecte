@@ -4,12 +4,14 @@ namespace App\Api;
 
 use App\AbstractApiController;
 
-class ProductByAuthorId extends AbstractApiController
+class ProductsByAuthorId extends AbstractApiController
 {
-    protected string $endPoint = 'product/(?P<id>\d+)/all';
+    protected string $endPoint = 'products/(?P<id>\d+)/by-author';
 
     public function __invoke(): array
     {
+        global $woocommerce;
+
          $products = wc_get_products([
             'status'    => 'publish',
             'limit'     => -1,

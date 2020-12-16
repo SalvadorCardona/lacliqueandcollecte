@@ -1,4 +1,4 @@
-import {CustomElement} from 'App/components/custom.element';
+import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
 import {icon, findIconDefinition, IconPrefix, IconName, library} from '@fortawesome/fontawesome-svg-core'
 import iconLoad from 'App/shared/icon.loaded'
 
@@ -8,7 +8,7 @@ library.add(...iconLoad);
     selector: 'app-icon',
     template: `<icon></icon>`
 })
-export default class IconComponent extends HTMLElement {
+export default class IconComponent extends AppHtmlElement {
     private defaultIcon: string  = 'airbnb';
     private defaultDomain: string  = 'far';
 
@@ -16,13 +16,6 @@ export default class IconComponent extends HTMLElement {
     public domain: IconPrefix = 'far';
 
     static get observedAttributes() { return ['icon', 'domain']; }
-
-    attributeChangedCallback (name: string, oldValue: any, newValue: any) {
-        if (oldValue !== newValue && this.hasOwnProperty(name)) {
-            // @ts-ignore
-            this[name] = newValue;
-        }
-    }
 
     connectedCallback() {
         // @ts-ignore

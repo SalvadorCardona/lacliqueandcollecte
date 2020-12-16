@@ -5,7 +5,7 @@ use App\Action\AddAssets;
 use App\Action\WordpressThemeSupport;
 use App\Action\PostTypePartner;
 use App\Api\PostByIdApi;
-use App\Api\ProductByAuthorId;
+use App\Api\ProductsByAuthorId;
 use App\Elementor\Widgets\TestWidget;
 use App\Filter\WooCommerceSupport;
 use App\Model\Config;
@@ -15,10 +15,10 @@ use App\Service\ApiLoaderRegister;
 return [
     Config::API => [
         PostByIdApi::class,
-        ProductByAuthorId::class
+        ProductsByAuthorId::class
     ],
     Config::ACTION => [
-        ElementorWidgetRegister::class,
+//        ElementorWidgetRegister::class,
         ApiLoaderRegister::class,
         WordpressThemeSupport::class,
         AddAssets::class,

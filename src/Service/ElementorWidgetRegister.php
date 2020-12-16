@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace App\Service;
 
 use App\ActionInterface;
-use App\Elementor\WidgetsRegister;
+use App\Service\WidgetsRegister;
 use App\Kernel;
 
 class ElementorWidgetRegister implements ActionInterface
