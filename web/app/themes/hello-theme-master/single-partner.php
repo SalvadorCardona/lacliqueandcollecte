@@ -27,27 +27,27 @@ get_header()?>
     <div id="partner-header" class="app-wrapper row">
         <?php if (Template::exist(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)) : ?>
             <div class="col-12" id="wrapper-shop-picture"
-                 style="background-image: url('<?php echo wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)) ?>')"
+                 style="background-image: url('<?=  wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_SHOP_PICTURE, $metaPost)) ?>')"
             >
             </div>
         <?php endif; ?>
 
         <div id="face-picture" class="col-3 text-center">
             <img id="picture"
-                 src="<?php echo wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_FACE_PICTURE, $metaPost)) ?>"
+                 src="<?=  wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_FACE_PICTURE, $metaPost)) ?>"
                  alt="face-picture">
             <div id="last-name" >
                 <div>
-                    <?php Template::print(PostTypePartner::FIELD_LAST_NAME, $metaPost); ?>
+                    <?=  Template::getValue(PostTypePartner::FIELD_LAST_NAME, $metaPost); ?>
                 </div>
                 <div>
-                    <?php Template::print(PostTypePartner::FIELD_CITY, $metaPost); ?>
+                    <?=  Template::getValue(PostTypePartner::FIELD_CITY, $metaPost); ?>
                 </div>
             </div>
         </div>
         <div id="partner" class="col-9 align-self-center">
             <h1>
-                <?php Template::print(PostTypePartner::FIELD_SHOP_NAME, $metaPost); ?>
+                <?=  Template::getValue(PostTypePartner::FIELD_SHOP_NAME, $metaPost); ?>
             </h1>
 
             <span>
@@ -60,17 +60,17 @@ get_header()?>
     <div id="partner-content" class="row">
         <div class="col-4">
             <div class="app-wrapper">
-                <h2><?php echo WH::trans('Présensation')?></h2>
+                <h2><?= WH::trans('Présensation')?></h2>
                 <p>
-                    <?php Template::print(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
+                    <?=  Template::getValue(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
                 </p>
             </div>
         </div>
         <div class="col-8 ml-lg-0">
 
-                <h2><?php echo WH::trans('Les produits de Céline')?></h2>
+                <h2><?= WH::trans('Les produits de Céline')?></h2>
                 <p>
-                    <?php Template::print(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
+                    <?= Template::getValue(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
                 </p>
                 <app-product-loop id-user="<?= $post->post_author ?>"></app-product-loop>
         </div>

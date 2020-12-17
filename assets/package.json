@@ -43,8 +43,7 @@
     "app": "^0.1.0",
     "axios": "^0.21.0",
     "bootstrap": "5.0.0-beta1",
-    "browserslist": "^4.15.0",
-    "custom-elements-ts": "^0.0.16"
+    "browserslist": "^4.15.0"
   },
   "resolutions": {
     "browserslist": "4.14.2",

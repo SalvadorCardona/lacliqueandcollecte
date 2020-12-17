@@ -9,17 +9,16 @@ export default class IconComponent extends AppHtmlElement {
 
     static selector = 'app-icon';
 
-    private defaultIcon: string  = 'airbnb';
-    private defaultDomain: string  = 'far';
-
     public icon: IconName = 'airbnb';
-    public domain: IconPrefix = 'far';
+    public domain: IconPrefix = 'fas';
 
     static get observedAttributes() { return ['icon', 'domain']; }
 
     connectedCallback() {
         // @ts-ignore
-        const iconResult = findIconDefinition({ prefix: this.domain || this.defaultDomain, iconName: this.icon || this.defaultIcon });
+        console.log('Icon in component', this.icon)
+        console.log('Domain in component', this.domain)
+        const iconResult = findIconDefinition({ prefix: this.domain, iconName: this.icon });
         this.innerHTML = iconResult ? icon(iconResult).html[0] : 'not find';
     }
 }

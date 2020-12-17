@@ -1,9 +1,11 @@
 import IconComponent from "App/components/shared/icon.component";
-import {HomeComponent} from "App/modules/ui/components/home.template.components";
+import UiComponent from "App/modules/ui/components/ui.components";
 import ProductComponent from "App/components/product/product.component";
 import ProductLoopComponent from "App/components/product/product.loop.component";
+import ButtonComponent from "App/components/shared/button.component";
 
 new ProductLoopComponent();
-new HomeComponent();
+new UiComponent();
 new IconComponent();
 new ProductComponent();
+new ButtonComponent();

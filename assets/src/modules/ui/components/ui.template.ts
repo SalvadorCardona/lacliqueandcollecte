@@ -1,4 +1,6 @@
-let homeTemplateComponent = `
+import buttonTemplate from "App/modules/ui/components/template/ui.button.template";
+
+export default `
 <main id="main" class="container mt-5">
     <h2>Typography</h2>
     <div class="row">
@@ -45,10 +47,15 @@ let homeTemplateComponent = `
             </div>
         </div>        
     </div>
+    
+    ${buttonTemplate}
+    
     <h2>Produit</h2>
     <div class="row">
         <div class="col-12">
-            <app-product class="app-wrapper"></app-product>
+            <div class="app-wrapper">
+                <app-product-loop></app-product-loop>
+            </div>
         </div>
     </div>
     <h2>Formulaire</h2>
@@ -76,5 +83,3 @@ let homeTemplateComponent = `
     </div>
 </main>
 `;
-
-export default homeTemplateComponent;

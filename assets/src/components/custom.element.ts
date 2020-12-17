@@ -36,27 +36,25 @@ export const CustomElement = (config: CustomElementConfig = {}) => (component: a
     //
     //     template.innerHTML = config.template;
     // }
-
-    window.customElements.define(component.selector, component);
+    // console.log(component)
+    // console.log(component.getProps())
+    // component.prototype.test = 'testsqdsqdsqssss';
+    customElements.define(component.selector, component);
 };
 
 // TODO : Make a better Prop
 export const Prop = () =>  {
     return (component: AppHtmlElement, key): void => {
-        console.log(component)
-        console.log(key)
-        component
-        // component.props.push(kebabCase(key));
+        // component.addProps(kebabCase(key));
     }
 }
 
 export abstract class AppHtmlElement extends HTMLElement {
-    public static props: Array<string>
     public static selector: string;
 
     attributeChangedCallback(key: string, oldValue: any, newValue: any) {
         let name = camelCase(key);
-
+        console.log(key, newValue)
         if (oldValue !== newValue && this.hasOwnProperty(name)) {
             this[name] = newValue;
         }
