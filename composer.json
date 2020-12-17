@@ -1,9 +1,8 @@
 {
-  "name": "roots/bedrock",
+  "name": "la-clique-and-collecte",
   "type": "project",
   "license": "MIT",
-  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
-  "homepage": "https://roots.io/bedrock/",
+  "description": "WordPress with dependency injection",
   "autoload": {
     "psr-4": {
       "App\\": "src/"
@@ -14,20 +13,8 @@
       "App\\Tests\\": "tests/"
     }
   },
-  "authors": [
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
-    }
-  ],
   "keywords": [
-    "bedrock", "composer", "roots", "wordpress", "wp", "wp-config"
+    "wordpress, slim, typescript"
   ],
   "support": {
     "issues": "https://github.com/roots/bedrock/issues",

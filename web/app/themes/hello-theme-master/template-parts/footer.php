@@ -10,5 +10,52 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
-	<?php // footer. ?>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                </ul>
+            </div>
+            <div class="col-3">
+                <ul>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                    <li>Lorem issssum</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>

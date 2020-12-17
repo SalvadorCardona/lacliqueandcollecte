@@ -1,0 +1,15 @@
+#site-footer {
+    background: $one-color;
+    color: white;
+    border-top: solid 45px darken($one-color, 50%);
+    .container {
+        background-color: darken($one-color, 5%);
+        pading: 15px;
+        .col-3 {
+            border-right: solid 1px darken($one-color, 50%);
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+}

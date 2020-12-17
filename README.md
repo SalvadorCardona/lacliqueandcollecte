@@ -9,7 +9,7 @@ Wordpress Api Rest With Slim framework and angular theme
 
 ## Requirements
 
-- PHP >= 7.4
+- PHP >= 8
 - Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 - Yarn - [Install](https://classic.yarnpkg.com/en/docs/install#debian-stable)
 - Node >= 12
