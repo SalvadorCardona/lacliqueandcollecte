@@ -4,11 +4,11 @@ import iconLoad from 'App/shared/icon.loaded'
 
 library.add(...iconLoad);
 
-@CustomElement({
-    selector: 'app-icon',
-    template: `<icon></icon>`
-})
+@CustomElement()
 export default class IconComponent extends AppHtmlElement {
+
+    static selector = 'app-icon';
+
     private defaultIcon: string  = 'airbnb';
     private defaultDomain: string  = 'far';
 

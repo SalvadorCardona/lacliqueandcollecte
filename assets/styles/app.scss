@@ -11,7 +11,7 @@
 @import "views/partner";
 @import "components/header";
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 body {
   margin: 0; //Remove the margin in all browsers.
@@ -22,6 +22,12 @@ body {
   line-height: $line-height-base;
   color: #3e3f5e;
   background-color: #f8f8fb;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
 }
 
 path {

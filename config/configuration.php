@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use App\Action\AddAssets;
+use App\Action\AddFilter;
 use App\Action\WordpressThemeSupport;
 use App\Action\PostTypePartner;
 use App\Api\PostByIdApi;
@@ -22,7 +23,8 @@ return [
         ApiLoaderRegister::class,
         WordpressThemeSupport::class,
         AddAssets::class,
-        PostTypePartner::class
+        PostTypePartner::class,
+        AddFilter::class,
     ],
     Config::ELEMENTOR_WIDGETS => [
         TestWidget::class,

@@ -1,10 +1,13 @@
 import axios, {AxiosInstance, AxiosResponse} from 'axios'
 import {environment} from "App/environement/environement";
 import {keysToCamel} from "App/shared/helper";
+import ClientProduct from "App/core/client/client.product";
 
 export default class ClientHttp {
     static self: ClientHttp;
     public http: AxiosInstance;
+
+    public product: ClientProduct;
 
     public constructor() {
         this.http = axios.create({
@@ -15,7 +18,6 @@ export default class ClientHttp {
         });
 
         this.http.interceptors.response.use((response: AxiosResponse) => {
-            console.log('r', response)
             if (
                 response.data
             ) {
@@ -24,6 +26,7 @@ export default class ClientHttp {
 
             return response;
         });
+        this.product = new ClientProduct(this);
     }
 
     static get(): ClientHttp
@@ -36,14 +39,6 @@ export default class ClientHttp {
     }
 
     public send(method: string, route: string, data: any = []): Promise<AxiosResponse> {
-        return this.http[method](route, data);
-    }
-
-    public getProductsByAuthor(idAuthor: number): Promise<AxiosResponse> {
-        return this.send('get', environment.apiEndpoints.productsByAuthorId.replace('{id}', idAuthor.toString()));
-    }
-
-    public getProducts(): Promise<AxiosResponse> {
-        return this.send('get', environment.apiEndpoints.getProducts);
+        return this.http[method](route, {params: data});
     }
 }

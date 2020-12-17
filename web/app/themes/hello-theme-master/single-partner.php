@@ -72,7 +72,7 @@ get_header()?>
                 <p>
                     <?php Template::print(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
                 </p>
-                <app-product-loop id-user="1"></app-product-loop>
+                <app-product-loop id-user="<?= $post->post_author ?>"></app-product-loop>
         </div>
     </div>
 

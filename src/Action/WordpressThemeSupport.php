@@ -15,6 +15,37 @@ class WordpressThemeSupport implements ActionInterface
 
         add_theme_support('title-tag');
 
+        add_theme_support('automatic-feed-links');
+        add_theme_support('title-tag');
+        add_theme_support(
+            'html5',
+            array(
+                'search-form',
+                'comment-form',
+                'comment-list',
+                'gallery',
+                'caption',
+            )
+        );
+        add_theme_support(
+            'custom-logo',
+            array(
+                'height'      => 100,
+                'width'       => 350,
+                'flex-height' => true,
+                'flex-width'  => true,
+            )
+        );
+
+        add_theme_support('woocommerce');
+        // Enabling WooCommerce product gallery features (are off by default since WC 3.0.0).
+        // zoom.
+        add_theme_support('wc-product-gallery-zoom');
+        // lightbox.
+        add_theme_support('wc-product-gallery-lightbox');
+        // swipe.
+        add_theme_support('wc-product-gallery-slider');
+
         /**
          * Add Author for products
          */
@@ -28,10 +59,6 @@ class WordpressThemeSupport implements ActionInterface
         add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
             return [PostTypePartner::POST_TYPE_NAME, ...$args];
         }, 1);
-
-//        add_filter( 'woocommerce_api_check_authentication', function($args, $args2) {
-//            return true;
-//        });
     }
 
     public static function getAction(): string

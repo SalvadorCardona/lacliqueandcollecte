@@ -1,7 +1,7 @@
-import IconComponent from "App/components/icon.component";
+import IconComponent from "App/components/shared/icon.component";
 import {HomeComponent} from "App/modules/ui/components/home.template.components";
-import ProductComponent from "App/components/product.component";
-import ProductLoopComponent from "App/components/product.loop.component";
+import ProductComponent from "App/components/product/product.component";
+import ProductLoopComponent from "App/components/product/product.loop.component";
 
 new ProductLoopComponent();
 new HomeComponent();
