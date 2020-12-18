@@ -1,11 +1,18 @@
 .btn {
     border: none;
-    border-radius: 15px;
+    border-radius: $border-radius;
     padding: 15px;
     font-weight: 600;
     margin: 15px 0;
-    &-success {
-        background: $one-color;
+    transition: all 0.4s ease-in-out 0s;
+    &.gradient {
         color: white;
+        path {
+            color: white;
+        }
+    }
+    &:hover {
+        transition: all 0.4s ease-in-out 0s;
+        transform: scale(1.1);
     }
 }

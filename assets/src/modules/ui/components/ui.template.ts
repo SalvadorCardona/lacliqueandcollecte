@@ -1,4 +1,5 @@
 import buttonTemplate from "App/modules/ui/components/template/ui.button.template";
+import colorTemplate from "App/modules/ui/components/template/ui.colors.template";
 
 export default `
 <main id="main" class="container mt-5">
@@ -49,6 +50,7 @@ export default `
     </div>
     
     ${buttonTemplate}
+    ${colorTemplate}
     
     <h2>Produit</h2>
     <div class="row">

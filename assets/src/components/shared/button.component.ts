@@ -20,7 +20,7 @@ export default class ButtonComponent extends AppHtmlElement {
 
     render() {
         return `
-            <button class="btn btn-${this.type}">
+            <button class="btn gradient gradient-${this.type}">
                 ${this.getIcon()}
                 ${this.label}
             </button>
