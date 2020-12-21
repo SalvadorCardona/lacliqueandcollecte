@@ -4,7 +4,6 @@
   padding: 0.3em 12.5rem;
   background: $color-1;
   box-shadow: $box-shadow;
-  border-bottom: 1px solid #ccc;
   justify-content: space-between;
   height: 60px;
   a {
@@ -46,7 +45,7 @@
 }
 
 
-.site-navigation > .menu {
+.site-navigation > .menu-main-menu-container {
   grid-area: nav-menu;
   display: flex;
   align-items: center;

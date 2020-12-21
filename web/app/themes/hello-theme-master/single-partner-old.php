@@ -32,7 +32,7 @@ get_header()?>
             </div>
         <?php endif; ?>
 
-        <div id="face-picture" class="col-md-12 text-center">
+        <div id="face-picture" class="col-md-3 text-center">
             <img id="picture"
                  src="<?=  wp_get_attachment_url(Template::getValue(PostTypePartner::FIELD_FACE_PICTURE, $metaPost)) ?>"
                  alt="face-picture">
@@ -45,7 +45,7 @@ get_header()?>
                 </div>
             </div>
         </div>
-        <div id="partner" class="col-md-12 align-self-center">
+        <div id="partner" class="col-md-9 align-self-center">
             <h1>
                 <?=  Template::getValue(PostTypePartner::FIELD_SHOP_NAME, $metaPost); ?>
             </h1>

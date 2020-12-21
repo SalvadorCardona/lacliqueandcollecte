@@ -54,7 +54,7 @@ export abstract class AppHtmlElement extends HTMLElement {
 
     attributeChangedCallback(key: string, oldValue: any, newValue: any) {
         let name = camelCase(key);
-        console.log(key, newValue)
+
         if (oldValue !== newValue && this.hasOwnProperty(name)) {
             this[name] = newValue;
         }

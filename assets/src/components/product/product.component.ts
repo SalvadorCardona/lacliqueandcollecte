@@ -1,5 +1,5 @@
 import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
-import {Product} from "App/models/product";
+import {Image, Product} from "App/models/product";
 
 @CustomElement()
 export default class ProductComponent extends AppHtmlElement {
@@ -11,22 +11,32 @@ export default class ProductComponent extends AppHtmlElement {
     public product: Product;
 
     connectedCallback() {
-        this.classList.add('col-4')
+        this.classList.add(...['col-md-4', 'pt-0'])
         this.innerHTML = this.render();
         this.querySelector('button').addEventListener('click', _ => alert(''));
     }
 
     render() {
         return `
-            <div class="product">
+            <div class="product type-product d-flex flex-column align-items-center ">
                 <a href="${this.product.permalink}">
-                    <img src="${this.product.images[0].src}">
+                    <img src="${this.getThumbnail(this.product.images)}">
                 </a>
-                <span clas="product-name">${this.product.name}</span>
-                <span clas="product-price">${this.product.price}</span>
-                <button class="btn btn-app">Add To Basket</button>
+                <div class="product-name fs-5 text-secondary">${this.product.name}</div>
+                <div class="product-price">${this.product.price} €</div>
+                <div class="">
+                    <app-button icon="shopping-basket" type="primary" label="Ajouter au panier"></app-button>
+                </div>
             </div>
         `;
+    }
+
+    getThumbnail(images: Array<Image>): string {
+        if (!images.length) return '';
+
+        let imageSrc = images[0].src;
+
+        return `${imageSrc.substring(0, imageSrc.length - 4)}-300x300.jpg`;
     }
 }
 

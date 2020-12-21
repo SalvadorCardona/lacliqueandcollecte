@@ -18,8 +18,6 @@ export default `
     }
 </style>
 
-<h2>Colors</h2>
-<div class="row">
     <div class="col-4">
         <div class="app-wrapper">
             <div class="title">Colors</div>
@@ -44,5 +42,5 @@ export default `
                 
         </div>
     </div>
-</div>
+
 `;
