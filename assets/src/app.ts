@@ -1,11 +1,17 @@
 import IconComponent from "App/components/shared/icon.component";
-import UiComponent from "App/modules/ui/components/ui.components";
+import UiComponent from "App/modules/ui/ui.components";
 import ProductComponent from "App/components/product/product.component";
 import ProductLoopComponent from "App/components/product/product.loop.component";
 import ButtonComponent from "App/components/shared/button.component";
+import PartnerHeaderComponent from "App/components/partner/partner.header.component";
 
-new ProductLoopComponent();
-new UiComponent();
-new IconComponent();
-new ProductComponent();
-new ButtonComponent();
+const components = [
+    ProductLoopComponent,
+    UiComponent,
+    IconComponent,
+    ButtonComponent,
+    PartnerHeaderComponent,
+    ProductComponent
+];
+
+components.forEach(Component => new Component());

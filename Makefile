@@ -1,6 +1,9 @@
 ENV ?= "dev"
 
-install: install-php database-import install-asset
+install: install-common install-php database-import install-asset
+
+install-common:
+	ln -s $(pwd)/theme $(pwd)/web/app/themes/hello-theme-master
 
 install-asset:
 	yarn install

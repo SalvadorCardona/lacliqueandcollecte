@@ -22,8 +22,8 @@ export default class ProductComponent extends AppHtmlElement {
                 <a href="${this.product.permalink}">
                     <img src="${this.getThumbnail(this.product.images)}">
                 </a>
-                <div class="product-name fs-5 text-secondary">${this.product.name}</div>
-                <div class="product-price">${this.product.price} €</div>
+                <div class="product-name fs-4 text-secondary">${this.product.name}</div>
+                <div class="product-price fw-bold">${this.product.price} €</div>
                 <div class="">
                     <app-button icon="shopping-basket" type="primary" label="Ajouter au panier"></app-button>
                 </div>
