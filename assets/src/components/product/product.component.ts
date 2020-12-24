@@ -25,7 +25,7 @@ export default class ProductComponent extends AppHtmlElement {
                 <div class="product-name fs-4 text-secondary">${this.product.name}</div>
                 <div class="product-price fw-bold">${this.product.price} €</div>
                 <div class="">
-                    <app-button icon="shopping-basket" type="primary" label="Ajouter au panier"></app-button>
+                    <app-button icon="cartPlus" type="primary" label="Ajouter au panier"></app-button>
                 </div>
             </div>
         `;

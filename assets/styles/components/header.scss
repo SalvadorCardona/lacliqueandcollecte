@@ -1,10 +1,6 @@
 .site-header {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0.3em 12.5rem;
   background: $color-1;
   box-shadow: $box-shadow;
-  justify-content: space-between;
   height: 60px;
   a {
     font-weight: 600;
@@ -16,7 +12,6 @@
     }
   }
   .site-branding {
-    max-width: 360px;
     a {
       color: white;
     }

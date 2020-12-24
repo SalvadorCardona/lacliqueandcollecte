@@ -1,19 +1,14 @@
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
-//@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,600,700);
+@import url($main-font-url);
 
 body {
   margin: 0; //Remove the margin in all browsers.
-  font-family: 'Roboto Slab', arial, serif;
-  font-family: 'Open sans', arial, serif;
-  font-weight: 400;
+  font-family: $font-family-base;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  color: $text-color;
   background-color: #f8f8fb;
-  font-weight: 600;
   font-style: normal;
+  font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,23 +16,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 path {
-  color: $text-color;
+  color: $body-color;
 }
 
-.text-color-{
-  &1 {
-    color: $color-1;
-}
-  &2 {
-    color: $color-2;
-}
-  &3 {
-    color: $color-3;
-}
-  &4 {
-    color: $color-4;
-}
-}
 
 .app-wrapper, .type-product {
   margin: 15px 0 15px 0;
@@ -49,7 +30,7 @@ path {
   &.no-background {
     background-color: transparent;
     box-shadow: none;
-}
+  }
   .title {
     color: $color-1;
     font-weight: bold;
@@ -57,7 +38,7 @@ path {
     margin-bottom: 1em;
     padding-bottom: 0.2em;
     font-size: $h4-font-size;
-}
+  }
 }
 
 a {
@@ -68,34 +49,22 @@ a {
   &:hover,
   &:active {
     color: $color-1;
-}
+  }
 
   &:not([href]):not([tabindex]) {
     color: inherit;
     text-decoration: none;
-}
+  }
 
   &:not([href]):not([tabindex]):hover,
   &:not([href]):not([tabindex]):focus {
     color: inherit;
     text-decoration: none;
-}
+  }
 
   &:not([href]):not([tabindex]):focus {
     outline: 0;
-}
-}
-
-@mixin app-gradient($color, $color2) {
-  @include app-transition();
-  background: $color;
-  background-image: linear-gradient(150deg, lighten($color, 5%) 0%, rgba(255,255,255,0) 50%);
-  //background-image: linear-gradient( darken($color, 10%), rgba(255,255,255,0));
-  &:hover {
-    background: darken($color, 5%);
-    background-image: linear-gradient(150deg, lighten($color, 5%) 0%, rgba(255,255,255,0) 50%);
-  //background: linear-gradient(100deg, $color2 0%, $color 100%);
-}
+  }
 }
 
 .gradient {

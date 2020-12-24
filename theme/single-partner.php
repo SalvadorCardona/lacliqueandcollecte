@@ -43,7 +43,7 @@ get_header()?>
                 </p>
             </div>
             <div class="app-wrapper">
-                <div class="title"><?= WH::trans('Présensation')?></div>
+                <div class="title"><?= WH::trans('Contacts du commerçant')?></div>
                 <p>
                     <?=  Template::getValue(PostTypePartner::FIELD_SHOP_DESCRIPTION, $metaPost); ?>
                 </p>

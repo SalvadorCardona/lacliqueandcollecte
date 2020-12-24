@@ -7,8 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "parcel": "parcel ./index.html  --out-dir ./../web/app/themes/hello-theme-master/dist -o app",
-    "parcel-build": "parcel build ./index.html  -d ./../web/app/themes/hello-theme-master/dist -o app"
+    "parcel": "parcel ./index.html  --out-dir ./../theme/dist -o app",
+    "parcel-build": "parcel build ./index.html  -d ./../theme/dist -o app"
   },
   "repository": {
     "type": "git",
@@ -35,15 +35,14 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@types/node": "^14.14.10",
     "app": "^0.1.0",
     "axios": "^0.21.0",
     "bootstrap": "5.0.0-beta1",
-    "browserslist": "^4.15.0"
+    "browserslist": "^4.15.0",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isobject": "^3.0.2"
   },
   "resolutions": {
     "browserslist": "4.14.2",

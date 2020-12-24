@@ -1,4 +1,6 @@
-import { isObject, isArray, camelCase } from "lodash";
+import camelCase from 'lodash.camelcase';
+import isArray from 'lodash.isarray';
+import isObject from 'lodash.isobject';
 
 export const keysToCamel = (o: any) => {
     if (isObject(o)) {
