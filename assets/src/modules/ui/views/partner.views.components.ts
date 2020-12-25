@@ -1,3 +1,4 @@
+
 export default  `
     <div class="single-partner">
         <div class="row">
@@ -18,22 +19,22 @@ export default  `
                 <div class="app-wrapper">
                     <div class="title">Contacts du commerçant</div>
                     <div>
-                        <app-icon icon="telephone"></app-icon> 0383474156
+                        <app-icon icon="telephone"></app-icon> : 0383474156
                     </div>
                     <div>
-                        <app-icon icon="facebook"></app-icon> @toucheDeBois
+                        <app-icon icon="facebook"></app-icon> : @toucheDeBois
                     </div>
                     <div>
-                        <app-icon icon="twitter"></app-icon>  @toucheDeBois
+                        <app-icon icon="twitter"></app-icon>  : @toucheDeBois
                     </div>
                     <div>
-                        <app-icon icon="instagram"></app-icon>  @toucheDeBois
+                        <app-icon icon="instagram"></app-icon>  : @toucheDeBois
                     </div>
                     <div>
-                        <app-icon icon="geoLat"></app-icon>  30 rue pasteur, Lyon, 69001
+                        <app-icon icon="geoLat"></app-icon>  : 30 rue pasteur, Lyon, 69001
                     </div>
                     <div>
-                        <app-button></app-button>
+                        <app-button icon="envelope" type="primary" label="Contactez-le"></app-button>
                     </div>
                 </div>
             </div>

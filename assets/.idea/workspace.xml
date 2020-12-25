@@ -5,30 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app.components.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/shared/icons.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../src/Model/Partner.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/header.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/ui/components/ui.header.template.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/types/post.type.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partner/partner.header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partner/partner.header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/icon.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/icon.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/ui/components/ui.button.template.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/components/ui.button.template.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/product.type.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/test.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/ui/components/ui.icon.template.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/components/ui.icon.template.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/ui/ui.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/ui.components.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/ui/views/partner.views.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/views/partner.views.components.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/icon.loaded.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/icons.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/views/partner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/partner.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../theme/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../theme/single-partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/single-partner.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../theme/template-parts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/template-parts/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +83,8 @@
       <workItem from="1608658478470" duration="2395000" />
       <workItem from="1608712742034" duration="65000" />
       <workItem from="1608742061883" duration="3248000" />
-      <workItem from="1608805844610" duration="3291000" />
+      <workItem from="1608805844610" duration="5891000" />
+      <workItem from="1608902102228" duration="6407000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>

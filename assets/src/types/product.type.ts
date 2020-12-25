@@ -64,7 +64,7 @@ export interface Links {
     collection: Collection[];
 }
 
-export interface Product {
+export interface ProductType {
     id: number;
     name: string;
     slug: string;

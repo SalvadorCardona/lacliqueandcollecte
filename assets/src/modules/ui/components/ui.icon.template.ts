@@ -1,6 +1,5 @@
 import {icons} from "App/shared/icons";
 
-
 const iconTemplate = (): string => {
     let template = '';
 
@@ -17,14 +16,12 @@ const iconTemplate = (): string => {
 };
 
 export default `
-
 <div class="col-4">
-        <div class="app-wrapper">
-        <div class="title">
-            Icons
-        </div>
-            ${iconTemplate()}
-        </div>
+    <div class="app-wrapper">
+    <div class="title">
+        Icons
+    </div>
+        ${iconTemplate()}
+    </div>
 </div>
-
 `;
