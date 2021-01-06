@@ -8,10 +8,12 @@
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/images";
 @import "mixins";
 @import "base";
 
 @import "views/partner";
+@import "views/product";
 @import "components/header";
 @import "components/product";
 @import "components/button";

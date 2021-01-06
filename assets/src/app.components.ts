@@ -3,10 +3,12 @@ import UiComponent from "App/modules/ui/ui.components";
 import ProductComponent from "App/components/product/product.component";
 import ProductLoopComponent from "App/components/product/product.loop.component";
 import ButtonComponent from "App/components/shared/button.component";
-import HeaderComponent from "App/components/shared/header.component";
+import HeaderComponent from "App/components/shared/header/header.component";
 import PartnerHeaderComponent from "App/components/partner/partner.header.component";
+import ProductViewComponent from "App/components/product/product.view.component";
 
 const components = [
+    ProductViewComponent,
     ProductLoopComponent,
     UiComponent,
     IconComponent,

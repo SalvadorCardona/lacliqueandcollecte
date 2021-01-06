@@ -4,6 +4,10 @@ export const environment = {
     idHomePage: 2,
     apiEndpoints: {
         productsByAuthorId: 'wp/app/products/1/by-author',
-        getProducts: 'wc/v3/products'
+        getProducts: 'wc/v3/products',
+        cart: {
+            addItem: 'wc/store/cart/add-item',
+            me: 'wc/store/cart',
+        }
     }
 };

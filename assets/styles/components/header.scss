@@ -17,20 +17,26 @@
           border-radius: 10px;
         }
       }
+      .site-logo-title {
+        text-transform: uppercase;
+        letter-spacing: -1.5px;
+        text-shadow: 0 0 1px darken($primary, 30%);
+      }
     }
     .search-bar {
       input {
         border-radius: 40px;
-        border: 1px solid darken($primary, 10%);
+        border: 3px solid lighten($primary, 10%);
         background-color: lighten($primary, 50%);
-        width: 300px;
-        height: 32px;
-        padding: 0 10px;
+        width: 350px;
+        height: 40px;
+        padding: 0 20px;
       }
       app-icon {
         position: absolute;
-        top: 7px;
-        right: 14px;
+        top: 50%;
+        margin-top: -8px;
+        right: 18px;
         path {
           color: lighten($primary, 10%);
         }
@@ -39,6 +45,7 @@
     .site-navigation {
       ul {
         list-style: none;
+        color: lighten($primary, 10%);
         li {
           margin-right: 15px;
         }
@@ -50,6 +57,7 @@
         padding: 8PX;
         background: lighten($primary, 50%);
         border-radius: 50%;
+        border: 3px solid lighten($primary, 10%);
         svg {
           path {
             color: $primary;

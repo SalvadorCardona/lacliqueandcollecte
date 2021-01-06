@@ -1,4 +1,5 @@
 import {camelCase, kebabCase} from "lodash";
+import components from "App/app.components";
 
 interface CustomElementConfig {
     selector?:string;
@@ -21,6 +22,10 @@ export const CustomElement = (config: CustomElementConfig = {}) => (component: a
         config.template = `<style>${config.style}</style> ${config.template}`;
     }
 
+    component.shareTest = () => {
+        return 'testProps'
+    };
+    // component.prototype.append('test');
     // if (config.template) {
     //     const template = document.createElement('template');
     //     const connectedCallback = component.prototype.connectedCallback || function () {};
@@ -58,6 +63,20 @@ export abstract class AppHtmlElement extends HTMLElement {
         if (oldValue !== newValue && this.hasOwnProperty(name)) {
             this[name] = newValue;
         }
+    }
+
+    public onInit(): void {}
+    public printRender(): void {
+        this.innerHTML = this.render();
+    }
+
+    public connectedCallback(): void {
+        this.onInit();
+        this.printRender();
+    }
+
+    public render(): string {
+        return '';
     }
 }
 

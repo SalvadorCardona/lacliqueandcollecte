@@ -1,4 +1,3 @@
-
 export default  `
     <div class="single-partner">
         <div class="row">

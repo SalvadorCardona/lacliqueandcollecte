@@ -29,3 +29,5 @@ export const keysToCamel = (o: any) => {
 
     return o;
 };
+
+export const filterPrice = (price: number): string =>  price + ' €';

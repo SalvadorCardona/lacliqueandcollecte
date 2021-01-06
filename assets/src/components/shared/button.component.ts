@@ -14,10 +14,6 @@ export default class ButtonComponent extends AppHtmlElement {
 
     static get observedAttributes() { return ['type', 'icon', 'label']; }
 
-    connectedCallback() {
-        this.innerHTML = this.render()
-    }
-
     render() {
         return `
             <button class="btn gradient gradient-${this.type}">

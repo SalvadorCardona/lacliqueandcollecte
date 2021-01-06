@@ -2,12 +2,15 @@ import axios, {AxiosInstance, AxiosResponse} from 'axios'
 import {environment} from "App/environement/environement";
 import {keysToCamel} from "App/shared/helper";
 import ClientProduct from "App/core/client/client.product";
+import ClientCart from "App/core/client/client.cart";
 
-export default class ClientHttp {
-    static self: ClientHttp;
+
+export default class ClientService {
+    static self: ClientService;
     public http: AxiosInstance;
 
     public product: ClientProduct;
+    public cart: ClientCart;
 
     public constructor() {
         this.http = axios.create({
@@ -26,13 +29,19 @@ export default class ClientHttp {
 
             return response;
         });
-        this.product = new ClientProduct(this);
+
+        this.setupClient();
     }
 
-    static get(): ClientHttp
+    public setupClient(): void {
+        this.product = new ClientProduct(this);
+        this.cart = new ClientCart(this);
+    }
+
+    static get(): ClientService
     {
         if (!this.self) {
-            this.self = (new ClientHttp());
+            this.self = (new ClientService());
         }
 
         return this.self;

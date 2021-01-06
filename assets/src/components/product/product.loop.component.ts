@@ -1,6 +1,6 @@
-import ClientHttp from "App/core/client.service";
+import ClientService from "App/core/client.service";
 import {AppHtmlElement, CustomElement, Prop} from "App/components/custom.element";
-import {Product} from "App/models/product"
+import {ProductType} from "App/types/product.type"
 import ProductComponent from "App/components/product/product.component";
 
 @CustomElement()
@@ -8,16 +8,16 @@ export default class ProductLoopComponent extends AppHtmlElement {
 
     static selector = 'app-product-loop';
     public idUser: number|null = null;
-    public products: Array<Product>
+    public products: Array<ProductType>
 
     static get observedAttributes() { return ['id-user'];}
 
     connectedCallback() {
-        ClientHttp.get().product.getProducts({author: this.idUser})
-            .then(response => {
+        ClientService.get().product.getProducts({author: this.idUser})
+            .then(products => {
                 let wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);
-                this.products = response.data as Array<Product>;
+                this.products = products;
                 this.products.forEach(product => {
 
                     let productComponent = document.createElement('app-product') as ProductComponent;
@@ -37,9 +37,5 @@ export default class ProductLoopComponent extends AppHtmlElement {
             
             </div>
         `;
-    }
-
-    public renderProducts(products: Array<Product>) {
-
     }
 }

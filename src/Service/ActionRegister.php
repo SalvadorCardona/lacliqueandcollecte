@@ -15,7 +15,7 @@ class ActionRegister
     public function registerActions(): void
     {
         foreach ($this->actions as $action) {
-            add_action($action::getAction(), $action);
+            add_action($action::getAction(), $action, 1000);
         }
     }
 

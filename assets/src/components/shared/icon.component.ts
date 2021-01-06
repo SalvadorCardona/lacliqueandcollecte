@@ -10,8 +10,8 @@ export default class IconComponent extends AppHtmlElement {
 
     static get observedAttributes() { return ['icon', 'domain']; }
 
-    connectedCallback() {
-        this.innerHTML = icons.hasOwnProperty(this.icon) ? icons[this.icon] : 'undefined';
+    render() {
+        return icons.hasOwnProperty(this.icon) ? icons[this.icon] : 'undefined';
     }
 }
 

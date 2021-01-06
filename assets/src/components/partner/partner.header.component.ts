@@ -1,5 +1,5 @@
 import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
-import {Image, Product} from "App/models/product";
+import {Image, ProductType} from "App/types/product.type";
 
 @CustomElement()
 export default class PartnerHeaderComponent extends AppHtmlElement {
@@ -7,11 +7,6 @@ export default class PartnerHeaderComponent extends AppHtmlElement {
     static selector = 'app-partner-header';
 
     static get observedAttributes() { return ['product'];}
-
-    connectedCallback(): void {
-
-        this.innerHTML = this.render();
-    }
 
     renderSocialIcon(): string {
 

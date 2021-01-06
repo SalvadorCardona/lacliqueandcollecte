@@ -1,5 +1,6 @@
 import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
-import {Image, Product} from "App/models/product";
+import {Image, ProductType} from "App/types/product.type";
+import {filterPrice} from "App/shared/helper";
 
 @CustomElement()
 export default class ProductComponent extends AppHtmlElement {
@@ -8,7 +9,7 @@ export default class ProductComponent extends AppHtmlElement {
 
     static get observedAttributes() { return ['product'];}
 
-    public product: Product;
+    public product: ProductType;
 
     connectedCallback() {
         this.classList.add(...['col-md-4', 'pt-0'])
@@ -20,10 +21,10 @@ export default class ProductComponent extends AppHtmlElement {
         return `
             <div class="product type-product d-flex flex-column align-items-center ">
                 <a href="${this.product.permalink}">
-                    <img src="${this.getThumbnail(this.product.images)}">
+                    <img alt="${this.product.images[0].alt || this.product.images[0].name}" src="${this.getThumbnail(this.product.images)}">
                 </a>
                 <div class="product-name fs-4 text-secondary">${this.product.name}</div>
-                <div class="product-price fw-bold">${this.product.price} €</div>
+                <div class="product-price fw-bold">${filterPrice(this.product.price)}</div>
                 <div class="">
                     <app-button icon="cartPlus" type="primary" label="Ajouter au panier"></app-button>
                 </div>

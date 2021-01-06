@@ -11,6 +11,13 @@ class WordpressThemeSupport implements ActionInterface
 
     public function __invoke(): void
     {
+        /**
+         * Disable woocomerce style for product page
+         */
+        if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
+            add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+        }
+
         add_theme_support("post-thumbnails");
 
         add_theme_support("menus");
@@ -61,6 +68,8 @@ class WordpressThemeSupport implements ActionInterface
         add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
             return [PostTypePartner::POST_TYPE_NAME, ...$args];
         }, 1);
+
+
     }
 
     public static function getAction(): string

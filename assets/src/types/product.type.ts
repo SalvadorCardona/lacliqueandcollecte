@@ -80,7 +80,7 @@ export interface ProductType {
     description: string;
     shortDescription: string;
     sku: string;
-    price: string;
+    price: number;
     regularPrice: string;
     salePrice: string;
     dateOnSaleFrom?: any;
