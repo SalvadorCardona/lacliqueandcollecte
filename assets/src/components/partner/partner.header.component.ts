@@ -4,8 +4,6 @@ import {Image, ProductType} from "App/types/product.type";
 @CustomElement()
 export default class PartnerHeaderComponent extends AppHtmlElement {
 
-    static selector = 'app-partner-header';
-
     static get observedAttributes() { return ['product'];}
 
     renderSocialIcon(): string {

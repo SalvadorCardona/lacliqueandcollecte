@@ -6,6 +6,7 @@ import ButtonComponent from "App/components/shared/button.component";
 import HeaderComponent from "App/components/shared/header/header.component";
 import PartnerHeaderComponent from "App/components/partner/partner.header.component";
 import ProductViewComponent from "App/components/product/product.view.component";
+import HeaderCartComponent from "App/components/shared/header/header.cart.component";
 
 const components = [
     ProductViewComponent,
@@ -16,6 +17,7 @@ const components = [
     PartnerHeaderComponent,
     ProductComponent,
     HeaderComponent,
+    HeaderCartComponent,
 ];
 
 export default components;

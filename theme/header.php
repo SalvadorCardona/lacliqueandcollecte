@@ -20,6 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 </head>
+
 <body <?php body_class(); ?>>
 
 <?php
@@ -28,3 +29,5 @@ hello_elementor_body_open();
 if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'header' ) ) {
 	get_template_part( 'template-parts/header' );
 }
+echo "icipart";
+echo wp_create_nonce( 'wc_store_api' );

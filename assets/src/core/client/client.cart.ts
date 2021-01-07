@@ -1,5 +1,5 @@
 import {environment} from "App/environement/environement";
-import Abstract from "App/core/abstract.client";
+import Abstract from "App/core/client/abstract.client";
 import {ProductType} from "App/types/product.type";
 import {CartType} from "App/types/cart.type";
 

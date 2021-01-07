@@ -5,8 +5,6 @@ import {filterPrice} from "App/shared/helper";
 @CustomElement()
 export default class ProductComponent extends AppHtmlElement {
 
-    static selector = 'app-product';
-
     static get observedAttributes() { return ['product'];}
 
     public product: ProductType;
@@ -21,7 +19,7 @@ export default class ProductComponent extends AppHtmlElement {
         return `
             <div class="product type-product d-flex flex-column align-items-center ">
                 <a href="${this.product.permalink}">
-                    <img alt="${this.product.images[0].alt || this.product.images[0].name}" src="${this.getThumbnail(this.product.images)}">
+                    <img alt="${this.getAttributeImage(this.product.images)}" src="${this.getThumbnail(this.product.images)}">
                 </a>
                 <div class="product-name fs-4 text-secondary">${this.product.name}</div>
                 <div class="product-price fw-bold">${filterPrice(this.product.price)}</div>
@@ -31,6 +29,15 @@ export default class ProductComponent extends AppHtmlElement {
             </div>
         `;
     }
+
+    getAttributeImage(images: Image[]): string {
+        if (!images.length) return '';
+
+        let [image] = images;
+
+        return image.alt || image.src;
+    }
+
 
     getThumbnail(images: Array<Image>): string {
         if (!images.length) return '';

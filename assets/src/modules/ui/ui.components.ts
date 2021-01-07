@@ -5,11 +5,6 @@ import productViews from "App/modules/ui/views/ui.product.views.components";
 
 @CustomElement()
 export default class UiComponent extends AppHtmlElement {
-    static selector = 'app-ui-template';
-
-    connectedCallback() {
-        this.innerHTML = this.render();
-    }
 
     render(): string
     {

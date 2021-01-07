@@ -1,21 +1,29 @@
 import {AppHtmlElement, CustomElement} from "App/components/custom.element";
 import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
+import CartService from "App/core/cart.service";
 
 @CustomElement()
-export default class ProductViewComponent  extends AppHtmlElement {
-    static selector = 'app-product-view';
+export default class ProductViewComponent extends AppHtmlElement {
 
-    public productId: number|null = null;
-    public product?: ProductType;
+    private productId: number = null;
+    private product?: ProductType;
+    private cartService: CartService;
 
     static get observedAttributes() { return ['product-id'];}
 
     onInit() {
-        ClientService.get().cart.addItem(this.productId, 1)
-            .then(products => {
-                console.log(products)
-            })
+        this.cartService = this.getService(CartService);
+        let clientService = this.getService<ClientService>(ClientService);
+        clientService.product.getProducts({include: [this.productId]})
+            .then(product => {
+                this.product = product[0];
+                this.printRender();
+            });
+    }
+
+    onMounted() {
+        this.cartService.addItem(this.productId, 1);
     }
 
     public render(): string {

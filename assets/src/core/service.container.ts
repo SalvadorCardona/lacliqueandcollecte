@@ -1,6 +1,5 @@
-import ClientService from "App/core/client.service";
-import CartService from "App/core/cart.service";
 import {events, EventService} from "App/core/event.service";
+import services from "App/app.services";
 
 export interface OnInit {
     onInit(serviceContainer: ServiceContainer): void;
@@ -11,24 +10,19 @@ export default class ServiceContainer {
 
     private container: Array<any> = [];
 
-    private serviceList: Array<any> = [
-        EventService,
-        ClientService,
-        CartService,
-    ]
+    private serviceList: Array<any> = services;
 
     public mount(): void
     {
+
         this.container = this.serviceList.map(Service => {
             return new Service()
         });
-
         this.container.forEach(service => {
             if (typeof service.onInit === 'function') {
                 service.onInit(this);
             }
         });
-
         this.service<EventService>(EventService).dispatch(events.SERVICE_READY);
     }
 

@@ -12,7 +12,7 @@ while ( have_posts() ) : the_post();
     ?>
 
     <main class="container my-5" role="main">
-        <app-ui-template></app-ui-template>
+        <app-ui></app-ui>
     </main>
 
 <?php

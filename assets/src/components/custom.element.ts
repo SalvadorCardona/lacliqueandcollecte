@@ -1,5 +1,6 @@
-import {camelCase, kebabCase} from "lodash";
-import components from "App/app.components";
+import camelCase from 'lodash.camelcase';
+import kebabCase from "lodash.kebabcase";
+import ServiceContainer from "App/core/service.container";
 
 interface CustomElementConfig {
     selector?:string;
@@ -16,35 +17,13 @@ const validateSelector = (selector: string) => {
 
 export const CustomElement = (config: CustomElementConfig = {}) => (component: any) => {
 
-    validateSelector(component.selector);
-
-    if (config.style) {
-        config.template = `<style>${config.style}</style> ${config.template}`;
-    }
-
-    component.shareTest = () => {
-        return 'testProps'
-    };
-    // component.prototype.append('test');
-    // if (config.template) {
-    //     const template = document.createElement('template');
-    //     const connectedCallback = component.prototype.connectedCallback || function () {};
-    //     component.prototype.connectedCallback = function() {
-    //         const clone = document.importNode(template.content, true);
-    //         if (config.useShadow) {
-    //             this.attachShadow({mode: 'open'}).appendChild(clone);
-    //         } else {
-    //             this.appendChild(clone);
-    //         }
-    //         connectedCallback.call(this);
-    //     };
+    // validateSelector(component.selector);
     //
-    //     template.innerHTML = config.template;
+    // if (config.style) {
+    //     config.template = `<style>${config.style}</style> ${config.template}`;
     // }
-    // console.log(component)
-    // console.log(component.getProps())
-    // component.prototype.test = 'testsqdsqdsqssss';
-    customElements.define(component.selector, component);
+    //
+    // customElements.define(component.selector, component);
 };
 
 // TODO : Make a better Prop
@@ -55,7 +34,10 @@ export const Prop = () =>  {
 }
 
 export abstract class AppHtmlElement extends HTMLElement {
-    public static selector: string;
+
+    public static getSelectorName() {
+        return kebabCase('App' + this.name).replace('-component', '');
+    }
 
     attributeChangedCallback(key: string, oldValue: any, newValue: any) {
         let name = camelCase(key);
@@ -66,6 +48,7 @@ export abstract class AppHtmlElement extends HTMLElement {
     }
 
     public onInit(): void {}
+    public onMounted(): void {}
     public printRender(): void {
         this.innerHTML = this.render();
     }
@@ -73,10 +56,15 @@ export abstract class AppHtmlElement extends HTMLElement {
     public connectedCallback(): void {
         this.onInit();
         this.printRender();
+        this.onMounted();
     }
 
     public render(): string {
         return '';
+    }
+
+    protected getService<T>(ServiceName): T {
+        return ServiceContainer.get().service(ServiceName);
     }
 }
 

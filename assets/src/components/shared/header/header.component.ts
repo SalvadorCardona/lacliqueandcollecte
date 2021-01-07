@@ -5,9 +5,7 @@ import {keysToCamel} from "App/shared/helper";
 @CustomElement()
 export default class HeaderComponent extends AppHtmlElement {
 
-    static selector = 'app-header';
-
-    public menus: Array<PostType>|null = null;
+    private menus: Array<PostType>|null = null;
 
     static get observedAttributes() { return ['menus']; }
 
@@ -50,7 +48,8 @@ export default class HeaderComponent extends AppHtmlElement {
                     </ul>
                 
                     <a href="/mon-compte"><app-icon icon="person"></app-icon></a>
-                    <a href="/panier"><app-icon icon="cart"></app-icon></a>
+                    
+                    <app-header-cart></app-header-cart>
                 </nav>
             </div>
         </header>

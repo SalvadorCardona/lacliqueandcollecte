@@ -21,4 +21,11 @@ export default class CartService implements OnInit {
                this.eventService.dispatch(events.CART_HAS_CHANGED);
             });
     }
+
+    public addItem(productId: number, quantity: number) {
+        this.clientService.cart.addItem(productId, quantity)
+            .then(response => {
+                console.log(response)
+            })
+    }
 }

@@ -6,13 +6,12 @@ import ProductComponent from "App/components/product/product.component";
 @CustomElement()
 export default class ProductLoopComponent extends AppHtmlElement {
 
-    static selector = 'app-product-loop';
-    public idUser: number|null = null;
+    public idUser?: number;
     public products: Array<ProductType>
 
     static get observedAttributes() { return ['id-user'];}
 
-    connectedCallback() {
+    onInit() {
         ClientService.get().product.getProducts({author: this.idUser})
             .then(products => {
                 let wrapper = document.createElement('div');

@@ -10,8 +10,6 @@ export default class ButtonComponent extends AppHtmlElement {
     @Prop()
     public label?: string = null;
 
-    static selector = 'app-button';
-
     static get observedAttributes() { return ['type', 'icon', 'label']; }
 
     render() {

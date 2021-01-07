@@ -4,8 +4,6 @@ import {icons} from 'App/shared/icons'
 @CustomElement()
 export default class IconComponent extends AppHtmlElement {
 
-    static selector = 'app-icon';
-
     public icon: string = 'airbnb';
 
     static get observedAttributes() { return ['icon', 'domain']; }
