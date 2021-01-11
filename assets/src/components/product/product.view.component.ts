@@ -23,7 +23,8 @@ export default class ProductViewComponent extends AppHtmlElement {
     }
 
     onMounted() {
-        this.cartService.addItem(this.productId, 1);
+        console.log(this.product)
+        this.cartService.addItem(147, 2);
     }
 
     public render(): string {

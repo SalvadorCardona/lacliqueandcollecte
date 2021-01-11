@@ -3,6 +3,7 @@ import {environment} from "App/environement/environement";
 import {keysToCamel} from "App/shared/helper";
 import ClientProduct from "App/core/client/client.product";
 import ClientCart from "App/core/client/client.cart";
+import {getMiddleware} from "App/types/middleware.type";
 
 
 export default class ClientService {
@@ -17,7 +18,7 @@ export default class ClientService {
             baseURL: environment.apiEndpoint,
             headers: {
                 'content-type': 'application/json',
-                'X-WC-Store-API-Nonce': '_nonce',
+                'X-WC-Store-API-Nonce': getMiddleware().wcStoreApi,
             }
         });
 
@@ -49,6 +50,6 @@ export default class ClientService {
     }
 
     public send(method: string, route: string, data: any = []): Promise<AxiosResponse> {
-        return this.http[method](route, {params: data});
+        return this.http[method](route, data);
     }
 }

@@ -13,7 +13,7 @@ export interface QuerySearch {
 export default class ClientProduct extends Abstract {
     public getProducts(query: QuerySearch = {}): Promise<ProductType[]> {
         return new Promise(resolve => {
-            this.clientHttp.send('get', environment.apiEndpoints.getProducts, query)
+            this.clientHttp.send('get', environment.apiEndpoints.getProducts, {params: query})
                 .then(response => {
                     resolve(response.data as ProductType[]);
                 });
