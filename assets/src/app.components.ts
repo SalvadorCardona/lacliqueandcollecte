@@ -7,8 +7,10 @@ import HeaderComponent from "App/components/shared/header/header.component";
 import PartnerHeaderComponent from "App/components/partner/partner.header.component";
 import ProductViewComponent from "App/components/product/product.view.component";
 import HeaderCartComponent from "App/components/shared/header/header.cart.component";
+import LoaderComponent from "App/components/shared/loader.component";
 
 const components = [
+    LoaderComponent,
     ProductViewComponent,
     ProductLoopComponent,
     UiComponent,

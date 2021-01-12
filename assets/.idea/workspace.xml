@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/types/middleware.type.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/loader.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/loader.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.services.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/client.product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/client.product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/service.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/service.container.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Action/WordpressThemeSupport.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Action/WordpressThemeSupport.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../theme/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/core" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,11 +65,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core" />
+      <recent name="$PROJECT_DIR$/src/components/shared" />
+      <recent name="$PROJECT_DIR$/styles/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/core/client" />
-      <recent name="$PROJECT_DIR$/src/core" />
-      <recent name="$PROJECT_DIR$/src/components/partner" />
-      <recent name="$PROJECT_DIR$/src/modules/ui/views" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/core/client" />
@@ -103,7 +100,8 @@
       <workItem from="1609841593224" duration="10953000" />
       <workItem from="1609941979539" duration="31102000" />
       <workItem from="1610029820689" duration="628000" />
-      <workItem from="1610045838167" duration="8112000" />
+      <workItem from="1610045838167" duration="14178000" />
+      <workItem from="1610438805023" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608654891121</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Before Loader Added">
+      <created>1610375359692</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610375359692</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beautiful partner page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Beautiful partner page" />
+    <MESSAGE value="Before Loader Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before Loader Added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

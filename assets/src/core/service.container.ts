@@ -18,11 +18,13 @@ export default class ServiceContainer {
         this.container = this.serviceList.map(Service => {
             return new Service()
         });
+
         this.container.forEach(service => {
             if (typeof service.onInit === 'function') {
                 service.onInit(this);
             }
         });
+
         this.service<EventService>(EventService).dispatch(events.SERVICE_READY);
     }
 
