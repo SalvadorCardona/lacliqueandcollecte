@@ -1,4 +1,4 @@
-import ServiceContainer, {OnInit} from "App/core/service.container";
+import {ServiceContainer, OnInit} from "App/core/service.container";
 import components from "App/app.components";
 import {events, EventService} from "App/core/event.service";
 

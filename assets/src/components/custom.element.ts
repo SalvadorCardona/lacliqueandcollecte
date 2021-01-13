@@ -1,6 +1,6 @@
 import camelCase from 'lodash.camelcase';
 import kebabCase from "lodash.kebabcase";
-import ServiceContainer from "App/core/service.container";
+import {ServiceContainer, OnInit} from "App/core/service.container";
 
 interface CustomElementConfig {
     selector?:string;
@@ -33,7 +33,11 @@ export const Prop = () =>  {
     }
 }
 
-export abstract class AppHtmlElement extends HTMLElement {
+export const createElement = <T>(elem): T => {
+    return document.createElement(elem.getSelectorName());
+}
+
+export abstract class AppHtmlElement extends HTMLElement implements OnInit {
 
     public static getSelectorName() {
         return kebabCase('App' + this.name).replace('-component', '');
@@ -47,20 +51,27 @@ export abstract class AppHtmlElement extends HTMLElement {
         }
     }
 
-    public onInit(): void {}
+    public onInit(serviceContainer: ServiceContainer): void {}
     public onMounted(): void {}
+    public afterRender(): void {}
+
     public printRender(): void {
         this.innerHTML = this.render();
+        this.afterRender();
     }
 
     public connectedCallback(): void {
-        this.onInit();
+        this.onInit(ServiceContainer.get());
         this.printRender();
         this.onMounted();
     }
 
     public render(): string {
         return '';
+    }
+
+    public addEvent(selector: string, type: string, callBack: Function): void {
+        this.querySelector('selector').addEventListener(type, callBack());
     }
 
     protected getService<T>(ServiceName): T {

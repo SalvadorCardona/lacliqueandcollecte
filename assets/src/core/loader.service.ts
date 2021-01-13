@@ -1,6 +1,7 @@
-import ServiceContainer, {OnInit} from "App/core/service.container";
+import {ServiceContainer, OnInit} from "App/core/service.container";
 import {events, EventService} from "App/core/event.service";
 import LoaderComponent from "App/components/shared/loader.component";
+import {createElement} from "App/components/custom.element";
 
 export class LoaderService implements OnInit {
 
@@ -13,7 +14,7 @@ export class LoaderService implements OnInit {
     }
 
     private setup(): void {
-        this.loaderComponent = document.createElement(LoaderComponent.getSelectorName());
+        this.loaderComponent = createElement(LoaderComponent);
         this.loaderComponent.id = LoaderService.idLoaderComponent;
         document.body.insertAdjacentElement('beforeend', this.loaderComponent);
         this.hide();

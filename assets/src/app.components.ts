@@ -8,8 +8,12 @@ import PartnerHeaderComponent from "App/components/partner/partner.header.compon
 import ProductViewComponent from "App/components/product/product.view.component";
 import HeaderCartComponent from "App/components/shared/header/header.cart.component";
 import LoaderComponent from "App/components/shared/loader.component";
+import ModalComponent from "App/components/shared/modal.component";
+import ModalProductComponent from "App/components/shared/modal.product.component";
 
 const components = [
+    ModalProductComponent,
+    ModalComponent,
     LoaderComponent,
     ProductViewComponent,
     ProductLoopComponent,

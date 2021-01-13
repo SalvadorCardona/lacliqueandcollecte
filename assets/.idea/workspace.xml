@@ -5,14 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/shared/loader.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/components/loader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/modal.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles/components/modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.components.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/client.cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/client.cart.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/loader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/service.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/service.container.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/helper.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_base.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/app.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/core" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/shared" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -65,8 +77,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/components/shared" />
+      <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/styles/components" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/core/client" />
@@ -102,6 +114,8 @@
       <workItem from="1610029820689" duration="628000" />
       <workItem from="1610045838167" duration="14178000" />
       <workItem from="1610438805023" duration="20000" />
+      <workItem from="1610484297999" duration="6561000" />
+      <workItem from="1610556226095" duration="10640000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>

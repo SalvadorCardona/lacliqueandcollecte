@@ -1,5 +1,5 @@
 import ClientService from "App/core/client.service";
-import ServiceContainer, {OnInit} from "App/core/service.container";
+import {ServiceContainer, OnInit} from "App/core/service.container";
 import {CartType} from "App/types/cart.type";
 import {events, EventService} from "App/core/event.service";
 
@@ -22,10 +22,13 @@ export default class CartService implements OnInit {
             });
     }
 
-    public addItem(productId: number, quantity: number) {
-        this.clientService.cart.addItem(productId, quantity)
-            .then(response => {
-                console.log(response)
-            })
+    public addItem(productId: number, quantity: number): Promise<CartType> {
+        return new Promise(resolve => {
+            this.clientService.cart.addItem(productId, quantity)
+                .then(cart => {
+                    this.eventService.dispatch(events.CART_HAS_CHANGED);
+                    resolve(cart);
+                })
+        });
     }
 }

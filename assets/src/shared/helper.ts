@@ -31,3 +31,4 @@ export const keysToCamel = (o: any) => {
 };
 
 export const filterPrice = (price: number): string =>  price + ' €';
+export const filterTax = (price: number): string =>  filterPrice(price) + ' TTC';

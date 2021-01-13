@@ -5,7 +5,7 @@ export interface OnInit {
     onInit(serviceContainer: ServiceContainer): void;
 }
 
-export default class ServiceContainer {
+export class ServiceContainer {
     public static self: ServiceContainer;
 
     private container: Array<any> = [];

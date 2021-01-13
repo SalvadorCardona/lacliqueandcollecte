@@ -1,5 +1,5 @@
 import ClientService from "App/core/client.service";
-import {AppHtmlElement, CustomElement, Prop} from "App/components/custom.element";
+import {AppHtmlElement, createElement, CustomElement, Prop} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
 import ProductComponent from "App/components/product/product.component";
 
@@ -19,7 +19,7 @@ export default class ProductLoopComponent extends AppHtmlElement {
                 this.products = products;
                 this.products.forEach(product => {
 
-                    let productComponent = document.createElement('app-product') as ProductComponent;
+                    let productComponent = createElement(ProductComponent) as ProductComponent;
                     productComponent.product = product;
 
                     wrapper.appendChild(productComponent);
