@@ -38,6 +38,11 @@ class Kernel
         return __DIR__ . './../config';
     }
 
+    public static function getDirPublic(): string
+    {
+        return __DIR__ . './../web';
+    }
+
     public static function boot(): void
     {
         $containerBuilder = new ContainerBuilder();

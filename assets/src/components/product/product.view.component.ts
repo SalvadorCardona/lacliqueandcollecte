@@ -39,15 +39,10 @@ export default class ProductViewComponent extends AppHtmlElement {
 
     afterRender() {
         if (!this.querySelector('app-button')) return;
-        console.log(this.querySelector('app-button'))
-        this.addEvent('app-button', 'click', this.addToBasket);
-
-        let modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
-        modalProductComponent.product = this.product;
-        this.modalService.open(modalProductComponent);
+        this.addEvent('app-button', 'click', _ => this.addItem());
     }
 
-    addToBasket(): void {
+    addItem(): void {
         this.cartService.addItem(this.productId, this.quantity)
             .then(_ => {
                 let modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
@@ -65,10 +60,13 @@ export default class ProductViewComponent extends AppHtmlElement {
                         <img class="img-fluid" alt="${this.product.images[0].alt}" src="${this.product.images[0].src}"/>
                     </section>
                     <section class="col-md-6">
-                        <h1>${this.product.name}</h1>
-                        <h2>Description</h2>
+                        <h1 class="mt-2 text-primary">${this.product.name}</h1>
+                        <hr>
+                        <h2 class="fs-4">Description :</h2>
                         <p>${this.product.description}</p>
-                        <span class="price text-info fs-3">${filterTax(this.product.price)}</span>
+                        <hr>
+                        <div class="price text-secondary fs-3 text-end mx-2">${filterTax(this.product.price)}</div>
+                        <hr>
                         <div class="row add-to-basket mt-1">
                             <div class="col-md-3">
                                 <select id="product-qty" class="form-control">

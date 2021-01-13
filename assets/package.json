@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "parcel": "parcel ./index.html  --out-dir ./../theme/dist -o app",
+    "parcel": "parcel ./index.html  --out-dir ./../web -o app",
     "parcel-build": "parcel build ./index.html  -d ./../theme/dist -o app"
   },
   "repository": {

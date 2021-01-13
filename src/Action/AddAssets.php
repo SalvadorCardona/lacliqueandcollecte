@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Action;
 
 use App\ActionInterface;
+use App\Kernel;
 
 class AddAssets implements ActionInterface
 {
@@ -14,10 +15,10 @@ class AddAssets implements ActionInterface
 
         if (!is_admin()) {
             wp_deregister_script('jquery');
-            $manifest = json_decode(file_get_contents(get_template_directory() . '/dist/parcel-manifest.json'), true);
+            $manifest = json_decode(file_get_contents(Kernel::getDirPublic() . '/parcel-manifest.json'), true);
 
-            wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/dist' . $manifest['styles/app.scss'], false, '1.1', 'all');
-            wp_enqueue_script('app-js', get_stylesheet_directory_uri() . '/dist'. $manifest['src/app.ts'], [], 1.1, true);
+            wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], false, '1.1', 'all');
+            wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], 1.1, true);
         }
 
     }

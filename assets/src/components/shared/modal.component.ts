@@ -9,23 +9,30 @@ export default class ModalComponent extends AppHtmlElement {
         this._body = value;
     }
 
-    afterRender() {
-        this.querySelector('[data-action="close"]').addEventListener('click', () => {
-            this._$close();
-        });
-
-        this.querySelector('.modal-body').insertAdjacentElement('beforeend', this._body);
-    }
-
     set $close(value: Function) {
         this._$close = value;
+    }
+
+    afterRender() {
+        if (this._$close) {
+            this.querySelector('app-button').addEventListener('click', () => {
+                this._$close();
+            });
+
+            this.querySelector('.modal-background').addEventListener('click', (e) => {
+                if(e.target !== e.currentTarget) return;
+                this._$close();
+            });
+        }
+
+        this.querySelector('.modal-body').append(this._body);
     }
 
     render(): string {
         return `
         <div class="modal-background">
             <div class="modal-content">
-                <div class="modal-header"><span data-action="close">X</span></div>
+                <div class="modal-header"><app-button label="X"></app-button></div>
                 <div class="modal-body"></div>
             </div>
         </div>`;

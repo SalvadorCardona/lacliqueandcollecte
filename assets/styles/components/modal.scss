@@ -15,9 +15,14 @@ app-modal {
         max-width: 360px;
         .modal-header {
             text-align: right;
+            app-button > button {
+                margin-top: 0;
+            }
         }
         .modal-body {
-           color: red;
+            app-button > button {
+                margin-bottom: 0;
+            }
         }
     }
 }

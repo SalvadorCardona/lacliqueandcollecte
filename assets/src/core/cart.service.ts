@@ -26,6 +26,7 @@ export default class CartService implements OnInit {
         return new Promise(resolve => {
             this.clientService.cart.addItem(productId, quantity)
                 .then(cart => {
+                    this.cart = cart;
                     this.eventService.dispatch(events.CART_HAS_CHANGED);
                     resolve(cart);
                 })

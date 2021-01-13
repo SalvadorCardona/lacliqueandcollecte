@@ -1,16 +1,26 @@
 import {AppHtmlElement, CustomElement, Prop} from 'App/components/custom.element';
-import IconComponent from "App/components/shared/icon.component";
 
 @CustomElement()
 export default class ButtonComponent extends AppHtmlElement {
-    @Prop()
     public type?: string = null;
-    @Prop()
+
     public icon?: string = null;
-    @Prop()
+
     public label?: string = null;
 
+    private _$click: Function;
+
     static get observedAttributes() { return ['type', 'icon', 'label']; }
+
+    set $click(value: Function) {
+        this._$click = value;
+    }
+
+    afterRender() {
+        if (!this._$click) return
+
+        this.addEvent('button', 'click', _ => this._$click());
+    }
 
     render() {
         return `

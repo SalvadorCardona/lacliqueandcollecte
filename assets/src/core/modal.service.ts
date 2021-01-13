@@ -18,13 +18,12 @@ export class ModalService implements OnInit {
 
     public open(content: HTMLElement): void
     {
-        console.log('2', content)
         this.modalComponent = createElement(ModalComponent);
         this.modalComponent.id = ModalService.idModalComponent;
         this.modalComponent.body = content;
         this.modalComponent.$close = () => this.close();
 
-        document.body.insertAdjacentElement('beforeend', this.modalComponent);
+        document.body.append(this.modalComponent);
     }
 
     public close(): void

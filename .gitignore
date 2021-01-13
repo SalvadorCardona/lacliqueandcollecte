@@ -8,6 +8,12 @@ web/app/upgrade
 !web/app/plugins/elementor-pro
 # WordPress
 web/wp
+web/*.js
+web/*.map
+web/*.html
+web/*.css
+web/parcel-manifest.json
+
 web/.htaccess
 node_modules
 

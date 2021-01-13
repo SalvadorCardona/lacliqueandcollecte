@@ -16,7 +16,7 @@ export class LoaderService implements OnInit {
     private setup(): void {
         this.loaderComponent = createElement(LoaderComponent);
         this.loaderComponent.id = LoaderService.idLoaderComponent;
-        document.body.insertAdjacentElement('beforeend', this.loaderComponent);
+        document.body.append(this.loaderComponent);
         this.hide();
     }
 
