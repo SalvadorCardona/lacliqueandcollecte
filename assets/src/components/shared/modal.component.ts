@@ -2,11 +2,13 @@ import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
 
 @CustomElement()
 export default class ModalComponent extends AppHtmlElement {
-    private _body: any;
+    private _body: HTMLElement;
+    private _title: string;
     private _$close: Function;
 
-    set body(value: any) {
-        this._body = value;
+    public init(body: HTMLElement, title: string = null) {
+        this._body = body;
+        this._title = title;
     }
 
     set $close(value: Function) {
@@ -15,7 +17,7 @@ export default class ModalComponent extends AppHtmlElement {
 
     afterRender() {
         if (this._$close) {
-            this.querySelector('app-button').addEventListener('click', () => {
+            this.querySelector('app-icon').addEventListener('click', () => {
                 this._$close();
             });
 
@@ -31,8 +33,17 @@ export default class ModalComponent extends AppHtmlElement {
     render(): string {
         return `
         <div class="modal-background">
-            <div class="modal-content">
-                <div class="modal-header"><app-button label="X"></app-button></div>
+            <div class="modal-content col-md-3 position-relative mt-0">
+                <div class="modal-header
+                gradient-primary 
+                position-absolute 
+                top-0 
+                start-0
+                w-100
+                ">
+                    <span class="text-uppercase">${this._title || ''}</span>
+                    <app-icon icon="biX"></app-icon>
+                </div>
                 <div class="modal-body"></div>
             </div>
         </div>`;

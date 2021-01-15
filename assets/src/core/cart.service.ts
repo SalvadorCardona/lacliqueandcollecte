@@ -11,7 +11,7 @@ export default class CartService implements OnInit {
     onInit(serviceContainer: ServiceContainer) {
         this.clientService = serviceContainer.service(ClientService);
         this.eventService = serviceContainer.service(EventService);
-        this.eventService.addSubscriber(events.SERVICE_READY, _ => this.loadCart())
+        this.eventService.addSubscriber(events.SERVICE_MOUNTED, _ => this.loadCart())
     }
 
     public loadCart(): void {

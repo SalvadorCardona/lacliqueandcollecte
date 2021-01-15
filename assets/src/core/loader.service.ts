@@ -10,7 +10,7 @@ export class LoaderService implements OnInit {
 
     onInit(serviceContainer: ServiceContainer): void {
         let eventService: EventService = serviceContainer.service(EventService);
-        eventService.addSubscriber(events.SERVICE_READY, () => this.setup());
+        eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 
     private setup(): void {

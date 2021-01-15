@@ -8,7 +8,6 @@ body {
   line-height: $line-height-base;
   background-color: #f8f8fb;
   font-style: normal;
-  font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -19,6 +18,9 @@ path {
   color: $body-color;
 }
 
+app-icon {
+  display: inline;
+}
 
 .app-wrapper, .type-product, .modal-content {
   margin: 15px 0 15px 0;

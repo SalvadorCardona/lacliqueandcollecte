@@ -5,25 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/kernel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/button.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/icon.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/icon.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/event.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/loader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/service.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/service.container.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/icons.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/components/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/modal.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mix-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Action/AddAssets.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Action/AddAssets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,10 @@
       <workItem from="1610045838167" duration="14178000" />
       <workItem from="1610438805023" duration="20000" />
       <workItem from="1610484297999" duration="6561000" />
-      <workItem from="1610556226095" duration="15353000" />
+      <workItem from="1610556226095" duration="15969000" />
+      <workItem from="1610628593556" duration="6242000" />
+      <workItem from="1610703566371" duration="24000" />
+      <workItem from="1610721750215" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -150,7 +155,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Beautiful partner page" />
     <MESSAGE value="Before Loader Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before Loader Added" />
+    <MESSAGE value="Service Cleaned" />
+    <option name="LAST_COMMIT_MESSAGE" value="Service Cleaned" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

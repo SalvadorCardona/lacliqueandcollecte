@@ -47,7 +47,7 @@ export default class ProductViewComponent extends AppHtmlElement {
             .then(_ => {
                 let modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
                 modalProductComponent.product = this.product;
-                this.modalService.open(modalProductComponent);
+                this.modalService.open(modalProductComponent, 'Votre produit a été enregistré');
             })
     }
 
@@ -65,7 +65,7 @@ export default class ProductViewComponent extends AppHtmlElement {
                         <h2 class="fs-4">Description :</h2>
                         <p>${this.product.description}</p>
                         <hr>
-                        <div class="price text-secondary fs-3 text-end mx-2">${filterTax(this.product.price)}</div>
+                        <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>
                         <hr>
                         <div class="row add-to-basket mt-1">
                             <div class="col-md-3">

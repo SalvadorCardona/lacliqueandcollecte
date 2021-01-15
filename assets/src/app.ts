@@ -1,6 +1,5 @@
-import {ServiceContainer} from "App/core/service.container"
-import {events, EventService} from "App/core/event.service";
+import Kernel from "App/core/kernel";
 
-ServiceContainer.get().mount();
+let kernel = Kernel.get();
 
-ServiceContainer.get().service<EventService>(EventService).dispatch(events.APP_LOADED);
+kernel.setup();

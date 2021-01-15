@@ -1,7 +1,7 @@
 export enum events  {
-    SERVICE_READY = 'service_ready',
-    APP_LOADED = 'app_loaded',
-    CART_HAS_CHANGED = 'cart_has_changed'
+    SERVICE_MOUNTED = 'SERVICE_MOUNTED',
+    CART_HAS_CHANGED = 'cart_has_changed',
+    COMPONENT_MOUNTED = 'component_mounted',
 }
 
 export class EventService {

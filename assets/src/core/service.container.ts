@@ -1,4 +1,3 @@
-import {events, EventService} from "App/core/event.service";
 import services from "App/app.services";
 
 export interface OnInit {
@@ -12,9 +11,8 @@ export class ServiceContainer {
 
     private serviceList: Array<any> = services;
 
-    public mount(): void
+    public loadService(): void
     {
-
         this.container = this.serviceList.map(Service => {
             return new Service()
         });
@@ -24,8 +22,6 @@ export class ServiceContainer {
                 service.onInit(this);
             }
         });
-
-        this.service<EventService>(EventService).dispatch(events.SERVICE_READY);
     }
 
     static get(): ServiceContainer

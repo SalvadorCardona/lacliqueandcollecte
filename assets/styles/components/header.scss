@@ -1,11 +1,10 @@
 .site-header {
-  background: $primary;
   border-bottom: 2px solid lighten($primary, 20%);
   a, path {
     color: white;
   }
   .site-branding {
-    height: 60px;
+    height: $header-size;
     .site-logo {
       .custom-logo-link {
         .custom-logo {
@@ -35,8 +34,12 @@
       app-icon {
         position: absolute;
         top: 50%;
-        margin-top: -8px;
+        margin-top: -12px;
         right: 18px;
+        svg {
+          width: 16px;
+          height: auto;
+        }
         path {
           color: lighten($primary, 10%);
         }

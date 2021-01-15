@@ -9,18 +9,18 @@ export class ModalService implements OnInit {
 
     onInit(serviceContainer: ServiceContainer): void {
         let eventService: EventService = serviceContainer.service(EventService);
-        eventService.addSubscriber(events.SERVICE_READY, () => this.setup());
+        eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 
     private setup() {
 
     }
 
-    public open(content: HTMLElement): void
+    public open(content: HTMLElement, title: string = null): void
     {
         this.modalComponent = createElement(ModalComponent);
         this.modalComponent.id = ModalService.idModalComponent;
-        this.modalComponent.body = content;
+        this.modalComponent.init(content, title);
         this.modalComponent.$close = () => this.close();
 
         document.body.append(this.modalComponent);

@@ -29,7 +29,7 @@ export default class HeaderComponent extends AppHtmlElement {
 
     public render(): string {
         return `
-        <header class="site-header" role="banner">
+        <header class="site-header gradient-primary" role="banner">
             <div class="container site-branding d-flex justify-content-between align-items-center py-2">
                 <span class="site-logo">
                     <a href="/" class="custom-logo-link me-3" rel="home">
