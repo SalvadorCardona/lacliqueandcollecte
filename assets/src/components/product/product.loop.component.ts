@@ -1,9 +1,8 @@
 import ClientService from "App/core/client.service";
-import {AppHtmlElement, createElement, CustomElement, Prop} from "App/components/custom.element";
+import {AppHtmlElement, createElement} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
 import ProductComponent from "App/components/product/product.component";
 
-@CustomElement()
 export default class ProductLoopComponent extends AppHtmlElement {
 
     public idUser?: number;

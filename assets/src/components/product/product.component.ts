@@ -1,8 +1,7 @@
-import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
+import {AppHtmlElement} from 'App/components/custom.element';
 import {Image, ProductType} from "App/types/product.type";
 import {filterPrice} from "App/shared/helper";
 
-@CustomElement()
 export default class ProductComponent extends AppHtmlElement {
 
     static get observedAttributes() { return ['product'];}

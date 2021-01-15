@@ -1,4 +1,4 @@
-import {AppHtmlElement, createElement, CustomElement} from "App/components/custom.element";
+import {AppHtmlElement, createElement} from "App/components/custom.element";
 import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
@@ -8,7 +8,6 @@ import {filterTax} from "App/shared/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/components/shared/modal.product.component";
 
-@CustomElement()
 export default class ProductViewComponent extends AppHtmlElement {
 
     private productId: number = null;

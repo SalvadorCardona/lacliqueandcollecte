@@ -1,7 +1,6 @@
-import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
+import {AppHtmlElement} from 'App/components/custom.element';
 import {icons} from 'App/shared/icons'
 
-@CustomElement()
 export default class IconComponent extends AppHtmlElement {
 
     public icon: string = '';

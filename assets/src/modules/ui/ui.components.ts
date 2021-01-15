@@ -1,9 +1,8 @@
-import {AppHtmlElement, CustomElement} from "App/components/custom.element";
+import {AppHtmlElement} from "App/components/custom.element";
 import componentView from "App/modules/ui/views/ui.views.components";
 import partnerViews from "App/modules/ui/views/ui.partner.views.components";
 import productViews from "App/modules/ui/views/ui.product.views.components";
 
-@CustomElement()
 export default class UiComponent extends AppHtmlElement {
 
     render(): string

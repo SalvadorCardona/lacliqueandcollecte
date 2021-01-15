@@ -2,8 +2,6 @@ import camelCase from 'lodash.camelcase';
 import kebabCase from "lodash.kebabcase";
 import {ServiceContainer} from "App/core/service.container";
 
-export const CustomElement = () => () => {};
-
 export const createElement = <T>(elem): T => {
     return document.createElement(elem.getSelectorName());
 }
@@ -48,6 +46,10 @@ export abstract class AppHtmlElement extends HTMLElement {
 
     public addEvent(selector: string, type: string, callBack: Function): void {
         this.querySelector(selector).addEventListener(type, _ => callBack());
+    }
+
+    public addEventClick(selector: string, callBack: Function): void {
+        this.addEvent(selector, 'click', callBack);
     }
 }
 

@@ -1,9 +1,8 @@
-import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
+import {AppHtmlElement} from 'App/components/custom.element';
 import {ProductType} from "App/types/product.type";
 import {OnInit, ServiceContainer} from "App/core/service.container";
 import {ModalService} from "App/core/modal.service";
 
-@CustomElement()
 export default class ModalProductComponent extends AppHtmlElement implements OnInit {
     private _product: ProductType;
     private modalService: ModalService;

@@ -1,6 +1,5 @@
-import {AppHtmlElement, CustomElement, Prop} from 'App/components/custom.element';
+import {AppHtmlElement} from 'App/components/custom.element';
 
-@CustomElement()
 export default class ButtonComponent extends AppHtmlElement {
     public type?: string = null;
 

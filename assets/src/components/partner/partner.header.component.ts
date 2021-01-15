@@ -1,7 +1,5 @@
-import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
-import {Image, ProductType} from "App/types/product.type";
+import {AppHtmlElement} from 'App/components/custom.element';
 
-@CustomElement()
 export default class PartnerHeaderComponent extends AppHtmlElement {
 
     static get observedAttributes() { return ['product'];}

@@ -32,5 +32,6 @@
     }
     &:hover {
         @include app-transition();
+        transform: scale(1.05);
     }
 }

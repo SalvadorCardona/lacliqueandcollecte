@@ -1,8 +1,7 @@
-import {AppHtmlElement, CustomElement} from 'App/components/custom.element';
+import {AppHtmlElement} from 'App/components/custom.element';
 import {PostType} from "App/types/post.type";
 import {keysToCamel} from "App/shared/helper";
 
-@CustomElement()
 export default class HeaderComponent extends AppHtmlElement {
 
     private menus: Array<PostType>|null = null;
@@ -17,7 +16,8 @@ export default class HeaderComponent extends AppHtmlElement {
         this.menus = keysToCamel(this.menus);
     }
 
-    public renderMenu(): string {
+
+    private renderMenu(): string {
         return this.menus.map(menu => {
             return `
                 <li id="menus-item-94" class="d-inline-block p-1">
