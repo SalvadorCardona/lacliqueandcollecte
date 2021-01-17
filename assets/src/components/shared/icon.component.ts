@@ -1,14 +1,13 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from 'App/components/custom.element';
 import {icons} from 'App/shared/icons'
+import {html, property } from 'lit-element';
+import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
-export default class IconComponent extends AppHtmlElement {
+export default class IconComponent extends AppComponent {
+    @property({type: String})
+    private icon: string;
 
-    public icon: string = '';
-
-    static get observedAttributes() { return ['icon']; }
-
-    render() {
-        return icons.hasOwnProperty(this.icon) ? icons[this.icon] : 'undefined';
+    public render() {
+        return html`${unsafeHTML(icons.hasOwnProperty(this.icon) ? icons[this.icon] : '')}`;
     }
 }
-

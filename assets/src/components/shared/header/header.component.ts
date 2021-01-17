@@ -1,14 +1,14 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from 'App/components/custom.element';
 import {PostType} from "App/types/post.type";
 import {keysToCamel} from "App/shared/helper";
+import { property } from 'lit-element/lib/decorators';
+import { html } from 'lit-element';
 
-export default class HeaderComponent extends AppHtmlElement {
-
+export default class HeaderComponent extends AppComponent {
+    @property({type: Object})
     private menus: Array<PostType>|null = null;
 
-    static get observedAttributes() { return ['menus']; }
-
-    onInit() {
+    protected onInit() {
         if (typeof this.menus === 'string') {
             this.menus = JSON.parse(this.menus);
         }
@@ -16,19 +16,18 @@ export default class HeaderComponent extends AppHtmlElement {
         this.menus = keysToCamel(this.menus);
     }
 
-
-    private renderMenu(): string {
+    private renderMenu() {
         return this.menus.map(menu => {
-            return `
+            return html`
                 <li id="menus-item-94" class="d-inline-block p-1">
                     <a href="${menu.guid}">${menu.title}</a>
                 </li>
             `;
-        }).join('|');
+        });
     }
 
-    public render(): string {
-        return `
+    public render() {
+        return html`
         <header class="site-header gradient-primary" role="banner">
             <div class="container site-branding d-flex justify-content-between align-items-center py-2">
                 <span class="site-logo">

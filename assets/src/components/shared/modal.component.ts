@@ -1,6 +1,8 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from 'App/components/custom.element';
+import { html } from 'lit-element';
+import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
-export default class ModalComponent extends AppHtmlElement {
+export default class ModalComponent extends AppComponent {
     private _body: HTMLElement;
     private _title: string;
     private _$close: Function;
@@ -14,24 +16,14 @@ export default class ModalComponent extends AppHtmlElement {
         this._$close = value;
     }
 
-    afterRender() {
-        if (this._$close) {
-            this.querySelector('app-icon').addEventListener('click', () => {
-                this._$close();
-            });
-
-            this.querySelector('.modal-background').addEventListener('click', (e) => {
-                if(e.target !== e.currentTarget) return;
-                this._$close();
-            });
-        }
-
-        this.querySelector('.modal-body').append(this._body);
+    private close(e: Event) {
+        if(e.target !== e.currentTarget) return;
+        this._$close();
     }
 
-    render(): string {
-        return `
-        <div class="modal-background">
+    public render() {
+        return html`
+        <div @click="${this.close}" class="modal-background">
             <div class="modal-content col-md-3 position-relative mt-0">
                 <div class="modal-header
                 gradient-primary 
@@ -41,9 +33,9 @@ export default class ModalComponent extends AppHtmlElement {
                 w-100
                 ">
                     <span class="text-uppercase">${this._title || ''}</span>
-                    <app-icon icon="biX"></app-icon>
+                    <app-icon @click="${this.close}" icon="biX"></app-icon>
                 </div>
-                <div class="modal-body"></div>
+                <div class="modal-body">${unsafeHTML(this._body)}</div>
             </div>
         </div>`;
     }

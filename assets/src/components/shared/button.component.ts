@@ -1,28 +1,19 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from "App/components/custom.element";
+import { html, property } from 'lit-element';
 
-export default class ButtonComponent extends AppHtmlElement {
-    public type?: string = null;
+export default class ButtonComponent extends AppComponent {
 
-    public icon?: string = null;
+    @property()
+    public type: string;
 
-    public label?: string = null;
+    @property({type: String})
+    public icon: string;
 
-    private _$click: Function;
-
-    static get observedAttributes() { return ['type', 'icon', 'label']; }
-
-    set $click(value: Function) {
-        this._$click = value;
-    }
-
-    afterRender() {
-        if (!this._$click) return
-
-        this.addEvent('button', 'click', _ => this._$click());
-    }
+    @property()
+    public label: string;
 
     render() {
-        return `
+        return html`
             <button class="btn gradient gradient-${this.type}">
                 ${this.getIcon()}
                 ${this.label}
@@ -31,7 +22,7 @@ export default class ButtonComponent extends AppHtmlElement {
     }
 
     getIcon() {
-        return this.icon ? `<app-icon icon="${this.icon}"></app-icon>` : '';
+        return this.icon ? html`<app-icon icon="${this.icon}"></app-icon>` : ``;
     }
 }
 

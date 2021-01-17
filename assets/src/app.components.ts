@@ -10,10 +10,14 @@ import HeaderCartComponent from "App/components/shared/header/header.cart.compon
 import LoaderComponent from "App/components/shared/loader.component";
 import ModalComponent from "App/components/shared/modal.component";
 import ModalProductComponent from "App/components/shared/modal.product.component";
+import ModalCartComponent from "App/components/shared/modal.cart.component";
+import WrapperComponent from "App/components/shared/wrapper.component";
 
 const components = [
+    WrapperComponent,
     ModalProductComponent,
     ModalComponent,
+    ModalCartComponent,
     LoaderComponent,
     ProductViewComponent,
     ProductLoopComponent,

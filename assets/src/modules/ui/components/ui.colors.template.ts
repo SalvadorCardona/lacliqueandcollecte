@@ -19,8 +19,7 @@ export default `
 </style>
 
     <div class="col-4">
-        <div class="app-wrapper">
-            <div class="title">Colors</div>
+        <app-wrapper title="Colors">
             <span class="app-color bg-primary">Primary</span>
             <span class="app-color bg-secondary">Secondary</span>
             <span class="app-color bg-success">Success</span>
@@ -28,19 +27,17 @@ export default `
             <span class="app-color bg-danger">Danger</span>
             <span class="app-color bg-dark">Dark</span>
             
-        </div>
+        </app-wrapper>
     </div>
     <div class="col-4">
-        <div class="app-wrapper">
-                <div class="title">Gradients</div>
+        <app-wrapper title="Gradients">
                 <span class="app-gradient gradient-primary">Primary</span>
                 <span class="app-gradient gradient-secondary">Secondary</span>
                 <span class="app-gradient gradient-success">Success</span>
                 <span class="app-gradient gradient-warning">Warning</span>
                 <span class="app-gradient gradient-danger">Danger</span>
                 <span class="app-gradient gradient-dark">Dark</span>
-                
-        </div>
+        </app-wrapper>
     </div>
 
 `;

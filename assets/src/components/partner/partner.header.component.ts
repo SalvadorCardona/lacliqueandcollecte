@@ -1,22 +1,13 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from 'App/components/custom.element';
+import {html} from "lit-element";
 
-export default class PartnerHeaderComponent extends AppHtmlElement {
-
-    static get observedAttributes() { return ['product'];}
-
-    renderSocialIcon(): string {
-
-        return `
-            
-        `;
-    }
+export default class PartnerHeaderComponent extends AppComponent {
 
     render() {
-        return `
+        return html`
         <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url('http://localhost:8000/app/uploads/2020/11/atelier.jpg')">
             <div class="background-overlay"></div>
             <img id="picture" src="http://localhost:8000/app/uploads/2020/11/artisant.jpg" alt="face-picture">
-            
             
             <div id="last-name" class="text-white">
                 Céline

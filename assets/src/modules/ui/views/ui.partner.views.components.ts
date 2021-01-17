@@ -6,17 +6,15 @@ export default  `
         <div id="partner-content" class="row">
             <div class="col-md-8 ml-lg-0">
                 <h4>Les produits de Céline</h4>
-                <app-product-loop></app-product-loop>
+                <app-product-loop idUser="1"></app-product-loop>
             </div>
             <div class="col-md-4">
-                <div class="app-wrapper">
-                    <div class="title">Présensation</div>
+                <app-wrapper title="Présensation">
                     <p>
     La touche de bois est un atelier indépendant depuis 2007 spécialisé dans le travail de bois. Céline la gérante de l'atelier à parcouru plusieurs pays et travaillé dans de nombreux coin dans le monde avant d'ouvrir son atelier. Aujourd'hui avec son équipe, elle sera des objets pour décorer les pièces de votre maison....
                     </p>
-                </div>
-                <div class="app-wrapper">
-                    <div class="title">Contacts du commerçant</div>
+                </app-wrapper>
+                <app-wrapper title="Contact du commerçant">
                     <div>
                         <app-icon icon="telephone"></app-icon> : 0383474156
                     </div>
@@ -35,7 +33,7 @@ export default  `
                     <div>
                         <app-button icon="envelope" type="primary" label="Contactez-le"></app-button>
                     </div>
-                </div>
+                </app-wrapper>
             </div>
         </div>
     </div>

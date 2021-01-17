@@ -1,16 +1,31 @@
 import camelCase from 'lodash.camelcase';
 import kebabCase from "lodash.kebabcase";
 import {ServiceContainer} from "App/core/service.container";
+import { LitElement } from 'lit-element';
 
-export const createElement = <T>(elem): T => {
-    return document.createElement(elem.getSelectorName());
+export const getComponentSelector = (className: Function) =>  kebabCase('App' + className.name).replace('-component', '');
+
+export const createElement = <T>(Elem): T => {
+    return document.createElement(getComponentSelector(Elem));
+}
+
+export abstract class AppComponent extends LitElement {
+
+    protected createRenderRoot() {
+        return this;
+    }
+
+    protected constructor() {
+        super();
+        this.onInit(ServiceContainer.get());
+    }
+
+    protected onInit(serviceContainer: ServiceContainer): void {
+        // implement me
+    }
 }
 
 export abstract class AppHtmlElement extends HTMLElement {
-
-    public static getSelectorName() {
-        return kebabCase('App' + this.name).replace('-component', '');
-    }
 
     attributeChangedCallback(key: string, oldValue: any, newValue: any) {
         let name = camelCase(key);

@@ -1,10 +1,8 @@
 export default `
 
 <div class="col-4">
-    <div class="app-wrapper">
-    <div class="title">
-        Buttons
-    </div>
+    <app-wrapper title="title" class="app-wrapper">
+    
         <span class="fw-normal">
         &lt;app-button icon="" label="" type=""&gt &lt;/app-button&gt
         </span>
@@ -17,7 +15,7 @@ export default `
         <app-button label="Warning..." type="warning"></app-button>
         <app-button label="Info..." type="info"></app-button>
         <app-button label="Dark..." type="dark"></app-button>
-    </div>
+    </app-wrapper>
 </div>
 
 `;

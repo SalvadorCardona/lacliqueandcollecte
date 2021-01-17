@@ -1,9 +1,6 @@
 export default `
  <div class="col-8">
-    <div class="app-wrapper">
-        <div class="title">
-            Form
-        </div>
+    <app-wrapper title="form">
         <form>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -30,6 +27,6 @@ export default `
             <app-button label="Submit" type="primary"></app-button>
             <app-button label="Cancel" type="dark"></app-button>
         </form>
-    </div>
+    </app-wrapper>
 </div>
 `;

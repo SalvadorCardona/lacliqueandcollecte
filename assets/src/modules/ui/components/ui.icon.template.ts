@@ -17,11 +17,8 @@ const iconTemplate = (): string => {
 
 export default `
 <div class="col-4">
-    <div class="app-wrapper">
-    <div class="title">
-        Icons
-    </div>
+    <app-wrapper title="Icons">
         ${iconTemplate()}
-    </div>
+    </app-wrapper>
 </div>
 `;

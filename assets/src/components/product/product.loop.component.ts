@@ -1,38 +1,40 @@
 import ClientService from "App/core/client.service";
-import {AppHtmlElement, createElement} from "App/components/custom.element";
+import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
-import ProductComponent from "App/components/product/product.component";
+import {html, property } from "lit-element";
+import {ServiceContainer} from "App/core/service.container";
 
-export default class ProductLoopComponent extends AppHtmlElement {
+export default class ProductLoopComponent extends AppComponent {
+    @property({type: Number})
+    private idUser: number;
 
-    public idUser?: number;
-    public products: Array<ProductType>
+    @property({type: Object})
+    private products: Array<ProductType>
 
-    static get observedAttributes() { return ['id-user'];}
+    private clientService: ClientService;
 
-    onInit() {
-        ClientService.get().product.getProducts({author: this.idUser})
+    onInit(serviceContainer: ServiceContainer) {
+        this.clientService = serviceContainer.service<ClientService>(ClientService);
+    }
+
+    public firstUpdated()
+    {
+        this.clientService.product.getProducts({author: this.idUser})
             .then(products => {
+                console.log(products)
                 let wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);
                 this.products = products;
-                this.products.forEach(product => {
-
-                    let productComponent = createElement(ProductComponent) as ProductComponent;
-                    productComponent.product = product;
-
-                    wrapper.appendChild(productComponent);
-                })
-
-                this.appendChild(wrapper);
             })
     }
 
-    public render(): string
+    public render()
     {
-        return `
-            <div class="d-flex product-loop">
-            
+        if(!this.products) return '';
+
+        return html`
+            <div class="d-flex product-loop d-grid row row-cols-3">
+                ${this.products.map(product => html`<app-product .product="${product}"></app-product>`)}
             </div>
         `;
     }

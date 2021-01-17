@@ -1,4 +1,4 @@
-import {AppHtmlElement, createElement} from "App/components/custom.element";
+import {AppComponent, createElement} from "App/components/custom.element";
 import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
@@ -7,41 +7,48 @@ import {ServiceContainer} from "App/core/service.container";
 import {filterTax} from "App/shared/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/components/shared/modal.product.component";
+import { property } from "lit-element/lib/decorators";
+import { html } from "lit-element";
+import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
-export default class ProductViewComponent extends AppHtmlElement {
+export default class ProductViewComponent extends AppComponent {
+    @property({type: Number})
+    private productId: number;
 
-    private productId: number = null;
+    @property({type: String})
+    test: string;
+
     private quantity: number = 1;
+
+    @property({type: Object})
     private product?: ProductType;
+
     private cartService: CartService;
+
     private loaderService: LoaderService;
+
     private modalService: ModalService;
+
     private clientService: ClientService;
 
-    static get observedAttributes() { return ['product-id'];}
-
-    onInit(serviceContainer: ServiceContainer) {
+     onInit(serviceContainer: ServiceContainer) {
         this.loaderService = serviceContainer.service(LoaderService);
         this.cartService = serviceContainer.service(CartService);
         this.modalService = serviceContainer.service(ModalService);
         this.clientService = serviceContainer.service<ClientService>(ClientService);
+    }
 
+    public firstUpdated(): void {
         this.clientService.product.getProducts({include: [this.productId]})
             .then(product => {
                 this.loaderService.hide();
                 this.product = product[0];
-                this.printRender();
             });
 
         this.loaderService.show();
     }
 
-    afterRender() {
-        if (!this.querySelector('app-button')) return;
-        this.addEvent('app-button', 'click', _ => this.addItem());
-    }
-
-    addItem(): void {
+    private addItem(): void {
         this.cartService.addItem(this.productId, this.quantity)
             .then(_ => {
                 let modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
@@ -50,9 +57,9 @@ export default class ProductViewComponent extends AppHtmlElement {
             })
     }
 
-    public render(): string {
-        if (!this.product) return ``;
-        return `
+    public render() {
+        if (!this.product) return html``;
+        return html`
             <div class="type-product">
                 <div class="row">
                     <section class="col-md-6">
@@ -62,7 +69,7 @@ export default class ProductViewComponent extends AppHtmlElement {
                         <h1 class="mt-2 text-primary">${this.product.name}</h1>
                         <hr>
                         <h2 class="fs-4">Description :</h2>
-                        <p>${this.product.description}</p>
+                        <span>${unsafeHTML(this.product.description)}</span>
                         <hr>
                         <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>
                         <hr>
@@ -77,7 +84,7 @@ export default class ProductViewComponent extends AppHtmlElement {
                                     <option value="6">6</option>
                                 </select>
                             </div>
-                            <app-button type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
+                            <app-button @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
                         </div>
                     </section>
                 </div>

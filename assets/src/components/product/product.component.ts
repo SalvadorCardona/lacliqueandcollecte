@@ -1,22 +1,17 @@
-import {AppHtmlElement} from 'App/components/custom.element';
+import {AppComponent} from 'App/components/custom.element';
 import {Image, ProductType} from "App/types/product.type";
 import {filterPrice} from "App/shared/helper";
+import { property } from 'lit-element/lib/decorators';
+import { html } from 'lit-element';
 
-export default class ProductComponent extends AppHtmlElement {
+export default class ProductComponent extends AppComponent {
 
-    static get observedAttributes() { return ['product'];}
-
-    public product: ProductType;
-
-    connectedCallback() {
-        this.classList.add(...['col-md-4', 'pt-0'])
-        this.innerHTML = this.render();
-        this.querySelector('button').addEventListener('click', _ => alert(''));
-    }
+    @property({type: Object})
+    private product: ProductType;
 
     render() {
-        return `
-            <div class="product type-product d-flex flex-column align-items-center ">
+        return html`
+            <div class="product type-product d-flex flex-column align-items-center col">
                 <a href="${this.product.permalink}">
                     <img alt="${this.getAttributeImage(this.product.images)}" src="${this.getThumbnail(this.product.images)}">
                 </a>
@@ -29,7 +24,7 @@ export default class ProductComponent extends AppHtmlElement {
         `;
     }
 
-    getAttributeImage(images: Image[]): string {
+    private getAttributeImage(images: Image[]): string {
         if (!images.length) return '';
 
         let [image] = images;
@@ -38,7 +33,7 @@ export default class ProductComponent extends AppHtmlElement {
     }
 
 
-    getThumbnail(images: Array<Image>): string {
+    private getThumbnail(images: Array<Image>): string {
         if (!images.length) return '';
 
         let imageSrc = images[0].src;
