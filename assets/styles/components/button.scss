@@ -35,3 +35,10 @@
         transform: scale(1.05);
     }
 }
+
+button.action {
+    all: unset;
+    color: blue;
+    -webkit-text-fill-color: blue;
+    cursor: pointer;
+}

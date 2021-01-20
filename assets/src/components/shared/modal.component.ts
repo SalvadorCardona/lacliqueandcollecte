@@ -1,8 +1,8 @@
 import {AppComponent} from 'App/components/custom.element';
-import { html } from 'lit-element';
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+import { html, property } from 'lit-element';
 
 export default class ModalComponent extends AppComponent {
+    @property({type: HTMLElement})
     private _body: HTMLElement;
     private _title: string;
     private _$close: Function;
@@ -33,9 +33,9 @@ export default class ModalComponent extends AppComponent {
                 w-100
                 ">
                     <span class="text-uppercase">${this._title || ''}</span>
-                    <app-icon @click="${this.close}" icon="biX"></app-icon>
+                    <app-icon @click="${this._$close}" icon="biX"></app-icon>
                 </div>
-                <div class="modal-body">${unsafeHTML(this._body)}</div>
+                <div class="modal-body">${this._body}</div>
             </div>
         </div>`;
     }

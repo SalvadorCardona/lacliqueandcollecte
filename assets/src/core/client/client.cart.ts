@@ -1,6 +1,5 @@
 import {environment} from "App/environement/environement";
 import Abstract from "App/core/client/abstract.client";
-import {ProductType} from "App/types/product.type";
 import {CartType} from "App/types/cart.type";
 
 export default class ClientCart extends Abstract {
@@ -13,6 +12,17 @@ export default class ClientCart extends Abstract {
             .then(response => {
                 resolve(response.data as CartType);
             });
+        });
+    }
+    public removeItems(): Promise<Boolean> {
+        return new Promise((resolve, reject) => {
+            this.clientHttp.send('delete', environment.apiEndpoints.cart.deleteItems)
+                .then(_ => {
+                    resolve(true);
+                })
+                .catch(_ => {
+                    reject(false)
+                })
         });
     }
     public getCart(): Promise<CartType> {

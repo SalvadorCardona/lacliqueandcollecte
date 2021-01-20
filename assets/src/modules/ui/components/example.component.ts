@@ -26,7 +26,9 @@ export class ExampleComponent extends AppComponent {
         console.log('attribute change: ', name, newVal);
         super.attributeChangedCallback(name, oldVal, newVal);
     }
-
+    public updated() {
+        alert('')
+    }
     firstUpdated() {
 
     }

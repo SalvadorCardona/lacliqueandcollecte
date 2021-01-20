@@ -4,10 +4,13 @@ export interface OnInit {
     onInit(serviceContainer: ServiceContainer): void;
 }
 
+type Service = {new (): Service}
+type ServiceReference<Service> = Function
+
 export class ServiceContainer {
     public static self: ServiceContainer;
 
-    private container: Array<any> = [];
+    private container: Array<Service> = [];
 
     private serviceList: Array<any> = services;
 
@@ -33,7 +36,8 @@ export class ServiceContainer {
         return this.self;
     }
 
-    public service<T>(className): T|null {
-        return this.container.find(elem => elem instanceof className) || null;
+    public service<T>(classReference: ServiceReference<T>): T|null {
+        // @ts-ignore
+        return this.container.find(elem => elem instanceof classReference) as T || null;
     }
 }

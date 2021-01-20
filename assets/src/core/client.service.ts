@@ -18,6 +18,7 @@ export default class ClientService {
             baseURL: environment.apiEndpoint,
             headers: {
                 'content-type': 'application/json',
+                'accept': 'application/json',
                 'X-WC-Store-API-Nonce': getMiddleware().wcStoreApi,
             }
         });

@@ -1,4 +1,4 @@
-export class PostType {
+export interface PostType {
     attrTitle: string;
     classes: string;
     commentCount: string;

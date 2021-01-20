@@ -6,7 +6,7 @@ import {events, EventService} from "App/core/event.service";
 export default class CartService implements OnInit {
     private clientService: ClientService;
     private eventService: EventService;
-    public cart: CartType;
+    public cart: CartType|null = null;
 
     onInit(serviceContainer: ServiceContainer) {
         this.clientService = serviceContainer.service(ClientService);
@@ -29,6 +29,16 @@ export default class CartService implements OnInit {
                     this.cart = cart;
                     this.eventService.dispatch(events.CART_HAS_CHANGED);
                     resolve(cart);
+                })
+        });
+    }
+
+    public removeItems(): Promise<Boolean> {
+        return new Promise(resolve => {
+            this.clientService.cart.removeItems()
+                .then(isRemove => {
+                    this.loadCart();
+                    resolve(isRemove);
                 })
         });
     }

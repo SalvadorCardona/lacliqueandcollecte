@@ -11,17 +11,16 @@ export default class ProductLoopComponent extends AppComponent {
     @property({type: Object})
     private products: Array<ProductType>
 
-    private clientService: ClientService;
+    private clientService: ClientService|null;
 
     onInit(serviceContainer: ServiceContainer) {
-        this.clientService = serviceContainer.service<ClientService>(ClientService);
+        this.clientService = serviceContainer.service(ClientService);
     }
 
     public firstUpdated()
     {
         this.clientService.product.getProducts({author: this.idUser})
             .then(products => {
-                console.log(products)
                 let wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);
                 this.products = products;

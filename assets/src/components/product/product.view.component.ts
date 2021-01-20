@@ -15,14 +15,10 @@ export default class ProductViewComponent extends AppComponent {
     @property({type: Number})
     private productId: number;
 
-    @property({type: String})
-    test: string;
-
-    private quantity: number = 1;
-
     @property({type: Object})
     private product?: ProductType;
 
+    private quantity: number = 1;
     private cartService: CartService;
 
     private loaderService: LoaderService;
@@ -32,10 +28,10 @@ export default class ProductViewComponent extends AppComponent {
     private clientService: ClientService;
 
      onInit(serviceContainer: ServiceContainer) {
-        this.loaderService = serviceContainer.service(LoaderService);
-        this.cartService = serviceContainer.service(CartService);
-        this.modalService = serviceContainer.service(ModalService);
-        this.clientService = serviceContainer.service<ClientService>(ClientService);
+         this.loaderService = serviceContainer.service(LoaderService);
+         this.cartService = serviceContainer.service(CartService);
+         this.modalService = serviceContainer.service(ModalService);
+         this.clientService = serviceContainer.service<ClientService>(ClientService);
     }
 
     public firstUpdated(): void {
