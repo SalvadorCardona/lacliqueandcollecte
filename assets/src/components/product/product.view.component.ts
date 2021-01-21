@@ -3,13 +3,14 @@ import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
 import {LoaderService} from "App/core/loader.service";
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 import {filterTax} from "App/shared/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/components/shared/modal.product.component";
 import { property } from "lit-element/lib/decorators";
 import { html } from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+
 
 export default class ProductViewComponent extends AppComponent {
     @property({type: Number})
@@ -27,11 +28,11 @@ export default class ProductViewComponent extends AppComponent {
 
     private clientService: ClientService;
 
-     onInit(serviceContainer: ServiceContainer) {
-         this.loaderService = serviceContainer.service(LoaderService);
-         this.cartService = serviceContainer.service(CartService);
-         this.modalService = serviceContainer.service(ModalService);
-         this.clientService = serviceContainer.service<ClientService>(ClientService);
+     onInit(containerService: ContainerService) {
+         this.loaderService = containerService.service(LoaderService);
+         this.cartService = containerService.service(CartService);
+         this.modalService = containerService.service(ModalService);
+         this.clientService = containerService.service(ClientService);
     }
 
     public firstUpdated(): void {

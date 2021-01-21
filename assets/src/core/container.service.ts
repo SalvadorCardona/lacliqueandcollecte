@@ -1,22 +1,26 @@
-import services from "App/app.services";
+
 
 export interface OnInit {
-    onInit(serviceContainer: ServiceContainer): void;
+    onInit(containerService: ContainerService): void;
 }
 
-type Service = {new (): Service}
-type ServiceReference<Service> = Function
+type Service = {
+    onInit;
+}
 
-export class ServiceContainer {
-    public static self: ServiceContainer;
+export class ContainerService {
+    set serviceList(value: Array<any>) {
+        this._serviceList = value;
+    }
+    public static self: ContainerService;
 
     private container: Array<Service> = [];
 
-    private serviceList: Array<any> = services;
+    private _serviceList: Array<any>;
 
     public loadService(): void
     {
-        this.container = this.serviceList.map(Service => {
+        this.container = this._serviceList.map(Service => {
             return new Service()
         });
 
@@ -27,16 +31,16 @@ export class ServiceContainer {
         });
     }
 
-    static get(): ServiceContainer
+    static get(): ContainerService
     {
         if (!this.self) {
-            this.self = (new ServiceContainer());
+            this.self = (new ContainerService());
         }
 
         return this.self;
     }
 
-    public service<T>(classReference: ServiceReference<T>): T|null {
+    public service<T>(classReference: Function): T|null {
         // @ts-ignore
         return this.container.find(elem => elem instanceof classReference) as T || null;
     }

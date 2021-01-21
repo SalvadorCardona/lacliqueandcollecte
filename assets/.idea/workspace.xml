@@ -5,27 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/partner/partner.view.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/shared/decorators.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/button.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/client.cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/client.cart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/service.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/service.container.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environement/environement.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environement/environement.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/ui/components/example.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/components/example.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/post.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/post.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/components/modal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/components/modal.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/kernel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/kernel.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/loader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/service.container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/container.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +120,7 @@
       <workItem from="1610891639693" duration="15046000" />
       <workItem from="1610981501267" duration="4873000" />
       <workItem from="1611072191574" duration="9249000" />
-      <workItem from="1611149263546" duration="6330000" />
+      <workItem from="1611149263546" duration="21679000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -163,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610901903563</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add new decorators">
+      <created>1611156044690</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611156044690</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +188,8 @@
     <MESSAGE value="Service Cleaned" />
     <MESSAGE value="Before Try Lit Element" />
     <MESSAGE value="Lite Element Append" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lite Element Append" />
+    <MESSAGE value="Add new decorators" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new decorators" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

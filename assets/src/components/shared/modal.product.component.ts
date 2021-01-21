@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/components/custom.element';
 import {ProductType} from "App/types/product.type";
-import { ServiceContainer} from "App/core/service.container";
+import { ContainerService} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 import { html, property } from 'lit-element';
 
@@ -14,8 +14,8 @@ export default class ModalProductComponent extends AppComponent {
         this._product = value;
     }
 
-    protected onInit(serviceContainer: ServiceContainer): void {
-        this.modalService = serviceContainer.service(ModalService);
+    protected onInit(containerService: ContainerService): void {
+        this.modalService = containerService.service(ModalService);
     }
 
     public render() {

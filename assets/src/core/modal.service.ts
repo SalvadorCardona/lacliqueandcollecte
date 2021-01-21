@@ -1,4 +1,4 @@
-import {ServiceContainer, OnInit} from "App/core/service.container";
+import {ContainerService, OnInit} from "App/core/container.service";
 import {events, EventService} from "App/core/event.service";
 import ModalComponent from "App/components/shared/modal.component";
 import {createElement} from "App/components/custom.element";
@@ -7,8 +7,8 @@ export class ModalService implements OnInit {
     private modalComponent: ModalComponent;
     public static idModalComponent: string = 'modal-component-id';
 
-    onInit(serviceContainer: ServiceContainer): void {
-        let eventService: EventService = serviceContainer.service(EventService);
+    onInit(containerService: ContainerService): void {
+        let eventService: EventService = containerService.service(EventService);
         eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 

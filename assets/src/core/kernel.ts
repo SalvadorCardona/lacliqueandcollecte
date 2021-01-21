@@ -1,14 +1,11 @@
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 import {events, EventService} from "App/core/event.service";
 import {ComponentService} from "App/core/component.service";
+import services from "App/app.services";
 
 export default class Kernel {
     public static self: Kernel;
-    private serviceContainer: ServiceContainer;
-
-    constructor() {
-        this.serviceContainer = ServiceContainer.get();
-    }
+    private containerService: ContainerService;
 
     static get(): Kernel
     {
@@ -20,13 +17,15 @@ export default class Kernel {
     }
 
     setup() {
-        this.serviceContainer.loadService();
+        this.containerService = ContainerService.get();
+        this.containerService.serviceList = services;
 
-        let eventService: EventService = this.serviceContainer.service(EventService);
+        this.containerService.loadService();
+        let eventService: EventService = this.containerService.service(EventService);
 
         eventService.dispatch(events.SERVICE_MOUNTED);
 
-        let componentService: ComponentService = this.serviceContainer.service(ComponentService);
+        let componentService: ComponentService = this.containerService.service(ComponentService);
 
         componentService.loadComponents();
 

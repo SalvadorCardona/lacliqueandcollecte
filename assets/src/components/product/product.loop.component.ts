@@ -2,7 +2,7 @@ import ClientService from "App/core/client.service";
 import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
 import {html, property } from "lit-element";
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 
 export default class ProductLoopComponent extends AppComponent {
     @property({type: Number})
@@ -13,8 +13,8 @@ export default class ProductLoopComponent extends AppComponent {
 
     private clientService: ClientService|null;
 
-    onInit(serviceContainer: ServiceContainer) {
-        this.clientService = serviceContainer.service(ClientService);
+    onInit(containerService: ContainerService) {
+        this.clientService = containerService.service(ClientService);
     }
 
     public firstUpdated()

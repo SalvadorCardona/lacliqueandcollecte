@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/components/custom.element';
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
@@ -12,10 +12,10 @@ export default class ModalCartComponent extends AppComponent {
     private modalService: ModalService;
     private cartService: CartService;
 
-    protected onInit(serviceContainer: ServiceContainer): void {
-        this.cartService = serviceContainer.service(CartService);
+    protected onInit(containerService: ContainerService): void {
+        this.cartService = containerService.service(CartService);
         this._cart = this.cartService.cart;
-        this.modalService = serviceContainer.service(ModalService);
+        this.modalService = containerService.service(ModalService);
         console.log(this._cart)
     }
 

@@ -1,8 +1,10 @@
 import kebabCase from "lodash.kebabcase";
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 import { LitElement } from 'lit-element';
 
-export const getComponentSelector = (className: AppComponent) =>  kebabCase('App' + className.name).replace('-component', '');
+export const getComponentSelector = (className: AppComponentDerived) =>  kebabCase('App' + className.name).replace('-component', '');
+
+type AppComponentDerived = { new (): any };
 
 export const createElement = <T>(Elem): T => {
     return document.createElement(getComponentSelector(Elem)) as T;
@@ -16,12 +18,11 @@ export abstract class AppComponent extends LitElement {
 
     protected constructor() {
         super();
-        this.onInit(ServiceContainer.get());
+        this.onInit(ContainerService.get());
     }
 
-    protected onInit(serviceContainer: ServiceContainer): void {
+    protected onInit(containerService: ContainerService): void {
         // implement me
     }
-
 }
 

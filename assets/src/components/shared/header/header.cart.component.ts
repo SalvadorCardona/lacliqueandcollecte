@@ -2,7 +2,7 @@ import {AppComponent, createElement} from "App/components/custom.element";
 import {CartType} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {events, EventService} from "App/core/event.service";
-import {ServiceContainer} from "App/core/service.container";
+import {ContainerService} from "App/core/container.service";
 import { html, property } from "lit-element";
 import {ModalService} from "App/core/modal.service";
 import ModalCartComponent from "App/components/shared/modal.cart.component";
@@ -14,11 +14,11 @@ export default class HeaderCartComponent extends AppComponent {
     private eventService: EventService;
     private modalService: ModalService;
 
-    protected onInit(serviceContainer: ServiceContainer) {
+    protected onInit(containerService: ContainerService) {
         this.classList.add('position-relative')
-        this.modalService = serviceContainer.service(ModalService);
-        this.cartService = serviceContainer.service(CartService);
-        this.eventService = serviceContainer.service(EventService);
+        this.modalService = containerService.service(ModalService);
+        this.cartService = containerService.service(CartService);
+        this.eventService = containerService.service(EventService);
         this.eventService.addSubscriber(events.CART_HAS_CHANGED, _ => this.cartUpdated())
     }
     private openModal() {
