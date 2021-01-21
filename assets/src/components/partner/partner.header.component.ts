@@ -1,9 +1,9 @@
 import {AppComponent} from 'App/components/custom.element';
-import {html} from "lit-element";
+import {html, TemplateResult } from "lit-element";
 
 export default class PartnerHeaderComponent extends AppComponent {
 
-    render() {
+    public render(): TemplateResult {
         return html`
         <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url('http://localhost:8000/app/uploads/2020/11/atelier.jpg')">
             <div class="background-overlay"></div>

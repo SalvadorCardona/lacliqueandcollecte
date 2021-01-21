@@ -71,7 +71,7 @@ export interface Prices {
     price: string;
     regularPrice: string;
     salePrice: string;
-    priceRange?: any;
+    priceRange?: number;
     rawPrices: RawPrices;
 }
 
@@ -98,7 +98,7 @@ export interface ProductCart {
     shortDescription: string;
     description: string;
     sku: string;
-    lowStockRemaining?: any;
+    lowStockRemaining?: boolean;
     backordersAllowed: boolean;
     showBackorderBadge: boolean;
     soldIndividually: boolean;

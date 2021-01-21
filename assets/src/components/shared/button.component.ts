@@ -1,5 +1,5 @@
 import {AppComponent} from "App/components/custom.element";
-import { html, property } from 'lit-element';
+import { html, property , TemplateResult } from 'lit-element';
 
 export enum ButtonType  {
     DANGER = 'danger',
@@ -14,15 +14,15 @@ export enum ButtonType  {
 export default class ButtonComponent extends AppComponent {
 
     @property()
-    public type: ButtonType;
+    private type: ButtonType;
 
     @property({type: String})
-    public icon: string;
+    private icon: string;
 
     @property()
-    public label: string;
+    private label: string;
 
-    render() {
+    public render(): TemplateResult {
         return html`
             <button class="btn gradient gradient-${this.type}">
                 ${this.getIcon()}
@@ -31,7 +31,7 @@ export default class ButtonComponent extends AppComponent {
         `;
     }
 
-    getIcon() {
+    private getIcon(): TemplateResult|string {
         return this.icon ? html`<app-icon icon="${this.icon}"></app-icon>` : ``;
     }
 }

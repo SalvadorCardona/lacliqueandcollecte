@@ -1,11 +1,11 @@
 import {AppComponent} from 'App/components/custom.element';
-import {html, property} from 'lit-element';
+import {html, property, TemplateResult } from 'lit-element';
 
 export default class PartnerViewComponent extends AppComponent {
     @property({type: String})
     private icon: string;
 
-    public render() {
+    public render(): TemplateResult {
         return html`
             <div class="row">
                 <app-partner-header></app-partner-header>

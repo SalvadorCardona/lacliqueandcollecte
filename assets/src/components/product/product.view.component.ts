@@ -8,7 +8,7 @@ import {filterTax} from "App/shared/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/components/shared/modal.product.component";
 import { property } from "lit-element/lib/decorators";
-import { html } from "lit-element";
+import { html , TemplateResult } from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 
@@ -19,7 +19,7 @@ export default class ProductViewComponent extends AppComponent {
     @property({type: Object})
     private product?: ProductType;
 
-    private quantity: number = 1;
+    private quantity = 1;
     private cartService: CartService;
 
     private loaderService: LoaderService;
@@ -28,7 +28,7 @@ export default class ProductViewComponent extends AppComponent {
 
     private clientService: ClientService;
 
-     onInit(containerService: ContainerService) {
+     onInit(containerService: ContainerService): void {
          this.loaderService = containerService.service(LoaderService);
          this.cartService = containerService.service(CartService);
          this.modalService = containerService.service(ModalService);
@@ -47,14 +47,14 @@ export default class ProductViewComponent extends AppComponent {
 
     private addItem(): void {
         this.cartService.addItem(this.productId, this.quantity)
-            .then(_ => {
-                let modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
+            .then(() => {
+                const modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
                 modalProductComponent.product = this.product;
                 this.modalService.open(modalProductComponent, 'Votre produit a été enregistré');
             })
     }
 
-    public render() {
+    public render(): TemplateResult {
         if (!this.product) return html``;
         return html`
             <div class="type-product">

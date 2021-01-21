@@ -7,20 +7,21 @@ export default class ClientCart extends Abstract {
         return new Promise(resolve => {
             this.clientHttp.send('post', environment.apiEndpoints.cart.addItem, {
                 id: idProduct,
-                quantity: quantity
+                quantity: quantity,
+                variation
             })
             .then(response => {
                 resolve(response.data as CartType);
             });
         });
     }
-    public removeItems(): Promise<Boolean> {
+    public removeItems(): Promise<boolean> {
         return new Promise((resolve, reject) => {
             this.clientHttp.send('delete', environment.apiEndpoints.cart.deleteItems)
-                .then(_ => {
+                .then(() => {
                     resolve(true);
                 })
-                .catch(_ => {
+                .catch(() => {
                     reject(false)
                 })
         });

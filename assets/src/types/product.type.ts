@@ -83,10 +83,10 @@ export interface ProductType {
     price: number;
     regularPrice: string;
     salePrice: string;
-    dateOnSaleFrom?: any;
-    dateOnSaleFromGmt?: any;
-    dateOnSaleTo?: any;
-    dateOnSaleToGmt?: any;
+    dateOnSaleFrom?: Date;
+    dateOnSaleFromGmt?: Date;
+    dateOnSaleTo?: Date;
+    dateOnSaleToGmt?: Date;
     priceHtml: string;
     onSale: boolean;
     purchasable: boolean;
@@ -101,7 +101,7 @@ export interface ProductType {
     taxStatus: string;
     taxClass: string;
     manageStock: boolean;
-    stockQuantity?: any;
+    stockQuantity?: number;
     stockStatus: string;
     backorders: string;
     backordersAllowed: boolean;

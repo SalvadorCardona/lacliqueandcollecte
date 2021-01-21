@@ -5,15 +5,15 @@ import {createElement} from "App/components/custom.element";
 
 export class ModalService implements OnInit {
     private modalComponent: ModalComponent;
-    public static idModalComponent: string = 'modal-component-id';
+    public static idModalComponent = 'modal-component-id';
 
     onInit(containerService: ContainerService): void {
-        let eventService: EventService = containerService.service(EventService);
+        const eventService: EventService = containerService.service(EventService);
         eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 
-    private setup() {
-
+    private setup(): void {
+        console.log('implement me')
     }
 
     public open(content: HTMLElement, title: string = null): void

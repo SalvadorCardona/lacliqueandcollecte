@@ -6,15 +6,15 @@ export enum events  {
 
 export class EventService {
 
-    private subscriber: Array<{event: events, callback: Function}> = [];
+    private subscriber: Array<{event: events, callback: () => void}> = [];
 
-    public dispatch(event: events) {
+    public dispatch(event: events): void {
         this.subscriber
             .filter(subscriber => subscriber.event === event)
             .forEach(({callback}) => callback());
     }
 
-    public addSubscriber(event: events, callback: Function): void {
+    public addSubscriber(event: events, callback: () => void): void {
         this.subscriber.push({event, callback})
     }
 }

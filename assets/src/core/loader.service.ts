@@ -8,10 +8,10 @@ import { injectable } from "inversify";
 export class LoaderService implements OnInit {
 
     private loaderComponent: LoaderComponent;
-    public static idLoaderComponent: string = 'loader-component-id';
+    public static idLoaderComponent = 'loader-component-id';
 
     onInit(containerService: ContainerService): void {
-        let eventService: EventService = containerService.service(EventService);
+        const eventService: EventService = containerService.service(EventService);
         eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 

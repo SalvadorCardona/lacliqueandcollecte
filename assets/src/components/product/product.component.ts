@@ -2,14 +2,14 @@ import {AppComponent} from 'App/components/custom.element';
 import {Image, ProductType} from "App/types/product.type";
 import {filterPrice} from "App/shared/helper";
 import { property } from 'lit-element/lib/decorators';
-import { html } from 'lit-element';
+import { html , TemplateResult } from 'lit-element';
 
 export default class ProductComponent extends AppComponent {
 
     @property({type: Object})
     private product: ProductType;
 
-    render() {
+    public render(): TemplateResult {
         return html`
             <div class="product type-product d-flex flex-column align-items-center col">
                 <a href="${this.product.permalink}">
@@ -27,7 +27,7 @@ export default class ProductComponent extends AppComponent {
     private getAttributeImage(images: Image[]): string {
         if (!images.length) return '';
 
-        let [image] = images;
+        const [image] = images;
 
         return image.alt || image.src;
     }
@@ -36,7 +36,7 @@ export default class ProductComponent extends AppComponent {
     private getThumbnail(images: Array<Image>): string {
         if (!images.length) return '';
 
-        let imageSrc = images[0].src;
+        const imageSrc = images[0].src;
 
         return `${imageSrc.substring(0, imageSrc.length - 4)}-300x300.jpg`;
     }

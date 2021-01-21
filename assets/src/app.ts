@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import Kernel from "App/core/kernel";
 
-let kernel = Kernel.get();
+const kernel = Kernel.get();
 
 kernel.setup();

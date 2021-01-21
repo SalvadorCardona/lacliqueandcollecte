@@ -1,6 +1,9 @@
 export const getMiddleware = (): MiddlewareType => {
-    // @ts-ignore
-    return window.appMiddleware as MiddlewareType;
+    if (window["appMiddleware"]) {
+        return window["appMiddleware"] as MiddlewareType;
+    }
+
+    return {} as MiddlewareType;
 }
 
 export interface MiddlewareType {

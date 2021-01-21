@@ -8,10 +8,10 @@ export default class CartService implements OnInit {
     private eventService: EventService;
     public cart: CartType|null = null;
 
-    onInit(containerService: ContainerService) {
+    onInit(containerService: ContainerService): void {
         this.clientService = containerService.service(ClientService);
         this.eventService = containerService.service(EventService);
-        this.eventService.addSubscriber(events.SERVICE_MOUNTED, _ => this.loadCart())
+        this.eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.loadCart())
     }
 
     public loadCart(): void {
@@ -33,7 +33,7 @@ export default class CartService implements OnInit {
         });
     }
 
-    public removeItems(): Promise<Boolean> {
+    public removeItems(): Promise<boolean> {
         return new Promise(resolve => {
             this.clientService.cart.removeItems()
                 .then(isRemove => {

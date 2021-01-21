@@ -16,16 +16,16 @@ export default class Kernel {
         return this.self;
     }
 
-    setup() {
+    public setup(): void {
         this.containerService = ContainerService.get();
         this.containerService.serviceList = services;
 
         this.containerService.loadService();
-        let eventService: EventService = this.containerService.service(EventService);
+        const eventService: EventService = this.containerService.service(EventService);
 
         eventService.dispatch(events.SERVICE_MOUNTED);
 
-        let componentService: ComponentService = this.containerService.service(ComponentService);
+        const componentService: ComponentService = this.containerService.service(ComponentService);
 
         componentService.loadComponents();
 

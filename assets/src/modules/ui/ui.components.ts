@@ -2,15 +2,14 @@ import {AppComponent} from "App/components/custom.element";
 import componentView from "App/modules/ui/views/ui.views.components";
 import partnerViews from "App/modules/ui/views/ui.partner.views.components";
 import productViews from "App/modules/ui/views/ui.product.views.components";
-import { html, property } from "lit-element";
+import { html, property , TemplateResult } from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 export default class UiComponent extends AppComponent {
     @property({type: String})
     private route: string;
 
-    public render()
-    {
+    public render(): TemplateResult {
         return html`
             <div class="dropdown">
                 <button class="btn btn-primary" >
@@ -30,7 +29,7 @@ export default class UiComponent extends AppComponent {
 
 
     private redirect() {
-        setTimeout(_ => this.router(), 100);
+        setTimeout(() => this.router(), 100);
     }
 
     private router(): string {

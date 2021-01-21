@@ -2,11 +2,11 @@ import camelCase from 'lodash.camelcase';
 import isArray from 'lodash.isarray';
 import isObject from 'lodash.isobject';
 
-export const keysToCamel = (o: any) => {
+export const keysToCamel = (o: Object): Object|Array<any> => {
     if (isObject(o)) {
         let n;
 
-        if (o.hasOwnProperty('0')) {
+        if (o['0']) {
             n = [];
             Object.keys(o)
                 .forEach((k) => {

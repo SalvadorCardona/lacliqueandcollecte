@@ -1,7 +1,7 @@
 import ClientService from "App/core/client.service";
 import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
-import {html, property } from "lit-element";
+import {html, property, TemplateResult } from "lit-element";
 import {ContainerService} from "App/core/container.service";
 
 export default class ProductLoopComponent extends AppComponent {
@@ -13,22 +13,21 @@ export default class ProductLoopComponent extends AppComponent {
 
     private clientService: ClientService|null;
 
-    onInit(containerService: ContainerService) {
+    onInit(containerService: ContainerService): void {
         this.clientService = containerService.service(ClientService);
     }
 
-    public firstUpdated()
+    public firstUpdated(): void
     {
         this.clientService.product.getProducts({author: this.idUser})
             .then(products => {
-                let wrapper = document.createElement('div');
+                const wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);
                 this.products = products;
             })
     }
 
-    public render()
-    {
+    public render(): TemplateResult {
         if(!this.products) return '';
 
         return html`

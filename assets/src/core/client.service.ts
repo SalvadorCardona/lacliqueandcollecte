@@ -50,7 +50,7 @@ export default class ClientService {
         return this.self;
     }
 
-    public send(method: string, route: string, data: any = []): Promise<AxiosResponse> {
+    public send(method: string, route: string, data: { [name: string]: string|number } = {}): Promise<AxiosResponse> {
         return this.http[method](route, data);
     }
 }

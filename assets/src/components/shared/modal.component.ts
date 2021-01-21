@@ -1,18 +1,18 @@
 import {AppComponent} from 'App/components/custom.element';
-import { html, property } from 'lit-element';
+import { html, property , TemplateResult } from 'lit-element';
 
 export default class ModalComponent extends AppComponent {
     @property({type: HTMLElement})
     private _body: HTMLElement;
     private _title: string;
-    private _$close: Function;
+    private _$close: () => void;
 
-    public init(body: HTMLElement, title: string = null) {
+    public init(body: HTMLElement, title: string = null): void {
         this._body = body;
         this._title = title;
     }
 
-    set $close(value: Function) {
+    set $close(value: () => void) {
         this._$close = value;
     }
 
@@ -21,7 +21,7 @@ export default class ModalComponent extends AppComponent {
         this._$close();
     }
 
-    public render() {
+    public render(): TemplateResult {
         return html`
         <div @click="${this.close}" class="modal-background">
             <div class="modal-content col-md-3 position-relative mt-0">
