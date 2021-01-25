@@ -5,41 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/assets.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assets.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partner/partner.header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partner/partner.header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partner/partner.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partner/partner.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/button.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/button.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.cart.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/icon.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/icon.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/loader.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/loader.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/modal.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/shared/wrapper.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/wrapper.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/abstract.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/abstract.client.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/client/client.cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/client.cart.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/container.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/container.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/event.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/kernel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/kernel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/loader.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/loader.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/core/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/ui/components/example.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/ui/ui.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/ui/ui.components.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/decorators.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/shared/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/icons.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/cart.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/cart.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/middleware.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/middleware.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/product.type.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/product.type.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +55,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lxoIHYa4dBWJ0AOg6BOahapiG1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -146,6 +130,8 @@
       <workItem from="1611149263546" duration="22280000" />
       <workItem from="1611224048539" duration="5573000" />
       <workItem from="1611235161046" duration="577000" />
+      <workItem from="1611237588960" duration="4607000" />
+      <workItem from="1611325288801" duration="12521000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>

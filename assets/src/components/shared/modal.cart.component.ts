@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/components/custom.element';
-import {ContainerService} from "App/core/container.service";
+import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
@@ -9,14 +9,15 @@ import {ButtonType} from "App/components/shared/button.component";
 export default class ModalCartComponent extends AppComponent {
     @property({type: String})
     private _cart: CartType;
+
+    @injector(ModalService)
     private modalService: ModalService;
+
+    @injector(CartService)
     private cartService: CartService;
 
-    protected onInit(containerService: ContainerService): void {
-        this.cartService = containerService.service(CartService);
+    public firstUpdated(): void {
         this._cart = this.cartService.cart;
-        this.modalService = containerService.service(ModalService);
-        console.log(this._cart)
     }
 
     public render(): TemplateResult  {
@@ -27,7 +28,7 @@ export default class ModalCartComponent extends AppComponent {
         `;
     }
 
-    private removeItems() {
+    private removeItems(): void {
         this.cartService.removeItems();
     }
 

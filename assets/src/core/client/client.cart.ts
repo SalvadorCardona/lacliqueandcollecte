@@ -15,6 +15,7 @@ export default class ClientCart extends Abstract {
             });
         });
     }
+
     public removeItems(): Promise<boolean> {
         return new Promise((resolve, reject) => {
             this.clientHttp.send('delete', environment.apiEndpoints.cart.deleteItems)
@@ -26,6 +27,7 @@ export default class ClientCart extends Abstract {
                 })
         });
     }
+
     public getCart(): Promise<CartType> {
         return new Promise(resolve => {
             this.clientHttp.send('get', environment.apiEndpoints.cart.me)

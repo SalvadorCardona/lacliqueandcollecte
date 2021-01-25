@@ -1,18 +1,17 @@
 import ClientService from "App/core/client.service";
-import {ContainerService, OnInit} from "App/core/container.service";
+import { injector } from "App/core/container.service";
 import {CartType} from "App/types/cart.type";
 import {events, EventService} from "App/core/event.service";
 
-export default class CartService implements OnInit {
-    private clientService: ClientService;
-    private eventService: EventService;
-    public cart: CartType|null = null;
+export default class CartService {
 
-    onInit(containerService: ContainerService): void {
-        this.clientService = containerService.service(ClientService);
-        this.eventService = containerService.service(EventService);
-        this.eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.loadCart())
-    }
+    @injector(ClientService)
+    private clientService: ClientService;
+
+    @injector(EventService)
+    private eventService: EventService;
+
+    public cart: CartType|null = null;
 
     public loadCart(): void {
         this.clientService.cart.getCart()

@@ -5,9 +5,10 @@ import services from "App/app.services";
 
 export default class Kernel {
     public static self: Kernel;
+
     private containerService: ContainerService;
 
-    static get(): Kernel
+    public static get(): Kernel
     {
         if (!this.self) {
             this.self = (new Kernel());
@@ -18,6 +19,8 @@ export default class Kernel {
 
     public setup(): void {
         this.containerService = ContainerService.get();
+
+        // @ts-ignore
         this.containerService.serviceList = services;
 
         this.containerService.loadService();

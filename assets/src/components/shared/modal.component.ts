@@ -4,7 +4,9 @@ import { html, property , TemplateResult } from 'lit-element';
 export default class ModalComponent extends AppComponent {
     @property({type: HTMLElement})
     private _body: HTMLElement;
+
     private _title: string;
+
     private _$close: () => void;
 
     public init(body: HTMLElement, title: string = null): void {
@@ -12,11 +14,11 @@ export default class ModalComponent extends AppComponent {
         this._title = title;
     }
 
-    set $close(value: () => void) {
+    public set $close(value: () => void) {
         this._$close = value;
     }
 
-    private close(e: Event) {
+    private close(e: Event): void {
         if(e.target !== e.currentTarget) return;
         this._$close();
     }

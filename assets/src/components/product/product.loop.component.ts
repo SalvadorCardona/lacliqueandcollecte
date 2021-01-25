@@ -2,7 +2,7 @@ import ClientService from "App/core/client.service";
 import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
 import {html, property, TemplateResult } from "lit-element";
-import {ContainerService} from "App/core/container.service";
+import {injector} from "App/core/container.service";
 
 export default class ProductLoopComponent extends AppComponent {
     @property({type: Number})
@@ -11,11 +11,8 @@ export default class ProductLoopComponent extends AppComponent {
     @property({type: Object})
     private products: Array<ProductType>
 
+    @injector(ClientService)
     private clientService: ClientService|null;
-
-    onInit(containerService: ContainerService): void {
-        this.clientService = containerService.service(ClientService);
-    }
 
     public firstUpdated(): void
     {
@@ -28,7 +25,7 @@ export default class ProductLoopComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
-        if(!this.products) return '';
+        if(!this.products) return ;
 
         return html`
             <div class="d-flex product-loop d-grid row row-cols-3">

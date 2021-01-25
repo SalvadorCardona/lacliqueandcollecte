@@ -2,7 +2,7 @@ import camelCase from 'lodash.camelcase';
 import isArray from 'lodash.isarray';
 import isObject from 'lodash.isobject';
 
-export const keysToCamel = (o: Object): Object|Array<any> => {
+export const keysToCamel = (o: {[name: string]: any}|Array<any>): {[name: string]: any}|Array<any> => {
     if (isObject(o)) {
         let n;
 
@@ -21,8 +21,11 @@ export const keysToCamel = (o: Object): Object|Array<any> => {
         }
 
         return n;
-    } else if (isArray(o)) {
-        return o.map((i) => {
+    }
+
+    if (isArray(o)) {
+        const array = o as Array<any>
+        return array.map((i) => {
             return keysToCamel(i);
         });
     }

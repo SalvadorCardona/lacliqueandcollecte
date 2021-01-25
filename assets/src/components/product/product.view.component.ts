@@ -3,7 +3,7 @@ import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
 import {LoaderService} from "App/core/loader.service";
-import {ContainerService} from "App/core/container.service";
+import { injector } from "App/core/container.service";
 import {filterTax} from "App/shared/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/components/shared/modal.product.component";
@@ -20,20 +20,18 @@ export default class ProductViewComponent extends AppComponent {
     private product?: ProductType;
 
     private quantity = 1;
+
+    @injector(CartService)
     private cartService: CartService;
 
+    @injector(LoaderService)
     private loaderService: LoaderService;
 
+    @injector(ModalService)
     private modalService: ModalService;
 
+    @injector(ClientService)
     private clientService: ClientService;
-
-     onInit(containerService: ContainerService): void {
-         this.loaderService = containerService.service(LoaderService);
-         this.cartService = containerService.service(CartService);
-         this.modalService = containerService.service(ModalService);
-         this.clientService = containerService.service(ClientService);
-    }
 
     public firstUpdated(): void {
         this.clientService.product.getProducts({include: [this.productId]})

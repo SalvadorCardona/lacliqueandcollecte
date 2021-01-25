@@ -1,18 +1,18 @@
-import {ContainerService, OnInit} from "App/core/container.service";
+import {injector, OnInit} from "App/core/container.service";
 import {events, EventService} from "App/core/event.service";
 import LoaderComponent from "App/components/shared/loader.component";
 import {createElement} from "App/components/custom.element";
-import { injectable } from "inversify";
 
-@injectable()
 export class LoaderService implements OnInit {
-
     private loaderComponent: LoaderComponent;
+
     public static idLoaderComponent = 'loader-component-id';
 
-    onInit(containerService: ContainerService): void {
-        const eventService: EventService = containerService.service(EventService);
-        eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
+    @injector(EventService)
+    private eventService: EventService;
+
+    public onInit(): void {
+        this.eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
     }
 
     private setup(): void {

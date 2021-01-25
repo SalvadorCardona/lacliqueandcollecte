@@ -7,8 +7,7 @@ export default class WrapperComponent extends AppComponent {
     @property({type: String})
     public title: string;
 
-    constructor() {
-        super();
+    public firstUpdated(): void {
         this.classList.add('app-wrapper');
     }
 

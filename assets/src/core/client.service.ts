@@ -7,17 +7,16 @@ import {getMiddleware} from "App/types/middleware.type";
 
 
 export default class ClientService {
-    static self: ClientService;
     public http: AxiosInstance;
 
     public product: ClientProduct;
+
     public cart: ClientCart;
 
     public constructor() {
         this.http = axios.create({
             baseURL: environment.apiEndpoint,
             headers: {
-                'content-type': 'application/json',
                 'accept': 'application/json',
                 'X-WC-Store-API-Nonce': getMiddleware().wcStoreApi,
             }
@@ -39,15 +38,6 @@ export default class ClientService {
     public setupClient(): void {
         this.product = new ClientProduct(this);
         this.cart = new ClientCart(this);
-    }
-
-    static get(): ClientService
-    {
-        if (!this.self) {
-            this.self = (new ClientService());
-        }
-
-        return this.self;
     }
 
     public send(method: string, route: string, data: { [name: string]: string|number } = {}): Promise<AxiosResponse> {

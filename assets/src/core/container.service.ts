@@ -1,22 +1,31 @@
-
-
 export interface OnInit {
     onInit(containerService: ContainerService): void;
 }
 
-type Service = {
-    onInit;
+export type Class = { new(): Class; };
+
+export interface Type<T> {
+    new (...args: any[]): T;
+}
+
+export function injector<Class>(service: Type<Class>): any {
+    return function (): any {
+        return {
+            get: (): Class => ContainerService.get().service(service)
+        }
+    };
 }
 
 export class ContainerService {
-    set serviceList(value: Array<() => void>) {
+    public set serviceList(value: Array<Class>) {
         this._serviceList = value;
     }
+
     public static self: ContainerService;
 
-    private container: Array<Service> = [];
+    private container: Array<Class> = [];
 
-    private _serviceList: Array<() => void>;
+    private _serviceList: Array<Type<Class>>;
 
     public loadService(): void
     {
@@ -25,13 +34,13 @@ export class ContainerService {
         });
 
         this.container.forEach(service => {
-            if (typeof service.onInit === 'function') {
-                service.onInit(this);
+            if (service['onInit']) {
+                service['onInit'](this);
             }
         });
     }
 
-    static get(): ContainerService
+    public static get(): ContainerService
     {
         if (!this.self) {
             this.self = (new ContainerService());
@@ -40,7 +49,9 @@ export class ContainerService {
         return this.self;
     }
 
-    public service<T>(classReference: () => void): T|null {
-        return this.container.find(elem => elem instanceof classReference) as unknown as T || null;
+    public service<Class>(classReference: Type<Class>): Class|null {
+        console.log(classReference)
+        // @ts-ignore
+        return this.container.find(elem => elem instanceof classReference) || null;
     }
 }

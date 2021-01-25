@@ -8,15 +8,15 @@ export default class HeaderComponent extends AppComponent {
     @property({type: Object})
     private menus: Array<PostType>|null = null;
 
-    protected onInit(): void {
+    public firstUpdated(): void {
         if (typeof this.menus === 'string') {
             this.menus = JSON.parse(this.menus);
         }
 
-        this.menus = keysToCamel(this.menus);
+        this.menus = keysToCamel(this.menus) as Array<PostType>;
     }
 
-    private renderMenu() {
+    private renderMenu(): Array<TemplateResult> {
         return this.menus.map(menu => {
             return html`
                 <li id="menus-item-94" class="d-inline-block p-1">
