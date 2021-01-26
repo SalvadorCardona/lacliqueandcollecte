@@ -3,7 +3,7 @@ import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
-import { html, property, TemplateResult } from 'lit-element';
+import {html, property, TemplateResult} from 'lit-element';
 import {ButtonType} from "App/components/shared/button.component";
 
 export default class ModalCartComponent extends AppComponent {

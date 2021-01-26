@@ -1,6 +1,6 @@
 import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
-import {html, property, TemplateResult } from "lit-element";
+import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import ProductClient from "App/core/client/product.client";
 

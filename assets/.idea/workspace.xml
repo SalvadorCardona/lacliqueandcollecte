@@ -6,20 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.services.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/abstract.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/abstract.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/client.cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/cart.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/client.product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/product.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/container.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/container.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/cart.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/cart.client.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +36,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lxoIHYa4dBWJ0AOg6BOahapiG1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -127,7 +118,7 @@
       <workItem from="1611224048539" duration="5573000" />
       <workItem from="1611235161046" duration="577000" />
       <workItem from="1611237588960" duration="4607000" />
-      <workItem from="1611325288801" duration="20743000" />
+      <workItem from="1611325288801" duration="20975000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -185,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611589503922</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="New Rules Eslint">
+      <created>1611669650816</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1611669650816</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +210,8 @@
     <MESSAGE value="Add new decorators" />
     <MESSAGE value="The Eslint is Ready" />
     <MESSAGE value="Update Library" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Library" />
+    <MESSAGE value="New Rules Eslint" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Rules Eslint" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,8 +1,8 @@
 import {AppComponent} from 'App/components/custom.element';
 import {PostType} from "App/types/post.type";
 import {keysToCamel} from "App/shared/helper";
-import { property } from 'lit-element/lib/decorators';
-import { html , TemplateResult } from 'lit-element';
+import {property} from 'lit-element/lib/decorators';
+import {html , TemplateResult} from 'lit-element';
 
 export default class HeaderComponent extends AppComponent {
     @property({type: Object})

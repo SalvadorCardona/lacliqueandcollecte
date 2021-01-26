@@ -2,7 +2,7 @@ import {AppComponent} from 'App/components/custom.element';
 import {ProductType} from "App/types/product.type";
 import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
-import { html, property , TemplateResult } from 'lit-element';
+import {html, property , TemplateResult} from 'lit-element';
 
 export default class ModalProductComponent extends AppComponent {
     @property({type: String})

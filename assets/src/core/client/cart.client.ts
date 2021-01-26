@@ -3,7 +3,7 @@ import Abstract from "App/core/client/abstract.client";
 import {CartType} from "App/types/cart.type";
 
 export default class CartClient extends Abstract {
-    public addItem(idProduct: number, quantity: number, variation: Array<String> = []): Promise<CartType> {
+    public addItem(idProduct: number, quantity: number, variation: Array<string> = []): Promise<CartType> {
         return new Promise(resolve => {
             this.clientHttp.send('post', environment.apiEndpoints.cart.addItem, {
                 id: idProduct,

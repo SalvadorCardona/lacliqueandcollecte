@@ -1,8 +1,8 @@
 import {AppComponent} from 'App/components/custom.element';
 import {Image, ProductType} from "App/types/product.type";
 import {filterPrice} from "App/shared/helper";
-import { property } from 'lit-element/lib/decorators';
-import { html , TemplateResult } from 'lit-element';
+import {property} from 'lit-element/lib/decorators';
+import {html , TemplateResult} from 'lit-element';
 
 export default class ProductComponent extends AppComponent {
 

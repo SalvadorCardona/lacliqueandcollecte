@@ -1,5 +1,5 @@
 import kebabCase from "lodash.kebabcase";
-import { LitElement } from 'lit-element';
+import {LitElement} from 'lit-element';
 
 export const getComponentSelector = (className: typeof AppComponent): string =>  kebabCase('App' + className.name).replace('-component', '');
 

@@ -3,7 +3,7 @@ import {CartType} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {events, EventService} from "App/core/event.service";
 import {injector} from "App/core/container.service";
-import { html, property , TemplateResult } from "lit-element";
+import {html, property , TemplateResult} from "lit-element";
 import {ModalService} from "App/core/modal.service";
 import ModalCartComponent from "App/components/shared/modal.cart.component";
 

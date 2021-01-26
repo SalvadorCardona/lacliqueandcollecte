@@ -2,7 +2,7 @@ export interface OnInit {
     onInit(containerService: ContainerService): void;
 }
 
-export type Class = { new(): Class; };
+export type Class = {new(): Class;};
 
 export interface Type<T> {
     new (...args: any[]): T;

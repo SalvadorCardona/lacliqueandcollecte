@@ -1,5 +1,5 @@
 import {AppComponent} from "App/components/custom.element";
-import { html, property , TemplateResult } from 'lit-element';
+import {html, property , TemplateResult} from 'lit-element';
 
 export enum ButtonType  {
     DANGER = 'danger',
