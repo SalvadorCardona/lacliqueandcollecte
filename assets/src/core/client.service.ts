@@ -1,17 +1,10 @@
 import axios, {AxiosInstance, AxiosResponse} from 'axios'
 import {environment} from "App/environement/environement";
 import {keysToCamel} from "App/shared/helper";
-import ClientProduct from "App/core/client/client.product";
-import ClientCart from "App/core/client/client.cart";
 import {getMiddleware} from "App/types/middleware.type";
-
 
 export default class ClientService {
     public http: AxiosInstance;
-
-    public product: ClientProduct;
-
-    public cart: ClientCart;
 
     public constructor() {
         this.http = axios.create({
@@ -31,16 +24,9 @@ export default class ClientService {
 
             return response;
         });
-
-        this.setupClient();
     }
 
-    public setupClient(): void {
-        this.product = new ClientProduct(this);
-        this.cart = new ClientCart(this);
-    }
-
-    public send(method: string, route: string, data: { [name: string]: string|number } = {}): Promise<AxiosResponse> {
+    public send(method: string, route: string, data: any = {}): Promise<AxiosResponse> {
         return this.http[method](route, data);
     }
 }

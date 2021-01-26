@@ -1,8 +1,8 @@
-import ClientService from "App/core/client.service";
 import {AppComponent} from "App/components/custom.element";
 import {ProductType} from "App/types/product.type"
 import {html, property, TemplateResult } from "lit-element";
 import {injector} from "App/core/container.service";
+import ProductClient from "App/core/client/product.client";
 
 export default class ProductLoopComponent extends AppComponent {
     @property({type: Number})
@@ -11,12 +11,12 @@ export default class ProductLoopComponent extends AppComponent {
     @property({type: Object})
     private products: Array<ProductType>
 
-    @injector(ClientService)
-    private clientService: ClientService|null;
+    @injector(ProductClient)
+    private productClient: ProductClient;
 
     public firstUpdated(): void
     {
-        this.clientService.product.getProducts({author: this.idUser})
+        this.productClient.getProducts({author: this.idUser})
             .then(products => {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);

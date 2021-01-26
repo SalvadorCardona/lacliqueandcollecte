@@ -1,12 +1,12 @@
-import ClientService from "App/core/client.service";
 import { injector } from "App/core/container.service";
 import {CartType} from "App/types/cart.type";
 import {events, EventService} from "App/core/event.service";
+import CartClient from "App/core/client/cart.client";
 
 export default class CartService {
 
-    @injector(ClientService)
-    private clientService: ClientService;
+    @injector(CartClient)
+    private cartClient: CartClient;
 
     @injector(EventService)
     private eventService: EventService;
@@ -14,7 +14,7 @@ export default class CartService {
     public cart: CartType|null = null;
 
     public loadCart(): void {
-        this.clientService.cart.getCart()
+        this.cartClient.getCart()
             .then(cart => {
                this.cart = cart;
                this.eventService.dispatch(events.CART_HAS_CHANGED);
@@ -23,7 +23,7 @@ export default class CartService {
 
     public addItem(productId: number, quantity: number): Promise<CartType> {
         return new Promise(resolve => {
-            this.clientService.cart.addItem(productId, quantity)
+            this.cartClient.addItem(productId, quantity)
                 .then(cart => {
                     this.cart = cart;
                     this.eventService.dispatch(events.CART_HAS_CHANGED);
@@ -34,7 +34,7 @@ export default class CartService {
 
     public removeItems(): Promise<boolean> {
         return new Promise(resolve => {
-            this.clientService.cart.removeItems()
+            this.cartClient.removeItems()
                 .then(isRemove => {
                     this.loadCart();
                     resolve(isRemove);

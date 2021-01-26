@@ -50,7 +50,6 @@ export class ContainerService {
     }
 
     public service<Class>(classReference: Type<Class>): Class|null {
-        console.log(classReference)
         // @ts-ignore
         return this.container.find(elem => elem instanceof classReference) || null;
     }

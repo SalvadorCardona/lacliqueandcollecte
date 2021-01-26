@@ -1,23 +1,15 @@
-import {injector, OnInit} from "App/core/container.service";
-import {events, EventService} from "App/core/event.service";
+import {injector} from "App/core/container.service";
+import {EventService} from "App/core/event.service";
 import ModalComponent from "App/components/shared/modal.component";
 import {createElement} from "App/components/custom.element";
 
-export class ModalService implements OnInit {
+export class ModalService {
     private modalComponent: ModalComponent;
 
     @injector(EventService)
     private eventService: EventService;
 
     public static idModalComponent = 'modal-component-id';
-
-    public onInit(): void {
-        this.eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
-    }
-
-    private setup(): void {
-        console.log('implement me')
-    }
 
     public open(content: HTMLElement, title: string = null): void
     {

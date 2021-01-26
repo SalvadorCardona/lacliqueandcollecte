@@ -10,7 +10,7 @@ export interface QuerySearch {
     include?: Array<number>
 }
 
-export default class ClientProduct extends Abstract {
+export default class ProductClient extends Abstract {
     public getProducts(query: QuerySearch = {}): Promise<ProductType[]> {
         return new Promise(resolve => {
             this.clientHttp.send('get', environment.apiEndpoints.getProducts, {params: query})

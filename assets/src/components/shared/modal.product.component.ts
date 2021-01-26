@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/components/custom.element';
 import {ProductType} from "App/types/product.type";
-import { injector} from "App/core/container.service";
+import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 import { html, property , TemplateResult } from 'lit-element';
 
@@ -28,7 +28,7 @@ export default class ModalProductComponent extends AppComponent {
                     }}" icon="cart" type="primary" label="Commander mes produits"></app-button>
                 </div>
                 <div class="col-6">
-                    <app-button @click="${this.modalService.close}" icon="biArrowReturnLeft" type="success" label="Retourner au produit"></app-button>
+                    <app-button @click="${(): void => {this.modalService.close()}}" icon="biArrowReturnLeft" type="success" label="Retourner au produit"></app-button>
                 </div>
             </div>
         `;

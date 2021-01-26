@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/helper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.services.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.services.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.product.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/abstract.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/abstract.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/client.cart.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/cart.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client/client.product.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/product.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/container.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/container.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/modal.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/modal.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +62,16 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TypeScript" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/shared" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -113,7 +127,7 @@
       <workItem from="1611224048539" duration="5573000" />
       <workItem from="1611235161046" duration="577000" />
       <workItem from="1611237588960" duration="4607000" />
-      <workItem from="1611325288801" duration="13850000" />
+      <workItem from="1611325288801" duration="20743000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -164,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611588266874</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update Library">
+      <created>1611589503922</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1611589503922</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +211,8 @@
     <MESSAGE value="Lite Element Append" />
     <MESSAGE value="Add new decorators" />
     <MESSAGE value="The Eslint is Ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="The Eslint is Ready" />
+    <MESSAGE value="Update Library" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Library" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

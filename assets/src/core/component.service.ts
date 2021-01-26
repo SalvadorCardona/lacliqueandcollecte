@@ -6,6 +6,7 @@ export class ComponentService {
 
     public loadComponents(): void {
         this.components.forEach(Component => {
+            // @ts-ignore
             customElements.define(getComponentSelector(Component), Component);
         });
     }

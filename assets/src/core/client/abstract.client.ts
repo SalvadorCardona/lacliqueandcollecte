@@ -1,9 +1,7 @@
 import ClientService from "App/core/client.service";
+import { injector} from "App/core/container.service";
 
 export default abstract class Client {
-    private clientHttp: ClientService;
-
-    public constructor(clientHttp: ClientService) {
-        this.clientHttp = clientHttp;
-    }
+    @injector(ClientService)
+    protected clientHttp: ClientService;
 }

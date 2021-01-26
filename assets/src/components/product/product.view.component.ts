@@ -1,5 +1,4 @@
 import {AppComponent, createElement} from "App/components/custom.element";
-import ClientService from "App/core/client.service";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
 import {LoaderService} from "App/core/loader.service";
@@ -10,6 +9,7 @@ import ModalProductComponent from "App/components/shared/modal.product.component
 import { property } from "lit-element/lib/decorators";
 import { html , TemplateResult } from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+import ProductClient from "App/core/client/product.client";
 
 
 export default class ProductViewComponent extends AppComponent {
@@ -30,11 +30,11 @@ export default class ProductViewComponent extends AppComponent {
     @injector(ModalService)
     private modalService: ModalService;
 
-    @injector(ClientService)
-    private clientService: ClientService;
+    @injector(ProductClient)
+    private productClient: ProductClient;
 
     public firstUpdated(): void {
-        this.clientService.product.getProducts({include: [this.productId]})
+        this.productClient.getProducts({include: [this.productId]})
             .then(product => {
                 this.loaderService.hide();
                 this.product = product[0];
