@@ -16,11 +16,7 @@ export default class ClientService {
         });
 
         this.http.interceptors.response.use((response: AxiosResponse) => {
-            if (
-                response.data
-            ) {
-                response.data = keysToCamel(response.data);
-            }
+            if (response.data) response.data = keysToCamel(response.data);
 
             return response;
         });

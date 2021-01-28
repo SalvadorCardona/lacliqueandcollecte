@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/client/cart.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client/cart.client.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/cart.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/cart.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/client.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/client.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environement/environement.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environement/environement.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/shared/helper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/helper.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +40,6 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
   </component>
   <component name="ProjectId" id="1lxoIHYa4dBWJ0AOg6BOahapiG1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -118,7 +119,8 @@
       <workItem from="1611224048539" duration="5573000" />
       <workItem from="1611235161046" duration="577000" />
       <workItem from="1611237588960" duration="4607000" />
-      <workItem from="1611325288801" duration="20975000" />
+      <workItem from="1611325288801" duration="24380000" />
+      <workItem from="1611741989203" duration="958000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -183,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611669650816</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="New Rules Eslint">
+      <created>1611669830212</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611669830212</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -5,10 +5,11 @@ import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {html, property, TemplateResult} from 'lit-element';
 import {ButtonType} from "App/components/shared/button.component";
+import {events, EventService} from "App/core/event.service";
 
 export default class ModalCartComponent extends AppComponent {
     @property({type: String})
-    private _cart: CartType;
+    private cart: CartType;
 
     @injector(ModalService)
     private modalService: ModalService;
@@ -16,13 +17,28 @@ export default class ModalCartComponent extends AppComponent {
     @injector(CartService)
     private cartService: CartService;
 
-    public firstUpdated(): void {
-        this._cart = this.cartService.cart;
+    @injector(EventService)
+    private eventService: EventService;
+
+    public constructor() {
+        super();
+        this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => {this.updateCart()})
+        this.updateCart();
+    }
+
+    private updateCart(): void {
+        this.cart = this.cartService.cart;
     }
 
     public render(): TemplateResult  {
+        if (!this.cart.items.length) {
+            return html`
+                <span>Votre Panier est vide</span>
+            `;
+        }
+
         return html`
-          ${this._cart.items.map(this.itemsRender)}
+          ${this.cart.items.map(this.itemsRender)}
           <hr>
           <app-button type="${ButtonType.DANGER}" @click="${this.removeItems}" label="Vider le panier"></app-button>
         `;

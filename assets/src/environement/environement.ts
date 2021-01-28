@@ -7,6 +7,7 @@ export const environment = {
         getProducts: 'wc/v3/products',
         cart: {
             addItem: 'wc/store/cart/add-item',
+            deleteItem: '/wc/store/cart/items/{key}',
             deleteItems:  'wc/store/cart/items',
             me: 'wc/store/cart',
         }
