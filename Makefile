@@ -1,13 +1,12 @@
 ENV ?= "dev"
 
-install: install-common install-php database-import install-asset
+install: install-php database-import install-asset remove-theme
 
 install-common:
 	ln -s $(pwd)/theme $(pwd)/web/app/themes/hello-theme-master
 
 install-asset:
-	yarn install
-	yarn development
+	cd assets && yarn install
 
 install-php:
 	composer install
@@ -35,3 +34,6 @@ test:
 
 wp-rewrite-url:
 	php wp-cli.phar  rewrite flush   --allow-root
+
+remove-theme:
+	rm -R ./web/wp/wp-content/themes/**
