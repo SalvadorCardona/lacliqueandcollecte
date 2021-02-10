@@ -38,7 +38,7 @@ export default class ModalCartComponent extends AppComponent {
         }
 
         return html`
-          ${this.cart.items.map(this.itemsRender)}
+          ${this.cart.items.map(this.itemsRender.bind(this))}
           <hr>
           <app-button type="${ButtonType.DANGER}" @click="${this.removeItems}" label="Vider le panier"></app-button>
         `;
@@ -48,10 +48,16 @@ export default class ModalCartComponent extends AppComponent {
         this.cartService.removeItems();
     }
 
+    private removeItem(keyProduct: string): void {
+        this.cartService.removeItem(keyProduct);
+    }
+
     private itemsRender(product: ProductCart): TemplateResult {
+        console.log(this)
         return html`
           <div>
               ${product.name}
+              <app-icon @click="${():void => this.removeItem(product.key)}" icon="biX" > </app-icon>
           </div>
         `;
     }

@@ -10,7 +10,6 @@ use App\Api\ProductsByAuthorId;
 use App\Elementor\Widgets\TestWidget;
 use App\Filter\WooCommerceSupport;
 use App\Model\Config;
-use App\Service\ElementorWidgetRegister;
 use App\Service\ApiLoaderRegister;
 
 return [
@@ -19,7 +18,6 @@ return [
         ProductsByAuthorId::class
     ],
     Config::ACTION => [
-//        ElementorWidgetRegister::class,
         ApiLoaderRegister::class,
         WordpressThemeSupport::class,
         AddAssets::class,

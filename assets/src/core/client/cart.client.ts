@@ -16,6 +16,20 @@ export default class CartClient extends Abstract {
         });
     }
 
+    public removeItem(keyProduct: string): Promise<boolean> {
+        const url = environment.apiEndpoints.cart.deleteItem.replace('{key}', keyProduct);
+
+        return new Promise((resolve, reject) => {
+            this.clientHttp.send('delete', url)
+                .then(() => {
+                    resolve(true);
+                })
+                .catch(() => {
+                    reject(false)
+                })
+        });
+    }
+
     public removeItems(): Promise<boolean> {
         return new Promise((resolve, reject) => {
             this.clientHttp.send('delete', environment.apiEndpoints.cart.deleteItems)

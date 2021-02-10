@@ -37,3 +37,6 @@ wp-rewrite-url:
 
 remove-theme:
 	rm -R ./web/wp/wp-content/themes/**
+
+make lint:
+	cd assets && yarn lint

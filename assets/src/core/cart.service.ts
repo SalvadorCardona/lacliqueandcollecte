@@ -36,9 +36,9 @@ export default class CartService implements OnInit {
         });
     }
 
-    public removeItem(): Promise<boolean> {
+    public removeItem(keyProduct: string): Promise<boolean> {
         return new Promise(resolve => {
-            this.cartClient.removeItems()
+            this.cartClient.removeItem(keyProduct)
                 .then(isRemove => {
                     this.loadCart();
                     resolve(isRemove);

@@ -1,4 +1,4 @@
-import axios, {AxiosInstance, AxiosResponse} from 'axios'
+import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
 import {environment} from "App/environement/environement";
 import {keysToCamel} from "App/shared/helper";
 import {getMiddleware} from "App/types/middleware.type";
@@ -22,7 +22,7 @@ export default class ClientService {
         });
     }
 
-    public send(method: string, route: string, data: any = {}): Promise<AxiosResponse> {
+    public send(method: Method, route: string, data: any = {}): Promise<AxiosResponse> {
         return this.http[method](route, data);
     }
 }

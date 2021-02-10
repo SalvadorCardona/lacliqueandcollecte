@@ -18,6 +18,10 @@ const iconTemplate = (): string => {
 export default `
 <div class="col-4">
     <app-wrapper title="Icons">
+        <span class="fw-normal">
+            &lt;app-icon icon="" &gt &lt;/app-icon&gt
+        </span>
+        <hr>
         ${iconTemplate()}
     </app-wrapper>
 </div>

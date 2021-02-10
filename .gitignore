@@ -42,3 +42,4 @@ wp-cli.phar
 .vscode
 dist
 assets/mix-manifest.json
+/web/app/themes/hello-theme-master

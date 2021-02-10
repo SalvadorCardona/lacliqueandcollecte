@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.6.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-30 20:03:22+0000\n"
+"PO-Revision-Date: 2021-01-05 15:25:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -140,7 +140,7 @@ msgstr "Le compte ne peut pas être ajouté à ce site."
 
 #: wp-admin/network/site-new.php:263
 msgid "The username and a link to set the password will be mailed to this email address."
-msgstr "L’identifiant et un lien pour mettre en place son mot de passe seront envoyés à cette adresse de messagerie."
+msgstr "L’identifiant et un lien pour mettre en place son mot de passe seront envoyés à cette adresse e-mail."
 
 #. translators: %s: New network admin email.
 #: wp-admin/network/settings.php:175
@@ -206,7 +206,7 @@ msgstr "Désolé, vous n’avez pas l’autorisation de modifier ce site."
 
 #: wp-admin/network/settings.php:357
 msgid "The email address of the first comment author on a new site."
-msgstr "L’adresse de messagerie de l’auteur ou autrice du premier commentaire sur un nouveau site."
+msgstr "L’adresse e-mail de l’auteur ou autrice du premier commentaire sur un nouveau site."
 
 #: wp-admin/network/settings.php:353
 msgid "First Comment Email"
@@ -673,7 +673,7 @@ msgstr "Pour rechercher un site, <strong>saisissez son chemin ou son domaine</st
 
 #: wp-admin/network/index.php:42
 msgid "To search for a user, <strong>enter an email address or username</strong>. Use a wildcard to search for a partial username, such as user&#42;."
-msgstr "Pour rechercher un compte, <strong>saisissez une adresse de messagerie ou un identifiant</strong>. Utilisez le signe étoile (*) pour lancer une recherche sur un identifiant partiel, par exemple compt&#42;."
+msgstr "Pour rechercher un compte, <strong>saisissez une adresse e-mail ou un identifiant</strong>. Utilisez le signe étoile (*) pour lancer une recherche sur un identifiant partiel, par exemple compt&#42;."
 
 #: wp-admin/network/index.php:40
 msgid "To add a new site, <strong>click Create a New Site</strong>."
@@ -945,7 +945,7 @@ msgstr "Les étapes de la configuration originale sont affichées ici pour réf�
 
 #: wp-admin/includes/network.php:369
 msgid "Your email address."
-msgstr "Votre adresse de messagerie."
+msgstr "Votre adresse e-mail."
 
 #: wp-admin/includes/network.php:360
 msgid "What would you like to call your network?"
@@ -1093,7 +1093,7 @@ msgstr "Les réglages de fonctionnement permettent de modifier le nom du réseau
 
 #: wp-admin/network/users.php:223
 msgid "The bulk action will permanently delete selected users, or mark/unmark those selected as spam. Spam users will have posts removed and will be unable to sign up again with the same email addresses."
-msgstr "Le menu « Actions groupées » permet de supprimer définitivement plusieurs comptes d’un coup, ou de les marquer comme indésirables ou non. Les comptes indésirables verront leurs articles supprimés, et ne pourront plus se connecter avec leur adresse de messagerie."
+msgstr "Le menu « Actions groupées » permet de supprimer définitivement plusieurs comptes d’un coup, ou de les marquer comme indésirables ou non. Les comptes indésirables verront leurs articles supprimés, et ne pourront plus se connecter avec leur adresse e-mail."
 
 #: wp-admin/network/users.php:221
 msgid "You can also go to the user&#8217;s profile page by clicking on the individual username."
@@ -1311,7 +1311,7 @@ msgstr "Réglages de fonctionnement"
 
 #: wp-admin/network/site-new.php:91
 msgid "Missing email address."
-msgstr "Adresse de messagerie manquante."
+msgstr "Adresse e-mail manquante."
 
 #: wp-admin/network/site-new.php:87
 msgid "Missing or invalid site address."
@@ -1343,7 +1343,7 @@ msgstr "E-mail de l’administrateur ou de l’administratrice du réseau"
 
 #: wp-admin/network/site-new.php:263
 msgid "A new user will be created if the above email address is not in the database."
-msgstr "Un nouveau compte sera créé si l’adresse de contact n’existe pas dans la base de données."
+msgstr "Un nouveau compte sera créé si l’adresse e-mail n’existe pas dans la base de données."
 
 #: wp-admin/network/site-new.php:259
 msgid "Admin Email"
@@ -1415,7 +1415,7 @@ msgstr "Autoriser les nouvelles inscriptions"
 
 #: wp-admin/network/site-users.php:272
 msgid "Duplicated username or email address."
-msgstr "Identifiant ou adresse de messagerie déjà utilisé(e)."
+msgstr "Identifiant ou adresse e-mail déjà utilisé(e)."
 
 #: wp-admin/network/user-new.php:41
 msgid "Cannot create an empty user."
