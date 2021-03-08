@@ -1,5 +1,6 @@
 import camelCase from 'lodash.camelcase';
 import isObject from 'lodash.isobject';
+import {environment} from "App/environement/environement";
 
 export const keysToCamel = (o: {[name: string]: any}|Array<any>): {[name: string]: any}|Array<any> => {
     if (Array.isArray(o)) {
@@ -36,3 +37,5 @@ export const keysToCamel = (o: {[name: string]: any}|Array<any>): {[name: string
 
 export const filterPrice = (price: number): string =>  price + ' €';
 export const filterTax = (price: number): string =>  filterPrice(price) + ' TTC';
+
+export const getBaseSiteUrl= (): string => environment.baseSiteUrl;

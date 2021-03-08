@@ -9,9 +9,10 @@ install-asset:
 	cd assets && yarn install
 
 install-php:
-	composer install
-	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 	cp .env.dev .env
+	php -r "copy('https://getcomposer.org/installer', 'composer.phar');"
+	php composer.phar install
+	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
 server-dev:
 	/bin/sh -c 'XDEBUG_MODE=debug XDEBUG_AUTO_TRACE=1 php wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'

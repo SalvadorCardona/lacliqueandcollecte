@@ -1,5 +1,6 @@
 export const environment = {
     production: false,
+    baseSiteUrl: 'http://localhost:8000',
     apiEndpoint: 'http://localhost:8000/wp-json',
     idHomePage: 2,
     apiEndpoints: {

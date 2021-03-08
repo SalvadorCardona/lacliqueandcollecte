@@ -13,6 +13,7 @@ web/*.map
 web/*.html
 web/*.css
 web/parcel-manifest.json
+composer.phar
 
 web/.htaccess
 node_modules

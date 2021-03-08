@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/components/custom.element';
 import {PostType} from "App/types/post.type";
-import {keysToCamel} from "App/shared/helper";
+import {getBaseSiteUrl, keysToCamel} from "App/shared/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html , TemplateResult} from 'lit-element';
 
@@ -32,7 +32,7 @@ export default class HeaderComponent extends AppComponent {
             <div class="container site-branding d-flex justify-content-between align-items-center py-2">
                 <span class="site-logo">
                     <a href="/" class="custom-logo-link me-3" rel="home">
-                        <img src="http://localhost:8000/app/uploads/2020/12/logo.svg" class="custom-logo" alt="La clique &amp; Collecte">
+                        <img src="${getBaseSiteUrl()}/app/uploads/2020/12/logo.svg" class="custom-logo" alt="La clique &amp; Collecte">
                     </a>            
                     <a class="site-logo-title" href="/" title="Home" rel="home">La Clique &amp; Collecte</a>
                 </span>

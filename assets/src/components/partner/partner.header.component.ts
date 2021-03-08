@@ -1,13 +1,13 @@
 import {AppComponent} from 'App/components/custom.element';
 import {html, TemplateResult} from "lit-element";
+import {getBaseSiteUrl} from "App/shared/helper";
 
 export default class PartnerHeaderComponent extends AppComponent {
-
     public render(): TemplateResult {
         return html`
-        <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url('http://localhost:8000/app/uploads/2020/11/atelier.jpg')">
+        <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url(${getBaseSiteUrl()}'/app/uploads/2020/11/atelier.jpg')">
             <div class="background-overlay"></div>
-            <img id="picture" src="http://localhost:8000/app/uploads/2020/11/artisant.jpg" alt="face-picture">
+            <img id="picture" src="${getBaseSiteUrl()}/app/uploads/2020/11/artisant.jpg" alt="face-picture">
             
             <div id="last-name" class="text-white">
                 Céline
