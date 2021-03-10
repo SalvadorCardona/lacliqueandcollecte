@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "eslint . --ext .ts",
     "parcel": "parcel ./index.html  --out-dir ./../web -o app",
-    "parcel-build": "parcel build ./index.html  -d ./../theme/dist -o app"
+    "build": "parcel build ./index.html  --out-dir ./../web -o app"
   },
   "repository": {
     "type": "git",

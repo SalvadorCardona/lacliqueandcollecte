@@ -6,11 +6,10 @@ install-common:
 	ln -s $(pwd)/theme $(pwd)/web/app/themes/hello-theme-master
 
 install-asset:
-	cd assets && yarn install
+	cd assets && yarn install && yarn build
 
 install-php:
 	cp .env.dev .env
-	php -r "copy('https://getcomposer.org/installer', 'composer.phar');"
 	php composer.phar install
 	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
