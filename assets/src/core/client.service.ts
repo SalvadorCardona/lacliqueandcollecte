@@ -1,6 +1,5 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
-import {environment} from "App/environement/environement";
-import {keysToCamel} from "App/shared/helper";
+import {getApiEndpoint, keysToCamel} from "App/shared/helper";
 import {getMiddleware} from "App/types/middleware.type";
 
 export default class ClientService {
@@ -8,7 +7,7 @@ export default class ClientService {
 
     public constructor() {
         this.http = axios.create({
-            baseURL: environment.apiEndpoint,
+            baseURL: getApiEndpoint(),
             headers: {
                 'accept': 'application/json',
                 'X-WC-Store-API-Nonce': getMiddleware().wcStoreApi,

@@ -17,7 +17,6 @@ use WordPlate\Acf\Location;
 class PostTypePartner implements ActionInterface
 {
     const POST_TYPE_NAME = 'partner';
-
     const FIELD_LAST_NAME = 'lastName';
     const FIELD_FIRST_NAME = 'firstName';
     const FIELD_FACE_PICTURE = 'facePicture';

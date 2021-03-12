@@ -1,4 +1,5 @@
 ENV ?= "dev"
+SOURCE_DIR = $(shell pwd)
 
 install: install-php database-import install-asset remove-theme
 
