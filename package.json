@@ -1,9 +1,0 @@
-{
-  "dependencies": {
-    "install": "^0.13.0",
-    "inversify": "^5.0.5",
-    "lit-element": "^2.4.0",
-    "lodash.kebabcase": "^4.1.1",
-    "reflect-metadata": "^0.1.13"
-  }
-}
