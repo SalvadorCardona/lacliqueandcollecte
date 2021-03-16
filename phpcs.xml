@@ -3,13 +3,14 @@
   <description>Roots Coding Standards</description>
 
   <!-- Scan all files in directory -->
-  <file>.</file>
+  <file>./src</file>
 
   <!-- Scan only PHP files -->
   <arg name="extensions" value="php"/>
 
   <!-- Ignore WordPress and Composer dependencies -->
   <exclude-pattern>web/wp</exclude-pattern>
+  <exclude-pattern>web/app</exclude-pattern>
   <exclude-pattern>vendor/</exclude-pattern>
 
   <!-- Show colors in console -->

@@ -15,7 +15,7 @@ class WordpressThemeSupport implements ActionInterface
          * Disable woocomerce style for product page
          */
         if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
-            add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+            add_filter('woocommerce_enqueue_styles', '__return_empty_array');
         }
 
         add_theme_support("post-thumbnails");

@@ -15,7 +15,7 @@ class Kernel
     /**
      * @var App;
      */
-    private static $App;
+    private static App $App;
 
     /**
      * @return App
@@ -56,6 +56,8 @@ class Kernel
         try {
             $container = $containerBuilder->build();
         } catch (Exception $e) {
+            // TODO: Append Log system here
+            return;
         }
 
         $app = Bridge::create($container);

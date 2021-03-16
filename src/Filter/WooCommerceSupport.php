@@ -3,7 +3,6 @@
 
 namespace App\Filter;
 
-
 use App\FilterInterface;
 
 class WooCommerceSupport implements FilterInterface

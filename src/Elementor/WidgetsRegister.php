@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Elementor;
 
-
 use Elementor\Plugin;
 
 class WidgetsRegister
@@ -14,7 +13,8 @@ class WidgetsRegister
      */
     private array $widgets;
 
-    public function registerWidget() {
+    public function registerWidget()
+    {
         foreach ($this->widgets as $widget) {
             Plugin::instance()->widgets_manager->register_widget_type($widget);
         }

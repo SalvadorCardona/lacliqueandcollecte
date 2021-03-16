@@ -9,11 +9,7 @@ export const createElement = <T>(Elem: typeof AppComponent): T => {
 }
 
 export abstract class AppComponent extends LitElement {
-
     protected createRenderRoot(): this {
         return this;
     }
-
-
 }
-

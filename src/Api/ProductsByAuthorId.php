@@ -16,7 +16,7 @@ class ProductsByAuthorId extends AbstractApiController
             'status'    => 'publish',
             'limit'     => -1,
             'author'    => (int) $this->request->get_param('id')
-        ]);
+         ]);
 
         return array_map(fn($product) => $product->get_data(), $products);
     }

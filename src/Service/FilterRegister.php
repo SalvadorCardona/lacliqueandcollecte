@@ -3,7 +3,6 @@
 
 namespace App\Service;
 
-
 use App\ActionInterface;
 
 class FilterRegister implements ActionInterface

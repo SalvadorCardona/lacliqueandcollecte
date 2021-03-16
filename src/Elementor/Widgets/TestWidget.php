@@ -17,24 +17,28 @@ class TestWidget extends WidgetBase
         return 'timer';
     }
 
-    public function get_title() {
-        return __( 'timer', 'plugin-name' );
+    public function get_title()
+    {
+        return __('timer', 'plugin-name');
     }
 
-    public function get_icon() {
+    public function get_icon()
+    {
         return 'fa fa-code';
     }
 
-    public function get_categories() {
+    public function get_categories()
+    {
         return [ 'general' ];
     }
 
-    protected function _register_controls() {
+    protected function _register_controls()
+    {
 
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __( 'Content', 'plugin-name' ),
+                'label' => __('Content', 'plugin-name'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,17 +46,18 @@ class TestWidget extends WidgetBase
         $this->add_control(
             'url',
             [
-                'label' => __( 'URL to embed', 'plugin-name' ),
+                'label' => __('URL to embed', 'plugin-name'),
                 'type' => Controls_Manager::TEXT,
                 'input_type' => 'url',
-                'placeholder' => __( 'https://your-link.com', 'plugin-name' ),
+                'placeholder' => __('https://your-link.com', 'plugin-name'),
             ]
         );
 
         $this->end_controls_section();
     }
 
-    protected function render() {
+    protected function render()
+    {
             echo "<second-timer></second-timer>";
     }
 }

@@ -20,7 +20,6 @@ class AddAssets implements ActionInterface
             wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], false, '1.1', 'all');
             wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], 1.1, true);
         }
-
     }
 
     public static function getAction(): string
