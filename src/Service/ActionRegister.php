@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Service;
@@ -21,6 +22,6 @@ class ActionRegister
 
     public function addAction(ActionInterface $action): void
     {
-        $this->actions []= $action;
+        $this->actions [] = $action;
     }
 }

@@ -28,7 +28,7 @@ class ApiLoaderRegister implements ActionInterface
 
     public function addApi(ApiControllerInterface $api): void
     {
-        $this->apis []= $api;
+        $this->apis [] = $api;
     }
 
     private function addRouting(ApiControllerInterface $api): void
