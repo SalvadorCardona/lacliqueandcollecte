@@ -8,7 +8,7 @@ class ProductsByAuthorId extends AbstractApiController
 {
     protected string $endPoint = 'products/(?P<id>\d+)/by-author';
 
-    protected function __invoke(): array
+    public function __invoke(): array
     {
         global $woocommerce;
 

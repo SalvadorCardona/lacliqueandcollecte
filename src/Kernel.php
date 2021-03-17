@@ -66,14 +66,15 @@ class Kernel
 
         self::setApp($app);
 
-        /** @var ActionRegister $eventService */
         try {
+            /** @var ActionRegister $eventService */
             $eventService = self::getApp()
                 ->getContainer()
                 ->get(ActionRegister::class);
         } catch (Exception $e) {
             return;
         }
-        $eventService->registerActions()Action/AddAssets.php;
+
+        $eventService->registerActions();
     }
 }

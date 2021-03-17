@@ -21,6 +21,8 @@ abstract class AbstractApiController implements ApiControllerInterface
         return $this->__invoke();
     }
 
+    abstract public function __invoke(): mixed;
+
     /**
      *
      */

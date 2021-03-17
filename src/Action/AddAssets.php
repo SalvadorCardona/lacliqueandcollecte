@@ -12,13 +12,12 @@ class AddAssets implements ActionInterface
 
     public function __invoke(): void
     {
-
         if (!is_admin()) {
             wp_deregister_script('jquery');
             $manifest = json_decode(file_get_contents(Kernel::getDirPublic() . '/parcel-manifest.json'), true);
 
-            wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], false, '1.1', 'all');
-            wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], 1.1, true);
+            wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], [], '1', 'all');
+            wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], '1', true);
         }
     }
 

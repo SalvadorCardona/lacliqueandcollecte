@@ -1,10 +1,9 @@
 parameters:
-    level: 3
+    level: 5
     paths:
         - src
-    autoload_directories:
+    scanFiles:
+      - web/wp/wp-includes/plugin.php
+    scanDirectories:
         - web/wp
         - web/app
-    ignoreErrors:
-        - '#Function pcntl_open not found\.#'
-        - '#Function __ not found.\.#'

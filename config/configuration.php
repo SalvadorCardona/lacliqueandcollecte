@@ -7,7 +7,6 @@ use App\Action\WordpressThemeSupport;
 use App\Action\PostTypePartner;
 use App\Api\PostByIdApi;
 use App\Api\ProductsByAuthorId;
-use App\Elementor\Widgets\TestWidget;
 use App\Filter\WooCommerceSupport;
 use App\Model\Config;
 use App\Service\ApiLoaderRegister;
@@ -23,9 +22,6 @@ return [
         AddAssets::class,
         PostTypePartner::class,
         AddFilter::class,
-    ],
-    Config::ELEMENTOR_WIDGETS => [
-        TestWidget::class,
     ],
     Config::FILTER => [
         WooCommerceSupport::class

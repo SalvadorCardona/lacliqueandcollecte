@@ -2,7 +2,6 @@
 declare(strict_types=1);
 
 use App\Service\ApiLoaderRegister;
-use App\Service\WidgetsRegister;
 use App\Service\ActionRegister;
 use App\Model\Config;
 use DI\ContainerBuilder;
@@ -28,16 +27,6 @@ return function (ContainerBuilder $containerBuilder) {
             }
 
             return $apiLoaderAction;
-        },
-
-        WidgetsRegister::class => function (ContainerInterface $container) {
-            $widgetsRegister = new WidgetsRegister();
-
-            foreach ($container->get(Config::ELEMENTOR_WIDGETS) as $widget) {
-                $widgetsRegister->addWidget($container->get($widget));
-            }
-
-            return $widgetsRegister;
         },
     ]);
 };
