@@ -8,6 +8,8 @@ use App\Service\ActionRegister;
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
 use Exception;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use Slim\App;
 
 class Kernel
@@ -65,10 +67,13 @@ class Kernel
         self::setApp($app);
 
         /** @var ActionRegister $eventService */
-        $eventService = self::getApp()
-            ->getContainer()
-            ->get(ActionRegister::class);
-
-        $eventService->registerActions();
+        try {
+            $eventService = self::getApp()
+                ->getContainer()
+                ->get(ActionRegister::class);
+        } catch (Exception $e) {
+            return;
+        }
+        $eventService->registerActions()Action/AddAssets.php;
     }
 }

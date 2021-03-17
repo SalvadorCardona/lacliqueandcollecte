@@ -11,7 +11,7 @@ class PostByIdApi extends AbstractApiController
 {
     protected string $endPoint = 'post/(?P<id>\d+)/all';
 
-    public function __invoke(): ?array
+    protected function __invoke(): ?array
     {
         $wpdb = WordpressHelper::getWpdb();
 

@@ -45,6 +45,7 @@ php-cs-fix:
 
 lint:
 	php vendor/bin/phpcs
+	php vendor/bin/phpstan analyse
 	cd assets && yarn lint
 
 build-on-integration:
