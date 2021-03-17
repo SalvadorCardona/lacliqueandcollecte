@@ -7,3 +7,5 @@ parameters:
     scanDirectories:
         - web/wp
         - web/app
+
+
