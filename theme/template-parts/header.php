@@ -12,4 +12,6 @@ if (! defined('ABSPATH')) {
 
 ?>
 
-<app-header menus='<?= json_encode(wp_get_nav_menu_items('main-menu')) ?>'></app-header>
+<header class="site-header gradient-primary" role="banner">
+    <app-header menus='<?= json_encode(wp_get_nav_menu_items('main-menu')) ?>'></app-header>
+</header>
