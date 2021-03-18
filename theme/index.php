@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The site's entry point.
  *

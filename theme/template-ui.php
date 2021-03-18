@@ -1,21 +1,24 @@
 <?php
+
 /**
  * Template Name: App Ui Container
  */
-if ( ! defined( 'ABSPATH' ) ) {
+
+if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
+
 get_header();
-?>
-<?php
-while ( have_posts() ) : the_post();
+
+while (have_posts()) :
+    the_post();
     ?>
 
     <main class="container my-5" role="main">
         <app-ui></app-ui>
     </main>
 
-<?php
+    <?php
 endwhile;
 
 get_footer();
