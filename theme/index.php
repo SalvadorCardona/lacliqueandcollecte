@@ -15,7 +15,7 @@ if (! defined('ABSPATH')) {
 get_header();
 
 ?>
-<main class="site-main" role="main">
+<main class="site-main container" role="main">
 <?php
 if (is_singular()) {
     get_template_part('template-parts/single');
