@@ -44,3 +44,5 @@ wp-cli.phar
 dist
 assets/mix-manifest.json
 /web/app/themes/hello-theme-master
+
+/web/app/languages/*.json
