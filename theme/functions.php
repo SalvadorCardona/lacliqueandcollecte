@@ -1,15 +1,5 @@
 <?php
 
-/**
- * Theme functions and definitions
- *
- * @package HelloElementor
- */
-
-use App\Kernel;
-
-Kernel::boot();
-
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }

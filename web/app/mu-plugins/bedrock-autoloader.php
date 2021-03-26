@@ -11,6 +11,8 @@
 
 namespace Roots\Bedrock;
 
+use App\Kernel;
+
 if (!is_blog_installed()) {
     return;
 }
@@ -90,6 +92,8 @@ class Autoloader
         if (is_admin()) {
             add_filter('show_advanced_plugins', [$this, 'showInAdmin'], 0, 2);
         }
+
+        Kernel::boot();
 
         $this->loadPlugins();
     }

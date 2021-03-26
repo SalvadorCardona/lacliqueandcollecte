@@ -6,6 +6,7 @@ namespace App\Helper;
 
 use App\Model\Config;
 use wpdb;
+use WP_Post;
 
 class WordpressHelper
 {
@@ -25,5 +26,11 @@ class WordpressHelper
     public static function trans(string $trans): string
     {
         return __($trans, Config::APP_NAME);
+    }
+
+    public static function getPost(): ?WP_Post
+    {
+        global $post;
+        return $post;
     }
 }

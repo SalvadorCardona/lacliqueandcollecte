@@ -5,7 +5,7 @@ import {getBaseSiteUrl} from "App/shared/helper";
 export default class PartnerHeaderComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
-        <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url(${getBaseSiteUrl()}'/app/uploads/2020/11/atelier.jpg')">
+        <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url('${getBaseSiteUrl()}/app/uploads/2020/11/atelier.jpg')">
             <div class="background-overlay"></div>
             <img id="picture" src="${getBaseSiteUrl()}/app/uploads/2020/11/artisant.jpg" alt="face-picture">
             
@@ -32,4 +32,3 @@ export default class PartnerHeaderComponent extends AppComponent {
         `;
     }
 }
-

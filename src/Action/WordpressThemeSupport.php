@@ -5,18 +5,25 @@ declare(strict_types=1);
 namespace App\Action;
 
 use App\ActionInterface;
+use App\Helper\WordpressHelper;
 
 class WordpressThemeSupport implements ActionInterface
 {
-
     public function __invoke(): void
     {
         /**
-         * Disable woocomerce style for product page
+         * Disable Woocomerce style for product page
          */
         if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
             add_filter('woocommerce_enqueue_styles', '__return_empty_array');
         }
+
+        /**
+         * Used for that Woocommerce use index.php and not single-product.php
+         */
+        add_filter('woocommerce_template_loader_files', function ($string) {
+            return is_product() ? ['index.php'] : [];
+        });
 
         add_theme_support("post-thumbnails");
 

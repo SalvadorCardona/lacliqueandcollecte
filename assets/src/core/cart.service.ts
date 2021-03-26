@@ -26,34 +26,28 @@ export default class CartService implements OnInit {
     }
 
     public addItem(productId: number, quantity: number): Promise<CartType> {
-        return new Promise(resolve => {
-            this.cartClient.addItem(productId, quantity)
-                .then(cart => {
-                    this.cart = cart;
-                    this.cartHasChanged();
-                    resolve(cart);
-                })
-        });
+      return this.cartClient.addItem(productId, quantity)
+          .then(cart => {
+              this.cart = cart;
+              this.cartHasChanged();
+              return cart;
+          });
     }
 
     public removeItem(keyProduct: string): Promise<boolean> {
-        return new Promise(resolve => {
-            this.cartClient.removeItem(keyProduct)
-                .then(isRemove => {
-                    this.loadCart();
-                    resolve(isRemove);
-                })
-        });
+        return this.cartClient.removeItem(keyProduct)
+            .then(isRemove => {
+                this.loadCart();
+                return isRemove;
+            });
     }
 
     public removeItems(): Promise<boolean> {
-        return new Promise(resolve => {
-            this.cartClient.removeItems()
-                .then(isRemove => {
-                    this.loadCart();
-                    resolve(isRemove);
-                })
-        });
+        return this.cartClient.removeItems()
+            .then(isRemove => {
+              this.loadCart();
+              return isRemove
+            });
     }
 
     private cartHasChanged(): void {

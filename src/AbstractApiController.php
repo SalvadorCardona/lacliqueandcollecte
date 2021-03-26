@@ -23,12 +23,7 @@ abstract class AbstractApiController implements ApiControllerInterface
 
     abstract public function __invoke(): mixed;
 
-    /**
-     *
-     */
-    public function action()
-    {
-    }
+    abstract public function getEndPoint(): string;
 
     /**
      * @return array
@@ -51,11 +46,6 @@ abstract class AbstractApiController implements ApiControllerInterface
     public function isBlocking(): bool
     {
         return $this->blocking;
-    }
-
-    public function getEndPoint(): string
-    {
-        return $this->endPoint;
     }
 
     public function getNamespace(): string

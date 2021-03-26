@@ -11,6 +11,9 @@
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
+$logo = get_theme_mod( 'custom_logo' );
+$image = wp_get_attachment_image_src( $logo , 'full' );
+$image_url = $image[0];
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -22,12 +25,16 @@ if (! defined('ABSPATH')) {
     <?php wp_head(); ?>
 </head>
     <script>
+        <?php echo json_encode(\App\Util\MiddlewareConfigurationFactory::build()) ?>
         const appMiddleware = {
-            wcStoreApi: '<?= wp_create_nonce('wc_store_api') ?>'
+            wcStoreApi: '<?= wp_create_nonce('wc_store_api') ?>',
+            logoUrl: '<?= $image_url ?>'
         }
     </script>
 <body <?php body_class(); ?>>
 
 <?php
 get_template_part('template-parts/header');
+?>
 
+<main class="site-main container" role="main">

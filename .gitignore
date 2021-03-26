@@ -46,3 +46,5 @@ assets/mix-manifest.json
 /web/app/themes/hello-theme-master
 
 /web/app/languages/*.json
+
+.phpunit.result.cache

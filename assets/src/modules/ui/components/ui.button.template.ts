@@ -2,7 +2,6 @@ export default `
 
 <div class="col-4">
     <app-wrapper title="Buttons" class="app-wrapper">
-    
         <span class="fw-normal">
         &lt;app-button icon="" label="" type=""&gt &lt;/app-button&gt
         </span>

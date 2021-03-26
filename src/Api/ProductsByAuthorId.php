@@ -1,17 +1,15 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Api;
 
 use App\AbstractApiController;
 
 class ProductsByAuthorId extends AbstractApiController
 {
-    protected string $endPoint = 'products/(?P<id>\d+)/by-author';
-
     public function __invoke(): array
     {
-        global $woocommerce;
-
          $products = wc_get_products([
             'status'    => 'publish',
             'limit'     => -1,
@@ -19,5 +17,10 @@ class ProductsByAuthorId extends AbstractApiController
          ]);
 
         return array_map(fn($product) => $product->get_data(), $products);
+    }
+
+    public function getEndPoint(): string
+    {
+        return 'products/(?P<id>\d+)/by-author';
     }
 }

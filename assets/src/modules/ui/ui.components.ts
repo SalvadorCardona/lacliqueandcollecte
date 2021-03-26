@@ -27,7 +27,6 @@ export default class UiComponent extends AppComponent {
         `;
     }
 
-
     private redirect(): void {
         setTimeout(() => this.router(), 100);
     }

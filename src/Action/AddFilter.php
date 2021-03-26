@@ -20,6 +20,9 @@ class AddFilter implements ActionInterface
 //        throw new Exception( __( 'You dont have permission', 'woocommerce' ), 401 );
         }, 1);
 
+        /**
+         * Append a filter to search a product bu author id in the api rest
+         */
         add_filter('woocommerce_rest_product_object_query', function ($args, $request) {
             if (isset($request['author'])) {
                 $args['author'] = $request['author'];

@@ -12,7 +12,7 @@ if (! defined('ABSPATH')) {
 
 while (have_posts()) :
     the_post();
-?>
+    ?>
 
 <div class="page-content">
     <?php the_content(); ?>
@@ -22,5 +22,5 @@ while (have_posts()) :
     <?php wp_link_pages(); ?>
 </div>
 
-<?php comments_template();
+    <?php comments_template();
 endwhile;

@@ -53,7 +53,6 @@ export default class ModalCartComponent extends AppComponent {
     }
 
     private itemsRender(product: ProductCart): TemplateResult {
-        console.log(this)
         return html`
           <div>
               ${product.name}

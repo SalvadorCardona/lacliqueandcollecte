@@ -7,7 +7,6 @@ import icons from "App/modules/ui/components/ui.icon.template";
 
 export default  `
 <h2>Components</h2>
-
 <div class="row">
     ${textTemplate}
     ${buttonTemplate}

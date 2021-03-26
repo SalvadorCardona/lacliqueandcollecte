@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Api;
 
 use App\AbstractApiController;
@@ -7,7 +9,6 @@ use App\Helper\WordpressHelper;
 
 class PostByIdApi extends AbstractApiController
 {
-    protected string $endPoint = 'post/(?P<id>\d+)/all';
 
     public function __invoke(): ?array
     {
@@ -20,5 +21,10 @@ class PostByIdApi extends AbstractApiController
         }
 
         return null;
+    }
+
+    public function getEndPoint(): string
+    {
+        return 'post/(?P<id>\d+)/all';
     }
 }

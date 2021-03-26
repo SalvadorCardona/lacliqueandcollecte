@@ -10,7 +10,6 @@ class Config
     public const API = 'api';
     public const SERVICES = 'services';
     public const ROUTING_CONTEXT = 'routing_context';
-    public const ELEMENTOR_WIDGETS = 'elementors_widget';
     public const APP_NAME = 'la-click-and-collecte';
     const FILTER = 'filter';
 }
