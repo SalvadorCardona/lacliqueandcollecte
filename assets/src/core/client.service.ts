@@ -1,6 +1,6 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
 import {getApiEndpoint, keysToCamel} from "App/shared/helper";
-import {getMiddleware} from "App/types/middleware.type";
+import {getMiddleware} from "App/types/middleware.configuration.type";
 
 export default class ClientService {
     public http: AxiosInstance;

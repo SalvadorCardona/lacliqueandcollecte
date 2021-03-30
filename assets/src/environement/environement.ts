@@ -11,6 +11,9 @@ export const environment = {
             deleteItem: '/wc/store/cart/items/{key}',
             deleteItems:  'wc/store/cart/items',
             me: 'wc/store/cart',
+        },
+        application: {
+            configuration: 'wp/app/configuration'
         }
     }
 };

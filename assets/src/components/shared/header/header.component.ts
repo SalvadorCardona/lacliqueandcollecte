@@ -3,17 +3,19 @@ import {PostType} from "App/types/post.type";
 import {getBaseSiteUrl, keysToCamel} from "App/shared/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html , TemplateResult} from 'lit-element';
+import {injector} from "App/core/container.service";
+import {ConfigurationService} from "App/core/configuration.service";
 
 export default class HeaderComponent extends AppComponent {
     @property({type: Object})
     private menus: Array<PostType>|null = null;
 
-    public firstUpdated(): void {
-        if (typeof this.menus === 'string') {
-            this.menus = JSON.parse(this.menus);
-        }
+    @injector(ConfigurationService)
+    private configurationService: ConfigurationService;
 
-        this.menus = keysToCamel(this.menus) as Array<PostType>;
+    public connectedCallback(): void {
+        this.menus = this.configurationService.configuration.mainMenu;
+        super.connectedCallback();
     }
 
     private renderMenu(): Array<TemplateResult> {
@@ -31,7 +33,7 @@ export default class HeaderComponent extends AppComponent {
         <div class="container site-branding d-flex justify-content-between align-items-center py-2">
             <span class="site-logo">
                 <a href="/" class="custom-logo-link me-3" rel="home">
-                    <img src="${getBaseSiteUrl()}/app/uploads/2020/12/logo.svg" class="custom-logo" alt="La clique &amp; Collecte">
+                    <img src="${this.configurationService.configuration.logoUrl}" class="custom-logo" alt="La clique &amp; Collecte">
                 </a>            
                 <a class="site-logo-title" href="/" title="Home" rel="home">La Clique &amp; Collecte</a>
             </span>

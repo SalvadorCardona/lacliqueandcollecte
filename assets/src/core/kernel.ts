@@ -28,10 +28,10 @@ export default class Kernel {
 
         eventService.dispatch(events.SERVICE_MOUNTED);
 
-        const componentService: ComponentService = this.containerService.service(ComponentService);
-
-        componentService.loadComponents();
-
-        eventService.dispatch(events.COMPONENT_MOUNTED);
+        eventService.addSubscriber(events.CONFIGURATION_LOADED, () => {
+            const componentService: ComponentService = this.containerService.service(ComponentService);
+            componentService.loadComponents();
+            eventService.dispatch(events.COMPONENT_MOUNTED);
+        })
     }
 }

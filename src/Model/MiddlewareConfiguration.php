@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use WP_User;
+
 class MiddlewareConfiguration
 {
     public string $wcStoreApi;
@@ -13,6 +15,8 @@ class MiddlewareConfiguration
     public string $siteUrl;
 
     public array $mainMenu;
+
+    public ?WP_User $user;
 
     public function getWcStoreApi(): string
     {
@@ -50,6 +54,16 @@ class MiddlewareConfiguration
     public function setMainMenu(array $mainMenu): MiddlewareConfiguration
     {
         $this->mainMenu = $mainMenu;
+        return $this;
+    }
+
+    /**
+     * @param WP_User|null $user
+     * @return MiddlewareConfiguration
+     */
+    public function setUser(?WP_User $user): MiddlewareConfiguration
+    {
+        $this->user = $user;
         return $this;
     }
 }

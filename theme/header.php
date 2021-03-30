@@ -25,7 +25,6 @@ $image_url = $image[0];
     <?php wp_head(); ?>
 </head>
     <script>
-        <?php echo json_encode(\App\Util\MiddlewareConfigurationFactory::build()) ?>
         const appMiddleware = {
             wcStoreApi: '<?= wp_create_nonce('wc_store_api') ?>',
             logoUrl: '<?= $image_url ?>'
