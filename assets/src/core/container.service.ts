@@ -1,3 +1,6 @@
+import {events, EventService} from "App/core/event.service";
+import {ConfigurationService} from "App/core/configuration.service";
+
 export interface OnInit {
     onInit(containerService: ContainerService): void;
 }
@@ -38,6 +41,9 @@ export class ContainerService {
                 service['onInit'](this);
             }
         });
+
+        const eventService: EventService = this.service(EventService);
+        eventService.dispatch(events.SERVICE_LOADED);
     }
 
     public static get(): ContainerService
@@ -52,5 +58,9 @@ export class ContainerService {
     public service<Class>(classReference: Type<Class>): Class|null {
         // @ts-ignore
         return this.container.find(elem => elem instanceof classReference) || null;
+    }
+
+    public get configurationService(): ConfigurationService {
+        return this.service(ConfigurationService);
     }
 }

@@ -1,12 +1,11 @@
 export enum events  {
-    SERVICE_MOUNTED = 'SERVICE_MOUNTED',
+    SERVICE_LOADED = 'SERVICE_LOADED',
     CART_HAS_CHANGED = 'cart_has_changed',
-    COMPONENT_MOUNTED = 'component_mounted',
+    COMPONENT_LOADED = 'component_mounted',
     CONFIGURATION_LOADED = 'configuration_loaded'
 }
 
 export class EventService {
-
     private subscriber: Array<{event: events, callback: () => void}> = [];
 
     public dispatch(event: events): void {

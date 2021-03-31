@@ -40,8 +40,9 @@ wp-rewrite-url:
 remove-theme:
 	rm -R ./web/wp/wp-content/themes/**
 
-php-cs-fix:
+code-fix:
 	php vendor/bin/phpcbf
+	cd assets && yarn lint --fix
 
 lint:
 	php vendor/bin/phpcs

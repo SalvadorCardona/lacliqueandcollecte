@@ -38,5 +38,6 @@ export const keysToCamel = (o: {[name: string]: any}|Array<any>): {[name: string
 export const filterPrice = (price: number): string =>  price + ' €';
 export const filterTax = (price: number): string =>  filterPrice(price) + ' TTC';
 
+// TODO: Remove this
 export const getBaseSiteUrl = (): string => environment.baseSiteUrl || window.location.origin;
 export const getApiEndpoint = (): string => getBaseSiteUrl() + '/' + environment.apiEndpoint;

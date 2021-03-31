@@ -15,6 +15,7 @@ class MiddlewareConfigurationFactory
         $user = wp_get_current_user();
 
         return (new MiddlewareConfiguration())
+            ->setWpApiKey(wp_create_nonce('wp_rest'))
             ->setUser($user)
             ->setLogoUrl($image_url)
             ->setSiteUrl(get_site_url())

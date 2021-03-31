@@ -1,4 +1,5 @@
 import {PostType} from "App/types/post.type";
+import {UserType} from "App/types/user.type";
 
 export const getMiddleware = (): MiddlewareConfigurationType => {
     if (window["appMiddleware"]) {
@@ -13,6 +14,7 @@ export interface MiddlewareConfigurationType {
     logoUrl: string;
     siteUrl: string;
     // TODO: create my interface later
-    user: Object;
+    user: UserType;
     mainMenu: Array<PostType>;
+    wpApiKey: string;
 }

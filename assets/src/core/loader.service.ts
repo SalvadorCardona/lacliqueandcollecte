@@ -12,7 +12,7 @@ export class LoaderService implements OnInit {
     private eventService: EventService;
 
     public onInit(): void {
-        this.eventService.addSubscriber(events.SERVICE_MOUNTED, () => this.setup());
+        this.eventService.addSubscriber(events.SERVICE_LOADED, () => this.setup());
     }
 
     private setup(): void {

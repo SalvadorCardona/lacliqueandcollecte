@@ -18,6 +18,9 @@ class AddAssets implements ActionInterface
 
             wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], [], '1', 'all');
             wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], '1', true);
+            wp_localize_script('app-js', 'Settings', [
+                'nonce' => wp_create_nonce('wp_rest'),
+            ]);
         }
     }
 

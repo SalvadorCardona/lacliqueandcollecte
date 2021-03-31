@@ -6,10 +6,11 @@ import {events, EventService} from "App/core/event.service";
 export class ConfigurationService implements OnInit {
     @injector(ApplicationClient)
     private applicationClient: ApplicationClient;
+
     @injector(EventService)
     private eventService: EventService;
 
-    private _configuration: MiddlewareConfigurationType;
+    private _configuration: MiddlewareConfigurationType = {} as MiddlewareConfigurationType;
 
     public onInit(): void {
         this.applicationClient.getConfiguration()
@@ -19,7 +20,7 @@ export class ConfigurationService implements OnInit {
             })
     }
 
-    get configuration(): MiddlewareConfigurationType {
+    public get configuration(): MiddlewareConfigurationType {
       return this._configuration;
     }
 }

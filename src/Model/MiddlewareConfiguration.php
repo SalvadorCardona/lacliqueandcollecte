@@ -18,6 +18,8 @@ class MiddlewareConfiguration
 
     public ?WP_User $user;
 
+    public string $wpApiKey;
+
     public function getWcStoreApi(): string
     {
         return $this->wcStoreApi;
@@ -64,6 +66,16 @@ class MiddlewareConfiguration
     public function setUser(?WP_User $user): MiddlewareConfiguration
     {
         $this->user = $user;
+        return $this;
+    }
+
+    /**
+     * @param string $wpApiKey
+     * @return MiddlewareConfiguration
+     */
+    public function setWpApiKey(string $wpApiKey): MiddlewareConfiguration
+    {
+        $this->wpApiKey = $wpApiKey;
         return $this;
     }
 }

@@ -1,6 +1,5 @@
 import {AppComponent} from 'App/components/custom.element';
 import {PostType} from "App/types/post.type";
-import {getBaseSiteUrl, keysToCamel} from "App/shared/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html , TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
