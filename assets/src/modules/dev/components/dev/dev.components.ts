@@ -1,16 +1,17 @@
 import {AppComponent} from "App/components/custom.element";
-import componentView from "App/modules/ui/views/ui.views.components";
-import partnerViews from "App/modules/ui/views/ui.partner.views.components";
-import productViews from "App/modules/ui/views/ui.product.views.components";
+import componentView from "App/modules/dev/components/dev/page/components.templates/components.page";
+import partnerViews from "App/modules/dev/components/dev/page/partner.page";
+import productViews from "App/modules/dev/components/dev/page/product.page";
 import {html, property , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
-export default class UiComponent extends AppComponent {
+export default class DevComponent extends AppComponent {
     @property({type: String})
     private route: string;
 
     public render(): TemplateResult {
         return html`
+            <app-dev-application></app-dev-application>
             <div class="dropdown">
                 <button class="btn btn-primary" >
                     Liste des pages templates
