@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Your base production configuration goes in this file. Environment-specific
  * overrides go in their respective config/environments/{{WP_ENV}}.php file.
@@ -8,11 +9,9 @@
  * can.
  */
 
-use App\Kernel;
-use App\Model\Config as ConfigModel;
-use DI\Bridge\Slim\Bridge;
-use DI\ContainerBuilder;
 use Roots\WPConfig\Config as ConfigAlias;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 /**
  * Directory containing all of the site's files
@@ -45,13 +44,13 @@ if (file_exists($root_dir . '/.env')) {
     }
 }
 
-define( 'WP_MEMORY_LIMIT', '96M' );
+define('WP_MEMORY_LIMIT', '96M');
 
 /**
  * Set up our global environment constant and load its config first
  * Default: production
  */
-define('WP_ENV', env('WP_ENV') ?: 'production');
+define('WP_ENV', env('APP_ENV') === 'dev' ? 'developement' : 'production');
 
 /**
  * URLs
@@ -132,11 +131,15 @@ if (file_exists($env_config)) {
 
 ConfigAlias::apply();
 
+if (env('APP_ENV') === 'dev') {
+    $whoops = new Run();
+    $whoops->pushHandler(new PrettyPageHandler());
+    $whoops->register();
+}
+
 /**
  * Bootstrap WordPress
  */
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
-
-

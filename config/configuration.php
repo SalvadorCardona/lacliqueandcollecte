@@ -3,14 +3,13 @@ declare(strict_types=1);
 
 use App\Action\AddAssets;
 use App\Action\AddFilter;
+use App\Action\LoadApi;
 use App\Action\WordpressThemeSupport;
 use App\Action\PostTypePartner;
 use App\Api\GetConfiguration;
 use App\Api\PostByIdApi;
 use App\Api\ProductsByAuthorId;
-use App\Filter\WooCommerceSupport;
 use App\Model\Config;
-use App\Register\ApiLoaderRegister;
 
 return [
     Config::API => [
@@ -19,13 +18,12 @@ return [
         GetConfiguration::class
     ],
     Config::ACTION => [
-        ApiLoaderRegister::class,
         WordpressThemeSupport::class,
         AddAssets::class,
         PostTypePartner::class,
         AddFilter::class,
+        LoadApi::class
     ],
     Config::FILTER => [
-        WooCommerceSupport::class
     ]
 ];

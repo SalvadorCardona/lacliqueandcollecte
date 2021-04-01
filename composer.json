@@ -60,7 +60,8 @@
     "roave/security-advisories": "dev-master",
     "phpstan/phpstan": "^0.12.32",
     "symfony/var-dumper": "^5.1",
-    "phpunit/phpunit": "^8"
+    "phpunit/phpunit": "^8",
+    "filp/whoops": "^2.12"
   },
   "config": {
     "optimize-autoloader": true,

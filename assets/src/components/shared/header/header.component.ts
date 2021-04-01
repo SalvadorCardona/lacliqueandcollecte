@@ -20,7 +20,7 @@ export default class HeaderComponent extends AppComponent {
     private renderMenu(): Array<TemplateResult> {
         return this.menus.map(menu => {
             return html`
-                <li id="menus-item-94" class="d-inline-block p-1">
+                <li class="d-inline-block p-1">
                     <a href="${menu.url}">${menu.title}</a>
                 </li>
             `;

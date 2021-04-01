@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace App\Register;
 
-use App\Action\ActionInterface;
 use App\Api\AbstractApiController;
 use Exception;
 
-class ApiLoaderRegister implements ActionInterface
+class ApiLoaderRegister
 {
     /**
      * @var AbstractApiController[]
      */
     private array $apis;
 
-    public function __invoke(): void
+    public function makeRegister(): void
     {
         foreach ($this->apis as $api) {
             try {
@@ -44,10 +43,5 @@ class ApiLoaderRegister implements ActionInterface
                 'permission_callback' => fn() => $api->getProtectedCallBack(),
             ]
         );
-    }
-
-    public static function getAction(): string
-    {
-        return 'rest_api_init';
     }
 }

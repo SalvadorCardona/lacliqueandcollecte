@@ -1,8 +1,11 @@
 import {ContainerService} from "App/core/container.service";
 import services from "App/app.services";
+import components from "App/app.components";
 
 export default class Kernel {
     public static self: Kernel;
+
+    public static components = components;
 
     private containerService: ContainerService;
 

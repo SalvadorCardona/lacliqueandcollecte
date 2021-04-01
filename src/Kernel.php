@@ -67,14 +67,14 @@ class Kernel
         self::setApp($app);
 
         try {
-            /** @var ActionRegister $eventService */
-            $eventService = self::getApp()
+            /** @var ActionRegister $actionRegister */
+            $actionRegister = self::getApp()
                 ->getContainer()
                 ->get(ActionRegister::class);
         } catch (Exception $e) {
             return;
         }
 
-        $eventService->registerActions();
+        $actionRegister->registerActions();
     }
 }

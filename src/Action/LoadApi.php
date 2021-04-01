@@ -1,19 +1,25 @@
 <?php
 
-
 namespace App\Action;
 
+use App\Register\ApiLoaderRegister;
 
 class LoadApi implements ActionInterface
 {
+    private ApiLoaderRegister $apiLoaderRegister;
+
+    public function __construct(ApiLoaderRegister $apiLoaderRegister)
+    {
+        $this->apiLoaderRegister = $apiLoaderRegister;
+    }
 
     public function __invoke(): void
     {
-        // TODO: Implement __invoke() method.
+        $this->apiLoaderRegister->makeRegister();
     }
 
     public static function getAction(): string
     {
-        // TODO: Implement getAction() method.
+        return 'rest_api_init';
     }
 }

@@ -22,7 +22,9 @@ export default class ModalCartComponent extends AppComponent {
 
     public constructor() {
         super();
-        this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => {this.updateCart()})
+        this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => {
+            this.updateCart()
+        })
         this.updateCart();
     }
 

@@ -7,19 +7,27 @@ export enum events  {
 }
 
 export class EventService {
-    private subscriber: Array<{event: events, callback: () => void}> = [];
+    private subscriber: Array<{event: events, callback: (payload: any|null) => void}> = [];
 
-    public dispatch(event: events): void {
+    private _eventLoaded: Array<events> = [];
+    
+    public dispatch(event: events, payload: any = null): void {
+        this._eventLoaded.push(event);
+
         this.subscriber
             .filter(subscriber => subscriber.event === event)
-            .forEach(({callback}) => callback());
+            .forEach(({callback}) => callback(payload));
 
         if (event !== events.EVENT_DISPATCHED) {
-            this.dispatch(events.EVENT_DISPATCHED);
+            this.dispatch(events.EVENT_DISPATCHED, event);
         }
     }
 
-    public addSubscriber(event: events, callback: () => void): void {
+    public get eventLoaded() {
+        return this._eventLoaded;
+    }
+
+    public addSubscriber(event: events, callback: (payload) => void): void {
         this.subscriber.push({event, callback})
     }
 }
