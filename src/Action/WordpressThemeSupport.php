@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\ActionInterface;
-use App\Helper\WordpressHelper;
-
 class WordpressThemeSupport implements ActionInterface
 {
     public function __invoke(): void

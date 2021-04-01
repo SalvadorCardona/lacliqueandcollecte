@@ -1,5 +1,4 @@
 import IconComponent from "App/components/shared/icon.component";
-import DevComponent from "App/modules/dev/components/dev/dev.components";
 import ProductComponent from "App/components/product/product.component";
 import ProductLoopComponent from "App/components/product/product.loop.component";
 import ButtonComponent from "App/components/shared/button.component";
@@ -13,7 +12,7 @@ import ModalProductComponent from "App/components/shared/modal.product.component
 import ModalCartComponent from "App/components/shared/modal.cart.component";
 import WrapperComponent from "App/components/shared/wrapper.component";
 import PartnerViewComponent from "App/components/partner/partner.view.component";
-import DevApplicationComponents from "App/modules/dev/components/dev/dev.application.component";
+import devComponent from "App/modules/dev/components";
 
 const components = [
     WrapperComponent,
@@ -32,9 +31,5 @@ const components = [
     PartnerViewComponent
 ];
 
-const devComponents = [
-    DevComponent,
-    DevApplicationComponents
-];
 
-export default [...components, ...devComponents];
+export default [...components, ...devComponent];

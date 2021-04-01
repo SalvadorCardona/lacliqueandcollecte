@@ -11,5 +11,5 @@ class Config
     public const SERVICES = 'services';
     public const ROUTING_CONTEXT = 'routing_context';
     public const APP_NAME = 'la-click-and-collecte';
-    const FILTER = 'filter';
+    public const FILTER = 'filter';
 }

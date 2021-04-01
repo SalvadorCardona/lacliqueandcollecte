@@ -8,10 +8,8 @@ import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
 
 export default class DevApplicationComponent extends AppComponent {
-
     @injector(ModalService)
     private modalService: ModalService;
-
 
     private openModal(): void {
         console.log(this)
@@ -25,5 +23,4 @@ export default class DevApplicationComponent extends AppComponent {
             <app-button @click="${this.openModal}" icon="person" type="success"></app-button>
         `;
     }
-
 }

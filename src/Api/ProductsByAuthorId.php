@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace App\Api;
 
-use App\AbstractApiController;
-
 class ProductsByAuthorId extends AbstractApiController
 {
     public function __invoke(): array

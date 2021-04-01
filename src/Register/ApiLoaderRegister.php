@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace App\Service;
+namespace App\Register;
 
-use App\ActionInterface;
-use App\ApiControllerInterface;
+use App\Action\ActionInterface;
+use App\Api\AbstractApiController;
 use Exception;
 
 class ApiLoaderRegister implements ActionInterface
 {
     /**
-     * @var ApiControllerInterface[]
+     * @var AbstractApiController[]
      */
     private array $apis;
 
@@ -26,12 +26,12 @@ class ApiLoaderRegister implements ActionInterface
         }
     }
 
-    public function addApi(ApiControllerInterface $api): void
+    public function addApi(AbstractApiController $api): void
     {
         $this->apis [] = $api;
     }
 
-    private function addRouting(ApiControllerInterface $api): void
+    private function addRouting(AbstractApiController $api): void
     {
         register_rest_route(
             $api->getNamespace(),

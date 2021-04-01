@@ -13,6 +13,12 @@ export class ConfigurationService implements OnInit {
     private _configuration: MiddlewareConfigurationType = {} as MiddlewareConfigurationType;
 
     public onInit(): void {
+        if (window['middlewareConfiguration']) {
+            this._configuration = window['middlewareConfiguration'];
+            this.eventService.dispatch(events.CONFIGURATION_LOADED);
+            return;
+        }
+
         this.applicationClient.getConfiguration()
             .then(middleWareConfiguration => {
                 this._configuration = middleWareConfiguration;

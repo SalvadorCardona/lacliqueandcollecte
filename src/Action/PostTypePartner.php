@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\ActionInterface;
 use App\Helper\WordpressHelper as WH;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Text;

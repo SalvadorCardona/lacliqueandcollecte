@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Service;
 
-use App\ActionInterface;
+namespace App\Action;
 
-class FilterRegister implements ActionInterface
+
+class LoadApi implements ActionInterface
 {
 
     public function __invoke(): void
@@ -14,6 +14,6 @@ class FilterRegister implements ActionInterface
 
     public static function getAction(): string
     {
-        return 'after_setup_theme';
+        // TODO: Implement getAction() method.
     }
 }

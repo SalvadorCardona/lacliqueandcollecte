@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Action;
 
-use App\ActionInterface;
 use App\Kernel;
+use App\Util\MiddlewareConfigurationFactory;
 
 class AddAssets implements ActionInterface
 {
@@ -18,9 +18,11 @@ class AddAssets implements ActionInterface
 
             wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], [], '1', 'all');
             wp_enqueue_script('app-js', get_home_url() . $manifest['src/app.ts'], [], '1', true);
-            wp_localize_script('app-js', 'Settings', [
-                'nonce' => wp_create_nonce('wp_rest'),
-            ]);
+            wp_localize_script(
+                'app-js',
+                'middlewareConfiguration',
+                (array) MiddlewareConfigurationFactory::build()
+            );
         }
     }
 

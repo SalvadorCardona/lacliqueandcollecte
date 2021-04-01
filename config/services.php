@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
 
-use App\Service\ApiLoaderRegister;
-use App\Service\ActionRegister;
+use App\Register\ApiLoaderRegister;
+use App\Register\ActionRegister;
 use App\Model\Config;
 use DI\ContainerBuilder;
 use Psr\Container\ContainerInterface;

@@ -10,7 +10,7 @@ use App\Api\PostByIdApi;
 use App\Api\ProductsByAuthorId;
 use App\Filter\WooCommerceSupport;
 use App\Model\Config;
-use App\Service\ApiLoaderRegister;
+use App\Register\ApiLoaderRegister;
 
 return [
     Config::API => [

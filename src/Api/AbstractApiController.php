@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace App\Api;
 
 use WP_REST_Request;
 
-abstract class AbstractApiController implements ApiControllerInterface
+abstract class AbstractApiController
 {
     protected array $body = [];
     protected string $method = 'GET';
