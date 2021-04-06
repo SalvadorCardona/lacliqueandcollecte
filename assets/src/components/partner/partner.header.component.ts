@@ -3,6 +3,11 @@ import {html, TemplateResult} from "lit-element";
 import {getBaseSiteUrl} from "App/shared/helper";
 
 export default class PartnerHeaderComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-partner-header';
+    }
+
     public render(): TemplateResult {
         return html`
         <div id="partner-header" class="app-wrapper d-flex align-items-center flex-column position-relative" style="background-image: url('${getBaseSiteUrl()}/app/uploads/2020/11/atelier.jpg')">

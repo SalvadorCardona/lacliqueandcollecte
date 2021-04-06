@@ -5,6 +5,11 @@ import {injector} from "App/core/container.service";
 import ProductClient from "App/core/client/product.client";
 
 export default class ProductLoopComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-product-loop';
+    }
+
     @property({type: Number})
     private idUser: number;
 

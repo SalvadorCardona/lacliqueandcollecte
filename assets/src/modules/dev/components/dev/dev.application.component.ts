@@ -8,6 +8,11 @@ import {property} from "lit-element/lib/decorators";
 import './style.css';
 
 export default class DevApplicationComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-dev-application';
+    }
+
     @injector(ModalService)
     private modalService: ModalService;
 

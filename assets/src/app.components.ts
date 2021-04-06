@@ -31,5 +31,4 @@ const components = [
     PartnerViewComponent
 ];
 
-
 export default [...components, ...devComponent];

@@ -6,6 +6,11 @@ import {html, property , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 export default class DevComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-dev';
+    }
+
     @property({type: String})
     private route: string;
 

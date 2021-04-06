@@ -13,6 +13,11 @@ import ProductClient from "App/core/client/product.client";
 
 
 export default class ProductViewComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-product-view';
+    }
+
     @property({type: Number})
     private productId: number;
 
