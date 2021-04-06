@@ -33,7 +33,7 @@ export default class DevComponent extends AppComponent {
         `;
     }
 
-    private redirect(): void {
+    public redirect(): void {
         setTimeout(() => this.router(), 100);
     }
 
