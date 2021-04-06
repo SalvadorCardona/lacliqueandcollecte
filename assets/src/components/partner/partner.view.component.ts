@@ -2,6 +2,11 @@ import {AppComponent} from 'App/components/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 
 export default class PartnerViewComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-partner-view';
+    }
+
     @property({type: String})
     private icon: string;
 

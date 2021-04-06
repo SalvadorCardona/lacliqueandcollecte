@@ -6,6 +6,10 @@ import {html , TemplateResult} from 'lit-element';
 
 export default class ProductComponent extends AppComponent {
 
+    public static getComponentName(): string {
+        return 'app-product';
+    }
+
     @property({type: Object})
     private product: ProductType;
 

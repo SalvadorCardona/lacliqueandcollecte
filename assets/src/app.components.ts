@@ -13,6 +13,7 @@ import ModalCartComponent from "App/components/shared/modal.cart.component";
 import WrapperComponent from "App/components/shared/wrapper.component";
 import PartnerViewComponent from "App/components/partner/partner.view.component";
 import devComponent from "App/modules/dev/components";
+import { LitElement } from "lit-element";
 
 const components = [
     WrapperComponent,
@@ -33,3 +34,13 @@ const components = [
 
 
 export default [...components, ...devComponent];
+
+export abstract class AppComponent extends LitElement {
+    public static getComponentName(): string {
+        return '';
+    }
+    
+    protected createRenderRoot(): this {
+        return this;
+    }
+}

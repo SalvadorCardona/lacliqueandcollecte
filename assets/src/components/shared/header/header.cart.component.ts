@@ -8,6 +8,11 @@ import {ModalService} from "App/core/modal.service";
 import ModalCartComponent from "App/components/shared/modal.cart.component";
 
 export default class HeaderCartComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-header-cart';
+    }
+
     @property({type: Object})
     private cart: CartType|null = null;
 

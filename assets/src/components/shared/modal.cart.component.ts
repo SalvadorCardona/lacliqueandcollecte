@@ -8,6 +8,11 @@ import {ButtonType} from "App/components/shared/button.component";
 import {events, EventService} from "App/core/event.service";
 
 export default class ModalCartComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-modal-cart';
+    }
+
     @property({type: String})
     private cart: CartType;
 

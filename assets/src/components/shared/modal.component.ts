@@ -2,6 +2,11 @@ import {AppComponent} from 'App/components/custom.element';
 import {html, property , TemplateResult} from 'lit-element';
 
 export default class ModalComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-modal';
+    }
+
     @property({type: HTMLElement})
     private _body: HTMLElement;
 

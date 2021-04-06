@@ -6,6 +6,11 @@ import {injector} from "App/core/container.service";
 import {ConfigurationService} from "App/core/configuration.service";
 
 export default class HeaderComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-header';
+    }
+
     @property({type: Object})
     private menus: Array<PostType>|null = null;
 

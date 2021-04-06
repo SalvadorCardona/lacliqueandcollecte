@@ -13,6 +13,10 @@ export enum ButtonType  {
 
 export default class ButtonComponent extends AppComponent {
 
+    public static getComponentName(): string {
+        return 'app-button';
+    }
+
     @property()
     private type: ButtonType;
 

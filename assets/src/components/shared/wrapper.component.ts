@@ -4,6 +4,11 @@ import {html , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 export default class WrapperComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-wrapper';
+    }
+
     @property({type: String})
     public title: string;
 

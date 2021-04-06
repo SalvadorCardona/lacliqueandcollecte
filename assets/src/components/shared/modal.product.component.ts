@@ -5,6 +5,11 @@ import {ModalService} from "App/core/modal.service";
 import {html, property , TemplateResult} from 'lit-element';
 
 export default class ModalProductComponent extends AppComponent {
+
+    public static getComponentName(): string {
+        return 'app-modal-product';
+    }
+
     @property({type: String})
     private _product: ProductType;
 
