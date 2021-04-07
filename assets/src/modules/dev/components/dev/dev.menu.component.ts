@@ -7,7 +7,7 @@ import {events, EventService} from "App/core/event.service";
 import {property} from "lit-element/lib/decorators";
 import DevComponent from "App/modules/dev/components/dev/dev.components";
 
-export default class DevApplicationComponent extends AppComponent {
+export default class DevMenuComponent extends AppComponent {
 
     public static getComponentName(): string {
         return 'app-dev-application';
@@ -26,41 +26,42 @@ export default class DevApplicationComponent extends AppComponent {
     private events: Array<events>;
 
     private openModal(): void {
-        console.log('lat');
-        const a: DevComponent = document.querySelector(getComponentSelector(DevComponent));
-        console.log(a);
-        a.redirect();
+        const devComponent: DevComponent = document.querySelector(getComponentSelector(DevComponent));
+        devComponent.redirect();
     }
 
     public connectedCallback(): void {
-        this.eventService.addSubscriber(events.EVENT_DISPATCHED, payload => {
+        this.eventService.addSubscriber(events.EVENT_DISPATCHED, () => {
             this.events = this.eventService.eventLoaded;
         })
 
         this.classList.add(
-           'position-fixed',
+            'position-fixed',
             'start-0',
             'top-0',
             'min-vh-100',
-            'overflow-scroll'
         );
 
         super.connectedCallback();
     }
 
+    protected firstUpdated() {
+        this.toggleShow();
+    }
+
     public render(): TemplateResult {
         return html`
-            <app-wrapper class="h-100" @click="${this.openModal}">
+            <div class="app-wrapper">
                 <b>Les dev pages</b>
-                <li><a class="dropdown-item" href="/ui/#">Composants</a></li>
-                <li><a class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
-                <li><a class="dropdown-item" href="/ui/#produit">Produit</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#">Composants</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#produit">Produit</a></li>
                 <b>Les composants</b>
                     ${this.serviceList()}
                 <b>Les events</b>
                     ${this.eventList()}
-                <app-button  icon="person" type="success"></app-button>
-            </app-wrapper>
+            </div>
+            <app-button class="ms-2 position-fixed start-0 bottom-0" @click="${this.toggleShow}" icon="biGearWide" type="success"></app-button>
         `;
     }
 
@@ -90,5 +91,10 @@ export default class DevApplicationComponent extends AppComponent {
                 })}
             </ul>
         `;
+    }
+
+    private toggleShow(): void {
+        const component: HTMLElement = this.querySelector('.app-wrapper');
+        component.hidden = !component.hidden;
     }
 }
