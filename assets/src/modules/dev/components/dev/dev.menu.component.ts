@@ -45,7 +45,7 @@ export default class DevMenuComponent extends AppComponent {
         super.connectedCallback();
     }
 
-    protected firstUpdated() {
+    protected firstUpdated(): void {
         this.toggleShow();
     }
 
