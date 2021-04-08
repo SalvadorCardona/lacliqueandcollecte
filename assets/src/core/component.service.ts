@@ -19,11 +19,13 @@ export class ComponentService {
 
     public loadComponents(): void {
         this._components.forEach(Component => {
-            console.log(Component)
+            // console.log(Component)
             // @ts-ignore
+
             customElements.define(getComponentSelector(Component), Component);
         });
     }
+
 
     public get components(): Array<typeof AppComponent> {
         return this._components;

@@ -6,57 +6,10 @@
  * @package HelloElementor
  */
 
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 ?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <ul>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <ul>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <ul>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                </ul>
-            </div>
-            <div class="col-3">
-                <ul>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                    <li>Lorem issssum</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <app-footer></app-footer>
 </footer>
