@@ -25,5 +25,12 @@ export default class Kernel {
         this.containerService.serviceList = services;
 
         this.containerService.loadService();
+        
+        const loader:HTMLElement = document.querySelector('#loader-application-not-loaded');
+
+        if (loader) {
+            loader.remove();
+        }
+
     }
 }

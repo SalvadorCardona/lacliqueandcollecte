@@ -14,6 +14,11 @@ if (! defined('ABSPATH')) {
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
+<div id="loader-application-not-loaded" class="loader-fixed">
+    <div class="donutSpinner"></div>
+</div>
+
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <?php $viewport_content = apply_filters('hello_elementor_viewport_content', 'width=device-width, initial-scale=1'); ?>
