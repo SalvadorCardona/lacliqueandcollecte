@@ -6,7 +6,7 @@ import {createElement} from "App/components/custom.element";
 export class LoaderService implements OnInit {
     private loaderComponent: LoaderComponent;
 
-    public static idLoaderComponent = 'loader-component-id';
+    public static classLoaderFixed = 'loader-fixed';
 
     @injector(EventService)
     private eventService: EventService;
@@ -17,7 +17,7 @@ export class LoaderService implements OnInit {
 
     private setup(): void {
         this.loaderComponent = createElement(LoaderComponent);
-        this.loaderComponent.id = LoaderService.idLoaderComponent;
+        this.loaderComponent.classList.add(LoaderService.classLoaderFixed);
         document.body.append(this.loaderComponent);
         this.hide();
     }

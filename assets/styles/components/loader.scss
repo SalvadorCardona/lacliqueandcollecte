@@ -1,5 +1,5 @@
-app-loader {
-    &#loader-component-id {
+app-loader, #loader-application-not-loaded {
+    &.loader-fixed {
         position: fixed;
         width: 100%;
         height: 100%;
@@ -30,6 +30,4 @@ app-loader {
             transform: rotate(360deg);
         }
     }
-
-
 }
