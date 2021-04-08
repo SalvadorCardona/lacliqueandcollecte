@@ -13,6 +13,7 @@ import ModalCartComponent from "App/components/shared/modal.cart.component";
 import WrapperComponent from "App/components/shared/wrapper.component";
 import PartnerViewComponent from "App/components/partner/partner.view.component";
 import devComponent from "App/modules/dev/components";
+import FooterComponent from "App/components/shared/footer.component";
 
 const components = [
     WrapperComponent,
@@ -28,7 +29,8 @@ const components = [
     ProductComponent,
     HeaderComponent,
     HeaderCartComponent,
-    PartnerViewComponent
+    PartnerViewComponent,
+    FooterComponent
 ];
 
 export default [...components, ...devComponent];
