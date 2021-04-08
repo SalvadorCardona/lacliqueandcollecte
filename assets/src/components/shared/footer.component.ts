@@ -9,7 +9,6 @@ export default class FooterComponent extends AppComponent{
 
     public render(): TemplateResult {
         return html`
-        <footer id="site-footer" class="site-footer" role="contentinfo">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
@@ -58,7 +57,6 @@ export default class FooterComponent extends AppComponent{
                     </div>
                 </div>
             </div>
-        </footer>
         `;
     }
 }
