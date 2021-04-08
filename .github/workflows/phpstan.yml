@@ -11,5 +11,4 @@ jobs:
     - uses: php-actions/composer@v5 # or alternative dependency management
     - uses: php-actions/phpstan@v2
       with:
-        configuration: ./phpstan.neon
         php_version: 8.0
