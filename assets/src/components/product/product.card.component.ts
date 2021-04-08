@@ -4,10 +4,10 @@ import {filterPrice} from "App/shared/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html , TemplateResult} from 'lit-element';
 
-export default class ProductComponent extends AppComponent {
+export default class ProductCardComponent extends AppComponent {
 
     public static getComponentName(): string {
-        return 'app-product';
+        return 'app-card-product';
     }
 
     @property({type: Object})

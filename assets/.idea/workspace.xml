@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/home/home.view.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/dev/components/ui.view.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.application.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.application.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.components.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom.element.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom.element.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/partner/partner.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partner/partner.view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.loop.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/product/product.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/product/product.view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev.components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev.menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/page/components.templates/components.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/page/partner.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/page/product.page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../base.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../base.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../theme/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../theme/template-parts/single.php" beforeDir="false" afterPath="$PROJECT_DIR$/../theme/template-parts/single.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +63,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TypeScript" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/dev/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -68,13 +81,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/dev/components" />
       <recent name="$PROJECT_DIR$/src/components/shared" />
       <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/styles/components" />
       <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/core/client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/modules/dev/components" />
       <recent name="$PROJECT_DIR$/src/modules/ui/components" />
       <recent name="$PROJECT_DIR$/src/core/client" />
       <recent name="$PROJECT_DIR$/src/components/shared/header" />
@@ -125,6 +139,7 @@
       <workItem from="1614075774521" duration="68000" />
       <workItem from="1614075859592" duration="24000" />
       <workItem from="1617297757804" duration="10079000" />
+      <workItem from="1617908057276" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>

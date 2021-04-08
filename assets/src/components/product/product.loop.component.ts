@@ -34,7 +34,7 @@ export default class ProductLoopComponent extends AppComponent {
 
         return html`
             <div class="d-flex product-loop d-grid row row-cols-3">
-                ${this.products.map(product => html`<app-product .product="${product}"></app-product>`)}
+                ${this.products.map(product => html`<app-card-product .product="${product}"></app-card-product>`)}
             </div>
         `;
     }

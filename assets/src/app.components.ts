@@ -1,5 +1,5 @@
 import IconComponent from "App/components/shared/icon.component";
-import ProductComponent from "App/components/product/product.component";
+import ProductCardComponent from "App/components/product/product.card.component";
 import ProductLoopComponent from "App/components/product/product.loop.component";
 import ButtonComponent from "App/components/shared/button.component";
 import HeaderComponent from "App/components/shared/header/header.component";
@@ -14,6 +14,7 @@ import WrapperComponent from "App/components/shared/wrapper.component";
 import PartnerViewComponent from "App/components/partner/partner.view.component";
 import devComponent from "App/modules/dev/components";
 import FooterComponent from "App/components/shared/footer.component";
+import HomeViewComponent from "App/components/home/home.view.component";
 
 const components = [
     WrapperComponent,
@@ -26,11 +27,12 @@ const components = [
     IconComponent,
     ButtonComponent,
     PartnerHeaderComponent,
-    ProductComponent,
+    ProductCardComponent,
     HeaderComponent,
     HeaderCartComponent,
     PartnerViewComponent,
-    FooterComponent
+    FooterComponent,
+    HomeViewComponent
 ];
 
 export default [...components, ...devComponent];

@@ -5,7 +5,7 @@ import {ModalService} from "App/core/modal.service";
 import {ComponentService} from "App/core/component.service";
 import {events, EventService} from "App/core/event.service";
 import {property} from "lit-element/lib/decorators";
-import DevComponent from "App/modules/dev/components/dev/dev.components";
+import DevComponent from "App/modules/dev/components/dev.components";
 
 export default class DevMenuComponent extends AppComponent {
 
@@ -54,6 +54,7 @@ export default class DevMenuComponent extends AppComponent {
             <div class="app-wrapper">
                 <b>Les dev pages</b>
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#">Composants</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#home">Page d'accueil</a></li>
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#produit">Produit</a></li>
                 <b>Les composants</b>

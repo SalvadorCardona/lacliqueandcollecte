@@ -16,4 +16,5 @@ export abstract class AppComponent extends LitElement {
     protected createRenderRoot(): this {
         return this;
     }
+
 }
