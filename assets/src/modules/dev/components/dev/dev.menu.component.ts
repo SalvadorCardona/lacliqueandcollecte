@@ -5,9 +5,9 @@ import {ModalService} from "App/core/modal.service";
 import {ComponentService} from "App/core/component.service";
 import {events, EventService} from "App/core/event.service";
 import {property} from "lit-element/lib/decorators";
-import './style.css';
+import DevComponent from "App/modules/dev/components/dev/dev.components";
 
-export default class DevApplicationComponent extends AppComponent {
+export default class DevMenuComponent extends AppComponent {
 
     public static getComponentName(): string {
         return 'app-dev-application';
@@ -26,31 +26,42 @@ export default class DevApplicationComponent extends AppComponent {
     private events: Array<events>;
 
     private openModal(): void {
-        return;
+        const devComponent: DevComponent = document.querySelector(getComponentSelector(DevComponent));
+        devComponent.redirect();
     }
 
     public connectedCallback(): void {
-        this.eventService.addSubscriber(events.EVENT_DISPATCHED, payload => {
+        this.eventService.addSubscriber(events.EVENT_DISPATCHED, () => {
             this.events = this.eventService.eventLoaded;
         })
+
+        this.classList.add(
+            'position-fixed',
+            'start-0',
+            'top-0',
+            'min-vh-100',
+        );
+
         super.connectedCallback();
+    }
+
+    protected firstUpdated(): void {
+        this.toggleShow();
     }
 
     public render(): TemplateResult {
         return html`
-            <style>
-            </style>
-            <app-wrapper>
-                <h2>Les dev pages</h2>
-                <li><a class="dropdown-item" href="#">Composants</a></li>
-                <li><a class="dropdown-item" href="#partner">Partenaire</a></li>
-                <li><a class="dropdown-item" href="#produit">Produit</a></li>
-                <h2>Les composants</h2>
-                ${this.serviceList()}
-                <h2>Les events</h2>
-                ${this.eventList()}
-            </app-wrapper>
-            <app-button @click="${this.openModal}" icon="person" type="success"></app-button>
+            <div class="app-wrapper">
+                <b>Les dev pages</b>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#">Composants</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#produit">Produit</a></li>
+                <b>Les composants</b>
+                    ${this.serviceList()}
+                <b>Les events</b>
+                    ${this.eventList()}
+            </div>
+            <app-button class="ms-2 position-fixed start-0 bottom-0" @click="${this.toggleShow}" icon="biGearWide" type="success"></app-button>
         `;
     }
 
@@ -80,5 +91,10 @@ export default class DevApplicationComponent extends AppComponent {
                 })}
             </ul>
         `;
+    }
+
+    private toggleShow(): void {
+        const component: HTMLElement = this.querySelector('.app-wrapper');
+        component.hidden = !component.hidden;
     }
 }

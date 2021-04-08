@@ -17,23 +17,13 @@ export default class DevComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <app-dev-application></app-dev-application>
-            <div class="dropdown">
-                <button class="btn btn-primary" >
-                    Liste des pages templates
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a @click="${this.redirect}" class="dropdown-item" href="#">Composants</a></li>
-                    <li><a @click="${this.redirect}" class="dropdown-item" href="#partner">Partenaire</a></li>
-                    <li><a @click="${this.redirect}" class="dropdown-item" href="#produit">Produit</a></li>
-                </ul>
-            </div>
-        <main id="main" class="container">
-            ${unsafeHTML(this.router())}
-        </main>
+            <main id="main" class="container">
+                ${unsafeHTML(this.router())}
+            </main>
         `;
     }
 
-    private redirect(): void {
+    public redirect(): void {
         setTimeout(() => this.router(), 100);
     }
 

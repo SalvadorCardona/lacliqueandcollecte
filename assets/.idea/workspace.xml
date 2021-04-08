@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/dev/components/dev/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.env.dev" beforeDir="false" afterPath="$PROJECT_DIR$/../.env.dev" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/shared/modal.cart.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/component.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/component.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/event.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/kernel.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/kernel.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.application.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.application.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/configuration.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config/wordpress-setup.php" beforeDir="false" afterPath="$PROJECT_DIR$/../config/wordpress-setup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Action/LoadApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Action/LoadApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Register/ApiLoaderRegister.php" beforeDir="false" afterPath="$PROJECT_DIR$/../src/Register/ApiLoaderRegister.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.components.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/dev/components/dev/dev.components.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/dev/components/dev/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +124,7 @@
       <workItem from="1612867007209" duration="508000" />
       <workItem from="1614075774521" duration="68000" />
       <workItem from="1614075859592" duration="24000" />
-      <workItem from="1617297757804" duration="6367000" />
+      <workItem from="1617297757804" duration="10079000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
@@ -207,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611669830212</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Save Before Update">
+      <created>1617305610145</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617305610145</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +231,8 @@
     <MESSAGE value="The Eslint is Ready" />
     <MESSAGE value="Update Library" />
     <MESSAGE value="New Rules Eslint" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Rules Eslint" />
+    <MESSAGE value="Save Before Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save Before Update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

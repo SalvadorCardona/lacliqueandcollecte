@@ -23,7 +23,7 @@ export class EventService {
         }
     }
 
-    public get eventLoaded() {
+    public get eventLoaded(): Array<events> {
         return this._eventLoaded;
     }
 

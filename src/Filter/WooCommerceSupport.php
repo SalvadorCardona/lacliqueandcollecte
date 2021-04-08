@@ -4,7 +4,7 @@ namespace App\Filter;
 
 use App\FilterInterface;
 
-class WooCommerceSupport implements FilterInterface
+class WooCommerceSupport
 {
 
     public function __invoke(): mixed
