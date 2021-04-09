@@ -14,7 +14,7 @@ while (have_posts()) :
     the_post();
     ?>
 
-<div class="page-content">
+<div class="page-content container">
     <?php the_content(); ?>
     <div class="post-tags">
         <?php the_tags('<span class="tag-links">' . __('Tagged ', 'hello-elementor'), null, '</span>'); ?>

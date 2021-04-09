@@ -1,7 +1,4 @@
 import {AppComponent} from "App/components/custom.element";
-import componentView from "App/modules/dev/components/dev/page/components.templates/components.page";
-import partnerViews from "App/modules/dev/components/dev/page/partner.page";
-import productViews from "App/modules/dev/components/dev/page/product.page";
 import {html, property , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
@@ -17,7 +14,7 @@ export default class DevComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <app-dev-application></app-dev-application>
-            <main id="main" class="container">
+            <main id="main">
                 ${unsafeHTML(this.router())}
             </main>
         `;
@@ -31,12 +28,14 @@ export default class DevComponent extends AppComponent {
         this.route = window.location.hash;
 
         switch (this.route) {
+            case '#home':
+                return '<app-home-view></app-home-view>';
             case '#partner':
-                return partnerViews;
+                return '<app-partner-view></app-partner-view>';
             case '#produit':
-                return productViews;
+                return '<app-product-view productId="139"></app-product-view>';
             default:
-                return componentView;
+                return '<app-ui-view></app-ui-view>';
         }
     }
 }

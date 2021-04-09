@@ -60,35 +60,37 @@ export default class ProductViewComponent extends AppComponent {
     public render(): TemplateResult {
         if (!this.product) return html``;
         return html`
-            <div class="type-product">
-                <div class="row">
-                    <section class="col-md-6">
-                        <img class="img-fluid" alt="${this.product.images[0].alt}" src="${this.product.images[0].src}"/>
-                    </section>
-                    <section class="col-md-6">
-                        <h1 class="mt-2 text-primary">${this.product.name}</h1>
-                        <hr>
-                        <h2 class="fs-4">Description :</h2>
-                        <span>${unsafeHTML(this.product.description)}</span>
-                        <hr>
-                        <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>
-                        <hr>
-                        <div class="row add-to-basket mt-1">
-                            <div class="col-md-3">
-                                <select id="product-qty" class="form-control">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
+            <div class="container">
+                <div class="type-product">
+                    <div class="row">
+                        <section class="col-md-6">
+                            <img class="img-fluid" alt="${this.product.images[0].alt}" src="${this.product.images[0].src}"/>
+                        </section>
+                        <section class="col-md-6">
+                            <h1 class="mt-2 text-primary">${this.product.name}</h1>
+                            <hr>
+                            <h2 class="fs-4">Description :</h2>
+                            <span>${unsafeHTML(this.product.description)}</span>
+                            <hr>
+                            <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>
+                            <hr>
+                            <div class="row add-to-basket mt-1">
+                                <div class="col-md-3">
+                                    <select id="product-qty" class="form-control">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <app-button @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
                             </div>
-                            <app-button @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
-                        </div>
-                    </section>
+                        </section>
+                    </div>
                 </div>
-            </div>      
+            </div>
         `;
     }
 }
