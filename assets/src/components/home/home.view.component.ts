@@ -10,6 +10,8 @@ export default class HomeViewComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div>Hello Home Page</div>
+            <app-home-header></app-home-header>
+            
         `;
     }
 }
