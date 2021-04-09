@@ -9,9 +9,11 @@ export default class HomeViewComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div>Hello Home Page</div>
             <app-home-header></app-home-header>
-            
+            <app-home-argumentative></app-home-argumentative>
+            <app-home-other-direction></app-home-other-direction>
+            <app-home-product-list></app-home-product-list>
+            <app-home-partner-list></app-home-partner-list>
         `;
     }
 }
