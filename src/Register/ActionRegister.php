@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\Register;
 
+use App\Action\ActionInterface;
+
 class ActionRegister
 {
     /**
      * @var ActionInterface[]
      */
     private array $actions;
-
 
     public function registerActions(): void
     {

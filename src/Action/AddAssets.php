@@ -22,7 +22,6 @@ class AddAssets implements ActionInterface
                 'app-js',
                 'middlewareConfiguration',
                 (array) MiddlewareConfigurationFactory::build()
-
             );
         }
     }
