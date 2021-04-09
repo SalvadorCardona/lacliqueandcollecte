@@ -11,6 +11,7 @@ class ActionRegister
      */
     private array $actions;
 
+
     public function registerActions(): void
     {
         foreach ($this->actions as $action) {
