@@ -48,3 +48,4 @@ assets/mix-manifest.json
 /web/app/languages/*.json
 
 .phpunit.result.cache
+assets/.idea/**
