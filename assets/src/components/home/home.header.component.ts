@@ -14,7 +14,7 @@ export default class HomeHeaderComponent extends AppComponent {
                 <div class="parent">
                     <div class="logo"></div>
                     <div class="title">
-                        <h1>Mon titre</h1>
+                        <h1 class="text-white">Mon titre</h1>
                     </div>
                     <div class="form-search"></div>
                 </div>
