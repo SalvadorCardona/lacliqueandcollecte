@@ -1,12 +1,12 @@
 #site-footer {
-    background: $color-1;
+    background: $primary;
     color: white;
-    border-top: solid 45px darken($color-1, 50%);
+    border-top: solid 45px darken($primary, 50%);
     .container {
-        background-color: darken($color-1, 5%);
+        background-color: darken($primary, 5%);
         pading: 15px;
         .col-3 {
-            border-right: solid 1px darken($color-1, 50%);
+            border-right: solid 1px darken($primary, 50%);
             &:last-child {
                 border: none;
             }

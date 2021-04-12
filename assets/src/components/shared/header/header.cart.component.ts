@@ -43,7 +43,6 @@ export default class HeaderCartComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <button class="action" @click="${this.openModal}"><app-icon icon="cart"></app-icon></button>
-            <p>${this.cart ? this.cart.itemsCount : null}</p>
         `;
     }
 }

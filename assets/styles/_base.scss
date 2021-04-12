@@ -35,7 +35,7 @@ app-icon {
     box-shadow: none;
   }
   .title {
-    color: $color-1;
+    color: $primary;
     font-weight: bold;
     border-bottom: 1px solid $gray-200;
     margin-bottom: 1em;
@@ -47,11 +47,11 @@ app-icon {
 a {
   background-color: transparent; //Remove the gray background on active links in IE 10.
   text-decoration: none;
-  color: $color-2;
+  color: $secondary;
 
   &:hover,
   &:active {
-    color: $color-1;
+    color: $primary;
   }
 
   &:not([href]):not([tabindex]) {

@@ -1,73 +1,56 @@
-.site-header {
-  border-bottom: 2px solid lighten($primary, 20%);
-  a, path {
-    color: white;
+app-header {
+  .site-logo {
+    .site-logo-title {
+      letter-spacing: -1px;
+      text-shadow: 0 0 1px darken($primary, 30%);
+    }
   }
-  .site-branding {
-    height: $header-size;
-    .site-logo {
-      .custom-logo-link {
-        .custom-logo {
-          background: white;
-          color: white;
-          width: 35px;
-          height: 35px;
-          padding: 5px;
-          border-radius: 10px;
-        }
+  .search-bar {
+    input {
+      border-radius: 15px;
+      border: 1px solid $neutral-3;
+      width: 350px;
+      height: 30px;
+      padding: 0 20px;
+    }
+    input::placeholder {
+      color: $neutral-3;
+    }
+    app-icon {
+      top: 50%;
+      margin-top: -12px;
+      right: 18px;
+      svg {
+        width: 16px;
+        height: auto;
       }
-      .site-logo-title {
-        text-transform: uppercase;
-        letter-spacing: -1.5px;
-        text-shadow: 0 0 1px darken($primary, 30%);
+      path {
+        color: $neutral-3;
       }
     }
-    .search-bar {
-      input {
-        border-radius: 40px;
-        border: 3px solid lighten($primary, 10%);
-        background-color: lighten($primary, 50%);
-        width: 350px;
-        height: 40px;
-        padding: 0 20px;
+  }
+  .site-navigation {
+    a {
+      color: $neutral-4;
+    }
+    ul {
+      list-style: none;
+      color: lighten($primary, 10%);
+      li {
+        margin-right: 15px;
       }
-      app-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -12px;
-        right: 18px;
-        svg {
-          width: 16px;
-          height: auto;
-        }
+    }
+    app-icon {
+      margin-left: 15px;
+      width: 20px;
+      height: 20px;
+      padding: 8PX;
+      svg {
         path {
-          color: lighten($primary, 10%);
+          color: $primary;
         }
-      }
-    }
-    .site-navigation {
-      ul {
-        list-style: none;
-        color: lighten($primary, 10%);
-        li {
-          margin-right: 15px;
-        }
-      }
-      app-icon {
-        margin-left: 15px;
-        width: 20px;
-        height: 20px;
-        padding: 8PX;
-        background: lighten($primary, 50%);
-        border-radius: 50%;
-        border: 3px solid lighten($primary, 10%);
-        svg {
-          path {
-            color: $primary;
-          }
-          width: 15px;
-          height: 15px;
-        }
+        width: 15px;
+        height: 15px;
       }
     }
   }

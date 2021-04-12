@@ -19,6 +19,7 @@ export default class HeaderComponent extends AppComponent {
 
     public connectedCallback(): void {
         this.menus = this.configurationService.configuration.mainMenu;
+        this.classList.add('bg-white', 'd-block', 'mb-3');
         super.connectedCallback();
     }
 
@@ -34,27 +35,43 @@ export default class HeaderComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-        <div class="container site-branding d-flex justify-content-between align-items-center py-2">
-            <span class="site-logo">
-                <a href="/" class="custom-logo-link me-3" rel="home">
-                    <img src="${this.configurationService.configuration.logoUrl}" class="custom-logo" alt="La clique &amp; Collecte">
-                </a>            
-                <a class="site-logo-title" href="/" title="Home" rel="home">La Clique &amp; Collecte</a>
-            </span>
-            <div class="search-bar d-inline-block position-relative">
-                <input type="text" class="form-control" placeholder="Trouver votre produit....">
-                <app-icon icon="search"></app-icon>
+        <div class="site-branding
+            container
+            py-2
+            d-flex
+            px-4">
+            <div class="col-6
+                d-flex
+                justify-content-between
+                align-items-center
+            ">
+                <span class="site-logo">
+                    <a class="site-logo-title
+                        text-uppercase
+                        fw-bolder
+                        text-primary" href="/" title="Home" rel="home">ZARTISANA</a>
+                </span>
+                <div class="search-bar
+                d-inline-block
+                position-relative">
+                    <input type="text" class="form-control" placeholder="Trouver votre produit....">
+                    <app-icon class="position-absolute" icon="search"></app-icon>
+                </div>
             </div>
-            <nav class="site-navigation d-flex align-items-center" role="navigation">
-        
-                <ul id="menus-main-menus" class="menus m-0">
-                    ${this.renderMenu()}
-                </ul>
-            
-                <a href="/mon-compte"><app-icon icon="person"></app-icon></a>
-                
-                <app-header-cart></app-header-cart>
-            </nav>
+            <div class="col-6 d-flex align-items-center justify-content-end">
+                <nav class="site-navigation 
+                d-flex
+                justify-content-end
+                align-items-center" role="navigation">
+                    <ul id="menus-main-menus" class="menus m-0">
+                        ${this.renderMenu()}
+                    </ul>
+
+                    <a href="/mon-compte"><app-icon icon="person"></app-icon></a>
+
+                    <app-header-cart></app-header-cart>
+                </nav>
+            </div>
         </div>
         `;
     }

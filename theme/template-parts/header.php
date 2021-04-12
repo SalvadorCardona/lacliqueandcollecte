@@ -12,6 +12,6 @@ if (! defined('ABSPATH')) {
 
 ?>
 
-<header class="site-header gradient-primary" role="banner">
+<header role="banner">
     <app-header></app-header>
 </header>
