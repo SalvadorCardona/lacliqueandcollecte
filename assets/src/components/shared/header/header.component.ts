@@ -19,7 +19,7 @@ export default class HeaderComponent extends AppComponent {
 
     public connectedCallback(): void {
         this.menus = this.configurationService.configuration.mainMenu;
-        this.classList.add('bg-white', 'd-block', 'mb-3');
+        this.classList.add('bg-white', 'd-block');
         super.connectedCallback();
     }
 
@@ -58,7 +58,10 @@ export default class HeaderComponent extends AppComponent {
                     <app-icon class="position-absolute" icon="search"></app-icon>
                 </div>
             </div>
-            <div class="col-6 d-flex align-items-center justify-content-end">
+            <div class="col-6
+                d-flex
+                align-items-center
+                justify-content-end">
                 <nav class="site-navigation 
                 d-flex
                 justify-content-end

@@ -1,13 +1,17 @@
+header {
+  z-index: 99;
+}
+
 app-header {
   .site-logo {
     .site-logo-title {
-      letter-spacing: -1px;
-      text-shadow: 0 0 1px darken($primary, 30%);
+      letter-spacing: -1.5px;
+      font-size: 20px;
     }
   }
   .search-bar {
     input {
-      border-radius: 15px;
+      border-radius: 5px;
       border: 1px solid $neutral-3;
       width: 350px;
       height: 30px;
@@ -42,15 +46,26 @@ app-header {
     }
     app-icon {
       margin-left: 15px;
-      width: 20px;
-      height: 20px;
-      padding: 8PX;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
       svg {
+        width: 20px;
+        height: 20px;
         path {
           color: $primary;
         }
-        width: 15px;
-        height: 15px;
+      }
+    }
+    app-header-cart {
+      cursor: pointer;
+      .counter {
+        border-radius: 50%;
+        padding: 1px;
+        bottom: -5px;
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
       }
     }
   }

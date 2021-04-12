@@ -1,5 +1,6 @@
 import {AppComponent} from 'App/components/custom.element';
 import {html, TemplateResult} from "lit-element";
+import image from "Media/pattern-footer.svg";
 
 export default class FooterComponent extends AppComponent{
 
@@ -7,9 +8,14 @@ export default class FooterComponent extends AppComponent{
         return 'app-footer';
     }
 
+    public connectedCallback() {
+        super.connectedCallback();
+        this.style.backgroundImage = `url(${image})`;
+        this.classList.add('container-fluid', 'd-block', 'p-5');
+    }
+
     public render(): TemplateResult {
         return html`
-            <div class="container">
                 <div class="row">
                     <div class="col-3">
                         <ul>
@@ -56,7 +62,6 @@ export default class FooterComponent extends AppComponent{
                         </ul>
                     </div>
                 </div>
-            </div>
         `;
     }
 }

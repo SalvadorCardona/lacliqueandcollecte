@@ -12,7 +12,8 @@
     "importHelpers": true,
     "target": "ES2018",
     "paths": {
-      "App/*": ["./src/*"]
+      "App/*": ["./src/*"],
+      "Media/*": ["./media/*"]
     },
     "lib": [
       "es2018",
