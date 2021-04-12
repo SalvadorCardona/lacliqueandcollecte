@@ -37,13 +37,12 @@ export default class HeaderComponent extends AppComponent {
         return html`
         <div class="site-branding
             container
-            py-2
+            py-3
             d-flex
             px-4">
             <div class="col-6
                 d-flex
                 justify-content-between
-                align-items-center
             ">
                 <span class="site-logo">
                     <a class="site-logo-title
@@ -52,8 +51,8 @@ export default class HeaderComponent extends AppComponent {
                         text-primary" href="/" title="Home" rel="home">ZARTISANA</a>
                 </span>
                 <div class="search-bar
-                d-inline-block
-                position-relative">
+                    d-inline-block
+                    position-relative">
                     <input type="text" class="form-control" placeholder="Trouver votre produit....">
                     <app-icon class="position-absolute" icon="search"></app-icon>
                 </div>
