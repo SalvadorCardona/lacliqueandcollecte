@@ -2,4 +2,19 @@ app-home-header {
   .container-fluid {
     background-size: cover;
   }
+  h4, h1{
+    text-align: center;
+    text-shadow: 1px 1px black;
+  }
+
+  img {
+    display : block;
+    width : auto;
+    margin : auto;
+  }
+
+  .parent {
+    z-index: 1;
+  }
+
 }

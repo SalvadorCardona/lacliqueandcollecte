@@ -5,8 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85a2801d-7703-4e02-b35b-96aac1f048ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/views/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.argumentative.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.argumentative.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.other.direction.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.other.direction.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.partner.list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.partner.list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.product.list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.product.list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/home.view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/home.view.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home-argumentative.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home-argumentative.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home-other-direction.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home-other-direction.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home-partner-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home-partner-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home-product-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home-product-list.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/home/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/home/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/views/partner.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/views/partner.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +150,8 @@
       <workItem from="1614075859592" duration="24000" />
       <workItem from="1617297757804" duration="10079000" />
       <workItem from="1617908057276" duration="1830000" />
-      <workItem from="1617953875317" duration="8391000" />
+      <workItem from="1617953875317" duration="17374000" />
+      <workItem from="1618209687174" duration="1605000" />
     </task>
     <task id="LOCAL-00001" summary="Beautiful partner page">
       <created>1608654891120</created>
