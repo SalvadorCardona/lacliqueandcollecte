@@ -10,7 +10,7 @@ install-asset:
 	cd assets && yarn install && yarn build
 
 install-php:
-	php -r "copy('https://getcomposer.org/installer', 'composer.phar');"
+	wget https://getcomposer.org/download/2.0.12/composer.phar
 	cp .env.dev .env
 	php composer.phar install
 	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
