@@ -12,6 +12,10 @@ web/*.js
 web/*.map
 web/*.html
 web/*.css
+web/*.svg
+web/*.jpg
+web/*.png
+
 web/parcel-manifest.json
 composer.phar
 
@@ -48,6 +52,6 @@ assets/mix-manifest.json
 /web/app/languages/*.json
 
 .phpunit.result.cache
-assets/.idea/**
+assets/.idea
 
 *.idea
