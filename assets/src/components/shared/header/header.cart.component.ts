@@ -27,7 +27,7 @@ export default class HeaderCartComponent extends AppComponent {
 
     public firstUpdated(): void {
         this.classList.add('position-relative');
-        this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => this.cartUpdated())
+        this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => this.cartUpdated());
     }
 
     private openModal(): void {
@@ -42,8 +42,18 @@ export default class HeaderCartComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <button class="action" @click="${this.openModal}"><app-icon icon="cart"></app-icon></button>
-            <p>${this.cart ? this.cart.itemsCount : null}</p>
+            <span @click="${this.openModal}">
+                <button class="action"><app-icon icon="cart"></app-icon></button>
+                <div class="counter
+                    text-white
+                    bg-primary
+                    position-absolute
+                    text-center
+                    end-0
+                    ">
+                    ${this.cart ? this.cart.itemsCount : null}
+                </div>
+            </span>
         `;
     }
 }

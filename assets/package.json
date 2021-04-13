@@ -57,6 +57,7 @@
     "caniuse-lite": "1.0.30001129"
   },
   "alias": {
-    "App": "./src"
+    "App": "./src",
+    "Media": "./media"
   }
 }

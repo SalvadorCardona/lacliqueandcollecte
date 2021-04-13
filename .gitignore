@@ -49,3 +49,5 @@ assets/mix-manifest.json
 
 .phpunit.result.cache
 assets/.idea/**
+
+*.idea

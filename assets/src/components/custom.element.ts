@@ -13,6 +13,17 @@ export abstract class AppComponent extends LitElement {
         throw new Error("Method not implemented.");
     }
 
+    protected initialize() {
+        super.initialize();
+        // @ts-ignore
+        (this.constructor as typeof LitElement)._getUniqueStyles();
+        (this as {
+            renderRoot: Element|DocumentFragment;
+        }).renderRoot = this.createRenderRoot();
+
+        this["_needsShimAdoptedStyleSheets"] = true;
+    }
+
     protected createRenderRoot(): this {
         return this;
     }

@@ -1,15 +1,35 @@
-#site-footer {
-    background: $color-1;
-    color: white;
-    border-top: solid 45px darken($color-1, 50%);
-    .container {
-        background-color: darken($color-1, 5%);
-        pading: 15px;
-        .col-3 {
-            border-right: solid 1px darken($color-1, 50%);
-            &:last-child {
-                border: none;
-            }
+app-footer {
+    background-color: $secondary-darker-1;
+    background-size: 750px;
+    z-index: -2;
+    &::after {
+        content: "";
+        background-size: 800px;
+        opacity: 0.4;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    > * {
+        color: white;
+        text-shadow: 0 0 2px black;
+    }
+    path {
+        fill: white;
+    }
+    .branding-space {
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    li {
+        font-weight: bold;
+        a {
+            color: white;
         }
     }
 }

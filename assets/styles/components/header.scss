@@ -1,73 +1,70 @@
-.site-header {
-  border-bottom: 2px solid lighten($primary, 20%);
-  a, path {
-    color: white;
+header {
+  z-index: 99;
+}
+
+app-header {
+  .site-logo {
+    .site-logo-title {
+      letter-spacing: -1.5px;
+      font-size: 20px;
+    }
   }
-  .site-branding {
-    height: $header-size;
-    .site-logo {
-      .custom-logo-link {
-        .custom-logo {
-          background: white;
-          color: white;
-          width: 35px;
-          height: 35px;
-          padding: 5px;
-          border-radius: 10px;
-        }
+  .search-bar {
+    input {
+      border-radius: 5px;
+      border: 1px solid $neutral-3;
+      width: 350px;
+      height: 30px;
+      padding: 0 20px;
+    }
+    input::placeholder {
+      color: $neutral-3;
+    }
+    app-icon {
+      top: 50%;
+      margin-top: -12px;
+      right: 18px;
+      svg {
+        width: 16px;
+        height: auto;
       }
-      .site-logo-title {
-        text-transform: uppercase;
-        letter-spacing: -1.5px;
-        text-shadow: 0 0 1px darken($primary, 30%);
+      path {
+        color: $neutral-3;
       }
     }
-    .search-bar {
-      input {
-        border-radius: 40px;
-        border: 3px solid lighten($primary, 10%);
-        background-color: lighten($primary, 50%);
-        width: 350px;
-        height: 40px;
-        padding: 0 20px;
-      }
-      app-icon {
-        position: absolute;
-        top: 50%;
-        margin-top: -12px;
-        right: 18px;
-        svg {
-          width: 16px;
-          height: auto;
-        }
-        path {
-          color: lighten($primary, 10%);
-        }
+  }
+  .site-navigation {
+    a {
+      color: $neutral-4;
+    }
+    ul {
+      color: lighten($primary, 10%);
+      li {
+        margin-right: 15px;
       }
     }
-    .site-navigation {
-      ul {
-        list-style: none;
-        color: lighten($primary, 10%);
-        li {
-          margin-right: 15px;
-        }
-      }
-      app-icon {
-        margin-left: 15px;
+    app-icon {
+      margin-left: 15px;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      svg {
         width: 20px;
         height: 20px;
-        padding: 8PX;
-        background: lighten($primary, 50%);
-        border-radius: 50%;
-        border: 3px solid lighten($primary, 10%);
-        svg {
-          path {
-            color: $primary;
-          }
-          width: 15px;
-          height: 15px;
+        path {
+          color: $primary;
         }
+      }
+    }
+    app-header-cart {
+      cursor: pointer;
+      .counter {
+        border-radius: 50%;
+        padding: 1px;
+        bottom: -5px;
+        font-size: 12px;
+        width: 18px;
+        height: 18px;
       }
     }
   }

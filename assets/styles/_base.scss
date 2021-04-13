@@ -35,7 +35,7 @@ app-icon {
     box-shadow: none;
   }
   .title {
-    color: $color-1;
+    color: $primary;
     font-weight: bold;
     border-bottom: 1px solid $gray-200;
     margin-bottom: 1em;
@@ -44,14 +44,18 @@ app-icon {
   }
 }
 
+li {
+  list-style: none !important;
+}
+
 a {
-  background-color: transparent; //Remove the gray background on active links in IE 10.
+  background-color: transparent;
   text-decoration: none;
-  color: $color-2;
+  color: $secondary;
 
   &:hover,
   &:active {
-    color: $color-1;
+    color: $primary;
   }
 
   &:not([href]):not([tabindex]) {
@@ -73,28 +77,32 @@ a {
 .gradient {
   &-primary {
     @include app-gradient($primary, $success);
-}
+  }
   &-secondary {
     @include app-gradient($secondary, $secondary);
-}
+  }
   &-success {
     @include app-gradient($success, $secondary);
-}
+  }
   &-warning {
     @include app-gradient($warning, $secondary);
-}
+  }
   &-danger {
     @include app-gradient($danger, $secondary);
-}
+  }
   &-dark {
     @include app-gradient($dark, $secondary);
-}
+  }
   &-info {
     @include app-gradient($info, $secondary);
-}
+  }
 }
 
 .fw-bolder {
   font-weight: 600 !important;
   font-style: normal;
+}
+
+.border-radius {
+  border-radius: $border-radius;
 }
