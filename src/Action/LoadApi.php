@@ -6,8 +6,9 @@ use App\Manager\ApiLoaderManager;
 
 class LoadApi implements ActionInterface
 {
-
-    public function __construct(private ApiLoaderManager $apiLoaderRegister) {}
+    public function __construct(private ApiLoaderManager $apiLoaderRegister)
+    {
+    }
 
     public function __invoke(): void
     {

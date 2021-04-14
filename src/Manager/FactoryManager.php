@@ -9,7 +9,9 @@ use Psr\Container\ContainerInterface;
 
 class FactoryManager
 {
-    public function __construct(private ContainerInterface $container) {}
+    public function __construct(private ContainerInterface $container)
+    {
+    }
 
     public function build(): void
     {

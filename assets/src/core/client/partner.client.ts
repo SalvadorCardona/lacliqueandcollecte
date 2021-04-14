@@ -1,9 +1,11 @@
 import {environment} from "App/environement/environement";
 import Abstract from "App/core/client/abstract.client";
+import {PartnerType} from "App/types/partner.type";
 
-export default class ProductClient extends Abstract {
-    public getPartnerById(query: QuerySearch = {}): Promise<ProductType[]> {
-        return this.clientHttp.send('get', environment.apiEndpoints.getProducts, {params: query})
-          .then(response => response.data as ProductType[]);
+export default class PartnerClient extends Abstract {
+    public getPartnerById(idPartner: number): Promise<PartnerType> {
+        const partnerEndPoint = environment.apiEndpoints.partner.byId.replace('$id', idPartner.toString());
+        return this.clientHttp.send('get', partnerEndPoint)
+          .then(response => response.data as PartnerType);
     }
 }

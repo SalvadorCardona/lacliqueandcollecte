@@ -5,14 +5,6 @@ declare(strict_types=1);
 namespace App\Manager;
 
 // TODO: I need Unit test
-use App\Action\AddAssets;
-use App\Action\WoocommerceSupport;
-use App\Action\LoadApi;
-use App\Action\AddPostTypePartner;
-use App\Action\WordpressThemeSupport;
-use App\Api\GetConfiguration;
-use App\Api\PostByIdApi;
-use App\Api\ProductsByAuthorId;
 use Psr\Container\ContainerInterface;
 
 class MasterManager extends AbstractManager

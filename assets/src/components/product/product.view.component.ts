@@ -58,6 +58,7 @@ export default class ProductViewComponent extends AppComponent {
 
     public render(): TemplateResult {
         if (!this.product) return html``;
+
         return html`
             <div class="container">
                 <div class="type-product">

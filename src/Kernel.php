@@ -9,8 +9,7 @@ use App\Action\WoocommerceSupport;
 use App\Action\LoadApi;
 use App\Action\AddPostTypePartner;
 use App\Action\WordpressThemeSupport;
-use App\Api\GetConfiguration;
-use App\Api\GetPartnerById;
+use App\Partner\GetPartnerById;
 use App\Api\PostByIdApi;
 use App\Api\ProductsByAuthorId;
 use App\Manager\ActionManager;
@@ -91,7 +90,6 @@ class Kernel
             FilterManager::class,
             PostByIdApi::class,
             ProductsByAuthorId::class,
-            GetConfiguration::class,
             WordpressThemeSupport::class,
             AddAssets::class,
             AddPostTypePartner::class,

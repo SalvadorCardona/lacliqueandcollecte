@@ -13,7 +13,7 @@ export abstract class AppComponent extends LitElement {
         throw new Error("Method not implemented.");
     }
 
-    protected initialize() {
+    protected initialize(): void {
         super.initialize();
         // @ts-ignore
         (this.constructor as typeof LitElement)._getUniqueStyles();

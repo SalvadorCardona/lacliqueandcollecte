@@ -2,15 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Api;
+namespace App\Partner;
 
-use App\Action\AddPostTypePartner;
-use App\Formatter\PartnerFormatter;
+use App\Api\AbstractApiController;
 use WP_Error;
 
 class GetPartnerById extends AbstractApiController
 {
-
     public function __construct(private PartnerFormatter $formatter)
     {
     }
@@ -20,7 +18,7 @@ class GetPartnerById extends AbstractApiController
         $partnerId = $this->request->get_param('id');
         $partner = get_post($partnerId);
 
-        if (!$partner || AddPostTypePartner::POST_TYPE_NAME !== $partner->post_type) {
+        if (!$partner || Partner::POST_TYPE_NAME !== $partner->post_type) {
             return new WP_Error('awesome_no_author', 'Invalid author', array( 'status' => 401 ));
         }
 
