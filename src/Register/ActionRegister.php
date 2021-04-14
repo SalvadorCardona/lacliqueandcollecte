@@ -6,7 +6,7 @@ namespace App\Register;
 
 use App\Action\ActionInterface;
 
-class ActionRegister
+class ActionRegister extends AbstractManager
 {
     /**
      * @var ActionInterface[]

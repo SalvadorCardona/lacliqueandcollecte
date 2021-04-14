@@ -6,12 +6,8 @@ use App\Register\ApiLoaderRegister;
 
 class LoadApi implements ActionInterface
 {
-    private ApiLoaderRegister $apiLoaderRegister;
 
-    public function __construct(ApiLoaderRegister $apiLoaderRegister)
-    {
-        $this->apiLoaderRegister = $apiLoaderRegister;
-    }
+    public function __construct(private ApiLoaderRegister $apiLoaderRegister) {}
 
     public function __invoke(): void
     {

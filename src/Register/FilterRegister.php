@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Register;
 
-class FilterRegister
+class FilterRegister extends AbstractManager
 {
 
 }

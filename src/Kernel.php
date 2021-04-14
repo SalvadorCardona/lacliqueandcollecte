@@ -8,8 +8,6 @@ use App\Register\ActionRegister;
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
 use Exception;
-use Psr\Container\ContainerExceptionInterface;
-use Psr\Container\NotFoundExceptionInterface;
 use Slim\App;
 
 class Kernel

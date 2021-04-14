@@ -7,7 +7,7 @@ namespace App\Register;
 use App\Api\AbstractApiController;
 use Exception;
 
-class ApiLoaderRegister
+class ApiLoaderRegister extends AbstractManager
 {
     /**
      * @var AbstractApiController[]
