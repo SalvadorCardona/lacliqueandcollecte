@@ -4,7 +4,7 @@ namespace App\Action;
 
 use WP_User;
 
-class AddFilter implements ActionInterface
+class WoocommerceSupport implements ActionInterface
 {
 
     public function __invoke(): void

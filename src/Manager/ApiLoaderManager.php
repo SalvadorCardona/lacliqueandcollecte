@@ -2,32 +2,23 @@
 
 declare(strict_types=1);
 
-namespace App\Register;
+namespace App\Manager;
 
 use App\Api\AbstractApiController;
 use Exception;
 
-class ApiLoaderRegister extends AbstractManager
+// TODO: I need Unit test
+class ApiLoaderManager extends AbstractManager
 {
-    /**
-     * @var AbstractApiController[]
-     */
-    private array $apis;
-
     public function makeRegister(): void
     {
-        foreach ($this->apis as $api) {
+        foreach ($this->resources as $api) {
             try {
                 $this->addRouting($api);
             } catch (Exception $e) {
                 continue;
             }
         }
-    }
-
-    public function addApi(AbstractApiController $api): void
-    {
-        $this->apis [] = $api;
     }
 
     private function addRouting(AbstractApiController $api): void
@@ -43,5 +34,10 @@ class ApiLoaderRegister extends AbstractManager
                 'permission_callback' => fn() => $api->getProtectedCallBack(),
             ]
         );
+    }
+
+    public function isAvailableResource(mixed $entity): bool
+    {
+        return $entity instanceof AbstractApiController;
     }
 }

@@ -13,24 +13,44 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
-class PostTypePartner implements ActionInterface
+// TODO: I need to separated
+class AddPostTypePartner implements ActionInterface
 {
-    const POST_TYPE_NAME = 'partner';
-    const FIELD_LAST_NAME = 'lastName';
-    const FIELD_FIRST_NAME = 'firstName';
-    const FIELD_FACE_PICTURE = 'facePicture';
-    const FIELD_SHOP_NAME = 'shopName';
-    const FIELD_SHOP_DESCRIPTION = 'shopDescription';
-    const FIELD_SHOP_PICTURE = 'shopPicture';
-    const FIELD_EMAIL = 'email';
-    const FIELD_PHONE = 'phone';
-    const FIELD_CITY = 'city';
-    const FIELD_STREET = 'street';
-    const FIELD_CITY_CODE = 'cityCode';
-    const FIELD_FACEBOOK = 'facebook';
-    const FIELD_TWITTER = 'twitter';
-    const FIELD_LINKEDIN = 'linkedin';
-    const FIELD_TIKTOK = 'tiktok';
+    public const POST_TYPE_NAME = 'partner';
+    public const FIELD_LAST_NAME = 'lastName';
+    public const FIELD_FIRST_NAME = 'firstName';
+    public const FIELD_FACE_PICTURE = 'facePicture';
+    public const FIELD_SHOP_NAME = 'shopName';
+    public const FIELD_SHOP_DESCRIPTION = 'shopDescription';
+    public const FIELD_SHOP_PICTURE = 'shopPicture';
+    public const FIELD_EMAIL = 'email';
+    public const FIELD_PHONE = 'phone';
+    public const FIELD_CITY = 'city';
+    public const FIELD_STREET = 'street';
+    public const FIELD_CITY_CODE = 'cityCode';
+    public const FIELD_FACEBOOK = 'facebook';
+    public const FIELD_TWITTER = 'twitter';
+    public const FIELD_LINKEDIN = 'linkedin';
+    public const FIELD_TIKTOK = 'tiktok';
+
+    public const FIELD_LIST = [
+        self::POST_TYPE_NAME,
+        self::FIELD_LAST_NAME,
+        self::FIELD_FIRST_NAME,
+        self::FIELD_FACE_PICTURE,
+        self::FIELD_SHOP_NAME,
+        self::FIELD_SHOP_DESCRIPTION,
+        self::FIELD_SHOP_PICTURE,
+        self::FIELD_EMAIL,
+        self::FIELD_PHONE,
+        self::FIELD_CITY,
+        self::FIELD_STREET,
+        self::FIELD_CITY_CODE,
+        self::FIELD_FACEBOOK,
+        self::FIELD_TWITTER,
+        self::FIELD_LINKEDIN,
+        self::FIELD_TIKTOK,
+    ];
 
     public function __invoke(): void
     {

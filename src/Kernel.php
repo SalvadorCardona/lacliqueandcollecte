@@ -4,7 +4,20 @@ declare(strict_types=1);
 
 namespace App;
 
-use App\Register\ActionRegister;
+use App\Action\AddAssets;
+use App\Action\WoocommerceSupport;
+use App\Action\LoadApi;
+use App\Action\AddPostTypePartner;
+use App\Action\WordpressThemeSupport;
+use App\Api\GetConfiguration;
+use App\Api\GetPartnerById;
+use App\Api\PostByIdApi;
+use App\Api\ProductsByAuthorId;
+use App\Manager\ActionManager;
+use App\Manager\ApiLoaderManager;
+use App\Manager\FactoryManager;
+use App\Manager\FilterManager;
+use App\Manager\MasterManager;
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
 use Exception;
@@ -12,6 +25,8 @@ use Slim\App;
 
 class Kernel
 {
+    public const APP_NAME = 'zartizana';
+
     /**
      * @var App;
      */
@@ -48,11 +63,6 @@ class Kernel
         $containerBuilder = new ContainerBuilder();
         $containerBuilder->useAutowiring(true);
 
-        $containerBuilder->addDefinitions(require self::getDirConfig() . '/configuration.php');
-
-        $services = require self::getDirConfig() . '/services.php';
-        $services($containerBuilder);
-
         try {
             $container = $containerBuilder->build();
         } catch (Exception $e) {
@@ -64,15 +74,30 @@ class Kernel
 
         self::setApp($app);
 
-        try {
-            /** @var ActionRegister $actionRegister */
-            $actionRegister = self::getApp()
-                ->getContainer()
-                ->get(ActionRegister::class);
-        } catch (Exception $e) {
-            return;
-        }
+        /** @var MasterManager $masterManager */
+        $masterManager = self::getApp()
+            ->getContainer()
+            ->get(MasterManager::class);
 
-        $actionRegister->registerActions();
+        $masterManager->build(self::getResourcesAvailable());
+    }
+
+    public static function getResourcesAvailable(): array
+    {
+        return [
+            ActionManager::class,
+            ApiLoaderManager::class,
+            FactoryManager::class,
+            FilterManager::class,
+            PostByIdApi::class,
+            ProductsByAuthorId::class,
+            GetConfiguration::class,
+            WordpressThemeSupport::class,
+            AddAssets::class,
+            AddPostTypePartner::class,
+            WoocommerceSupport::class,
+            LoadApi::class,
+            GetPartnerById::class
+        ];
     }
 }

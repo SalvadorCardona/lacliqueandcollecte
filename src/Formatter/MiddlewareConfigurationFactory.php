@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Util;
+declare(strict_types=1);
+
+namespace App\Formatter;
 
 use App\Model\MiddlewareConfiguration;
 
 class MiddlewareConfigurationFactory
 {
-    public static function build(): MiddlewareConfiguration
+    public static function format(): MiddlewareConfiguration
     {
-        global $current_user;
         $logo = get_theme_mod('custom_logo');
         $image = wp_get_attachment_image_src($logo, 'full');
         $image_url = $image[0];

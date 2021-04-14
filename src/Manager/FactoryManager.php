@@ -1,7 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
-namespace App\Register;
+namespace App\Manager;
 
 // TODO: I need Unit test
 use Psr\Container\ContainerInterface;

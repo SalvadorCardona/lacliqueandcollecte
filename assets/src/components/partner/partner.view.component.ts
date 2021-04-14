@@ -7,8 +7,22 @@ export default class PartnerViewComponent extends AppComponent {
         return 'app-partner-view';
     }
 
+    @property({type: Number})
+    private partnerId: number;
+
     @property({type: String})
     private icon: string;
+
+    public firstUpdated(): void {
+        this.productClient.getProducts({include: [this.productId]})
+            .then(product => {
+                this.loaderService.hide();
+                this.product = product[0];
+            });
+
+        this.loaderService.show();
+    }
+
 
     public render(): TemplateResult {
         return html`
