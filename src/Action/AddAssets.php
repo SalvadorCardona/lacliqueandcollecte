@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace App\Action;
 
+use App\Formatter\MiddlewareConfigurationFactory;
 use App\Kernel;
-use App\Util\MiddlewareConfigurationFactory;
 
 class AddAssets implements ActionInterface
 {
-
     public function __invoke(): void
     {
         if (!is_admin()) {
@@ -21,7 +20,7 @@ class AddAssets implements ActionInterface
             wp_localize_script(
                 'app-js',
                 'middlewareConfiguration',
-                (array) MiddlewareConfigurationFactory::build()
+                (array) MiddlewareConfigurationFactory::format()
             );
         }
     }

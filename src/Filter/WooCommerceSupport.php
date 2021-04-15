@@ -2,9 +2,7 @@
 
 namespace App\Filter;
 
-use App\FilterInterface;
-
-class WooCommerceSupport
+class WooCommerceSupport extends AbstractFilter
 {
 
     public function __invoke(): mixed

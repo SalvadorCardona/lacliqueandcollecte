@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Action;
 
+use App\Partner\Partner;
+
 class WordpressThemeSupport implements ActionInterface
 {
     public function __invoke(): void
@@ -70,7 +72,7 @@ class WordpressThemeSupport implements ActionInterface
          * Add the categories woocommerce for partner
          */
         add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
-            return [PostTypePartner::POST_TYPE_NAME, ...$args];
+            return [Partner::POST_TYPE_NAME, ...$args];
         }, 1);
 
         add_filter('woocommerce_store_api_disable_nonce_check', fn() => true);

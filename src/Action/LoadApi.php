@@ -2,15 +2,12 @@
 
 namespace App\Action;
 
-use App\Register\ApiLoaderRegister;
+use App\Manager\ApiLoaderManager;
 
 class LoadApi implements ActionInterface
 {
-    private ApiLoaderRegister $apiLoaderRegister;
-
-    public function __construct(ApiLoaderRegister $apiLoaderRegister)
+    public function __construct(private ApiLoaderManager $apiLoaderRegister)
     {
-        $this->apiLoaderRegister = $apiLoaderRegister;
     }
 
     public function __invoke(): void

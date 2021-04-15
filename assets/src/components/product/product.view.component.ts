@@ -11,7 +11,6 @@ import {html , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/core/client/product.client";
 
-
 export default class ProductViewComponent extends AppComponent {
 
     public static getComponentName(): string {
@@ -59,6 +58,7 @@ export default class ProductViewComponent extends AppComponent {
 
     public render(): TemplateResult {
         if (!this.product) return html``;
+
         return html`
             <div class="container">
                 <div class="type-product">

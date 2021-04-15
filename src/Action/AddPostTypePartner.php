@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Action;
 
 use App\Helper\WordpressHelper as WH;
+use App\Partner\Partner;
 use WordPlate\Acf\Fields\Image;
 use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Email;
@@ -13,28 +14,12 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
-class PostTypePartner implements ActionInterface
+// TODO: I need to separated
+class AddPostTypePartner implements ActionInterface
 {
-    const POST_TYPE_NAME = 'partner';
-    const FIELD_LAST_NAME = 'lastName';
-    const FIELD_FIRST_NAME = 'firstName';
-    const FIELD_FACE_PICTURE = 'facePicture';
-    const FIELD_SHOP_NAME = 'shopName';
-    const FIELD_SHOP_DESCRIPTION = 'shopDescription';
-    const FIELD_SHOP_PICTURE = 'shopPicture';
-    const FIELD_EMAIL = 'email';
-    const FIELD_PHONE = 'phone';
-    const FIELD_CITY = 'city';
-    const FIELD_STREET = 'street';
-    const FIELD_CITY_CODE = 'cityCode';
-    const FIELD_FACEBOOK = 'facebook';
-    const FIELD_TWITTER = 'twitter';
-    const FIELD_LINKEDIN = 'linkedin';
-    const FIELD_TIKTOK = 'tiktok';
-
     public function __invoke(): void
     {
-        register_post_type(self::POST_TYPE_NAME, [
+        register_post_type(Partner::POST_TYPE_NAME, [
             'label' => WH::trans('Partenaire'),
             'public' => true,
             'menu_position' => 3,
@@ -47,28 +32,28 @@ class PostTypePartner implements ActionInterface
         register_extended_field_group([
             'title'    => WH::trans('Notre Partenaire'),
             'location' => [
-                Location::if('post_type', self::POST_TYPE_NAME)
+                Location::if('post_type', Partner::POST_TYPE_NAME)
             ],
             'fields'   => [
                 Tab::make(WH::trans('Partenaire'))->placement('left'),
-                Text::make(WH::trans('Nom'), self::FIELD_LAST_NAME)->required(),
-                Text::make(WH::trans('Prenom'), self::FIELD_FIRST_NAME)->required(),
-                Image::make(WH::trans('Photo de profile'), self::FIELD_FACE_PICTURE),
+                Text::make(WH::trans('Nom'), Partner::FIELD_LAST_NAME)->required(),
+                Text::make(WH::trans('Prenom'), Partner::FIELD_FIRST_NAME)->required(),
+                Image::make(WH::trans('Photo de profile'), Partner::FIELD_FACE_PICTURE),
                 Tab::make(WH::trans('Boutique')),
-                Text::make(WH::trans('Nom de la boutique'), self::FIELD_SHOP_NAME)->required(),
-                Textarea::make(WH::trans('Description de la boutique'), self::FIELD_SHOP_DESCRIPTION)->required(),
-                Image::make(WH::trans('Photo de la boutique'), self::FIELD_SHOP_PICTURE),
+                Text::make(WH::trans('Nom de la boutique'), Partner::FIELD_SHOP_NAME)->required(),
+                Textarea::make(WH::trans('Description de la boutique'), Partner::FIELD_SHOP_DESCRIPTION)->required(),
+                Image::make(WH::trans('Photo de la boutique'), Partner::FIELD_SHOP_PICTURE),
                 Tab::make(WH::trans('Contact')),
-                Email::make(WH::trans('Email'), self::FIELD_EMAIL),
-                Text::make(WH::trans('Téléphone'), self::FIELD_PHONE),
-                Text::make(WH::trans('Ville'), self::FIELD_CITY),
-                Text::make(WH::trans('Rue'), self::FIELD_STREET),
-                Text::make(WH::trans('Code postal'), self::FIELD_CITY_CODE),
+                Email::make(WH::trans('Email'), Partner::FIELD_EMAIL),
+                Text::make(WH::trans('Téléphone'), Partner::FIELD_PHONE),
+                Text::make(WH::trans('Ville'), Partner::FIELD_CITY),
+                Text::make(WH::trans('Rue'), Partner::FIELD_STREET),
+                Text::make(WH::trans('Code postal'), Partner::FIELD_CITY_CODE),
                 Tab::make(WH::trans('Social')),
-                Url::make(WH::trans('Facebook'), self::FIELD_FACEBOOK),
-                Url::make(WH::trans('Twitter'), self::FIELD_TWITTER),
-                Url::make(WH::trans('Linkedin'), self::FIELD_LINKEDIN),
-                Url::make(WH::trans('TikTok'), self::FIELD_TIKTOK),
+                Url::make(WH::trans('Facebook'), Partner::FIELD_FACEBOOK),
+                Url::make(WH::trans('Twitter'), Partner::FIELD_TWITTER),
+                Url::make(WH::trans('Linkedin'), Partner::FIELD_LINKEDIN),
+                Url::make(WH::trans('TikTok'), Partner::FIELD_TIKTOK),
             ]
         ]);
 
@@ -108,7 +93,7 @@ class PostTypePartner implements ActionInterface
             'rewrite_hierarchical' => false,
             'rewrite' => true
         ];
-        register_taxonomy('city', [ self::POST_TYPE_NAME ], $args);
+        register_taxonomy('city', [ Partner::POST_TYPE_NAME ], $args);
     }
 
     public static function getAction(): string

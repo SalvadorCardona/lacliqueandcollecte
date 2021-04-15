@@ -1,5 +1,9 @@
 import {AppComponent} from 'App/components/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
+import {injector} from "App/core/container.service";
+import PartnerClient from "App/core/client/partner.client";
+import {LoaderService} from "App/core/loader.service";
+import {PartnerType} from "App/types/partner.type";
 
 export default class PartnerViewComponent extends AppComponent {
 
@@ -7,10 +11,32 @@ export default class PartnerViewComponent extends AppComponent {
         return 'app-partner-view';
     }
 
-    @property({type: String})
-    private icon: string;
+    @property({type: Object})
+    private partner: PartnerType;
+
+    @property({type: Number})
+    private partnerId: number;
+
+    @injector(PartnerClient)
+    private productClient: PartnerClient;
+
+    @injector(LoaderService)
+    private loaderService: LoaderService;
+
+    public firstUpdated(): void {
+        this.productClient.getPartnerById(this.partnerId)
+            .then(partner => {
+                console.log(partner);
+                this.loaderService.hide();
+                this.partner = partner;
+            });
+
+        this.loaderService.show();
+    }
 
     public render(): TemplateResult {
+        if (!this.partner) return html``;
+
         return html`
             <div class="container">
                 <div class="row">

@@ -14,6 +14,9 @@ export const environment = {
         },
         application: {
             configuration: 'wp/app/configuration'
+        },
+        partner: {
+            byId: 'wp/app/partner/$id'
         }
     }
 };

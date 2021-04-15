@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/components/custom.element';
-import {css, html, TemplateResult, unsafeCSS} from "lit-element";
+import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
 import image from "Media/pattern-footer.svg";
 
 export default class FooterComponent extends AppComponent{
@@ -8,7 +8,7 @@ export default class FooterComponent extends AppComponent{
         return 'app-footer';
     }
 
-    static get styles() {
+    public static get styles(): CSSResult {
         return  css`
             app-footer::after {
               background-image: url('${unsafeCSS(image)}');
@@ -16,7 +16,7 @@ export default class FooterComponent extends AppComponent{
         `;
     }
 
-    public connectedCallback() {
+    public connectedCallback(): void {
         super.connectedCallback();
         this.classList.add('container-fluid', 'd-block', 'p-5', 'position-relative');
     }
