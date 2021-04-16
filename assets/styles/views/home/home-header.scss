@@ -17,15 +17,6 @@ app-home-header {
     z-index: 1;
   }
 
-  .app-wrapper {
-    display: block;
-    margin: 10px 0 10px 0;
-    padding: 10px;
-    box-shadow: 0 0 40px 0 rgba(94, 92, 154, 0.06);
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-  }
 
   label {
     display:inline-block;
@@ -37,11 +28,32 @@ app-home-header {
   }
 
 
-
-  .btn {
-    border-radius: 10px;
-    padding: 9px;
+  a {
+    border-radius: 7px;
     width: 40px;
+    height: 50px;
+  }
+
+  input {
+    border:none;
+  }
+
+  input {
+    &:focus {
+      outline:none;
+    }
+
+    input::placeholder {
+      font-size: 1px;
+    }
+  }
+
+  .app-icon {
+    color: white;
+  }
+
+  .form-group-speciality {
+    border-right: 1px solid $black;
   }
 
 }
