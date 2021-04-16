@@ -26,32 +26,40 @@
                         <img class="logo p-4" src="${getBaseSiteUrl()}/app/uploads/2020/12/logo.svg">
                         <div class="title">
                             <h1 class="text-light text-center">SOUTENEZ LES ARTISANS DE VOTRE REGION !</h1>
-                            <h2 class="text-light text-center">Accédez à notre catalogue de produits artisanaux et
+                            <h2 class="text-light text-center fw-normal">Accédez à notre catalogue de produits artisanaux et
                                 locaux</h2>
                         </div>
 
-                        <div class="p-4 d-flex justify-content-center">
+                        <div class="div-form-search                                  
+                                    d-flex
+                                    justify-content-center">
+                            
                             <div class="border-radius bg-white p-1">
                                 <form>
                                     <div class="form-search">
                                         <div class="d-flex justify-content-center">
 
-                                            <div class="form-group-speciality">
-                                                <label for="search-box-1" class="color-black fw-bold">Spécialité</label>
+                                            <div class="form-group-speciality ps-2">
+                                                <label for="search-box-1" class="fw-bold">Spécialité</label>
                                                 <span>
                                         <input class="d-block" name="search-box-1" type="text"
                                                placeholder="Quel corps de métier?">
                                         </span>
                                             </div>
-                                            <div class="">
-                                                <label for="search-box-2" class="color-black fw-bold">Ville</label>
+                                            <div class="form-group-city ps-2">
+                                                <label for="search-box-2" class="fw-bold">Ville</label>
                                                 <span>
                                         <input class="d-block" id="city" name="search-box-2" type="text"
                                                placeholder="Où?">
                                         </span>
                                             </div>
-                                            <div>
-                                                <a class="border-radius bg-primary p-2" type="button">
+                                            <div class="form-group-btn ">
+                                                <a class="  border-radius 
+                                                            bg-primary 
+                                                            d-flex 
+                                                            justify-content-center 
+                                                            align-items-center" 
+                                                   type="button">
                                                     <app-icon class="" icon="search"></app-icon>
                                                 </a>
                                             </div>
