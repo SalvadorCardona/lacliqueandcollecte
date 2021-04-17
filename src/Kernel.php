@@ -9,6 +9,7 @@ use App\Action\WoocommerceSupport;
 use App\Action\LoadApi;
 use App\Action\AddPostTypePartner;
 use App\Action\WordpressThemeSupport;
+use App\Infrastructure\Logger;
 use App\Partner\GetPartnerById;
 use App\Api\PostByIdApi;
 use App\Api\ProductsByAuthorId;
@@ -49,18 +50,25 @@ class Kernel
 
     public static function getDirConfig(): string
     {
-        return __DIR__ . './../config';
+        return __DIR__ . '/../config';
     }
 
     public static function getDirPublic(): string
     {
-        return __DIR__ . './../web';
+        return __DIR__ . '/../web';
+    }
+
+    public static function getDirVar(): string
+    {
+        return __DIR__ . '/../var';
     }
 
     public static function boot(): void
     {
         $containerBuilder = new ContainerBuilder();
         $containerBuilder->useAutowiring(true);
+
+        $containerBuilder->addDefinitions(require __DIR__ . '/Application/config.php');
 
         try {
             $container = $containerBuilder->build();
@@ -74,7 +82,7 @@ class Kernel
         self::setApp($app);
 
         /** @var MasterManager $masterManager */
-        $masterManager = self::getApp()
+        $masterManager = $app
             ->getContainer()
             ->get(MasterManager::class);
 

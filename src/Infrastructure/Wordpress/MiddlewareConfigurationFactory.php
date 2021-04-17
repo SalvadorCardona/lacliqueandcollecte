@@ -1,8 +1,8 @@
 <?php
-
 declare(strict_types=1);
 
-namespace App\Formatter;
+
+namespace App\Infrastructure\Wordpress;
 
 use App\Model\MiddlewareConfiguration;
 
