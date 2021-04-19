@@ -1,4 +1,4 @@
-import {AppComponent, getComponentSelector} from "App/components/custom.element";
+import {AppComponent, getComponentSelector} from "App/types/custom.element";
 import {html, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";

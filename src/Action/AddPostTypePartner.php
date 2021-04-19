@@ -24,9 +24,10 @@ class AddPostTypePartner implements ActionInterface
             'public' => true,
             'menu_position' => 3,
             'menu_icon' => 'dashicons-building',
-            'supports' => ['*'],
+            'supports' => ['title'],
             'show_in_rest' => true,
             'has_archive' => false,
+            '' => 'a'
         ]);
 
         register_extended_field_group([
