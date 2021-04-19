@@ -2,4 +2,48 @@ app-home-header {
   .container-fluid {
     background-size: cover;
   }
+
+  img {
+    width: 120px;
+  }
+
+  .parent, .app-wrapper {
+    z-index: 1;
+  }
+
+  .cta-search {
+    width: 50px;
+    height: 50px;
+    app-icon {
+      path {
+        color: $white;
+      }
+      svg {
+        width: 25px;
+        height: 25px
+      }
+    }
+  }
+
+  input {
+    border:none;
+    &:focus {
+      outline:none;
+    }
+  }
+
+  .form-group-speciality {
+    border-right: 1px solid $black;
+  }
+
+  .div-form-search {
+      width: 750px;
+      @include media-breakpoint-down(md) {
+        width: 400px;
+      }
+  }
+
+  .child-search {
+    width: 50%;
+  }
 }
