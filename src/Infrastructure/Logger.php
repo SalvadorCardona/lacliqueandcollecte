@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Infrastructure;
 
-use App\Kernel;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Logger as LoggerBase;
 use Monolog\Handler\StreamHandler;
