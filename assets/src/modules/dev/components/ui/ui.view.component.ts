@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/components/custom.element';
+import {AppComponent} from 'App/types/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import buttonTemplate from "App/modules/dev/components/ui/page/templates/ui.button.template";
 import textTemplate from "App/modules/dev/components/ui/page/templates/ui.text.template";

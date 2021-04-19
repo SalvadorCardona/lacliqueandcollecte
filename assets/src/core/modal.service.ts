@@ -1,7 +1,7 @@
 import {injector} from "App/core/container.service";
 import {EventService} from "App/core/event.service";
-import ModalComponent from "App/components/shared/modal.component";
-import {createElement} from "App/components/custom.element";
+import ModalComponent from "App/modules/shared/components/modal.component";
+import {createElement} from "App/types/custom.element";
 
 export class ModalService {
     private modalComponent: ModalComponent;

@@ -21,7 +21,8 @@ class GetPartnerById extends AbstractApiController
         if (!$partner || Partner::POST_TYPE_NAME !== $partner->post_type) {
             return new WP_Error('awesome_no_author', 'Invalid author', array( 'status' => 401 ));
         }
-
+        $value = acf_get_metadata( $partnerId, 'shopPicture' );
+//        $value = acf_get_value( $partnerId, 'shopPicture' );
         return $this->formatter->format(get_post_meta($partnerId));
     }
 

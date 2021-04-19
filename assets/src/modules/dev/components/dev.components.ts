@@ -1,4 +1,4 @@
-import {AppComponent} from "App/components/custom.element";
+import {AppComponent} from "App/types/custom.element";
 import {html, property , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
@@ -31,7 +31,7 @@ export default class DevComponent extends AppComponent {
             case '#home':
                 return '<app-home-view></app-home-view>';
             case '#partner':
-                return '<app-partner-view partnerId="160"></app-partner-view>';
+                return '<app-partner-view partnerId="106"></app-partner-view>';
             case '#produit':
                 return '<app-product-view productId="139"></app-product-view>';
             default:
