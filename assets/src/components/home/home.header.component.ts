@@ -30,11 +30,13 @@
                                 locaux</h2>
                         </div>
 
-                        <div class="div-form-search                                  
+                        <div class="div-form-search                                 
                                     d-flex
                                     justify-content-center">
                             
-                            <div class="border-radius bg-white p-1">
+                            <div class="border-radius 
+                                        bg-white 
+                                        p-1">
                                 <form>
                                     <div class="form-search">
                                         <div class="d-flex justify-content-center">
