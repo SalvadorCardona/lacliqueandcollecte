@@ -16,13 +16,13 @@ export default class PartnerHeaderComponent extends AppComponent {
         return html`
         <div id="partner-header" 
              class="app-wrapper
+             background-overlay
              d-flex
              align-items-center
              flex-column
              position-relative" 
              style="background-image: url('${this.partnerPost.meta.shopPicture}')">
-            <div class="background-overlay"></div>
-            <img id="picture" src="${this.partnerPost.meta.shopPicture}" alt="face-picture">
+            <img id="picture" src="${this.partnerPost.meta.facePicture}" alt="face-picture">
             
             <div id="last-name" class="text-white">
                 ${this.partnerPost.meta.firstName}

@@ -14,13 +14,24 @@ export default class PartnerCardComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div class="border-radius p-3 d-flex justify-content-center" style="background-image: url("${this.partnerPost.meta.shopPicture}")">
+            <div style="background-image: url('${this.partnerPost.meta.shopPicture}')" 
+                class="border-radius
+                overflow-hidden
+                background-overlay
+                p-4
+                position-relative
+                d-flex
+                justify-content-center
+                flex-column
+                align-items-center
+                align-content-center">
                 <div class="background-overlay"></div>
-                ${this.partnerPost.meta.shopName}
-            
+                <img src="${this.partnerPost.meta.facePicture}" alt="photo-partner">
+                <h3 class="mt-3 text-white">${this.partnerPost.meta.shopName}</h3>
+                <div class="wrapper-category text-white">#decoration #makrame</div>
+                <app-button label="Voir sa page" type="primary"> </app-button>
             </div>
         `;
     }
-
 }
 

@@ -12,12 +12,12 @@ export default class HomeHeaderComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div style="background-image: url('${home}" class="container-fluid
+                background-overlay
                 d-flex
                 justify-content-center
                 align-items-center
                 p-5
                 position-relative">
-                <div class="background-overlay"></div>
                 <div class="parent
                     p-4
                     mb-3
@@ -26,15 +26,14 @@ export default class HomeHeaderComponent extends AppComponent {
                     flex-column
                     align-items-center">
                     <img class="logo p-4" src="${logo}" alt="home-header">
-                    <div class="title">
-                        <h1 class="text-light text-center text-uppercase">soutenez les artisans de votre région !</h1>
-                        <h2 class="fs-4
-                            text-light
-                            text-center
-                            fw-normal">
-                            Accédez à notre catalogue de produits artisanaux et locaux
-                        </h2>
-                    </div>
+               
+                    <h1 class="text-light text-center text-uppercase">soutenez les artisans de votre région !</h1>
+                    <h2 class="fs-4
+                        text-light
+                        text-center
+                        fw-normal">
+                        Accédez à notre catalogue de produits artisanaux et locaux
+                    </h2>
  
                     <div class="div-form-search
                         mt-4
