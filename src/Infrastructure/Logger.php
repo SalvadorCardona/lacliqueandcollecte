@@ -1,11 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Infrastructure;
 
 use Monolog\Formatter\LineFormatter;
-use Monolog\Logger as LoggerBase;
 use Monolog\Handler\StreamHandler;
+use Monolog\Logger as LoggerBase;
 
 class Logger extends LoggerBase
 {

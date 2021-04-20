@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/types/custom.element';
 import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
-import image from "Media/pattern-footer.svg";
+import image from "Media/shared/pattern-footer.svg";
 
 export default class FooterComponent extends AppComponent{
 

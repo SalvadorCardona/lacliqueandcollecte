@@ -9,14 +9,15 @@
  * @package HelloElementor
  */
 
-use App\Helper\WordpressHelper;
-use App\Partner\Partner;
+use App\Application\Helper\WordpressHelper;
+use App\Infrastructure\Partner\Partner;
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 get_header();
-$post = WordpressHelper::getPost();
+
+$post = get_post();
 
 if (is_product()) {
     echo "<app-product-view productId=\"{$post->ID}\"></app-product-view>";
