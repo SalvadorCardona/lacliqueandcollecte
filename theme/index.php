@@ -9,7 +9,6 @@
  * @package HelloElementor
  */
 
-use App\Application\Helper\WordpressHelper;
 use App\Infrastructure\Partner\Partner;
 
 if (! defined('ABSPATH')) {

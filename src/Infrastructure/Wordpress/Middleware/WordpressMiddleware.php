@@ -6,6 +6,7 @@ namespace App\Infrastructure\Wordpress\Middleware;
 
 use WP_Error;
 use WP_Post;
+use WP_Query;
 use wpdb;
 
 class WordpressMiddleware
@@ -52,5 +53,10 @@ class WordpressMiddleware
     public function getAttachmentImageSrc(int $imageId): array
     {
         return wp_get_attachment_image_src($imageId);
+    }
+
+    public function wpQuery(array $query): WP_Query
+    {
+        return new WP_Query($query);
     }
 }

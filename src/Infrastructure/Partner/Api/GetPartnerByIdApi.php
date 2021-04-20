@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Partner;
+namespace App\Infrastructure\Partner\Api;
 
+use App\Infrastructure\Partner\PartnerFormatter;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
-class GetPartners extends AbstractApiController
+class GetPartnerByIdApi extends AbstractApiController
 {
 
     public function __construct(private PartnerFormatter $formatter, private WordpressMiddleware $wordpressMiddleware)

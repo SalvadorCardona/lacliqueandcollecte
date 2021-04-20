@@ -8,4 +8,9 @@ export default class PartnerClient extends Abstract {
         return this.clientHttp.send('get', partnerEndPoint)
           .then(response => response.data as PartnerPost);
     }
+
+    public getPartners(): Promise<PartnerPost[]> {
+        return this.clientHttp.send('get', environment.apiEndpoints.partner.all)
+            .then(response => response.data as PartnerPost[]);
+    }
 }

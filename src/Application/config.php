@@ -5,8 +5,8 @@ use App\Infrastructure\Manager\ActionManager;
 use App\Infrastructure\Manager\ApiLoaderManager;
 use App\Infrastructure\Manager\FilterManager;
 use App\Infrastructure\Manager\MasterManager;
-use App\Infrastructure\Partner\AddPostTypePartnerAction;
-use App\Infrastructure\Partner\GetPartnerById;
+use App\Infrastructure\Partner\Api\GetPartnersApi;
+use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
 use App\Infrastructure\Wordpress\Action\WoocommerceSupportAction;
@@ -29,10 +29,11 @@ return [
         ProductsByAuthorIdApi::class,
         WordpressThemeSupportAction::class,
         AddAssetsAction::class,
-        AddPostTypePartnerAction::class,
+        GetPartnersApi::class,
+        GetPartnerByIdApi::class,
         WoocommerceSupportAction::class,
         LoadApiAction::class,
-        GetPartnerById::class
+        GetPartnerByIdApi::class
     ],
     Logger::class => DI\factory(function (ContainerInterface $c) {
         return Logger::create($c->get('logger.name'), $c->get('logger.file'));
