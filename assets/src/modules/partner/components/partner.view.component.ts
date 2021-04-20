@@ -3,7 +3,7 @@ import {html, property, TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
 import PartnerClient from "App/core/client/partner.client";
 import {LoaderService} from "App/core/loader.service";
-import {PartnerType} from "App/types/partner.type";
+import {PartnerPost} from "App/types/partner.type";
 
 export default class PartnerViewComponent extends AppComponent {
 
@@ -12,10 +12,10 @@ export default class PartnerViewComponent extends AppComponent {
     }
 
     @property({type: Object})
-    private partner: PartnerType;
+    private partnerPost: PartnerPost;
 
     @property({type: Number})
-    private partnerId: number;
+    private partnerPostId: number;
 
     @injector(PartnerClient)
     private productClient: PartnerClient;
@@ -24,50 +24,49 @@ export default class PartnerViewComponent extends AppComponent {
     private loaderService: LoaderService;
 
     public firstUpdated(): void {
-        this.productClient.getPartnerById(this.partnerId)
+        this.productClient.getPartnerById(this.partnerPostId)
             .then(partner => {
-                console.log(partner);
                 this.loaderService.hide();
-                this.partner = partner;
+                this.partnerPost = partner;
             });
 
         this.loaderService.show();
     }
 
     public render(): TemplateResult {
-        if (!this.partner) return html``;
+        if (!this.partnerPost) return html``;
 
         return html`
             <div class="container">
                 <div class="row">
-                    <app-partner-header></app-partner-header>
+                    <app-partner-header .partnerPost="${this.partnerPost}"></app-partner-header>
                 </div>
                 <div id="partner-content" class="row">
                     <div class="col-md-8 ml-lg-0">
-                        <h4>Les produits de Céline</h4>
-                        <app-product-loop idUser="1"></app-product-loop>
+                        <h4>Les produits de <span>${this.partnerPost.meta.firstName}</span></h4>
+                        <app-product-loop idUser="${this.partnerPost.postAuthor}"></app-product-loop>
                     </div>
                     <div class="col-md-4">
                         <app-wrapper title="Présensation">
                             <p>
-                                La touche de bois est un atelier indépendant depuis 2007 spécialisé dans le travail de bois. Céline la gérante de l'atelier à parcouru plusieurs pays et travaillé dans de nombreux coin dans le monde avant d'ouvrir son atelier. Aujourd'hui avec son équipe, elle sera des objets pour décorer les pièces de votre maison....
+                                ${this.partnerPost.meta.shopDescription}
                             </p>
                         </app-wrapper>
                         <app-wrapper title="Contact du commerçant">
                             <div>
-                                <app-icon icon="telephone"></app-icon> : 0383474156
+                                <app-icon icon="telephone"></app-icon> : ${this.partnerPost.meta?.phone}
                             </div>
                             <div>
-                                <app-icon icon="facebook"></app-icon> : @toucheDeBois
+                                <app-icon icon="facebook"></app-icon> : ${this.partnerPost.meta?.facebook}
                             </div>
                             <div>
-                                <app-icon icon="twitter"></app-icon>  : @toucheDeBois
+                                <app-icon icon="twitter"></app-icon>  : ${this.partnerPost.meta?.twitter}
                             </div>
                             <div>
-                                <app-icon icon="instagram"></app-icon>  : @toucheDeBois
+                                <app-icon icon="instagram"></app-icon>  : ${this.partnerPost.meta?.instagram}
                             </div>
                             <div>
-                                <app-icon icon="geoLat"></app-icon>  : 30 rue pasteur, Lyon, 69001
+                                <app-icon icon="geoLat"></app-icon>  : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
                             </div>
                             <div>
                                 <app-button icon="envelope" type="primary" label="Contactez-le"></app-button>

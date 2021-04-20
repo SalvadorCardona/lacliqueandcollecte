@@ -7,7 +7,7 @@ namespace App\Infrastructure\Partner;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
-class GetPartnerById extends AbstractApiController
+class GetPartners extends AbstractApiController
 {
 
     public function __construct(private PartnerFormatter $formatter, private WordpressMiddleware $wordpressMiddleware)

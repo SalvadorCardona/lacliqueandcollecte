@@ -24,12 +24,29 @@ class AddPostTypePartnerAction implements ActionInterface
 
     public function __invoke(): void
     {
+        add_role(
+            Partner::POST_TYPE_NAME,
+            Partner::POST_TYPE_NAME,
+            ['publish_posts' => true, 'read' => true, 'edit_posts' => true, 'edit_posts' => true]
+        );
+
+        add_filter('wp_dropdown_users_args', function ($query_args, $r) {
+            global $post;
+
+            if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === 'product') {
+                $query_args['who'] = '';
+                $query_args['role__in'] = [Partner::POST_TYPE_NAME, 'administrator'];
+            }
+
+            return $query_args;
+        }, 10, 2);
+
         register_post_type(Partner::POST_TYPE_NAME, [
             'label' => $this->wordpressMiddleware->trans('Partenaire'),
             'public' => true,
             'menu_position' => 3,
             'menu_icon' => 'dashicons-building',
-            'supports' => ['title'],
+            'supports' => ['title', 'author'],
             'show_in_rest' => true,
             'has_archive' => false,
         ]);
@@ -55,6 +72,7 @@ class AddPostTypePartnerAction implements ActionInterface
                 Text::make($this->wordpressMiddleware->trans('Rue'), Partner::FIELD_STREET),
                 Text::make($this->wordpressMiddleware->trans('Code postal'), Partner::FIELD_CITY_CODE),
                 Tab::make($this->wordpressMiddleware->trans('Social')),
+                Url::make($this->wordpressMiddleware->trans('Instagram'), Partner::FIELD_INSTAGRAM),
                 Url::make($this->wordpressMiddleware->trans('Facebook'), Partner::FIELD_FACEBOOK),
                 Url::make($this->wordpressMiddleware->trans('Twitter'), Partner::FIELD_TWITTER),
                 Url::make($this->wordpressMiddleware->trans('Linkedin'), Partner::FIELD_LINKEDIN),

@@ -5,12 +5,8 @@ declare(strict_types=1);
 namespace App\Application;
 
 use App\Infrastructure\Manager\MasterManager;
-use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
-use DI\DependencyException;
-use DI\NotFoundException;
 use Exception;
-use Slim\App;
 
 class Kernel
 {
@@ -23,13 +19,12 @@ class Kernel
 
         try {
             $container = $containerBuilder->build();
+            /** @var MasterManager $masterManager */
+            $masterManager = $container->get(MasterManager::class);
         } catch (Exception $e) {
             // TODO: Append Log system here
             return;
         }
-
-        /** @var MasterManager $masterManager */
-        $masterManager = $container->get(MasterManager::class);
 
         $masterManager->build();
     }

@@ -22,6 +22,7 @@ class Partner
     public const FIELD_TWITTER = 'twitter';
     public const FIELD_LINKEDIN = 'linkedin';
     public const FIELD_TIKTOK = 'tiktok';
+    public const FIELD_INSTAGRAM = 'instagram';
 
     public const FIELD_LIST = [
         self::POST_TYPE_NAME,
@@ -40,5 +41,6 @@ class Partner
         self::FIELD_TWITTER,
         self::FIELD_LINKEDIN,
         self::FIELD_TIKTOK,
+        self::FIELD_INSTAGRAM
     ];
 }

@@ -32,14 +32,25 @@ class WordpressMiddleware
         return $i18n;
     }
 
-    public function getPost(): ?WP_Post
+    public function getPost(int $postId): ?WP_Post
     {
-        global $post;
-        return $post;
+        return get_post($postId);
+    }
+
+    public function getPostMeta(int $postId): ?array
+    {
+        $postMeta = get_post_meta($postId);
+
+        return $postMeta ? $postMeta : null;
     }
 
     public function wpError(string $code, string $message, array $data): WP_Error
     {
         return new WP_Error($code, $message, $data);
+    }
+
+    public function getAttachmentImageSrc(int $imageId): array
+    {
+        return wp_get_attachment_image_src($imageId);
     }
 }
