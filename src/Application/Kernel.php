@@ -7,32 +7,13 @@ namespace App\Application;
 use App\Infrastructure\Manager\MasterManager;
 use DI\Bridge\Slim\Bridge;
 use DI\ContainerBuilder;
+use DI\DependencyException;
+use DI\NotFoundException;
 use Exception;
 use Slim\App;
 
 class Kernel
 {
-    /**
-     * @var App;
-     */
-    private static App $App;
-
-    /**
-     * @return App
-     */
-    public static function getApp(): App
-    {
-        return self::$App;
-    }
-
-    /**
-     * @param App $App
-     */
-    private static function setApp(App $App): void
-    {
-        self::$App = $App;
-    }
-
     public static function boot(): void
     {
         $containerBuilder = new ContainerBuilder();
@@ -47,14 +28,8 @@ class Kernel
             return;
         }
 
-        $app = Bridge::create($container);
-
-        self::setApp($app);
-
         /** @var MasterManager $masterManager */
-        $masterManager = $app
-            ->getContainer()
-            ->get(MasterManager::class);
+        $masterManager = $container->get(MasterManager::class);
 
         $masterManager->build();
     }

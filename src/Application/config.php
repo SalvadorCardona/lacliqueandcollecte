@@ -2,8 +2,8 @@
 
 use App\Infrastructure\Logger;
 use App\Infrastructure\Manager\ActionManager;
-
 use App\Infrastructure\Manager\ApiLoaderManager;
+use App\Infrastructure\Manager\FilterManager;
 use App\Infrastructure\Manager\MasterManager;
 use App\Infrastructure\Partner\AddPostTypePartnerAction;
 use App\Infrastructure\Partner\GetPartnerById;

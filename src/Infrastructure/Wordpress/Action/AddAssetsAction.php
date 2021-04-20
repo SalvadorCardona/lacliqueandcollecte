@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Action;
 
+use App\Infrastructure\Wordpress\Middleware\MiddlewareConfigurationFactory;
+
 class AddAssetsAction implements ActionInterface
 {
     /**
