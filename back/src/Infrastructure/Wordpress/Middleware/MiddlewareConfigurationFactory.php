@@ -10,7 +10,7 @@ class MiddlewareConfigurationFactory
     {
         $logo = get_theme_mod('custom_logo');
         $image = wp_get_attachment_image_src($logo, 'full');
-        $image_url = $image[0];
+        $image_url = $image ? $image[0] : '';
         $user = wp_get_current_user();
 
         return (new MiddlewareConfiguration())
