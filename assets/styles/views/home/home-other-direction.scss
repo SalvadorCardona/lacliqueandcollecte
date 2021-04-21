@@ -1,9 +1,31 @@
 app-home-other-direction {
-  .container-fluid {
-    border: solid;
+  #title-3{
+    text-align: center;
   }
 
   .without-background {
-    background-color: red;
+
+  }
+
+  .with-background {
+    background-size : cover;
+  }
+
+  .row > div { height: 700px }
+
+  .div {
+
+  }
+
+  .h-50 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 250px 0px;
+
+    span {
+      text-align: center;
+    }
   }
 }
