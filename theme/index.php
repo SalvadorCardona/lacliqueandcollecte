@@ -9,19 +9,19 @@
  * @package HelloElementor
  */
 
-use App\Helper\WordpressHelper;
-use App\Partner\Partner;
+use App\Infrastructure\Partner\Partner;
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 get_header();
-$post = WordpressHelper::getPost();
+
+$post = get_post();
 
 if (is_product()) {
     echo "<app-product-view productId=\"{$post->ID}\"></app-product-view>";
 } elseif ($post && $post->post_type === Partner::POST_TYPE_NAME) {
-    echo "<app-partner-view partnerId=\"{$post->ID}\"></app-partner-view>";
+    echo "<app-partner-view partnerPostId=\"{$post->ID}\"></app-partner-view>";
 } elseif (is_singular()) {
     get_template_part('template-parts/single');
 } elseif (is_archive() || is_home()) {

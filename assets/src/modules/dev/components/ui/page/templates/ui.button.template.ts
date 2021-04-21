@@ -6,14 +6,15 @@ export default `
         &lt;app-button icon="" label="" type=""&gt &lt;/app-button&gt
         </span>
         <hr>
-        <app-button icon="cartPlus" label="Normal..."></app-button>
-        <app-button icon="geoLat" label="Primary..." type="primary"></app-button>
-        <app-button label="Secondary..." type="secondary"></app-button>
-        <app-button label="Success..." type="success"></app-button>
-        <app-button label="Danger..." type="danger"></app-button>
-        <app-button label="Warning..." type="warning"></app-button>
-        <app-button label="Info..." type="info"></app-button>
-        <app-button label="Dark..." type="dark"></app-button>
+        <app-button class="mt-2" icon="cartPlus" label="Normal..."></app-button>
+        <app-button class="mt-2" icon="geoLat" label="Primary..." type="primary"></app-button>
+        <app-button class="mt-2" icon="geoLat" type="primary"></app-button>
+        <app-button class="mt-2" label="Secondary..." type="secondary"></app-button>
+        <app-button class="mt-2" label="Success..." type="success"></app-button>
+        <app-button class="mt-2" label="Danger..." type="danger"></app-button>
+        <app-button class="mt-2" label="Warning..." type="warning"></app-button>
+        <app-button class="mt-2" label="Info..." type="info"></app-button>
+        <app-button class="mt-2" label="Dark..." type="dark"></app-button>
     </app-wrapper>
 </div>
 

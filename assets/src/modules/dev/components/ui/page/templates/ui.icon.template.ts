@@ -1,4 +1,4 @@
-import {icons} from "App/shared/icons";
+import {icons} from "App/core/icons";
 
 const iconTemplate = (): string => {
     let template = '';
@@ -6,7 +6,7 @@ const iconTemplate = (): string => {
     Object.keys(icons).forEach(keyIcon => {
         template += `
             <div class="d-flex justify-content-left">
-                <app-icon  icon="${keyIcon}"></app-icon>
+                <app-icon  class="text-around mt-2" icon="${keyIcon}"></app-icon>
                 <pre class="mx-2">${keyIcon}</pre>
             </div>
         `;

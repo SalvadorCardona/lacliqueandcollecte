@@ -1,12 +1,15 @@
+import {PostType} from "App/types/post.type";
+
 export interface PartnerType {
     lastName: string;
     firstName: string;
-    facePicture: string;
+    facePicture: URL;
     shopName: string;
     shopDescription: string;
-    shopPicture: string;
+    shopPicture: URL;
     email: string;
     phone: string;
+    instagram: string;
     city: string;
     street: string;
     cityCode: string;
@@ -14,4 +17,8 @@ export interface PartnerType {
     twitter: string;
     linkedin: string;
     tiktok: string;
+}
+
+export interface PartnerPost extends PostType {
+    meta: PartnerType
 }

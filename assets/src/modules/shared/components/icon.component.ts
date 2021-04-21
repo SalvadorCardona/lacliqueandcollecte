@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/types/custom.element';
-import {icons} from 'App/shared/icons'
+import {icons} from 'App/core/icons'
 import {html, property, TemplateResult} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 

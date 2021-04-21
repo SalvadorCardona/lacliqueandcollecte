@@ -8,6 +8,7 @@ export interface QuerySearch {
      * List of Ids
      */
     include?: Array<number>
+    per_page?: number;
 }
 
 export default class ProductClient extends Abstract {

@@ -11,7 +11,7 @@
 
 namespace Roots\Bedrock;
 
-use App\Kernel;
+use App\Application\Kernel;
 
 if (!is_blog_installed()) {
     return;

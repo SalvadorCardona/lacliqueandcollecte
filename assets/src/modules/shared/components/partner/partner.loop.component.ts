@@ -1,7 +1,8 @@
 import {AppComponent} from "App/types/custom.element";
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
-import {PartnerType} from "App/types/partner.type";
+import {PartnerPost} from "App/types/partner.type";
+import PartnerClient from "App/core/client/partner.client";
 
 export default class PartnerLoopComponent extends AppComponent {
 
@@ -10,13 +11,25 @@ export default class PartnerLoopComponent extends AppComponent {
     }
 
     @property({type: Object})
-    private partners: Array<PartnerType>
+    private partnersPost: PartnerPost[]
+
+    @injector(PartnerClient)
+    private partnerClient: PartnerClient;
+
+    protected firstUpdated(): void {
+        this.partnerClient.getPartners()
+            .then(partnersPost => {
+                this.partnersPost = partnersPost;
+            })
+    }
 
     public render(): TemplateResult {
+        if (!this.partnersPost) return html``;
+
         return html`
-            <app-partner-card class="col-md-4"></app-partner-card>
-            <app-partner-card class="col-md-4"></app-partner-card>
-            <app-partner-card class="col-md-4"></app-partner-card>
+            <div class="row">
+                ${this.partnersPost.map(partnerPost => html`<app-partner-card class="mt-3 col-md-4" .partnerPost="${partnerPost}"></app-partner-card>`)}
+            </div>
         `;
     }
 }

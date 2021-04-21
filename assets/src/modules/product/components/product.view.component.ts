@@ -3,7 +3,7 @@ import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
 import {LoaderService} from "App/core/loader.service";
 import {injector} from "App/core/container.service";
-import {filterTax} from "App/shared/helper";
+import {filterTax} from "App/core/helper";
 import {ModalService} from "App/core/modal.service";
 import ModalProductComponent from "App/modules/shared/components/modal.product.component";
 import {property} from "lit-element/lib/decorators";
@@ -85,7 +85,7 @@ export default class ProductViewComponent extends AppComponent {
                                         <option value="6">6</option>
                                     </select>
                                 </div>
-                                <app-button @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
+                                <app-button class="mt-3" @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
                             </div>
                         </section>
                     </div>

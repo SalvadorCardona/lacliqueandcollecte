@@ -31,7 +31,7 @@ export default class DevComponent extends AppComponent {
             case '#home':
                 return '<app-home-view></app-home-view>';
             case '#partner':
-                return '<app-partner-view partnerId="106"></app-partner-view>';
+                return '<app-partner-view partnerPostId="106"></app-partner-view>';
             case '#produit':
                 return '<app-product-view productId="139"></app-product-view>';
             default:

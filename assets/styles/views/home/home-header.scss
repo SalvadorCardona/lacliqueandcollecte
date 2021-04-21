@@ -14,10 +14,12 @@ app-home-header {
   .cta-search {
     width: 50px;
     height: 50px;
+
     app-icon {
       path {
         color: $white;
       }
+
       svg {
         width: 25px;
         height: 25px
@@ -26,9 +28,10 @@ app-home-header {
   }
 
   input {
-    border:none;
+    border: none;
+
     &:focus {
-      outline:none;
+      outline: none;
     }
   }
 
@@ -37,10 +40,10 @@ app-home-header {
   }
 
   .div-form-search {
-      width: 750px;
-      @include media-breakpoint-down(md) {
-        width: 400px;
-      }
+    width: 750px;
+    @include media-breakpoint-down(md) {
+      width: 400px;
+    }
   }
 
   .child-search {

@@ -2,13 +2,16 @@ app-partner-view {
   #page {
     background: none;
     max-width: 960px;
+
     .content-area {
       width: 100%;
     }
   }
+
   #partner-header {
     margin-top: 45px;
     color: white;
+
     path {
       color: white;
     }
@@ -16,14 +19,17 @@ app-partner-view {
     text-shadow: 0 0 3px $gray-700;
     background-position: center;
     background-size: cover;
+
     > * {
       z-index: 1;
     }
+
     hr {
       width: 360px;
       border-top: 1px solid white;
       opacity: 0.7;
     }
+
     #picture {
       border-radius: 50%;
       height: 150px;
@@ -32,16 +38,19 @@ app-partner-view {
       background: #ccc;
       background-size: cover;
     }
+
     #last-name {
       margin-top: 10px;
       font-weight: bold;
     }
+
     #social-header {
       svg {
         width: 20px;
         height: 20px;
         opacity: 0.7;
         @include app-transition();
+
         &:hover {
           opacity: 1;
         }

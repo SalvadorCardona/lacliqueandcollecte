@@ -1,5 +1,5 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
-import {getApiEndpoint, keysToCamel} from "App/shared/helper";
+import {getApiEndpoint, keysToCamel} from "App/core/helper";
 import {ContainerService, OnInit} from "App/core/container.service";
 import {ConfigurationService} from "App/core/configuration.service";
 
