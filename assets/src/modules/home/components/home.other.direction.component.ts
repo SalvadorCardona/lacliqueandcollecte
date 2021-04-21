@@ -21,8 +21,7 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50"><h4 class="fw-normal text-dark">Zartisana</h4></div>
                         <div class="h-50">
                             <span>Qui sommes-nous?</span>
-                            <app-button icon="" label="Notre histoire" type="primary"> </app-button>
-                            
+                            <app-button label="Notre histoire" type="primary"> </app-button>
                         </div>
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image3}')"></div>
@@ -30,14 +29,14 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50"><h4 class="fw-normal text-dark">Vous êtes artisan ?</h4></div>
                         <div class="h-50">
                             <span>Devenez partenaire de notre association.</span>
-                            <app-button icon="" label="Contactez-nous" type="primary"> </app-button>
+                            <app-button label="Contactez-nous" type="primary"> </app-button>
                         </div>
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image1}')"></div>
                     <div class="without-background col-md-4">
                         <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">Découvrez les artisans et produits Zartizana.</h4></div>
                         <div class="h-50">
-                            <app-button icon="" label="Le shop ici" type="primary"> </app-button>
+                            <app-button label="Le shop ici" type="primary"></app-button>
                         </div>
                     </div>
                 </div>
