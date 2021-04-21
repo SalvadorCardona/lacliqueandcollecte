@@ -7,7 +7,7 @@ namespace App\Infrastructure\Manager;
 // TODO: I need Unit test
 
 
-use App\Infrastructure\Wordpress\AbstractFilter;
+use App\Infrastructure\Wordpress\Filter\AbstractFilter;
 
 class FilterManager extends AbstractManager
 {

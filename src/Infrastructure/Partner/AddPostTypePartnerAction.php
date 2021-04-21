@@ -27,7 +27,7 @@ class AddPostTypePartnerAction implements ActionInterface
         add_role(
             Partner::POST_TYPE_NAME,
             Partner::POST_TYPE_NAME,
-            ['publish_posts' => true, 'read' => true, 'edit_posts' => true, 'edit_posts' => true]
+            ['publish_posts' => true, 'read' => true, 'edit_posts' => true]
         );
 
         add_filter('wp_dropdown_users_args', function ($query_args, $r) {

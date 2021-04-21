@@ -16,7 +16,7 @@ export default class PartnerLoopComponent extends AppComponent {
     @injector(PartnerClient)
     private partnerClient: PartnerClient;
 
-    protected firstUpdated() {
+    protected firstUpdated(): void {
         this.partnerClient.getPartners()
             .then(partnersPost => {
                 this.partnersPost = partnersPost;

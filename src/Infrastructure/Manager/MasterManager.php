@@ -24,6 +24,8 @@ class MasterManager extends AbstractManager
 
     public function build(): void
     {
+        $entitiesList = [];
+
         foreach ($this->resourcesList as $resource) {
             $entity = $this->container->get($resource);
             $entitiesList [] = $entity;

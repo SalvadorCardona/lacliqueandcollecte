@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Wordpress\\Filter;
+namespace App\Infrastructure\Wordpress\Filter;
 
 class WooCommerceSupportFilter extends AbstractFilter
 {
