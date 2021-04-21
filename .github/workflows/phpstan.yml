@@ -17,4 +17,4 @@ jobs:
       with:
         php_version: 8.0
         memory_limit: 256M
-        path: 'back'
+        configuration: back/phpstan.neon

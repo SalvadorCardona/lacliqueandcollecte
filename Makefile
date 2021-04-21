@@ -40,10 +40,10 @@ remove-theme:
 	rm -R ${BACK_DIR}/web/wp/wp-content/themes/**
 
 code-fix:
-	php ${BACK_DIR}/vendor/bin/phpcbf
+	cd ${BACK_DIR} && php vendor/bin/phpcbf
 	yarn --cwd front lint --fix
 
 lint:
-	php ${BACK_DIR}/vendor/bin/phpcs
-	php ${BACK_DIR}/vendor/bin/phpstan analyse
+	cd ${BACK_DIR} && php vendor/bin/phpcs
+	cd ${BACK_DIR} && php vendor/bin/phpstan analyse
 	yarn --cwd front lint
