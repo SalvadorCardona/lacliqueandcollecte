@@ -1,9 +1,7 @@
 @mixin app-transition() {
-    transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 @mixin app-gradient($color, $color2) {
-    @include app-transition();
-    background: $color;
-    background-image: linear-gradient(150deg, lighten($color, 10%) 0%, rgba(255,255,255,0) 50%);
+  background: linear-gradient(0deg, lighten($color, 5%) 0%, $color 100%);
 }

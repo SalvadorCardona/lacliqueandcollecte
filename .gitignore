@@ -41,6 +41,7 @@ wp-cli.phar
 /angular/dist
 
 .idea/**
+.idea
 
 .cache
 .parcel-cache

@@ -17,18 +17,29 @@ export default class ButtonComponent extends AppComponent {
         return 'app-button';
     }
 
-    @property()
+    @property({type: String})
     private type: ButtonType;
 
     @property({type: String})
     private icon: string;
 
-    @property()
+    @property({type: String})
     private label: string;
 
+    @property({type: String})
+    private link: string;
+
     public render(): TemplateResult {
+        if (this.link) {
+            return html`
+            <a class="btn bg-${this.type}" href="${this.link}">
+                ${this.getIcon()}
+                ${this.label}
+            </a>
+        `;
+        }
         return html`
-            <button class="btn gradient gradient-${this.type}">
+            <button class="btn bg-${this.type}">
                 ${this.getIcon()}
                 ${this.label}
             </button>

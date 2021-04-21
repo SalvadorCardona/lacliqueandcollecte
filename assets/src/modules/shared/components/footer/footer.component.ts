@@ -25,7 +25,7 @@ export default class FooterComponent extends AppComponent{
         return html`
             <div class="row">
                 <div class="branding-space
-                        col-3
+                        col-md-3
                         text-center">
                     <div class="follow-me text-white">
                             <span class="
@@ -57,19 +57,19 @@ export default class FooterComponent extends AppComponent{
                         <span>All rights reserved</span>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <ul>
                         <li><a href="/">Nos produits</a></li>
                         <li><a href="/">Nos artisans</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <ul>
                         <li><a href="/">L'association</a></li>
                         <li><a href="/">Devenir partenaire</a></li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <ul>
                         <li><a href="/">Conditions générales</a></li>
                     </ul>

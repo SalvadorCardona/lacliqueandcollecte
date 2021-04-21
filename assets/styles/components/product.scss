@@ -1,22 +1,17 @@
 .type-product {
-    padding: 0 0 15px;
+  padding: 0 0 15px;
 
-    a {
+  a {
+    width: 100%;
+    margin-bottom: 15px;
 
-        width: 100%;
-        margin-bottom: 15px;
+    img {
+      width: 100%;
+      @include app-transition();
 
-        img {
-            width: 100%;
-            @include app-transition();
-
-            &:hover {
-
-                transform: scale(1.1);
-
-            }
-        }
+      &:hover {
+        transform: scale(1.1);
+      }
     }
-
-
+  }
 }

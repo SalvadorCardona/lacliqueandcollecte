@@ -9,7 +9,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div>Hello app-home-argumentative</div>
+            <div></div>
         `;
     }
 }

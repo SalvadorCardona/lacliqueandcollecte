@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/types/custom.element';
 import {Image, ProductType} from "App/types/product.type";
-import {filterPrice} from "App/shared/helper";
+import {filterPrice} from "App/core/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html , TemplateResult} from 'lit-element';
 
@@ -21,9 +21,9 @@ export default class ProductCardComponent extends AppComponent {
                 </a>
                 <div class="product-name fs-4 text-secondary">${this.product.name}</div>
                 <div class="product-price fw-bold">${filterPrice(this.product.price)}</div>
-                <div class="">
-                    <app-button icon="cartPlus" type="primary" label="Ajouter au panier"></app-button>
-                </div>
+
+                <app-button class="mt-3" link="${this.product.permalink}" icon="cartPlus" type="primary" label="Ajouter au panier"></app-button>
+
             </div>
         `;
     }

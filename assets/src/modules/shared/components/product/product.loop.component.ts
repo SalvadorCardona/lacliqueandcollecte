@@ -19,9 +19,12 @@ export default class ProductLoopComponent extends AppComponent {
     @injector(ProductClient)
     private productClient: ProductClient;
 
+    private perPage: number;
+
     public firstUpdated(): void
     {
-        this.productClient.getProducts({author: this.idUser})
+        console.log(this.idUser);
+        this.productClient.getProducts({author: this.idUser, per_page: this.perPage ?? 3})
             .then(products => {
                 const wrapper = document.createElement('div');
                 wrapper.classList.add(...['row', 'product-loop']);

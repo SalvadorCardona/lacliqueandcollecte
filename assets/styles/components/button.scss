@@ -1,45 +1,32 @@
 .btn {
-    border: none;
-    border-radius: $border-radius;
-    padding: 15px;
-    font-weight: 600;
-    margin: 15px 0;
-    @include app-transition();
-    app-icon {
-        margin-right: 10px;
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-    }
+  border: none;
+  border-radius: $border-radius;
+  padding: 15px;
+  font-weight: 600;
+  margin: 0;
+  display: inline-block;
+  color: $white;
+  @include app-transition();
+
+  path {
+    stroke-width: 10px;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    color: white
+  }
+
+  &.bg-undefined {
+    color: $body-color;
 
     path {
-        stroke-width: 10px;
-        font-size: 18px;
-        width: 50px;
-        height: 50px;
+      color: $body-color;
     }
-    &.gradient {
-        color: white;
-        path {
-            color: white;
-        }
-    }
-    &.gradient-null {
-        color: $body-color;
-        path {
-            color: $body-color;
-        }
-    }
-    &:hover {
-        @include app-transition();
-        transform: scale(1.05);
-    }
-}
+  }
 
-button.action {
-    all: unset;
-    color: blue;
-    -webkit-text-fill-color: blue;
-    cursor: pointer;
+  &:hover {
+    @include app-transition();
+    color: $white;
+    transform: scale(1.02);
+  }
 }

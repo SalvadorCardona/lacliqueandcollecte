@@ -9,7 +9,12 @@ export default class HomeProductListComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div>Hello Home app-home-product-list</div>
+            <div class="container p-5 text-center">
+                <h2 class="title
+                    text-primary
+                    text-uppercase">Nos produits</h2>
+                <app-product-loop></app-product-loop>
+            </div>
         `;
     }
 }

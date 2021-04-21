@@ -28,8 +28,8 @@ export default class PartnerCardComponent extends AppComponent {
                 <div class="background-overlay"></div>
                 <img src="${this.partnerPost.meta.facePicture}" alt="photo-partner">
                 <h3 class="mt-3 text-white">${this.partnerPost.meta.shopName}</h3>
-                <div class="wrapper-category text-white">#decoration #makrame</div>
-                <app-button label="Voir sa page" type="primary"> </app-button>
+<!--                <div class="wrapper-category text-white">i should be category list</div>-->
+                <app-button class="mt-2" link="${this.partnerPost.guid}" label="Voir sa page" type="primary"> </app-button>
             </div>
         `;
     }
