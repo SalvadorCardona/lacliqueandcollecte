@@ -1,0 +1,30 @@
+# Application
+.phpunit.result.cache
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+!web/app/uploads/*
+!web/app/uploads/.gitkeep
+!web/app/plugins/elementor-pro
+web/parcel-manifest.json
+composer.phar
+assets/mix-manifest.json
+/web/app/themes/hello-theme-master
+# Composer
+/vendor
+/web/app/languages/*.json
+# WP-CLI
+wp-cli.local.yml
+wp-cli.phar
+web/.htaccess
+
+# WordPress
+web/wp
+web/*.js
+web/*.map
+web/*.html
+web/*.css
+web/*.svg
+web/*.jpg
+web/*.png

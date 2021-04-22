@@ -1,50 +1,49 @@
 ENV ?= "dev"
 SOURCE_DIR = $(shell pwd)
+FRONT_DIR = ./front
+BACK_DIR = ./back
 
-install: install-php database-import install-asset remove-theme
+install: install-php database-import install-asset install-common remove-theme
 
 install-common:
-	ln -s $(pwd)/theme $(pwd)/web/app/themes/hello-theme-master
+	ln -sF $(shell pwd)/back/theme $(shell pwd)/back/web/app/themes/hello-theme-master
 
 install-asset:
-	cd assets && yarn install && yarn build
+	cd front && yarn install && yarn build
 
 install-php:
-	wget https://getcomposer.org/download/2.0.12/composer.phar
-	cp .env.dev .env
-	php composer.phar install
-	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+	cd ${BACK_DIR} && wget https://getcomposer.org/download/2.0.12/composer.phar
+	cd ${BACK_DIR} && cp .env.dev .env
+	cd ${BACK_DIR} && php composer.phar install
+	cd ${BACK_DIR} && curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
 server-dev:
-	/bin/sh -c 'XDEBUG_MODE=debug XDEBUG_AUTO_TRACE=1 php wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
-	/bin/sh -c 'cd assets && yarn parcel'
-
-server-dev-no-debug:
-	php  wp-cli.phar server --host=0.0.0.0 --port=8000 --allow-root
+	cd ${BACK_DIR} &&  /bin/sh -c 'XDEBUG_MODE=debug XDEBUG_AUTO_TRACE=1 php wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
+	/bin/sh -c 'yarn --cwd front parcel'
 
 server-dev-stop:
 	kill -9 $(lsof -t -i:8000 -sTCP:LISTEN) && kill -9 $(lsof -t -i:8080) && killall -9 php
 
 database-export:
-	php wp-cli.phar db export base.sql  --allow-root
+	cd ${BACK_DIR} && php wp-cli.phar db export base.sql  --allow-root
 
 database-import:
-	php wp-cli.phar db import base.sql  --allow-root
+	cd ${BACK_DIR} && php wp-cli.phar db import base.sql  --allow-root
 
 test:
-	php vendor/bin/phpunit
+	php ${BACK_DIR}/vendor/bin/phpunit
 
 wp-rewrite-url:
-	php wp-cli.phar  rewrite flush --allow-root
+	php ${BACK_DIR}/wp-cli.phar rewrite flush --allow-root
 
 remove-theme:
-	rm -R ./web/wp/wp-content/themes/**
+	rm -R ${BACK_DIR}/web/wp/wp-content/themes/**
 
 code-fix:
-	php vendor/bin/phpcbf
-	cd assets && yarn lint --fix
+	cd ${BACK_DIR} && php vendor/bin/phpcbf
+	yarn --cwd front lint --fix
 
 lint:
-	php vendor/bin/phpcs
-	php vendor/bin/phpstan analyse
-	cd assets && yarn lint
+	cd ${BACK_DIR} && php vendor/bin/phpcs
+	cd ${BACK_DIR} && php vendor/bin/phpstan analyse
+	yarn --cwd front lint

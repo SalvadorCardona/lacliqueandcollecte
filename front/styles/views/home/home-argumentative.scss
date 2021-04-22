@@ -1,0 +1,49 @@
+app-home-argumentative {
+  hr {
+    width: 30%;
+    height: 4px !important;
+    display: inline-block;
+  }
+
+  h4 {
+    margin-top: 15px;
+  }
+
+  span {
+    padding: 45px;
+    display: inline-block;
+    border-radius: 50%;
+  }
+
+  img {
+    width: 175px;
+    height: 175px;
+  }
+
+  .arg {
+    &-1 {
+      h4 {
+        color: $warning-lighter-1;
+      }
+      span, hr {
+        background: $warning-lighter-1;
+      }
+    }
+    &-2 {
+      span, hr {
+        background: $success-lighter-1;
+      }
+      h4 {
+        color: $success-lighter-1
+      }
+    }
+    &-3 {
+      span, hr {
+        background: $secondary-lighter-1;
+      }
+      h4 {
+        color: $secondary-lighter-1;
+      }
+    }
+  }
+}

@@ -1,58 +1,16 @@
-# Application
-web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
-web/app/upgrade
-!web/app/uploads/*
-!web/app/uploads/.gitkeep
-!web/app/plugins/elementor-pro
-# WordPress
-web/wp
-web/*.js
-web/*.map
-web/*.html
-web/*.css
-web/*.svg
-web/*.jpg
-web/*.png
-
-web/parcel-manifest.json
-composer.phar
-
-web/.htaccess
 node_modules
-
-# Logs
 *.log
 
 # Dotenv
 .env
 !.env.example
 
-# Composer
-/vendor
-
-# WP-CLI
-wp-cli.local.yml
-wp-cli.phar
-
-/angular/node_modules
-/angular/node_modules/*
-/angular/dist
-
-.idea/**
-.idea
-
 .cache
 .parcel-cache
 .vscode
 dist
-assets/mix-manifest.json
-/web/app/themes/hello-theme-master
-
-/web/app/languages/*.json
-
-.phpunit.result.cache
-assets/.idea
 
 *.idea
+.phar
+
+yarn-error.log
