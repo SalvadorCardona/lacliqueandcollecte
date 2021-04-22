@@ -36,6 +36,7 @@ export default class HomeHeaderComponent extends AppComponent {
                     </h2>
 
                     <div class="div-form-search
+                        mb-4
                         mt-4
                         border-radius 
                         bg-white 

@@ -9,7 +9,10 @@ export default class HomeProductListComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div class="container p-5 text-center">
+            <div class="container
+                mt-5
+                p-5
+                text-center">
                 <h2 class="title
                     text-primary
                     text-uppercase">Nos produits</h2>

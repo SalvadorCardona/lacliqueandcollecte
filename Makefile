@@ -18,7 +18,7 @@ install-php:
 	cd ${BACK_DIR} && curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
 server-dev:
-	/bin/sh -c 'XDEBUG_MODE=debug XDEBUG_AUTO_TRACE=1 php back/wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
+	cd ${BACK_DIR} &&  /bin/sh -c 'XDEBUG_MODE=debug XDEBUG_AUTO_TRACE=1 php wp-cli.phar server --host=0.0.0.0 --port=8000   --allow-root &'
 	/bin/sh -c 'yarn --cwd front parcel'
 
 server-dev-stop:
