@@ -1,8 +1,9 @@
-import {AppComponent} from "App/types/custom.element";
+import {AppComponent} from "App/core/custom.element";
 import {ProductType} from "App/types/product.type"
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import ProductClient from "App/core/client/product.client";
+import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 
 export default class ProductLoopComponent extends AppComponent {
 
@@ -19,15 +20,16 @@ export default class ProductLoopComponent extends AppComponent {
     @injector(ProductClient)
     private productClient: ProductClient;
 
+    @property({type: Number})
     private perPage: number;
+
+    @property({type: Number})
+    private grid: number = 3;
 
     public firstUpdated(): void
     {
-        console.log(this.idUser);
         this.productClient.getProducts({author: this.idUser, per_page: this.perPage ?? 3})
             .then(products => {
-                const wrapper = document.createElement('div');
-                wrapper.classList.add(...['row', 'product-loop']);
                 this.products = products;
             })
     }
@@ -36,8 +38,8 @@ export default class ProductLoopComponent extends AppComponent {
         if(!this.products) return ;
 
         return html`
-            <div class="d-flex product-loop d-grid row row-cols-3">
-                ${this.products.map(product => html`<app-product-card .product="${product}"></app-product-product>`)}
+            <div class="product-loop row row-cols-md-${this.grid}">
+                ${this.products.map(product => html`${this.createElement(ProductCardComponent, {product: product})}`)}
             </div>
         `;
     }

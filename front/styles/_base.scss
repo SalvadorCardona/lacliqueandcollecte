@@ -143,3 +143,12 @@ a {
   color: $white;
   border-radius: $border-radius;
 }
+
+.title-border {
+  padding-bottom: 10px;
+  border-bottom: 3px solid $primary;
+  display: inline-block;
+  margin-bottom: 30px;
+  color: $primary;
+  text-transform: uppercase;
+}

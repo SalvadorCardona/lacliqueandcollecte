@@ -1,4 +1,4 @@
-import {AppComponent, getComponentSelector} from "App/types/custom.element";
+import {AppComponent, getComponentSelector} from "App/core/custom.element";
 import {events, EventService} from "App/core/event.service";
 import {injector} from "App/core/container.service";
 import Kernel from "App/core/kernel";

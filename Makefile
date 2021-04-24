@@ -6,6 +6,7 @@ BACK_DIR = ./back
 install: install-php database-import install-asset install-common remove-theme
 
 install-common:
+	rm -Rf back/web/app/themes/hello-theme-master
 	ln -sF $(shell pwd)/back/theme $(shell pwd)/back/web/app/themes/hello-theme-master
 
 install-asset:
@@ -37,7 +38,7 @@ wp-rewrite-url:
 	php ${BACK_DIR}/wp-cli.phar rewrite flush --allow-root
 
 remove-theme:
-	rm -R ${BACK_DIR}/web/wp/wp-content/themes/**
+	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
 
 code-fix:
 	cd ${BACK_DIR} && php vendor/bin/phpcbf

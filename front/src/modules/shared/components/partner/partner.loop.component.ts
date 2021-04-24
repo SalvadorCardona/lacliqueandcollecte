@@ -1,4 +1,4 @@
-import {AppComponent} from "App/types/custom.element";
+import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import {PartnerPost} from "App/types/partner.type";

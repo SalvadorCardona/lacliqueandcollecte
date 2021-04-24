@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/types/custom.element';
+import {AppComponent} from 'App/core/custom.element';
 import {ProductType} from "App/types/product.type";
 import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";

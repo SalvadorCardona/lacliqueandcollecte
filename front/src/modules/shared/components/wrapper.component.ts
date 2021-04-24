@@ -1,5 +1,5 @@
 import {property} from "lit-element/lib/decorators";
-import {AppComponent} from "App/types/custom.element";
+import {AppComponent} from "App/core/custom.element";
 import {html , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 

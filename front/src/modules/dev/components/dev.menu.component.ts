@@ -1,4 +1,4 @@
-import {AppComponent, getComponentSelector} from "App/types/custom.element";
+import {AppComponent, getComponentSelector} from "App/core/custom.element";
 import {html, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import {ModalService} from "App/core/modal.service";
@@ -57,6 +57,7 @@ export default class DevMenuComponent extends AppComponent {
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#home">Page d'accueil</a></li>
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
                 <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#produit">Produit</a></li>
+                <li><a @click="${this.openModal} class="dropdown-item" href="/ui/#search">Search</a></li>
                 <b>Les composants</b>
                     ${this.serviceList()}
                 <b>Les events</b>

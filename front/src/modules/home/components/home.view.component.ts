@@ -1,5 +1,10 @@
-import {AppComponent} from 'App/types/custom.element';
+import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
+import HomeHeaderComponent from "App/modules/home/components/home.header.component";
+import HomeArgumentativeComponent from "App/modules/home/components/home.argumentative.component";
+import HomeOtherDirectionComponent from "App/modules/home/components/home.other.direction.component";
+import HomeProductListComponent from "App/modules/home/components/home.product.list.component";
+import HomePartnerListComponent from "App/modules/home/components/home.partner.list.component";
 
 export default class HomeViewComponent extends AppComponent {
 
@@ -9,11 +14,11 @@ export default class HomeViewComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <app-home-header></app-home-header>
-            <app-home-argumentative></app-home-argumentative>
-            <app-home-other-direction></app-home-other-direction>
-            <app-home-product-list></app-home-product-list>
-            <app-home-partner-list></app-home-partner-list>
+            ${this.createElement(HomeHeaderComponent)}
+            ${this.createElement(HomeArgumentativeComponent)}
+            ${this.createElement(HomeOtherDirectionComponent)}
+            ${this.createElement(HomeProductListComponent)}
+            ${this.createElement(HomePartnerListComponent)}
         `;
     }
 }
