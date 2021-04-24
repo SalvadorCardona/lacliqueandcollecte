@@ -1,7 +1,13 @@
 import {AppComponent} from "App/core/custom.element";
 import {html , TemplateResult} from "lit-element";
+import {ProductType} from "App/types/product.type";
+import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 
 export default class SearchContentComponent extends AppComponent {
+
+    public constructor(private productList: ProductType[] = []) {
+        super();
+    }
 
     public static getComponentName(): string {
         return 'app-search-content';
@@ -9,7 +15,10 @@ export default class SearchContentComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <app-product-loop perPage="15" grid="3"></app-product-loop>
+            <div class="row row-cols-md-4">
+                ${this.productList.map(product => this.createElement(ProductCardComponent, {product: product}))}
+            </div>
         `;
     }
+
 }

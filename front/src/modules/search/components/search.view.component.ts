@@ -6,11 +6,15 @@ import {injector} from "App/core/container.service";
 import SearchService from "App/modules/search/service/search.service";
 import {ProductType} from "App/types/product.type";
 import {property} from "lit-element/lib/decorators";
+import {LoaderService} from "App/core/loader.service";
 
 export default class SearchViewComponent extends AppComponent {
 
     @injector(SearchService)
     private searchService: SearchService;
+
+    @injector(LoaderService)
+    private loaderService: LoaderService;
 
     @property({type: Array})
     private productList: ProductType[];
@@ -21,7 +25,10 @@ export default class SearchViewComponent extends AppComponent {
 
     public connectedCallback(): void {
         super.connectedCallback();
+        this.loaderService.show();
+
         this.searchService.onChange(state => {
+            this.loaderService.hide();
             this.productList = state;
         });
 
@@ -39,7 +46,7 @@ export default class SearchViewComponent extends AppComponent {
                         ${this.createElement(SearchLeftBarComponent)}
                     </div>
                     <div class="col-md-9">
-                        ${this.createElement(SearchContentComponent)}
+                        ${new SearchContentComponent(this.productList)}
                     </div>
                 </div>
             </div>

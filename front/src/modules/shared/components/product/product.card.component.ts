@@ -42,7 +42,8 @@ export default class ProductCardComponent extends AppComponent {
     }
 
     private getAttributeImage(images: Image[]): string {
-        if (!images.length) return '';
+
+        if (!images || !images.length) return '';
 
         const [image] = images;
 
@@ -51,7 +52,8 @@ export default class ProductCardComponent extends AppComponent {
 
 
     private getThumbnail(images: Array<Image>): string {
-        if (!images.length) return '';
+
+        if (!images || !images.length) return '';
 
         const imageSrc = images[0].src;
 

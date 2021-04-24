@@ -11,7 +11,7 @@ export default abstract class AbstractStore {
 
     public get state(): any|null
     {
-        return this.stateList.slice(-1);
+        return this.stateList[this.stateList.length -1];
     }
 
     protected dispatch(): void
@@ -21,7 +21,6 @@ export default abstract class AbstractStore {
     }
 
     public onChange(callback: (state: any|null) => void): void {
-        console.log(callback);
         this.subscriberList.push(callback);
     }
 }
