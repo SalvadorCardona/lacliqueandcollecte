@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/types/custom.element';
+import {AppComponent} from 'App/core/custom.element';
 import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
 import image from "Media/shared/pattern-footer.svg";
 

@@ -1,3 +1,4 @@
+import {Module} from "App/types/module.type";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import ModalProductComponent from "App/modules/shared/components/modal.product.component";
 import ModalComponent from "App/modules/shared/components/modal.component";
@@ -12,20 +13,30 @@ import HeaderCartComponent from "App/modules/shared/components/header/header.car
 import FooterComponent from "App/modules/shared/components/footer/footer.component";
 import PartnerCardComponent from "App/modules/shared/components/partner/partner.card.component";
 import PartnerLoopComponent from "App/modules/shared/components/partner/partner.loop.component";
+import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
+import InputRadioComponent from "App/modules/shared/components/form/input.radio.component";
+import InputSelectComponent from "App/modules/shared/components/form/input.select.component";
+import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 
-export default [
-    WrapperComponent,
-    ModalProductComponent,
-    ModalComponent,
-    ModalCartComponent,
-    LoaderComponent,
-    ProductLoopComponent,
-    IconComponent,
-    ButtonComponent,
-    ProductCardComponent,
-    HeaderComponent,
-    HeaderCartComponent,
-    FooterComponent,
-    PartnerCardComponent,
-    PartnerLoopComponent
-];
+export default {
+    components: [
+        WrapperComponent,
+        ModalProductComponent,
+        ModalComponent,
+        ModalCartComponent,
+        LoaderComponent,
+        ProductLoopComponent,
+        IconComponent,
+        ButtonComponent,
+        ProductCardComponent,
+        HeaderComponent,
+        HeaderCartComponent,
+        FooterComponent,
+        PartnerCardComponent,
+        PartnerLoopComponent,
+        InputBaseComponent,
+        InputRadioComponent,
+        InputSelectComponent,
+        InputCheckboxComponent,
+    ]
+} as Module;

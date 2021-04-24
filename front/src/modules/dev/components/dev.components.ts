@@ -1,4 +1,4 @@
-import {AppComponent} from "App/types/custom.element";
+import {AppComponent} from "App/core/custom.element";
 import {html, property , TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
@@ -30,6 +30,8 @@ export default class DevComponent extends AppComponent {
         switch (this.route) {
             case '#home':
                 return '<app-home-view></app-home-view>';
+            case '#search':
+                return '<app-search-view></app-search-view>';
             case '#partner':
                 return '<app-partner-view partnerPostId="106"></app-partner-view>';
             case '#produit':

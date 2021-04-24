@@ -1,0 +1,17 @@
+app-search-left-bar {
+  .head-categories {
+    cursor: pointer;
+    app-icon {
+      transform: rotate(90deg);
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    &.closed {
+      app-icon {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

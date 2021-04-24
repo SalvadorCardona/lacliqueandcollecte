@@ -1,11 +1,11 @@
 import {ContainerService} from "App/core/container.service";
-import services from "App/app.services";
-import components from "App/app.components";
+import modules from "App/app.modules";
+import {Component, Service} from "App/types/module.type";
 
 export default class Kernel {
     public static self: Kernel;
 
-    public static components = components;
+    public static components: Component[];
 
     private containerService: ContainerService;
 
@@ -19,10 +19,12 @@ export default class Kernel {
     }
 
     public setup(): void {
+        Kernel.components = this.extractToModule('components');
+
         this.containerService = ContainerService.get();
 
         // @ts-ignore
-        this.containerService.serviceList = services;
+        this.containerService.serviceList = this.extractToModule('services');
 
         this.containerService.loadService();
         
@@ -31,6 +33,12 @@ export default class Kernel {
         if (loader) {
             loader.remove();
         }
+    }
 
+    private extractToModule(key: 'services'|'components'): Array<Service|Component> {
+        const modulesContent = [];
+        modules.forEach(module => module[key]?.forEach(moduleContent => modulesContent.push(moduleContent)));
+
+        return modulesContent;
     }
 }

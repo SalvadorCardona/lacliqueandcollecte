@@ -38,7 +38,7 @@ wp-rewrite-url:
 	php ${BACK_DIR}/wp-cli.phar rewrite flush --allow-root
 
 remove-theme:
-	rm -R ${BACK_DIR}/web/wp/wp-content/themes/**
+	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
 
 code-fix:
 	cd ${BACK_DIR} && php vendor/bin/phpcbf

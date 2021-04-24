@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/types/custom.element';
+import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
 
 export default class HomeProductListComponent extends AppComponent {
@@ -13,9 +13,7 @@ export default class HomeProductListComponent extends AppComponent {
                 mt-5
                 p-5
                 text-center">
-                <h2 class="title
-                    text-primary
-                    text-uppercase">Nos produits</h2>
+                <h2 class="title-border">Nos produits</h2>
                 <app-product-loop></app-product-loop>
             </div>
         `;

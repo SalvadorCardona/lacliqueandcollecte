@@ -1,4 +1,4 @@
-import {AppComponent, createElement} from "App/types/custom.element";
+import {AppComponent, createElement} from "App/core/custom.element";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
 import {LoaderService} from "App/core/loader.service";
