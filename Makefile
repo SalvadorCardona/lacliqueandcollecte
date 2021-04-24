@@ -6,6 +6,7 @@ BACK_DIR = ./back
 install: install-php database-import install-asset install-common remove-theme
 
 install-common:
+        rm -Rf back/web/app/themes/hello-theme-master
 	ln -sF $(shell pwd)/back/theme $(shell pwd)/back/web/app/themes/hello-theme-master
 
 install-asset:
