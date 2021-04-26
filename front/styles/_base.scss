@@ -53,11 +53,11 @@ li {
 a {
   background-color: transparent;
   text-decoration: none;
-  color: $secondary;
+  color: $primary;
 
   &:hover,
   &:active {
-    color: $primary;
+    color: $secondary;
   }
 
   &:not([href]):not([tabindex]) {
