@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Partner;
+namespace App\Infrastructure\Partner\Action;
 
+use App\Infrastructure\Partner\Partner;
 use App\Infrastructure\Wordpress\Action\ActionInterface;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WordPlate\Acf\Fields\Email;
@@ -116,7 +117,8 @@ class AddPostTypePartnerAction implements ActionInterface
             'rewrite_hierarchical' => false,
             'rewrite' => true
         ];
-        register_taxonomy('city', [Partner::POST_TYPE_NAME], $args);
+
+        register_taxonomy('city', [Partner::POST_TYPE_NAME, 'product'], $args);
     }
 
     public static function getAction(): string

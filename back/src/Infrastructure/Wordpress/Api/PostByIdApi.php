@@ -19,7 +19,7 @@ class PostByIdApi extends AbstractApiController
     {
         $wpdb = $this->wordpressMiddleware->getWpdb();
 
-        $post = (int)$wpdb->get_var($wpdb->prepare("
+        $post = (int) $wpdb->get_var($wpdb->prepare("
                 SELECT ID FROM $wpdb->posts WHERE id = %d", $this->request->get_param('id')));
         if ($post) {
             return get_post($post, 'ARRAY_A');

@@ -10,7 +10,7 @@ web/app/upgrade
 web/parcel-manifest.json
 composer.phar
 assets/mix-manifest.json
-/web/app/themes/hello-theme-master
+web/app/themes/hello-theme-master
 # Composer
 /vendor
 /web/app/languages/*.json

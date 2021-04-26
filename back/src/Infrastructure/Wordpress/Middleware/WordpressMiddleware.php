@@ -59,4 +59,14 @@ class WordpressMiddleware
     {
         return new WP_Query($query);
     }
+
+    public function addAction(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
+    {
+        add_action( $tag, $functionToAdd, $priority = 10, $acceptedArgs);
+    }
+
+    public function addFilter(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
+    {
+        add_filter( $tag, $functionToAdd, $priority = 10, $acceptedArgs);
+    }
 }

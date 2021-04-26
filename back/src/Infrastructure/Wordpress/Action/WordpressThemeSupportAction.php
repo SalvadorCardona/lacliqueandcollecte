@@ -75,7 +75,7 @@ class WordpressThemeSupportAction implements ActionInterface
             return [Partner::POST_TYPE_NAME, ...$args];
         }, 1);
 
-        add_filter('woocommerce_store_api_disable_nonce_check', fn() => true);
+//        add_filter('woocommerce_store_api_disable_nonce_check', fn() => true);
     }
 
     public static function getAction(): string
