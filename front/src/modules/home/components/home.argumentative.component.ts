@@ -8,6 +8,8 @@ interface content {
     image: string;
     title: string;
     text: string;
+    link: string;
+    textlink: string;
 }
 
 export default class HomeArgumentativeComponent extends AppComponent {
@@ -20,17 +22,23 @@ export default class HomeArgumentativeComponent extends AppComponent {
         {
             image: argument1,
             title: 'artisana local',
-            text: 'Trouvez les artisans qui sont proches de chez vous, et profitez de leur savoir-faire. Recherchez vos produits par ville.'
+            text: 'Trouvez les artisans qui sont proches de chez vous, et profitez de leur savoir-faire. Recherchez vos produits par ville.',
+            link: '/a-propos',
+            textlink: 'En savoir plus ici...'
         },
         {
             image: argument2,
             title: 'produits d\'exception',
-            text: 'Accédez à un catalogue de produits artisanaux de qualité, remplissez votre panier, nous nous occupons du reste.'
+            text: 'Accédez à un catalogue de produits artisanaux de qualité, remplissez votre panier, nous nous occupons du reste.',
+            link: '/a-propos',
+            textlink: 'En savoir plus ici...'
         },
         {
             image: argument3,
             title: 'partenariat',
-            text: 'Zartisana aide les artisans locaux à gagner en visibilité. Découvrez les perles cachées de votre région !'
+            text: 'Zartisana aide les artisans locaux à gagner en visibilité. Découvrez les perles cachées de votre région !',
+            link: '/a-propos',
+            textlink: 'En savoir plus ici...'
         }
     ] as content[];
 
@@ -43,6 +51,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
                 <h4 class="text-uppercase">${element.title}</h4>
                 <hr>
                 <p>${element.text}</p>
+                <a href="${element.link}"> ${element.textlink} </a>
             </div>
         `;
     }
