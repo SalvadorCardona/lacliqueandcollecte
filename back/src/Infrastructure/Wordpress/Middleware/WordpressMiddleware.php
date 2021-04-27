@@ -62,11 +62,16 @@ class WordpressMiddleware
 
     public function addAction(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
     {
-        add_action( $tag, $functionToAdd, $priority = 10, $acceptedArgs);
+        add_action($tag, $functionToAdd, $priority = 10, $acceptedArgs);
     }
 
     public function addFilter(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
     {
-        add_filter( $tag, $functionToAdd, $priority = 10, $acceptedArgs);
+        add_filter($tag, $functionToAdd, $priority = 10, $acceptedArgs);
+    }
+
+    public function registerTaxonomy(string $taxonomyName, array $types = [], array $args = []): void
+    {
+        register_taxonomy($taxonomyName, $types, $args);
     }
 }

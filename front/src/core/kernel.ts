@@ -27,12 +27,6 @@ export default class Kernel {
         this.containerService.serviceList = this.extractToModule('services');
 
         this.containerService.loadService();
-        
-        const loader:HTMLElement = document.querySelector('#loader-application-not-loaded');
-
-        if (loader) {
-            loader.remove();
-        }
     }
 
     private extractToModule(key: 'services'|'components'): Array<Service|Component> {

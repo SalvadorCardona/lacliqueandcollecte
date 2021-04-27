@@ -7,6 +7,12 @@ export default class ClientService implements OnInit {
     public http: AxiosInstance;
 
     public send(method: Method, route: string, data: any = {}): Promise<AxiosResponse> {
+        if (method.toLowerCase() === 'get') {
+            data = {
+                params: data
+            }
+        }
+
         return this.http[method](route, data);
     }
 

@@ -1,16 +1,16 @@
 import AbstractStore from "App/core/abstract.store";
 import {injector} from "App/core/container.service";
-import ProductClient from "App/core/client/product.client";
 import {ProductType} from "App/types/product.type";
+import SearchClient from "App/core/client/search.client";
 
 export default class SearchService extends AbstractStore {
-    @injector(ProductClient)
-    private productClient: ProductClient;
+    @injector(SearchClient)
+    private productClient: SearchClient;
 
     protected stateList: Array<ProductType[]> = [];
 
     public search(): void {
-        this.productClient.getProducts({})
+        this.productClient.search()
             .then(productList => this.state = productList);
     }
 }

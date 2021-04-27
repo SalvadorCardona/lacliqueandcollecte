@@ -57,4 +57,9 @@ abstract class AbstractApiController
     {
         return true;
     }
+
+    public function getArgs(): array
+    {
+        return [];
+    }
 }

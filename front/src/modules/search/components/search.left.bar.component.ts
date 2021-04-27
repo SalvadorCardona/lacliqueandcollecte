@@ -9,6 +9,7 @@ interface ItemSearch {
 }
 
 interface CategorySearch {
+    categoryLabel: string
     categoryName: string
     itemsSearch: ItemSearch[]
 }
@@ -19,7 +20,8 @@ export default class SearchLeftBarComponent extends AppComponent {
 
     private categorySearchList: CategorySearch[] = [
         {
-            categoryName: 'Catégorie',
+            categoryLabel: 'Catégorie',
+            categoryName: 'categorie',
             itemsSearch: [
                 {
                     label: 'Brasserie',
@@ -39,7 +41,8 @@ export default class SearchLeftBarComponent extends AppComponent {
             ]
         },
         {
-            categoryName: 'Tri',
+            categoryLabel: 'Tri',
+            categoryName: 'tri',
             itemsSearch: [
                 {
                     label: 'Pertinant',
@@ -102,7 +105,7 @@ export default class SearchLeftBarComponent extends AppComponent {
                 border-radius
                 d-flex
                 justify-content-between">
-                <span class="text-white fw-bold fs-5">${categorySearch.categoryName}</span>
+                <span class="text-white fw-bold fs-5">${categorySearch.categoryLabel}</span>
                 <app-icon color="white" icon="biChevronCompactRight"></app-icon>
             </div>
             <div class="p-2">

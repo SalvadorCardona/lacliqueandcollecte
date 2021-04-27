@@ -16,6 +16,7 @@ import partnerModule from "App/modules/partner/partner.modules";
 import devModule from "App/modules/dev/dev.modules";
 import homeModule from "App/modules/home/home.modules";
 import searchModule from "App/modules/search/search.modules";
+import SearchClient from "App/core/client/search.client";
 
 export default [
     homeModule,
@@ -36,7 +37,8 @@ export default [
             ProductClient,
             ConfigurationService,
             ApplicationClient,
-            PartnerClient
+            PartnerClient,
+            SearchClient
         ],
     }
 ] as Module[];

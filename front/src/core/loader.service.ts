@@ -12,7 +12,15 @@ export class LoaderService implements OnInit {
     private eventService: EventService;
 
     public onInit(): void {
-        this.eventService.addSubscriber(events.SERVICE_LOADED, () => this.setup());
+        this.eventService.addSubscriber(events.SERVICE_LOADED, () => {
+            this.setup();
+
+            const loader:HTMLElement = document.querySelector('#loader-application-not-loaded');
+
+            if (loader) {
+                loader.remove();
+            }
+        });
     }
 
     private setup(): void {

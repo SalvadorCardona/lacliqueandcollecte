@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Partner;
+namespace App\Infrastructure\Partner\Formatter;
 
 // TODO: I Need Unit Test
+use App\Infrastructure\Partner\Partner;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WP_Post;
 

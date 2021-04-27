@@ -18,6 +18,9 @@ export const environment = {
         partner: {
             byId: 'wp/app/partner/$id',
             all: 'wp/app/partners',
+        },
+        search: {
+            all: 'wp/app/search',
         }
     }
 };

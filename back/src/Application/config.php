@@ -10,6 +10,7 @@ use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
 use App\Infrastructure\Search\Api\SearchApi;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
+use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
 use App\Infrastructure\Wordpress\Action\WoocommerceSupportAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
@@ -37,7 +38,8 @@ return [
         LoadApiAction::class,
         GetPartnerByIdApi::class,
         AddPostTypePartnerAction::class,
-        SearchApi::class
+        SearchApi::class,
+        AddCityAction::class
     ],
     Logger::class => DI\factory(function (ContainerInterface $c) {
         return Logger::create($c->get('logger.name'), $c->get('logger.file'));
