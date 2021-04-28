@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Infrastructure\Search\Api;
@@ -6,6 +7,7 @@ namespace App\Infrastructure\Search\Api;
 use App\Infrastructure\Search\Entity\SearchRequest;
 use App\Infrastructure\Search\Repository\PostRepository;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
+use App\Infrastructure\Wordpress\Api\HttpResponse;
 
 class SearchApi extends AbstractApiController
 {
@@ -13,21 +15,13 @@ class SearchApi extends AbstractApiController
     {
     }
 
-    public function __invoke(): mixed
+    public function __invoke(): HttpResponse
     {
-        $query = $this->request->get_param('query');
-        $orderBy = $this->request->get_param('orderBy');
-        $orderDirection = $this->request->get_param('orderDirection');
-        $filters = json_decode($this->request->get_param('filters'), true);
+        $params = json_decode($this->request->get_param('params'), true);
 
-        $searchRequest = new SearchRequest(
-            $query,
-            $orderBy,
-            $orderDirection,
-            $filters,
-        );
+        $search = $this->postRepository->search(SearchRequest::fromArray($params));
 
-        return $this->postRepository->search($searchRequest);
+        return $this->response($search);
     }
 
     public function getEndPoint(): string
@@ -38,23 +32,9 @@ class SearchApi extends AbstractApiController
     public function getArgs(): array
     {
         return [
-            'query' => [
-                'required' => false
-            ],
-            'orderBy' => [
-                'required' => false
-            ],
-            'orderDirection' => [
-                'required' => false,
-                'enum' => ['desc, asc'],
-            ],
-            'filters' => [
+            'params' => [
                 'required' => false,
                 'type' => 'JSON',
-            ],
-            'offsetLimit' => [
-                'required' => false,
-                'type' => 'integer',
             ],
         ];
     }

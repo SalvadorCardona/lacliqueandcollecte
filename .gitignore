@@ -15,3 +15,7 @@ dist
 
 yarn-error.log
 
+
+back/web/app/themes/hello-theme-master
+
+back/var/

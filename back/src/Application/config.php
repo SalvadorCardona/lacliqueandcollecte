@@ -14,8 +14,6 @@ use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
 use App\Infrastructure\Wordpress\Action\WoocommerceSupportAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
-use App\Infrastructure\Wordpress\Api\PostByIdApi;
-use App\Infrastructure\Wordpress\Api\ProductsByAuthorIdApi;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use Psr\Container\ContainerInterface;
 
@@ -28,8 +26,6 @@ return [
         ActionManager::class,
         ApiLoaderManager::class,
         FilterManager::class,
-        PostByIdApi::class,
-        ProductsByAuthorIdApi::class,
         WordpressThemeSupportAction::class,
         AddAssetsAction::class,
         GetPartnersApi::class,

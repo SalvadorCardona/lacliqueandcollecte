@@ -1,6 +1,6 @@
 import {AppComponent} from "App/core/custom.element";
 
-export interface Module {
+export default interface Module {
     services?: Array<Service>;
     components?: Array<Component>;
 }

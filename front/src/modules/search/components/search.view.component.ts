@@ -7,6 +7,7 @@ import SearchService from "App/modules/search/service/search.service";
 import {ProductType} from "App/types/product.type";
 import {property} from "lit-element/lib/decorators";
 import {LoaderService} from "App/core/loader.service";
+import {SearchParams} from "App/core/client/search.client";
 
 export default class SearchViewComponent extends AppComponent {
 
@@ -18,6 +19,9 @@ export default class SearchViewComponent extends AppComponent {
 
     @property({type: Array})
     private productList: ProductType[];
+
+    @property({type: Object})
+    private searchParams: SearchParams;
 
     public static getComponentName(): string {
         return 'app-search-view';

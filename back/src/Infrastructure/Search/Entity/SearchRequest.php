@@ -4,26 +4,28 @@ namespace App\Infrastructure\Search\Entity;
 
 class SearchRequest
 {
-    public ?string $query;
-    public ?string $orderBy;
-    public ?string $orderDirection;
-    /**
-     * @var array<string, mixed>
-     */
-    public ?array $filters;
+    private ?array $params;
 
-    /**
-     * SearchRequest constructor.
-     * @param string|null $query
-     * @param string|null $orderBy
-     * @param string|null $orderDirection
-     * @param mixed[]|null $filters
-     */
-    public function __construct(?string $query, ?string $orderBy, ?string $orderDirection, ?array $filters)
+    public function setParams(?array $params): self
     {
-        $this->query = $query;
-        $this->orderBy = $orderBy;
-        $this->orderDirection = $orderDirection;
-        $this->filters = $filters;
+        $this->params = $params;
+
+        return $this;
+    }
+
+    public function getTaxonomies(): array {
+
+    }
+
+    public function getMetasData(): array {
+
+    }
+
+    public function getOrderBy(): string {
+
+    }
+
+    public function getOrderDirection: string {
+
     }
 }

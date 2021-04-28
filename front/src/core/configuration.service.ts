@@ -3,7 +3,7 @@ import {injector, OnInit} from "App/core/container.service";
 import {MiddlewareConfigurationType} from "App/types/middleware.configuration.type";
 import {events, EventService} from "App/core/event.service";
 
-export class ConfigurationService implements OnInit {
+export default class ConfigurationService implements OnInit {
     @injector(ApplicationClient)
     private applicationClient: ApplicationClient;
 

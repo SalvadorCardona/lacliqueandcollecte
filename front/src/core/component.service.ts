@@ -1,10 +1,10 @@
 import {AppComponent, getComponentSelector} from "App/core/custom.element";
-import {events, EventService} from "App/core/event.service";
+import EventService, {events} from "App/core/event.service";
 import {injector} from "App/core/container.service";
 import Kernel from "App/core/kernel";
 
-export class ComponentService {
-    private _components: Array<typeof AppComponent>;
+export default class ComponentService {
+    private _components: Array<any>;
 
     @injector(EventService)
     private eventService: EventService;
@@ -20,7 +20,6 @@ export class ComponentService {
     public loadComponents(): void {
         this._components.forEach(Component => {
             // @ts-ignore
-
             customElements.define(getComponentSelector(Component), Component);
         });
     }

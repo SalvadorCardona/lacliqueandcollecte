@@ -18,7 +18,7 @@ class WoocommerceSupportAction implements ActionInterface
             add_filter('woocommerce_enqueue_styles', '__return_empty_array');
             add_filter('woocommerce_enqueue_scripts', '__return_empty_array');
         }
-        
+
         add_filter('woocommerce_rest_check_permissions', function () {
             //return wp_get_current_user();
             return new WP_User(1);
