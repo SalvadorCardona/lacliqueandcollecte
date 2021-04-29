@@ -1,12 +1,13 @@
 app-home-view {
-  .title {
-    padding-bottom: 10px;
-    border-bottom: 3px solid $primary;
-    display: inline-block;
-    margin-bottom: 30px;
+  > * {
+    display: block;
+    &:nth-child(2n+1) {
+      background: $neutral-1;
+    }
+    &:nth-child(2n+2) {
+      background: $white;
+    }
   }
-
-
   @import 'home-header';
   @import 'home-argumentative';
   @import 'home-other-direction';

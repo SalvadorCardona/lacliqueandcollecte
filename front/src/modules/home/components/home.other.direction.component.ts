@@ -13,7 +13,7 @@ export default class HomeOtherDirectionComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div class="container-fluid mt-5">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="with-background col-md-4" style="background-image: url('${image2}')"></div>
                     <div class="without-background col-md-4" >
