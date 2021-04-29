@@ -6,11 +6,7 @@ on:
       - master
   pull_request:
 
-parameters:
-	paths:
-    - back
-
-    jobs:
+jobs:
   build-test:
     runs-on: ubuntu-latest
 
@@ -21,4 +17,5 @@ parameters:
       with:
         php_version: 8.0
         memory_limit: 256M
+        path: back/
 
