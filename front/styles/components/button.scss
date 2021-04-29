@@ -1,12 +1,5 @@
 app-icon {
-  &.primary {
-    path {
-      color: $primary
-    }
-  }
-  &.white {
-    path {
-      color: $white
-    }
-  }
+  &.primary {path {color: $primary;}}
+
+  &.white {path { color: $white; }}
 }

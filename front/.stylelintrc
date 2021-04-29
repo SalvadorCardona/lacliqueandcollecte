@@ -1,8 +1,10 @@
 {
   "rules": {
     "color-no-invalid-hex": true,
-    "color-hex-case": "upper"
-
+    "color-hex-case": "upper",
+    "selector-no-qualifying-type": null,
+    "max-nesting-depth": null
   },
-  "extends": "stylelint-config-standard"
+
+  "extends": "stylelint-config-sass-guidelines"
 }

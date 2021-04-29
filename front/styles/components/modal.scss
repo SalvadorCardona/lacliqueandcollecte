@@ -1,41 +1,42 @@
 app-modal {
   .modal-background {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 999;
-    left: 0;
-    top: 0;
-    display: inline-flex;
     align-items: end;
-    justify-content: flex-end;
     animation: slide-up 0.5s linear;
+    background: rgba(0, 0, 0, 0.4);
+    display: inline-flex;
+    height: 100%;
+    justify-content: flex-end;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
     @keyframes slide-up {
       0% {
         opacity: 0;
         transform: translateX(20px);
       }
+
       100% {
+        display: none;
         opacity: 0.4;
         transform: translateX(0);
-        display: none;
       }
     }
   }
 
   .modal-content {
-    height: 100%;
     border-radius: unset;
+    height: 100%;
 
     .modal-header {
-      height: $header-size;
-      padding: 15px;
-      text-align: right;
-      display: flex;
-      justify-content: space-between;
       align-content: center;
       color: white;
+      display: flex;
+      height: $header-size;
+      justify-content: space-between;
+      padding: 15px;
+      text-align: right;
 
       app-icon {
         cursor: pointer;
@@ -43,8 +44,8 @@ app-modal {
         width: 25px;
 
         svg {
-          width: auto;
           height: 32px;
+          width: auto;
         }
 
         path {

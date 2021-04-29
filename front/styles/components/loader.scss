@@ -1,31 +1,33 @@
-app-loader, #loader-application-not-loaded {
+app-loader,
+#loader-application-not-loaded {
   &.loader-fixed {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: 999;
-    left: 0;
-    top: 0;
-    display: inline-flex;
     align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-flex;
+    height: 100%;
     justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
 
   .donutSpinner {
-    display: inline-block;
-    border: 4px solid hsl(222, 100%, 95%);;
+    animation: donut-spin 1.2s linear infinite;
+    border: 4px solid hsl(222, 100%, 95%);
     border-left-color: $primary;
     border-radius: 50%;
-    width: 30px;
+    display: inline-block;
     height: 30px;
-    animation: donut-spin 1.2s linear infinite;
+    width: 30px;
   }
 
   @keyframes donut-spin {
     0% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(360deg);
     }

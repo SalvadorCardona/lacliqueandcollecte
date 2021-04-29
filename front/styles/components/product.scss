@@ -1,11 +1,14 @@
 .type-product {
   padding: 0 0 15px;
+
   a {
-    width: 100%;
     margin-bottom: 15px;
+    width: 100%;
+
     img {
-      width: 100%;
       @include app-transition();
+      width: 100%;
+
       &:hover {
         transform: scale(1.1);
       }
