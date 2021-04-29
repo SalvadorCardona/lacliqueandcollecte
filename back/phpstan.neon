@@ -1,11 +1,11 @@
 parameters:
     level: 5
     paths:
-        - src
+        - ./src
     scanFiles:
-      - web/wp/wp-includes/plugin.php
+      - ./web/wp/wp-includes/plugin.php
     scanDirectories:
-        - web/wp
-        - web/app
-
+        - ./web/wp
+        - ./web/app
+        - ./vendor
 
