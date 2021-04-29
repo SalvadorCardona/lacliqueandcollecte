@@ -47,4 +47,5 @@ code-fix:
 lint:
 	cd ${BACK_DIR} && php vendor/bin/phpcs
 	cd ${BACK_DIR} && php vendor/bin/phpstan analyse
-	yarn --cwd front lint
+	yarn --cwd front eslint
+	yarn --cwd front stylelint
