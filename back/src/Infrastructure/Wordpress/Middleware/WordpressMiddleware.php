@@ -17,7 +17,7 @@ class WordpressMiddleware
 
     public function trans(string $trans): string
     {
-        return __($trans, $this->appName);
+        return $trans;
     }
 
     public function getWpdb(): wpdb
