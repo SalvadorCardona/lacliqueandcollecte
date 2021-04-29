@@ -1,7 +1,16 @@
 app-home-view {
+  .title {
+    padding-bottom: 10px;
+    border-bottom: 3px solid $primary;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+
+
   @import 'home-header';
   @import 'home-argumentative';
   @import 'home-other-direction';
   @import 'home-partner-list';
   @import 'home-product-list';
 }
+

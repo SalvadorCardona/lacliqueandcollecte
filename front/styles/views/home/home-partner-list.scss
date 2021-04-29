@@ -1,9 +1,11 @@
 app-home-partner-list {
+  display: block;
+  background-color: $white;
+
   app-partner-card {
     & > div {
       background-size: cover;
       height: 300px;
-
       img {
         width: 100px;
         height: 100px;
