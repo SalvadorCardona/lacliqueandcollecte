@@ -1,7 +1,17 @@
 app-home-view {
+  > * {
+    display: block;
+    &:nth-child(2n+1) {
+      background: $neutral-1;
+    }
+    &:nth-child(2n+2) {
+      background: $white;
+    }
+  }
   @import 'home-header';
   @import 'home-argumentative';
   @import 'home-other-direction';
   @import 'home-partner-list';
   @import 'home-product-list';
 }
+

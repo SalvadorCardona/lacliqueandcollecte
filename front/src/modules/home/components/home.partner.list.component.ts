@@ -10,7 +10,6 @@ export default class HomePartnerListComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div class="container
-                mt-5
                 p-5
                 text-center">
                 <h2 class="title-border">Partenaires</h2>

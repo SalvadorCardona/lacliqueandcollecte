@@ -58,7 +58,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div class="container mt-5">
+            <div class="container p-5">
                 <div class="row">
                    ${this.contentList.map((element, key) => this.listRender(element, key))}
                 </div>

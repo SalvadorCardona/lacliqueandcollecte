@@ -17,8 +17,8 @@ export default class HomeViewComponent extends AppComponent {
             ${this.createElement(HomeHeaderComponent)}
             ${this.createElement(HomeArgumentativeComponent)}
             ${this.createElement(HomeOtherDirectionComponent)}
-            ${this.createElement(HomeProductListComponent)}
             ${this.createElement(HomePartnerListComponent)}
+            ${this.createElement(HomeProductListComponent)}
         `;
     }
 }
