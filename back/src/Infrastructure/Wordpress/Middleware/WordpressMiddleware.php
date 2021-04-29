@@ -9,7 +9,7 @@ use WP_Post;
 use WP_Query;
 use wpdb;
 
-class WordpressMiddleware extends WP_RESPONSE
+class WordpressMiddleware
 {
     public function __construct(private string $appName)
     {
