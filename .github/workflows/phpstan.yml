@@ -3,12 +3,12 @@ on:
   push:
     branches:
       - master
-     pull_request:
-       
+  pull_request:
+
 defaults:
   run:
     working-directory: back
-    
+
 jobs:
   build-test:
     runs-on: ubuntu-latest
