@@ -1,5 +1,5 @@
 import {AppComponent} from "App/core/custom.element";
-import {html , TemplateResult} from "lit-element";
+import {html, TemplateResult} from "lit-element";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 
 interface ItemSearch {

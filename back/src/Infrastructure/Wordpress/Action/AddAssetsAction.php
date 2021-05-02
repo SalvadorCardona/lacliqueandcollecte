@@ -11,7 +11,7 @@ class AddAssetsAction implements ActionInterface
     /**
      * AddAssetsAction constructor.
      */
-    public function __construct(private string $publicDir)
+    public function __construct(private string $publicDir, private MiddlewareConfigurationFactory $middlewareConfigurationFactory)
     {
     }
 
@@ -26,7 +26,7 @@ class AddAssetsAction implements ActionInterface
             wp_localize_script(
                 'app-js',
                 'middlewareConfiguration',
-                (array) MiddlewareConfigurationFactory::format()
+                (array) $this->middlewareConfigurationFactory->format()
             );
         }
     }

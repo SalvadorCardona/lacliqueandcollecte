@@ -1,11 +1,11 @@
 import {AppComponent} from 'App/core/custom.element';
 import {injector} from "App/core/container.service";
-import {ModalService} from "App/core/modal.service";
+import ModalService from "App/core/modal.service";
 import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {html, property, TemplateResult} from 'lit-element';
 import {ButtonType} from "App/modules/shared/components/button.component";
-import {events, EventService} from "App/core/event.service";
+import EventService, {events} from "App/core/event.service";
 
 export default class ModalCartComponent extends AppComponent {
 

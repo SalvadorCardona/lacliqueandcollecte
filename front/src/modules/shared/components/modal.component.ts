@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/core/custom.element';
-import {html, property , TemplateResult} from 'lit-element';
+import {html, property, TemplateResult} from 'lit-element';
 
 export default class ModalComponent extends AppComponent {
 

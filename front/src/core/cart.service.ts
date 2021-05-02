@@ -1,6 +1,6 @@
 import {injector, OnInit} from "App/core/container.service";
 import {CartType} from "App/types/cart.type";
-import {events, EventService} from "App/core/event.service";
+import EventService, {events} from "App/core/event.service";
 import CartClient from "App/core/client/cart.client";
 
 export default class CartService implements OnInit {

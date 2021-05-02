@@ -1,6 +1,6 @@
 import {AppComponent} from 'App/core/custom.element';
 import {property} from 'lit-element/lib/decorators';
-import {html , TemplateResult} from 'lit-element';
+import {html, TemplateResult} from 'lit-element';
 import {PartnerPost} from "App/types/partner.type";
 
 export default class PartnerCardComponent extends AppComponent {

@@ -1,7 +1,7 @@
 import {AppComponent} from 'App/core/custom.element';
 import {PostType} from "App/types/post.type";
 import {property} from 'lit-element/lib/decorators';
-import {html , TemplateResult} from 'lit-element';
+import {html, TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
 import ConfigurationService from "App/core/configuration.service";
 

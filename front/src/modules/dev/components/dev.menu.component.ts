@@ -1,9 +1,9 @@
 import {AppComponent, getComponentSelector} from "App/core/custom.element";
 import {html, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
-import {ModalService} from "App/core/modal.service";
-import {ComponentService} from "App/core/component.service";
-import {events, EventService} from "App/core/event.service";
+import ModalService from "App/core/modal.service";
+import ComponentService from "App/core/component.service";
+import EventService, {events} from "App/core/event.service";
 import {property} from "lit-element/lib/decorators";
 import DevComponent from "App/modules/dev/components/dev.components";
 

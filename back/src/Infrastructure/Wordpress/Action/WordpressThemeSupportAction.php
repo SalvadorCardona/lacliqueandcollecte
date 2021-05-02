@@ -10,12 +10,7 @@ class WordpressThemeSupportAction implements ActionInterface
 {
     public function __invoke(): void
     {
-        /**
-         * Used for that Woocommerce use index.php and not single-product.php
-         */
-        add_filter('woocommerce_template_loader_files', function ($string) {
-            return is_product() ? ['index.php'] : [];
-        });
+
 
         add_theme_support("post-thumbnails");
 

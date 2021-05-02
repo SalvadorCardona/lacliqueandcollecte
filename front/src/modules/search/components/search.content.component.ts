@@ -1,5 +1,5 @@
 import {AppComponent} from "App/core/custom.element";
-import {html , TemplateResult} from "lit-element";
+import {html, TemplateResult} from "lit-element";
 import {ProductType} from "App/types/product.type";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 

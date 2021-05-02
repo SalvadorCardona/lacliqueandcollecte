@@ -1,4 +1,4 @@
-import EventService ,{events} from "App/core/event.service";
+import EventService, {events} from "App/core/event.service";
 import ConfigurationService from "App/core/configuration.service";
 
 export interface OnInit {

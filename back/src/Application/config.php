@@ -9,11 +9,12 @@ use App\Infrastructure\Partner\Action\AddPostTypePartnerAction;
 use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
 use App\Infrastructure\Search\Api\SearchApi;
+use App\Infrastructure\Woocommerce\Action\WoocommerceSupportAction;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
-use App\Infrastructure\Wordpress\Action\WoocommerceSupportAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
+use App\Infrastructure\Wordpress\Middleware\MiddlewareConfigurationFactory;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use Psr\Container\ContainerInterface;
 
@@ -22,6 +23,7 @@ return [
     'logger.name' => 'default_logger',
     'logger.file' => __DIR__ . '../../var/journal.log',
     'dir.public' => __DIR__ . '/../../web',
+    'publicDir' => __DIR__ . '/../../web',
     'resourcesList' => [
         ActionManager::class,
         ApiLoaderManager::class,
@@ -44,9 +46,6 @@ return [
         return new ResourcesLoader($c, $c->get('resourcesList'));
     }),
     AddAssetsAction::class => DI\factory(function (ContainerInterface $c) {
-        return new AddAssetsAction($c->get('dir.public'));
-    }),
-    WordpressMiddleware::class => DI\factory(function (ContainerInterface $c) {
-        return new WordpressMiddleware($c->get('app.name'));
-    }),
+        return new AddAssetsAction($c->get('dir.public'), $c->get(MiddlewareConfigurationFactory::class));
+    })
 ];

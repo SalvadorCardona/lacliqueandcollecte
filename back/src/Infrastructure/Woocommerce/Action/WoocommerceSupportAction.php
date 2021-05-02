@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Infrastructure\Wordpress\Action;
+namespace App\Infrastructure\Woocommerce\Action;
 
 use App\Infrastructure\Partner\Partner;
-use WP_User;
+use App\Infrastructure\Wordpress;
+use App\Infrastructure\Wordpress\Action\ActionInterface;
 
 class WoocommerceSupportAction implements ActionInterface
 {
@@ -12,16 +13,24 @@ class WoocommerceSupportAction implements ActionInterface
     {
 
         /**
-         * Disable Woocomerce style for product page
+         * Disable Woocommerce style for product page
          */
         if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
             add_filter('woocommerce_enqueue_styles', '__return_empty_array');
             add_filter('woocommerce_enqueue_scripts', '__return_empty_array');
         }
 
+        /**
+         * Used for that Woocommerce use index.php and not single-product.php
+         */
+        add_filter('woocommerce_template_loader_files', function () {
+            global $wp_query;
+            return is_product() || is_tax() ? ['index.php'] : [];
+        });
+
         add_filter('woocommerce_rest_check_permissions', function () {
             //return wp_get_current_user();
-            return new WP_User(1);
+//            return new WP_User(1);s
 //    if( 'GET' ==  WC()->api->server->method ){
 //        return new WP_User( 1 );
 //    } else {
