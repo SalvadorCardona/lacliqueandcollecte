@@ -4,62 +4,50 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Search\Repository;
 
+use App\Infrastructure\Partner\Formatter\PartnerFormatter;
 use App\Infrastructure\Search\Entity\SearchRequest;
 use App\Infrastructure\Search\Entity\SearchResponse;
+use App\Infrastructure\Woocommerce\Entity\Product;
+use App\Infrastructure\Woocommerce\Formatter\ProductFormatter;
 use App\Infrastructure\Wordpress\Enum\MetaType;
 use App\Infrastructure\Wordpress\Enum\TaxonomyType;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
+use WC_Product_Query;
+use WC_Query;
 
 class PostRepository
 {
-    private const TAXONOMY_LIST = [
-        'categories',
-        'product_cat',
-        'city'
-    ];
-
-    private const META_LIST = [
-        'price'
-    ];
-
     private int $itemPerPage = 20;
 
-    public function __construct(private WordpressMiddleware $wordpressMiddleware)
-    {
+    public function __construct(
+        private WordpressMiddleware $wordpressMiddleware,
+        private PartnerFormatter $partnerFormatter,
+        private ProductFormatter $productFormatter
+    ) {
     }
 
     public function search(SearchRequest $searchRequest): SearchResponse
     {
         $query = [
-            'post_type' => 'product',
+            'post_type' => Product::POST_TYPE_NAME,
         ];
 
-        $taxonomyList = $this->extractToFilter($searchRequest->filters, TaxonomyType::values());
-//        $metaList = $this->extractToFilter($searchRequest->filters, MetaType::values());
+        $query['posts_per_page'] = $searchRequest->getPostPerPage() ?? $this->itemPerPage;
+        $query['author__in'] = $searchRequest->getAuthors() ?? [];
+
+        $taxonomyList = $searchRequest->getTaxonomies();
+        $metaList = $searchRequest->getMetasData();
 
         $query['tax_query'] = $this->taxonomyQueryFormatter($taxonomyList);
-//        $query['meta_query'] = $this->metaDataQueryFormatter($metaList);
+        $query['meta_query'] = $this->metaDataQueryFormatter($metaList);
 
-        $query = $this->wordpressMiddleware->wpQuery($query);
+        $queryResult = $this->wordpressMiddleware->wpQuery($query);
 
         return new SearchResponse(
-            (array) $query->posts,
-            $query->post_count,
+            (array) $this->productFormatter->fromList($queryResult->posts),
+            $queryResult->post_count,
             $this->itemPerPage
         );
-    }
-
-    private function extractToFilter(array $filters, array $extractList): array
-    {
-        $result = [];
-
-        foreach ($filters as $key => $filter) {
-            if (in_array($key, $extractList)) {
-                $result[$key] = $filter;
-            }
-        }
-
-        return $result;
     }
 
     private function taxonomyQueryFormatter(array $filters): array

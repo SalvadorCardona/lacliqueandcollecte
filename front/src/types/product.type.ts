@@ -1,3 +1,6 @@
+import {PostType} from "App/types/post.type";
+import {PartnerType} from "App/types/partner.type";
+
 export interface Downloads {
 }
 
@@ -134,5 +137,10 @@ export interface ProductType {
     links: Links;
 }
 
-
+export interface ProductPost extends PostType {
+    meta: {
+        price: number;
+        thumbnail: URL;
+    }
+}
 

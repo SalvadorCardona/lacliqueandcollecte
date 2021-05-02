@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Action;
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
+use App\Infrastructure\Woocommerce\Entity\Product;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class AddCityAction implements ActionInterface
@@ -55,7 +56,7 @@ class AddCityAction implements ActionInterface
             'rewrite' => true
         ];
 
-        $this->wordpressMiddleware->registerTaxonomy('city', [Partner::POST_TYPE_NAME, 'product'], $args);
+        $this->wordpressMiddleware->registerTaxonomy('city', [Partner::POST_TYPE_NAME, Product::POST_TYPE_NAME], $args);
     }
 
     public static function getAction(): string

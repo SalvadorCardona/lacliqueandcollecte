@@ -1,9 +1,10 @@
 import {AppComponent} from "App/core/custom.element";
-import {ProductType} from "App/types/product.type"
+import {ProductPost, ProductType} from "App/types/product.type"
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
 import ProductClient from "App/core/client/product.client";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
+import SearchClient, {SearchParams} from "App/core/client/search.client";
 
 export default class ProductLoopComponent extends AppComponent {
 
@@ -15,10 +16,10 @@ export default class ProductLoopComponent extends AppComponent {
     private idUser: number;
 
     @property({type: Object})
-    private products: Array<ProductType>
+    private productsPost: Array<ProductPost>
 
-    @injector(ProductClient)
-    private productClient: ProductClient;
+    @injector(SearchClient)
+    private searchClient: SearchClient;
 
     @property({type: Number})
     private perPage: number;
@@ -28,18 +29,26 @@ export default class ProductLoopComponent extends AppComponent {
 
     public firstUpdated(): void
     {
-        this.productClient.getProducts({author: this.idUser, per_page: this.perPage ?? 3})
-            .then(products => {
-                this.products = products;
+        const param = {
+            posts_per_page: this.perPage ?? 3
+        } as SearchParams;
+
+        if (this.idUser) {
+            param.author__in = [this.idUser];
+        }
+
+        this.searchClient.search(param)
+            .then(productsPost => {
+                this.productsPost = productsPost.items as ProductPost[];
             })
     }
 
     public render(): TemplateResult {
-        if(!this.products) return ;
+        if(!this.productsPost) return ;
 
         return html`
             <div class="product-loop row row-cols-md-${this.grid}">
-                ${this.products.map(product => html`${this.createElement(ProductCardComponent, {product: product})}`)}
+                ${this.productsPost.map(product => html`${this.createElement(ProductCardComponent, {product: product})}`)}
             </div>
         `;
     }

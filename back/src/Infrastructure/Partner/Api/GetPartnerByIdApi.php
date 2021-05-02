@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Partner\Api;
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
 use App\Infrastructure\Partner\Formatter\PartnerFormatter;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Api\HttpResponse;

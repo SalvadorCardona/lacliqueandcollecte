@@ -1,15 +1,15 @@
-export default abstract class AbstractStore {
-    protected stateList: Array<any>;
+export default abstract class AbstractStore<T> {
+    protected stateList: Array<T> = [];
 
     protected subscriberList: Array<(state: any|null) => void> = [];
 
-    public set state(state: any)
+    public set state(state: T)
     {
         this.stateList.push(state);
         this.dispatch();
     }
 
-    public get state(): any|null
+    public get state(): T|null
     {
         return this.stateList[this.stateList.length -1];
     }

@@ -1,4 +1,4 @@
-import {Module} from "App/types/module.type";
+import Module from "App/types/module.type";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import ModalProductComponent from "App/modules/shared/components/modal.product.component";
 import ModalComponent from "App/modules/shared/components/modal.component";

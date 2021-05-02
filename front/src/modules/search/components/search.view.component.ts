@@ -3,25 +3,28 @@ import {html, TemplateResult} from "lit-element";
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchContentComponent from "App/modules/search/components/search.content.component";
 import {injector} from "App/core/container.service";
-import SearchService from "App/modules/search/service/search.service";
-import {ProductType} from "App/types/product.type";
+import {ProductPost} from "App/types/product.type";
 import {property} from "lit-element/lib/decorators";
 import LoaderService from "App/core/loader.service";
 import {SearchParams} from "App/core/client/search.client";
+import ConfigurationService from "App/core/configuration.service";
+import SearchService from "App/core/search.service";
 
 export default class SearchViewComponent extends AppComponent {
-
     @injector(SearchService)
     private searchService: SearchService;
 
     @injector(LoaderService)
     private loaderService: LoaderService;
 
+    @injector(ConfigurationService)
+    private configurationService: ConfigurationService;
+
     @property({type: Array})
-    private productList: ProductType[];
+    private productList: ProductPost[];
 
     @property({type: Object})
-    private searchParams: SearchParams;
+    private searchParams: SearchParams = {};
 
     public static getComponentName(): string {
         return 'app-search-view';
@@ -29,14 +32,19 @@ export default class SearchViewComponent extends AppComponent {
 
     public connectedCallback(): void {
         super.connectedCallback();
-        this.loaderService.show();
 
         this.searchService.onChange(state => {
             this.loaderService.hide();
-            this.productList = state;
+            console.log(state);
+            this.productList = state.items;
         });
 
-        this.searchService.search();
+        if (!Object.keys(this.searchParams).length) {
+            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject
+            this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
+        }
+
+        this.searchService.search(this.searchParams);
     }
 
     public render(): TemplateResult {

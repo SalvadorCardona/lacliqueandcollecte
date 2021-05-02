@@ -2,7 +2,7 @@
 
 namespace App\Infrastructure\Woocommerce\Action;
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
 use App\Infrastructure\Wordpress;
 use App\Infrastructure\Wordpress\Action\ActionInterface;
 

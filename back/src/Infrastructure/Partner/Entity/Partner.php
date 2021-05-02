@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Partner;
+namespace App\Infrastructure\Partner\Entity;
+
+use App\Infrastructure\Wordpress\Enum\TaxonomyType;
 
 class Partner
 {
@@ -24,7 +26,7 @@ class Partner
     public const FIELD_TIKTOK = 'tiktok';
     public const FIELD_INSTAGRAM = 'instagram';
 
-    public const FIELD_LIST = [
+    public const META_LIST = [
         self::POST_TYPE_NAME,
         self::FIELD_LAST_NAME,
         self::FIELD_FIRST_NAME,
@@ -42,5 +44,9 @@ class Partner
         self::FIELD_LINKEDIN,
         self::FIELD_TIKTOK,
         self::FIELD_INSTAGRAM
+    ];
+
+    public const TAXONOMY_LIST = [
+        TaxonomyType::CITY
     ];
 }

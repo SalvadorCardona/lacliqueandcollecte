@@ -17,6 +17,7 @@ import devModule from "App/modules/dev/dev.modules";
 import homeModule from "App/modules/home/home.modules";
 import searchModule from "App/modules/search/search.modules";
 import SearchClient from "App/core/client/search.client";
+import SearchService from "App/core/search.service";
 
 export default [
     homeModule,
@@ -38,7 +39,8 @@ export default [
             ConfigurationService,
             ApplicationClient,
             PartnerClient,
-            SearchClient
+            SearchClient,
+            SearchService
         ],
     }
 ] as Module[];

@@ -9,7 +9,7 @@
  * @package HelloElementor
  */
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.

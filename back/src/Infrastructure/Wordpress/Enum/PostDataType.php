@@ -8,8 +8,7 @@ namespace App\Infrastructure\Wordpress\Enum;
  * @method static MetaType PRICE()
  * @method static MetaType THUMBNAIL()
  */
-class MetaType extends WordpressType
+class PostDataType extends WordpressType
 {
-    public const PRICE = '_price';
-    public const THUMBNAIL = '_thumbnail_id';
+    public const POST_AUTHOR = 'post_author';
 }

@@ -51,7 +51,7 @@ export interface QueriedObject {
     name:           string;
     slug:           string;
     termGroup:      number;
-    termTaxonomyID: number;
+    termTaxonomyId: number;
     taxonomy:       string;
     description:    string;
     parent:         number;

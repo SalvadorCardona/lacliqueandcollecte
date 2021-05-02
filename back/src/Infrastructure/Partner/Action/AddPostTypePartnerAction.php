@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Partner\Action;
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
+use App\Infrastructure\Woocommerce\Entity\Product;
 use App\Infrastructure\Wordpress\Action\ActionInterface;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WordPlate\Acf\Fields\Email;
@@ -34,7 +35,7 @@ class AddPostTypePartnerAction implements ActionInterface
         add_filter('wp_dropdown_users_args', function ($query_args, $r) {
             global $post;
 
-            if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === 'product') {
+            if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === Product::POST_TYPE_NAME) {
                 $query_args['who'] = '';
                 $query_args['role__in'] = [Partner::POST_TYPE_NAME, 'administrator'];
             }

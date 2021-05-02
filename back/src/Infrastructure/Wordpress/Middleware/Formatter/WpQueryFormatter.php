@@ -6,7 +6,10 @@ namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 use App\Infrastructure\Formatter\Formatter;
 use WP_Query;
 
-class WpQueryFormatter implements Formatter
+/**
+ * Todo : I need unitTest
+ */
+class WpQueryFormatter extends Formatter
 {
     /**
      * @param WP_Query $data

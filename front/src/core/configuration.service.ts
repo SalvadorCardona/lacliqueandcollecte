@@ -15,10 +15,13 @@ export default class ConfigurationService implements OnInit {
     private _configuration: MiddlewareConfigurationType = {} as MiddlewareConfigurationType;
 
     public set configuration(value: MiddlewareConfigurationType) {
-        console.log(value)
         this._configuration = keysToCamel(value) as MiddlewareConfigurationType;
     }
 
+    public get configuration(): MiddlewareConfigurationType {
+        return this._configuration;
+    }
+    
     public onInit(): void {
         if (window['middlewareConfiguration']) {
             this.configuration = window['middlewareConfiguration'];
@@ -31,9 +34,5 @@ export default class ConfigurationService implements OnInit {
                 this.configuration = middleWareConfiguration;
                 this.eventService.dispatch(events.CONFIGURATION_LOADED);
             })
-    }
-
-    public get configuration(): MiddlewareConfigurationType {
-      return this._configuration;
     }
 }
