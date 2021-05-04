@@ -7,11 +7,12 @@ namespace App\Infrastructure\Wordpress\Middleware;
 use WP_Error;
 use WP_Post;
 use WP_Query;
+use WP_User;
 use wpdb;
 
 class WordpressMiddleware
 {
-    public function __construct(private string $appName)
+    public function __construct()
     {
     }
 
@@ -58,5 +59,52 @@ class WordpressMiddleware
     public function wpQuery(array $query): WP_Query
     {
         return new WP_Query($query);
+    }
+
+    public function addAction(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
+    {
+        add_action($tag, $functionToAdd, $priority, $acceptedArgs);
+    }
+
+    public function addFilter(string $tag, callable $functionToAdd, int $priority = 10, int $acceptedArgs = 1): void
+    {
+        add_filter($tag, $functionToAdd, $priority, $acceptedArgs);
+    }
+
+    public function registerTaxonomy(string $taxonomyName, array $types = [], array $args = []): void
+    {
+        register_taxonomy($taxonomyName, $types, $args);
+    }
+
+    public function getThemeMod(string $name): mixed
+    {
+        return get_theme_mod('custom_logo');
+    }
+
+    public function wpGetCurrentUser(): ?WP_User
+    {
+        return wp_get_current_user();
+    }
+
+    public function wpCreateNonce(string $string): string
+    {
+        return wp_create_nonce($string);
+    }
+
+    public function getSiteUrl(): string
+    {
+        return get_site_url();
+    }
+
+    public function getCurrentWpQuery(): WP_Query
+    {
+        global $wp_query;
+
+        return $wp_query;
+    }
+
+    public function wpGetNavMenuItems(string $menuName): ?array
+    {
+        return wp_get_nav_menu_items($menuName);
     }
 }

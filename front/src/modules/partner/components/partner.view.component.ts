@@ -2,7 +2,7 @@ import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
 import PartnerClient from "App/core/client/partner.client";
-import {LoaderService} from "App/core/loader.service";
+import LoaderService from "App/core/loader.service";
 import {PartnerPost} from "App/types/partner.type";
 
 export default class PartnerViewComponent extends AppComponent {

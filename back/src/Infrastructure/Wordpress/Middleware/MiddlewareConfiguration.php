@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
-use WP_User;
-
 class MiddlewareConfiguration
 {
     public string $wcStoreApi;
-
-    public string $logoUrl;
 
     public string $siteUrl;
 
     public array $mainMenu;
 
-    public ?WP_User $user;
+    public ?array $user;
 
     public string $wpApiKey;
+
+    public array $wpQuery;
 
     public function getWcStoreApi(): string
     {
@@ -28,17 +26,6 @@ class MiddlewareConfiguration
     public function setWcStoreApi(string $wcStoreApi): MiddlewareConfiguration
     {
         $this->wcStoreApi = $wcStoreApi;
-        return $this;
-    }
-
-    public function getLogoUrl(): string
-    {
-        return $this->logoUrl;
-    }
-
-    public function setLogoUrl(string $logoUrl): MiddlewareConfiguration
-    {
-        $this->logoUrl = $logoUrl;
         return $this;
     }
 
@@ -59,23 +46,26 @@ class MiddlewareConfiguration
         return $this;
     }
 
-    /**
-     * @param WP_User|null $user
-     * @return MiddlewareConfiguration
-     */
-    public function setUser(?WP_User $user): MiddlewareConfiguration
+    public function setUser(array $user): MiddlewareConfiguration
     {
         $this->user = $user;
         return $this;
     }
 
-    /**
-     * @param string $wpApiKey
-     * @return MiddlewareConfiguration
-     */
     public function setWpApiKey(string $wpApiKey): MiddlewareConfiguration
     {
         $this->wpApiKey = $wpApiKey;
+        return $this;
+    }
+
+    public function getWpQuery(): ?array
+    {
+        return $this->wpQuery;
+    }
+
+    public function setWpQuery(array $wpQuery): MiddlewareConfiguration
+    {
+        $this->wpQuery = $wpQuery;
         return $this;
     }
 }

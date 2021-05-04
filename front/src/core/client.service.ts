@@ -1,12 +1,18 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
 import {getApiEndpoint, keysToCamel} from "App/core/helper";
 import {ContainerService, OnInit} from "App/core/container.service";
-import {ConfigurationService} from "App/core/configuration.service";
+import ConfigurationService from "App/core/configuration.service";
 
 export default class ClientService implements OnInit {
     public http: AxiosInstance;
 
     public send(method: Method, route: string, data: any = {}): Promise<AxiosResponse> {
+        if (method.toLowerCase() === 'get') {
+            data = {
+                params: data
+            }
+        }
+
         return this.http[method](route, data);
     }
 

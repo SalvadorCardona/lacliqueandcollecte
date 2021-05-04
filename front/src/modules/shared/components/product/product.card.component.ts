@@ -1,5 +1,5 @@
 import {AppComponent} from 'App/core/custom.element';
-import {Image, ProductType} from "App/types/product.type";
+import {ProductPost} from "App/types/product.type";
 import {filterPrice} from "App/core/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
@@ -12,7 +12,7 @@ export default class ProductCardComponent extends AppComponent {
     }
 
     @property({type: Object})
-    private product: ProductType;
+    private product: ProductPost;
 
     public render(): TemplateResult {
         return html`
@@ -22,42 +22,23 @@ export default class ProductCardComponent extends AppComponent {
                 flex-column
                 align-items-center
                 col">
-                <a href="${this.product.permalink}">
-                    <img alt="${this.getAttributeImage(this.product.images)}" src="${this.getThumbnail(this.product.images)}">
+                <a href="${this.product.guid}">
+                    <img alt="product-image" src="${this.product.meta.thumbnail}">
                 </a>
                 <div class="product-name
                     fs-4
-                    text-secondary">${this.product.name}</div>
+                    text-secondary">${this.product.postTitle}</div>
                 <div class="product-price
                     fw-bold
-                    mb-3">${filterPrice(this.product.price)}</div>
+                    mb-3">${filterPrice(this.product.meta.price)}</div>
                 ${this.createElement(ButtonComponent, {
-                    link: this.product.permalink,
+                    link: this.product.guid,
                     icon: 'cartPlus',
                     type: 'primary',
                     label: 'Ajouter au panier'
                 })}
             </div>
         `;
-    }
-
-    private getAttributeImage(images: Image[]): string {
-
-        if (!images || !images.length) return '';
-
-        const [image] = images;
-
-        return image.alt || image.src;
-    }
-
-
-    private getThumbnail(images: Array<Image>): string {
-
-        if (!images || !images.length) return '';
-
-        const imageSrc = images[0].src;
-
-        return `${imageSrc.substring(0, imageSrc.length - 4)}-300x300.jpg`;
     }
 }
 

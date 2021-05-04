@@ -1,9 +1,8 @@
 {
-  "$schema": "https://json-schema.org/draft-04/schema#",
   "name": "laclique/andcollecte",
   "type": "project",
-  "license": "MIT",
-  "description": "WordPress with dependency injection",
+  "license": "GNU GPLv3",
+  "description": "Zartizana Project",
   "autoload": {
     "psr-4": {
       "App\\": "src/"
@@ -35,7 +34,6 @@
     "oscarotero/env": "^1.2.0",
     "roots/wordpress": "5.6",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/wp-api-swaggerui": "^1.0",
     "ext-json": "*",
     "wpackagist-plugin/advanced-custom-fields": "^5.8",
@@ -59,7 +57,8 @@
     "phpstan/phpstan": "^0.12.32",
     "symfony/var-dumper": "^5.1",
     "phpunit/phpunit": "^8",
-    "filp/whoops": "^2.12"
+    "filp/whoops": "^2.12",
+    "szepeviktor/phpstan-wordpress": "^0.7.5"
   },
   "config": {
     "optimize-autoloader": true,

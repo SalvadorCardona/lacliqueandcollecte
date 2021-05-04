@@ -2,37 +2,35 @@ import camelCase from 'lodash.camelcase';
 import isObject from 'lodash.isobject';
 import {environment} from "App/environement/environement";
 
-export const keysToCamel = (o: {[name: string]: any}|Array<any>): {[name: string]: any}|Array<any> => {
-    if (Array.isArray(o)) {
-        const array = o as Array<any>
+export const keysToCamel = (data: {[name: string]: any}|Array<any>): {[name: string]: any}|Array<any> => {
+    if (Array.isArray(data)) {
+        const array = data as Array<any>
         return array.map((i) => {
             return keysToCamel(i);
         });
     }
 
-    if (isObject(o)) {
-        let n;
+    if (isObject(data)) {
+        let dataConverted;
 
-        if (o['0']) {
-            n = [];
-            Object.keys(o)
-                .forEach((k) => {
-                    n.push(keysToCamel(o[k]));
+        if (data['0']) {
+            dataConverted = [];
+            Object.keys(data)
+                .forEach((key) => {
+                    dataConverted.push(keysToCamel(data[key]));
                 });
         } else {
-            n = {};
-            Object.keys(o)
-                .forEach((k) => {
-                    n[camelCase(k)] = keysToCamel(o[k]);
+            dataConverted = {};
+            Object.keys(data)
+                .forEach((key) => {
+                    dataConverted[camelCase(key)] = keysToCamel(data[key]);
                 });
         }
 
-        return n;
-
-
+        return dataConverted;
     }
 
-    return o;
+    return data;
 };
 
 export const filterPrice = (price: number): string =>  price + ' €';

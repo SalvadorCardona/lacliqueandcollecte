@@ -4,25 +4,13 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Action;
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
 
 class WordpressThemeSupportAction implements ActionInterface
 {
     public function __invoke(): void
     {
-        /**
-         * Disable Woocomerce style for product page
-         */
-        if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
-            add_filter('woocommerce_enqueue_styles', '__return_empty_array');
-        }
 
-        /**
-         * Used for that Woocommerce use index.php and not single-product.php
-         */
-        add_filter('woocommerce_template_loader_files', function ($string) {
-            return is_product() ? ['index.php'] : [];
-        });
 
         add_theme_support("post-thumbnails");
 
@@ -67,15 +55,6 @@ class WordpressThemeSupportAction implements ActionInterface
         add_post_type_support('product', 'author');
 
         add_theme_support('add_theme_support');
-
-        /**
-         * Add the categories woocommerce for partner
-         */
-        add_filter('woocommerce_taxonomy_objects_product_cat', function ($args) {
-            return [Partner::POST_TYPE_NAME, ...$args];
-        }, 1);
-
-        add_filter('woocommerce_store_api_disable_nonce_check', fn() => true);
     }
 
     public static function getAction(): string

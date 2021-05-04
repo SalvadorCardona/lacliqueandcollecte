@@ -1,11 +1,11 @@
 import {AppComponent} from "App/core/custom.element";
-import {html , TemplateResult} from "lit-element";
-import {ProductType} from "App/types/product.type";
+import {html, TemplateResult} from "lit-element";
+import {ProductPost} from "App/types/product.type";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 
 export default class SearchContentComponent extends AppComponent {
 
-    public constructor(private productList: ProductType[] = []) {
+    public constructor(private productList: ProductPost[] = []) {
         super();
     }
 

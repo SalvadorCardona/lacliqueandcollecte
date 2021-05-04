@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Application;
 
-use App\Infrastructure\Manager\MasterManager;
+use App\Infrastructure\Manager\ResourcesLoader;
 use DI\ContainerBuilder;
 use Exception;
 
@@ -19,8 +19,8 @@ class Kernel
 
         try {
             $container = $containerBuilder->build();
-            /** @var MasterManager $masterManager */
-            $masterManager = $container->get(MasterManager::class);
+            /** @var ResourcesLoader $masterManager */
+            $masterManager = $container->get(ResourcesLoader::class);
         } catch (Exception $e) {
             // TODO: Append Log system here
             return;

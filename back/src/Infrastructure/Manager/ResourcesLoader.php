@@ -7,7 +7,7 @@ namespace App\Infrastructure\Manager;
 // TODO: I need Unit test
 use Psr\Container\ContainerInterface;
 
-class MasterManager extends AbstractManager
+class ResourcesLoader extends AbstractManager
 {
     /**
      * @var AbstractManager[]

@@ -1,9 +1,9 @@
 import {injector, OnInit} from "App/core/container.service";
-import {events, EventService} from "App/core/event.service";
+import EventService, {events} from "App/core/event.service";
 import LoaderComponent from "App/modules/shared/components/loader.component";
 import {createElement} from "App/core/custom.element";
 
-export class LoaderService implements OnInit {
+export default class LoaderService implements OnInit {
     private loaderComponent: LoaderComponent;
 
     public static classLoaderFixed = 'loader-fixed';
@@ -12,7 +12,15 @@ export class LoaderService implements OnInit {
     private eventService: EventService;
 
     public onInit(): void {
-        this.eventService.addSubscriber(events.SERVICE_LOADED, () => this.setup());
+        this.eventService.addSubscriber(events.SERVICE_LOADED, () => {
+            const loader:HTMLElement = document.querySelector('#loader-application-not-loaded');
+
+            if (loader) {
+                loader.remove();
+            }
+
+            this.setup();
+        });
     }
 
     private setup(): void {

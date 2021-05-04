@@ -11,7 +11,7 @@ export default class HomeHeaderComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div style="background-image: url('${home}" class="container-fluid
+            <div style="background-image: url('${home})" class="container-fluid
                 background-overlay
                 d-flex
                 justify-content-center

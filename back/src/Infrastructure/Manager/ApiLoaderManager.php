@@ -32,6 +32,7 @@ class ApiLoaderManager extends AbstractManager
                 'body' => $api->getBody(),
                 'blocking' => $api->isBlocking(),
                 'permission_callback' => fn() => $api->getProtectedCallBack(),
+                'args' => $api->getArgs()
             ]
         );
     }

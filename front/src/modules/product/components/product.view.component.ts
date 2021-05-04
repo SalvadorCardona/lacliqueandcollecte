@@ -1,13 +1,13 @@
 import {AppComponent, createElement} from "App/core/custom.element";
 import {ProductType} from "App/types/product.type";
 import CartService from "App/core/cart.service";
-import {LoaderService} from "App/core/loader.service";
+import LoaderService from "App/core/loader.service";
 import {injector} from "App/core/container.service";
 import {filterTax} from "App/core/helper";
-import {ModalService} from "App/core/modal.service";
+import ModalService from "App/core/modal.service";
 import ModalProductComponent from "App/modules/shared/components/modal.product.component";
 import {property} from "lit-element/lib/decorators";
-import {html , TemplateResult} from "lit-element";
+import {html, TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/core/client/product.client";
 

@@ -21,9 +21,14 @@ abstract class AbstractApiController
         return $this->__invoke();
     }
 
-    abstract public function __invoke(): mixed;
+    abstract public function __invoke(): HttpResponse;
 
     abstract public function getEndPoint(): string;
+
+    protected function response(mixed $data = null, int $status = 200, array $header = []): HttpResponse
+    {
+        return new HttpResponse($data, $status, $header);
+    }
 
     /**
      * @return array
@@ -56,5 +61,10 @@ abstract class AbstractApiController
     public function getProtectedCallBack(): bool
     {
         return true;
+    }
+
+    public function getArgs(): array
+    {
+        return [];
     }
 }

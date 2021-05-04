@@ -6,7 +6,7 @@ export enum events  {
     EVENT_DISPATCHED = 'event_dispatched'
 }
 
-export class EventService {
+export default class EventService {
     private subscriber: Array<{event: events, callback: (payload: any|null) => void}> = [];
 
     private _eventLoaded: Array<events> = [];

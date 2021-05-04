@@ -1,6 +1,5 @@
-import {html, property, PropertyValues, TemplateResult} from 'lit-element';
+import {html, property, TemplateResult} from 'lit-element';
 import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
-import {AppComponent} from "App/core/custom.element";
 
 export default class InputCheckboxComponent extends InputBaseComponent {
     public static getComponentName(): string {

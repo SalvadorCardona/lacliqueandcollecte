@@ -9,7 +9,7 @@
  * @package HelloElementor
  */
 
-use App\Infrastructure\Partner\Partner;
+use App\Infrastructure\Partner\Entity\Partner;
 
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
@@ -22,9 +22,13 @@ if (is_product()) {
     echo "<app-product-view productId=\"{$post->ID}\"></app-product-view>";
 } elseif ($post && $post->post_type === Partner::POST_TYPE_NAME) {
     echo "<app-partner-view partnerPostId=\"{$post->ID}\"></app-partner-view>";
+} elseif (is_front_page()) {
+    echo "<app-home-view></app-home-view>";
+} elseif (is_tax()) {
+    echo "<app-search-view></app-search-view>";
 } elseif (is_singular()) {
     get_template_part('template-parts/single');
-} elseif (is_archive() || is_home()) {
+} elseif (is_archive()) {
     get_template_part('template-parts/archive');
 } elseif (is_search()) {
     get_template_part('template-parts/search');
