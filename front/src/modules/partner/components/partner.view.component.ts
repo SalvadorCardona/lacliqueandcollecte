@@ -9,7 +9,6 @@ import ProductLoopComponent from "App/modules/shared/components/product/product.
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import WrapperComponent from "App/modules/shared/components/router.component";
-import {unsafeHTML} from "lit-html/directives/unsafe-html";
 
 export default class PartnerViewComponent extends AppComponent {
 
@@ -44,7 +43,7 @@ export default class PartnerViewComponent extends AppComponent {
 
         return html`
             <div class="container">
-                <div class="row">sqdqsdqsd
+                <div class="row">
                     ${this.createElement(PartnerHeaderComponent, {partnerPost: this.partnerPost})}
                 </div>
                 <div id="partner-content" class="row">
