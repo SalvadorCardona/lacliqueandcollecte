@@ -1,6 +1,7 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, TemplateResult} from "lit-element";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 interface ItemSearch {
     label: string;
@@ -106,7 +107,7 @@ export default class SearchLeftBarComponent extends AppComponent {
                 d-flex
                 justify-content-between">
                 <span class="text-white fw-bold fs-5">${categorySearch.categoryLabel}</span>
-                <app-icon color="white" icon="biChevronCompactRight"></app-icon>
+                ${this.createElement(IconComponent, {color: 'white', icon: 'biChevronCompactRight'})}
             </div>
             <div class="p-2">
                 ${categorySearch.itemsSearch.map(itemSearch => {

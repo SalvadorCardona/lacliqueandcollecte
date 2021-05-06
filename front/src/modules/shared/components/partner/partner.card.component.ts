@@ -2,6 +2,7 @@ import {AppComponent} from 'App/core/custom.element';
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import {PartnerPost} from "App/types/partner.type";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 export default class PartnerCardComponent extends AppComponent {
 
@@ -30,6 +31,13 @@ export default class PartnerCardComponent extends AppComponent {
                 <h3 class="mt-3 text-white">${this.partnerPost.meta.shopName}</h3>
 <!--                <div class="wrapper-category text-white">i should be category list</div>-->
                 <app-button class="mt-2" link="${this.partnerPost.guid}" label="Voir sa page" type="primary"> </app-button>
+                ${this.createElement(ButtonComponent, 
+                        {
+                        classList: '[mt-2]', 
+                        link: {this.partnerPost.guide}, 
+                        label: 'Voir sa page', 
+                        type: 'primary'
+                        })}
             </div>
         `;
     }

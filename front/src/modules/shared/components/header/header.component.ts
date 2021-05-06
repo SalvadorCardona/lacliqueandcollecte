@@ -4,6 +4,8 @@ import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
 import ConfigurationService from "App/core/configuration.service";
+import IconComponent from "App/modules/shared/components/icon.component";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 export default class HeaderComponent extends AppComponent {
 
@@ -53,7 +55,7 @@ export default class HeaderComponent extends AppComponent {
                     d-inline-block
                     position-relative">
                         <input type="text" class="form-control" placeholder="Trouver votre produit....">
-                        <app-icon class="position-absolute" icon="search"></app-icon>
+                        ${this.createElement(IconComponent, {classList: '[position-absolute]', icon: 'search'})}
                     </div>
                 </div>
                 <div class="col-md-6
@@ -67,9 +69,7 @@ export default class HeaderComponent extends AppComponent {
                         <ul id="menus-main-menus" class="menus m-0">
                             ${this.renderMenu()}
                         </ul>
-    
-                        <app-button link="/mon-compte" icon="person"></app-button>
-
+                        ${this.createElement(ButtonComponent, {link: '/mon-compte', icon: 'person'})}
                         <app-header-cart></app-header-cart>
                     </nav>
                 </div>

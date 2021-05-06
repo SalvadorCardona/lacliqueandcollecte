@@ -1,6 +1,7 @@
 import {AppComponent} from 'App/core/custom.element';
 import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
 import image from "Media/shared/pattern-footer.svg";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class FooterComponent extends AppComponent{
 
@@ -41,13 +42,13 @@ export default class FooterComponent extends AppComponent{
                     <br>
                     <div class="social-wrapper">
                         <a class="m-2" href="fb.com">
-                            <app-icon icon="facebook"></app-icon>
+                            ${this.createElement(IconComponent, {icon: 'facebook'})}
                         </a>
                         <a class="m-2" href="tw.com">
-                            <app-icon icon="twitter"></app-icon>
+                            ${this.createElement(IconComponent, {icon: 'twitter'})}
                         </a>
                         <a class="m-2" href="inst.com">
-                            <app-icon icon="instagram"></app-icon>
+                            ${this.createElement(IconComponent, {icon: 'instagram'})}
                         </a>
                     </div>
                     <br>

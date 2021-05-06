@@ -3,6 +3,7 @@ import {html, TemplateResult} from 'lit-element';
 import image1 from "Media/home/other_direction1.jpg";
 import image2 from "Media/home/other_direction2.jpg";
 import image3 from "Media/home/other_direction3.jpg";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 
 export default class HomeOtherDirectionComponent extends AppComponent {
@@ -20,7 +21,13 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50"><h4 class="fw-normal text-dark">Zartisana</h4></div>
                         <div class="h-50">
                             <span>Qui sommes-nous?</span>
-                            <app-button link="/page" label="Notre histoire" type="primary"> </app-button>
+                            ${this.createElement(ButtonComponent,
+                                    {
+                                        link: '/page',
+                                        label: 'Notre histoire',
+                                        type: 'primary'
+                                    }
+                            )}
                         </div>
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image3}')"></div>
@@ -28,14 +35,26 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50"><h4 class="fw-normal text-dark">Vous êtes artisan ?</h4></div>
                         <div class="h-50">
                             <span>Devenez partenaire de notre association.</span>
-                            <app-button link="/page" label="Contactez-nous" type="primary"> </app-button>
+                            ${this.createElement(ButtonComponent,
+                                    {
+                                        link: '/page',
+                                        label: 'Contactez-nous',
+                                        type: 'primary'
+                                    }
+                            )}
                         </div>
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image1}')"></div>
                     <div class="without-background col-md-4">
                         <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">Découvrez les artisans et produits Zartizana.</h4></div>
                         <div class="h-50">
-                            <app-button link="/page" label="Le shop ici" type="primary"></app-button>
+                            ${this.createElement(ButtonComponent,
+                                    {
+                                        link: '/page',
+                                        label: 'Le shop ici',
+                                        type: 'primary'
+                                    }
+                            )}
                         </div>
                     </div>
                 </div>

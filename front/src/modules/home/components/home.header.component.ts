@@ -2,6 +2,7 @@ import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import logo from "Media/shared/logo.svg";
 import home from "Media/home/home_picture.jpg";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class HomeHeaderComponent extends AppComponent {
 
@@ -76,7 +77,11 @@ export default class HomeHeaderComponent extends AppComponent {
                                             d-flex 
                                             justify-content-center 
                                             align-items-center">
-                                        <app-icon icon="search"></app-icon>
+                                        ${this.createElement(IconComponent,
+                                                {
+                                                  icon: 'search'  
+                                                }
+                                        )}
                                     </a>
                                 </div>
                             </div>
