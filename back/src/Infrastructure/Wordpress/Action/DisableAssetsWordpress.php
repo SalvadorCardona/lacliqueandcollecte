@@ -17,12 +17,13 @@ class DisableAssetsWordpress implements ActionInterface
         'wc-block-style',
         'wp-block-library',
         'wp-block-library',
-        'woocommerce-inline',
+        'woocommerce-inline'
     ];
 
     private const SCRIPT_NOT_EXPECTED = [
         'jquery',
-        'woocommerce-general'
+        'woocommerce-general',
+        'wp-embed'
     ];
 
     public function __construct(private WordpressMiddleware $wordpressMiddleware)
@@ -44,6 +45,7 @@ class DisableAssetsWordpress implements ActionInterface
                 $this->wordpressMiddleware->wpDeregisterScript($scriptNotExpected);
             }
         }
+        //wp_styles()
     }
 
     public static function getAction(): string
