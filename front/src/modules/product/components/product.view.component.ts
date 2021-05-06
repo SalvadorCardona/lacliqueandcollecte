@@ -86,8 +86,15 @@ export default class ProductViewComponent extends AppComponent {
                                         <option value="6">6</option>
                                     </select>
                                 </div>
-                                ${this.createElement(ButtonComponent, {classList: '[mt-3]', type: 'primary', icon: 'cartPlus', label: 'Ajouter au panier'})}
-                                <app-button class="mt-3" @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
+                                ${this.createElement(ButtonComponent, 
+                                        {
+                                            $click: this.addItem,
+                                            classList: '[mt-3]',
+                                            type: 'primary',
+                                            icon: 'cartPlus',
+                                            label: 'Ajouter au panier'
+                                        }
+                                        )}
                             </div>
                         </section>
                     </div>

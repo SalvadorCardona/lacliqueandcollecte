@@ -29,8 +29,7 @@ export default class PartnerLoopComponent extends AppComponent {
 
         return html`
             <div class="row">
-                ${this.partnersPost.map(partnerPost => html`<app-partner-card class="mt-3 col-md-4" .partnerPost="${partnerPost}"></app-partner-card>`)}
-                ${this.createElement(PartnerCardComponent, {classList: '[mt-3 col-md-4]', partnerPost: {partnerPost} })}
+                ${this.partnersPost.map(partnerPost => html`${this.createElement(PartnerCardComponent, {classList: "mt-3 col-md-4", partnerPost: partnerPost})}`)}
             </div>
         `;
     }

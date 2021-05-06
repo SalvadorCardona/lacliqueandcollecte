@@ -1,6 +1,7 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from 'lit-element';
 import {Color} from "App/enum/color.enum";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class ButtonComponent extends AppComponent {
 
@@ -50,7 +51,9 @@ export default class ButtonComponent extends AppComponent {
     }
 
     private getIcon(): TemplateResult|string {
-        return this.icon ? html`<app-icon icon="${this.icon}"></app-icon>` : ``;
+        return this.icon ? this.createElement(IconComponent, {
+            icon: this.icon
+        }) : ``;
     }
 }
 
