@@ -2,6 +2,7 @@ import {AppComponent} from 'App/core/custom.element';
 import {icons} from 'App/core/icons'
 import {html, property, TemplateResult} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+import {Color} from "App/enum/color.enum";
 
 export default class IconComponent extends AppComponent {
 
@@ -13,7 +14,7 @@ export default class IconComponent extends AppComponent {
     private icon: string;
 
     @property({type: String})
-    private color: string;
+    private color: Color;
 
     public connectedCallback(): void {
         this.classList.add(this.color);

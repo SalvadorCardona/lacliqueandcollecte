@@ -12,9 +12,8 @@ export default class WrapperComponent extends AppComponent {
     @property({type: String})
     public title: string;
 
-    public firstUpdated(): void {
-        this.classList.add('app-wrapper');
-    }
+    @property({type: HTMLElement})
+    private body: HTMLElement|TemplateResult;
 
     public render(): TemplateResult {
         return html`
@@ -22,7 +21,7 @@ export default class WrapperComponent extends AppComponent {
                 html`<div class="title">${this.title}</div>`:
                 ''
             }
-            ${unsafeHTML(this.innerHTML)}
+            ${unsafeHTML(this.body || this.innerHTML)}
         `;
     }
 }

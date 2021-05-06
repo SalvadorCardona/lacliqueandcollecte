@@ -34,7 +34,7 @@ export default class PartnerCardComponent extends AppComponent {
                 ${this.createElement(ButtonComponent, 
                         {
                         classList: '[mt-2]', 
-                        link: {this.partnerPost.guide}, 
+                        link: this.partnerPost.guid, 
                         label: 'Voir sa page', 
                         type: 'primary'
                         })}

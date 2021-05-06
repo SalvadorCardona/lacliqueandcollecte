@@ -1,15 +1,6 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from 'lit-element';
-
-export enum ButtonType  {
-    DANGER = 'danger',
-    PRIMARY = 'primary',
-    SECONDARY = 'secondary',
-    SUCCESS = 'success',
-    WARNING = 'warning',
-    INFO = 'info',
-    DARK = 'dark'
-}
+import {Color} from "App/enum/color.enum";
 
 export default class ButtonComponent extends AppComponent {
 
@@ -18,16 +9,28 @@ export default class ButtonComponent extends AppComponent {
     }
 
     @property({type: String})
-    private type: ButtonType;
+    private type?: Color;
 
     @property({type: String})
-    private icon: string;
+    private icon?: string;
 
     @property({type: String})
-    private label: string;
+    private label?: string;
 
     @property({type: String})
-    private link: string;
+    private link?: string;
+
+    @property({type: Function})
+    private $click?: CallableFunction;
+
+    public connectedCallback() {
+        super.connectedCallback();
+        if (this.$click) {
+            this.addEventListener('click', () => {
+                this.$click();
+            })
+        }
+    }
 
     public render(): TemplateResult {
         if (this.link) {

@@ -8,6 +8,8 @@ import PartnerHeaderComponent from "App/modules/partner/components/partner.heade
 import ProductLoopComponent from "App/modules/shared/components/product/product.loop.component";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import WrapperComponent from "App/modules/shared/components/router.component";
+import {unsafeHTML} from "lit-html/directives/unsafe-html";
 
 export default class PartnerViewComponent extends AppComponent {
 
@@ -42,7 +44,7 @@ export default class PartnerViewComponent extends AppComponent {
 
         return html`
             <div class="container">
-                <div class="row">
+                <div class="row">sqdqsdqsd
                     ${this.createElement(PartnerHeaderComponent, {partnerPost: this.partnerPost})}
                 </div>
                 <div id="partner-content" class="row">
@@ -51,39 +53,50 @@ export default class PartnerViewComponent extends AppComponent {
                         ${this.createElement(ProductLoopComponent, {idUser: this.partnerPost.postAuthor})}
                     </div>
                     <div class="col-md-4">
-                        <app-wrapper title="Présensation">
+                        ${this.createElement(WrapperComponent, {
+                            title: 'Présensation',
+                            body: `
                             <p>
                                 ${this.partnerPost.meta.shopDescription}
                             </p>
-                        </app-wrapper>
-                        <app-wrapper title="Contact du commerçant">
-                            <div>
-                                ${this.createElement(IconComponent, {icon: 'telephone'})} : ${this.partnerPost.meta?.phone}
-                            </div>
-                            <div>
-                                ${this.createElement(IconComponent, {icon: 'facebook'})} : ${this.partnerPost.meta?.facebook}
-                            </div>
-                            <div>
-                                ${this.createElement(IconComponent, {icon: 'twitter'})} : ${this.partnerPost.meta?.twitter}
-                            </div>
-                            <div>
-                                ${this.createElement(IconComponent, {icon: 'instagram'})} : ${this.partnerPost.meta?.instagram}
-                            </div>
-                            <div>
-                                ${this.createElement(IconComponent, {icon: 'geoLat'})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
-                            </div>
-                            <div>
-                                ${this.createElement(ButtonComponent,
-                                        {
-                                        icon: 'envelope', 
-                                        type: 'primary', 
-                                        label: 'Contactez-le'
-                                        }
-                                )}
-                            </div>
-                        </app-wrapper>
+                            `
+                        })}
+                        ${this.createElement(WrapperComponent, {
+                            title: 'Présensation',
+                            body: this.getContact()
+                        })}
                     </div>
                 </div>
+            </div>
+        `;
+    }
+
+    private getContact(): TemplateResult
+    {
+        return html`
+            <div>
+                ${this.createElement(IconComponent, {icon: 'telephone'})} : ${this.partnerPost.meta?.phone}
+            </div>
+            <div>
+                ${this.createElement(IconComponent, {icon: 'facebook'})} : ${this.partnerPost.meta?.facebook}
+            </div>
+            <div>
+                ${this.createElement(IconComponent, {icon: 'twitter'})} : ${this.partnerPost.meta?.twitter}
+            </div>
+            <div>
+                ${this.createElement(IconComponent, {icon: 'instagram'})} : ${this.partnerPost.meta?.instagram}
+            </div>
+            <div>
+                ${this.createElement(IconComponent, {icon: 'geoLat'})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
+            </div>
+            <div>
+                ${this.createElement(ButtonComponent,
+                    {
+                        icon: 'envelope',
+                        type: 'primary',
+                        label: 'Contactez-le'
+                    }
+                )}
             </div>
         `;
     }
