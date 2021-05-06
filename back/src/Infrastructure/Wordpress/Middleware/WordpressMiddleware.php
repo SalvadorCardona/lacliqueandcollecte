@@ -107,4 +107,25 @@ class WordpressMiddleware
     {
         return wp_get_nav_menu_items($menuName);
     }
+
+    public function wpDeregisterStyle(string $handle): void 
+    {
+        wp_deregister_style($handle);
+    }
+
+    public function wpDequeueStyle(string $handle): void 
+    {
+        wp_dequeue_style($handle);
+    }
+
+    public function wpDeregisterScript(string $handle): void 
+    {
+        wp_deregister_script($handle);
+    }
+    
+    public function wpDequeueScript(string $handle): void 
+    {
+        wp_dequeue_script($handle);
+    }
+
 }

@@ -18,7 +18,6 @@ class AddAssetsAction implements ActionInterface
     public function __invoke(): void
     {
         if (!is_admin()) {
-            wp_deregister_script('jquery');
             $manifest = json_decode(file_get_contents($this->publicDir . '/parcel-manifest.json'), true);
 
             wp_enqueue_style('app-css', get_home_url() . $manifest['styles/app.scss'], [], '1', 'all');
