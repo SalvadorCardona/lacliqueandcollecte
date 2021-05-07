@@ -66,11 +66,11 @@ export default class HeaderComponent extends AppComponent {
                 d-flex
                 justify-content-end
                 align-items-center" role="navigation">
-                        <ul id="menus-main-menus" class="menus m-0">
-                            ${this.renderMenu()}
-                        </ul>
-                        ${this.createElement(ButtonComponent, {link: '/mon-compte', icon: 'person'})}
-                        <app-header-cart></app-header-cart>
+                    <ul id="menus-main-menus" class="menus m-0">
+                        ${this.renderMenu()}
+                    </ul>
+                    ${this.createElement(ButtonComponent, {link: '/mon-compte', icon: 'person'})}
+                    <app-header-cart></app-header-cart>
                     </nav>
                 </div>
             </div>

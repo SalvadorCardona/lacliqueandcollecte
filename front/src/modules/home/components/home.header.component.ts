@@ -78,9 +78,9 @@ export default class HomeHeaderComponent extends AppComponent {
                                             justify-content-center 
                                             align-items-center">
                                         ${this.createElement(IconComponent,
-                                                {
-                                                  icon: 'search'  
-                                                }
+                                            {
+                                              icon: 'search'  
+                                            }
                                         )}
                                     </a>
                                 </div>

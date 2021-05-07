@@ -48,26 +48,26 @@ export default class PartnerHeaderComponent extends AppComponent {
                 justify-content-end">
                 <a href="">
                     ${this.createElement(IconComponent,
-                            {
-                                classList: ['md-2'],
-                                icon: 'facebook'
-                            }                    
+                        {
+                            classList: ['md-2'],
+                            icon: 'facebook'
+                        }                    
                     )}
                 </a>
                 <a href="">
                     ${this.createElement(IconComponent,
-                            {
-                                classList: ['md-2'],
-                                icon: 'instagram'
-                            }
+                        {
+                            classList: ['md-2'],
+                            icon: 'instagram'
+                        }
                     )}
                 </a>
                 <a href="">
                     ${this.createElement(IconComponent,
-                            {
-                                classList: ['md-2'],
-                                icon: 'twitter'
-                            }
+                        {
+                            classList: ['md-2'],
+                            icon: 'twitter'
+                        }
                     )}
                 </a>
             </div>

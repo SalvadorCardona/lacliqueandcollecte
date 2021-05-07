@@ -31,21 +31,21 @@ export default class PartnerCardComponent extends AppComponent {
                 <h3 class="mt-3 text-white">${this.partnerPost.meta.shopName}</h3>
 <!--                <div class="wrapper-category text-white">i should be category list</div>-->
                 ${this.createElement(ButtonComponent, 
-                        {
-                            classList: '[mt-2]',
-                            link: '${this.partnerPost.guid}',
-                            label: 'Voir sa page',
-                            type: 'primary'
-                        }
-                        )}
+                    {
+                        classList: '[mt-2]',
+                        link: '${this.partnerPost.guid}',
+                        label: 'Voir sa page',
+                        type: 'primary'
+                    }
+                    )}
                 ${this.createElement(ButtonComponent, 
-                        {
-                            classList: '[mt-2]', 
-                            link: this.partnerPost.guid, 
-                            label: 'Voir sa page', 
-                            type: 'primary'
-                        }
-                        )}
+                    {
+                        classList: '[mt-2]', 
+                        link: this.partnerPost.guid, 
+                        label: 'Voir sa page', 
+                        type: 'primary'
+                    }
+                    )}
             </div>
         `;
     }

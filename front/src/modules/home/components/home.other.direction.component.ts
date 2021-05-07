@@ -22,11 +22,11 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50">
                             <span>Qui sommes-nous?</span>
                             ${this.createElement(ButtonComponent,
-                                    {
-                                        link: '/page',
-                                        label: 'Notre histoire',
-                                        type: 'primary'
-                                    }
+                                {
+                                    link: '/page',
+                                    label: 'Notre histoire',
+                                    type: 'primary'
+                                }
                             )}
                         </div>
                     </div>
@@ -36,11 +36,11 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50">
                             <span>Devenez partenaire de notre association.</span>
                             ${this.createElement(ButtonComponent,
-                                    {
-                                        link: '/page',
-                                        label: 'Contactez-nous',
-                                        type: 'primary'
-                                    }
+                                {
+                                    link: '/page',
+                                    label: 'Contactez-nous',
+                                    type: 'primary'
+                                }
                             )}
                         </div>
                     </div>
@@ -49,11 +49,11 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                         <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">Découvrez les artisans et produits Zartizana.</h4></div>
                         <div class="h-50">
                             ${this.createElement(ButtonComponent,
-                                    {
-                                        link: '/page',
-                                        label: 'Le shop ici',
-                                        type: 'primary'
-                                    }
+                                {
+                                    link: '/page',
+                                    label: 'Le shop ici',
+                                    type: 'primary'
+                                }
                             )}
                         </div>
                     </div>
