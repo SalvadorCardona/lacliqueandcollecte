@@ -3,6 +3,9 @@ SOURCE_DIR = $(shell pwd)
 FRONT_DIR = ./front
 BACK_DIR = ./back
 
+GREEN	=\033[0m\e[1m\e[32m
+COMPOSER = composer.phar.*
+
 install: install-php database-import install-asset install-common remove-theme
 
 install-common:
@@ -49,3 +52,7 @@ lint:
 	cd ${BACK_DIR} && php vendor/bin/phpstan analyse
 	yarn --cwd front eslint
 	yarn --cwd front stylelint
+
+clean:
+	rm -f back/$(COMPOSER)
+	@echo  -e '${GREEN}All composer.phar delete'
