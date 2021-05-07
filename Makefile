@@ -4,9 +4,9 @@ FRONT_DIR = ./front
 BACK_DIR = ./back
 
 GREEN	=\033[0m\e[1m\e[32m
-COMPOSER = composer.phar.*
+COMPOSER = composer.phar*
 
-install: install-php database-import install-asset install-common remove-theme
+install: install-php database-import install-asset install-common clean
 
 install-common:
 	rm -Rf back/web/app/themes/hello-theme-master
@@ -40,9 +40,6 @@ test:
 wp-rewrite-url:
 	php ${BACK_DIR}/wp-cli.phar rewrite flush --allow-root
 
-remove-theme:
-	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
-
 code-fix:
 	cd ${BACK_DIR} && php vendor/bin/phpcbf
 	yarn --cwd front lint --fix
@@ -54,5 +51,6 @@ lint:
 	yarn --cwd front stylelint
 
 clean:
-	rm -f back/$(COMPOSER)
-	@echo  -e '${GREEN}All composer.phar delete'
+	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
+	rm -f ${BACK_DIR}/$(COMPOSER)
+	@echo  -e '${GREEN}success : all composer.phar and themes folder delete'
