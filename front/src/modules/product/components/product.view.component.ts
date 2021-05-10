@@ -65,8 +65,7 @@ export default class ProductViewComponent extends AppComponent {
                 <div class="type-product">
                     <div class="row">
                         <section class="col-md-6">
-                            <img class="img-fluid" alt="${this.product.images[0].alt}"
-                                 src="${this.product.images[0].src}"/>
+                            <img class="img-fluid" alt="${this.product.images[0].alt}" src="${this.product.images[0].src}"/>
                         </section>
                         <section class="col-md-6">
                             <h1 class="mt-2 text-primary">${this.product.name}</h1>
@@ -89,8 +88,8 @@ export default class ProductViewComponent extends AppComponent {
                                 </div>
                                 ${this.createElement(ButtonComponent,
                                     {
-                                        $click: this.addItem,
-                                        classList: '[mt-3]',
+                                        $click: () => this.addItem(),
+                                        classList: 'mt-3',
                                         type: 'primary',
                                         icon: 'cartPlus',
                                         label: 'Ajouter au panier'

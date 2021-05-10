@@ -68,7 +68,7 @@ export default class DevMenuComponent extends AppComponent {
                 classList: 'ms-2 position-fixed start-0 bottom-0',
                 icon: 'biGearWide',
                 success: 'success',
-                $click: this.toggleShow
+                $click: () => this.toggleShow()
             })};
         `;
     }

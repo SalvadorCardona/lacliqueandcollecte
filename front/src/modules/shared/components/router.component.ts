@@ -1,7 +1,7 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, TemplateResult} from "lit-element";
 
-export default class WrapperComponent extends AppComponent {
+export default class RouterComponent extends AppComponent {
 
     public static getComponentName(): string {
         return 'app-router';

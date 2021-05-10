@@ -13,7 +13,7 @@ export default class WrapperComponent extends AppComponent {
     public title: string;
 
     @property({type: HTMLElement})
-    private body: HTMLElement|TemplateResult;
+    private body: TemplateResult;
 
     public render(): TemplateResult {
         return html`
@@ -21,7 +21,7 @@ export default class WrapperComponent extends AppComponent {
                 html`<div class="title">${this.title}</div>`:
                 ''
             }
-            ${unsafeHTML(this.body || this.innerHTML)}
+            ${this.body}
         `;
     }
 }

@@ -8,7 +8,7 @@ import PartnerHeaderComponent from "App/modules/partner/components/partner.heade
 import ProductLoopComponent from "App/modules/shared/components/product/product.loop.component";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import WrapperComponent from "App/modules/shared/components/router.component";
+import WrapperComponent from "App/modules/shared/components/wrapper.component";
 
 export default class PartnerViewComponent extends AppComponent {
 
@@ -54,10 +54,10 @@ export default class PartnerViewComponent extends AppComponent {
                     <div class="col-md-4">
                         ${this.createElement(WrapperComponent, {
                             title: 'Présensation',
-                            body: `
-                            <p>
-                                ${this.partnerPost.meta.shopDescription}
-                            </p>
+                            body: html`
+                                <p>
+                                    ${this.partnerPost.meta.shopDescription}
+                                </p>
                             `
                         })}
                         ${this.createElement(WrapperComponent, {
@@ -74,19 +74,19 @@ export default class PartnerViewComponent extends AppComponent {
     {
         return html`
             <div>
-                ${this.createElement(IconComponent, {icon: 'telephone'})} : ${this.partnerPost.meta?.phone}
+                ${this.createElement(IconComponent, {color:'primary' ,icon: 'telephone'})} : ${this.partnerPost.meta?.phone}
             </div>
             <div>
-                ${this.createElement(IconComponent, {icon: 'facebook'})} : ${this.partnerPost.meta?.facebook}
+                ${this.createElement(IconComponent, {color:'primary' ,icon: 'facebook'})} : ${this.partnerPost.meta?.facebook}
             </div>
             <div>
-                ${this.createElement(IconComponent, {icon: 'twitter'})} : ${this.partnerPost.meta?.twitter}
+                ${this.createElement(IconComponent, {color:'primary' ,icon: 'twitter'})} : ${this.partnerPost.meta?.twitter}
             </div>
             <div>
-                ${this.createElement(IconComponent, {icon: 'instagram'})} : ${this.partnerPost.meta?.instagram}
+                ${this.createElement(IconComponent, {color:'primary' ,icon: 'instagram'})} : ${this.partnerPost.meta?.instagram}
             </div>
             <div>
-                ${this.createElement(IconComponent, {icon: 'geoLat'})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
+                ${this.createElement(IconComponent, {color:'primary' ,icon: 'geoLat'})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
             </div>
             <div>
                 ${this.createElement(ButtonComponent,

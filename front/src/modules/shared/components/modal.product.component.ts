@@ -33,7 +33,7 @@ export default class ModalProductComponent extends AppComponent {
                         icon: 'biArrowReturnLeft',
                         type: 'success',
                         label: 'Retourner au produit',
-                        $click: this.modalService.close
+                        $click: () => this.modalService.close()
                     })}
                 </div>
             </div>

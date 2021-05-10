@@ -49,15 +49,15 @@ export default class PartnerHeaderComponent extends AppComponent {
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: ['md-2'],
+                            classList: 'md-2',
                             icon: 'facebook'
-                        }                    
+                        }
                     )}
                 </a>
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: ['md-2'],
+                            classList: 'md-2',
                             icon: 'instagram'
                         }
                     )}
@@ -65,7 +65,7 @@ export default class PartnerHeaderComponent extends AppComponent {
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: ['md-2'],
+                            classList: 'md-2',
                             icon: 'twitter'
                         }
                     )}
