@@ -32,20 +32,12 @@ export default class PartnerCardComponent extends AppComponent {
 <!--                <div class="wrapper-category text-white">i should be category list</div>-->
                 ${this.createElement(ButtonComponent, 
                     {
-                        classList: '[mt-2]',
-                        link: '${this.partnerPost.guid}',
-                        label: 'Voir sa page',
-                        type: 'primary'
-                    }
-                    )}
-                ${this.createElement(ButtonComponent, 
-                    {
                         classList: '[mt-2]', 
                         link: this.partnerPost.guid, 
                         label: 'Voir sa page', 
                         type: 'primary'
                     }
-                    )}
+                )}
             </div>
         `;
     }
