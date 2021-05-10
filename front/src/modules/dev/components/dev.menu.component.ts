@@ -6,6 +6,7 @@ import ComponentService from "App/core/component.service";
 import EventService, {events} from "App/core/event.service";
 import {property} from "lit-element/lib/decorators";
 import DevComponent from "App/modules/dev/components/dev.components";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 export default class DevMenuComponent extends AppComponent {
 
@@ -63,7 +64,12 @@ export default class DevMenuComponent extends AppComponent {
                 <b>Les events</b>
                     ${this.eventList()}
             </div>
-            <app-button class="ms-2 position-fixed start-0 bottom-0" @click="${this.toggleShow}" icon="biGearWide" type="success"></app-button>
+            ${this.createElement(ButtonComponent, {
+                classList: 'ms-2 position-fixed start-0 bottom-0',
+                icon: 'biGearWide',
+                success: 'success',
+                $click: () => this.toggleShow()
+            })};
         `;
     }
 
@@ -84,13 +90,11 @@ export default class DevMenuComponent extends AppComponent {
     private eventList(): TemplateResult {
         return html`
             <ul>
-                ${this.events.map(event => {
-                return html`
+                ${this.events.map(event => html`
                         <li>
                             - ${event}
                         </li>
-                    `;
-                })}
+                    `)}
             </ul>
         `;
     }

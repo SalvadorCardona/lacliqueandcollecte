@@ -1,5 +1,6 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class ModalComponent extends AppComponent {
 
@@ -40,7 +41,7 @@ export default class ModalComponent extends AppComponent {
                 w-100
                 ">
                     <span class="text-uppercase">${this._title || ''}</span>
-                    <app-icon @click="${this._$close}" icon="biX"></app-icon>
+                    ${this.createElement(IconComponent, {$click: () => this._$close(), icon: 'biX'})}
                 </div>
                 <div class="modal-body">${this._body}</div>
             </div>

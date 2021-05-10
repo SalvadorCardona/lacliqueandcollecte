@@ -10,6 +10,7 @@ import {property} from "lit-element/lib/decorators";
 import {html, TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/core/client/product.client";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 export default class ProductViewComponent extends AppComponent {
 
@@ -85,7 +86,15 @@ export default class ProductViewComponent extends AppComponent {
                                         <option value="6">6</option>
                                     </select>
                                 </div>
-                                <app-button class="mt-3" @click="${this.addItem}" type="primary" icon="cartPlus" label="Ajouter au panier"></app-button>
+                                ${this.createElement(ButtonComponent,
+                                    {
+                                        $click: () => this.addItem(),
+                                        classList: 'mt-3',
+                                        type: 'primary',
+                                        icon: 'cartPlus',
+                                        label: 'Ajouter au panier'
+                                    }
+                                )}
                             </div>
                         </section>
                     </div>

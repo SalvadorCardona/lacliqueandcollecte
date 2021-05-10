@@ -4,6 +4,9 @@ import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import {injector} from "App/core/container.service";
 import ConfigurationService from "App/core/configuration.service";
+import IconComponent from "App/modules/shared/components/icon.component";
+import ButtonComponent from "App/modules/shared/components/button.component";
+import HeaderCartComponent from "App/modules/shared/components/header/header.cart.component";
 
 export default class HeaderComponent extends AppComponent {
 
@@ -53,7 +56,7 @@ export default class HeaderComponent extends AppComponent {
                     d-inline-block
                     position-relative">
                         <input type="text" class="form-control" placeholder="Trouver votre produit....">
-                        <app-icon class="position-absolute" icon="search"></app-icon>
+                        ${this.createElement(IconComponent, {classList: 'position-absolute', icon: 'search'})}
                     </div>
                 </div>
                 <div class="col-md-6
@@ -64,13 +67,11 @@ export default class HeaderComponent extends AppComponent {
                 d-flex
                 justify-content-end
                 align-items-center" role="navigation">
-                        <ul id="menus-main-menus" class="menus m-0">
-                            ${this.renderMenu()}
-                        </ul>
-    
-                        <app-button link="/mon-compte" icon="person"></app-button>
-
-                        <app-header-cart></app-header-cart>
+                    <ul id="menus-main-menus" class="menus m-0">
+                        ${this.renderMenu()}
+                    </ul>
+                    ${this.createElement(ButtonComponent, {link: '/mon-compte', icon: 'person'})}
+                    ${this.createElement(HeaderCartComponent)}
                     </nav>
                 </div>
             </div>

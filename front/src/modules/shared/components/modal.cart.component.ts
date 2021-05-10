@@ -4,8 +4,10 @@ import ModalService from "App/core/modal.service";
 import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {html, property, TemplateResult} from 'lit-element';
-import {ButtonType} from "App/modules/shared/components/button.component";
 import EventService, {events} from "App/core/event.service";
+import {Color} from "App/enum/color.enum";
+import IconComponent from "App/modules/shared/components/icon.component";
+import ButtonComponent from "App/modules/shared/components/button.component";
 
 export default class ModalCartComponent extends AppComponent {
 
@@ -47,7 +49,7 @@ export default class ModalCartComponent extends AppComponent {
         return html`
           ${this.cart.items.map(this.itemsRender.bind(this))}
           <hr>
-          <app-button type="${ButtonType.DANGER}" @click="${this.removeItems}" label="Vider le panier"></app-button>
+          ${this.createElement(ButtonComponent, {type: '${Color.DANGER}', label: 'Vider le panier'})}
         `;
     }
 
@@ -63,7 +65,7 @@ export default class ModalCartComponent extends AppComponent {
         return html`
           <div>
               ${product.name}
-              <app-icon @click="${():void => this.removeItem(product.key)}" icon="biX" > </app-icon>
+              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
           </div>
         `;
     }

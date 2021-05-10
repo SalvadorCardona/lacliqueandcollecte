@@ -1,6 +1,7 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from "lit-element";
 import {PartnerPost} from "App/types/partner.type";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class PartnerHeaderComponent extends AppComponent {
 
@@ -35,7 +36,7 @@ export default class PartnerHeaderComponent extends AppComponent {
             </h1>
 
             <span>
-                <app-icon icon="geoLat"></app-icon>
+                ${this.createElement(IconComponent, {icon: 'geoLat'})}
                 Commerce situé dans la ville de ${this.partnerPost.meta.city}
             </span>
             
@@ -45,9 +46,30 @@ export default class PartnerHeaderComponent extends AppComponent {
                 translate-middle
                 d-flex
                 justify-content-end">
-                <a href=""><app-icon class="m-2" icon="facebook"></app-icon></a>
-                <a href=""><app-icon class="m-2" icon="instagram"></app-icon></a>
-                <a href=""><app-icon class="m-2" icon="twitter"></app-icon></a>
+                <a href="">
+                    ${this.createElement(IconComponent,
+                        {
+                            classList: 'md-2',
+                            icon: 'facebook'
+                        }
+                    )}
+                </a>
+                <a href="">
+                    ${this.createElement(IconComponent,
+                        {
+                            classList: 'md-2',
+                            icon: 'instagram'
+                        }
+                    )}
+                </a>
+                <a href="">
+                    ${this.createElement(IconComponent,
+                        {
+                            classList: 'md-2',
+                            icon: 'twitter'
+                        }
+                    )}
+                </a>
             </div>
         </div>
         `;

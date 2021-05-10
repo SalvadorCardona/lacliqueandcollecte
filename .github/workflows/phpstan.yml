@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: php-actions/composer@v5 # or alternative dependency management
-        with:
-          working_dir: ./back
-      - uses: php-actions/phpstan@v2
-        with:
-          php_version: 8.0
-          memory_limit: 256M
-          configuration: ./back/phpstan.neon
+#      - uses: php-actions/composer@v5 # or alternative dependency management
+#        with:
+#          working_dir: ./back
+#      - uses: php-actions/phpstan@v2
+#        with:
+#          php_version: 8.0
+#          memory_limit: 256M
+#          configuration: ./back/phpstan.neon

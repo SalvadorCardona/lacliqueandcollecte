@@ -6,6 +6,7 @@ import {injector} from "App/core/container.service";
 import {html, property, TemplateResult} from "lit-element";
 import ModalService from "App/core/modal.service";
 import ModalCartComponent from "App/modules/shared/components/modal.cart.component";
+import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class HeaderCartComponent extends AppComponent {
 
@@ -43,7 +44,7 @@ export default class HeaderCartComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <span @click="${this.openModal}">
-                <app-icon icon="cart"></app-icon>
+                ${this.createElement(IconComponent, {icon: 'cart'})}
                 <div class="counter
                     text-white
                     bg-primary
