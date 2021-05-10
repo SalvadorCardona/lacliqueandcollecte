@@ -79,7 +79,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                             align-items-center">
                                         ${this.createElement(IconComponent,
                                             {
-                                              icon: 'search'  
+                                                icon: 'search'
                                             }
                                         )}
                                     </a>
