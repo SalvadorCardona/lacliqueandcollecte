@@ -31,7 +31,7 @@ export default class ModalComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-        <div @click="${this.close}" class="modal-background">
+        <div @click=${this.close} class="modal-background">
             <div class="modal-content col-md-3 position-relative mt-0">
                 <div class="modal-header
                 gradient-primary 

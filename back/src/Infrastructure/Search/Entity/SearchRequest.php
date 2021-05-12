@@ -81,4 +81,14 @@ class SearchRequest
     {
         return $this->getParam('author__in');
     }
+
+    public function getSearchable(): bool
+    {
+        return (bool) $this->getParam('searchable');
+    }
+
+    public function getPostType(): ?string
+    {
+        return $this->getParam('post_type');
+    }
 }

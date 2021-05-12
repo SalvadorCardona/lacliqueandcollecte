@@ -1,6 +1,6 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from 'lit-element';
-import {Color} from "App/enum/color.enum";
+import {Color} from "App/core/color.enum";
 import IconComponent from "App/modules/shared/components/icon.component";
 
 export default class ButtonComponent extends AppComponent {

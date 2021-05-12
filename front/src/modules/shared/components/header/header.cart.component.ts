@@ -43,7 +43,7 @@ export default class HeaderCartComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <span @click="${this.openModal}">
+            <span @click=${this.openModal}>
                 ${this.createElement(IconComponent, {icon: 'cart'})}
                 <div class="counter
                     text-white

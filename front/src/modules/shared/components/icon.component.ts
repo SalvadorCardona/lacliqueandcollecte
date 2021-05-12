@@ -2,7 +2,7 @@ import {AppComponent} from 'App/core/custom.element';
 import {icons} from 'App/core/icons'
 import {html, property, TemplateResult} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
-import {Color} from "App/enum/color.enum";
+import {Color} from "App/core/color.enum";
 
 export default class IconComponent extends AppComponent {
 

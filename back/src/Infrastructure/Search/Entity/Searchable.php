@@ -6,8 +6,7 @@ namespace App\Infrastructure\Search\Entity;
 
 class Searchable
 {
-    public string $label;
+    public int $id;
     public string $name;
-    public string $type;
     public array $searchableItems = [];
 }

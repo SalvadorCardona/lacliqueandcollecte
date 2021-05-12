@@ -130,6 +130,12 @@ class WordpressMiddleware
         wp_dequeue_script($handle);
     }
 
+    public function getPermalink(int|WP_Post $post, bool $leaveName = false): ?string
+    {
+        $permalink = get_permalink($post, $leaveName);
+        return $permalink ? $permalink : null;
+    }
+
     public function addRole(string $role, string $displayName, array $capabilities): ?WP_Role
     {
         return add_role($role, $displayName, $capabilities);

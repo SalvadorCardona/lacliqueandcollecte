@@ -12,13 +12,29 @@ export interface SearchParams {
     product_cat?: Array<number>,
     city?: Array<number>,
     author__in?: Array<number>,
-    posts_per_page?: number
+    posts_per_page?: number,
+    searchable?: boolean,
+    offset?: number,
+    post_type?: string
 }
 
 export interface SearchResponse {
     items: ProductPost[]|PartnerPost[]|PostType[];
     itemCount: number;
     itemPerPage: number;
+    searchableList?: Array<Searchable>
+}
+
+export interface Searchable {
+    id: number;
+    name: string;
+    searchableItems: SearchableItem[];
+}
+
+export interface SearchableItem {
+    id: number;
+    label: string;
+    name: string;
 }
 
 export default class SearchClient extends Abstract {

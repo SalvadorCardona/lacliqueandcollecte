@@ -20,7 +20,7 @@ export default abstract class AbstractStore<T> {
             .forEach(subscriber => subscriber(this.state));
     }
 
-    public onChange(callback: (state: any|null) => void): void {
+    public onChange(callback: (state: T|null) => void): void {
         this.subscriberList.push(callback);
     }
 }

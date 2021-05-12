@@ -3,7 +3,6 @@ import {html, TemplateResult} from "lit-element";
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchContentComponent from "App/modules/search/components/search.content.component";
 import {injector} from "App/core/container.service";
-import {ProductPost} from "App/types/product.type";
 import {property} from "lit-element/lib/decorators";
 import LoaderService from "App/core/loader.service";
 import {SearchParams} from "App/core/client/search.client";
@@ -20,9 +19,6 @@ export default class SearchViewComponent extends AppComponent {
     @injector(ConfigurationService)
     private configurationService: ConfigurationService;
 
-    @property({type: Array})
-    private productList: ProductPost[];
-
     @property({type: Object})
     private searchParams: SearchParams = {};
 
@@ -35,13 +31,12 @@ export default class SearchViewComponent extends AppComponent {
 
         this.searchService.onChange(state => {
             this.loaderService.hide();
-            console.log(state);
-            this.productList = state.items;
         });
 
         if (!Object.keys(this.searchParams).length) {
             const queriedObject = this.configurationService.configuration.wpQuery.queriedObject
             this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
+            this.searchParams.searchable = true;
         }
 
         this.searchService.search(this.searchParams);
@@ -58,7 +53,7 @@ export default class SearchViewComponent extends AppComponent {
                         ${this.createElement(SearchLeftBarComponent)}
                     </div>
                     <div class="col-md-9">
-                        ${new SearchContentComponent(this.productList)}
+                        ${this.createElement(SearchContentComponent)}
                     </div>
                 </div>
             </div>
