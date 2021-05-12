@@ -1,13 +1,12 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
-import buttonTemplate from "App/modules/dev/components/ui/page/templates/ui.button.template";
-import textTemplate from "App/modules/dev/components/ui/page/templates/ui.text.template";
-import textAroundTemplate from "App/modules/dev/components/ui/page/templates/ui.text.around.template";
-import formTemplate from "App/modules/dev/components/ui/page/templates/ui.form.template";
-import colorTemplate from "App/modules/dev/components/ui/page/templates/ui.colors.template";
-import products from "App/modules/dev/components/ui/page/templates/ui.products.template";
-import icons from "App/modules/dev/components/ui/page/templates/ui.icon.template";
-import {unsafeHTML} from "lit-html/directives/unsafe-html";
+import buttonComponent from "App/modules/dev/components/ui/page/components/ui.button.component";
+import UiTextComponent from "App/modules/dev/components/ui/page/components/ui.text.component";
+import textAroundComponent from "App/modules/dev/components/ui/page/components/ui.text.around.component";
+import formComponent from "App/modules/dev/components/ui/page/components/ui.form.component";
+import colorComponent from "App/modules/dev/components/ui/page/components/ui.colors.component";
+import products from "App/modules/dev/components/ui/page/components/ui.products.component";
+import iconComponent from "App/modules/dev/components/ui/page/components/ui.icon.component";
 
 export default class UiViewComponent extends AppComponent {
 
@@ -20,16 +19,16 @@ export default class UiViewComponent extends AppComponent {
             <div class="container">
                 <h2>Components</h2>
                 <div class="row">
-                    ${unsafeHTML(textTemplate)}
-                    ${unsafeHTML(textAroundTemplate)}
-                    ${unsafeHTML(buttonTemplate)}
-                    ${unsafeHTML(colorTemplate)}
-                    ${unsafeHTML(formTemplate)}
-                    ${unsafeHTML(icons)}
+                    ${this.createElement(UiTextComponent)}
+                    ${this.createElement(textAroundComponent)}
+                    ${this.createElement(buttonComponent)}
+                    ${this.createElement(colorComponent)}
+                    ${this.createElement(formComponent)}
+                    ${this.createElement(iconComponent)}
                 </div>
             
             <h2>Produit</h2>
-                ${unsafeHTML(products)}
+                ${this.createElement(products)}
             </div>
         `;
     }
