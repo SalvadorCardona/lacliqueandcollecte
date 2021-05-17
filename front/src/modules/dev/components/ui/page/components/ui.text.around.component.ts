@@ -12,8 +12,7 @@ export default class textAroundComponent extends AppComponent {
             <div class="col-4">
                 ${this.createElement(WrapperComponent, 
                     {
-                        title: 'Text Around',
-                        classList: '[app-wrapper]',
+                        title: 'Text Around', classList: 'app-wrapper',
                         body: html`
                                     <span class="fw-normal">
                                         &lt;span class="text-around bg-primary"&gt &lt;/span&gt
@@ -27,7 +26,7 @@ export default class textAroundComponent extends AppComponent {
                                     <span class="text-around bg-info">bg-info</span>
                                     <span class="text-around bg-dark">bg-dark</span>
                                 `
-                            })
+                    })
                 }
             </div>
         `;

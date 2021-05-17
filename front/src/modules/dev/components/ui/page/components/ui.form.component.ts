@@ -18,7 +18,7 @@ export default class formComponent extends AppComponent {
             ${this.createElement(WrapperComponent,
             {
                 title: 'Form',
-                body: html `
+                body: html`
                             <form>
                                 ${this.createElement(InputBaseComponent, {type: 'email', label: 'Email Address', helper: 'We\'ll never share your email with anyone else.'})}
                                 <br>

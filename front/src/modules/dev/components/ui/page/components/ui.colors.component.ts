@@ -32,7 +32,7 @@ export default class colorComponent extends AppComponent {
         ${this.createElement(WrapperComponent,
             {
                 title: 'Colors',
-                body: html `
+                body: html`
                             <span class="app-color bg-primary">Primary</span>
                             <span class="app-color bg-secondary">Secondary</span>
                             <span class="app-color bg-success">Success</span>
@@ -47,7 +47,7 @@ export default class colorComponent extends AppComponent {
         ${this.createElement(WrapperComponent,
             {
                 title: 'Gradients',
-                body: html `
+                body: html`
                             <span class="app-gradient gradient-primary">Primary</span>
                             <span class="app-gradient gradient-secondary">Secondary</span>
                             <span class="app-gradient gradient-success">Success</span>

@@ -14,7 +14,7 @@ export default class UiTextComponent extends AppComponent {
                 ${this.createElement(WrapperComponent, 
                     {
                         title: 'Title',
-                        body: html `
+                        body: html`
                                     <h1>Title H1</h1>
                                     <h2>Title H2</h2>
                                     <h3>Title H3</h3>
@@ -29,7 +29,7 @@ export default class UiTextComponent extends AppComponent {
                 ${this.createElement(WrapperComponent, 
                     {
                         title: 'Text Colors',
-                        body: html `
+                        body: html`
                                     <div class="w-50 d-inline-block">
                                         <p class="text-primary">.text-primary</p>
                                         <p class="text-secondary">.text-secondary</p>
@@ -56,7 +56,7 @@ export default class UiTextComponent extends AppComponent {
                 ${this.createElement(WrapperComponent, 
                     {
                         title: 'Font Weight',
-                        body: html `
+                        body: html`
                                     <p class="fw-bold">Weight 1 - .fw-bold</p>
                                     <p class="fw-bolder">Weight 2 - .fw-bolder</p>
                                     <p class="fw-normal">Weight 3 - .fw-normal</p>
@@ -70,7 +70,7 @@ export default class UiTextComponent extends AppComponent {
                 ${this.createElement(WrapperComponent, 
                     {
                         title: 'Font Size',
-                        body: html `
+                        body: html`
                                     <p class="fs-1 fw-bold">Size 1</p>
                                     <p class="fs-2 fw-bold">Size 2</p>
                                     <p class="fs-3 fw-bold">Size 3</p>

@@ -13,21 +13,20 @@ export default class buttonComponent extends AppComponent {
             
             ${this.createElement(WrapperComponent, 
                 {
-                    title: 'Buttons',
-                    classList: '[app-wrapper]',
-                    body: html `<span class="fw-normal">
+                    title: 'Buttons', classList: 'app-wrapper',
+                    body: html`<span class="fw-normal">
                                     &lt;app-button icon="" label="" type=""&gt &lt;/app-button&gt
                                 </span>
                                 <hr>
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', icon: 'cartPlus', label: 'Normal...'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', icon: 'geoLat', label: 'Primary...', type: 'primary'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', icon: 'geoLat', type: 'primary'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Secondary...', type: 'secondary'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Success...', type: 'success'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Danger...', type: 'danger'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Warning...', type: 'warning'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Info...', type: 'info'})}
-                                ${this.createElement(buttonComponent, {classList : '[mt-2]', label: 'Dark...', type: 'dark'})}                               
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', icon: 'cartPlus', label: 'Normal...'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', icon: 'geoLat', label: 'Primary...', type: 'primary'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', icon: 'geoLat', type: 'primary'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Secondary...', type: 'secondary'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Success...', type: 'success'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Danger...', type: 'danger'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Warning...', type: 'warning'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Info...', type: 'info'})}
+                                ${this.createElement(buttonComponent, {classList : 'mt-2', label: 'Dark...', type: 'dark'})}                               
                                 `
                 }
                 )}
