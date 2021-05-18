@@ -55,6 +55,7 @@ export class ContainerService {
         return this.self;
     }
 
+    // TODO: I need refacto comment
     public service<Class>(classReference: Type<Class>): Class|null {
         // @ts-ignore
         return this.container.find(elem => elem instanceof classReference) || null;

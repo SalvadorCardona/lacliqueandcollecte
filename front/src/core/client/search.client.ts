@@ -23,7 +23,11 @@ export interface SearchResponse {
 
 export default class SearchClient extends Abstract {
     public search(searchParams: SearchParams = {}): Promise<SearchResponse> {
-        return this.clientHttp.send('get', environment.apiEndpoints.search.all, {params: searchParams})
+        const data = {
+          params:
+              {params: searchParams}
+        };
+        return this.clientHttp.send('get', environment.apiEndpoints.search.all, data)
           .then(response => {
               return response.data
           });

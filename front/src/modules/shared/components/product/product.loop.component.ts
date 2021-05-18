@@ -1,8 +1,7 @@
 import {AppComponent} from "App/core/custom.element";
-import {ProductPost, ProductType} from "App/types/product.type"
+import {ProductPost} from "App/types/product.type"
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/core/container.service";
-import ProductClient from "App/core/client/product.client";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 import SearchClient, {SearchParams} from "App/core/client/search.client";
 
