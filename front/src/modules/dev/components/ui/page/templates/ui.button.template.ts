@@ -1,5 +1,4 @@
 export default `
-
 <div class="col-4">
     <app-wrapper title="Buttons" class="app-wrapper">
         <span class="fw-normal">
@@ -17,5 +16,4 @@ export default `
         <app-button class="mt-2" label="Dark..." type="dark"></app-button>
     </app-wrapper>
 </div>
-
 `;

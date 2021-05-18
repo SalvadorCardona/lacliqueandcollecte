@@ -22,6 +22,5 @@ export default abstract class AbstractStore<T> {
 
     public onChange(callback: (state: any|null) => void): void {
         this.subscriberList.push(callback);
-        alert('test');
     }
 }
