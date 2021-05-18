@@ -9,6 +9,7 @@ export interface QuerySearch {
      */
     include?: Array<number>
     per_page?: number;
+    search?: string;
 }
 
 export default class ProductClient extends Abstract {

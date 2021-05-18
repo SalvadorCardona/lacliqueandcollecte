@@ -12,6 +12,6 @@ if (! defined('ABSPATH')) {
 
 ?>
 
-<header class="position-sticky top-0" role="banner">
+<header class="position-sticky top-0 bg-white" role="banner">
     <app-header></app-header>
 </header>
