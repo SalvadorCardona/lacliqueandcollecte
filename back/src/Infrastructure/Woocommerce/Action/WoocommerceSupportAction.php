@@ -33,7 +33,7 @@ class WoocommerceSupportAction implements ActionInterface
             //return wp_get_current_user();
 //            return new WP_User(1);s
 //    if( 'GET' ==  WC()->api->server->method ){
-        return new WP_User( 1 );
+            return new WP_User(1);
 //    } else {
 //        throw new Exception( __( 'You dont have permission', 'woocommerce' ), 401 );
         }, 1);

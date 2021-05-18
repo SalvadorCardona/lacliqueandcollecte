@@ -1,6 +1,6 @@
 .btn {
   @include app-transition();
-  border: none;
+  border: unset;
   border-radius: $border-radius;
   color: $white;
   display: inline-block;
@@ -9,7 +9,7 @@
   padding: 15px;
 
   path {
-    color: white;
+    color: $white;
     font-size: 18px;
     height: 50px;
     stroke-width: 10px;

@@ -1,6 +1,11 @@
 import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from "lit-element";
-import {unsafeHTML} from 'lit-html/directives/unsafe-html';
+import DevMenuComponent from "App/modules/dev/components/dev.menu.component";
+import HomeViewComponent from "App/modules/home/components/home.view.component";
+import SearchViewComponent from "App/modules/search/components/search.view.component";
+import UiViewComponent from "App/modules/dev/components/ui/ui.view.component";
+import ProductViewComponent from "App/modules/product/components/product.view.component";
+import PartnerViewComponent from "App/modules/partner/components/partner.view.component";
 
 export default class DevComponent extends AppComponent {
 
@@ -13,9 +18,9 @@ export default class DevComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <app-dev-application></app-dev-application>
+            ${this.createElement(DevMenuComponent, {classList: 'position-fixed start-0 top-0 min-vh-100'})}
             <main id="main">
-                ${unsafeHTML(this.router())}
+                ${this.router()}
             </main>
         `;
     }
@@ -24,20 +29,20 @@ export default class DevComponent extends AppComponent {
         setTimeout(() => this.router(), 100);
     }
 
-    private router(): string {
+    private router(): AppComponent {
         this.route = window.location.hash;
 
         switch (this.route) {
             case '#home':
-                return '<app-home-view></app-home-view>';
+                return this.createElement(HomeViewComponent);
             case '#search':
-                return '<app-search-view></app-search-view>';
+                return this.createElement(SearchViewComponent);
             case '#partner':
-                return '<app-partner-view partnerPostId="106"></app-partner-view>';
+                return this.createElement(PartnerViewComponent, {partnerPostId: 106});
             case '#produit':
-                return '<app-product-view productId="139"></app-product-view>';
+                return this.createElement(ProductViewComponent, {productId: 139});
             default:
-                return '<app-ui-view></app-ui-view>';
+                return this.createElement(UiViewComponent);
         }
     }
 }

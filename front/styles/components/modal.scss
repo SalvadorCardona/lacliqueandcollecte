@@ -31,7 +31,7 @@ app-modal {
 
     .modal-header {
       align-content: center;
-      color: white;
+      color: $white;
       display: flex;
       height: $header-size;
       justify-content: space-between;
@@ -49,7 +49,7 @@ app-modal {
         }
 
         path {
-          color: white;
+          color: $white;
         }
       }
     }

@@ -28,6 +28,7 @@ export default class InputCheckboxComponent extends InputBaseComponent {
         this.input.checked = this.checked;
     }
 
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
     public static create(label: string, value: any,checked: boolean = false, onChange: CallableFunction = null): InputCheckboxComponent {
         const $elem = new InputCheckboxComponent();
         $elem.value = value;

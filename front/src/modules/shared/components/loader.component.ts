@@ -8,6 +8,6 @@ export default class LoaderComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
-        return html`<div class="donutSpinner"></div>`;
+        return html`<div class="donut-spinner"></div>`;
     }
 }

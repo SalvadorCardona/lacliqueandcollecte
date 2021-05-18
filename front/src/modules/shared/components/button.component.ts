@@ -24,7 +24,7 @@ export default class ButtonComponent extends AppComponent {
     @property({type: Function})
     private $click?: CallableFunction;
 
-    public connectedCallback() {
+    public connectedCallback(): void {
         super.connectedCallback();
         if (this.$click) {
             this.addEventListener('click', () => {

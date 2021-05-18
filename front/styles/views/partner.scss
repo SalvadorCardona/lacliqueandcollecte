@@ -11,13 +11,13 @@ app-partner-view {
   #partner-header {
     background-position: center;
     background-size: cover;
-    color: white;
+    color: $white;
     margin-top: 45px;
 
     text-shadow: 0 0 3px $gray-700;
 
     path {
-      color: white;
+      color: $white;
     }
 
     > * {
@@ -25,7 +25,7 @@ app-partner-view {
     }
 
     hr {
-      border-top: 1px solid white;
+      border-top: 1px solid $white;
       opacity: 0.7;
       width: 360px;
     }
@@ -33,7 +33,7 @@ app-partner-view {
     #picture {
       background: #CCC;
       background-size: cover;
-      border: 10px solid white;
+      border: 10px solid $white;
       border-radius: 50%;
       height: 150px;
       width: 150px;

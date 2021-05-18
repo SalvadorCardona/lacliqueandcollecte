@@ -5,7 +5,6 @@ import {CartType, ProductCart} from "App/types/cart.type";
 import CartService from "App/core/cart.service";
 import {html, property, TemplateResult} from 'lit-element';
 import EventService, {events} from "App/core/event.service";
-import {Color} from "App/enum/color.enum";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
 

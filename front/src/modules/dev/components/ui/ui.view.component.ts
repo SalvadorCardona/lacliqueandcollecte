@@ -1,12 +1,13 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
-import buttonComponent from "App/modules/dev/components/ui/page/components/ui.button.component";
-import UiTextComponent from "App/modules/dev/components/ui/page/components/ui.text.component";
-import textAroundComponent from "App/modules/dev/components/ui/page/components/ui.text.around.component";
-import formComponent from "App/modules/dev/components/ui/page/components/ui.form.component";
-import colorComponent from "App/modules/dev/components/ui/page/components/ui.colors.component";
-import products from "App/modules/dev/components/ui/page/components/ui.products.component";
-import iconComponent from "App/modules/dev/components/ui/page/components/ui.icon.component";
+import UiTextComponent from "App/modules/dev/components/ui/ui.text.component";
+import UiTextAroundComponent from "App/modules/dev/components/ui/ui.text.around.component";
+import UiButtonComponent from "App/modules/dev/components/ui/ui.button.component";
+import UiColorsComponent from "App/modules/dev/components/ui/ui.colors.component";
+import UiFormComponent from "App/modules/dev/components/ui/ui.form.component";
+import UiIconComponent from "App/modules/dev/components/ui/ui.icon.component";
+import UiProductsComponent from "App/modules/dev/components/ui/ui.products.component";
+import UiListComponentComponent from "App/modules/dev/components/ui/ui.list.component.component";
 
 export default class UiViewComponent extends AppComponent {
 
@@ -20,15 +21,26 @@ export default class UiViewComponent extends AppComponent {
                 <h2>Components</h2>
                 <div class="row">
                     ${this.createElement(UiTextComponent)}
-                    ${this.createElement(textAroundComponent)}
-                    ${this.createElement(buttonComponent)}
-                    ${this.createElement(colorComponent)}
-                    ${this.createElement(formComponent)}
-                    ${this.createElement(iconComponent)}
+                    <div class="col-md-4">
+                        ${this.createElement(UiTextAroundComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiButtonComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiListComponentComponent)}
+                    </div>
+                    ${this.createElement(UiColorsComponent)}
+                    <div class="col-md-8">
+                        ${this.createElement(UiFormComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiIconComponent)}
+                    </div>
                 </div>
-            
-            <h2>Produit</h2>
-                ${this.createElement(products)}
+
+                <h2>Produit</h2>
+                ${this.createElement(UiProductsComponent)}
             </div>
         `;
     }

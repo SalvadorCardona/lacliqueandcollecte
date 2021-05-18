@@ -13,7 +13,7 @@ export default class LoaderService implements OnInit {
 
     public onInit(): void {
         this.eventService.addSubscriber(events.SERVICE_LOADED, () => {
-            const loader:HTMLElement = document.querySelector('#loader-application-not-loaded');
+            const loader:HTMLElement = document.querySelector('.loader-application');
 
             if (loader) {
                 loader.remove();
