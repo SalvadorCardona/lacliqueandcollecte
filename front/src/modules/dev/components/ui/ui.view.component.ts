@@ -1,13 +1,13 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
-import buttonTemplate from "App/modules/dev/components/ui/page/templates/ui.button.template";
-import textTemplate from "App/modules/dev/components/ui/page/templates/ui.text.template";
-import textAroundTemplate from "App/modules/dev/components/ui/page/templates/ui.text.around.template";
-import formTemplate from "App/modules/dev/components/ui/page/templates/ui.form.template";
-import colorTemplate from "App/modules/dev/components/ui/page/templates/ui.colors.template";
-import products from "App/modules/dev/components/ui/page/templates/ui.products.template";
-import icons from "App/modules/dev/components/ui/page/templates/ui.icon.template";
-import {unsafeHTML} from "lit-html/directives/unsafe-html";
+import UiTextComponent from "App/modules/dev/components/ui/ui.text.component";
+import UiTextAroundComponent from "App/modules/dev/components/ui/ui.text.around.component";
+import UiButtonComponent from "App/modules/dev/components/ui/ui.button.component";
+import UiColorsComponent from "App/modules/dev/components/ui/ui.colors.component";
+import UiFormComponent from "App/modules/dev/components/ui/ui.form.component";
+import UiIconComponent from "App/modules/dev/components/ui/ui.icon.component";
+import UiProductsComponent from "App/modules/dev/components/ui/ui.products.component";
+import UiListComponentComponent from "App/modules/dev/components/ui/ui.list.component.component";
 
 export default class UiViewComponent extends AppComponent {
 
@@ -20,16 +20,27 @@ export default class UiViewComponent extends AppComponent {
             <div class="container">
                 <h2>Components</h2>
                 <div class="row">
-                    ${unsafeHTML(textTemplate)}
-                    ${unsafeHTML(textAroundTemplate)}
-                    ${unsafeHTML(buttonTemplate)}
-                    ${unsafeHTML(colorTemplate)}
-                    ${unsafeHTML(formTemplate)}
-                    ${unsafeHTML(icons)}
+                    ${this.createElement(UiTextComponent)}
+                    <div class="col-md-4">
+                        ${this.createElement(UiTextAroundComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiButtonComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiListComponentComponent)}
+                    </div>
+                    ${this.createElement(UiColorsComponent)}
+                    <div class="col-md-8">
+                        ${this.createElement(UiFormComponent)}
+                    </div>
+                    <div class="col-md-4">
+                        ${this.createElement(UiIconComponent)}
+                    </div>
                 </div>
-            
-            <h2>Produit</h2>
-                ${unsafeHTML(products)}
+
+                <h2>Produit</h2>
+                ${this.createElement(UiProductsComponent)}
             </div>
         `;
     }

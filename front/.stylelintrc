@@ -3,7 +3,9 @@
     "color-no-invalid-hex": true,
     "color-hex-case": "upper",
     "selector-no-qualifying-type": null,
-    "max-nesting-depth": null
+    "max-nesting-depth": null,
+    "selector-max-compound-selectors": null,
+    "selector-max-id": null
   },
 
   "extends": "stylelint-config-sass-guidelines"

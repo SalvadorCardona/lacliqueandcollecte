@@ -1,5 +1,4 @@
 import {PostType} from "App/types/post.type";
-import {PartnerType} from "App/types/partner.type";
 
 export interface Downloads {
 }

@@ -35,8 +35,4 @@ export abstract class AppComponent extends LitElement {
     protected createRenderRoot(): this {
         return this;
     }
-
-    public static create(...args: any): any {
-        throw new Error("Method not implemented.");
-    }
 }

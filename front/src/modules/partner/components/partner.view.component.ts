@@ -90,11 +90,7 @@ export default class PartnerViewComponent extends AppComponent {
             </div>
             <div>
                 ${this.createElement(ButtonComponent,
-                    {
-                        icon: 'envelope',
-                        type: 'primary',
-                        label: 'Contactez-le'
-                    }
+                    {icon: 'envelope', type: 'primary', label: 'Contactez-le'}
                 )}
             </div>
         `;

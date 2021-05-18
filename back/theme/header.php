@@ -15,8 +15,8 @@ if (! defined('ABSPATH')) {
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-<div id="loader-application-not-loaded" class="loader-fixed">
-    <div class="donutSpinner"></div>
+<div class="loader-application loader-fixed">
+    <div class="donut-spinner"></div>
 </div>
 
 <head>
