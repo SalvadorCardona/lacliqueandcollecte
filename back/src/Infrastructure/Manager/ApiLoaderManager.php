@@ -28,7 +28,7 @@ class ApiLoaderManager extends AbstractManager
 
     private function addRouting(AbstractApiController $api): void
     {
-        $this->wordpressMiddleware->RegisterRestRoute(
+        $this->wordpressMiddleware->registerRestRoute(
             $api->getNamespace(),
             $api->getEndPoint(),
             [

@@ -146,7 +146,7 @@ class WordpressMiddleware
         register_extended_field_group($config);
     }
 
-    public function RegisterRestRoute(string $namespace, string $route, array $args, null|bool $override = false): bool
+    public function registerRestRoute(string $namespace, string $route, array $args, null|bool $override = false): bool
     {
         return register_rest_route($namespace, $route, $args, $override);
     }
@@ -175,6 +175,4 @@ class WordpressMiddleware
     {
         add_post_type_support($postType, $feature, ...$args);
     }
-
-
 }

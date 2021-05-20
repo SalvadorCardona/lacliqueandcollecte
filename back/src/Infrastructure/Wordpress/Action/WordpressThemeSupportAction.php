@@ -43,14 +43,14 @@ class WordpressThemeSupportAction implements ActionInterface
             );
         $this->wordpressMiddleware
             ->addThemeSupport(
-            'custom-logo',
-            array(
-                'height' => 100,
-                'width' => 350,
-                'flex-height' => true,
-                'flex-width' => true,
-            )
-        );
+                'custom-logo',
+                array(
+                    'height' => 100,
+                    'width' => 350,
+                    'flex-height' => true,
+                    'flex-width' => true,
+                )
+            );
 
         $this->wordpressMiddleware
             ->addThemeSupport('woocommerce');
