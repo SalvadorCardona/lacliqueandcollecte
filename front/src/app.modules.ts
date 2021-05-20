@@ -18,6 +18,7 @@ import homeModule from "App/modules/home/home.modules";
 import searchModule from "App/modules/search/search.modules";
 import SearchClient from "App/core/client/search.client";
 import SearchService from "App/core/search.service";
+import todoListModule from "App/modules/todo-list/todo.list.module";
 
 export default [
     homeModule,
@@ -26,6 +27,7 @@ export default [
     partnerModule,
     devModule,
     searchModule,
+    todoListModule,
     {
         services: [
             ModalService,

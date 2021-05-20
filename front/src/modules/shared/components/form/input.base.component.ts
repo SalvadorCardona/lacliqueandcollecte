@@ -21,7 +21,7 @@ export default class InputBaseComponent extends AppComponent {
     protected type: InputType = InputType.TEXT;
 
     @property({type: String})
-    protected placeholder: string;
+    protected placeholder: string = '';
 
     @property({type: String})
     protected helper: string;
@@ -44,7 +44,7 @@ export default class InputBaseComponent extends AppComponent {
         return html`
             <div class="form-group">
                 <label for="${this.getId()}" class="form-label">${this.label}</label>
-                <input @change="${this._onChange}" value="${this.value}" placeholder="${this.placeholder}" type="${this.type}" class="form-control" id="${this.getId()}">
+                <input @keyup="${this._onChange}" @change="${this._onChange}" value="${this.value}" placeholder="${this.placeholder}" type="${this.type}" class="form-control" id="${this.getId()}">
                 ${this.helper ? html`<div class="form-text">${this.helper}</div>` : ''}
             </div>
         `;

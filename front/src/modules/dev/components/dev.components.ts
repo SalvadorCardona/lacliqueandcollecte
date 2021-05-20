@@ -6,6 +6,7 @@ import SearchViewComponent from "App/modules/search/components/search.view.compo
 import UiViewComponent from "App/modules/dev/components/ui/ui.view.component";
 import ProductViewComponent from "App/modules/product/components/product.view.component";
 import PartnerViewComponent from "App/modules/partner/components/partner.view.component";
+import TodoListViewComponent from "App/modules/todo-list/components/todo.list.view.component";
 
 export default class DevComponent extends AppComponent {
 
@@ -37,6 +38,8 @@ export default class DevComponent extends AppComponent {
                 return this.createElement(HomeViewComponent);
             case '#search':
                 return this.createElement(SearchViewComponent);
+            case '#todo-list':
+                return this.createElement(TodoListViewComponent);
             case '#partner':
                 return this.createElement(PartnerViewComponent, {partnerPostId: 106});
             case '#produit':
