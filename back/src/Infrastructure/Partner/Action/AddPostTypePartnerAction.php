@@ -54,7 +54,7 @@ class AddPostTypePartnerAction implements ActionInterface
         ]);
 
         $this->wordpressMiddleware->registerExtendedFieldGroup([
-            'title' => $this->wordpressMiddleware->trans('Notre Partenairetest'),
+            'title' => $this->wordpressMiddleware->trans('Notre Partenaire'),
             'location' => [
                 Location::if('post_type', Partner::POST_TYPE_NAME)
             ],
