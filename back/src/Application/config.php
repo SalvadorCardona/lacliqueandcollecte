@@ -48,6 +48,6 @@ return [
         return new ResourcesLoader($c, $c->get('resourcesList'));
     }),
     AddAssetsAction::class => DI\factory(function (ContainerInterface $c) {
-        return new AddAssetsAction($c->get('dir.public'), $c->get(MiddlewareConfigurationFactory::class));
+        return new AddAssetsAction($c->get('dir.public'), $c->get(MiddlewareConfigurationFactory::class), new WordpressMiddleware());
     })
 ];

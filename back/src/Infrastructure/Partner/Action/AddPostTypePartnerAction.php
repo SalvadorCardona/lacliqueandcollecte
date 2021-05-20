@@ -26,13 +26,13 @@ class AddPostTypePartnerAction implements ActionInterface
 
     public function __invoke(): void
     {
-        add_role(
+        $this->wordpressMiddleware->addRole(
             Partner::POST_TYPE_NAME,
             Partner::POST_TYPE_NAME,
             ['publish_posts' => true, 'read' => true, 'edit_posts' => true]
         );
 
-        add_filter('wp_dropdown_users_args', function ($query_args, $r) {
+        $this->wordpressMiddleware->addFilter('wp_dropdown_users_args', function ($query_args, $r) {
             global $post;
 
             if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === Product::POST_TYPE_NAME) {
@@ -43,7 +43,7 @@ class AddPostTypePartnerAction implements ActionInterface
             return $query_args;
         }, 10, 2);
 
-        register_post_type(Partner::POST_TYPE_NAME, [
+        $this->wordpressMiddleware->registerPostType(Partner::POST_TYPE_NAME, [
             'label' => $this->wordpressMiddleware->trans('Partenaire'),
             'public' => true,
             'menu_position' => 3,
@@ -53,8 +53,8 @@ class AddPostTypePartnerAction implements ActionInterface
             'has_archive' => false,
         ]);
 
-        register_extended_field_group([
-            'title' => $this->wordpressMiddleware->trans('Notre Partenaire'),
+        $this->wordpressMiddleware->registerExtendedFieldGroup([
+            'title' => $this->wordpressMiddleware->trans('Notre Partenairetest'),
             'location' => [
                 Location::if('post_type', Partner::POST_TYPE_NAME)
             ],

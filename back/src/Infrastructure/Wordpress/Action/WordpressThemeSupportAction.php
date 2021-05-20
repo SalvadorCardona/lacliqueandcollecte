@@ -5,32 +5,44 @@ declare(strict_types=1);
 namespace App\Infrastructure\Wordpress\Action;
 
 use App\Infrastructure\Partner\Entity\Partner;
+use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class WordpressThemeSupportAction implements ActionInterface
 {
+    public function __construct(private WordpressMiddleware $wordpressMiddleware)
+    {
+    }
+
     public function __invoke(): void
     {
 
 
-        add_theme_support("post-thumbnails");
+        $this->wordpressMiddleware
+            ->addThemeSupport("post-thumbnails");
 
-        add_theme_support("menus");
+        $this->wordpressMiddleware
+            ->addThemeSupport("menus");
 
-        add_theme_support('title-tag');
+        $this->wordpressMiddleware
+            ->addThemeSupport('title-tag');
 
-        add_theme_support('automatic-feed-links');
-        add_theme_support('title-tag');
-        add_theme_support(
-            'html5',
-            array(
-                'search-form',
-                'comment-form',
-                'comment-list',
-                'gallery',
-                'caption',
-            )
-        );
-        add_theme_support(
+        $this->wordpressMiddleware
+            ->addThemeSupport('automatic-feed-links');
+        $this->wordpressMiddleware
+            ->addThemeSupport('title-tag');
+        $this->wordpressMiddleware
+            ->addThemeSupport(
+                'html5',
+                array(
+                    'search-form',
+                    'comment-form',
+                    'comment-list',
+                    'gallery',
+                    'caption',
+                )
+            );
+        $this->wordpressMiddleware
+            ->addThemeSupport(
             'custom-logo',
             array(
                 'height' => 100,
@@ -40,21 +52,26 @@ class WordpressThemeSupportAction implements ActionInterface
             )
         );
 
-        add_theme_support('woocommerce');
+        $this->wordpressMiddleware
+            ->addThemeSupport('woocommerce');
         // Enabling WooCommerce product gallery features (are off by default since WC 3.0.0).
         // zoom.
-        add_theme_support('wc-product-gallery-zoom');
+        $this->wordpressMiddleware
+            ->addThemeSupport('wc-product-gallery-zoom');
         // lightbox.
-        add_theme_support('wc-product-gallery-lightbox');
+        $this->wordpressMiddleware
+            ->addThemeSupport('wc-product-gallery-lightbox');
         // swipe.
-        add_theme_support('wc-product-gallery-slider');
+        $this->wordpressMiddleware
+            ->addThemeSupport('wc-product-gallery-slider');
 
         /**
          * Add Author for products
          */
-        add_post_type_support('product', 'author');
+        $this->wordpressMiddleware->addPostTypeSupport('product', 'author');
 
-        add_theme_support('add_theme_support');
+        $this->wordpressMiddleware
+            ->addThemeSupport('add_theme_support');
     }
 
     public static function getAction(): string
