@@ -5,13 +5,15 @@ declare(strict_types=1);
 namespace App\Infrastructure\Wordpress\Middleware;
 
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
 use WP_User;
 
 class MiddlewareConfigurationFactory
 {
     public function __construct(
         private WordpressMiddleware $wordpressMiddleware,
-        private WpQueryFormatter $wpQueryFormatter
+        private WpQueryFormatter $wpQueryFormatter,
+        private WpUserFormatter $wpUserFormatter
     ) {
     }
 
@@ -19,7 +21,7 @@ class MiddlewareConfigurationFactory
     {
         return (new MiddlewareConfiguration())
             ->setWpApiKey($this->wordpressMiddleware->wpCreateNonce('wp_rest'))
-            ->setUser($this->formatUser($this->wordpressMiddleware->wpGetCurrentUser()))
+            ->setUser($this->wpUserFormatter->format($this->wordpressMiddleware->wpGetCurrentUser()))
             ->setSiteUrl($this->wordpressMiddleware->getSiteUrl())
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
