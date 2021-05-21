@@ -5,11 +5,16 @@ declare(strict_types=1);
 namespace App\Infrastructure\Manager;
 
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
+use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use Exception;
 
 // TODO: I need Unit test
 class ApiLoaderManager extends AbstractManager
 {
+    public function __construct(private WordpressMiddleware $wordpressMiddleware)
+    {
+    }
+
     public function makeRegister(): void
     {
         foreach ($this->resources as $api) {
@@ -23,7 +28,7 @@ class ApiLoaderManager extends AbstractManager
 
     private function addRouting(AbstractApiController $api): void
     {
-        register_rest_route(
+        $this->wordpressMiddleware->registerRestRoute(
             $api->getNamespace(),
             $api->getEndPoint(),
             [

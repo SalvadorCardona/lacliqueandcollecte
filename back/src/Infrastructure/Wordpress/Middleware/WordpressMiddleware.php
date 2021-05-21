@@ -6,7 +6,9 @@ namespace App\Infrastructure\Wordpress\Middleware;
 
 use WP_Error;
 use WP_Post;
+use WP_Post_Type;
 use WP_Query;
+use WP_Role;
 use WP_User;
 use wpdb;
 
@@ -126,5 +128,51 @@ class WordpressMiddleware
     public function wpDequeueScript(string $handle): void
     {
         wp_dequeue_script($handle);
+    }
+
+    public function addRole(string $role, string $displayName, array $capabilities): ?WP_Role
+    {
+        return add_role($role, $displayName, $capabilities);
+    }
+
+
+    public function registerPostType(string $postType, array $args): WP_error|WP_Post_Type
+    {
+        return register_post_type($postType, $args);
+    }
+
+    public function registerExtendedFieldGroup(array $config): void
+    {
+        register_extended_field_group($config);
+    }
+
+    public function registerRestRoute(string $namespace, string $route, array $args, null|bool $override = false): bool
+    {
+        return register_rest_route($namespace, $route, $args, $override);
+    }
+
+    public function wpEnqueueStyle(string $handle, string $src, array $deps, string|bool|null $ver, string $media): void
+    {
+        wp_enqueue_style($handle, $src, $deps, $ver, $media);
+    }
+
+    public function wpEnqueueScript(string $handle, string $src, array $deps, string|bool|null $ver, bool $inFooter): void
+    {
+        wp_enqueue_script($handle, $src, $deps, $ver, $inFooter);
+    }
+
+    public function wpLocalizeScript(string $handle, string $objectName, array $l10n): bool
+    {
+        return wp_localize_script($handle, $objectName, $l10n);
+    }
+
+    public function addThemeSupport(string $feature, mixed ...$args): ?bool
+    {
+        return add_theme_support($feature, ...$args);
+    }
+
+    public function addPostTypeSupport(string $postType, string|array $feature, mixed ...$args): void
+    {
+        add_post_type_support($postType, $feature, ...$args);
     }
 }
