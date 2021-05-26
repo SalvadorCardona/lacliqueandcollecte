@@ -9,11 +9,7 @@ use App\Infrastructure\Search\Entity\SearchRequest;
 use App\Infrastructure\Search\Entity\SearchResponse;
 use App\Infrastructure\Woocommerce\Entity\Product;
 use App\Infrastructure\Woocommerce\Formatter\ProductFormatter;
-use App\Infrastructure\Wordpress\Enum\MetaType;
-use App\Infrastructure\Wordpress\Enum\TaxonomyType;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
-use WC_Product_Query;
-use WC_Query;
 
 class PostRepository
 {

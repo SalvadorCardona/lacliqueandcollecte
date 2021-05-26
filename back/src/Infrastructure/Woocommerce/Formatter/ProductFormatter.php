@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Infrastructure\Woocommerce\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
-use App\Infrastructure\Partner\Entity\Partner;
 use App\Infrastructure\Woocommerce\Entity\Product;
 use App\Infrastructure\Wordpress\Enum\MetaType;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;

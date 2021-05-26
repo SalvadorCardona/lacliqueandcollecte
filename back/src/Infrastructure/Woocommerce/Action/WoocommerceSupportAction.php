@@ -29,7 +29,6 @@ class WoocommerceSupportAction implements ActionInterface
          * Used for that Woocommerce use index.php and not single-product.php
          */
         $this->wordpressMiddleware->addFilter('woocommerce_template_loader_files', function () {
-            global $wp_query;
             return is_product() || is_tax() ? ['index.php'] : [];
         });
 

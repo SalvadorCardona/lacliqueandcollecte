@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Wordpress\Middleware;
+namespace App\Infrastructure\Wordpress\Middleware\Entity;
 
 class MiddlewareConfiguration
 {
@@ -12,7 +12,7 @@ class MiddlewareConfiguration
 
     public array $mainMenu;
 
-    public ?array $user;
+    public ?MiddlewareUser $user;
 
     public string $wpApiKey;
 
@@ -46,7 +46,7 @@ class MiddlewareConfiguration
         return $this;
     }
 
-    public function setUser(array $user): MiddlewareConfiguration
+    public function setUser(MiddlewareUser $user): MiddlewareConfiguration
     {
         $this->user = $user;
         return $this;

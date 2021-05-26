@@ -6,7 +6,7 @@ namespace App\Infrastructure\Formatter;
 
 abstract class Formatter
 {
-    abstract public function format(mixed $data): array;
+    abstract public function format(mixed $data): mixed;
 
     public function fromList(array $datas): array
     {

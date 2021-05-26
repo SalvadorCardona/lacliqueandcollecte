@@ -82,8 +82,9 @@ export default class SearchLeftBarComponent extends AppComponent {
 
     private onChange(e: Event): void
     {
-        const elem = e.target as HTMLInputElement;
-        const [value, checked] = [elem.value, elem.checked];
+        console.log(e);
+        // const elem = e.target as HTMLInputElement;
+        // const [value, checked] = [elem.value, elem.checked];
     }
 
     private renderItemSearch(itemSearch: ItemSearch): TemplateResult {
