@@ -12,7 +12,7 @@ class MiddlewareConfiguration
 
     public array $mainMenu;
 
-    public ?array $user;
+    public ?MiddlewareUser $user;
 
     public string $wpApiKey;
 
@@ -46,7 +46,7 @@ class MiddlewareConfiguration
         return $this;
     }
 
-    public function setUser(array $user): MiddlewareConfiguration
+    public function setUser(MiddlewareUser $user): MiddlewareConfiguration
     {
         $this->user = $user;
         return $this;

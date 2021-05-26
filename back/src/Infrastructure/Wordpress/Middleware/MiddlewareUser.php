@@ -5,15 +5,16 @@ namespace App\Infrastructure\Wordpress\Middleware;
 class MiddlewareUser
 {
 
-    private int $id;
-    private string $displayName;
-    private string $niceName;
-    private string $email;
-    private array $roles;
+    public int $id;
+    public string $displayName;
+    public string $niceName;
+    public string $email;
+    public array $roles;
 
     public function __construct()
     {
     }
+
 
 
     public function initUser(int $id, string $displayName, string $niceName, string $email, array $roles): MiddlewareUser
