@@ -18,6 +18,15 @@ class WpUserFormatter extends Formatter
      * @param WP_User $data
      *
      **/
+//    public function format($data): mixed
+//    {
+//        if (!$data instanceof WP_User) {
+//            return [];
+//        }
+//        return ['ID' => $data->ID, 'displayName' => $data->display_name, 'niceName' => $data->user_nicename, 'email' => $data->user_email, 'roles' => $data->roles];
+
+//        return $this->user->initUser($data->ID, $data->user_lastname, $data->user_nicename, $data->user_email, $data->roles);
+//    }
     public function format($data): mixed
     {
         $user = new MiddlewareUser();
