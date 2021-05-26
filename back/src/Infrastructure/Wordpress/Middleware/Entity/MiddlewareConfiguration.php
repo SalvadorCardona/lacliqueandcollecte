@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Infrastructure\Wordpress\Middleware;
+namespace App\Infrastructure\Wordpress\Middleware\Entity;
 
 class MiddlewareConfiguration
 {

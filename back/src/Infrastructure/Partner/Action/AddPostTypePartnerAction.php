@@ -32,7 +32,8 @@ class AddPostTypePartnerAction implements ActionInterface
             ['publish_posts' => true, 'read' => true, 'edit_posts' => true]
         );
 
-        $this->wordpressMiddleware->addFilter('wp_dropdown_users_args', function ($query_args, $r) {
+        $this->wordpressMiddleware->addFilter('wp_dropdown_users_args', function ($query_args) {
+            // Todo: fix me
             global $post;
 
             if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === Product::POST_TYPE_NAME) {

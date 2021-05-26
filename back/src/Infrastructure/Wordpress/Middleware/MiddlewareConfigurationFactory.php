@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
+use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareConfiguration;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
-use WP_User;
 
 class MiddlewareConfigurationFactory
 {
@@ -26,11 +26,5 @@ class MiddlewareConfigurationFactory
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
             ->setMainMenu($this->wordpressMiddleware->wpGetNavMenuItems('main-menu'));
-    }
-
-    private function formatUser(WP_User $wpUser): array
-    {
-        // TODO : i need to should a formatter
-        return (array) $wpUser;
     }
 }

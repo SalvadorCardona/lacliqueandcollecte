@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Action;
 
-use App\Infrastructure\Partner\Entity\Partner;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class WordpressThemeSupportAction implements ActionInterface
