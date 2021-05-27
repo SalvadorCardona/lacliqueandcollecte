@@ -54,7 +54,6 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setCurrentPost(int $currentPost): MiddlewareWPQuery
     {
         $this->currentPost = $currentPost;
@@ -67,13 +66,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setFoundPost(int $foundPost): MiddlewareWPQuery
     {
         $this->foundPost = $foundPost;
         return $this;
     }
-
 
     public function setInTheLoop(bool $inTheLoop): MiddlewareWPQuery
     {
@@ -87,13 +84,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsAdmin(bool $isAdmin): MiddlewareWPQuery
     {
         $this->isAdmin = $isAdmin;
         return $this;
     }
-
 
     public function setIsArchive(bool $isArchive): MiddlewareWPQuery
     {
@@ -101,13 +96,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsAttachment(bool $isAttachment): MiddlewareWPQuery
     {
         $this->isAttachment = $isAttachment;
         return $this;
     }
-
 
     public function setIsAuthor(bool $isAuthor): MiddlewareWPQuery
     {
@@ -127,13 +120,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsDate(bool $isDate): MiddlewareWPQuery
     {
         $this->isDate = $isDate;
         return $this;
     }
-
 
     public function setIsDay(bool $isDay): MiddlewareWPQuery
     {
@@ -147,7 +138,6 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsFavicon(bool $isFavicon): MiddlewareWPQuery
     {
         $this->isFavicon = $isFavicon;
@@ -160,13 +150,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsHome(bool $isHome): MiddlewareWPQuery
     {
         $this->isHome = $isHome;
         return $this;
     }
-
 
     public function setIsMonth(bool $isMonth): MiddlewareWPQuery
     {
@@ -180,13 +168,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsPaged(bool $isPaged): MiddlewareWPQuery
     {
         $this->isPaged = $isPaged;
         return $this;
     }
-
 
     public function setIsPostTypeArchive(bool $isPostTypeArchive): MiddlewareWPQuery
     {
@@ -200,13 +186,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsPreview(bool $isPreview): MiddlewareWPQuery
     {
         $this->isPreview = $isPreview;
         return $this;
     }
-
 
     public function setIsPrivacyPolicy(bool $isPrivacyPolicy): MiddlewareWPQuery
     {
@@ -232,14 +216,12 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsSingular(bool $isSingular): MiddlewareWPQuery
     {
         $this->isSingular = $isSingular;
         return $this;
     }
-
-
+    
     public function setIsTag(bool $isTag): MiddlewareWPQuery
     {
         $this->isTag = $isTag;
@@ -252,13 +234,11 @@ class MiddlewareWPQuery
         return $this;
     }
 
-
     public function setIsTime(bool $isTime): MiddlewareWPQuery
     {
         $this->isTime = $isTime;
         return $this;
     }
-
 
     public function setIsTrackback(bool $isTrackback): MiddlewareWPQuery
     {
@@ -277,7 +257,6 @@ class MiddlewareWPQuery
         $this->maxNumCommentPages = $maxNumCommentPages;
         return $this;
     }
-
 
     public function setMaxNumPages(int $maxNumPages): MiddlewareWPQuery
     {
