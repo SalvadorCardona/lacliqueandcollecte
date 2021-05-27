@@ -16,7 +16,7 @@ class MiddlewareConfiguration
 
     public string $wpApiKey;
 
-    public array $wpQuery;
+    public MiddlewareWPQuery $wpQuery;
 
     public function getWcStoreApi(): string
     {
@@ -63,7 +63,7 @@ class MiddlewareConfiguration
         return $this->wpQuery;
     }
 
-    public function setWpQuery(array $wpQuery): MiddlewareConfiguration
+    public function setWpQuery(MiddlewareWPQuery $wpQuery): MiddlewareConfiguration
     {
         $this->wpQuery = $wpQuery;
         return $this;
