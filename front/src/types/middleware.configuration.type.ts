@@ -9,6 +9,5 @@ export interface MiddlewareConfigurationType {
     mainMenu: Array<PostType>;
     wpApiKey: string;
     wpQuery: WpQuery;
-    translation: string;
-
+    translation: {[key: string]: string};
 }

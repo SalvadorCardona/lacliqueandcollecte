@@ -6,16 +6,16 @@ namespace App\Infrastructure\Wordpress\Middleware;
 
 use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareConfiguration;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpTranslateFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
-
-use function DI\get;
 
 class MiddlewareConfigurationFactory
 {
     public function __construct(
         private WordpressMiddleware $wordpressMiddleware,
         private WpQueryFormatter $wpQueryFormatter,
-        private WpUserFormatter $wpUserFormatter
+        private WpUserFormatter $wpUserFormatter,
+        private WpTranslateFormatter $wpTranslateFormatter
     ) {
     }
 
@@ -28,6 +28,6 @@ class MiddlewareConfigurationFactory
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
             ->setMainMenu($this->wordpressMiddleware->wpGetNavMenuItems('main-menu'))
-            ->setTranslation((array)$this->wordpressMiddleware->getL10n());
+            ->setTranslation($this->wpTranslateFormatter->format($this->wordpressMiddleware->getL10n()->entries));
     }
 }

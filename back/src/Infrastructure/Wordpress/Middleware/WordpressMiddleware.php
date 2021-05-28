@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
+use MO;
+use NOOP_Translations;
+use Translations;
 use WP_Error;
 use WP_Post;
 use WP_Post_Type;
@@ -14,6 +17,8 @@ use wpdb;
 
 class WordpressMiddleware
 {
+    private const TRANSLATE_DOMAIN = 'zartizana';
+
     public function __construct()
     {
     }
@@ -31,22 +36,9 @@ class WordpressMiddleware
     }
 
 
-    public function getL10n()
+    public function getL10n(): Translations|NOOP_Translations
     {
-
-
-        global $l10n;
-//dd($l10n);
-//dd(get_translations_for_domain('zartizana'));
-//        $test = __('Bonjour', 'zartizana');
-//        $test2 = __('Hello', 'zartizana');
-//        _e("world ",'zartizana');
-//        _e("tout",'zartizana');
-//
-//        dd($test,$test2);
-
-        return $l10n;
-//        return get_translations_for_domain("FR_fr") ;
+        return get_translations_for_domain(self::TRANSLATE_DOMAIN);
     }
 
     public function getPost(int $postId): ?WP_Post

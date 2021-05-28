@@ -3,6 +3,8 @@ import {html, TemplateResult} from 'lit-element';
 import argument1 from "Media/home/argument1.svg";
 import argument2 from "Media/home/argument2.svg";
 import argument3 from "Media/home/argument3.svg";
+import {injector} from "App/core/container.service";
+import TranslateService from "App/core/translate.service";
 
 interface content {
     image: string;
@@ -17,6 +19,8 @@ export default class HomeArgumentativeComponent extends AppComponent {
     public static getComponentName(): string {
         return 'app-home-argumentative';
     }
+
+
 
     private contentList = [
         {
