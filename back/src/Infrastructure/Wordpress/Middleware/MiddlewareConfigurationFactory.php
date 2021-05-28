@@ -8,6 +8,8 @@ use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareConfiguration;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
 
+use function DI\get;
+
 class MiddlewareConfigurationFactory
 {
     public function __construct(
@@ -25,6 +27,7 @@ class MiddlewareConfigurationFactory
             ->setSiteUrl($this->wordpressMiddleware->getSiteUrl())
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
-            ->setMainMenu($this->wordpressMiddleware->wpGetNavMenuItems('main-menu'));
+            ->setMainMenu($this->wordpressMiddleware->wpGetNavMenuItems('main-menu'))
+            ->setTranslation((array)$this->wordpressMiddleware->getL10n());
     }
 }

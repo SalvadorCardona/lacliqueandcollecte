@@ -30,10 +30,23 @@ class WordpressMiddleware
         return $wpdb;
     }
 
-    public function getI18n(): array
+
+    public function getL10n()
     {
-        global $i18n;
-        return $i18n;
+
+
+        global $l10n;
+//dd($l10n);
+//dd(get_translations_for_domain('zartizana'));
+//        $test = __('Bonjour', 'zartizana');
+//        $test2 = __('Hello', 'zartizana');
+//        _e("world ",'zartizana');
+//        _e("tout",'zartizana');
+//
+//        dd($test,$test2);
+
+        return $l10n;
+//        return get_translations_for_domain("FR_fr") ;
     }
 
     public function getPost(int $postId): ?WP_Post

@@ -1,6 +1,6 @@
 <?php
 
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
@@ -29,8 +29,11 @@ add_action('init', 'disable_emojis');
 function disable_emojis_tinymce($plugins)
 {
     if (is_array($plugins)) {
-        return array_diff($plugins, array( 'wpemoji' ));
+        return array_diff($plugins, array('wpemoji'));
     } else {
         return array();
     }
 }
+ add_action('after_setup_theme', function () {
+    load_theme_textdomain('zartizana', get_template_directory() . '/languages');
+ }) ;
