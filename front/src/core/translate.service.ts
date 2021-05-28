@@ -1,20 +1,19 @@
-import {property} from 'lit-element';
+import {injector} from "App/core/container.service";
+import ConfigurationService from "App/core/configuration.service";
 
+export default class TranslateService {
+    @injector(ConfigurationService)
+    private configurationService: ConfigurationService;
 
+    public translate(key: string): string {
+        console.log(key);
+        const translation = this.configurationService.configuration.translation
+        console.log(translation);
 
-export default class TranslateService{
+        if (translation.hasOwnProperty(key)) {
+            return translation[key];
+        }
 
-    public translate(text: string, domain: string):string {
-         // translation;
-        return  "Vous êtes artisan ?";
+        return key;
     }
-
-
-    @property({type: String})
-    private text: string;
-
-    @property({type: String})
-    private domain: string;
-
-
-    }
+}

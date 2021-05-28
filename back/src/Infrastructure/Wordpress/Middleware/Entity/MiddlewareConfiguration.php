@@ -17,8 +17,8 @@ class MiddlewareConfiguration
     public string $wpApiKey;
 
     public MiddlewareWPQuery $wpQuery;
-    public array $translation;
 
+    public array $translation;
 
     public function getWcStoreApi(): string
     {
