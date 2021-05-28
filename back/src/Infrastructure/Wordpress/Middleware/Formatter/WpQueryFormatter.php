@@ -56,6 +56,6 @@ class WpQueryFormatter extends Formatter
             ->setIsTrackback($data->is_trackback)
             ->setIsYear($data->is_year)
             ->setMaxNumCommentPages($data->max_num_comment_pages)
-            ->setMaxNumPages($data->max_num_pages);
+            ->setMaxNumPages((int)$data->max_num_pages);
     }
 }

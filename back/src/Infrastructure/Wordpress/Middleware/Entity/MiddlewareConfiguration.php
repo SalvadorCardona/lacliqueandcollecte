@@ -17,6 +17,8 @@ class MiddlewareConfiguration
     public string $wpApiKey;
 
     public MiddlewareWPQuery $wpQuery;
+    public array $translation;
+
 
     public function getWcStoreApi(): string
     {
@@ -66,6 +68,12 @@ class MiddlewareConfiguration
     public function setWpQuery(MiddlewareWPQuery $wpQuery): MiddlewareConfiguration
     {
         $this->wpQuery = $wpQuery;
+        return $this;
+    }
+
+    public function setTranslation(array $translation): MiddlewareConfiguration
+    {
+        $this->translation = $translation;
         return $this;
     }
 }

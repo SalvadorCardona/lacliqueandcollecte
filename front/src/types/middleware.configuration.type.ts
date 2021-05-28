@@ -8,5 +8,7 @@ export interface MiddlewareConfigurationType {
     user: UserType;
     mainMenu: Array<PostType>;
     wpApiKey: string;
-    wpQuery: WpQuery
+    wpQuery: WpQuery;
+    translation: string;
+
 }
