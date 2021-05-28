@@ -1,5 +1,6 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
+import ProductLoopComponent from "App/modules/shared/components/product/product.loop.component";
 
 export default class HomeProductListComponent extends AppComponent {
 
@@ -14,7 +15,7 @@ export default class HomeProductListComponent extends AppComponent {
                 p-5
                 text-center">
                 <h2 class="title-border">Nos produits</h2>
-                <app-product-loop></app-product-loop>
+                ${this.createElement(ProductLoopComponent)}
             </div>
         `;
     }
