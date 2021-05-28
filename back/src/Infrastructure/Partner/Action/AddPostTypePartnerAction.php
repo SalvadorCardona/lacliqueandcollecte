@@ -33,8 +33,7 @@ class AddPostTypePartnerAction implements ActionInterface
         );
 
         $this->wordpressMiddleware->addFilter('wp_dropdown_users_args', function ($query_args) {
-            // Todo: fix me
-            global $post;
+            $post = $this->wordpressMiddleware->getCurrentPost();
 
             if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === Product::POST_TYPE_NAME) {
                 $query_args['who'] = '';

@@ -15,6 +15,7 @@ use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
+use App\Infrastructure\Wordpress\Api\TranslateApi;
 use App\Infrastructure\Wordpress\Middleware\MiddlewareConfigurationFactory;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use App\Infrastructure\Wordpress\Action\DisableAssetsWordpress;
@@ -41,7 +42,8 @@ return [
         AddPostTypePartnerAction::class,
         SearchApi::class,
         AddCityAction::class,
-        DisableAssetsWordpress::class
+        DisableAssetsWordpress::class,
+        TranslateApi::class
     ],
     Logger::class => DI\factory(function (ContainerInterface $c) {
         return Logger::create($c->get('logger.name'), $c->get('logger.file'));

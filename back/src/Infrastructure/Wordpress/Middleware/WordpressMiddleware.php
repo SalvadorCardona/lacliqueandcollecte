@@ -43,6 +43,11 @@ class WordpressMiddleware
         return get_translations_for_domain(self::TRANSLATE_DOMAIN);
     }
 
+    public function getCurrentPost(): ?WP_Post
+    {
+        return get_post();
+    }
+
     public function getPost(int $postId): ?WP_Post
     {
         return get_post($postId);

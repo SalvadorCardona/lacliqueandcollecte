@@ -18,20 +18,13 @@ class WoocommerceSupportAction implements ActionInterface
     {
 
         /**
-         * Disable Woocommerce style for product page
-         */
-        if (strpos($_SERVER['REQUEST_URI'], 'produit')) {
-            $this->wordpressMiddleware->addFilter('woocommerce_enqueue_styles', '__return_empty_array');
-            $this->wordpressMiddleware->addFilter('woocommerce_enqueue_scripts', '__return_empty_array');
-        }
-
-        /**
          * Used for that Woocommerce use index.php and not single-product.php
          */
         $this->wordpressMiddleware->addFilter('woocommerce_template_loader_files', function () {
             return is_product() || is_tax() ? ['index.php'] : [];
         });
 
+        // TODO: Fix this file
         $this->wordpressMiddleware->addFilter('woocommerce_rest_check_permissions', function () {
             //return wp_get_current_user();
 //            return new WP_User(1);s
