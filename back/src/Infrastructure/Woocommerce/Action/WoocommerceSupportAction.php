@@ -7,6 +7,7 @@ use App\Infrastructure\Wordpress;
 use App\Infrastructure\Wordpress\Action\ActionInterface;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WP_User;
+use WC;
 
 class WoocommerceSupportAction implements ActionInterface
 {
@@ -16,7 +17,6 @@ class WoocommerceSupportAction implements ActionInterface
 
     public function __invoke(): void
     {
-
         /**
          * Used for that Woocommerce use index.php and not single-product.php
          */
@@ -25,11 +25,12 @@ class WoocommerceSupportAction implements ActionInterface
         });
 
         // TODO: Fix this file
-        $this->wordpressMiddleware->addFilter('woocommerce_rest_check_permissions', function () {
+        $this->wordpressMiddleware->addFilter('woocommerce_rest_check_permissions', function ($args) {
+            dd(WC()->api);
             //return wp_get_current_user();
 //            return new WP_User(1);s
 //    if( 'GET' ==  WC()->api->server->method ){
-            return new WP_User(1);
+//            return true;
 //    } else {
 //        throw new Exception( __( 'You dont have permission', 'woocommerce' ), 401 );
         }, 1);
@@ -38,6 +39,7 @@ class WoocommerceSupportAction implements ActionInterface
          * Append a filter to search a product bu author id in the api rest
          */
         $this->wordpressMiddleware->addFilter('woocommerce_rest_product_object_query', function ($args, $request) {
+
             if (isset($request['author'])) {
                 $args['author'] = $request['author'];
             }
@@ -51,12 +53,10 @@ class WoocommerceSupportAction implements ActionInterface
         $this->wordpressMiddleware->addFilter('woocommerce_taxonomy_objects_product_cat', function ($args) {
             return [Partner::POST_TYPE_NAME, ...$args];
         }, 1);
-
-//        add_filter('woocommerce_store_api_disable_nonce_check', fn() => true);
     }
 
     public static function getAction(): string
     {
-        return 'init';
+        return 'after_setup_theme';
     }
 }

@@ -37,6 +37,7 @@ class ProductFormatter extends Formatter
         }
 
         $dataFormatted = (array) $data;
+        $dataFormatted['guid'] = $this->wordpressMiddleware->getPermalink($data);
         $dataFormatted['meta'] = $metaCleaned;
 
         return $dataFormatted;

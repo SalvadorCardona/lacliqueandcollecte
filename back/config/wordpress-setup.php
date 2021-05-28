@@ -50,7 +50,7 @@ define('WP_MEMORY_LIMIT', '96M');
  * Set up our global environment constant and load its config first
  * Default: production
  */
-define('WP_ENV', env('APP_ENV') === 'dev' ? 'developement' : 'production');
+define('WP_ENV', env('APP_ENV') === 'dev' ? 'development' : 'production');
 
 /**
  * URLs
@@ -111,7 +111,7 @@ ConfigAlias::define('DISALLOW_FILE_MODS', false);
  * Debugging Settings
  */
 ConfigAlias::define('WP_DEBUG_DISPLAY', false);
-ConfigAlias::define('WP_DEBUG_LOG', env('WP_DEBUG_LOG') ?? false);
+ConfigAlias::define('WP_DEBUG_LOG', false);
 ConfigAlias::define('SCRIPT_DEBUG', false);
 ini_set('display_errors', '0');
 

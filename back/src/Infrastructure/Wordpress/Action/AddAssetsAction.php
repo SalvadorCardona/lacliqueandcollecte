@@ -22,8 +22,8 @@ class AddAssetsAction implements ActionInterface
         if (!is_admin()) {
             $manifest = json_decode(file_get_contents($this->publicDir . '/parcel-manifest.json'), true);
 
-            $this->wordpressMiddleware->wpEnqueueStyle('app-css', get_home_url() . $manifest['styles/app.scss'], [], '1', 'all');
-            $this->wordpressMiddleware->wpEnqueueScript('app-js', get_home_url() . $manifest['src/app.ts'], [], '1', true);
+            $this->wordpressMiddleware->wpEnqueueStyle('app-css', $this->wordpressMiddleware->getHomeUrl() . $manifest['styles/app.scss'], [], '1', 'all');
+            $this->wordpressMiddleware->wpEnqueueScript('app-js', $this->wordpressMiddleware->getHomeUrl() . $manifest['src/app.ts'], [], '1', true);
             $this->wordpressMiddleware->wpLocalizeScript(
                 'app-js',
                 'middlewareConfiguration',

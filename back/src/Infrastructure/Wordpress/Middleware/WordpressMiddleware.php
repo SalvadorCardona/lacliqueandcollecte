@@ -188,6 +188,17 @@ class WordpressMiddleware
         add_post_type_support($postType, $feature, ...$args);
     }
 
+    public function getPermalink(int|WP_Post $post, bool $leaveName = false): ?string
+    {
+        $permalink = get_permalink($post, $leaveName);
+        return $permalink ?: null;
+    }
+
+    public function getHomeUrl(): string
+    {
+    	return get_home_url();
+    }
+
     public function getTerms(array $args): ?array
     {
         return get_terms($args);
