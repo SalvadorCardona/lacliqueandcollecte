@@ -105,7 +105,7 @@ ConfigAlias::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
 ConfigAlias::define('DISALLOW_FILE_EDIT', true);
 // Disable plugin and theme updates and installation from the admin
-ConfigAlias::define('DISALLOW_FILE_MODS', true);
+ConfigAlias::define('DISALLOW_FILE_MODS', false);
 
 /**
  * Debugging Settings

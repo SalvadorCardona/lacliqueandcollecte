@@ -28,7 +28,7 @@ export default class UiIconComponent extends AppComponent {
             return html`
                 <div class="d-flex justify-content-left align-items-center mb-1">
                     <app-icon class="text-around" icon="${icon}"></app-icon>
-                    <pre class="m-0 ms-2">IconName : ${icon}</pre>
+                    <pre class="m-0 ms-2">${this.trans("uiIconIconName")}${icon}</pre>
                 </div>
             `;
         });

@@ -13,7 +13,7 @@ export default class HomePartnerListComponent extends AppComponent {
             <div class="container
                 p-5
                 text-center">
-                <h2 class="title-border">Partenaires</h2>
+                <h2 class="title-border">${this.trans("homePartnerListTitle")}</h2>
                 ${this.createElement(PartnerLoopComponent)}
             </div>
         `;

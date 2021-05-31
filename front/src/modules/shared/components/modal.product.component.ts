@@ -24,8 +24,8 @@ export default class ModalProductComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <img class="rounded img-fluid" alt="${this._product.images[0].alt}" src="${this._product.images[0].src}"/>
-            <div class="text-center mt-2">
-                Votre Produit a bien été ajouté.
+            <div class="text-center mt-2">${this.trans("modalProductAdded")}
+                
             </div>
             <div class="row">
                 <div class="col-6">

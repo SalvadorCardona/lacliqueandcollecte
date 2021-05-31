@@ -48,12 +48,12 @@ export default class PartnerViewComponent extends AppComponent {
                 </div>
                 <div id="partner-content" class="row">
                     <div class="col-md-8 ml-lg-0">
-                        <h4>Les produits de <span>${this.partnerPost.meta.firstName}</span></h4>
+                        <h4>${this.trans("partnerViewPartnerName")}<span>${this.partnerPost.meta.firstName}</span></h4>
                         ${this.createElement(ProductLoopComponent, {idUser: this.partnerPost.postAuthor})}
                     </div>
                     <div class="col-md-4">
                         ${this.createElement(WrapperComponent, {
-                            title: 'Présensation',
+                            title: 'Présentation',
                             body: html`
                                 <p>
                                     ${this.partnerPost.meta.shopDescription}
@@ -61,7 +61,7 @@ export default class PartnerViewComponent extends AppComponent {
                             `
                         })}
                         ${this.createElement(WrapperComponent, {
-                            title: 'Présensation',
+                            title: 'Présentation',
                             body: this.getContact()
                         })}
                     </div>

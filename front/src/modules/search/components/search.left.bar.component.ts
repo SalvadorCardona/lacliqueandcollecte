@@ -46,9 +46,9 @@ export default class SearchLeftBarComponent extends AppComponent {
             categoryName: 'tri',
             itemsSearch: [
                 {
-                    label: 'Pertinant',
+                    label: 'Pertinent',
                     selected: true,
-                    value: 'pertinant'
+                    value: 'pertinent'
                 },
                 {
                     label: 'Prix',

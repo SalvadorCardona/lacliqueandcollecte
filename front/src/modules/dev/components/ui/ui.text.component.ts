@@ -14,11 +14,11 @@ export default class UiTextComponent extends AppComponent {
                     ${this.createElement(WrapperComponent, {
                         title: 'Title',
                         body: html`
-                            <h1>Title H1</h1>
-                            <h2>Title H2</h2>
-                            <h3>Title H3</h3>
-                            <h4>Title H4</h4>
-                            <h5>Title H5</h5>
+                            <h1>${this.trans('uiTextTitleH1')}</h1>
+                            <h2>${this.trans('uiTextTitleH2')}</h2>
+                            <h3>${this.trans('uiTextTitleH3')}</h3>
+                            <h4>${this.trans('uiTextTitleH4')}</h4>
+                            <h5>${this.trans('uiTextTitleH5')}</h5>
                         `
                     })}
                 </div>

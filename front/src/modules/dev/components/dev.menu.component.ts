@@ -23,12 +23,12 @@ export default class DevMenuComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div class="app-wrapper">
-                <b>Les dev pages</b>
-                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#">Composants</a></li>
-                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#home">Page d'accueil</a></li>
-                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#partner">Partenaire</a></li>
-                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#produit">Produit</a></li>
-                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#search">Search</a></li>
+                <b>${this.trans("devMenuTitle")}</b>
+                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#">${this.trans("devMenuComponents")}</a></li>
+                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#home">${this.trans("devMenuHomepage")}</a></li>
+                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#partner">${this.trans("devMenuPartners")}</a></li>
+                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#produit">${this.trans("devMenuProducts")}</a></li>
+                <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#search">${this.trans("devMenuSearch")}</a></li>
             </div>
             ${this.createElement(ButtonComponent, {
                 classList: 'ms-2 mb-2 position-fixed start-0 bottom-0',

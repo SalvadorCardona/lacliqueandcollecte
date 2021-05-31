@@ -37,7 +37,7 @@ export default class PartnerHeaderComponent extends AppComponent {
 
             <span>
                 ${this.createElement(IconComponent, {icon: 'geoLat'})}
-                Commerce situé dans la ville de ${this.partnerPost.meta.city}
+               ${this.trans("partnerHeaderCity")}${this.partnerPost.meta.city}
             </span>
             
             <div id="social-header" class="position-absolute

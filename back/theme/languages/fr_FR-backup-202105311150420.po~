@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zartizana\n"
 "POT-Creation-Date: 2021-05-27 17:06+0200\n"
-"PO-Revision-Date: 2021-05-31 12:13+0000\n"
+"PO-Revision-Date: 2021-05-31 10:11+0000\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -101,13 +101,6 @@ msgstr "Partenaires"
 
 msgid "homeProductListTitle"
 msgstr "Nos produits"
-
-msgid "modalCartEmpty"
-msgstr "Votre Panier est vide"
-
-msgid "modalProductAdded"
-msgstr ""
-"Votre Produit a bien été ajouté.\n"
 
 msgid "partnerHeaderCity"
 msgstr " Commerce situé dans la ville de "

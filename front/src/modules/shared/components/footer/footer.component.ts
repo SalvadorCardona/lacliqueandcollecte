@@ -35,8 +35,8 @@ export default class FooterComponent extends AppComponent{
                                 border-radius
                                 fs-5
                                 p-3
-                                bg-primary">
-                                suivez zartizana
+                                bg-primary">${this.trans("footerFollow")}
+                                
                             </span>
                     </div>
                     <br>
@@ -53,26 +53,26 @@ export default class FooterComponent extends AppComponent{
                     </div>
                     <br>
                     <div class="credit fw-bolder">
-                        <span>©2021 Zatizana, Inc</span>
+                        <span>${this.trans("footerCopyright")}</span>
                         <br>
-                        <span>All rights reserved</span>
+                        <span>${this.trans("footerRight")}</span>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">Nos produits</a></li>
-                        <li><a href="/">Nos artisans</a></li>
+                        <li><a href="/">${this.trans("footerProducts")}</a></li>
+                        <li><a href="/">${this.trans("footerPartners")}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">L'association</a></li>
-                        <li><a href="/">Devenir partenaire</a></li>
+                        <li><a href="/">${this.trans("footerAsso")}</a></li>
+                        <li><a href="/">${this.trans("footerBecomePartner")}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">Conditions générales</a></li>
+                        <li><a href="/">${this.trans("footerSalesTerms")}</a></li>
                     </ul>
                 </div>
             </div>

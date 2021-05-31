@@ -18,9 +18,9 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                 <div class="row">
                     <div class="with-background col-md-4" style="background-image: url('${image2}')"></div>
                     <div class="without-background col-md-4" >
-                        <div class="h-50"><h4 class="fw-normal text-dark">Zartisana</h4></div>
+                        <div class="h-50"><h4 class="fw-normal text-dark">${this.trans("homeOtherDirectionMainTitle")}</h4></div>
                         <div class="h-50">
-                            <span>Qui sommes-nous?</span>
+                            <span>${this.trans("homeOtherDirectionPresentation")}</span>
                             ${this.createElement(ButtonComponent,
                                 {
                                     link: '/page',
@@ -32,9 +32,9 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image3}')"></div>
                     <div class="without-background col-md-4">
-                        <div class="h-50"><h4 class="fw-normal text-dark">Vous êtes artisan ?</h4></div>
+                        <div class="h-50"><h4 class="fw-normal text-dark">${this.trans("homeOtherDirectionArtisan")}</h4></div>
                         <div class="h-50">
-                            <span>Devenez partenaire de notre association.</span>
+                            <span>${this.trans("homeOtherDirectionBecomePartner")}</span>
                             ${this.createElement(ButtonComponent,
                                 {
                                     link: '/page',
@@ -46,7 +46,7 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                     </div>
                     <div class="with-background col-md-4" style="background-image: url('${image1}')"></div>
                     <div class="without-background col-md-4">
-                        <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">Découvrez les artisans et produits Zartizana.</h4></div>
+                        <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">${this.trans("homeOtherDirectionDiscover")}</h4></div>
                         <div class="h-50">
                             ${this.createElement(ButtonComponent,
                                 {

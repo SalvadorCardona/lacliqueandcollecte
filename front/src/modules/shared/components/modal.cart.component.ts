@@ -41,7 +41,7 @@ export default class ModalCartComponent extends AppComponent {
     public render(): TemplateResult  {
         if (!this.cart.items.length) {
             return html`
-                <span>Votre Panier est vide</span>
+                <span>${this.trans("modalCartEmpty")}</span>
             `;
         }
 

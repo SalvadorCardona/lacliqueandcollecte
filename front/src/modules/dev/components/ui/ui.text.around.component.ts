@@ -17,13 +17,13 @@ export default class UiTextAroundComponent extends AppComponent {
                             &lt;span class="text-around bg-primary"&gt &lt;/span&gt
                         </span>
                         <hr>
-                        <span class="text-around bg-primary">bg-primary</span>
-                        <span class="text-around bg-secondary">bg-secondary</span>
-                        <span class="text-around bg-success">bg-success</span>
-                        <span class="text-around bg-danger">bg-danger</span>
-                        <span class="text-around bg-warning">bg-warning</span>
-                        <span class="text-around bg-info">bg-info</span>
-                        <span class="text-around bg-dark">bg-dark</span>
+                        <span class="text-around bg-primary">${this.trans('uiTextAroundPrimary')}</span>
+                        <span class="text-around bg-secondary">${this.trans('uiTextAroundSecondary')}</span>
+                        <span class="text-around bg-success">${this.trans('uiTextAroundSuccess')}</span>
+                        <span class="text-around bg-danger">${this.trans('uiTextAroundDanger')}</span>
+                        <span class="text-around bg-warning">${this.trans('uiTextAroundWarning')}</span>
+                        <span class="text-around bg-info">${this.trans('uiTextAroundInfo')}</span>
+                        <span class="text-around bg-dark">${this.trans('uiTextAroundDark')}</span>
                     `
             })
         }
