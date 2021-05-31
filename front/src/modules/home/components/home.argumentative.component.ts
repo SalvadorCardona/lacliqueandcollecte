@@ -25,7 +25,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
     private contentList = [
         {
             image: argument1,
-            title: 'artisana local',
+            title: 'artisanat local',
             text: 'Trouvez les artisans qui sont proches de chez vous, et profitez de leur savoir-faire. Recherchez vos produits par ville.',
             link: '/a-propos',
             textlink: 'En savoir plus ici...'

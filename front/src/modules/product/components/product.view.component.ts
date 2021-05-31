@@ -70,7 +70,7 @@ export default class ProductViewComponent extends AppComponent {
                         <section class="col-md-6">
                             <h1 class="mt-2 text-primary">${this.product.name}</h1>
                             <hr>
-                            <h2 class="fs-4">Description :</h2>
+                            <h2 class="fs-4">${this.trans("productViewDescription")}</h2>
                             <span>${unsafeHTML(this.product.description)}</span>
                             <hr>
                             <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>

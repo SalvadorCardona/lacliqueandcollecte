@@ -13,7 +13,7 @@ export default class HomeProductListComponent extends AppComponent {
                 mt-5
                 p-5
                 text-center">
-                <h2 class="title-border">Nos produits</h2>
+                <h2 class="title-border">${this.trans("homeProductListTitle")}</h2>
                 <app-product-loop></app-product-loop>
             </div>
         `;

@@ -28,12 +28,11 @@ export default class HomeHeaderComponent extends AppComponent {
                     align-items-center">
                     <img class="logo p-4" src="${logo}" alt="home-header">
 
-                    <h1 class="text-light text-center text-uppercase">soutenez les artisans de votre région !</h1>
+                    <h1 class="text-light text-center text-uppercase">${this.trans("homeHeaderSupportTitle")}</h1>
                     <h2 class="fs-4
                         text-light
                         text-center
-                        fw-normal">
-                        Accédez à notre catalogue de produits artisanaux et locaux
+                        fw-normal">${this.trans("homeHeaderCatalog")}
                     </h2>
 
                     <div class="div-form-search
@@ -48,7 +47,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                 d-flex
                                 justify-content-center">
                                 <div class="child-search form-group-speciality ps-2">
-                                    <label for="search-box-1" class="fw-bold text-dark">Spécialité</label>
+                                    <label for="search-box-1" class="fw-bold text-dark">${this.trans("homeHeaderSpeciality")}</label>
                                     <span>
                                         <input class="d-block"
                                                name="search-box-1"
@@ -59,7 +58,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                 <div class="child-search
                                         form-group-city
                                         ps-2">
-                                    <label for="search-box-2" class="fw-bold text-dark">Ville</label>
+                                    <label for="search-box-2" class="fw-bold text-dark">${this.trans("homeHeaderCity")}</label>
                                     <span>
                                         <input class="d-block"
                                                id="city"

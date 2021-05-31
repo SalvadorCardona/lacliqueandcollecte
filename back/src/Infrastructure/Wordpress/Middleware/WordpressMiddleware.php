@@ -38,6 +38,7 @@ class WordpressMiddleware
 
     public function getL10n(): Translations|NOOP_Translations
     {
+
         return get_translations_for_domain(self::TRANSLATE_DOMAIN);
     }
 

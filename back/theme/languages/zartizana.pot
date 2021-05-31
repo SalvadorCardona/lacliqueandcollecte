@@ -31,3 +31,192 @@ msgstr ""
 msgid "tout"
 msgstr ""
 
+msgid "homeOtherDirectionMainTitle"
+msgstr ""
+
+msgid "homeOtherDirectionPresentation"
+msgstr ""
+
+msgid "homeOtherDirectionArtisan"
+msgstr ""
+
+msgid "homeOtherDirectionDiscover"
+msgstr ""
+
+msgid "homeOtherDirectionBecomePartner"
+msgstr ""
+
+msgid "homeHeaderSupportTitle"
+msgstr ""
+
+msgid "homeHeaderCatalog"
+msgstr ""
+
+msgid "homeHeaderSpeciality"
+msgstr ""
+
+msgid "homeHeaderCity"
+msgstr ""
+
+msgid "homePartnerListTitle"
+msgstr ""
+
+msgid "homeProductListTitle"
+msgstr ""
+
+msgid "uiColorsPrimary"
+msgstr ""
+
+msgid "uiColorsSecondary"
+msgstr ""
+
+msgid "uiColorsSuccess"
+msgstr ""
+
+msgid "uiColorsWarning"
+msgstr ""
+
+msgid "uiColorsDanger"
+msgstr ""
+
+msgid "uiColorsDark"
+msgstr ""
+
+msgid "uiIconIconName"
+msgstr ""
+
+msgid "uiTextAroundPrimary"
+msgstr ""
+
+msgid "uiTextAroundSecondary"
+msgstr ""
+
+msgid "uiTextAroundSuccess"
+msgstr ""
+
+msgid "uiTextAroundDanger"
+msgstr ""
+
+msgid "uiTextAroundWarning"
+msgstr ""
+
+msgid "uiTextAroundInfo"
+msgstr ""
+
+msgid "uiTextAroundDark"
+msgstr ""
+
+msgid "uiTextTitleH1"
+msgstr ""
+
+msgid "uiTextTitleH2"
+msgstr ""
+
+msgid "uiTextTitleH3"
+msgstr ""
+
+msgid "uiTextTitleH4"
+msgstr ""
+
+msgid "uiTextTitleH5"
+msgstr ""
+
+msgid "uiViewComponentTitle"
+msgstr ""
+
+msgid "uiViewComponentProductsTitle"
+msgstr ""
+
+msgid "devMenuComponents"
+msgstr ""
+
+msgid "devMenuHomepage"
+msgstr ""
+
+msgid "devMenuPartners"
+msgstr ""
+
+msgid "devMenuProducts"
+msgstr ""
+
+msgid "devMenuSearch"
+msgstr ""
+
+msgid "devMenuTitle"
+msgstr ""
+
+msgid "partnerHeaderCity"
+msgstr ""
+
+msgid "partnerViewPartnerName"
+msgstr ""
+
+msgid "productViewDescription"
+msgstr ""
+
+msgid "searchViewTitle"
+msgstr ""
+
+msgid "footerFollow"
+msgstr ""
+
+msgid "footerSalesTerms"
+msgstr ""
+
+msgid "footerBecomePartner"
+msgstr ""
+
+msgid "footerAsso"
+msgstr ""
+
+msgid "footerPartners"
+msgstr ""
+
+msgid "footerProducts"
+msgstr ""
+
+msgid "footerRight"
+msgstr ""
+
+msgid "footerCopyright"
+msgstr ""
+
+msgid "modalProductAdded"
+msgstr ""
+
+msgid "modalCartEmpty"
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+

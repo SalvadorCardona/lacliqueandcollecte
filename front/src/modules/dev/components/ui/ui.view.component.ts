@@ -18,7 +18,7 @@ export default class UiViewComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div class="container">
-                <h2>Components</h2>
+                <h2>${this.trans("uiViewComponentTitle")}</h2>
                 <div class="row">
                     ${this.createElement(UiTextComponent)}
                     <div class="col-md-4">
@@ -39,7 +39,7 @@ export default class UiViewComponent extends AppComponent {
                     </div>
                 </div>
 
-                <h2>Produit</h2>
+                <h2>${this.trans("uiViewComponentProductsTitle")}</h2>
                 ${this.createElement(UiProductsComponent)}
             </div>
         `;
