@@ -62,7 +62,7 @@ export default class HomeCitiesListComponent extends AppComponent {
                    role="button"
                    href=${this.getUrl(data.name)}
                    style="background-image: url('${data.img}'); background-size: cover">
-                    <span class="fs-5 my-5 d-inline-block">${data.labelCity}</span>
+                        <span class="fs-5 my-5 d-inline-block">${data.labelCity}</span>
                 </a>
                 </div>
         `;
