@@ -32,7 +32,7 @@ export default class UiColorsComponent extends AppComponent {
                 <div class="col-4">
                     ${this.createElement(WrapperComponent,
                         {
-                            title: 'Colors',
+                            title: this.trans('uiColorsTitle'),
                             body: html`
                                 <span class="app-color bg-primary">${this.trans('uiColorsPrimary')}</span>
                                 <span class="app-color bg-secondary">${this.trans('uiColorsSecondary')}</span>
@@ -47,7 +47,7 @@ export default class UiColorsComponent extends AppComponent {
                 <div class="col-4">
                     ${this.createElement(WrapperComponent,
                         {
-                            title: 'Gradients',
+                            title: this.trans('uiGradientsTitle'),
                             body: html`
                                 <span class="app-gradient gradient-primary">${this.trans('uiColorsPrimary')}</span>
                                 <span class="app-gradient gradient-secondary">${this.trans('uiColorsSecondary')}</span>

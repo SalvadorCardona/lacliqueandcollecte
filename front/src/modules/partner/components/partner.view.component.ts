@@ -53,7 +53,7 @@ export default class PartnerViewComponent extends AppComponent {
                     </div>
                     <div class="col-md-4">
                         ${this.createElement(WrapperComponent, {
-                            title: 'Présentation',
+                            title: this.trans("partnerViewPresentationPartner"),
                             body: html`
                                 <p>
                                     ${this.partnerPost.meta.shopDescription}
@@ -61,7 +61,7 @@ export default class PartnerViewComponent extends AppComponent {
                             `
                         })}
                         ${this.createElement(WrapperComponent, {
-                            title: 'Présentation',
+                            title: this.trans("partnerViewPresentationContactInformation"),
                             body: this.getContact()
                         })}
                     </div>
@@ -74,23 +74,23 @@ export default class PartnerViewComponent extends AppComponent {
     {
         return html`
             <div>
-                ${this.createElement(IconComponent, {color:'primary' ,icon: 'telephone'})} : ${this.partnerPost.meta?.phone}
+                ${this.createElement(IconComponent, {color:this.trans("partnerViewPresentationIconColorTel") ,icon:this.trans("partnerViewPresentationIconTelephone")})} : ${this.partnerPost.meta?.phone}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color:'primary' ,icon: 'facebook'})} : ${this.partnerPost.meta?.facebook}
+                ${this.createElement(IconComponent, {color:this.trans("partnerViewPresentationIconColorFacebook") ,icon:this.trans("partnerViewPresentationIconFacebook")})} : ${this.partnerPost.meta?.facebook}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color:'primary' ,icon: 'twitter'})} : ${this.partnerPost.meta?.twitter}
+                ${this.createElement(IconComponent, {color:this.trans("partnerViewPresentationIconColorTwitter") ,icon:this.trans("partnerViewPresentationIconTwitter")})} : ${this.partnerPost.meta?.twitter}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color:'primary' ,icon: 'instagram'})} : ${this.partnerPost.meta?.instagram}
+                ${this.createElement(IconComponent, {color:this.trans("partnerViewPresentationIconColorInstagram") ,icon: this.trans("partnerViewPresentationIconInstagram")})} : ${this.partnerPost.meta?.instagram}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color:'primary' ,icon: 'geoLat'})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
+                ${this.createElement(IconComponent, {color:this.trans("partnerViewPresentationIconColorGeolat") ,icon: this.trans("partnerViewPresentationIconGeolat")})} : ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
             </div>
             <div>
                 ${this.createElement(ButtonComponent,
-                    {icon: 'envelope', type: 'primary', label: 'Contactez-le'}
+                    {icon: this.trans("partnerViewPresentationContactButtonIcon"), type:this.trans("partnerViewPresentationContactButtonType"), label:this.trans("partnerViewPresentationContactButtonLabel")}
                 )}
             </div>
         `;

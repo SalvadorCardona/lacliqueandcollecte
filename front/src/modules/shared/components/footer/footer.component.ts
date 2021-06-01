@@ -42,13 +42,13 @@ export default class FooterComponent extends AppComponent{
                     <br>
                     <div class="social-wrapper">
                         <a class="m-2" href="fb.com">
-                            ${this.createElement(IconComponent, {icon: 'facebook'})}
+                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconFacebook")})}
                         </a>
                         <a class="m-2" href="tw.com">
-                            ${this.createElement(IconComponent, {icon: 'twitter'})}
+                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconTwitter")})}
                         </a>
                         <a class="m-2" href="inst.com">
-                            ${this.createElement(IconComponent, {icon: 'instagram'})}
+                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconInstagram")})}
                         </a>
                     </div>
                     <br>

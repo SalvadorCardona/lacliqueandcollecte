@@ -14,23 +14,26 @@ export default class UiFormComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
                 ${this.createElement(WrapperComponent, {
-                title: 'Form',
+                title: this.trans("uiFormTitle"),
                 body: html`
                     <form>
                         ${this.createElement(InputBaseComponent, {
-                            type: 'email',
-                            label: 'Email Address',
-                            helper: 'We\'ll never share your email with anyone else.'
+                            type: this.trans("uiFormType"),
+                            label: this.trans("uiFormlabel"),
+                            helper: this.trans("uiFormHelper")
                         })}
                         <br>
-                        ${this.createElement(InputBaseComponent, {type: 'password', label: 'Password'})}
+                        ${this.createElement(InputBaseComponent, {type: this.trans("uiFormpasswordType"),
+                            label: this.trans("uiFormPasswordlabel")})}
                         <br>
-                        ${this.createElement(InputCheckboxComponent, {label: 'Check me out'})}
+                        ${this.createElement(InputCheckboxComponent, {label:this.trans("uiFormCheckboxlabel")})}
                         <br>
-                        ${this.createElement(InputSelectComponent, {label: 'Check me out'})}
+                        ${this.createElement(InputSelectComponent, {label: this.trans("uiFormSelectlabel")})}
                         <br>
-                        ${this.createElement(ButtonComponent, {label: 'Submit', type: 'primary'})}
-                        ${this.createElement(ButtonComponent, {label: 'Cancel', type: 'dark'})}
+                        ${this.createElement(ButtonComponent, {type:this.trans("uiFormButtonSubmitType"),
+                            label: this.trans("uiFormButtonSubmitLabel")})}
+                        ${this.createElement(ButtonComponent, {type:this.trans("uiFormButtonCancelType"),
+                            label: this.trans("uiFormButtonCancelLabel")})}
                     </form>
                 `
             })

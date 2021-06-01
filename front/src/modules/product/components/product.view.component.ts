@@ -53,7 +53,7 @@ export default class ProductViewComponent extends AppComponent {
             .then(() => {
                 const modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
                 modalProductComponent.product = this.product;
-                this.modalService.open(modalProductComponent, 'Votre produit a été enregistré');
+                this.modalService.open(modalProductComponent, this.trans("productViewModalAdded"));
             })
     }
 
@@ -78,21 +78,21 @@ export default class ProductViewComponent extends AppComponent {
                             <div class="row add-to-basket mt-1">
                                 <div class="col-md-3">
                                     <select id="product-qty" class="form-control">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
+                                        <option value="1">${this.trans("productViewQuantity1")}</option>
+                                        <option value="2">${this.trans("productViewQuantity2")}</option>
+                                        <option value="3">${this.trans("productViewQuantity3")}</option>
+                                        <option value="4">${this.trans("productViewQuantity4")}</option>
+                                        <option value="5">${this.trans("productViewQuantity5")}</option>
+                                        <option value="6">${this.trans("productViewQuantity6")}</option>
                                     </select>
                                 </div>
                                 ${this.createElement(ButtonComponent,
                                     {
                                         $click: () => this.addItem(),
-                                        classList: 'mt-3',
-                                        type: 'primary',
-                                        icon: 'cartPlus',
-                                        label: 'Ajouter au panier'
+                                        classList: this.trans("productViewButtonAdd"),
+                                        type: this.trans("productViewButtonType"),
+                                        icon: this.trans("productViewButtonIcon"),
+                                        label: this.trans("productViewButtonLabel")
                                     }
                                 )}
                             </div>
