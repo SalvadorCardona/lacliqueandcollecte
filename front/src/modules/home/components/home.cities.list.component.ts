@@ -12,7 +12,7 @@ export default class HomeCitiesListComponent extends AppComponent {
         return 'app-home-cities-list';
     }
 
-    private fakeData = [
+    private citiesList = [
         {
             img: nancy,
             labelCity: 'Nancy',
@@ -42,7 +42,7 @@ export default class HomeCitiesListComponent extends AppComponent {
                 text-center">
                 <h2 class="title-border">Nos villes</h2>
                 <div class="row">
-                    ${this.fakeData.map(data => this.renderCities(data))}
+                    ${this.citiesList.map(data => this.renderCities(data))}
                 </div>
             </div>
         `;
