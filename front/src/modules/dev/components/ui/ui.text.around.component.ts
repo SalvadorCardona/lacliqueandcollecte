@@ -11,7 +11,7 @@ export default class UiTextAroundComponent extends AppComponent {
         return html`
             ${this.createElement(WrapperComponent,
             {
-                title: 'Text Around', classList: 'app-wrapper',
+                title:this.trans('uiTextAroundTitle'), classList: this.trans('uiTextAroundClassList'),
                 body: html`
                         <span class="fw-normal">
                             &lt;span class="text-around bg-primary"&gt &lt;/span&gt

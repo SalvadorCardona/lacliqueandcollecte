@@ -18,7 +18,7 @@ export default class DevComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            ${this.createElement(DevMenuComponent, {classList: 'position-fixed start-0 top-0 min-vh-100'})}
+            ${this.createElement(DevMenuComponent, {classList: this.trans("devComponentClass")})}
             <main id="main">
                 ${this.router()}
             </main>
@@ -33,13 +33,13 @@ export default class DevComponent extends AppComponent {
         this.route = window.location.hash;
 
         switch (this.route) {
-            case '#home':
+            case this.trans("uiDevComponentRouteHome"):
                 return this.createElement(HomeViewComponent);
-            case '#search':
+            case this.trans("uiDevComponentRouteSearch"):
                 return this.createElement(SearchViewComponent);
-            case '#partner':
+            case this.trans("uiDevComponentRoutePartner"):
                 return this.createElement(PartnerViewComponent, {partnerPostId: 106});
-            case '#produit':
+            case this.trans("uiDevComponentRouteProduit"):
                 return this.createElement(ProductViewComponent, {productId: 139});
             default:
                 return this.createElement(UiViewComponent);

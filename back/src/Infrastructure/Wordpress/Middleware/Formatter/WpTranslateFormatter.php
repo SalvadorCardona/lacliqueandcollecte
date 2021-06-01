@@ -4,7 +4,6 @@ namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
 
-
 class WpTranslateFormatter extends Formatter
 {
     public function format($data): array

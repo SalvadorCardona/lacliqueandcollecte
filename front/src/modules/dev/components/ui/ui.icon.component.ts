@@ -11,7 +11,7 @@ export default class UiIconComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             ${this.createElement(WrapperComponent, {
-                        title: 'Icons',
+                        title: this.trans("uiIconTitle"),
                         body: html`
                             <span class="fw-normal">
                     &lt;app-icon icon="" &gt &lt;/app-icon&gt

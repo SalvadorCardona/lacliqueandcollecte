@@ -15,7 +15,7 @@ export default class UiListComponentComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             ${this.createElement(WrapperComponent, {
-                title: 'Liste des composants',
+                title: this.trans("uiListTitle"),
                 body: this.componentList()
             })}
         `;

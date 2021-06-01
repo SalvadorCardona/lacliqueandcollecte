@@ -187,6 +187,583 @@ msgstr ""
 msgid "modalCartEmpty"
 msgstr ""
 
+msgid "homeArgumentiveTitleArg1"
+msgstr ""
+
+msgid "homeArgumentiveContentArg1"
+msgstr ""
+
+msgid "homeArgumentiveLinkArg1"
+msgstr ""
+
+msgid "homeArgumentiveTextLinkArg1"
+msgstr ""
+
+msgid "homeArgumentiveTitleArg2"
+msgstr ""
+
+msgid "homeArgumentiveContentArg2"
+msgstr ""
+
+msgid "homeArgumentiveLinkArg2"
+msgstr ""
+
+msgid "homeArgumentiveTextLinkArg2"
+msgstr ""
+
+msgid "homeArgumentiveTitleArg3"
+msgstr ""
+
+msgid "homeArgumentiveContentArg3"
+msgstr ""
+
+msgid "homeArgumentiveLinkArg3"
+msgstr ""
+
+msgid "homeArgumentiveTextLinkArg3"
+msgstr ""
+
+msgid "homeHeaderSearchSpecialityPlaceHolder"
+msgstr ""
+
+msgid "homeHeaderSearchCityPlaceHolder"
+msgstr ""
+
+msgid "homeOtherDirectionPresentationLink"
+msgstr ""
+
+msgid "homeOtherDirectionPresentationLabel"
+msgstr ""
+
+msgid "homeOtherDirectionPresentationType"
+msgstr ""
+
+msgid "homeOtherDirectionBecomePartnerLabel"
+msgstr ""
+
+msgid "homeOtherDirectionBecomePartnerType"
+msgstr ""
+
+msgid "homeOtherDirectionBecomePartnerLink"
+msgstr ""
+
+msgid "homeOtherDirectionDiscoverLink"
+msgstr ""
+
+msgid "homeOtherDirectionDiscoverLabel"
+msgstr ""
+
+msgid "homeOtherDirectionDiscoverType"
+msgstr ""
+
+msgid "partnerHeaderSocialFBClasslist"
+msgstr "md-2"
+
+msgid "partnerHeaderSocialIGClasslist"
+msgstr ""
+
+
+msgid "partnerHeaderSocialTwitterClasslist"
+msgstr ""
+
+msgid "homeHeaderSearchIcon"
+msgstr ""
+
+msgid "partnerHeaderSocialTwitterIcon"
+msgstr ""
+
+msgid "partnerHeaderSocialFacebookIcon"
+msgstr ""
+
+msgid "partnerHeaderSocialInstagramIcon"
+msgstr ""
+
+msgid "partnerViewPresentationContactInformation"
+msgstr ""
+
+msgid "partnerViewPresentationPartner"
+msgstr ""
+
+msgid "partnerViewPresentationIconColorTel"
+msgstr ""
+
+msgid "partnerViewPresentationIconColorFacebook"
+msgstr ""
+
+msgid "partnerViewPresentationIconColorTwitter"
+msgstr ""
+
+msgid "partnerViewPresentationIconColorInstagram"
+msgstr ""
+
+msgid "partnerViewPresentationIconColorGeolat"
+msgstr ""
+
+msgid "partnerViewPresentationContactButtonType"
+msgstr ""
+
+msgid "partnerViewPresentationContactButtonLabel"
+msgstr ""
+
+msgid "partnerViewPresentationContactButtonIcon"
+msgstr ""
+
+msgid "productViewModalAdded"
+msgstr ""
+
+msgid "productViewQuantity1"
+msgstr ""
+
+msgid "productViewQuantity2"
+msgstr ""
+
+msgid "productViewQuantity3"
+msgstr ""
+
+msgid "productViewQuantity4"
+msgstr ""
+
+msgid "productViewQuantity5"
+msgstr ""
+
+msgid "productViewQuantity6"
+msgstr ""
+
+msgid "productViewButtonAdd"
+msgstr ""
+
+msgid "productViewButtonType"
+msgstr ""
+
+msgid "productViewButtonIcon"
+msgstr ""
+
+msgid "productViewButtonLabel"
+msgstr ""
+
+msgid "searchLeftBarCategoyLabel"
+msgstr ""
+
+msgid "searchLeftBarCategoyName"
+msgstr ""
+
+msgid "searchLeftBarCategoyBrasserieLabel"
+msgstr ""
+
+msgid "searchLeftBarCategoyBrasserieValue"
+msgstr ""
+
+msgid "searchLeftBarCategoyBoisLabel"
+msgstr ""
+
+msgid "searchLeftBarCategoyBoisValue"
+msgstr ""
+
+msgid "searchLeftBarCategoyPierreLabel"
+msgstr ""
+
+msgid "searchLeftBarCategoyPierreValue"
+msgstr ""
+
+msgid "searchLeftBarCategoryLabelTri"
+msgstr ""
+
+msgid "searchLeftBarCategoryNameTri"
+msgstr ""
+
+msgid "searchLeftBarCategoryLabelPertinent"
+msgstr ""
+
+msgid "searchLeftBarCategoryValuePertinent"
+msgstr ""
+
+msgid "searchLeftBarCategoryLabelPrix"
+msgstr ""
+
+msgid "searchLeftBarCategoryLabelLasted"
+msgstr ""
+
+msgid "searchLeftBarCategoryValueLasted"
+msgstr ""
+
+msgid "searchLeftBarCategoryValuePrix"
+msgstr ""
+
+msgid "searchLeftBarColorChevron"
+msgstr ""
+
+msgid "uiButtonComponentNormalIcon"
+msgstr ""
+
+msgid "searchLeftBarIconChevron"
+msgstr ""
+
+msgid "uiButtonTitle"
+msgstr ""
+
+msgid "uiButtonClassList"
+msgstr ""
+
+msgid "uiButtonComponentNormalClassList"
+msgstr ""
+
+msgid "uiButtonComponentNormalLabel"
+msgstr ""
+
+msgid "uiButtonComponentPrimaryClassList"
+msgstr ""
+
+msgid "uiButtonComponentPrimaryIcon"
+msgstr ""
+
+msgid "uiButtonComponentPrimaryLabel"
+msgstr "."
+
+msgid "uiButtonComponentPrimaryType"
+msgstr ""
+
+msgid "uiButtonComponentGeoLatType"
+msgstr ""
+
+msgid "uiButtonComponentgeoLatIcon"
+msgstr "geoLat"
+
+msgid "uiButtonComponentGeoLatClassList"
+msgstr ""
+
+msgid "uiButtonComponentSecondaryType"
+msgstr "secondary"
+
+msgid "uiButtonComponentSecondarylabel"
+msgstr ""
+
+msgid "uiButtonComponentSecondaryClassList"
+msgstr "mt-2"
+
+msgid "uiButtonComponentSuccessClassList"
+msgstr ""
+
+msgid "uiButtonComponentSuccesslabel"
+msgstr ""
+
+msgid "uiButtonComponentSuccessType"
+msgstr ""
+
+msgid "uiButtonComponentDangerType"
+msgstr ""
+
+msgid "uiButtonComponentDangerlabel"
+msgstr ""
+
+msgid "uiButtonComponentDangerClassList"
+msgstr ""
+
+msgid "uiButtonComponentWarningType"
+msgstr ""
+
+msgid "uiButtonComponentWarninglabel"
+msgstr ""
+
+msgid "uiButtonComponentWarningClassList"
+msgstr ""
+
+msgid "uiButtonComponentInfoType"
+msgstr ""
+
+msgid "uiButtonComponentInfolabel"
+msgstr ""
+
+msgid "uiButtonComponentInfoClassList"
+msgstr ""
+
+msgid "uiButtonComponentDarkClassList"
+msgstr ""
+
+msgid "uiButtonComponentDarklabel"
+msgstr ""
+
+msgid "uiButtonComponentDarkType"
+msgstr ""
+
+msgid "uiColorsTitle"
+msgstr ""
+
+msgid "uiGradientsTitle"
+msgstr ""
+
+msgid "uiFormTitle"
+msgstr ""
+
+msgid "uiFormType"
+msgstr ""
+
+msgid "uiFormlabel"
+msgstr ""
+
+msgid "uiFormHelper"
+msgstr ""
+
+msgid "uiFormpasswordType"
+msgstr ""
+
+msgid "uiFormPasswordlabel"
+msgstr ""
+
+msgid "uiFormCheckboxlabel"
+msgstr ""
+
+msgid "uiFormSelectlabel"
+msgstr "Check me out"
+
+msgid "uiFormButtonSubmitLabel"
+msgstr ""
+
+msgid "uiFormButtonSubmitType"
+msgstr ""
+
+msgid "uiFormButtonCancelLabel"
+msgstr ""
+
+msgid "uiFormButtonCancelType"
+msgstr ""
+
+msgid "uiIconTitle"
+msgstr ""
+
+msgid "uiListTitle"
+msgstr ""
+
+msgid "uiProductsClasslist"
+msgstr ""
+
+msgid "uiTextAroundTitle"
+msgstr ""
+
+msgid "uiTextAroundClassList"
+msgstr ""
+
+msgid "uiTextTitleMain"
+msgstr ""
+
+msgid "uiTextTitleColors"
+msgstr ""
+
+msgid "uiTextTextPrimary"
+msgstr ""
+
+msgid "uiTextTextSecondary"
+msgstr ""
+
+msgid "uiTextTextSuccess"
+msgstr ""
+
+msgid "uiTextTextDanger"
+msgstr ""
+
+msgid "uiTextTextWarning"
+msgstr ""
+
+msgid "uiTextTextInfo"
+msgstr ""
+
+msgid "uiTextTextLight"
+msgstr ""
+
+msgid "uiTextTextDark"
+msgstr ""
+
+msgid "uiTextTextBody"
+msgstr ""
+
+msgid "uiTextTextMuted"
+msgstr ""
+
+msgid "uiTextTextWhite"
+msgstr ""
+
+msgid "uiTextTextBlack50"
+msgstr ""
+
+msgid "uiTextTextWhite50"
+msgstr ""
+
+msgid "uiTextTextFontTitle"
+msgstr ""
+
+msgid "uiTextFontWeightItalic"
+msgstr ""
+
+msgid "uiTextFontWeightNormal"
+msgstr ""
+
+msgid "uiTextFontWeightBolder"
+msgstr ""
+
+msgid "uiTextFontWeightBold"
+msgstr ""
+
+msgid "uiTextFontSize6"
+msgstr ""
+
+msgid "uiTextFontSize5"
+msgstr ""
+
+msgid "uiTextFontSize4"
+msgstr ""
+
+msgid "uiTextFontSize3"
+msgstr ""
+
+msgid "uiTextFontSize2"
+msgstr ""
+
+msgid "uiTextFontSize1"
+msgstr ""
+
+msgid "uiTextFontSizeTitle"
+msgstr ""
+
+msgid "devComponentClassList"
+msgstr ""
+
+msgid "uiDevComponentRouteHome"
+msgstr ""
+
+msgid "uiDevComponentRouteSearch"
+msgstr ""
+
+msgid "uiDevComponentRouteProduit"
+msgstr ""
+
+msgid "uiDevComponentRoutePartner"
+msgstr ""
+
+msgid "devMenuComponentButtonClassList"
+msgstr ""
+
+msgid "devMenuComponentButtonIcon"
+msgstr "biGearWide"
+
+msgid "headerCartComponentIcon"
+msgstr ""
+
+msgid "headerCartComponentModalCartTitle"
+msgstr ""
+
+msgid "headerCartComponentModalCartClassList"
+msgstr ""
+
+msgid "partnerHeaderGeoLatIcon"
+msgstr ""
+
+msgid "partnerViewPresentationIconTelephone"
+msgstr ""
+
+msgid "partnerViewPresentationIconGeolat"
+msgstr ""
+
+msgid "partnerViewPresentationIconInstagram"
+msgstr ""
+
+msgid "partnerViewPresentationIconTwitter"
+msgstr ""
+
+msgid "partnerViewPresentationIconFacebook "
+msgstr ""
+
+msgid "footerComponentIconFacebook"
+msgstr ""
+
+msgid "footerComponentIconTwitter"
+msgstr ""
+
+msgid "footerComponentIconInstagram"
+msgstr ""
+
+msgid "headerComponentZartizana"
+msgstr ""
+
+msgid "headerComponentSearchBarPlaceholder"
+msgstr ""
+
+msgid "headerComponentSearchIconClassList"
+msgstr ""
+
+msgid "headerComponentSearchIcon"
+msgstr ""
+
+msgid "headerComponentButtonAccountLink"
+msgstr ""
+
+msgid "headerComponentButtonAccountIcon"
+msgstr ""
+
+msgid "modalComponentIconComponentIcon"
+msgstr ""
+
+msgid "ModalCartComponentButtonClearCart"
+msgstr ""
+
+msgid "ModalCartComponentButtonClearCartLabel"
+msgstr ""
+
+msgid "modalCartComponentIconX"
+msgstr ""
+
+msgid "modalProductIconReturn"
+msgstr ""
+
+msgid "modalProductButtonSuccessReturn"
+msgstr ""
+
+msgid "modalProductButtonLabelReturn"
+msgstr ""
+
+msgid "productCardComponentButtonIcon"
+msgstr ""
+
+msgid "productCardComponentButtonLabel"
+msgstr ""
+
+msgid "productCardComponentButtonType"
+msgstr ""
+
+msgid "parterCarComponentButtonType"
+msgstr ""
+
+msgid "parterCarComponentButtonLabel"
+msgstr ""
+
+msgid "parterCarComponentButtonClasslist"
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
 msgid ""
 msgstr ""
 
@@ -219,4 +796,158 @@ msgstr ""
 
 msgid ""
 msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+
+
+
 

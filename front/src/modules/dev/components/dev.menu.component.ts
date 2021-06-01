@@ -31,9 +31,10 @@ export default class DevMenuComponent extends AppComponent {
                 <li><a @click=${this.openModal} class="dropdown-item" href="/ui/#search">${this.trans("devMenuSearch")}</a></li>
             </div>
             ${this.createElement(ButtonComponent, {
-                classList: 'ms-2 mb-2 position-fixed start-0 bottom-0',
-                icon: 'biGearWide',
-                type: Color.SUCCESS,
+                classList: this.trans("devMenuComponentButtonClassList"),
+                icon: this.trans("devMenuComponentButtonIcon"),
+                
+                type:Color.SUCCESS,
                 $click: () => this.toggleShow()
             })};
         `;

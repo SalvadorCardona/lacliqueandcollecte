@@ -27,15 +27,17 @@ export default class ProductCardComponent extends AppComponent {
                 </a>
                 <div class="product-name
                     fs-4
-                    text-secondary">${this.product.postTitle}</div>
+                    text-secondary">${this.product.postTitle}
+                </div>
                 <div class="product-price
                     fw-bold
-                    mb-3">${filterPrice(this.product.meta.price)}</div>
+                    mb-3">${filterPrice(this.product.meta.price)}
+                </div>
                 ${this.createElement(ButtonComponent, {
                     link: this.product.guid,
-                    icon: 'cartPlus',
-                    type: 'primary',
-                    label: 'Ajouter au panier'
+                    icon: this.trans("productCardComponentButtonIcon"),
+                    type: this.trans("productCardComponentButtonType"),
+                    label: this.trans("productCardComponentButtonLabel")
                 })}
             </div>
         `;

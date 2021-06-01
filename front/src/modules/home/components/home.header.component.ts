@@ -52,7 +52,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                         <input class="d-block"
                                                name="search-box-1"
                                                type="text"
-                                               placeholder="Quel corps de métier?">
+                                               placeholder=${this.trans("homeHeaderSearchSpecialityPlaceHolder")}>
                                     </span>
                                 </div>
                                 <div class="child-search
@@ -64,7 +64,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                                id="city"
                                                name="search-box-2"
                                                type="text"
-                                               placeholder="Où?">
+                                               placeholder=${this.trans("homeHeaderSearchCityPlaceHolder")}>
                                     </span>
                                 </div>
                                 <div type="button" class="position-absolute
@@ -78,7 +78,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                             align-items-center">
                                         ${this.createElement(IconComponent,
                                             {
-                                                icon: 'search'
+                                                icon: this.trans("homeHeaderSearchIcon")
                                             }
                                         )}
                                     </a>

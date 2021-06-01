@@ -48,7 +48,7 @@ export default class ModalCartComponent extends AppComponent {
         return html`
           ${this.cart.items.map(this.itemsRender.bind(this))}
           <hr>
-          ${this.createElement(ButtonComponent, {type: '${Color.DANGER}', label: 'Vider le panier'})}
+          ${this.createElement(ButtonComponent, {type:this.trans("ModalCartComponentButtonClearCart"), label:this.trans("ModalCartComponentButtonClearCartLabel")})}
         `;
     }
 
@@ -64,7 +64,7 @@ export default class ModalCartComponent extends AppComponent {
         return html`
           <div>
               ${product.name}
-              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
+              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon:this.trans("modalCartComponentIconX")})}
           </div>
         `;
     }

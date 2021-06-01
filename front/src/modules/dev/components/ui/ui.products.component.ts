@@ -11,7 +11,7 @@ export default class UiProductsComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             ${this.createElement(WrapperComponent, {
-            classList: 'no-background',
+            classList: this.trans("uiProductsClasslist"),
             body: html`${this.createElement(ProductLoopComponent)}`
         })}
         `;
