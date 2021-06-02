@@ -12,7 +12,7 @@ export default class HeaderComponent extends AppComponent {
     public render(): TemplateResult
     {
         return html`
-            ${this.createElement(HeaderMobileComponent, {classList: ' d-block d-md-none'})}
+            ${this.createElement(HeaderMobileComponent, {classList: 'd-block d-md-none'})}
             ${this.createElement(HeaderDesktopComponent, {classList: 'd-none d-md-block'})}
         `;
     }

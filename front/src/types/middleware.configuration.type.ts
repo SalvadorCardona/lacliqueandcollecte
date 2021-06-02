@@ -5,7 +5,7 @@ import {WpQuery} from "App/types/wp.query.type";
 export interface MiddlewareConfigurationType {
     wcStoreApi: string;
     siteUrl: string;
-    user: UserType;
+    user?: UserType;
     mainMenu: Array<PostType>;
     wpApiKey: string;
     wpQuery: WpQuery;

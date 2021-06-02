@@ -6,9 +6,7 @@ export default class TranslateService {
     private configurationService: ConfigurationService;
 
     public translate(key: string): string {
-        console.log(key);
-        const translation = this.configurationService.configuration.translation
-        console.log(translation);
+        const translation = this.configurationService.configuration.translation;
 
         if (translation.hasOwnProperty(key)) {
             return translation[key];
