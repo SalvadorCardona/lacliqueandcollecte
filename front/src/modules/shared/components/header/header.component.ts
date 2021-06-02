@@ -44,8 +44,7 @@ export default class HeaderComponent extends AppComponent {
         });
     }
 
-    private onChange($e: KeyboardEvent): void
-    {
+    private onChange($e: KeyboardEvent): void {
         debounce(() => {
             const target = $e.target as HTMLInputElement;
 
@@ -58,8 +57,7 @@ export default class HeaderComponent extends AppComponent {
         }, 500)();
     }
 
-    private onBlur(): void
-    {
+    private onBlur(): void {
         this.productList = null;
     }
 
@@ -68,8 +66,10 @@ export default class HeaderComponent extends AppComponent {
             <div class="site-branding
                 container
                 py-3
-                d-none d-xl-flex
-                px-4">
+                d-none d-xl-flex px-4
+                d-lg-inline-flex
+                d-md-grid
+                ">
                 <div class="col-md-6
                     d-flex
                     justify-content-between">
@@ -82,12 +82,15 @@ export default class HeaderComponent extends AppComponent {
                     <div class="search-bar
                     d-inline-block
                     position-relative">
-                        <input @keyup=${this.onChange} 
+                        <input @keyup=${this.onChange}
                                @blur=${this.onBlur}
-                               type="text" 
-                               class="form-control" 
+                               type="text"
+                               class="form-control"
                                placeholder=${this.trans("headerComponentSearchBarPlaceholder")}>
-                        ${this.createElement(IconComponent, {classList: this.trans("headerComponentSearchIconClassList"), icon: this.trans("headerComponentSearchIcon")})}
+                        ${this.createElement(IconComponent, {
+                            classList: this.trans("headerComponentSearchIconClassList"),
+                            icon: this.trans("headerComponentSearchIcon")
+                        })}
                         ${this.getProductList()}
                     </div>
                 </div>
@@ -99,18 +102,21 @@ export default class HeaderComponent extends AppComponent {
                         d-flex
                         justify-content-end
                         align-items-center" role="navigation">
-                    <ul id="menus-main-menus" class="menus m-0">
-                        ${this.renderMenu()}
-                    </ul>
-                    ${this.createElement(ButtonComponent, {link: this.trans("headerComponentButtonAccountLink"), icon: this.trans("headerComponentButtonAccountIcon")})}
-                    ${this.createElement(HeaderCartComponent)}
+                        <ul id="menus-main-menus" class="menus m-0">
+                            ${this.renderMenu()}
+                        </ul>
+                        ${this.createElement(ButtonComponent, {
+                            link: this.trans("headerComponentButtonAccountLink"),
+                            icon: this.trans("headerComponentButtonAccountIcon")
+                        })}
+                        ${this.createElement(HeaderCartComponent)}
                     </nav>
                 </div>
             </div>
         `;
     }
 
-    private getProductList(): TemplateResult|TemplateResult[] {
+    private getProductList(): TemplateResult | TemplateResult[] {
         if (!this.productList) return html``;
 
         return html`
@@ -119,7 +125,7 @@ export default class HeaderComponent extends AppComponent {
                     p-2
                     w-100">
                 ${this.productList.map(product => {
-                    return html `
+                    return html`
                         <div>
                             <a href="${product.permalink}">${product.name}</a>
                         </div>

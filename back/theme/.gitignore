@@ -13,3 +13,4 @@ Thumbs.db
 *.map
 yarn.lock
 dist
+*.po~
