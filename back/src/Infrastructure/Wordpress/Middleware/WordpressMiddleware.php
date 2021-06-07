@@ -14,6 +14,7 @@ use WP_Query;
 use WP_Role;
 use WP_User;
 use wpdb;
+use WP_Term;
 
 class WordpressMiddleware
 {
@@ -180,6 +181,16 @@ class WordpressMiddleware
     public function addPostTypeSupport(string $postType, string|array $feature, mixed ...$args): void
     {
         add_post_type_support($postType, $feature, ...$args);
+    }
+
+    public function getTerms(array $args): ?array
+    {
+        return get_terms($args);
+    }
+
+    public function getTermLink(WP_Term $term): string
+    {
+        return get_term_link($term);
     }
 
     public function getOption(string $option): mixed
