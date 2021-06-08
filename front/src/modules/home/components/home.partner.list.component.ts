@@ -1,5 +1,6 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
+import PartnerLoopComponent from "App/modules/shared/components/partner/partner.loop.component";
 
 export default class HomePartnerListComponent extends AppComponent {
 
@@ -13,7 +14,7 @@ export default class HomePartnerListComponent extends AppComponent {
                 p-5
                 text-center">
                 <h2 class="title-border">Partenaires</h2>
-                <app-partner-loop></app-partner-loop>
+                ${this.createElement(PartnerLoopComponent)}
             </div>
         `;
     }

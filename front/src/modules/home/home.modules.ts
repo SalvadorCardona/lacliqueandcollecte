@@ -4,6 +4,7 @@ import HomeOtherDirectionComponent from "App/modules/home/components/home.other.
 import HomePartnerListComponent from "App/modules/home/components/home.partner.list.component";
 import HomeArgumentativeComponent from "App/modules/home/components/home.argumentative.component";
 import HomeProductListComponent from "App/modules/home/components/home.product.list.component";
+import HomeCitiesListComponent from "App/modules/home/components/home.cities.list.component";
 import Module from "App/types/module.type";
 
 export default {
@@ -13,6 +14,7 @@ export default {
         HomeOtherDirectionComponent,
         HomePartnerListComponent,
         HomeArgumentativeComponent,
-        HomeProductListComponent
+        HomeProductListComponent,
+        HomeCitiesListComponent
     ]
 } as Module;
