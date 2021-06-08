@@ -7,7 +7,6 @@ namespace App\Infrastructure\Wordpress\Middleware;
 use App\Infrastructure\Wordpress\Enum\TaxonomyType;
 use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareConfiguration;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpProductsCategoriesFormatter;
-use App\Infrastructure\Wordpress\Middleware\Formatter\WpProductsCategoriesFormatterFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpTranslateFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
@@ -25,19 +24,15 @@ class MiddlewareConfigurationFactory
 
     public function format(): MiddlewareConfiguration
     {
-        $productCategories  = $this->wpCategoriesFormatter->format(
-            $this->wpCategoriesFormatter->format(
-                $this->wordpressMiddleware->getTerms(
-                    [
-                        'taxonomy' => TaxonomyType::PRODUCT_CAT,
-                        'hide_empty' => true,
-                    ]
-                )
+        $productCategories = $this->wpCategoriesFormatter->format(
+            $this->wordpressMiddleware->getTerms(
+                [
+                    'taxonomy' => TaxonomyType::PRODUCT_CAT,
+                    'hide_empty' => true,
+                    'slug' => !'non-classe',
+                ]
             )
         );
-
-        dd($productCategories);
-
         return (new MiddlewareConfiguration())
             ->setWpApiKey($this->wordpressMiddleware->wpCreateNonce('wp_rest'))
             ->setUser($this->wpUserFormatter->format($this->wordpressMiddleware->wpGetCurrentUser()))
