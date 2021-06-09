@@ -4,35 +4,30 @@ import bakery from "Media/home/jobs/bakery.jpg";
 import brasserie from "Media/home/jobs/brasserie.jpg";
 import woodworking from "Media/home/jobs/woodworking.jpg";
 
-export default class HomeJobsListComponent extends AppComponent {
+export default class HomeCategoriesListComponent extends AppComponent {
 
     private baseUrl: string = "job";
 
     public static getComponentName(): string {
-        return 'app-home-jobs-list';
+        return 'app-home-categories-list';
     }
 
     private FakeList = [
         {
             img: bakery,
-            labelJob: 'Boulangerie',
+            labelCategory: 'Boulangerie',
             name: 'boulangerie',
         },
         {
             img: brasserie,
-            labelJob: 'Brasserie',
+            labelCategory: 'Brasserie',
             name: 'brasserie',
         },
         {
             img: woodworking,
-            labelJob: 'Ébénisterie',
+            labelCategory: 'Ébénisterie',
             name: 'ébénisterie',
         },
-        {
-            img: "test",
-            labelJob: 'Test',
-            name: 'test',
-        }
     ];
 
     private getUrl(name: string): string
@@ -46,16 +41,17 @@ export default class HomeJobsListComponent extends AppComponent {
                 p-5
                 text-center">
                 <h2 class="title-border">Nos spécialités</h2>
-                <div class="row row-cols-3">
-                    ${this.FakeList.map(data => this.renderJobs(data))}
+                <div class="row row-cols-3 justify-content-center">
+                    ${this.FakeList.map(category => this.renderCategories(category))}
                 </div>
             </div>
         `;
     }
 
-    public renderJobs(data): TemplateResult {
+    //TODO : typage de category
+    public renderCategories(category): TemplateResult {
         return html `
-            <div class="col-md-4 text-white mt-3">
+            <div class="text-white mt-3">
                 <a class="btn
                     btn-primary
                     display-block
@@ -65,11 +61,11 @@ export default class HomeJobsListComponent extends AppComponent {
                     background-overlay
                     overflow-hidden"
                    role="button"
-                   href=${this.getUrl(data.name)}
-                   style="background-image: url('${data.img}'); background-size: cover">
-                        <span class="fs-5 my-5 d-inline-block">${data.labelJob}</span>
+                   href=${this.getUrl(category.name)}
+                   style="background-image: url('${category.img}'); background-size: cover">
+                        <span class="fs-5 my-5 d-inline-block">${category.labelCategory}</span>
                 </a>
-                </div>
+            </div>
         `;
     }
 }
