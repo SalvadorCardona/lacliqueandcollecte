@@ -28,6 +28,11 @@ export default class HomeJobsListComponent extends AppComponent {
             labelJob: 'Ébénisterie',
             name: 'ébénisterie',
         },
+        {
+            img: "test",
+            labelJob: 'Test',
+            name: 'test',
+        }
     ];
 
     private getUrl(name: string): string
@@ -41,7 +46,7 @@ export default class HomeJobsListComponent extends AppComponent {
                 p-5
                 text-center">
                 <h2 class="title-border">Nos spécialités</h2>
-                <div class="row">
+                <div class="row row-cols-3">
                     ${this.FakeList.map(data => this.renderJobs(data))}
                 </div>
             </div>
