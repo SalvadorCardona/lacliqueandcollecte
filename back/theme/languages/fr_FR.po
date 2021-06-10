@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zartizana\n"
 "POT-Creation-Date: 2021-05-27 17:06+0200\n"
-"PO-Revision-Date: 2021-06-01 13:32+0000\n"
+"PO-Revision-Date: 2021-06-10 07:20+0000\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -17,735 +17,669 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "X-Loco-Version: 2.5.2; wp-5.6"
 
-#: WordpressMiddleware.php:43
-msgid "Bonjour"
-msgstr "Good Morning"
-
-msgid "devComponentClassList"
-msgstr "position-fixed start-0 top-0 min-vh-100"
-
-msgid "devMenuComponentButtonClassList"
-msgstr "ms-2 mb-2 position-fixed start-0 bottom-0"
-
-msgid "devMenuComponentButtonIcon"
-msgstr "biGearWide"
-
-msgid "devMenuComponents"
+#| msgid "devMenuComponents"
+msgid "dev.menu.components"
 msgstr "Composants"
 
-msgid "devMenuHomepage"
+#| msgid "devMenuHomepage"
+msgid "dev.menu.home.page"
 msgstr "Page d'accueil"
 
-#| msgid "devMenuCPartners"
-msgid "devMenuPartners"
+#| msgid "devMenuPartners"
+msgid "dev.menu.partners"
 msgstr "Partenaire"
 
-msgid "devMenuProducts"
+#| msgid "devMenuProducts"
+msgid "dev.menu.products"
 msgstr "Produit"
 
-msgid "devMenuSearch"
+#| msgid "devMenuSearch"
+msgid "dev.menu.search"
 msgstr "Search"
 
-#| msgid "devMenuTile"
-msgid "devMenuTitle"
+#| msgid "devMenuTitle"
+msgid "dev.menu.title"
 msgstr "Les dev pages"
 
-msgid "footerAsso"
+#| msgid "footerAsso"
+msgid "footer.asso"
 msgstr "L'association"
 
-msgid "footerBecomePartner"
+#| msgid "footerBecomePartner"
+msgid "footer.become.partner"
 msgstr "Devenir partenaire"
 
-msgid "footerComponentIconFacebook"
-msgstr "facebook"
-
-msgid "footerComponentIconInstagram"
-msgstr "instagram"
-
-msgid "footerComponentIconTwitter"
-msgstr "twitter"
-
-msgid "footerCopyright"
+#| msgid "footerCopyright"
+msgid "footer.copyright"
 msgstr "©2021 Zartizana, Inc"
 
-msgid "footerFollow"
+#| msgid "footerFollow"
+msgid "footer.follow"
 msgstr "Suivez Zartizana"
 
-msgid "footerPartners"
+#| msgid "footerPartners"
+msgid "footer.partners"
 msgstr "Nos artisans"
 
-msgid "footerProducts"
+#| msgid "footerProducts"
+msgid "footer.products"
 msgstr "Nos produits"
 
-msgid "footerRight"
+#| msgid "footerRight"
+msgid "footer.rights"
 msgstr "All rights reserved"
 
-msgid "footerSalesTerms"
+#| msgid "footerSalesTerms"
+msgid "footer.sales.terms"
 msgstr "Conditions générales"
 
-msgid "headerCartComponentIcon"
-msgstr "cart"
-
-msgid "headerCartComponentModalCartClassList"
-msgstr "position-relative"
-
-msgid "headerCartComponentModalCartTitle"
+#| msgid "headerCartComponentModalCartTitle"
+msgid "header.cart.component.modal.cart.title"
 msgstr "Votre Panier"
 
-msgid "headerComponentButtonAccountIcon"
-msgstr "person"
+msgid "header.component.div.account"
+msgstr "Mon compte"
 
-msgid "headerComponentButtonAccountLink"
-msgstr "/mon-compte"
+msgid "header.component.div.become.partner"
+msgstr "Devenir partenaire"
 
-msgid "headerComponentSearchBarPlaceholder"
+msgid "header.component.div.categories"
+msgstr "Catégories"
+
+msgid "header.component.div.info.association"
+msgstr "Association Zartizana"
+
+msgid "header.component.div.login"
+msgstr "Se connecter"
+
+msgid "header.component.div.our.partners"
+msgstr "Nos artisans"
+
+msgid "header.component.div.register"
+msgstr "S'inscrire"
+
+msgid "header.component.div.search"
+msgstr "Rechercher"
+
+msgid "header.component.div.wishes"
+msgstr "Liste de souhaits"
+
+#| msgid "headerComponentSearchBarPlaceholder"
+msgid "header.component.search.bar.place.holder"
 msgstr "Trouver votre produit...."
 
-msgid "headerComponentSearchIcon"
-msgstr "search"
-
-msgid "headerComponentSearchIconClassList"
-msgstr "position-absolute"
-
-msgid "headerComponentZartizana"
+#| msgid "headerComponentZartizana"
+msgid "header.component.zartizana"
 msgstr "ZARTIZANA"
 
-#: WordpressMiddleware.php:44
-msgid "Hello"
-msgstr "Salut"
-
-msgid "homeArgumentiveContentArg1"
+#| msgid "homeArgumentiveContentArg1"
+msgid "home.argumentative.content.arg1"
 msgstr ""
 "Trouvez les artisans qui sont proches de chez vous, et profitez de leur "
 "savoir-faire. Recherchez vos produits par ville."
 
-msgid "homeArgumentiveContentArg2"
+#| msgid "homeArgumentiveContentArg2"
+msgid "home.argumentative.content.arg2"
 msgstr ""
 "Accédez à un catalogue de produits artisanaux de qualité, remplissez votre "
 "panier, nous nous occupons du reste.\n"
 "            "
 
-msgid "homeArgumentiveContentArg3"
+#| msgid "homeArgumentiveContentArg3"
+msgid "home.argumentative.content.arg3"
 msgstr ""
 "Zartisana aide les artisans locaux à gagner en visibilité. Découvrez les "
 "perles cachées de votre région !"
 
-msgid "homeArgumentiveLinkArg1"
-msgstr "/a-propos"
-
-msgid "homeArgumentiveLinkArg2"
-msgstr " /a-propos"
-
-msgid "homeArgumentiveLinkArg3"
-msgstr "/a-propos"
-
-msgid "homeArgumentiveTextLinkArg1"
+#| msgid "homeArgumentiveTextLinkArg1"
+msgid "home.argumentative.text.link.arg1"
 msgstr "En savoir plus ici..."
 
-msgid "homeArgumentiveTextLinkArg2"
+#| msgid "homeArgumentiveTextLinkArg2"
+msgid "home.argumentative.text.link.arg2"
 msgstr " En savoir plus ici..."
 
-msgid "homeArgumentiveTextLinkArg3"
+#| msgid "homeArgumentiveTextLinkArg3"
+msgid "home.argumentative.text.link.arg3"
 msgstr "En savoir plus ici..."
 
-msgid "homeArgumentiveTitleArg1"
+#| msgid "homeArgumentiveTitleArg1"
+msgid "home.argumentative.title.arg1"
 msgstr "Artisanat local"
 
-msgid "homeArgumentiveTitleArg2"
+#| msgid "homeArgumentiveTitleArg2"
+msgid "home.argumentative.title.arg2"
 msgstr "produits d'exception"
 
-msgid "homeArgumentiveTitleArg3"
-msgstr "partenariat"
+#| msgid "homeArgumentiveTitleArg3"
+msgid "home.argumentative.title.arg3"
+msgstr "Partenariat"
 
-msgid "homeHeaderCatalog"
+msgid "home.cities.label.lyon"
+msgstr "Lyon"
+
+msgid "home.cities.label.nancy"
+msgstr "Nancy"
+
+msgid "home.cities.label.paris"
+msgstr "Paris"
+
+msgid "home.cities.title"
+msgstr "Nos villes"
+
+#| msgid "homeHeaderCatalog"
+msgid "home.header.catalogue"
 msgstr "Accédez à notre catalogue de produits artisanaux et locaux"
 
-msgid "homeHeaderCity"
+#| msgid "homeHeaderCity"
+msgid "home.header.city"
 msgstr "Ville"
 
-msgid "homeHeaderSearchCityPlaceHolder"
+#| msgid "homeHeaderSearchCityPlaceHolder"
+msgid "home.header.search.city.placeholder"
 msgstr "Où ?"
 
-msgid "homeHeaderSearchIcon"
-msgstr "search"
-
-msgid "homeHeaderSearchSpecialityPlaceHolder"
+#| msgid "homeHeaderSearchSpecialityPlaceHolder"
+msgid "home.header.search.speciality.placeholder"
 msgstr "Quel corps de métier ?"
 
-msgid "homeHeaderSpeciality"
+#| msgid "homeHeaderSpeciality"
+msgid "home.header.speciality"
 msgstr "Spécialité"
 
-msgid "homeHeaderSupportTitle"
+msgid "home.header.support.title"
 msgstr "Soutenez les artisans de votre région !"
 
-msgid "homeOtherDirectionArtisan"
+#| msgid "homeOtherDirectionArtisan"
+msgid "home.other.direction.artisan"
 msgstr "Vous êtes artisan ?"
 
-msgid "homeOtherDirectionBecomePartner"
+#| msgid "homeOtherDirectionBecomePartner"
+msgid "home.other.direction.become.partner"
 msgstr "Devenez partenaire de notre association."
 
-msgid "homeOtherDirectionBecomePartnerLabel"
+#| msgid "homeOtherDirectionBecomePartnerLabel"
+msgid "home.other.direction.become.partner.label"
 msgstr "Contactez-nous"
 
-msgid "homeOtherDirectionBecomePartnerLink"
-msgstr "/page"
-
-msgid "homeOtherDirectionBecomePartnerType"
-msgstr "primary"
-
-msgid "homeOtherDirectionDiscover"
+#| msgid "homeOtherDirectionDiscover"
+msgid "home.other.direction.discover"
 msgstr "Découvrez les artisans et produits Zartizana."
 
-msgid "homeOtherDirectionDiscoverLabel"
+#| msgid "homeOtherDirectionDiscoverLabel"
+msgid "home.other.direction.discover.label"
 msgstr "Le shop ici"
 
-msgid "homeOtherDirectionDiscoverLink"
-msgstr "/page"
-
-msgid "homeOtherDirectionDiscoverType"
-msgstr "primary"
-
-msgid "homeOtherDirectionMainTitle"
+#: WordpressMiddleware.php:43
+#| msgid "homeOtherDirectionMainTitle"
+msgid "home.other.direction.main.title"
 msgstr "Zartizana"
 
-msgid "homeOtherDirectionPresentation"
+#| msgid "homeOtherDirectionPresentation"
+msgid "home.other.direction.presentation"
 msgstr "Qui sommes-nous ?"
 
-msgid "homeOtherDirectionPresentationLabel"
+#| msgid "homeOtherDirectionPresentationLabel"
+msgid "home.other.direction.presentation.label"
 msgstr "Notre histoire"
 
-msgid "homeOtherDirectionPresentationLink"
-msgstr "/page"
-
-msgid "homeOtherDirectionPresentationType"
-msgstr "primary"
-
-msgid "homePartnerListTitle"
+#| msgid "homePartnerListTitle"
+msgid "home.partner.list.title"
 msgstr "Partenaires"
 
-msgid "homeProductListTitle"
+#| msgid "homeProductListTitle"
+msgid "home.product.list.title"
 msgstr "Nos produits"
 
-msgid "ModalCartComponentButtonClearCart"
-msgstr "${Color.DANGER}"
-
-msgid "ModalCartComponentButtonClearCartLabel"
+#| msgid "ModalCartComponentButtonClearCartLabel"
+msgid "modal.cart.component.button.clear.cart.label"
 msgstr "Vider le panier"
 
-msgid "modalCartComponentIconX"
-msgstr "biX"
-
-msgid "modalCartEmpty"
+#| msgid "modalCartEmpty"
+msgid "modal.cart.empty"
 msgstr "Votre Panier est vide"
 
-msgid "modalComponentIconComponentIcon"
-msgstr "biX"
-
-msgid "modalProductAdded"
+#| msgid "modalProductAdded"
+msgid "modal.product.added"
 msgstr ""
 "Votre Produit a bien été ajouté.\n"
 
-msgid "modalProductButtonLabelReturn"
+#| msgid "modalProductButtonLabelReturn"
+msgid "modal.product.button.label.return"
 msgstr "Retourner au produit"
 
-msgid "modalProductButtonSuccessReturn"
-msgstr "success"
-
-msgid "modalProductIconReturn"
-msgstr "biArrowReturnLeft"
-
-msgid "parterCarComponentButtonClasslist"
-msgstr "mt-2"
-
-msgid "parterCarComponentButtonLabel"
+#| msgid "parterCarComponentButtonLabel"
+msgid "partner.card.component.button.label"
 msgstr "Voir sa page"
 
-msgid "parterCarComponentButtonType"
-msgstr "primary"
-
-msgid "partnerHeaderCity"
+#| msgid "partnerHeaderCity"
+msgid "partner.header.city"
 msgstr " Commerce situé dans la ville de "
 
-msgid "partnerHeaderGeoLatIcon"
-msgstr "geoLat"
-
-msgid "partnerHeaderSocialFacebookIcon"
-msgstr "facebook"
-
-msgid "partnerHeaderSocialFBClasslist"
-msgstr "md-2"
-
-msgid "partnerHeaderSocialIGClasslist"
-msgstr "md-2"
-
-#| msgid "partnerHeaderSocialIGIcon"
-msgid "partnerHeaderSocialInstagramIcon"
-msgstr "instagram"
-
-msgid "partnerHeaderSocialTwitterClasslist"
-msgstr "md-2"
-
-msgid "partnerHeaderSocialTwitterIcon"
-msgstr "twitter"
-
-msgid "partnerViewPartnerName"
+#| msgid "partnerViewPartnerName"
+msgid "partner.view.partner.name"
 msgstr "Les produits de "
 
-msgid "partnerViewPresentationContactButtonIcon"
-msgstr "envelope"
-
-msgid "partnerViewPresentationContactButtonLabel"
+#| msgid "partnerViewPresentationContactButtonLabel"
+msgid "partner.view.presentation.contact.button.label"
 msgstr "Contactez le"
 
-msgid "partnerViewPresentationContactButtonType"
-msgstr "primary"
-
-msgid "partnerViewPresentationContactInformation"
+#| msgid "partnerViewPresentationContactInformation"
+msgid "partner.view.presentation.contact.information"
 msgstr "Présentation"
 
-#| msgid "partnerViewPresentationIconColorFB"
-msgid "partnerViewPresentationIconColorFacebook"
-msgstr "primary"
-
-msgid "partnerViewPresentationIconColorGeolat"
-msgstr "primary"
-
-msgid "partnerViewPresentationIconColorInstagram"
-msgstr "primary"
-
-msgid "partnerViewPresentationIconColorTel"
-msgstr "primary"
-
-msgid "partnerViewPresentationIconColorTwitter"
-msgstr "primary"
-
-msgid "partnerViewPresentationIconFacebook "
-msgstr "facebook"
-
-msgid "partnerViewPresentationIconGeolat"
-msgstr "geoLat"
-
-msgid "partnerViewPresentationIconInstagram"
-msgstr "instagram"
-
-msgid "partnerViewPresentationIconTelephone"
-msgstr "telephone"
-
-msgid "partnerViewPresentationIconTwitter"
-msgstr "twitter"
-
-msgid "partnerViewPresentationPartner"
+#| msgid "partnerViewPresentationPartner"
+msgid "partner.view.presentation.partner"
 msgstr "Présentation"
 
-msgid "productCardComponentButtonIcon"
-msgstr "cartPlus"
-
-msgid "productCardComponentButtonLabel"
+#| msgid "productCardComponentButtonLabel"
+msgid "product.card.component.button.label"
 msgstr "Ajouter au panier"
 
-msgid "productCardComponentButtonType"
-msgstr "primary"
+#| msgid "productViewButtonLabel"
+msgid "product.view.button.label"
+msgstr "Ajouter au panier"
+
+#| msgid "productViewDescription"
+msgid "product.view.description"
+msgstr "Description :"
+
+#| msgid "productViewModalAdded"
+msgid "product.view.modal.added"
+msgstr "Votre produit a été enregistré"
+
+#| msgid "productViewQuantity1"
+msgid "product.view.quantity1"
+msgstr "1"
+
+#| msgid "productViewQuantity2"
+msgid "product.view.quantity2"
+msgstr "2"
+
+#| msgid "productViewQuantity3"
+msgid "product.view.quantity3"
+msgstr "3"
+
+#| msgid "productViewQuantity4"
+msgid "product.view.quantity4"
+msgstr "4"
+
+#| msgid "productViewQuantity5"
+msgid "product.view.quantity5"
+msgstr "5"
+
+#| msgid "productViewQuantity6"
+msgid "product.view.quantity6"
+msgstr "6"
 
 msgid "productViewButtonAdd"
 msgstr "mt-3"
 
-msgid "productViewButtonIcon"
-msgstr "cartplus"
-
-msgid "productViewButtonLabel"
-msgstr "Ajouter au panier"
-
-msgid "productViewButtonType"
-msgstr "primary"
-
-msgid "productViewDescription"
-msgstr "Description :"
-
-msgid "productViewModalAdded"
-msgstr "Votre produit a été enregistré"
-
-msgid "productViewQuantity1"
-msgstr "1"
-
-msgid "productViewQuantity2"
-msgstr "2"
-
-msgid "productViewQuantity3"
-msgstr "3"
-
-msgid "productViewQuantity4"
-msgstr "4"
-
-msgid "productViewQuantity5"
-msgstr "5"
-
-msgid "productViewQuantity6"
-msgstr "6"
-
-msgid "searchLeftBarCategoryLabelLasted"
-msgstr "Lasted"
-
-msgid "searchLeftBarCategoryLabelPertinent"
-msgstr "Pertinent"
-
-msgid "searchLeftBarCategoryLabelPrix"
-msgstr "Prix"
-
-msgid "searchLeftBarCategoryLabelTri"
-msgstr "Tri"
-
-msgid "searchLeftBarCategoryNameTri"
-msgstr "tri"
-
-msgid "searchLeftBarCategoryValueLasted"
-msgstr "lasted"
-
-msgid "searchLeftBarCategoryValuePertinent"
-msgstr "pertinent"
-
-msgid "searchLeftBarCategoryValuePrix"
-msgstr "prix"
-
-msgid "searchLeftBarCategoyBoisLabel"
+#| msgid "searchLeftBarCategoyBoisLabel"
+msgid "search.left.bar.category.bois.label"
 msgstr "Bois"
 
-msgid "searchLeftBarCategoyBoisValue"
+#| msgid "searchLeftBarCategoyBoisValue"
+msgid "search.left.bar.category.bois.value"
 msgstr "bois"
 
-msgid "searchLeftBarCategoyBrasserieLabel"
+#| msgid "searchLeftBarCategoyBrasserieLabel"
+msgid "search.left.bar.category.brasserie.label"
 msgstr "Brasserie"
 
-msgid "searchLeftBarCategoyBrasserieValue"
+#| msgid "searchLeftBarCategoyBrasserieValue"
+msgid "search.left.bar.category.brasserie.value"
 msgstr "brasserie"
 
-msgid "searchLeftBarCategoyLabel"
+#| msgid "searchLeftBarCategoyLabel"
+msgid "search.left.bar.category.label"
 msgstr "Catégorie"
 
-msgid "searchLeftBarCategoyName"
+#| msgid "searchLeftBarCategoryLabelLasted"
+msgid "search.left.bar.category.label.lasted"
+msgstr "Lasted"
+
+#| msgid "searchLeftBarCategoryLabelPertinent"
+msgid "search.left.bar.category.label.pertinent"
+msgstr "Pertinent"
+
+#| msgid "searchLeftBarCategoryLabelPrix"
+msgid "search.left.bar.category.label.prix"
+msgstr "Prix"
+
+#| msgid "searchLeftBarCategoryLabelTri"
+msgid "search.left.bar.category.label.tri"
+msgstr "Tri"
+
+#| msgid "searchLeftBarCategoyName"
+msgid "search.left.bar.category.name"
 msgstr "categorie"
 
-msgid "searchLeftBarCategoyPierreLabel"
+#| msgid "searchLeftBarCategoryNameTri"
+msgid "search.left.bar.category.name.tri"
+msgstr "tri"
+
+#| msgid "searchLeftBarCategoyPierreLabel"
+msgid "search.left.bar.category.pierre.label"
 msgstr "Pierre"
 
-msgid "searchLeftBarCategoyPierreValue"
+#| msgid "searchLeftBarCategoyPierreValue"
+msgid "search.left.bar.category.pierre.value"
 msgstr "pierre"
 
-msgid "searchLeftBarColorChevron"
-msgstr "white"
+#| msgid "searchLeftBarCategoryValueLasted"
+msgid "search.left.bar.category.value.lasted"
+msgstr "lasted"
 
-msgid "searchLeftBarIconChevron"
-msgstr "biChevronCompactRight"
+#| msgid "searchLeftBarCategoryValuePertinent"
+msgid "search.left.bar.category.value.pertinent"
+msgstr "pertinent"
 
-msgid "searchViewTitle"
+#| msgid "searchLeftBarCategoryValuePrix"
+msgid "search.left.bar.category.value.prix"
+msgstr "prix"
+
+#| msgid "searchViewTitle"
+msgid "search.view.title"
 msgstr "La boutique"
 
-#: WordpressMiddleware.php:46
-msgid "tout"
-msgstr "all"
-
-msgid "uiButtonClassList"
-msgstr "app-wrapper"
-
-msgid "uiButtonComponentDangerClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentDangerlabel"
+#| msgid "uiButtonComponentDangerlabel"
+msgid "ui.button.component.danger.label"
 msgstr "Danger..."
 
-msgid "uiButtonComponentDangerType"
-msgstr "danger"
-
-msgid "uiButtonComponentDarkClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentDarklabel"
+#| msgid "uiButtonComponentDarklabel"
+msgid "ui.button.component.dark.label"
 msgstr "Dark..."
 
-msgid "uiButtonComponentDarkType"
-msgstr "dark"
+#| msgid "uiButtonComponentInfolabel"
+msgid "ui.button.component.info.label"
+msgstr "Info..."
 
-msgid "uiButtonComponentGeoLatClassList"
-msgstr "mt-2"
+#| msgid "uiButtonComponentNormalLabel"
+msgid "ui.button.component.normal.label"
+msgstr "Normal..."
 
-msgid "uiButtonComponentgeoLatIcon"
-msgstr "geoLat"
+#| msgid "uiButtonComponentPrimaryLabel"
+msgid "ui.button.component.primary.label"
+msgstr "Primary.."
+
+#| msgid "uiButtonComponentSuccesslabel"
+msgid "ui.button.component.success.label"
+msgstr "Success..."
+
+#| msgid "uiButtonComponentWarninglabel"
+msgid "ui.button.component.warning.label"
+msgstr "Warning..."
+
+msgid "ui.button.secondary.label"
+msgstr "Secondary..."
+
+#| msgid "uiButtonTitle"
+msgid "ui.buttons.title"
+msgstr "Buttons"
+
+#| msgid "uiColorsDanger"
+msgid "ui.colors.danger"
+msgstr "Danger"
+
+#| msgid "uiColorsDark"
+msgid "ui.colors.dark"
+msgstr "Dark"
+
+#| msgid "uiColorsPrimary"
+msgid "ui.colors.primary"
+msgstr "Primary"
+
+#| msgid "uiColorsSecondary"
+msgid "ui.colors.secondary"
+msgstr "Secondary"
+
+#| msgid "uiColorsSuccess"
+msgid "ui.colors.success"
+msgstr "Success"
+
+#| msgid "uiColorsTitle"
+msgid "ui.colors.title"
+msgstr "Colors"
+
+#| msgid "uiColorsWarning"
+msgid "ui.colors.warning"
+msgstr "Warning"
+
+#| msgid "uiDevComponentRouteHome"
+msgid "ui.dev.component.route.home"
+msgstr "#home"
+
+#| msgid "uiDevComponentRoutePartner"
+msgid "ui.dev.component.route.partner"
+msgstr "#partner"
+
+#| msgid "uiDevComponentRouteProduit"
+msgid "ui.dev.component.route.produit"
+msgstr "#produit"
+
+#| msgid "uiDevComponentRouteSearch"
+msgid "ui.dev.component.route.search"
+msgstr "#search"
+
+#| msgid "uiFormButtonCancelLabel"
+msgid "ui.form.button.cancel.label"
+msgstr "Cancel"
+
+#| msgid "uiFormButtonSubmitLabel"
+msgid "ui.form.button.submit.label"
+msgstr "Submit"
+
+#| msgid "uiFormCheckboxlabel"
+msgid "ui.form.checkbox.label"
+msgstr "Check me out"
+
+#| msgid "uiFormHelper"
+msgid "ui.form.helper"
+msgstr "We'll never share your email with anyone else."
+
+#| msgid "uiFormlabel"
+msgid "ui.form.label"
+msgstr "Email Address"
+
+#| msgid "uiFormPasswordlabel"
+msgid "ui.form.password.label"
+msgstr "Password"
+
+#| msgid "uiFormSelectlabel"
+msgid "ui.form.select.label"
+msgstr "Check me out"
+
+#| msgid "uiFormTitle"
+msgid "ui.form.title"
+msgstr "Form"
+
+#| msgid "uiGradientsTitle"
+msgid "ui.gradients.title"
+msgstr "Gradients"
+
+#| msgid "uiIconIconName"
+msgid "ui.icon.icon.name"
+msgstr "IconName : "
+
+#| msgid "uiIconTitle"
+msgid "ui.icon.title"
+msgstr "Icons"
+
+#| msgid "uiListTitle"
+msgid "ui.list.title"
+msgstr "Liste des composants"
+
+#| msgid "uiTextAroundDanger"
+msgid "ui.text.around.danger"
+msgstr "bg-danger"
+
+#| msgid "uiTextAroundDark"
+msgid "ui.text.around.dark"
+msgstr "bg-dark"
+
+#| msgid "uiTextAroundInfo"
+msgid "ui.text.around.info"
+msgstr "bg-info"
+
+#| msgid "uiTextAroundPrimary"
+msgid "ui.text.around.primary"
+msgstr "bg-primary"
+
+#| msgid "uiTextAroundSecondary"
+msgid "ui.text.around.secondary"
+msgstr "bg-secondary"
+
+#| msgid "uiTextAroundSuccess"
+msgid "ui.text.around.success"
+msgstr "bg-success"
+
+#| msgid "uiTextAroundTitle"
+msgid "ui.text.around.title"
+msgstr "Text Around"
+
+#| msgid "uiTextAroundWarning"
+msgid "ui.text.around.warning"
+msgstr "bg-warning"
+
+#| msgid "uiTextFontSizeTitle"
+msgid "ui.text.font.size.title"
+msgstr "Font Size"
+
+#| msgid "uiTextFontSize1"
+msgid "ui.text.font.size1"
+msgstr "Size 1"
+
+#| msgid "uiTextFontSize2"
+msgid "ui.text.font.size2"
+msgstr "Size 2"
+
+#| msgid "uiTextFontSize3"
+msgid "ui.text.font.size3"
+msgstr "Size 3"
+
+#| msgid "uiTextFontSize4"
+msgid "ui.text.font.size4"
+msgstr "Size 4"
+
+#| msgid "uiTextFontSize5"
+msgid "ui.text.font.size5"
+msgstr "Size 5"
+
+#| msgid "uiTextFontSize6"
+msgid "ui.text.font.size6"
+msgstr "Size 6"
+
+#| msgid "uiTextFontWeightBold"
+msgid "ui.text.font.weight.bold"
+msgstr "Weight 1 - .fw-bold"
+
+#| msgid "uiTextFontWeightBolder"
+msgid "ui.text.font.weight.bolder"
+msgstr "Weight 2 - .fw-bolder"
+
+#| msgid "uiTextFontWeightItalic"
+msgid "ui.text.font.weight.italic"
+msgstr "Italic - .fst-italic"
+
+#| msgid "uiTextFontWeightNormal"
+msgid "ui.text.font.weight.normal"
+msgstr "Weight 3 - .fw-normal"
+
+#| msgid "uiTextTextBlack50"
+msgid "ui.text.text.black50"
+msgstr ".text-black-50"
+
+#| msgid "uiTextTextBody"
+msgid "ui.text.text.body"
+msgstr ".text-body"
+
+#| msgid "uiTextTextDanger"
+msgid "ui.text.text.danger"
+msgstr ".text-danger"
+
+#| msgid "uiTextTextDark"
+msgid "ui.text.text.dark"
+msgstr ".text-dark"
+
+#| msgid "uiTextTextFontTitle"
+msgid "ui.text.text.font.title"
+msgstr "Font Weight"
+
+#| msgid "uiTextTextInfo"
+msgid "ui.text.text.info"
+msgstr ".text-info"
+
+#| msgid "uiTextTextLight"
+msgid "ui.text.text.light"
+msgstr ".text-light"
+
+#| msgid "uiTextTextMuted"
+msgid "ui.text.text.muted"
+msgstr ".text-muted"
+
+#| msgid "uiTextTextPrimary"
+msgid "ui.text.text.primary"
+msgstr ".text-primary"
+
+#| msgid "uiTextTextSecondary"
+msgid "ui.text.text.secondary"
+msgstr ".text-secondary"
+
+#| msgid "uiTextTextSuccess"
+msgid "ui.text.text.success"
+msgstr ".text-success"
+
+#| msgid "uiTextTextWarning"
+msgid "ui.text.text.warning"
+msgstr ".text-warning"
+
+#| msgid "uiTextTextWhite"
+msgid "ui.text.text.white"
+msgstr ".text-white"
+
+#| msgid "uiTextTextWhite50"
+msgid "ui.text.text.white50"
+msgstr ".text-white-50"
+
+#| msgid "uiTextTitleColors"
+msgid "ui.text.title.colors"
+msgstr "Text Colors"
+
+#| msgid "uiTextTitleH1"
+msgid "ui.text.title.h1"
+msgstr "Title H1"
+
+#| msgid "uiTextTitleH2"
+msgid "ui.text.title.h2"
+msgstr "Title H2"
+
+#| msgid "uiTextTitleH3"
+msgid "ui.text.title.h3"
+msgstr "Title H3"
+
+#| msgid "uiTextTitleH4"
+msgid "ui.text.title.h4"
+msgstr "Title H4"
+
+#| msgid "uiTextTitleH5"
+msgid "ui.text.title.h5"
+msgstr "Title H5"
+
+#| msgid "uiTextTitleMain"
+msgid "ui.text.title.main"
+msgstr "Title"
+
+#| msgid "uiViewComponentProductsTitle"
+msgid "ui.view.component.products.title"
+msgstr "Produits"
+
+#| msgid "uiViewComponentTitle"
+msgid "ui.view.component.title"
+msgstr "Components"
 
 msgid "uiButtonComponentGeoLatType"
 msgstr "primary"
 
-msgid "uiButtonComponentInfoClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentInfolabel"
-msgstr "Info..."
-
-msgid "uiButtonComponentInfoType"
-msgstr "info"
-
-msgid "uiButtonComponentNormalClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentNormalIcon"
-msgstr "cartPlus"
-
-msgid "uiButtonComponentNormalLabel"
-msgstr "Normal..."
-
-msgid "uiButtonComponentPrimaryClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentPrimaryIcon"
-msgstr "geoLat"
-
-msgid "uiButtonComponentPrimaryLabel"
-msgstr "Primary.."
-
-msgid "uiButtonComponentPrimaryType"
-msgstr "primary"
-
-msgid "uiButtonComponentSecondaryClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentSecondarylabel"
-msgstr "Secondary..."
-
-msgid "uiButtonComponentSecondaryType"
-msgstr "secondary"
-
-msgid "uiButtonComponentSuccessClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentSuccesslabel"
-msgstr "Success..."
-
-msgid "uiButtonComponentSuccessType"
-msgstr "success"
-
-msgid "uiButtonComponentWarningClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentWarninglabel"
-msgstr "Warning..."
-
-msgid "uiButtonComponentWarningType"
-msgstr "warning"
-
-msgid "uiButtonTitle"
-msgstr "Buttons"
-
-msgid "uiColorsDanger"
-msgstr "Danger"
-
-msgid "uiColorsDark"
-msgstr "Dark"
-
-msgid "uiColorsPrimary"
-msgstr "Primary"
-
-msgid "uiColorsSecondary"
-msgstr "Secondary"
-
-msgid "uiColorsSuccess"
-msgstr "Success"
-
-msgid "uiColorsTitle"
-msgstr "Colors"
-
-msgid "uiColorsWarning"
-msgstr "Warning"
-
-msgid "uiDevComponentRouteHome"
-msgstr "#home"
-
-msgid "uiDevComponentRoutePartner"
-msgstr "#partner"
-
-msgid "uiDevComponentRouteProduit"
-msgstr "#produit"
-
-msgid "uiDevComponentRouteSearch"
-msgstr "#search"
-
-msgid "uiFormButtonCancelLabel"
-msgstr "Cancel"
-
-msgid "uiFormButtonCancelType"
-msgstr "dark"
-
-msgid "uiFormButtonSubmitLabel"
-msgstr "Submit"
-
-msgid "uiFormButtonSubmitType"
-msgstr "primary"
-
-msgid "uiFormCheckboxlabel"
-msgstr "Check me out"
-
-msgid "uiFormHelper"
-msgstr "We'll never share your email with anyone else."
-
-msgid "uiFormlabel"
-msgstr "Email Address"
-
-msgid "uiFormPasswordlabel"
-msgstr "Password"
-
-msgid "uiFormpasswordType"
-msgstr "password"
-
-msgid "uiFormSelectlabel"
-msgstr "Check me out"
-
-msgid "uiFormTitle"
-msgstr "Form"
-
-msgid "uiFormType"
-msgstr "email"
-
-msgid "uiGradientsTitle"
-msgstr "Gradients"
-
-msgid "uiIconIconName"
-msgstr "IconName : "
-
-msgid "uiIconTitle"
-msgstr "Icons"
-
-msgid "uiListTitle"
-msgstr "Liste des composants"
-
-msgid "uiProductsClasslist"
-msgstr "no-background"
-
 msgid "uiTextAroundClassList"
 msgstr "app-wrapper"
-
-msgid "uiTextAroundDanger"
-msgstr "bg-danger"
-
-msgid "uiTextAroundDark"
-msgstr "bg-dark"
-
-msgid "uiTextAroundInfo"
-msgstr "bg-info"
-
-msgid "uiTextAroundPrimary"
-msgstr "bg-primary"
-
-msgid "uiTextAroundSecondary"
-msgstr "bg-secondary"
-
-msgid "uiTextAroundSuccess"
-msgstr "bg-success"
-
-msgid "uiTextAroundTitle"
-msgstr "Text Around"
-
-msgid "uiTextAroundWarning"
-msgstr "bg-warning"
-
-msgid "uiTextFontSize1"
-msgstr "Size 1"
-
-msgid "uiTextFontSize2"
-msgstr "Size 2"
-
-msgid "uiTextFontSize3"
-msgstr "Size 3"
-
-msgid "uiTextFontSize4"
-msgstr "Size 4"
-
-msgid "uiTextFontSize5"
-msgstr "Size 5"
-
-msgid "uiTextFontSize6"
-msgstr "Size 6"
-
-msgid "uiTextFontSizeTitle"
-msgstr "Font Size"
-
-msgid "uiTextFontWeightBold"
-msgstr "Weight 1 - .fw-bold"
-
-msgid "uiTextFontWeightBolder"
-msgstr "Weight 2 - .fw-bolder"
-
-msgid "uiTextFontWeightItalic"
-msgstr "Italic - .fst-italic"
-
-msgid "uiTextFontWeightNormal"
-msgstr "Weight 3 - .fw-normal"
-
-msgid "uiTextTextBlack50"
-msgstr ".text-black-50"
-
-msgid "uiTextTextBody"
-msgstr ".text-body"
-
-msgid "uiTextTextDanger"
-msgstr ".text-danger"
-
-msgid "uiTextTextDark"
-msgstr ".text-dark"
-
-msgid "uiTextTextFontTitle"
-msgstr "Font Weight"
-
-msgid "uiTextTextInfo"
-msgstr ".text-info"
-
-msgid "uiTextTextLight"
-msgstr ".text-light"
-
-msgid "uiTextTextMuted"
-msgstr ".text-muted"
-
-msgid "uiTextTextPrimary"
-msgstr ".text-primary"
-
-msgid "uiTextTextSecondary"
-msgstr ".text-secondary"
-
-msgid "uiTextTextSuccess"
-msgstr ".text-success"
-
-msgid "uiTextTextWarning"
-msgstr ".text-warning"
-
-msgid "uiTextTextWhite"
-msgstr ".text-white"
-
-msgid "uiTextTextWhite50"
-msgstr ".text-white-50"
-
-msgid "uiTextTitleColors"
-msgstr "Text Colors"
-
-msgid "uiTextTitleH1"
-msgstr "Title H1"
-
-msgid "uiTextTitleH2"
-msgstr "Title H2"
-
-msgid "uiTextTitleH3"
-msgstr "Title H3"
-
-msgid "uiTextTitleH4"
-msgstr "Title H4"
-
-msgid "uiTextTitleH5"
-msgstr "Title H5"
-
-msgid "uiTextTitleMain"
-msgstr "Title"
-
-msgid "uiViewComponentProductsTitle"
-msgstr "Produits"
-
-msgid "uiViewComponentTitle"
-msgstr "Components"
-
-#: WordpressMiddleware.php:45
-msgid "world"
-msgstr "Monde"

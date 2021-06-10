@@ -74,7 +74,7 @@ export default class HeaderMobileComponent extends AppComponent {
                                 fw-bolder
                                 text-primary "
                                href="/" title="Home"
-                               rel="home"><div class="text-right">${this.trans("headerComponentZartizana")}</div></a>
+                               rel="home"><div class="text-right">${this.trans("header.component.zartizana")}</div></a>
                         </span>
 
 
@@ -91,12 +91,12 @@ export default class HeaderMobileComponent extends AppComponent {
                                     <div class="row mt-4">
                                         <div class="col-1">${this.createElement(IconComponent, {
                                             color: Color.PRIMARY,
-                                            icon: this.trans("headerComponentSearchIcon"), height: '20px',
+                                            icon: 'search', height: '20px',
                                             width: '20px'
                                         })}
                                         </div>
 
-                                        <div class="col-1 text-body fw-bolder">Rechercher
+                                        <div class="col-1 text-body fw-bolder">${this.trans("header.component.div.search")}
                                         </div>
                                         <div class="w-auto">
                                         </div>
@@ -113,7 +113,7 @@ export default class HeaderMobileComponent extends AppComponent {
                                         })}
                                         </div>
 
-                                        <div class="col-10 text-body fw-bolder">Devenir partenaire</div>
+                                        <div class="col-10 text-body fw-bolder">${this.trans("header.component.div.become.partner")}</div>
                                     </div>
                                 </a>
                                 <div class="w-auto">
@@ -137,7 +137,7 @@ export default class HeaderMobileComponent extends AppComponent {
                                         })}
                                         </div>
 
-                                        <div class="col-8 text-body fw-bolder">Catégories</div>
+                                        <div class="col-8 text-body fw-bolder">${this.trans("header.component.div.categories")}</div>
                                     </div>
                                 </a>
 
@@ -161,7 +161,7 @@ export default class HeaderMobileComponent extends AppComponent {
                                     })}
                                     </div>
 
-                                    <div class="col-10 text-body fw-bolder">Liste de souhaits</div>
+                                    <div class="col-10 text-body fw-bolder">${this.trans("header.component.div.wishes")}</div>
                                 </div>
 
                             </a>
@@ -187,13 +187,13 @@ export default class HeaderMobileComponent extends AppComponent {
                                         <div class="col-7 ">
 
                                             <a href="/mon-compte">
-                                                <div class="text-body fw-bolder">Mon compte</div>
+                                                <div class="text-body fw-bolder">${this.trans("header.component.div.account")}</div>
                                             </a>
                                             <a href="/mon-compte">
-                                                <div class="text-body">Se connecter</div>
+                                                <div class="text-body">${this.trans("header.component.div.login")}</div>
                                             </a>
                                             <a href="/mon-compte">
-                                                <div class="text-body">S'inscrire</div>
+                                                <div class="text-body">${this.trans("header.component.div.register")}</div>
                                             </a>
                                         </div>
                                     </div>
@@ -201,10 +201,10 @@ export default class HeaderMobileComponent extends AppComponent {
                             </li>
                             <hr>
                             <li><a href="#">
-                                <div class="text-body">L'association Zartizana</div>
+                                <div class="text-body">${this.trans("header.component.div.info.association")}</div>
                             </a></li>
                             <li><a href="#">
-                                <div class="text-body">Nos artisans</div>
+                                <div class="text-body">${this.trans("header.component.div.our.partners")}</div>
                             </a></li>
                     </div>
                     </ul>

@@ -21,45 +21,45 @@ export default class SearchLeftBarComponent extends AppComponent {
 
     private categorySearchList: CategorySearch[] = [
         {
-            categoryLabel:this.trans("searchLeftBarCategoyLabel"),
-            categoryName: this.trans("searchLeftBarCategoyName"),
+            categoryLabel:this.trans("search.left.bar.category.label"),
+            categoryName: this.trans("search.left.bar.category.name"),
             itemsSearch: [
                 {
-                    label: this.trans("searchLeftBarCategoyBrasserieLabel"),
+                    label: this.trans("search.left.bar.category.brasserie.label"),
                     selected: true,
-                    value: this.trans("searchLeftBarCategoyBrasserieValue"),
+                    value: this.trans("search.left.bar.category.brasserie.value"),
                 },
                 {
-                    label: this.trans("searchLeftBarCategoyBoisLabel"),
+                    label: this.trans("search.left.bar.category.bois.label"),
                     selected: false,
-                    value: this.trans("searchLeftBarCategoyBoisValue"),
+                    value: this.trans("search.left.bar.category.bois.value"),
 
                 },
                 {
-                    label: this.trans("searchLeftBarCategoyPierreLabel"),
+                    label: this.trans("search.left.bar.category.pierre.label"),
                     selected: true,
-                    value: this.trans("searchLeftBarCategoyPierreValue"),
+                    value: this.trans("search.left.bar.category.pierre.value"),
                 }
             ]
         },
         {
-            categoryLabel: this.trans("searchLeftBarCategoryLabelTri"),
-            categoryName: this.trans("searchLeftBarCategoryNameTri"),
+            categoryLabel: this.trans("search.left.bar.category.label.tri"),
+            categoryName: this.trans("search.left.bar.category.name.tri"),
             itemsSearch: [
                 {
-                    label: this.trans("searchLeftBarCategoryLabelPertinent"),
+                    label: this.trans("search.left.bar.category.label.pertinent"),
                     selected: true,
-                    value: this.trans("searchLeftBarCategoryValuePertinent")
+                    value: this.trans("search.left.bar.category.value.pertinent")
                 },
                 {
-                    label: this.trans("searchLeftBarCategoryLabelPrix"),
+                    label: this.trans("search.left.bar.category.label.prix"),
                     selected: false,
-                    value: this.trans("searchLeftBarCategoryValuePrix")
+                    value: this.trans("search.left.bar.category.value.prix")
                 },
                 {
-                    label:  this.trans("searchLeftBarCategoryLabelLasted"),
+                    label:  this.trans("search.left.bar.category.label.lasted"),
                     selected: false,
-                    value: this.trans("searchLeftBarCategoryValuelasted")
+                    value: this.trans("search.left.bar.category.value.lasted")
                 }
             ]
         }
@@ -109,7 +109,7 @@ export default class SearchLeftBarComponent extends AppComponent {
                 d-flex
                 justify-content-between">
                 <span class="text-white fw-bold fs-5">${categorySearch.categoryLabel}</span>
-                ${this.createElement(IconComponent, {color: this.trans("searchLeftBarColorChevron"), icon:  this.trans("searchLeftBarIconChevron")})}
+                ${this.createElement(IconComponent, {color: 'white', icon: 'biChevronCompactRight'})}
             </div>
             <div class="p-2">
                 ${categorySearch.itemsSearch.map(itemSearch => {

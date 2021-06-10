@@ -4,6 +4,7 @@ import image1 from "Media/home/other_direction1.jpg";
 import image2 from "Media/home/other_direction2.jpg";
 import image3 from "Media/home/other_direction3.jpg";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 
 export default class HomeOtherDirectionComponent extends AppComponent {
@@ -19,14 +20,14 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                     <div class="with-background col-md-4" style="background-image: url('${image2}')"></div>
                     <div class="without-background col-md-4">
                         <div class="h-50"><h4 class="fw-normal text-dark">
-                            ${this.trans("homeOtherDirectionMainTitle")}</h4></div>
+                            ${this.trans("home.other.direction.main.title")}</h4></div>
                         <div class="h-50">
-                            <span>${this.trans("homeOtherDirectionPresentation")}</span>
+                            <span>${this.trans("home.other.direction.presentation")}</span>
                             ${this.createElement(ButtonComponent,
                                     {
-                                        link: this.trans("homeOtherDirectionPresentationLink"),
-                                        label: this.trans("homeOtherDirectionPresentationLabel"),
-                                        type: this.trans("homeOtherDirectionPresentationType")
+                                        link: '/page',
+                                        label: this.trans("home.other.direction.presentation.label"),
+                                        type: Color.PRIMARY
                                     }
                             )}
                         </div>
@@ -34,14 +35,14 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                     <div class="with-background col-md-4" style="background-image: url('${image3}')"></div>
                     <div class="without-background col-md-4">
                         <div class="h-50"><h4 class="fw-normal text-dark">
-                            ${this.trans("homeOtherDirectionArtisan")}</h4></div>
+                            ${this.trans("home.other.direction.artisan")}</h4></div>
                         <div class="h-50">
-                            <span>${this.trans("homeOtherDirectionBecomePartner")}</span>
+                            <span>${this.trans("home.other.direction.become.partner")}</span>
                             ${this.createElement(ButtonComponent,
                                     {
-                                        link: this.trans("homeOtherDirectionBecomePartnerLink"),
-                                        label: this.trans("homeOtherDirectionBecomePartnerLabel"),
-                                        type: this.trans("homeOtherDirectionBecomePartnerType")
+                                        link: '/page',
+                                        label: this.trans("home.other.direction.become.partner.label"),
+                                        type:Color.PRIMARY
 
                                     }
                             )}
@@ -50,13 +51,13 @@ export default class HomeOtherDirectionComponent extends AppComponent {
                     <div class="with-background col-md-4" style="background-image: url('${image1}')"></div>
                     <div class="without-background col-md-4">
                         <div class="h-50"><h4 id="title-3" class="fw-normal text-dark">
-                            ${this.trans("homeOtherDirectionDiscover")}</h4></div>
+                            ${this.trans("home.other.direction.discover")}</h4></div>
                         <div class="h-50">
                             ${this.createElement(ButtonComponent,
                                     {
-                                        link: this.trans("homeOtherDirectionDiscoverLink"),
-                                        label: this.trans("homeOtherDirectionDiscoverLabel"),
-                                        type: this.trans("homeOtherDirectionDiscoverType")
+                                        link:'/page',
+                                        label: this.trans("home.other.direction.discover.label"),
+                                        type: Color.PRIMARY
 
                                     }
                             )}

@@ -5,6 +5,7 @@ import InputCheckboxComponent from "App/modules/shared/components/form/input.che
 import InputSelectComponent from "App/modules/shared/components/form/input.select.component";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import {html, TemplateResult} from "lit-element";
+import {Color} from "App/enum/color.enum";
 
 export default class UiFormComponent extends AppComponent {
     public static getComponentName(): string {
@@ -14,26 +15,26 @@ export default class UiFormComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
                 ${this.createElement(WrapperComponent, {
-                title: this.trans("uiFormTitle"),
+                title: this.trans("ui.form.title"),
                 body: html`
                     <form>
                         ${this.createElement(InputBaseComponent, {
-                            type: this.trans("uiFormType"),
-                            label: this.trans("uiFormlabel"),
-                            helper: this.trans("uiFormHelper")
+                            type: 'email',
+                            label: this.trans("ui.form.label"),
+                            helper: this.trans("ui.form.helper")
                         })}
                         <br>
-                        ${this.createElement(InputBaseComponent, {type: this.trans("uiFormpasswordType"),
-                            label: this.trans("uiFormPasswordlabel")})}
+                        ${this.createElement(InputBaseComponent, {type: 'password',
+                            label: this.trans("ui.form.password.label")})}
                         <br>
-                        ${this.createElement(InputCheckboxComponent, {label:this.trans("uiFormCheckboxlabel")})}
+                        ${this.createElement(InputCheckboxComponent, {label:this.trans("ui.form.checkbox.label")})}
                         <br>
-                        ${this.createElement(InputSelectComponent, {label: this.trans("uiFormSelectlabel")})}
+                        ${this.createElement(InputSelectComponent, {label: this.trans("ui.form.select.label")})}
                         <br>
-                        ${this.createElement(ButtonComponent, {type:this.trans("uiFormButtonSubmitType"),
-                            label: this.trans("uiFormButtonSubmitLabel")})}
-                        ${this.createElement(ButtonComponent, {type:this.trans("uiFormButtonCancelType"),
-                            label: this.trans("uiFormButtonCancelLabel")})}
+                        ${this.createElement(ButtonComponent, {type:Color.PRIMARY,
+                            label: this.trans("ui.form.button.submit.label")})}
+                        ${this.createElement(ButtonComponent, {type:Color.DARK,
+                            label: this.trans("ui.form.button.cancel.label")})}
                     </form>
                 `
             })

@@ -32,14 +32,14 @@ export default class UiColorsComponent extends AppComponent {
                 <div class="col-4">
                     ${this.createElement(WrapperComponent,
                         {
-                            title: this.trans('uiColorsTitle'),
+                            title: this.trans('ui.colors.title'),
                             body: html`
-                                <span class="app-color bg-primary">${this.trans('uiColorsPrimary')}</span>
-                                <span class="app-color bg-secondary">${this.trans('uiColorsSecondary')}</span>
-                                <span class="app-color bg-success">${this.trans('uiColorsSuccess')}</span>
-                                <span class="app-color bg-warning">${this.trans('uiColorsWarning')}</span>
-                                <span class="app-color bg-danger">${this.trans('uiColorsDanger')}</span>
-                                <span class="app-color bg-dark">${this.trans('uiColorsDark')}</span>
+                                <span class="app-color bg-primary">${this.trans('ui.colors.primary')}</span>
+                                <span class="app-color bg-secondary">${this.trans('ui.colors.secondary')}</span>
+                                <span class="app-color bg-success">${this.trans('ui.colors.success')}</span>
+                                <span class="app-color bg-warning">${this.trans('ui.colors.warning')}</span>
+                                <span class="app-color bg-danger">${this.trans('ui.colors.danger')}</span>
+                                <span class="app-color bg-dark">${this.trans('ui.colors.dark')}</span>
                             `
                         })
                     }
@@ -47,14 +47,14 @@ export default class UiColorsComponent extends AppComponent {
                 <div class="col-4">
                     ${this.createElement(WrapperComponent,
                         {
-                            title: this.trans('uiGradientsTitle'),
+                            title: this.trans('ui.gradients.title'),
                             body: html`
-                                <span class="app-gradient gradient-primary">${this.trans('uiColorsPrimary')}</span>
-                                <span class="app-gradient gradient-secondary">${this.trans('uiColorsSecondary')}</span>
-                                <span class="app-gradient gradient-success">${this.trans('uiColorsSuccess')}</span>
-                                <span class="app-gradient gradient-warning">${this.trans('uiColorsWarning')}</span>
-                                <span class="app-gradient gradient-danger">${this.trans('uiColorsDanger')}</span>
-                                <span class="app-gradient gradient-dark">${this.trans('uiColorsDark')}</span>
+                                <span class="app-gradient gradient-primary">${this.trans('ui.colors.primary')}</span>
+                                <span class="app-gradient gradient-secondary">${this.trans('ui.colors.secondary')}</span>
+                                <span class="app-gradient gradient-success">${this.trans('ui.colors.success')}</span>
+                                <span class="app-gradient gradient-warning">${this.trans('ui.colors.warning')}</span>
+                                <span class="app-gradient gradient-danger">${this.trans('ui.colors.danger')}</span>
+                                <span class="app-gradient gradient-dark">${this.trans('ui.colors.dark')}</span>
                             `
                         })
                     }

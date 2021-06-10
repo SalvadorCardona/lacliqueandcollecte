@@ -33,6 +33,7 @@ class MiddlewareConfigurationFactory
                 ]
             )
         );
+
         return (new MiddlewareConfiguration())
             ->setWpApiKey($this->wordpressMiddleware->wpCreateNonce('wp_rest'))
             ->setUser($this->wpUserFormatter->format($this->wordpressMiddleware->wpGetCurrentUser()))

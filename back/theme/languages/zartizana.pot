@@ -16,936 +16,509 @@ msgstr ""
 "X-Poedit-SearchPath-0: WordpressMiddleware.php\n"
 
 #: WordpressMiddleware.php:43
-msgid "Bonjour"
-msgstr ""
-
-#: WordpressMiddleware.php:44
-msgid "Hello"
-msgstr ""
-
-#: WordpressMiddleware.php:45
-msgid "world"
-msgstr ""
-
-#: WordpressMiddleware.php:46
-msgid "tout"
-msgstr ""
-
-msgid "homeOtherDirectionMainTitle"
-msgstr ""
-
-msgid "homeOtherDirectionPresentation"
-msgstr ""
-
-msgid "homeOtherDirectionArtisan"
-msgstr ""
-
-msgid "homeOtherDirectionDiscover"
-msgstr ""
-
-msgid "homeOtherDirectionBecomePartner"
-msgstr ""
-
-msgid "homeHeaderSupportTitle"
-msgstr ""
-
-msgid "homeHeaderCatalog"
-msgstr ""
-
-msgid "homeHeaderSpeciality"
-msgstr ""
-
-msgid "homeHeaderCity"
-msgstr ""
-
-msgid "homePartnerListTitle"
-msgstr ""
-
-msgid "homeProductListTitle"
-msgstr ""
-
-msgid "uiColorsPrimary"
-msgstr ""
-
-msgid "uiColorsSecondary"
-msgstr ""
-
-msgid "uiColorsSuccess"
-msgstr ""
-
-msgid "uiColorsWarning"
-msgstr ""
-
-msgid "uiColorsDanger"
-msgstr ""
-
-msgid "uiColorsDark"
-msgstr ""
-
-msgid "uiIconIconName"
-msgstr ""
-
-msgid "uiTextAroundPrimary"
-msgstr ""
-
-msgid "uiTextAroundSecondary"
-msgstr ""
-
-msgid "uiTextAroundSuccess"
-msgstr ""
-
-msgid "uiTextAroundDanger"
-msgstr ""
-
-msgid "uiTextAroundWarning"
-msgstr ""
-
-msgid "uiTextAroundInfo"
-msgstr ""
-
-msgid "uiTextAroundDark"
-msgstr ""
-
-msgid "uiTextTitleH1"
-msgstr ""
-
-msgid "uiTextTitleH2"
-msgstr ""
-
-msgid "uiTextTitleH3"
-msgstr ""
-
-msgid "uiTextTitleH4"
-msgstr ""
-
-msgid "uiTextTitleH5"
-msgstr ""
-
-msgid "uiViewComponentTitle"
-msgstr ""
-
-msgid "uiViewComponentProductsTitle"
-msgstr ""
-
-msgid "devMenuComponents"
-msgstr ""
-
-msgid "devMenuHomepage"
-msgstr ""
-
-msgid "devMenuPartners"
-msgstr ""
-
-msgid "devMenuProducts"
-msgstr ""
-
-msgid "devMenuSearch"
-msgstr ""
-
-msgid "devMenuTitle"
-msgstr ""
-
-msgid "partnerHeaderCity"
-msgstr ""
-
-msgid "partnerViewPartnerName"
-msgstr ""
-
-msgid "productViewDescription"
-msgstr ""
-
-msgid "searchViewTitle"
-msgstr ""
-
-msgid "footerFollow"
-msgstr ""
-
-msgid "footerSalesTerms"
-msgstr ""
-
-msgid "footerBecomePartner"
-msgstr ""
-
-msgid "footerAsso"
-msgstr ""
-
-msgid "footerPartners"
-msgstr ""
-
-msgid "footerProducts"
-msgstr ""
-
-msgid "footerRight"
-msgstr ""
-
-msgid "footerCopyright"
-msgstr ""
-
-msgid "modalProductAdded"
-msgstr ""
-
-msgid "modalCartEmpty"
-msgstr ""
-
-msgid "homeArgumentiveTitleArg1"
-msgstr ""
-
-msgid "homeArgumentiveContentArg1"
-msgstr ""
-
-msgid "homeArgumentiveLinkArg1"
-msgstr ""
-
-msgid "homeArgumentiveTextLinkArg1"
-msgstr ""
-
-msgid "homeArgumentiveTitleArg2"
-msgstr ""
-
-msgid "homeArgumentiveContentArg2"
-msgstr ""
-
-msgid "homeArgumentiveLinkArg2"
-msgstr ""
-
-msgid "homeArgumentiveTextLinkArg2"
-msgstr ""
-
-msgid "homeArgumentiveTitleArg3"
-msgstr ""
-
-msgid "homeArgumentiveContentArg3"
-msgstr ""
-
-msgid "homeArgumentiveLinkArg3"
-msgstr ""
-
-msgid "homeArgumentiveTextLinkArg3"
-msgstr ""
-
-msgid "homeHeaderSearchSpecialityPlaceHolder"
-msgstr ""
 
-msgid "homeHeaderSearchCityPlaceHolder"
-msgstr ""
-
-msgid "homeOtherDirectionPresentationLink"
-msgstr ""
-
-msgid "homeOtherDirectionPresentationLabel"
-msgstr ""
-
-msgid "homeOtherDirectionPresentationType"
-msgstr ""
-
-msgid "homeOtherDirectionBecomePartnerLabel"
-msgstr ""
-
-msgid "homeOtherDirectionBecomePartnerType"
-msgstr ""
-
-msgid "homeOtherDirectionBecomePartnerLink"
-msgstr ""
-
-msgid "homeOtherDirectionDiscoverLink"
-msgstr ""
-
-msgid "homeOtherDirectionDiscoverLabel"
-msgstr ""
-
-msgid "homeOtherDirectionDiscoverType"
-msgstr ""
-
-msgid "partnerHeaderSocialFBClasslist"
-msgstr "md-2"
-
-msgid "partnerHeaderSocialIGClasslist"
-msgstr ""
-
-
-msgid "partnerHeaderSocialTwitterClasslist"
-msgstr ""
-
-msgid "homeHeaderSearchIcon"
-msgstr ""
-
-msgid "partnerHeaderSocialTwitterIcon"
-msgstr ""
-
-msgid "partnerHeaderSocialFacebookIcon"
-msgstr ""
-
-msgid "partnerHeaderSocialInstagramIcon"
-msgstr ""
-
-msgid "partnerViewPresentationContactInformation"
-msgstr ""
-
-msgid "partnerViewPresentationPartner"
-msgstr ""
-
-msgid "partnerViewPresentationIconColorTel"
-msgstr ""
-
-msgid "partnerViewPresentationIconColorFacebook"
-msgstr ""
-
-msgid "partnerViewPresentationIconColorTwitter"
-msgstr ""
-
-msgid "partnerViewPresentationIconColorInstagram"
-msgstr ""
-
-msgid "partnerViewPresentationIconColorGeolat"
-msgstr ""
-
-msgid "partnerViewPresentationContactButtonType"
-msgstr ""
-
-msgid "partnerViewPresentationContactButtonLabel"
-msgstr ""
-
-msgid "partnerViewPresentationContactButtonIcon"
-msgstr ""
-
-msgid "productViewModalAdded"
-msgstr ""
-
-msgid "productViewQuantity1"
-msgstr ""
-
-msgid "productViewQuantity2"
-msgstr ""
-
-msgid "productViewQuantity3"
-msgstr ""
-
-msgid "productViewQuantity4"
-msgstr ""
-
-msgid "productViewQuantity5"
-msgstr ""
-
-msgid "productViewQuantity6"
-msgstr ""
-
-msgid "productViewButtonAdd"
-msgstr ""
 
-msgid "productViewButtonType"
+msgid "home.other.direction.main.title"
 msgstr ""
 
-msgid "productViewButtonIcon"
+msgid "home.other.direction.presentation"
 msgstr ""
 
-msgid "productViewButtonLabel"
+msgid "home.other.direction.artisan"
 msgstr ""
 
-msgid "searchLeftBarCategoyLabel"
+msgid "home.other.direction.discover"
 msgstr ""
 
-msgid "searchLeftBarCategoyName"
+msgid "home.other.direction.become.partner"
 msgstr ""
 
-msgid "searchLeftBarCategoyBrasserieLabel"
+msgid "home.header.catalogue"
 msgstr ""
 
-msgid "searchLeftBarCategoyBrasserieValue"
+msgid "home.header.speciality"
 msgstr ""
 
-msgid "searchLeftBarCategoyBoisLabel"
+msgid "home.header.city"
 msgstr ""
 
-msgid "searchLeftBarCategoyBoisValue"
+msgid "home.partner.list.title"
 msgstr ""
 
-msgid "searchLeftBarCategoyPierreLabel"
+msgid "home.product.list.title"
 msgstr ""
 
-msgid "searchLeftBarCategoyPierreValue"
+msgid "ui.colors.primary"
 msgstr ""
 
-msgid "searchLeftBarCategoryLabelTri"
+msgid "ui.colors.secondary"
 msgstr ""
 
-msgid "searchLeftBarCategoryNameTri"
+msgid "ui.colors.success"
 msgstr ""
 
-msgid "searchLeftBarCategoryLabelPertinent"
+msgid "ui.colors.warning"
 msgstr ""
 
-msgid "searchLeftBarCategoryValuePertinent"
+msgid "ui.colors.danger"
 msgstr ""
 
-msgid "searchLeftBarCategoryLabelPrix"
+msgid "ui.colors.dark"
 msgstr ""
 
-msgid "searchLeftBarCategoryLabelLasted"
+msgid "ui.icon.icon.name"
 msgstr ""
 
-msgid "searchLeftBarCategoryValueLasted"
+msgid "ui.text.around.primary"
 msgstr ""
 
-msgid "searchLeftBarCategoryValuePrix"
+msgid "ui.text.around.secondary"
 msgstr ""
 
-msgid "searchLeftBarColorChevron"
+msgid "ui.text.around.success"
 msgstr ""
 
-msgid "uiButtonComponentNormalIcon"
+msgid "ui.text.around.danger"
 msgstr ""
 
-msgid "searchLeftBarIconChevron"
+msgid "ui.text.around.warning"
 msgstr ""
 
-msgid "uiButtonTitle"
+msgid "ui.text.around.info"
 msgstr ""
 
-msgid "uiButtonClassList"
+msgid "ui.text.around.dark"
 msgstr ""
 
-msgid "uiButtonComponentNormalClassList"
+msgid "ui.text.title.h1"
 msgstr ""
 
-msgid "uiButtonComponentNormalLabel"
+msgid "ui.text.title.h2"
 msgstr ""
 
-msgid "uiButtonComponentPrimaryClassList"
+msgid "ui.text.title.h3"
 msgstr ""
 
-msgid "uiButtonComponentPrimaryIcon"
+msgid "ui.text.title.h4"
 msgstr ""
 
-msgid "uiButtonComponentPrimaryLabel"
-msgstr "."
-
-msgid "uiButtonComponentPrimaryType"
-msgstr ""
-
-msgid "uiButtonComponentGeoLatType"
-msgstr ""
-
-msgid "uiButtonComponentgeoLatIcon"
-msgstr "geoLat"
-
-msgid "uiButtonComponentGeoLatClassList"
-msgstr ""
-
-msgid "uiButtonComponentSecondaryType"
-msgstr "secondary"
-
-msgid "uiButtonComponentSecondarylabel"
-msgstr ""
-
-msgid "uiButtonComponentSecondaryClassList"
-msgstr "mt-2"
-
-msgid "uiButtonComponentSuccessClassList"
-msgstr ""
-
-msgid "uiButtonComponentSuccesslabel"
-msgstr ""
-
-msgid "uiButtonComponentSuccessType"
-msgstr ""
-
-msgid "uiButtonComponentDangerType"
-msgstr ""
-
-msgid "uiButtonComponentDangerlabel"
-msgstr ""
-
-msgid "uiButtonComponentDangerClassList"
-msgstr ""
-
-msgid "uiButtonComponentWarningType"
-msgstr ""
-
-msgid "uiButtonComponentWarninglabel"
-msgstr ""
-
-msgid "uiButtonComponentWarningClassList"
-msgstr ""
-
-msgid "uiButtonComponentInfoType"
-msgstr ""
-
-msgid "uiButtonComponentInfolabel"
-msgstr ""
-
-msgid "uiButtonComponentInfoClassList"
+msgid "ui.text.title.h5"
 msgstr ""
 
-msgid "uiButtonComponentDarkClassList"
+msgid "ui.view.component.title"
 msgstr ""
 
-msgid "uiButtonComponentDarklabel"
+msgid "ui.view.component.products.title"
 msgstr ""
 
-msgid "uiButtonComponentDarkType"
+msgid "dev.menu.components"
 msgstr ""
 
-msgid "uiColorsTitle"
+msgid "dev.menu.home.page"
 msgstr ""
 
-msgid "uiGradientsTitle"
+msgid "dev.menu.partners"
 msgstr ""
 
-msgid "uiFormTitle"
+msgid "dev.menu.products"
 msgstr ""
 
-msgid "uiFormType"
+msgid "dev.menu.search"
 msgstr ""
 
-msgid "uiFormlabel"
+msgid "dev.menu.title"
 msgstr ""
 
-msgid "uiFormHelper"
+msgid "partner.header.city"
 msgstr ""
 
-msgid "uiFormpasswordType"
+msgid "partner.view.partner.name"
 msgstr ""
 
-msgid "uiFormPasswordlabel"
+msgid "product.view.description"
 msgstr ""
 
-msgid "uiFormCheckboxlabel"
+msgid "search.view.title"
 msgstr ""
 
-msgid "uiFormSelectlabel"
-msgstr "Check me out"
-
-msgid "uiFormButtonSubmitLabel"
-msgstr ""
-
-msgid "uiFormButtonSubmitType"
-msgstr ""
-
-msgid "uiFormButtonCancelLabel"
-msgstr ""
-
-msgid "uiFormButtonCancelType"
-msgstr ""
-
-msgid "uiIconTitle"
-msgstr ""
-
-msgid "uiListTitle"
-msgstr ""
-
-msgid "uiProductsClasslist"
-msgstr ""
-
-msgid "uiTextAroundTitle"
-msgstr ""
-
-msgid "uiTextAroundClassList"
+msgid "footer.follow"
 msgstr ""
 
-msgid "uiTextTitleMain"
+msgid "footer.sales.terms"
 msgstr ""
 
-msgid "uiTextTitleColors"
+msgid "footer.become.partner"
 msgstr ""
 
-msgid "uiTextTextPrimary"
+msgid "footer.asso"
 msgstr ""
 
-msgid "uiTextTextSecondary"
+msgid "footer.partners"
 msgstr ""
 
-msgid "uiTextTextSuccess"
+msgid "footer.products"
 msgstr ""
 
-msgid "uiTextTextDanger"
+msgid "footer.rights"
 msgstr ""
 
-msgid "uiTextTextWarning"
+msgid "footer.copyright"
 msgstr ""
 
-msgid "uiTextTextInfo"
+msgid "modal.product.added"
 msgstr ""
 
-msgid "uiTextTextLight"
+msgid "modal.cart.empty"
 msgstr ""
 
-msgid "uiTextTextDark"
+msgid "home.argumentative.title.arg1"
 msgstr ""
 
-msgid "uiTextTextBody"
+msgid "home.argumentative.content.arg1"
 msgstr ""
 
-msgid "uiTextTextMuted"
+msgid "home.argumentative.text.link.arg1"
 msgstr ""
 
-msgid "uiTextTextWhite"
+msgid "home.argumentative.title.arg2"
 msgstr ""
 
-msgid "uiTextTextBlack50"
+msgid "home.argumentative.content.arg2"
 msgstr ""
 
-msgid "uiTextTextWhite50"
+msgid "home.argumentative.text.link.arg2"
 msgstr ""
 
-msgid "uiTextTextFontTitle"
+msgid "home.argumentative.title.arg3"
 msgstr ""
 
-msgid "uiTextFontWeightItalic"
+msgid "home.argumentative.content.arg3"
 msgstr ""
 
-msgid "uiTextFontWeightNormal"
+msgid "home.argumentative.text.link.arg3"
 msgstr ""
 
-msgid "uiTextFontWeightBolder"
+msgid "home.header.search.speciality.placeholder"
 msgstr ""
 
-msgid "uiTextFontWeightBold"
+msgid "home.header.search.city.placeholder"
 msgstr ""
 
-msgid "uiTextFontSize6"
+msgid "home.other.direction.presentation.label"
 msgstr ""
 
-msgid "uiTextFontSize5"
+msgid "home.other.direction.become.partner.label"
 msgstr ""
 
-msgid "uiTextFontSize4"
+msgid "home.other.direction.discover.label"
 msgstr ""
 
-msgid "uiTextFontSize3"
+msgid "home.other.direction.discover"
 msgstr ""
 
-msgid "uiTextFontSize2"
+msgid "partner.view.presentation.contact.information"
 msgstr ""
 
-msgid "uiTextFontSize1"
+msgid "partner.view.presentation.partner"
 msgstr ""
 
-msgid "uiTextFontSizeTitle"
+msgid "partner.view.presentation.contact.button.label"
 msgstr ""
 
-msgid "devComponentClassList"
+msgid "product.view.modal.added"
 msgstr ""
 
-msgid "uiDevComponentRouteHome"
+msgid "product.view.quantity1"
 msgstr ""
 
-msgid "uiDevComponentRouteSearch"
+msgid "product.view.quantity2"
 msgstr ""
 
-msgid "uiDevComponentRouteProduit"
+msgid "product.view.quantity3"
 msgstr ""
 
-msgid "uiDevComponentRoutePartner"
+msgid "product.view.quantity4"
 msgstr ""
 
-msgid "devMenuComponentButtonClassList"
+msgid "product.view.quantity5"
 msgstr ""
 
-msgid "devMenuComponentButtonIcon"
-msgstr "biGearWide"
-
-msgid "headerCartComponentIcon"
-msgstr ""
-
-msgid "headerCartComponentModalCartTitle"
-msgstr ""
-
-msgid "headerCartComponentModalCartClassList"
-msgstr ""
-
-msgid "partnerHeaderGeoLatIcon"
-msgstr ""
-
-msgid "partnerViewPresentationIconTelephone"
+msgid "product.view.quantity6"
 msgstr ""
 
-msgid "partnerViewPresentationIconGeolat"
+msgid "product.view.button.label"
 msgstr ""
 
-msgid "partnerViewPresentationIconInstagram"
+msgid "search.left.bar.category.label"
 msgstr ""
 
-msgid "partnerViewPresentationIconTwitter"
+msgid "search.left.bar.category.name"
 msgstr ""
 
-msgid "partnerViewPresentationIconFacebook "
+msgid "search.left.bar.category.brasserie.label"
 msgstr ""
 
-msgid "footerComponentIconFacebook"
+msgid "search.left.bar.category.brasserie.value"
 msgstr ""
 
-msgid "footerComponentIconTwitter"
+msgid "search.left.bar.category.bois.label"
 msgstr ""
 
-msgid "footerComponentIconInstagram"
+msgid "search.left.bar.category.bois.value"
 msgstr ""
 
-msgid "headerComponentZartizana"
+msgid "search.left.bar.category.pierre.label"
 msgstr ""
 
-msgid "headerComponentSearchBarPlaceholder"
+msgid "search.left.bar.category.pierre.value"
 msgstr ""
 
-msgid "headerComponentSearchIconClassList"
+msgid "search.left.bar.category.label.tri"
 msgstr ""
 
-msgid "headerComponentSearchIcon"
+msgid "search.left.bar.category.name.tri"
 msgstr ""
 
-msgid "headerComponentButtonAccountLink"
+msgid "search.left.bar.category.label.pertinent"
 msgstr ""
 
-msgid "headerComponentButtonAccountIcon"
+msgid "search.left.bar.category.value.pertinent"
 msgstr ""
 
-msgid "modalComponentIconComponentIcon"
+msgid "search.left.bar.category.label.prix"
 msgstr ""
 
-msgid "ModalCartComponentButtonClearCart"
+msgid "search.left.bar.category.label.lasted"
 msgstr ""
 
-msgid "ModalCartComponentButtonClearCartLabel"
+msgid "search.left.bar.category.value.lasted"
 msgstr ""
 
-msgid "modalCartComponentIconX"
+msgid "search.left.bar.category.value.prix"
 msgstr ""
 
-msgid "modalProductIconReturn"
+msgid "ui.buttons.title"
 msgstr ""
 
-msgid "modalProductButtonSuccessReturn"
+msgid "ui.button.component.normal.label"
 msgstr ""
 
-msgid "modalProductButtonLabelReturn"
+msgid "ui.button.component.primary.label"
 msgstr ""
 
-msgid "productCardComponentButtonIcon"
+msgid "ui.button.secondary.label"
 msgstr ""
 
-msgid "productCardComponentButtonLabel"
+msgid "ui.button.component.success.label"
 msgstr ""
 
-msgid "productCardComponentButtonType"
+msgid "ui.button.component.danger.label"
 msgstr ""
 
-msgid "parterCarComponentButtonType"
+msgid "ui.button.component.warning.label"
 msgstr ""
 
-msgid "parterCarComponentButtonLabel"
+msgid "ui.button.component.info.label"
 msgstr ""
 
-msgid "parterCarComponentButtonClasslist"
+msgid "ui.button.component.dark.label"
 msgstr ""
 
-msgid ""
+msgid "ui.colors.title"
 msgstr ""
 
-msgid ""
+msgid "ui.gradients.title"
 msgstr ""
 
-msgid ""
+msgid "ui.form.title"
 msgstr ""
 
-msgid ""
+msgid "ui.form.label"
 msgstr ""
 
-msgid ""
+msgid "ui.form.helper"
 msgstr ""
 
-msgid ""
+msgid "ui.form.password.label"
 msgstr ""
 
-msgid ""
+msgid "ui.form.checkbox.label"
 msgstr ""
 
-msgid ""
+msgid "ui.form.select.label"
 msgstr ""
 
-msgid ""
+msgid "ui.form.button.submit.label"
 msgstr ""
 
-msgid ""
+msgid "ui.form.button.cancel.label"
 msgstr ""
 
-msgid ""
+msgid "ui.icon.title"
 msgstr ""
 
-msgid ""
+msgid "ui.list.title"
 msgstr ""
 
-msgid ""
+msgid "ui.text.around.title"
 msgstr ""
 
-msgid ""
+msgid "ui.text.title.main"
 msgstr ""
 
-msgid ""
+msgid "ui.text.title.colors"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.primary"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.secondary"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.success"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.danger"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.warning"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.info"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.light"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.dark"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.body"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.muted"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.white"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.black50"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.white50"
 msgstr ""
 
-msgid ""
+msgid "ui.text.text.font.title"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.weight.italic"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.weight.normal"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.weight.bolder"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.weight.bold"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size6"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size5"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size4"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size3"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size2"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size1"
 msgstr ""
 
-msgid ""
+msgid "ui.text.font.size.title"
 msgstr ""
 
-msgid ""
+msgid "ui.dev.component.route.home"
 msgstr ""
 
-msgid ""
+msgid "ui.dev.component.route.search"
 msgstr ""
 
-msgid ""
+msgid "ui.dev.component.route.produit"
 msgstr ""
 
-msgid ""
+msgid "ui.dev.component.route.partner"
 msgstr ""
 
-msgid ""
+msgid "header.cart.component.modal.cart.title"
 msgstr ""
 
-msgid ""
+msgid "header.component.zartizana"
 msgstr ""
 
-msgid ""
+msgid "header.component.search.bar.place.holder"
 msgstr ""
 
-msgid ""
+msgid "modal.cart.component.button.clear.cart.label"
 msgstr ""
 
-msgid ""
+msgid "modal.product.button.label.return"
 msgstr ""
 
-msgid ""
+msgid "product.card.component.button.label"
 msgstr ""
 
-msgid ""
+msgid "partner.card.component.button.label"
 msgstr ""
 
-msgid ""
+msgid "home.header.support.title"
 msgstr ""
 
-msgid ""
+msgid "home.cities.label.nancy"
 msgstr ""
 
-msgid ""
+msgid "home.cities.label.lyon"
 msgstr ""
 
-msgid ""
+msgid "home.cities.label.paris"
 msgstr ""
 
-msgid ""
+msgid "home.cities.title"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.search"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.our.partners"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.info.association"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.register"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.login"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.account"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.wishes"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.categories"
 msgstr ""
 
-msgid ""
+msgid "header.component.div.become.partner"
 msgstr ""
 
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
-
-msgid ""
-msgstr ""
 
 
 

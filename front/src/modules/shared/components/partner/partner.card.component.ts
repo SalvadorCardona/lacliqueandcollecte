@@ -3,6 +3,7 @@ import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import {PartnerPost} from "App/types/partner.type";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 export default class PartnerCardComponent extends AppComponent {
 
@@ -32,10 +33,10 @@ export default class PartnerCardComponent extends AppComponent {
 <!--                <div class="wrapper-category text-white">i should be category list</div>-->
                 ${this.createElement(ButtonComponent, 
                     {
-                        classList:this.trans('parterCarComponentButtonClasslist'),
+                        classList: 'mt-2',
                         link: this.partnerPost.guid, 
-                        label: this.trans('parterCarComponentButtonLabel'), 
-                        type:this.trans('parterCarComponentButtonType')
+                        label: this.trans('partner.card.component.button.label') ,
+                        type: Color.PRIMARY
                     }
                 )}
             </div>

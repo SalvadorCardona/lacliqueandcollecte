@@ -41,7 +41,7 @@ export default class ModalComponent extends AppComponent {
                 w-100
                 ">
                     <span class="text-uppercase">${this._title || ''}</span>
-                    ${this.createElement(IconComponent, {$click: () => this._$close(), icon: this.trans("modalComponentIconComponentIcon")})}
+                    ${this.createElement(IconComponent, {$click: () => this._$close(), icon: 'biX'})}
                 </div>
                 <div class="modal-body">${this._body}</div>
             </div>

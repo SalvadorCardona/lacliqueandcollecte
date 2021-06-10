@@ -7,6 +7,7 @@ import {html, property, TemplateResult} from 'lit-element';
 import EventService, {events} from "App/core/event.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 export default class ModalCartComponent extends AppComponent {
 
@@ -41,14 +42,14 @@ export default class ModalCartComponent extends AppComponent {
     public render(): TemplateResult  {
         if (!this.cart.items.length) {
             return html`
-                <span>${this.trans("modalCartEmpty")}</span>
+                <span>${this.trans("modal.cart.empty")}</span>
             `;
         }
 
         return html`
           ${this.cart.items.map(this.itemsRender.bind(this))}
           <hr>
-          ${this.createElement(ButtonComponent, {type:this.trans("ModalCartComponentButtonClearCart"), label:this.trans("ModalCartComponentButtonClearCartLabel")})}
+          ${this.createElement(ButtonComponent, {type: Color.DARK, label:this.trans("modal.cart.component.button.clear.cart.label")})}
         `;
     }
 
@@ -64,7 +65,7 @@ export default class ModalCartComponent extends AppComponent {
         return html`
           <div>
               ${product.name}
-              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon:this.trans("modalCartComponentIconX")})}
+              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
           </div>
         `;
     }

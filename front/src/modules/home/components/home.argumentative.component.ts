@@ -25,24 +25,24 @@ export default class HomeArgumentativeComponent extends AppComponent {
     private contentList = [
         {
             image: argument1,
-            title: this.trans("homeArgumentiveTitleArg1"),
-            text: this.trans("homeArgumentiveContentArg1"),
-            link: this.trans("homeArgumentiveLinkArg1"),
-            textlink: this.trans("homeArgumentiveTextLinkArg1")
+            title: this.trans("home.argumentative.title.arg1"),
+            text: this.trans("home.argumentative.content.arg1"),
+            link: '/a-propos',
+            textlink: this.trans("home.argumentative.text.link.arg1")
         },
         {
             image: argument2,
-            title: this.trans("homeArgumentiveTitleArg2"),
-            text:this.trans("homeArgumentiveContentArg2"),
-            link:this.trans("homeArgumentiveLinkArg2"),
-            textlink:this.trans("homeArgumentiveTextLinkArg2")
+            title: this.trans("home.argumentative.title.arg2"),
+            text:this.trans("home.argumentative.content.arg2"),
+            link:'/a-propos',
+            textlink:this.trans("home.argumentative.text.link.arg2")
         },
         {
             image: argument3,
-            title: this.trans("homeArgumentiveTitleArg3"),
-            text: this.trans("homeArgumentiveContentArg3"),
-            link: this.trans("homeArgumentiveLinkArg3"),
-            textlink: this.trans("homeArgumentiveTextLinkArg3")
+            title: this.trans("home.argumentative.title.arg3"),
+            text: this.trans("home.argumentative.content.arg3"),
+            link: '/a-propos',
+            textlink: this.trans("home.argumentative.text.link.arg3")
         }
     ] as content[];
 

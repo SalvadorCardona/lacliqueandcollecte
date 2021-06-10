@@ -12,61 +12,61 @@ export default class UiTextComponent extends AppComponent {
             <div class="row">
                 <div class="col-4">
                     ${this.createElement(WrapperComponent, {
-                        title: this.trans('uiTextTitleMain'),
+                        title: this.trans('ui.text.title.main'),
                         body: html`
-                            <h1>${this.trans('uiTextTitleH1')}</h1>
-                            <h2>${this.trans('uiTextTitleH2')}</h2>
-                            <h3>${this.trans('uiTextTitleH3')}</h3>
-                            <h4>${this.trans('uiTextTitleH4')}</h4>
-                            <h5>${this.trans('uiTextTitleH5')}</h5>
+                            <h1>${this.trans('ui.text.title.h1')}</h1>
+                            <h2>${this.trans('ui.text.title.h2')}</h2>
+                            <h3>${this.trans('ui.text.title.h3')}</h3>
+                            <h4>${this.trans('ui.text.title.h4')}</h4>
+                            <h5>${this.trans('ui.text.title.h5')}</h5>
                         `
                     })}
                 </div>
                 <div class="col-4">
                     ${this.createElement(WrapperComponent, {
-                        title: this.trans('uiTextTitleColors'),
+                        title: this.trans('ui.text.title.colors'),
                         body: html`
                             <div class="w-50 d-inline-block">
-                                <p class="text-primary">${this.trans('uiTextTextPrimary')}</p>
-                                <p class="text-secondary">${this.trans('uiTextTextSecondary')}</p>
-                                <p class="text-success">${this.trans('uiTextTextSuccess')}</p>
-                                <p class="text-danger">${this.trans('uiTextTextDanger')}</p>
-                                <p class="text-warning">${this.trans('uiTextTextWarning')}</p>
-                                <p class="text-info">${this.trans('uiTextTextInfo')}</p>
-                                <p class="text-light bg-dark">${this.trans('uiTextTextLight')}t</p>
+                                <p class="text-primary">${this.trans('ui.text.text.primary')}</p>
+                                <p class="text-secondary">${this.trans('ui.text.text.secondary')}</p>
+                                <p class="text-success">${this.trans('ui.text.text.success')}</p>
+                                <p class="text-danger">${this.trans('ui.text.text.danger')}</p>
+                                <p class="text-warning">${this.trans('ui.text.text.warning')}</p>
+                                <p class="text-info">${this.trans('ui.text.text.info')}</p>
+                                <p class="text-light bg-dark">${this.trans('ui.text.text.light')}t</p>
                             </div>
                             <div class="w-30 d-inline-block mx-1">
-                                <p class="text-dark">${this.trans('uiTextTextDark')}</p>
-                                <p class="text-body">${this.trans('uiTextTextBody')}</p>
-                                <p class="text-muted">${this.trans('uiTextTextMuted')}</p>
-                                <p class="text-white bg-dark">${this.trans('uiTextTextWhite')}</p>
-                                <p class="text-black-50">${this.trans('uiTextTextBlack50')}</p>
-                                <p class="text-white-50 bg-dark">${this.trans('uiTextTextWhite50')}</p>
+                                <p class="text-dark">${this.trans('ui.text.text.dark')}</p>
+                                <p class="text-body">${this.trans('ui.text.text.body')}</p>
+                                <p class="text-muted">${this.trans('ui.text.text.muted')}</p>
+                                <p class="text-white bg-dark">${this.trans('ui.text.text.white')}</p>
+                                <p class="text-black-50">${this.trans('ui.text.text.black50')}</p>
+                                <p class="text-white-50 bg-dark">${this.trans('ui.text.text.white50')}</p>
                             </div>
                         `
                     })}
                 </div>
                 <div class="col-4">
                     ${this.createElement(WrapperComponent, {
-                        title: this.trans('uiTextTextFontTitle'),
+                        title: this.trans('ui.text.text.font.title'),
                         body: html`
-                            <p class="fw-bold">${this.trans('uiTextFontWeightBold')}</p>
-                            <p class="fw-bolder">${this.trans('uiTextFontWeightBolder')}</p>
-                            <p class="fw-normal">${this.trans('uiTextFontWeightNormal')}</p>
-                            <p class="fst-italic">${this.trans('uiTextFontWeightItalic')}</p>
+                            <p class="fw-bold">${this.trans('ui.text.font.weight.bold')}</p>
+                            <p class="fw-bolder">${this.trans('ui.text.font.weight.bolder')}</p>
+                            <p class="fw-normal">${this.trans('ui.text.font.weight.normal')}</p>
+                            <p class="fst-italic">${this.trans('ui.text.font.weight.italic')}</p>
                         `
                     })}
                 </div>
                 <div class="col-4">
                     ${this.createElement(WrapperComponent, {
-                        title:this.trans('uiTextFontSizeTitle'),
+                        title:this.trans('ui.text.font.size.title'),
                         body: html`
-                            <p class="fs-1 fw-bold">${this.trans('uiTextFontSize1')}</p>
-                            <p class="fs-2 fw-bold">${this.trans('uiTextFontSize2')}</p>
-                            <p class="fs-3 fw-bold">${this.trans('uiTextFontSize3')}</p>
-                            <p class="fs-4 fw-bold">${this.trans('uiTextFontSize4')}</p>
-                            <p class="fs-5 fw-bold">${this.trans('uiTextFontSize5')}</p>
-                            <p class="fs-6 fw-bold">${this.trans('uiTextFontSize6')}</p>
+                            <p class="fs-1 fw-bold">${this.trans('ui.text.font.size1')}</p>
+                            <p class="fs-2 fw-bold">${this.trans('ui.text.font.size2')}</p>
+                            <p class="fs-3 fw-bold">${this.trans('ui.text.font.size3')}</p>
+                            <p class="fs-4 fw-bold">${this.trans('ui.text.font.size4')}</p>
+                            <p class="fs-5 fw-bold">${this.trans('ui.text.font.size5')}</p>
+                            <p class="fs-6 fw-bold">${this.trans('ui.text.font.size6')}</p>
                         `
                     })}
                 </div>

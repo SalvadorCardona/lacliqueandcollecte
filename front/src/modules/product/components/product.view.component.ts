@@ -11,6 +11,7 @@ import {html, TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/core/client/product.client";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 export default class ProductViewComponent extends AppComponent {
 
@@ -53,7 +54,7 @@ export default class ProductViewComponent extends AppComponent {
             .then(() => {
                 const modalProductComponent: ModalProductComponent = createElement(ModalProductComponent);
                 modalProductComponent.product = this.product;
-                this.modalService.open(modalProductComponent, this.trans("productViewModalAdded"));
+                this.modalService.open(modalProductComponent, this.trans("product.view.modal.added"));
             })
     }
 
@@ -70,7 +71,7 @@ export default class ProductViewComponent extends AppComponent {
                         <section class="col-md-6">
                             <h1 class="mt-2 text-primary">${this.product.name}</h1>
                             <hr>
-                            <h2 class="fs-4">${this.trans("productViewDescription")}</h2>
+                            <h2 class="fs-4">${this.trans("product.view.description")}</h2>
                             <span>${unsafeHTML(this.product.description)}</span>
                             <hr>
                             <div class="price text-secondary fs-3 mx-2">${filterTax(this.product.price)}</div>
@@ -78,21 +79,21 @@ export default class ProductViewComponent extends AppComponent {
                             <div class="row add-to-basket mt-1">
                                 <div class="col-md-3">
                                     <select id="product-qty" class="form-control">
-                                        <option value="1">${this.trans("productViewQuantity1")}</option>
-                                        <option value="2">${this.trans("productViewQuantity2")}</option>
-                                        <option value="3">${this.trans("productViewQuantity3")}</option>
-                                        <option value="4">${this.trans("productViewQuantity4")}</option>
-                                        <option value="5">${this.trans("productViewQuantity5")}</option>
-                                        <option value="6">${this.trans("productViewQuantity6")}</option>
+                                        <option value="1">${this.trans("product.view.quantity1")}</option>
+                                        <option value="2">${this.trans("product.view.quantity2")}</option>
+                                        <option value="3">${this.trans("product.view.quantity3")}</option>
+                                        <option value="4">${this.trans("product.view.quantity4")}</option>
+                                        <option value="5">${this.trans("product.view.quantity5")}</option>
+                                        <option value="6">${this.trans("product.view.quantity6")}</option>
                                     </select>
                                 </div>
                                 ${this.createElement(ButtonComponent,
                                     {
                                         $click: () => this.addItem(),
-                                        classList: this.trans("productViewButtonAdd"),
-                                        type: this.trans("productViewButtonType"),
-                                        icon: this.trans("productViewButtonIcon"),
-                                        label: this.trans("productViewButtonLabel")
+                                        classList: 'mt-3',
+                                        type: Color.PRIMARY,
+                                        icon: 'cartPlus',
+                                        label: this.trans("product.view.button.label")
                                     }
                                 )}
                             </div>

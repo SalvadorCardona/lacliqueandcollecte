@@ -4,6 +4,7 @@ import {injector} from "App/core/container.service";
 import ModalService from "App/core/modal.service";
 import {html, property, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 export default class ModalProductComponent extends AppComponent {
 
@@ -24,15 +25,15 @@ export default class ModalProductComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <img class="rounded img-fluid" alt="${this._product.images[0].alt}" src="${this._product.images[0].src}"/>
-            <div class="text-center mt-2">${this.trans("modalProductAdded")}
+            <div class="text-center mt-2">${this.trans("modal.product.added")}
 
             </div>
             <div class="row">
                 <div class="col-6">
                     ${this.createElement(ButtonComponent, {
-                        icon: this.trans("modalProductIconReturn"),
-                        type: this.trans("modalProductButtonSuccessReturn"),
-                        label: this.trans("modalProductButtonLabelReturn"),
+                        icon: 'biArrowReturnLeft',
+                        type: Color.SUCCESS,
+                        label: this.trans("modal.product.button.label.return"),
                         $click: () => this.modalService.close()
                     })}
                 </div>

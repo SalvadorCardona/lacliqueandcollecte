@@ -76,7 +76,7 @@ export default class HeaderDesktopComponent extends AppComponent {
                     <a class="site-logo-title
                         text-uppercase
                         fw-bolder
-                        text-primary" href="/" title="Home" rel="home">${this.trans("headerComponentZartizana")}</a>
+                        text-primary" href="/" title="Home" rel="home">${this.trans("header.component.zartizana")}</a>
                 </span>
                     <div class="search-bar
                     d-inline-block
@@ -85,10 +85,10 @@ export default class HeaderDesktopComponent extends AppComponent {
                                @blur=${this.onBlur}
                                type="text"
                                class="form-control"
-                               placeholder=${this.trans("headerComponentSearchBarPlaceholder")}>
+                               placeholder=${this.trans("header.component.search.bar.place.holder")}>
                         ${this.createElement(IconComponent, {
-            classList: this.trans("headerComponentSearchIconClassList"),
-            icon: this.trans("headerComponentSearchIcon")
+            classList: 'position-absolute',
+            icon: 'search'
         })}
                         ${this.getProductList()}
                     </div>
@@ -105,8 +105,8 @@ export default class HeaderDesktopComponent extends AppComponent {
                             ${this.renderMenu()}
                         </ul>
                         ${this.createElement(ButtonComponent, {
-            link: this.trans("headerComponentButtonAccountLink"),
-            icon: this.trans("headerComponentButtonAccountIcon")
+            link: '/mon-compte',
+            icon: 'person'
         })}
                         ${this.createElement(HeaderCartComponent)}
                     </nav>

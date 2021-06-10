@@ -20,6 +20,8 @@ class MiddlewareConfiguration
 
     public array $translation;
 
+    public array $productsCategories;
+
     public function getWcStoreApi(): string
     {
         return $this->wcStoreApi;
@@ -74,6 +76,11 @@ class MiddlewareConfiguration
     public function setTranslation(array $translation): MiddlewareConfiguration
     {
         $this->translation = $translation;
+        return $this;
+    }
+    public function setProductsCategories(array $productsCategories): MiddlewareConfiguration
+    {
+        $this->productsCategories = $productsCategories;
         return $this;
     }
 }

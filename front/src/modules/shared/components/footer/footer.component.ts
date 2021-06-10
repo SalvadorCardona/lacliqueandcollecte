@@ -35,44 +35,44 @@ export default class FooterComponent extends AppComponent{
                                 border-radius
                                 fs-5
                                 p-3
-                                bg-primary">${this.trans("footerFollow")}
+                                bg-primary">${this.trans("footer.follow")}
                                 
                             </span>
                     </div>
                     <br>
                     <div class="social-wrapper">
                         <a class="m-2" href="fb.com">
-                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconFacebook")})}
+                            ${this.createElement(IconComponent, {icon: 'facebook'})}
                         </a>
                         <a class="m-2" href="tw.com">
-                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconTwitter")})}
+                            ${this.createElement(IconComponent, {icon: 'twitter'})}
                         </a>
                         <a class="m-2" href="inst.com">
-                            ${this.createElement(IconComponent, {icon: this.trans("footerComponentIconInstagram")})}
+                            ${this.createElement(IconComponent, {icon: 'instagram'})}
                         </a>
                     </div>
                     <br>
                     <div class="credit fw-bolder">
-                        <span>${this.trans("footerCopyright")}</span>
+                        <span>${this.trans("footer.copyright")}</span>
                         <br>
-                        <span>${this.trans("footerRight")}</span>
+                        <span>${this.trans("footer.rights")}</span>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">${this.trans("footerProducts")}</a></li>
-                        <li><a href="/">${this.trans("footerPartners")}</a></li>
+                        <li><a href="/">${this.trans("footer.products")}</a></li>
+                        <li><a href="/">${this.trans("footer.partners")}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">${this.trans("footerAsso")}</a></li>
-                        <li><a href="/">${this.trans("footerBecomePartner")}</a></li>
+                        <li><a href="/">${this.trans("footer.asso")}</a></li>
+                        <li><a href="/">${this.trans("footer.become.partner")}</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
                     <ul>
-                        <li><a href="/">${this.trans("footerSalesTerms")}</a></li>
+                        <li><a href="/">${this.trans("footer.sales.terms")}</a></li>
                     </ul>
                 </div>
             </div>

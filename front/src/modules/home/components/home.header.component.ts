@@ -28,11 +28,11 @@ export default class HomeHeaderComponent extends AppComponent {
                     align-items-center">
                     <img class="logo p-4" src="${logo}" alt="home-header">
 
-                    <h1 class="text-light text-center text-uppercase">${this.trans("homeHeaderSupportTitle")}</h1>
+                    <h1 class="text-light text-center text-uppercase">${this.trans("home.header.support.title")}</h1>
                     <h2 class="fs-4
                         text-light
                         text-center
-                        fw-normal">${this.trans("homeHeaderCatalog")}
+                        fw-normal">${this.trans("home.header.catalogue")}
                     </h2>
 
                     <div class="div-form-search
@@ -47,24 +47,24 @@ export default class HomeHeaderComponent extends AppComponent {
                                 d-flex
                                 justify-content-center">
                                 <div class="child-search form-group-speciality ps-2">
-                                    <label for="search-box-1" class="fw-bold text-dark">${this.trans("homeHeaderSpeciality")}</label>
+                                    <label for="search-box-1" class="fw-bold text-dark">${this.trans("home.header.speciality")}</label>
                                     <span>
                                         <input class="d-block"
                                                name="search-box-1"
                                                type="text"
-                                               placeholder=${this.trans("homeHeaderSearchSpecialityPlaceHolder")}>
+                                               placeholder=${this.trans("home.header.search.speciality.placeholder")}>
                                     </span>
                                 </div>
                                 <div class="child-search
                                         form-group-city
                                         ps-2">
-                                    <label for="search-box-2" class="fw-bold text-dark">${this.trans("homeHeaderCity")}</label>
+                                    <label for="search-box-2" class="fw-bold text-dark">${this.trans("home.header.city")}</label>
                                     <span>
                                         <input class="d-block"
                                                id="city"
                                                name="search-box-2"
                                                type="text"
-                                               placeholder=${this.trans("homeHeaderSearchCityPlaceHolder")}>
+                                               placeholder=${this.trans("home.header.search.city.placeholder")}>
                                     </span>
                                 </div>
                                 <div type="button" class="position-absolute
@@ -78,7 +78,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                             align-items-center">
                                         ${this.createElement(IconComponent,
                                             {
-                                                icon: this.trans("homeHeaderSearchIcon")
+                                                icon: 'search'
                                             }
                                         )}
                                     </a>

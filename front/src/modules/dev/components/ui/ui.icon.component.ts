@@ -11,7 +11,7 @@ export default class UiIconComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             ${this.createElement(WrapperComponent, {
-                        title: this.trans("uiIconTitle"),
+                        title: this.trans("ui.icon.title"),
                         body: html`
                             <span class="fw-normal">
                     &lt;app-icon icon="" &gt &lt;/app-icon&gt
@@ -28,7 +28,7 @@ export default class UiIconComponent extends AppComponent {
             return html`
                 <div class="d-flex justify-content-left align-items-center mb-1">
                     <app-icon class="text-around" icon="${icon}"></app-icon>
-                    <pre class="m-0 ms-2">${this.trans("uiIconIconName")}${icon}</pre>
+                    <pre class="m-0 ms-2">${this.trans("ui.icon.icon.name")}${icon}</pre>
                 </div>
             `;
         });

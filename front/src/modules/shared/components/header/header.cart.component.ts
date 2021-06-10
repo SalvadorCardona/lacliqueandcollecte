@@ -27,14 +27,14 @@ export default class HeaderCartComponent extends AppComponent {
     private modalService: ModalService;
 
     public firstUpdated(): void {
-        this.classList.add(this.trans("headerCartComponentModalCartClassList"));
+        this.classList.add('position-relative');
         this.eventService.addSubscriber(events.CART_HAS_CHANGED, () => this.cartUpdated());
     }
 
     private openModal(): void {
         const modalCartComponent: ModalCartComponent = createElement(ModalCartComponent);
 
-        this.modalService.open(modalCartComponent, this.trans("headerCartComponentModalCartTitle"));
+        this.modalService.open(modalCartComponent, this.trans("header.cart.component.modal.cart.title"));
     }
 
      private cartUpdated(): void {
@@ -44,7 +44,7 @@ export default class HeaderCartComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <span @click="${this.openModal}">
-                ${this.createElement(IconComponent, {icon:this.trans("headerCartComponentIcon")})}
+                ${this.createElement(IconComponent, {icon: 'cart'})}
                 <div class="counter
                     text-white
                     bg-primary

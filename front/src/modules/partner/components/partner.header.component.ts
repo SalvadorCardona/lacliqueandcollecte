@@ -36,8 +36,8 @@ export default class PartnerHeaderComponent extends AppComponent {
             </h1>
 
             <span>
-                ${this.createElement(IconComponent, {icon: this.trans("partnerHeaderGeoLatIcon")})}
-               ${this.trans("partnerHeaderCity")}${this.partnerPost.meta.city}
+                ${this.createElement(IconComponent, {icon: 'geoLat'})}
+               ${this.trans("partner.header.city")}${this.partnerPost.meta.city}
             </span>
             
             <div id="social-header" class="position-absolute
@@ -49,24 +49,24 @@ export default class PartnerHeaderComponent extends AppComponent {
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: this.trans("partnerHeaderSocialFBClasslist"),
-                            icon: this.trans("partnerHeaderSocialFacebookIcon")
+                            classList: 'md-2',
+                            icon: 'facebook'
                         }
                     )}
                 </a>
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: this.trans("partnerHeaderSocialIGClasslist"),
-                            icon: this.trans("partnerHeaderSocialInstagramIcon")
+                            classList: 'md-2',
+                            icon: 'instagram'
                         }
                     )}
                 </a>
                 <a href="">
                     ${this.createElement(IconComponent,
                         {
-                            classList: this.trans("partnerHeaderSocialTwitterClasslist"),
-                            icon: this.trans("partnerHeaderSocialTwitterIcon")
+                            classList: 'md-2',
+                            icon: 'twitter'
                         }
                     )}
                 </a>

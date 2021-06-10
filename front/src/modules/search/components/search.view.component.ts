@@ -51,7 +51,7 @@ export default class SearchViewComponent extends AppComponent {
         return html`
             <div class="container-fluid">
                 <div class="col-md-12 text-center mt-5">
-                    <h1 class="title-border">${this.trans("searchViewTitle")}</h1>
+                    <h1 class="title-border">${this.trans("search.view.title")}</h1>
                 </div>
                 <div class="mt-5 row">
                     <div class="col-md-3">
