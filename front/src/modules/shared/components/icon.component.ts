@@ -47,6 +47,3 @@ export default class IconComponent extends AppComponent {
         return html`<i>${unsafeHTML(icons[this.icon] ? icons[this.icon] : '')}</i>`;
     }
 }
-
-
-
