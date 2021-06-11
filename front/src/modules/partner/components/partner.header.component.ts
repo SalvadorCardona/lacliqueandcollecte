@@ -15,34 +15,26 @@ export default class PartnerHeaderComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
-
         return html`
-        <div id="partner-header" 
-             class="app-wrapper
-             background-overlay
-             d-flex
-             align-items-center
-             flex-column
-             position-relative" 
-             style="background-image: url('${this.partnerPost.meta.shopPicture}')">
-            <img id="picture" src="${this.partnerPost.meta.facePicture}" alt="face-picture">
-
-            <div id="last-name" class="text-white">
-                ${this.partnerPost.meta.firstName}
-            </div>
-
-            <hr>
-
-            <h1>
-                ${this.partnerPost.meta.shopName}
-            </h1>
-
-            <span>
-                ${this.createElement(IconComponent, {icon: 'geoLat'})}
-               ${this.trans("partner.header.city")}${this.partnerPost.meta.city}
-            </span>
-            
-            <div id="social-header" class="position-absolute
+            <div id="partner-header"
+                 class="app-wrapper
+                 background-overlay
+                 d-flex
+                 align-items-center
+                 flex-column
+                 position-relative"
+                 style="background-image: url('${this.partnerPost.meta.shopPicture}')">
+                <img id="picture" src="${this.partnerPost.meta.facePicture}" alt="face-picture">
+                <div id="last-name" class="text-white">
+                    ${this.partnerPost.meta.firstName}
+                </div>
+                <hr>
+                <h1>${this.partnerPost.meta.shopName}</h1>
+                <span>
+                ${this.createElement(IconComponent, {icon: Icon.GEOLAT})}
+                ${this.trans("partner.header.city")}${this.partnerPost.meta.city}
+                </span>
+                <div id="social-header" class="position-absolute
                 bottom-0
                 end-0
                 translate-middle
