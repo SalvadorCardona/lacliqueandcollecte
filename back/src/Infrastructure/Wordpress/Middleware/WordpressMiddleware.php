@@ -178,6 +178,6 @@ class WordpressMiddleware
 
     public function getOption(string $option): mixed
     {
-    	return get_option($option);
+        return get_option($option);
     }
 }

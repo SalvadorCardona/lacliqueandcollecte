@@ -34,9 +34,9 @@ class DisableAssetsWordpress implements ActionInterface
     {
 
         $query = $this->wordpressMiddleware->getCurrentWpQuery();
-		$post = $query->post ?? null;
-		$postType = $post ? $post->post_type : null;
-	    $postName = $post ? $post->post_name : null;
+        $post = $query->post ?? null;
+        $postType = $post ? $post->post_type : null;
+        $postName = $post ? $post->post_name : null;
 
         if (
             $postType === Product::POST_TYPE_NAME
