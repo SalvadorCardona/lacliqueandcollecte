@@ -175,4 +175,9 @@ class WordpressMiddleware
     {
         add_post_type_support($postType, $feature, ...$args);
     }
+
+    public function getOption(string $option): mixed
+    {
+    	return get_option($option);
+    }
 }
