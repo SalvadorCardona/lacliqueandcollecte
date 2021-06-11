@@ -34,13 +34,16 @@ class DisableAssetsWordpress implements ActionInterface
     {
 
         $query = $this->wordpressMiddleware->getCurrentWpQuery();
+        $post = $query->post ?? null;
+        $postType = $post ? $post->post_type : null;
+        $postName = $post ? $post->post_name : null;
 
         if (
-            $query->post->post_type === Product::POST_TYPE_NAME
-            || $query->post->post_type === Partner::POST_TYPE_NAME
+            $postType === Product::POST_TYPE_NAME
+            || $postType === Partner::POST_TYPE_NAME
             || $query->is_tax
-            || (int) get_option('page_on_front') === $query->queried_object_id
-            || $query->post->post_name === 'ui'
+            || (int) $this->wordpressMiddleware->getOption('page_on_front') === $query->queried_object_id
+            || $postName === 'ui'
         ) {
             foreach (self::STYLE_NOT_EXPECTED as $styleNotExpected) {
                 $this->wordpressMiddleware->wpDeregisterStyle($styleNotExpected);

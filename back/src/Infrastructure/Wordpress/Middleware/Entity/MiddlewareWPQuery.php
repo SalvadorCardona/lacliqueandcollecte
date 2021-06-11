@@ -221,7 +221,7 @@ class MiddlewareWPQuery
         $this->isSingular = $isSingular;
         return $this;
     }
-    
+
     public function setIsTag(bool $isTag): MiddlewareWPQuery
     {
         $this->isTag = $isTag;
