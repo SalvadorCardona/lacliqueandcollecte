@@ -58,7 +58,7 @@ class MiddlewareConfiguration
         return $this;
     }
 
-    public function getWpQuery(): ?array
+    public function getWpQuery(): ?MiddlewareWPQuery
     {
         return $this->wpQuery;
     }

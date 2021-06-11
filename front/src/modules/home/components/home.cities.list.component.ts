@@ -12,7 +12,7 @@ export default class HomeCitiesListComponent extends AppComponent {
         return 'app-home-cities-list';
     }
 
-    private citiesList = [
+    private citiesList: Array<any> = [
         {
             img: nancy,
             labelCity: 'Nancy',
