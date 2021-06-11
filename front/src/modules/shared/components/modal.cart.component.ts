@@ -39,7 +39,7 @@ export default class ModalCartComponent extends AppComponent {
         this.cart = this.cartService.cart;
     }
 
-    public render(): TemplateResult  {
+    public render(): TemplateResult {
         if (!this.cart.items.length) {
             return html`
                 <span>${this.trans("modal.cart.empty")}</span>
@@ -47,9 +47,12 @@ export default class ModalCartComponent extends AppComponent {
         }
 
         return html`
-          ${this.cart.items.map(this.itemsRender.bind(this))}
-          <hr>
-          ${this.createElement(ButtonComponent, {type: Color.DARK, label:this.trans("modal.cart.component.button.clear.cart.label")})}
+            ${this.cart.items.map(this.itemsRender.bind(this))}
+            <hr>
+            ${this.createElement(ButtonComponent, {
+                type: Color.DANGER,
+                label: this.trans("modal.cart.component.button.clear.cart.label")
+            })}
         `;
     }
 
@@ -63,11 +66,10 @@ export default class ModalCartComponent extends AppComponent {
 
     private itemsRender(product: ProductCart): TemplateResult {
         return html`
-          <div>
-              ${product.name}
-              ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
-          </div>
+            <div>
+                ${product.name}
+                ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
+            </div>
         `;
     }
 }
-

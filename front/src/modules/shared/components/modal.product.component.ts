@@ -26,7 +26,6 @@ export default class ModalProductComponent extends AppComponent {
         return html`
             <img class="rounded img-fluid" alt="${this._product.images[0].alt}" src="${this._product.images[0].src}"/>
             <div class="text-center mt-2">${this.trans("modal.product.added")}
-
             </div>
             <div class="row">
                 <div class="col-6">
@@ -41,4 +40,3 @@ export default class ModalProductComponent extends AppComponent {
         `;
     }
 }
-

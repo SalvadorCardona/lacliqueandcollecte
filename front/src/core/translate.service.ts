@@ -7,7 +7,6 @@ export default class TranslateService {
 
     public translate(key: string): string {
         const translation = this.configurationService.configuration.translation;
-console.log(translation);
         if (translation.hasOwnProperty(key)) {
 
             return translation[key];

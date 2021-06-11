@@ -29,7 +29,8 @@ class MiddlewareConfigurationFactory
                 [
                     'taxonomy' => TaxonomyType::PRODUCT_CAT,
                     'hide_empty' => true,
-                    'slug' => !'non-classe',
+                    'exclude' => 15,
+                    'childless' => true,
                 ]
             )
         );

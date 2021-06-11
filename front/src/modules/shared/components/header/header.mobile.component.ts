@@ -7,26 +7,26 @@ import IconComponent from "App/modules/shared/components/icon.component";
 import {Collapse} from 'bootstrap';
 import {Category} from "App/types/product.type";
 import {Color} from "App/enum/color.enum";
+import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 
 //TODO: Change icon's color
 
 export default class HeaderMobileComponent extends AppComponent {
     private selector: string = 'menu-mobile';
 
-    private collapseSelector:string='menu-collapse';
+    private collapseSelector: string = 'menu-collapse';
 
-    private categoriesCollapse:string='categories-collapse';
+    private categoriesCollapse: string = 'categories-collapse';
 
     public static getComponentName(): string {
         return 'app-header-mobile';
     }
 
     @property()
-    private categories?: Array<Category> = null;
+    private categories?: Array<MiddlewareCategory> = null;
 
     @injector(ConfigurationService)
     private configurationService: ConfigurationService;
-
 
     public connectedCallback(): void {
         super.connectedCallback();
@@ -34,7 +34,7 @@ export default class HeaderMobileComponent extends AppComponent {
     }
 
 
-    private renderProductCategory(category: Category): TemplateResult {
+    private renderProductCategory(category: MiddlewareCategory): TemplateResult {
         return html`
             <a href="${category.url}">
                 <li class="nav-item text-body">${category.name}</li>
@@ -44,7 +44,6 @@ export default class HeaderMobileComponent extends AppComponent {
 
     public firstUpdated() {
         new Collapse(this.querySelector(`#${this.selector}`));
-
     }
 
     public render(): TemplateResult {
@@ -67,17 +66,16 @@ export default class HeaderMobileComponent extends AppComponent {
                             width: '32px'
                         })}
                     </button>
-
                     <span class="site-logo align-right">
                             <a class="site-logo-title
                                 text-uppercase
                                 fw-bolder
                                 text-primary "
                                href="/" title="Home"
-                               rel="home"><div class="text-right">${this.trans("header.component.zartizana")}</div></a>
-                        </span>
-
-
+                               rel="home">
+                                <div class="text-right">${this.trans("header.component.zartizana")}</div>
+                            </a>
+                    </span>
                     <div class="container 
                          collapse 
                          navbar-collapse"
@@ -95,8 +93,8 @@ export default class HeaderMobileComponent extends AppComponent {
                                             width: '20px'
                                         })}
                                         </div>
-
-                                        <div class="col-1 text-body fw-bolder">${this.trans("header.component.div.search")}
+                                        <div class="col-1 text-body fw-bolder">
+                                            ${this.trans("header.component.div.search")}
                                         </div>
                                         <div class="w-auto">
                                         </div>
@@ -112,13 +110,12 @@ export default class HeaderMobileComponent extends AppComponent {
                                             width: '20px'
                                         })}
                                         </div>
-
-                                        <div class="col-10 text-body fw-bolder">${this.trans("header.component.div.become.partner")}</div>
+                                        <div class="col-10 text-body fw-bolder">
+                                            ${this.trans("header.component.div.become.partner")}
+                                        </div>
                                     </div>
                                 </a>
-                                <div class="w-auto">
                             </li>
-
                             <li class="border-0 bg-transparent "
                                 id="btn-menu-responsive"
                                 type="button"
@@ -136,11 +133,11 @@ export default class HeaderMobileComponent extends AppComponent {
                                             width: '20px'
                                         })}
                                         </div>
-
-                                        <div class="col-8 text-body fw-bolder">${this.trans("header.component.div.categories")}</div>
+                                        <div class="col-8 text-body fw-bolder">
+                                            ${this.trans("header.component.div.categories")}
+                                        </div>
                                     </div>
                                 </a>
-
                             </li>
                             <div class="container collapse"
                                  id="${this.categoriesCollapse}">
@@ -148,70 +145,65 @@ export default class HeaderMobileComponent extends AppComponent {
                                     ${this.categories.map(category => this.renderProductCategory(category))}
                                 </ul>
                             </div>
-
-
                             <hr>
-
-                            <li><a href="#">
-                                <div class="row mt-1 pt-1">
-                                    <div class="col-1">${this.createElement(IconComponent, {
-                                        color: Color.PRIMARY,
-                                        icon: 'suitHeart', height: '20px',
-                                        width: '20px'
-                                    })}
-                                    </div>
-
-                                    <div class="col-10 text-body fw-bolder">${this.trans("header.component.div.wishes")}</div>
-                                </div>
-
-                            </a>
-                                <div class="w-auto">
-                            </li>
-                            <hr>
-
-
                             <li>
-                                <div class=" ">
+                                <a href="#">
                                     <div class="row mt-1 pt-1">
-                                        <div class="col-2">
-                                            <div class="" id="person-icon"
-                                                 data-mdb-ripple-color="light">
-
-                                                ${this.createElement(IconComponent, {
-                                                    color: Color.PRIMARY,
-                                                    icon: 'biPersonFill', height: '55px',
-                                                    width: '55px'
-                                                })}
+                                        <div class="col-1">${this.createElement(IconComponent, {
+                                            color: Color.PRIMARY,
+                                            icon: 'suitHeart', height: '20px',
+                                            width: '20px'
+                                        })}
+                                        </div>
+                                        <div class="col-10 text-body fw-bolder">
+                                            ${this.trans("header.component.div.wishes")}
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <div class="row mt-1 pt-1">
+                                    <div class="col-2">
+                                        <div class="" id="person-icon"
+                                             data-mdb-ripple-color="light">
+                                            ${this.createElement(IconComponent, {
+                                                color: Color.PRIMARY,
+                                                icon: 'biPersonFill', height: '55px',
+                                                width: '55px'
+                                            })}
+                                        </div>
+                                    </div>
+                                    <div class="col-7 ">
+                                        <a href="/mon-compte">
+                                            <div class="text-body fw-bolder">
+                                                ${this.trans("header.component.div.account")}
                                             </div>
-                                        </div>
-                                        <div class="col-7 ">
-
-                                            <a href="/mon-compte">
-                                                <div class="text-body fw-bolder">${this.trans("header.component.div.account")}</div>
-                                            </a>
-                                            <a href="/mon-compte">
-                                                <div class="text-body">${this.trans("header.component.div.login")}</div>
-                                            </a>
-                                            <a href="/mon-compte">
-                                                <div class="text-body">${this.trans("header.component.div.register")}</div>
-                                            </a>
-                                        </div>
+                                        </a>
+                                        <a href="/mon-compte">
+                                            <div class="text-body">${this.trans("header.component.div.login")}</div>
+                                        </a>
+                                        <a href="/mon-compte">
+                                            <div class="text-body">${this.trans("header.component.div.register")}</div>
+                                        </a>
                                     </div>
                                 </div>
                             </li>
                             <hr>
-                            <li><a href="#">
-                                <div class="text-body">${this.trans("header.component.div.info.association")}</div>
-                            </a></li>
-                            <li><a href="#">
-                                <div class="text-body">${this.trans("header.component.div.our.partners")}</div>
-                            </a></li>
+                            <li>
+                                <a href="#">
+                                    <div class="text-body">${this.trans("header.component.div.info.association")}</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="text-body">${this.trans("header.component.div.our.partners")}</div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                    </ul>
                 </div>
             </nav>
         `;
     }
-
 }
-

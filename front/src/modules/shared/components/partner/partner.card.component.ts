@@ -16,8 +16,8 @@ export default class PartnerCardComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div style="background-image: url('${this.partnerPost.meta.shopPicture}')" 
-                class="border-radius
+            <div style="background-image: url('${this.partnerPost.meta.shopPicture}')"
+                 class="border-radius
                 overflow-hidden
                 background-overlay
                 p-4
@@ -30,17 +30,16 @@ export default class PartnerCardComponent extends AppComponent {
                 <div class="background-overlay"></div>
                 <img src="${this.partnerPost.meta.facePicture}" alt="photo-partner">
                 <h3 class="mt-3 text-white">${this.partnerPost.meta.shopName}</h3>
-<!--                <div class="wrapper-category text-white">i should be category list</div>-->
-                ${this.createElement(ButtonComponent, 
-                    {
-                        classList: 'mt-2',
-                        link: this.partnerPost.guid, 
-                        label: this.trans('partner.card.component.button.label') ,
-                        type: Color.PRIMARY
-                    }
+                <!--                <div class="wrapper-category text-white">i should be category list</div>-->
+                ${this.createElement(ButtonComponent,
+                        {
+                            classList: 'mt-2',
+                            link: this.partnerPost.guid,
+                            label: this.trans('partner.card.component.button.label'),
+                            type: Color.PRIMARY
+                        }
                 )}
             </div>
         `;
     }
 }
-

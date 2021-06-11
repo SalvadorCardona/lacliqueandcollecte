@@ -21,7 +21,6 @@ export default class HomeArgumentativeComponent extends AppComponent {
     }
 
 
-
     private contentList = [
         {
             image: argument1,
@@ -33,9 +32,9 @@ export default class HomeArgumentativeComponent extends AppComponent {
         {
             image: argument2,
             title: this.trans("home.argumentative.title.arg2"),
-            text:this.trans("home.argumentative.content.arg2"),
-            link:'/a-propos',
-            textlink:this.trans("home.argumentative.text.link.arg2")
+            text: this.trans("home.argumentative.content.arg2"),
+            link: '/a-propos',
+            textlink: this.trans("home.argumentative.text.link.arg2")
         },
         {
             image: argument3,
@@ -64,7 +63,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
         return html`
             <div class="container p-5">
                 <div class="row">
-                   ${this.contentList.map((element, key) => this.listRender(element, key))}
+                    ${this.contentList.map((element, key) => this.listRender(element, key))}
                 </div>
             </div>
         `;

@@ -16,7 +16,6 @@ export interface Category {
     id: number;
     name: string;
     slug: string;
-    url: string;
 }
 
 export interface Tag {

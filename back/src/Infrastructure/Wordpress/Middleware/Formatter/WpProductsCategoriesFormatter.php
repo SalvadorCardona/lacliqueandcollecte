@@ -17,16 +17,10 @@ class WpProductsCategoriesFormatter extends Formatter
      */
     public function format($data): array
     {
-        $wpTermFiltered = array_values(array_filter($data, function (WP_Term $term) {
-            return $term->parent != 0;
-        }));
-
         return array_map(function (WP_Term $term) {
             $data = $term->to_array();
-
             $data['url'] = $this->wordpressMiddleware->getTermLink($term);
-
             return $data;
-        }, $wpTermFiltered);
+        }, $data);
     }
 }
