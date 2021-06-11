@@ -4,6 +4,12 @@ import lyon from "Media/home/cities/lyon.jpg";
 import paris from "Media/home/cities/paris.jpg";
 import nancy from "Media/home/cities/nancy.jpg";
 
+interface City {
+    img: string;
+    labelCity: string;
+    name: string;
+}
+
 export default class HomeCitiesListComponent extends AppComponent {
 
     private baseUrl: string = "city";
@@ -12,7 +18,7 @@ export default class HomeCitiesListComponent extends AppComponent {
         return 'app-home-cities-list';
     }
 
-    private citiesList: Array<any> = [
+    private citiesList: Array<City> = [
         {
             img: nancy,
             labelCity: this.trans('home.cities.label.nancy'),
@@ -48,7 +54,7 @@ export default class HomeCitiesListComponent extends AppComponent {
         `;
     }
 
-    public renderCities(data): TemplateResult {
+    public renderCities(city: City): TemplateResult {
         return html `
             <div class="col-md-4 text-white mt-3">
                 <a class="btn
@@ -60,9 +66,9 @@ export default class HomeCitiesListComponent extends AppComponent {
                     background-overlay
                     overflow-hidden"
                    role="button"
-                   href=${this.getUrl(data.name)}
-                   style="background-image: url('${data.img}'); background-size: cover">
-                        <span class="fs-5 my-5 d-inline-block">${data.labelCity}</span>
+                   href=${this.getUrl(city.name)}
+                   style="background-image: url('${city.img}'); background-size: cover">
+                        <span class="fs-5 my-5 d-inline-block">${city.labelCity}</span>
                 </a>
                 </div>
         `;
