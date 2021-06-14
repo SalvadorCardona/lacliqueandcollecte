@@ -14,9 +14,9 @@ export default class UiButtonComponent extends AppComponent {
         return html`
             ${this.createElement(WrapperComponent,
                     {
-                        title: this.trans("ui.buttons.title"), classList: 'app-wrapper',
+                        title: 'Buttons', classList: 'app-wrapper',
                         body: html`
-                            <span class="fw-normal"> 
+                            <span class="fw-normal">
                         &lt;app-button icon="" label="" type=""&gt &lt;/app-button&gt
                     </span>
                             <hr>
