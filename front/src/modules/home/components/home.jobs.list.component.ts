@@ -29,7 +29,7 @@ export default class HomeJobsListComponent extends AppComponent {
             name: 'ébénisterie',
         },
         {
-            img: "test",
+            img: woodworking,
             labelJob: 'Test',
             name: 'test',
         }

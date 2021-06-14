@@ -18,8 +18,7 @@ export default {
         HomeArgumentativeComponent,
         HomeProductListComponent,
         HomeCitiesListComponent,
-        HomeCategoriesListComponent
-        HomeProductListComponent,
+        HomeCategoriesListComponent,
         HomeJobsListComponent
     ]
 } as Module;
