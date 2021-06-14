@@ -22,6 +22,8 @@ import HeaderDesktopComponent from "App/modules/shared/components/header/header.
 
 export default {
     components: [
+        HeaderMobileComponent,
+        HeaderDesktopComponent,
         WrapperComponent,
         ModalProductComponent,
         ModalComponent,
@@ -40,7 +42,5 @@ export default {
         InputRadioComponent,
         InputSelectComponent,
         InputCheckboxComponent,
-        HeaderMobileComponent,
-        HeaderDesktopComponent
     ]
 } as Module;
