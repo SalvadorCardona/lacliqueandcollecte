@@ -8,7 +8,7 @@ export const environment = {
         cart: {
             addItem: 'wc/store/cart/add-item',
             deleteItem: '/wc/store/cart/items/{key}',
-            deleteItems:  'wc/store/cart/items',
+            deleteItems: 'wc/store/cart/items',
             me: 'wc/store/cart',
         },
         application: {
@@ -17,6 +17,9 @@ export const environment = {
         partner: {
             byId: 'wp/app/partner/$id',
             all: 'wp/app/partners',
+        },
+        partnerRequest: {
+            create: 'wp/app/partner-request'
         },
         search: {
             all: 'wp/app/search',
