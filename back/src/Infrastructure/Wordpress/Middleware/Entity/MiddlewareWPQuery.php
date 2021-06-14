@@ -40,7 +40,7 @@ class MiddlewareWPQuery
     public bool $isTrackback;
     public bool $isYear;
     public int $maxNumCommentPages;
-    public int $maxNumPages;
+    public float $maxNumPages;
 
     public function setCommentCount(int $commentCount): MiddlewareWPQuery
     {
@@ -258,7 +258,7 @@ class MiddlewareWPQuery
         return $this;
     }
 
-    public function setMaxNumPages(int $maxNumPages): MiddlewareWPQuery
+    public function setMaxNumPages(float $maxNumPages): MiddlewareWPQuery
     {
         $this->maxNumPages = $maxNumPages;
         return $this;
