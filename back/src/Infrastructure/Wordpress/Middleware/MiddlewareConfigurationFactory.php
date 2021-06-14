@@ -41,8 +41,8 @@ class MiddlewareConfigurationFactory
             ->setSiteUrl($this->wordpressMiddleware->getSiteUrl())
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
-            ->setMainMenu($this->wordpressMiddleware->wpGetNavMenuItems('main-menu'))
             ->setTranslation($this->wpTranslateFormatter->format($this->wordpressMiddleware->getL10n()->entries))
             ->setProductsCategories($productCategories);
+            ->setMainMenu($this->wordpressMiddleware->keysToCamel($this->wordpressMiddleware->wpGetNavMenuItems('main-menu')));
     }
 }
