@@ -5,7 +5,6 @@ import {injector} from "App/core/container.service";
 import ConfigurationService from "App/core/configuration.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Collapse} from 'bootstrap';
-import {Category} from "App/types/product.type";
 import {Color} from "App/enum/color.enum";
 import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 
@@ -33,7 +32,6 @@ export default class HeaderMobileComponent extends AppComponent {
         this.categories = this.configurationService.configuration.productsCategories;
     }
 
-
     private renderProductCategory(category: MiddlewareCategory): TemplateResult {
         return html`
             <a href="${category.url}">
@@ -42,7 +40,7 @@ export default class HeaderMobileComponent extends AppComponent {
         `;
     }
 
-    public firstUpdated() {
+    public firstUpdated(): void {
         new Collapse(this.querySelector(`#${this.selector}`));
     }
 

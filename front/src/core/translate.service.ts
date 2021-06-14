@@ -7,6 +7,7 @@ export default class TranslateService {
 
     public translate(key: string): string {
         const translation = this.configurationService.configuration.translation;
+        // eslint-disable-next-line no-prototype-builtins
         if (translation.hasOwnProperty(key)) {
 
             return translation[key];

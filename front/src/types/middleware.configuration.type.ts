@@ -1,7 +1,6 @@
 import {PostType} from "App/types/post.type";
 import {UserType} from "App/types/user.type";
 import {WpQuery} from "App/types/wp.query.type";
-import {Category} from "App/types/product.type";
 import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 
 export interface MiddlewareConfigurationType {
@@ -11,6 +10,6 @@ export interface MiddlewareConfigurationType {
     mainMenu: Array<PostType>;
     wpApiKey: string;
     wpQuery: WpQuery;
-    translation: {[key: string]: string};
+    translation: {[name: string]: string};
     productsCategories: Array<MiddlewareCategory>;
 }

@@ -1,4 +1,4 @@
-type IconsType = { [name: string]: string };
+type IconsType = {[name: string]: string};
 
 export const icons = {
     telephone:
