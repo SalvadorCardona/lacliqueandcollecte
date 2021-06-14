@@ -1,0 +1,669 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zartizana\n"
+"POT-Creation-Date: 2021-05-27 17:06+0200\n"
+"PO-Revision-Date: 2021-06-10 07:20+0000\n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Poedit-Basepath: ../../src/Infrastructure/Wordpress/Middleware\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;__n\n"
+"Last-Translator: \n"
+"Language: fr_FR\n"
+"X-Poedit-SearchPath-0: WordpressMiddleware.php\n"
+"Report-Msgid-Bugs-To: \n"
+"X-Loco-Version: 2.5.2; wp-5.6"
+
+#| msgid "devMenuComponents"
+msgid "dev.menu.components"
+msgstr "Composants"
+
+#| msgid "devMenuHomepage"
+msgid "dev.menu.home.page"
+msgstr "Page d'accueil"
+
+#| msgid "devMenuPartners"
+msgid "dev.menu.partners"
+msgstr "Partenaire"
+
+#| msgid "devMenuProducts"
+msgid "dev.menu.products"
+msgstr "Produit"
+
+#| msgid "devMenuSearch"
+msgid "dev.menu.search"
+msgstr "Search"
+
+#| msgid "devMenuTitle"
+msgid "dev.menu.title"
+msgstr "Les dev pages"
+
+#| msgid "footerAsso"
+msgid "footer.asso"
+msgstr "L'association"
+
+#| msgid "footerBecomePartner"
+msgid "footer.become.partner"
+msgstr "Devenir partenaire"
+
+#| msgid "footerCopyright"
+msgid "footer.copyright"
+msgstr "©2021 Zartizana, Inc"
+
+#| msgid "footerFollow"
+msgid "footer.follow"
+msgstr "Suivez Zartizana"
+
+#| msgid "footerPartners"
+msgid "footer.partners"
+msgstr "Nos artisans"
+
+#| msgid "footerProducts"
+msgid "footer.products"
+msgstr "Nos produits"
+
+#| msgid "footerRight"
+msgid "footer.rights"
+msgstr "All rights reserved"
+
+#| msgid "footerSalesTerms"
+msgid "footer.sales.terms"
+msgstr "Conditions générales"
+
+#| msgid "headerCartComponentModalCartTitle"
+msgid "header.cart.component.modal.cart.title"
+msgstr "Votre Panier"
+
+msgid "header.component.div.account"
+msgstr "Mon compte"
+
+msgid "header.component.div.become.partner"
+msgstr "Devenir partenaire"
+
+msgid "header.component.div.categories"
+msgstr "Catégories"
+
+msgid "header.component.div.info.association"
+msgstr "Association Zartizana"
+
+msgid "header.component.div.login"
+msgstr "Se connecter"
+
+msgid "header.component.div.our.partners"
+msgstr "Nos artisans"
+
+msgid "header.component.div.register"
+msgstr "S'inscrire"
+
+msgid "header.component.div.search"
+msgstr "Rechercher"
+
+msgid "header.component.div.wishes"
+msgstr "Liste de souhaits"
+
+#| msgid "headerComponentSearchBarPlaceholder"
+msgid "header.component.search.bar.place.holder"
+msgstr "Trouver votre produit...."
+
+#| msgid "headerComponentZartizana"
+msgid "header.component.zartizana"
+msgstr "ZARTIZANA"
+
+#| msgid "homeArgumentiveContentArg1"
+msgid "home.argumentative.content.arg1"
+msgstr ""
+"Trouvez les artisans qui sont proches de chez vous, et profitez de leur "
+"savoir-faire. Recherchez vos produits par ville."
+
+#| msgid "homeArgumentiveContentArg2"
+msgid "home.argumentative.content.arg2"
+msgstr ""
+"Accédez à un catalogue de produits artisanaux de qualité, remplissez votre "
+"panier, nous nous occupons du reste.\n"
+"            "
+
+#| msgid "homeArgumentiveContentArg3"
+msgid "home.argumentative.content.arg3"
+msgstr ""
+"Zartisana aide les artisans locaux à gagner en visibilité. Découvrez les "
+"perles cachées de votre région !"
+
+#| msgid "homeArgumentiveTextLinkArg1"
+msgid "home.argumentative.text.link.arg1"
+msgstr "En savoir plus ici..."
+
+#| msgid "homeArgumentiveTextLinkArg2"
+msgid "home.argumentative.text.link.arg2"
+msgstr " En savoir plus ici..."
+
+#| msgid "homeArgumentiveTextLinkArg3"
+msgid "home.argumentative.text.link.arg3"
+msgstr "En savoir plus ici..."
+
+#| msgid "homeArgumentiveTitleArg1"
+msgid "home.argumentative.title.arg1"
+msgstr "Artisanat local"
+
+#| msgid "homeArgumentiveTitleArg2"
+msgid "home.argumentative.title.arg2"
+msgstr "produits d'exception"
+
+#| msgid "homeArgumentiveTitleArg3"
+msgid "home.argumentative.title.arg3"
+msgstr "Partenariat"
+
+msgid "home.cities.label.lyon"
+msgstr "Lyon"
+
+msgid "home.cities.label.nancy"
+msgstr "Nancy"
+
+msgid "home.cities.label.paris"
+msgstr "Paris"
+
+msgid "home.cities.title"
+msgstr "Nos villes"
+
+#| msgid "homeHeaderCatalog"
+msgid "home.header.catalogue"
+msgstr "Accédez à notre catalogue de produits artisanaux et locaux"
+
+#| msgid "homeHeaderCity"
+msgid "home.header.city"
+msgstr "Ville"
+
+#| msgid "homeHeaderSearchCityPlaceHolder"
+msgid "home.header.search.city.placeholder"
+msgstr "Où ?"
+
+#| msgid "homeHeaderSearchSpecialityPlaceHolder"
+msgid "home.header.search.speciality.placeholder"
+msgstr "Quel corps de métier ?"
+
+#| msgid "homeHeaderSpeciality"
+msgid "home.header.speciality"
+msgstr "Spécialité"
+
+msgid "home.header.support.title"
+msgstr "Soutenez les artisans de votre région !"
+
+#| msgid "homeOtherDirectionArtisan"
+msgid "home.other.direction.artisan"
+msgstr "Vous êtes artisan ?"
+
+#| msgid "homeOtherDirectionBecomePartner"
+msgid "home.other.direction.become.partner"
+msgstr "Devenez partenaire de notre association."
+
+#| msgid "homeOtherDirectionBecomePartnerLabel"
+msgid "home.other.direction.become.partner.label"
+msgstr "Contactez-nous"
+
+#| msgid "homeOtherDirectionDiscover"
+msgid "home.other.direction.discover"
+msgstr "Découvrez les artisans et produits Zartizana."
+
+#| msgid "homeOtherDirectionDiscoverLabel"
+msgid "home.other.direction.discover.label"
+msgstr "Le shop ici"
+
+#: WordpressMiddleware.php:43
+#| msgid "homeOtherDirectionMainTitle"
+msgid "home.other.direction.main.title"
+msgstr "Zartizana"
+
+#| msgid "homeOtherDirectionPresentation"
+msgid "home.other.direction.presentation"
+msgstr "Qui sommes-nous ?"
+
+#| msgid "homeOtherDirectionPresentationLabel"
+msgid "home.other.direction.presentation.label"
+msgstr "Notre histoire"
+
+#| msgid "homePartnerListTitle"
+msgid "home.partner.list.title"
+msgstr "Partenaires"
+
+#| msgid "homeProductListTitle"
+msgid "home.product.list.title"
+msgstr "Nos produits"
+
+#| msgid "ModalCartComponentButtonClearCartLabel"
+msgid "modal.cart.component.button.clear.cart.label"
+msgstr "Vider le panier"
+
+#| msgid "modalCartEmpty"
+msgid "modal.cart.empty"
+msgstr "Votre Panier est vide"
+
+#| msgid "modalProductAdded"
+msgid "modal.product.added"
+msgstr ""
+"Votre Produit a bien été ajouté.\n"
+
+#| msgid "modalProductButtonLabelReturn"
+msgid "modal.product.button.label.return"
+msgstr "Retourner au produit"
+
+#| msgid "parterCarComponentButtonLabel"
+msgid "partner.card.component.button.label"
+msgstr "Voir sa page"
+
+#| msgid "partnerHeaderCity"
+msgid "partner.header.city"
+msgstr " Commerce situé dans la ville de "
+
+#| msgid "partnerViewPartnerName"
+msgid "partner.view.partner.name"
+msgstr "Les produits de "
+
+#| msgid "partnerViewPresentationContactButtonLabel"
+msgid "partner.view.presentation.contact.button.label"
+msgstr "Contactez le"
+
+#| msgid "partnerViewPresentationContactInformation"
+msgid "partner.view.presentation.contact.information"
+msgstr "Présentation"
+
+#| msgid "partnerViewPresentationPartner"
+msgid "partner.view.presentation.partner"
+msgstr "Présentation"
+
+#| msgid "productCardComponentButtonLabel"
+msgid "product.card.component.button.label"
+msgstr "Ajouter au panier"
+
+#| msgid "productViewButtonLabel"
+msgid "product.view.button.label"
+msgstr "Ajouter au panier"
+
+#| msgid "productViewDescription"
+msgid "product.view.description"
+msgstr "Description :"
+
+#| msgid "productViewModalAdded"
+msgid "product.view.modal.added"
+msgstr "Votre produit a été enregistré"
+
+#| msgid "productViewQuantity1"
+msgid "product.view.quantity1"
+msgstr "1"
+
+#| msgid "productViewQuantity2"
+msgid "product.view.quantity2"
+msgstr "2"
+
+#| msgid "productViewQuantity3"
+msgid "product.view.quantity3"
+msgstr "3"
+
+#| msgid "productViewQuantity4"
+msgid "product.view.quantity4"
+msgstr "4"
+
+#| msgid "productViewQuantity5"
+msgid "product.view.quantity5"
+msgstr "5"
+
+#| msgid "productViewQuantity6"
+msgid "product.view.quantity6"
+msgstr "6"
+
+msgid "productViewButtonAdd"
+msgstr "mt-3"
+
+#| msgid "searchLeftBarCategoyBoisLabel"
+msgid "search.left.bar.category.bois.label"
+msgstr "Bois"
+
+#| msgid "searchLeftBarCategoyBoisValue"
+msgid "search.left.bar.category.bois.value"
+msgstr "bois"
+
+#| msgid "searchLeftBarCategoyBrasserieLabel"
+msgid "search.left.bar.category.brasserie.label"
+msgstr "Brasserie"
+
+#| msgid "searchLeftBarCategoyBrasserieValue"
+msgid "search.left.bar.category.brasserie.value"
+msgstr "brasserie"
+
+#| msgid "searchLeftBarCategoyLabel"
+msgid "search.left.bar.category.label"
+msgstr "Catégorie"
+
+#| msgid "searchLeftBarCategoryLabelLasted"
+msgid "search.left.bar.category.label.lasted"
+msgstr "Lasted"
+
+#| msgid "searchLeftBarCategoryLabelPertinent"
+msgid "search.left.bar.category.label.pertinent"
+msgstr "Pertinent"
+
+#| msgid "searchLeftBarCategoryLabelPrix"
+msgid "search.left.bar.category.label.prix"
+msgstr "Prix"
+
+#| msgid "searchLeftBarCategoryLabelTri"
+msgid "search.left.bar.category.label.tri"
+msgstr "Tri"
+
+#| msgid "searchLeftBarCategoyName"
+msgid "search.left.bar.category.name"
+msgstr "categorie"
+
+#| msgid "searchLeftBarCategoryNameTri"
+msgid "search.left.bar.category.name.tri"
+msgstr "tri"
+
+#| msgid "searchLeftBarCategoyPierreLabel"
+msgid "search.left.bar.category.pierre.label"
+msgstr "Pierre"
+
+#| msgid "searchLeftBarCategoyPierreValue"
+msgid "search.left.bar.category.pierre.value"
+msgstr "pierre"
+
+#| msgid "searchLeftBarCategoryValueLasted"
+msgid "search.left.bar.category.value.lasted"
+msgstr "lasted"
+
+#| msgid "searchLeftBarCategoryValuePertinent"
+msgid "search.left.bar.category.value.pertinent"
+msgstr "pertinent"
+
+#| msgid "searchLeftBarCategoryValuePrix"
+msgid "search.left.bar.category.value.prix"
+msgstr "prix"
+
+#| msgid "searchViewTitle"
+msgid "search.view.title"
+msgstr "La boutique"
+
+#| msgid "uiButtonComponentDangerlabel"
+msgid "ui.button.component.danger.label"
+msgstr "Danger..."
+
+#| msgid "uiButtonComponentDarklabel"
+msgid "ui.button.component.dark.label"
+msgstr "Dark..."
+
+#| msgid "uiButtonComponentInfolabel"
+msgid "ui.button.component.info.label"
+msgstr "Info..."
+
+#| msgid "uiButtonComponentNormalLabel"
+msgid "ui.button.component.normal.label"
+msgstr "Normal..."
+
+#| msgid "uiButtonComponentPrimaryLabel"
+msgid "ui.button.component.primary.label"
+msgstr "Primary.."
+
+#| msgid "uiButtonComponentSuccesslabel"
+msgid "ui.button.component.success.label"
+msgstr "Success..."
+
+#| msgid "uiButtonComponentWarninglabel"
+msgid "ui.button.component.warning.label"
+msgstr "Warning..."
+
+msgid "ui.button.secondary.label"
+msgstr "Secondary..."
+
+#| msgid "uiButtonTitle"
+msgid "ui.buttons.title"
+msgstr "Buttons"
+
+#| msgid "uiColorsDanger"
+msgid "ui.colors.danger"
+msgstr "Danger"
+
+#| msgid "uiColorsDark"
+msgid "ui.colors.dark"
+msgstr "Dark"
+
+#| msgid "uiColorsPrimary"
+msgid "ui.colors.primary"
+msgstr "Primary"
+
+#| msgid "uiColorsSecondary"
+msgid "ui.colors.secondary"
+msgstr "Secondary"
+
+#| msgid "uiColorsSuccess"
+msgid "ui.colors.success"
+msgstr "Success"
+
+#| msgid "uiColorsTitle"
+msgid "ui.colors.title"
+msgstr "Colors"
+
+#| msgid "uiColorsWarning"
+msgid "ui.colors.warning"
+msgstr "Warning"
+
+#| msgid "uiFormButtonCancelLabel"
+msgid "ui.form.button.cancel.label"
+msgstr "Cancel"
+
+#| msgid "uiFormButtonSubmitLabel"
+msgid "ui.form.button.submit.label"
+msgstr "Submit"
+
+#| msgid "uiFormCheckboxlabel"
+msgid "ui.form.checkbox.label"
+msgstr "Check me out"
+
+#| msgid "uiFormHelper"
+msgid "ui.form.helper"
+msgstr "We'll never share your email with anyone else."
+
+#| msgid "uiFormlabel"
+msgid "ui.form.label"
+msgstr "Email Address"
+
+#| msgid "uiFormPasswordlabel"
+msgid "ui.form.password.label"
+msgstr "Password"
+
+#| msgid "uiFormSelectlabel"
+msgid "ui.form.select.label"
+msgstr "Check me out"
+
+#| msgid "uiFormTitle"
+msgid "ui.form.title"
+msgstr "Form"
+
+#| msgid "uiGradientsTitle"
+msgid "ui.gradients.title"
+msgstr "Gradients"
+
+#| msgid "uiIconIconName"
+msgid "ui.icon.icon.name"
+msgstr "IconName : "
+
+#| msgid "uiIconTitle"
+msgid "ui.icon.title"
+msgstr "Icons"
+
+#| msgid "uiListTitle"
+msgid "ui.list.title"
+msgstr "Liste des composants"
+
+#| msgid "uiTextAroundDanger"
+msgid "ui.text.around.danger"
+msgstr "bg-danger"
+
+#| msgid "uiTextAroundDark"
+msgid "ui.text.around.dark"
+msgstr "bg-dark"
+
+#| msgid "uiTextAroundInfo"
+msgid "ui.text.around.info"
+msgstr "bg-info"
+
+#| msgid "uiTextAroundPrimary"
+msgid "ui.text.around.primary"
+msgstr "bg-primary"
+
+#| msgid "uiTextAroundSecondary"
+msgid "ui.text.around.secondary"
+msgstr "bg-secondary"
+
+#| msgid "uiTextAroundSuccess"
+msgid "ui.text.around.success"
+msgstr "bg-success"
+
+#| msgid "uiTextAroundTitle"
+msgid "ui.text.around.title"
+msgstr "Text Around"
+
+#| msgid "uiTextAroundWarning"
+msgid "ui.text.around.warning"
+msgstr "bg-warning"
+
+#| msgid "uiTextFontSizeTitle"
+msgid "ui.text.font.size.title"
+msgstr "Font Size"
+
+#| msgid "uiTextFontSize1"
+msgid "ui.text.font.size1"
+msgstr "Size 1"
+
+#| msgid "uiTextFontSize2"
+msgid "ui.text.font.size2"
+msgstr "Size 2"
+
+#| msgid "uiTextFontSize3"
+msgid "ui.text.font.size3"
+msgstr "Size 3"
+
+#| msgid "uiTextFontSize4"
+msgid "ui.text.font.size4"
+msgstr "Size 4"
+
+#| msgid "uiTextFontSize5"
+msgid "ui.text.font.size5"
+msgstr "Size 5"
+
+#| msgid "uiTextFontSize6"
+msgid "ui.text.font.size6"
+msgstr "Size 6"
+
+#| msgid "uiTextFontWeightBold"
+msgid "ui.text.font.weight.bold"
+msgstr "Weight 1 - .fw-bold"
+
+#| msgid "uiTextFontWeightBolder"
+msgid "ui.text.font.weight.bolder"
+msgstr "Weight 2 - .fw-bolder"
+
+#| msgid "uiTextFontWeightItalic"
+msgid "ui.text.font.weight.italic"
+msgstr "Italic - .fst-italic"
+
+#| msgid "uiTextFontWeightNormal"
+msgid "ui.text.font.weight.normal"
+msgstr "Weight 3 - .fw-normal"
+
+#| msgid "uiTextTextBlack50"
+msgid "ui.text.text.black50"
+msgstr ".text-black-50"
+
+#| msgid "uiTextTextBody"
+msgid "ui.text.text.body"
+msgstr ".text-body"
+
+#| msgid "uiTextTextDanger"
+msgid "ui.text.text.danger"
+msgstr ".text-danger"
+
+#| msgid "uiTextTextDark"
+msgid "ui.text.text.dark"
+msgstr ".text-dark"
+
+#| msgid "uiTextTextFontTitle"
+msgid "ui.text.text.font.title"
+msgstr "Font Weight"
+
+#| msgid "uiTextTextInfo"
+msgid "ui.text.text.info"
+msgstr ".text-info"
+
+#| msgid "uiTextTextLight"
+msgid "ui.text.text.light"
+msgstr ".text-light"
+
+#| msgid "uiTextTextMuted"
+msgid "ui.text.text.muted"
+msgstr ".text-muted"
+
+#| msgid "uiTextTextPrimary"
+msgid "ui.text.text.primary"
+msgstr ".text-primary"
+
+#| msgid "uiTextTextSecondary"
+msgid "ui.text.text.secondary"
+msgstr ".text-secondary"
+
+#| msgid "uiTextTextSuccess"
+msgid "ui.text.text.success"
+msgstr ".text-success"
+
+#| msgid "uiTextTextWarning"
+msgid "ui.text.text.warning"
+msgstr ".text-warning"
+
+#| msgid "uiTextTextWhite"
+msgid "ui.text.text.white"
+msgstr ".text-white"
+
+#| msgid "uiTextTextWhite50"
+msgid "ui.text.text.white50"
+msgstr ".text-white-50"
+
+#| msgid "uiTextTitleColors"
+msgid "ui.text.title.colors"
+msgstr "Text Colors"
+
+#| msgid "uiTextTitleH1"
+msgid "ui.text.title.h1"
+msgstr "Title H1"
+
+#| msgid "uiTextTitleH2"
+msgid "ui.text.title.h2"
+msgstr "Title H2"
+
+#| msgid "uiTextTitleH3"
+msgid "ui.text.title.h3"
+msgstr "Title H3"
+
+#| msgid "uiTextTitleH4"
+msgid "ui.text.title.h4"
+msgstr "Title H4"
+
+#| msgid "uiTextTitleH5"
+msgid "ui.text.title.h5"
+msgstr "Title H5"
+
+#| msgid "uiTextTitleMain"
+msgid "ui.text.title.main"
+msgstr "Title"
+
+#| msgid "uiViewComponentProductsTitle"
+msgid "ui.view.component.products.title"
+msgstr "Produits"
+
+#| msgid "uiViewComponentTitle"
+msgid "ui.view.component.title"
+msgstr "Components"
+
+msgid "uiButtonComponentGeoLatType"
+msgstr "primary"
+
+msgid "uiTextAroundClassList"
+msgstr "app-wrapper"

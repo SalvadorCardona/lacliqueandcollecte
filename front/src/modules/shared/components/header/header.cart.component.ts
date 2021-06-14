@@ -34,7 +34,7 @@ export default class HeaderCartComponent extends AppComponent {
     private openModal(): void {
         const modalCartComponent: ModalCartComponent = createElement(ModalCartComponent);
 
-        this.modalService.open(modalCartComponent, 'Votre Panier');
+        this.modalService.open(modalCartComponent, this.trans("header.cart.component.modal.cart.title"));
     }
 
      private cartUpdated(): void {

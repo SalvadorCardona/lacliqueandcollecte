@@ -17,9 +17,13 @@ import InputBaseComponent from "App/modules/shared/components/form/input.base.co
 import InputRadioComponent from "App/modules/shared/components/form/input.radio.component";
 import InputSelectComponent from "App/modules/shared/components/form/input.select.component";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
+import HeaderMobileComponent from "App/modules/shared/components/header/header.mobile.component";
+import HeaderDesktopComponent from "App/modules/shared/components/header/header.desktop.component";
 
 export default {
     components: [
+        HeaderMobileComponent,
+        HeaderDesktopComponent,
         WrapperComponent,
         ModalProductComponent,
         ModalComponent,

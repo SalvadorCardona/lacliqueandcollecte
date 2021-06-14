@@ -18,6 +18,7 @@ import homeModule from "App/modules/home/home.modules";
 import searchModule from "App/modules/search/search.modules";
 import SearchClient from "App/core/client/search.client";
 import SearchService from "App/core/search.service";
+import TranslateService from "App/core/translate.service";
 
 export default [
     homeModule,
@@ -40,7 +41,8 @@ export default [
             ApplicationClient,
             PartnerClient,
             SearchClient,
-            SearchService
+            SearchService,
+            TranslateService
         ],
     }
 ] as Module[];

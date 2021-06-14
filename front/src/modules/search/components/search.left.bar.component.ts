@@ -21,44 +21,45 @@ export default class SearchLeftBarComponent extends AppComponent {
 
     private categorySearchList: CategorySearch[] = [
         {
-            categoryLabel: 'Catégorie',
-            categoryName: 'categorie',
+            categoryLabel:this.trans("search.left.bar.category.label"),
+            categoryName: this.trans("search.left.bar.category.name"),
             itemsSearch: [
                 {
-                    label: 'Brasserie',
+                    label: this.trans("search.left.bar.category.brasserie.label"),
                     selected: true,
-                    value: 'brasserie'
+                    value: this.trans("search.left.bar.category.brasserie.value"),
                 },
                 {
-                    label: 'Bois',
+                    label: this.trans("search.left.bar.category.bois.label"),
                     selected: false,
-                    value: 'bois'
+                    value: this.trans("search.left.bar.category.bois.value"),
+
                 },
                 {
-                    label: 'Pierre',
+                    label: this.trans("search.left.bar.category.pierre.label"),
                     selected: true,
-                    value: 'pierre'
+                    value: this.trans("search.left.bar.category.pierre.value"),
                 }
             ]
         },
         {
-            categoryLabel: 'Tri',
-            categoryName: 'tri',
+            categoryLabel: this.trans("search.left.bar.category.label.tri"),
+            categoryName: this.trans("search.left.bar.category.name.tri"),
             itemsSearch: [
                 {
-                    label: 'Pertinant',
+                    label: this.trans("search.left.bar.category.label.pertinent"),
                     selected: true,
-                    value: 'pertinant'
+                    value: this.trans("search.left.bar.category.value.pertinent")
                 },
                 {
-                    label: 'Prix',
+                    label: this.trans("search.left.bar.category.label.prix"),
                     selected: false,
-                    value: 'prix'
+                    value: this.trans("search.left.bar.category.value.prix")
                 },
                 {
-                    label: 'Lasted',
+                    label:  this.trans("search.left.bar.category.label.lasted"),
                     selected: false,
-                    value: 'lasted'
+                    value: this.trans("search.left.bar.category.value.lasted")
                 }
             ]
         }

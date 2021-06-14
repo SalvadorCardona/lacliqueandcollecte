@@ -18,6 +18,10 @@ class MiddlewareConfiguration
 
     public MiddlewareWPQuery $wpQuery;
 
+    public array $translation;
+
+    public array $productsCategories;
+
     public function getWcStoreApi(): string
     {
         return $this->wcStoreApi;
@@ -66,6 +70,17 @@ class MiddlewareConfiguration
     public function setWpQuery(MiddlewareWPQuery $wpQuery): MiddlewareConfiguration
     {
         $this->wpQuery = $wpQuery;
+        return $this;
+    }
+
+    public function setTranslation(array $translation): MiddlewareConfiguration
+    {
+        $this->translation = $translation;
+        return $this;
+    }
+    public function setProductsCategories(array $productsCategories): MiddlewareConfiguration
+    {
+        $this->productsCategories = $productsCategories;
         return $this;
     }
 }

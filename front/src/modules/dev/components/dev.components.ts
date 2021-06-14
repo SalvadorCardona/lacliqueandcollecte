@@ -18,7 +18,7 @@ export default class DevComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            ${this.createElement(DevMenuComponent, {classList: 'position-fixed start-0 top-0 min-vh-100'})}
+            ${this.createElement(DevMenuComponent, {classList:'position-fixed start-0 top-0 min-vh-100'})}
             <main id="main">
                 ${this.router()}
             </main>
@@ -39,7 +39,7 @@ export default class DevComponent extends AppComponent {
                 return this.createElement(SearchViewComponent);
             case '#partner':
                 return this.createElement(PartnerViewComponent, {partnerPostId: 106});
-            case '#produit':
+            case '#product':
                 return this.createElement(ProductViewComponent, {productId: 139});
             default:
                 return this.createElement(UiViewComponent);

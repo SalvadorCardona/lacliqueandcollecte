@@ -15,17 +15,17 @@ export default class HomeCitiesListComponent extends AppComponent {
     private citiesList: Array<any> = [
         {
             img: nancy,
-            labelCity: 'Nancy',
+            labelCity: this.trans('home.cities.label.nancy'),
             name: 'nancy',
         },
         {
             img: paris,
-            labelCity: 'Paris',
+            labelCity: this.trans('home.cities.label.paris'),
             name: 'paris',
         },
         {
             img: lyon,
-            labelCity: 'Lyon',
+            labelCity: this.trans('home.cities.label.lyon'),
             name: 'lyon',
         }
     ];
@@ -40,7 +40,7 @@ export default class HomeCitiesListComponent extends AppComponent {
             <div class="container
                 p-5
                 text-center">
-                <h2 class="title-border">Nos villes</h2>
+                <h2 class="title-border">${this.trans('home.cities.title')}</h2>
                 <div class="row">
                     ${this.citiesList.map(data => this.renderCities(data))}
                 </div>

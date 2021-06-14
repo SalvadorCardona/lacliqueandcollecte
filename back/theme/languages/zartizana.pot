@@ -1,0 +1,514 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: zartizana\n"
+"POT-Creation-Date: 2021-05-27 17:06+0200\n"
+"PO-Revision-Date: 2021-05-27 17:06+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.3\n"
+"X-Poedit-Basepath: ../../src/Infrastructure/Wordpress/Middleware\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __;_e;__n\n"
+"X-Poedit-SearchPath-0: WordpressMiddleware.php\n"
+
+#: WordpressMiddleware.php:43
+
+
+msgid "home.other.direction.main.title"
+msgstr ""
+
+msgid "home.other.direction.presentation"
+msgstr ""
+
+msgid "home.other.direction.artisan"
+msgstr ""
+
+msgid "home.other.direction.discover"
+msgstr ""
+
+msgid "home.other.direction.become.partner"
+msgstr ""
+
+msgid "home.header.catalogue"
+msgstr ""
+
+msgid "home.header.speciality"
+msgstr ""
+
+msgid "home.header.city"
+msgstr ""
+
+msgid "home.partner.list.title"
+msgstr ""
+
+msgid "home.product.list.title"
+msgstr ""
+
+msgid "ui.colors.primary"
+msgstr ""
+
+msgid "ui.colors.secondary"
+msgstr ""
+
+msgid "ui.colors.success"
+msgstr ""
+
+msgid "ui.colors.warning"
+msgstr ""
+
+msgid "ui.colors.danger"
+msgstr ""
+
+msgid "ui.colors.dark"
+msgstr ""
+
+msgid "ui.icon.icon.name"
+msgstr ""
+
+msgid "ui.text.around.primary"
+msgstr ""
+
+msgid "ui.text.around.secondary"
+msgstr ""
+
+msgid "ui.text.around.success"
+msgstr ""
+
+msgid "ui.text.around.danger"
+msgstr ""
+
+msgid "ui.text.around.warning"
+msgstr ""
+
+msgid "ui.text.around.info"
+msgstr ""
+
+msgid "ui.text.around.dark"
+msgstr ""
+
+msgid "ui.text.title.h1"
+msgstr ""
+
+msgid "ui.text.title.h2"
+msgstr ""
+
+msgid "ui.text.title.h3"
+msgstr ""
+
+msgid "ui.text.title.h4"
+msgstr ""
+
+msgid "ui.text.title.h5"
+msgstr ""
+
+msgid "ui.view.component.title"
+msgstr ""
+
+msgid "ui.view.component.products.title"
+msgstr ""
+
+msgid "dev.menu.components"
+msgstr ""
+
+msgid "dev.menu.home.page"
+msgstr ""
+
+msgid "dev.menu.partners"
+msgstr ""
+
+msgid "dev.menu.products"
+msgstr ""
+
+msgid "dev.menu.search"
+msgstr ""
+
+msgid "dev.menu.title"
+msgstr ""
+
+msgid "partner.header.city"
+msgstr ""
+
+msgid "partner.view.partner.name"
+msgstr ""
+
+msgid "product.view.description"
+msgstr ""
+
+msgid "search.view.title"
+msgstr ""
+
+msgid "footer.follow"
+msgstr ""
+
+msgid "footer.sales.terms"
+msgstr ""
+
+msgid "footer.become.partner"
+msgstr ""
+
+msgid "footer.asso"
+msgstr ""
+
+msgid "footer.partners"
+msgstr ""
+
+msgid "footer.products"
+msgstr ""
+
+msgid "footer.rights"
+msgstr ""
+
+msgid "footer.copyright"
+msgstr ""
+
+msgid "modal.product.added"
+msgstr ""
+
+msgid "modal.cart.empty"
+msgstr ""
+
+msgid "home.argumentative.title.arg1"
+msgstr ""
+
+msgid "home.argumentative.content.arg1"
+msgstr ""
+
+msgid "home.argumentative.text.link.arg1"
+msgstr ""
+
+msgid "home.argumentative.title.arg2"
+msgstr ""
+
+msgid "home.argumentative.content.arg2"
+msgstr ""
+
+msgid "home.argumentative.text.link.arg2"
+msgstr ""
+
+msgid "home.argumentative.title.arg3"
+msgstr ""
+
+msgid "home.argumentative.content.arg3"
+msgstr ""
+
+msgid "home.argumentative.text.link.arg3"
+msgstr ""
+
+msgid "home.header.search.speciality.placeholder"
+msgstr ""
+
+msgid "home.header.search.city.placeholder"
+msgstr ""
+
+msgid "home.other.direction.presentation.label"
+msgstr ""
+
+msgid "home.other.direction.become.partner.label"
+msgstr ""
+
+msgid "home.other.direction.discover.label"
+msgstr ""
+
+msgid "home.other.direction.discover"
+msgstr ""
+
+msgid "partner.view.presentation.contact.information"
+msgstr ""
+
+msgid "partner.view.presentation.partner"
+msgstr ""
+
+msgid "partner.view.presentation.contact.button.label"
+msgstr ""
+
+msgid "product.view.modal.added"
+msgstr ""
+
+msgid "product.view.quantity1"
+msgstr ""
+
+msgid "product.view.quantity2"
+msgstr ""
+
+msgid "product.view.quantity3"
+msgstr ""
+
+msgid "product.view.quantity4"
+msgstr ""
+
+msgid "product.view.quantity5"
+msgstr ""
+
+msgid "product.view.quantity6"
+msgstr ""
+
+msgid "product.view.button.label"
+msgstr ""
+
+msgid "search.left.bar.category.label"
+msgstr ""
+
+msgid "search.left.bar.category.name"
+msgstr ""
+
+msgid "search.left.bar.category.brasserie.label"
+msgstr ""
+
+msgid "search.left.bar.category.brasserie.value"
+msgstr ""
+
+msgid "search.left.bar.category.bois.label"
+msgstr ""
+
+msgid "search.left.bar.category.bois.value"
+msgstr ""
+
+msgid "search.left.bar.category.pierre.label"
+msgstr ""
+
+msgid "search.left.bar.category.pierre.value"
+msgstr ""
+
+msgid "search.left.bar.category.label.tri"
+msgstr ""
+
+msgid "search.left.bar.category.name.tri"
+msgstr ""
+
+msgid "search.left.bar.category.label.pertinent"
+msgstr ""
+
+msgid "search.left.bar.category.value.pertinent"
+msgstr ""
+
+msgid "search.left.bar.category.label.prix"
+msgstr ""
+
+msgid "search.left.bar.category.label.lasted"
+msgstr ""
+
+msgid "search.left.bar.category.value.lasted"
+msgstr ""
+
+msgid "search.left.bar.category.value.prix"
+msgstr ""
+
+msgid "ui.buttons.title"
+msgstr ""
+
+msgid "ui.button.component.normal.label"
+msgstr ""
+
+msgid "ui.button.component.primary.label"
+msgstr ""
+
+msgid "ui.button.secondary.label"
+msgstr ""
+
+msgid "ui.button.component.success.label"
+msgstr ""
+
+msgid "ui.button.component.danger.label"
+msgstr ""
+
+msgid "ui.button.component.warning.label"
+msgstr ""
+
+msgid "ui.button.component.info.label"
+msgstr ""
+
+msgid "ui.button.component.dark.label"
+msgstr ""
+
+msgid "ui.colors.title"
+msgstr ""
+
+msgid "ui.gradients.title"
+msgstr ""
+
+msgid "ui.form.title"
+msgstr ""
+
+msgid "ui.form.label"
+msgstr ""
+
+msgid "ui.form.helper"
+msgstr ""
+
+msgid "ui.form.password.label"
+msgstr ""
+
+msgid "ui.form.checkbox.label"
+msgstr ""
+
+msgid "ui.form.select.label"
+msgstr ""
+
+msgid "ui.form.button.submit.label"
+msgstr ""
+
+msgid "ui.form.button.cancel.label"
+msgstr ""
+
+msgid "ui.icon.title"
+msgstr ""
+
+msgid "ui.list.title"
+msgstr ""
+
+msgid "ui.text.around.title"
+msgstr ""
+
+msgid "ui.text.title.main"
+msgstr ""
+
+msgid "ui.text.title.colors"
+msgstr ""
+
+msgid "ui.text.text.primary"
+msgstr ""
+
+msgid "ui.text.text.secondary"
+msgstr ""
+
+msgid "ui.text.text.success"
+msgstr ""
+
+msgid "ui.text.text.danger"
+msgstr ""
+
+msgid "ui.text.text.warning"
+msgstr ""
+
+msgid "ui.text.text.info"
+msgstr ""
+
+msgid "ui.text.text.light"
+msgstr ""
+
+msgid "ui.text.text.dark"
+msgstr ""
+
+msgid "ui.text.text.body"
+msgstr ""
+
+msgid "ui.text.text.muted"
+msgstr ""
+
+msgid "ui.text.text.white"
+msgstr ""
+
+msgid "ui.text.text.black50"
+msgstr ""
+
+msgid "ui.text.text.white50"
+msgstr ""
+
+msgid "ui.text.text.font.title"
+msgstr ""
+
+msgid "ui.text.font.weight.italic"
+msgstr ""
+
+msgid "ui.text.font.weight.normal"
+msgstr ""
+
+msgid "ui.text.font.weight.bolder"
+msgstr ""
+
+msgid "ui.text.font.weight.bold"
+msgstr ""
+
+msgid "ui.text.font.size6"
+msgstr ""
+
+msgid "ui.text.font.size5"
+msgstr ""
+
+msgid "ui.text.font.size4"
+msgstr ""
+
+msgid "ui.text.font.size3"
+msgstr ""
+
+msgid "ui.text.font.size2"
+msgstr ""
+
+msgid "ui.text.font.size1"
+msgstr ""
+
+msgid "ui.text.font.size.title"
+msgstr ""
+
+msgid "header.cart.component.modal.cart.title"
+msgstr ""
+
+msgid "header.component.zartizana"
+msgstr ""
+
+msgid "header.component.search.bar.place.holder"
+msgstr ""
+
+msgid "modal.cart.component.button.clear.cart.label"
+msgstr ""
+
+msgid "modal.product.button.label.return"
+msgstr ""
+
+msgid "product.card.component.button.label"
+msgstr ""
+
+msgid "partner.card.component.button.label"
+msgstr ""
+
+msgid "home.header.support.title"
+msgstr ""
+
+msgid "home.cities.label.nancy"
+msgstr ""
+
+msgid "home.cities.label.lyon"
+msgstr ""
+
+msgid "home.cities.label.paris"
+msgstr ""
+
+msgid "home.cities.title"
+msgstr ""
+
+msgid "header.component.div.search"
+msgstr ""
+
+msgid "header.component.div.our.partners"
+msgstr ""
+
+msgid "header.component.div.info.association"
+msgstr ""
+
+msgid "header.component.div.register"
+msgstr ""
+
+msgid "header.component.div.login"
+msgstr ""
+
+msgid "header.component.div.account"
+msgstr ""
+
+msgid "header.component.div.wishes"
+msgstr ""
+
+msgid "header.component.div.categories"
+msgstr ""
+
+msgid "header.component.div.become.partner"
+msgstr ""
+
+
+
+
+
+

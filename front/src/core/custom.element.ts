@@ -1,4 +1,6 @@
 import {LitElement} from 'lit-element';
+import {injector} from "App/core/container.service";
+import TranslateService from "App/core/translate.service";
 
 export const getComponentSelector = (className: typeof AppComponent): string =>  className.getComponentName();
 
@@ -14,7 +16,15 @@ export const createElement = <T extends AppComponent>(Component: new() => T, arg
 
 export abstract class AppComponent extends LitElement {
 
+    @injector(TranslateService)
+    private translateService: TranslateService;
+
     protected createElement: CallableFunction = createElement;
+
+    protected trans(key: string): string
+    {
+        return this.translateService.translate(key);
+    }
 
     public static getComponentName(): string {
         throw new Error("Method not implemented.");

@@ -16,12 +16,29 @@ export default class IconComponent extends AppComponent {
     @property({type: String})
     private color: Color;
 
+    @property({type: String})
+    private height: string;
+
+    @property({type: String})
+    private width: string;
+
     public connectedCallback(): void {
         this.classList.add(this.color);
         super.connectedCallback();
     }
 
+    public firstUpdated(): void {
+        const svg = this.querySelector('svg');
+
+        if (this.width) {
+            svg.style.width = this.width;
+        }
+        if (this.height) {
+            svg.style.height = this.height;
+        }
+    }
+
     public render(): TemplateResult {
-        return html`${unsafeHTML(icons[this.icon] ? icons[this.icon] : '')}`;
+        return html`<i>${unsafeHTML(icons[this.icon] ? icons[this.icon] : '')}</i>`;
     }
 }

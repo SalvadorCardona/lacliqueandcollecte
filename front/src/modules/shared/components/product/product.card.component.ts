@@ -4,6 +4,7 @@ import {filterPrice} from "App/core/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
 
 export default class ProductCardComponent extends AppComponent {
 
@@ -34,8 +35,8 @@ export default class ProductCardComponent extends AppComponent {
                 ${this.createElement(ButtonComponent, {
                     link: this.product.guid,
                     icon: 'cartPlus',
-                    type: 'primary',
-                    label: 'Ajouter au panier'
+                    type: Color.PRIMARY,
+                    label: this.trans("product.card.component.button.label")
                 })}
             </div>
         `;

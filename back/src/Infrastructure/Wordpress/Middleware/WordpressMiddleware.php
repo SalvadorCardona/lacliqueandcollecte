@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
+use MO;
+use NOOP_Translations;
+use Translations;
 use WP_Error;
 use WP_Post;
 use WP_Post_Type;
@@ -11,9 +14,12 @@ use WP_Query;
 use WP_Role;
 use WP_User;
 use wpdb;
+use WP_Term;
 
 class WordpressMiddleware
 {
+    private const TRANSLATE_DOMAIN = 'zartizana';
+
     public function __construct()
     {
     }
@@ -30,10 +36,11 @@ class WordpressMiddleware
         return $wpdb;
     }
 
-    public function getI18n(): array
+
+    public function getL10n(): Translations|NOOP_Translations
     {
-        global $i18n;
-        return $i18n;
+
+        return get_translations_for_domain(self::TRANSLATE_DOMAIN);
     }
 
     public function getPost(int $postId): ?WP_Post
@@ -174,6 +181,16 @@ class WordpressMiddleware
     public function addPostTypeSupport(string $postType, string|array $feature, mixed ...$args): void
     {
         add_post_type_support($postType, $feature, ...$args);
+    }
+
+    public function getTerms(array $args): ?array
+    {
+        return get_terms($args);
+    }
+
+    public function getTermLink(WP_Term $term): string
+    {
+        return get_term_link($term);
     }
 
     public function getOption(string $option): mixed

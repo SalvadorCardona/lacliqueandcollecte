@@ -9,7 +9,7 @@ interface content {
     title: string;
     text: string;
     link: string;
-    textlink: string;
+    textLink: string;
 }
 
 export default class HomeArgumentativeComponent extends AppComponent {
@@ -18,27 +18,28 @@ export default class HomeArgumentativeComponent extends AppComponent {
         return 'app-home-argumentative';
     }
 
+
     private contentList = [
         {
             image: argument1,
-            title: 'artisana local',
-            text: 'Trouvez les artisans qui sont proches de chez vous, et profitez de leur savoir-faire. Recherchez vos produits par ville.',
+            title: this.trans("home.argumentative.title.arg1"),
+            text: this.trans("home.argumentative.content.arg1"),
             link: '/a-propos',
-            textlink: 'En savoir plus ici...'
+            textLink: this.trans("home.argumentative.text.link.arg1")
         },
         {
             image: argument2,
-            title: 'produits d\'exception',
-            text: 'Accédez à un catalogue de produits artisanaux de qualité, remplissez votre panier, nous nous occupons du reste.',
+            title: this.trans("home.argumentative.title.arg2"),
+            text: this.trans("home.argumentative.content.arg2"),
             link: '/a-propos',
-            textlink: 'En savoir plus ici...'
+            textLink: this.trans("home.argumentative.text.link.arg2")
         },
         {
             image: argument3,
-            title: 'partenariat',
-            text: 'Zartisana aide les artisans locaux à gagner en visibilité. Découvrez les perles cachées de votre région !',
+            title: this.trans("home.argumentative.title.arg3"),
+            text: this.trans("home.argumentative.content.arg3"),
             link: '/a-propos',
-            textlink: 'En savoir plus ici...'
+            textLink: this.trans("home.argumentative.text.link.arg3")
         }
     ] as content[];
 
@@ -51,7 +52,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
                 <h4 class="text-uppercase">${element.title}</h4>
                 <hr>
                 <p>${element.text}</p>
-                <a href="${element.link}"> ${element.textlink} </a>
+                <a href="${element.link}"> ${element.textLink} </a>
             </div>
         `;
     }
@@ -60,7 +61,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
         return html`
             <div class="container p-5">
                 <div class="row">
-                   ${this.contentList.map((element, key) => this.listRender(element, key))}
+                    ${this.contentList.map((element, key) => this.listRender(element, key))}
                 </div>
             </div>
         `;
