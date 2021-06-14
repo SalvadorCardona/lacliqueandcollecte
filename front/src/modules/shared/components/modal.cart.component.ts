@@ -7,6 +7,7 @@ import {html, property, TemplateResult} from 'lit-element';
 import EventService, {events} from "App/core/event.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Icon} from "App/enum/icon.enum";
 import {Color} from "App/enum/color.enum";
 
 export default class ModalCartComponent extends AppComponent {
@@ -68,8 +69,9 @@ export default class ModalCartComponent extends AppComponent {
         return html`
             <div>
                 ${product.name}
-                ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: 'biX'})}
+                ${this.createElement(IconComponent, {$click: this.removeItem(product.key), icon: Icon.BIX})}
             </div>
         `;
     }
 }
+

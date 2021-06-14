@@ -4,6 +4,7 @@ import {filterPrice} from "App/core/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Icon} from "App/enum/icon.enum";
 import {Color} from "App/enum/color.enum";
 
 export default class ProductCardComponent extends AppComponent {
@@ -34,7 +35,7 @@ export default class ProductCardComponent extends AppComponent {
                     mb-3">${filterPrice(this.product.meta.price)}</div>
                 ${this.createElement(ButtonComponent, {
                     link: this.product.guid,
-                    icon: 'cartPlus',
+                    icon: Icon.CART_PLUS,
                     type: Color.PRIMARY,
                     label: this.trans("product.card.component.button.label")
                 })}

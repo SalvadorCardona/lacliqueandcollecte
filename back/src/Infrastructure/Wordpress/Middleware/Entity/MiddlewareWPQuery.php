@@ -258,9 +258,9 @@ class MiddlewareWPQuery
         return $this;
     }
 
-    public function setMaxNumPages(float $maxNumPages): MiddlewareWPQuery
+    public function setMaxNumPages(int $maxNumPages): MiddlewareWPQuery
     {
-        $this->maxNumPages = (int)$maxNumPages;
+        $this->maxNumPages = $maxNumPages;
         return $this;
     }
 }

@@ -2,6 +2,7 @@ import {AppComponent} from "App/core/custom.element";
 import {html, property, TemplateResult} from 'lit-element';
 import {Color} from "App/enum/color.enum";
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
 export default class ButtonComponent extends AppComponent {
 
@@ -12,8 +13,8 @@ export default class ButtonComponent extends AppComponent {
     @property({type: String})
     private type?: Color;
 
-    @property({type: String})
-    private icon?: string;
+    @property({type: Icon})
+    private icon?: Icon;
 
     @property({type: String})
     private label?: string;
@@ -36,11 +37,11 @@ export default class ButtonComponent extends AppComponent {
     public render(): TemplateResult {
         if (this.link) {
             return html`
-            <a class="btn bg-${this.type}" href="${this.link}">
-                ${this.getIcon()}
-                ${this.label}
-            </a>
-        `;
+                <a class="btn bg-${this.type}" href="${this.link}">
+                    ${this.getIcon()}
+                    ${this.label}
+                </a>
+            `;
         }
         return html`
             <button class="btn bg-${this.type}">
@@ -50,7 +51,7 @@ export default class ButtonComponent extends AppComponent {
         `;
     }
 
-    private getIcon(): TemplateResult|string {
+    private getIcon(): TemplateResult | string {
         return this.icon ? this.createElement(IconComponent, {
             icon: this.icon
         }) : ``;

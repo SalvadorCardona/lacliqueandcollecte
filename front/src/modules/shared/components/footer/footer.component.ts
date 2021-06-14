@@ -2,15 +2,16 @@ import {AppComponent} from 'App/core/custom.element';
 import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
 import image from "Media/shared/pattern-footer.svg";
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
-export default class FooterComponent extends AppComponent{
+export default class FooterComponent extends AppComponent {
 
-    public static getComponentName(): string{
+    public static getComponentName(): string {
         return 'app-footer';
     }
 
     public static get styles(): CSSResult {
-        return  css`
+        return css`
             app-footer::after {
               background-image: url('${unsafeCSS(image)}');
             }
@@ -42,13 +43,13 @@ export default class FooterComponent extends AppComponent{
                     <br>
                     <div class="social-wrapper">
                         <a class="m-2" href="fb.com">
-                            ${this.createElement(IconComponent, {icon: 'facebook'})}
+                            ${this.createElement(IconComponent, {icon: Icon.FACEBOOK})}
                         </a>
                         <a class="m-2" href="tw.com">
-                            ${this.createElement(IconComponent, {icon: 'twitter'})}
+                            ${this.createElement(IconComponent, {icon: Icon.TWITTER})}
                         </a>
                         <a class="m-2" href="inst.com">
-                            ${this.createElement(IconComponent, {icon: 'instagram'})}
+                            ${this.createElement(IconComponent, {icon: Icon.INSTAGRAM})}
                         </a>
                     </div>
                     <br>

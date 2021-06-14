@@ -11,6 +11,7 @@ import {html, TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/core/client/product.client";
 import ButtonComponent from "App/modules/shared/components/button.component";
+import {Icon} from "App/enum/icon.enum";
 import {Color} from "App/enum/color.enum";
 
 export default class ProductViewComponent extends AppComponent {
@@ -79,12 +80,12 @@ export default class ProductViewComponent extends AppComponent {
                             <div class="row add-to-basket mt-1">
                                 <div class="col-md-3">
                                     <select id="product-qty" class="form-control">
-                                        <option value="1">${this.trans("product.view.quantity1")}</option>
-                                        <option value="2">${this.trans("product.view.quantity2")}</option>
-                                        <option value="3">${this.trans("product.view.quantity3")}</option>
-                                        <option value="4">${this.trans("product.view.quantity4")}</option>
-                                        <option value="5">${this.trans("product.view.quantity5")}</option>
-                                        <option value="6">${this.trans("product.view.quantity6")}</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
                                     </select>
                                 </div>
                                 ${this.createElement(ButtonComponent,
@@ -92,7 +93,7 @@ export default class ProductViewComponent extends AppComponent {
                                         $click: () => this.addItem(),
                                         classList: 'mt-3',
                                         type: Color.PRIMARY,
-                                        icon: 'cartPlus',
+                                        icon: Icon.CART_PLUS,
                                         label: this.trans("product.view.button.label")
                                     }
                                 )}

@@ -7,7 +7,7 @@ export enum Icon {
     FACEBOOK = 'facebook',
     TWITTER = 'twitter',
     INSTAGRAM = 'instagram',
-    ENVELOPPE = 'enveloppe',
+    ENVELOPE = 'envelope',
     SEARCH = 'search',
     BI_ARROW_RETURN_LEFT = 'biArrowReturnLeft',
     BIX = 'biX',

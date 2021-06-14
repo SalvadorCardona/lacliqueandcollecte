@@ -14,10 +14,10 @@ class WpUserFormatter extends Formatter
     public function format($data): MiddlewareUser
     {
         return (new MiddlewareUser())
-        ->setId($data->ID)
-        ->setDisplayName($data->user_lastname)
-        ->setEmail($data->user_email)
-        ->setNiceName($data->user_nicename)
-        ->setRoles($data->roles);
+            ->setId($data->ID)
+            ->setDisplayName($data->user_lastname)
+            ->setEmail($data->user_email)
+            ->setNiceName($data->user_nicename)
+            ->setRoles($data->roles);
     }
 }

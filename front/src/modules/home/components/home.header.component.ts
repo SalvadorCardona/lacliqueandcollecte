@@ -3,6 +3,7 @@ import {html, TemplateResult} from 'lit-element';
 import logo from "Media/shared/logo.svg";
 import home from "Media/home/home_picture.jpg";
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
 export default class HomeHeaderComponent extends AppComponent {
 
@@ -78,7 +79,7 @@ export default class HomeHeaderComponent extends AppComponent {
                                             align-items-center">
                                         ${this.createElement(IconComponent,
                                             {
-                                                icon: 'search'
+                                                icon: Icon.SEARCH
                                             }
                                         )}
                                     </a>

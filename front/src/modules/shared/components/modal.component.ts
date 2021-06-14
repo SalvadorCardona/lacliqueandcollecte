@@ -1,6 +1,7 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
 export default class ModalComponent extends AppComponent {
 
@@ -25,27 +26,25 @@ export default class ModalComponent extends AppComponent {
     }
 
     private close(e: Event): void {
-        if(e.target !== e.currentTarget) return;
+        if (e.target !== e.currentTarget) return;
         this._$close();
     }
 
     public render(): TemplateResult {
         return html`
-        <div @click="${this.close}" class="modal-background">
-            <div class="modal-content col-md-3 position-relative mt-0">
-                <div class="modal-header
-                gradient-primary 
-                position-absolute 
-                top-0 
-                start-0
-                w-100
-                ">
-                    <span class="text-uppercase">${this._title || ''}</span>
-                    ${this.createElement(IconComponent, {$click: () => this._$close(), icon: 'biX'})}
+            <div @click="${this.close}" class="modal-background">
+                <div class="modal-content col-md-3 position-relative mt-0">
+                    <div class="modal-header
+                           gradient-primary 
+                           position-absolute 
+                           top-0 
+                           start-0
+                           w-100">
+                        <span class="text-uppercase">${this._title || ''}</span>
+                        ${this.createElement(IconComponent, {$click: () => this._$close(), icon: Icon.BIX})}
+                    </div>
+                    <div class="modal-body">${this._body}</div>
                 </div>
-                <div class="modal-body">${this._body}</div>
-            </div>
-        </div>`;
+            </div>`;
     }
 }
-

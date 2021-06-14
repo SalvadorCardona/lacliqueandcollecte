@@ -9,6 +9,7 @@ import ProductLoopComponent from "App/modules/shared/components/product/product.
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
+import {Icon} from "App/enum/icon.enum";
 import {Color} from "App/enum/color.enum";
 
 export default class PartnerViewComponent extends AppComponent {
@@ -75,29 +76,29 @@ export default class PartnerViewComponent extends AppComponent {
     private getContact(): TemplateResult {
         return html`
             <div>
-                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: 'telephone'})} :
+                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: Icon.TELEPHONE})} :
                 ${this.partnerPost.meta?.phone}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: 'facebook'})} :
+                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: Icon.FACEBOOK})} :
                 ${this.partnerPost.meta?.facebook}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: 'twitter'})} :
+                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: Icon.TWITTER})} :
                 ${this.partnerPost.meta?.twitter}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: 'instagram'})} :
+                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: Icon.INSTAGRAM})} :
                 ${this.partnerPost.meta?.instagram}
             </div>
             <div>
-                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: 'geoLat'})} :
+                ${this.createElement(IconComponent, {color: Color.PRIMARY, icon: Icon.GEOLAT})} :
                 ${this.partnerPost.meta?.street}, ${this.partnerPost.meta?.cityCode}, ${this.partnerPost.meta?.city}
             </div>
             <div>
                 ${this.createElement(ButtonComponent,
                         {
-                            icon: 'envelope',
+                            icon: Icon.ENVELOPE,
                             type: Color.PRIMARY,
                             label: this.trans("partner.view.presentation.contact.button.label")
                         }
