@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Infrastructure\PartnerRequest\Api;
-
 
 use App\Infrastructure\PartnerRequest\Entity\PartnerRequest;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;

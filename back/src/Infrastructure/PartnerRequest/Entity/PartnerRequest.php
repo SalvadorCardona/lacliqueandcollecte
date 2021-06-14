@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Infrastructure\PartnerRequest\Entity;
-
 
 class PartnerRequest
 {
