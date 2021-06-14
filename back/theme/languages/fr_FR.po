@@ -446,22 +446,6 @@ msgstr "Colors"
 msgid "ui.colors.warning"
 msgstr "Warning"
 
-#| msgid "uiDevComponentRouteHome"
-msgid "ui.dev.component.route.home"
-msgstr "#home"
-
-#| msgid "uiDevComponentRoutePartner"
-msgid "ui.dev.component.route.partner"
-msgstr "#partner"
-
-#| msgid "uiDevComponentRouteProduit"
-msgid "ui.dev.component.route.produit"
-msgstr "#produit"
-
-#| msgid "uiDevComponentRouteSearch"
-msgid "ui.dev.component.route.search"
-msgstr "#search"
-
 #| msgid "uiFormButtonCancelLabel"
 msgid "ui.form.button.cancel.label"
 msgstr "Cancel"

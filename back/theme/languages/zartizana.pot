@@ -444,18 +444,6 @@ msgstr ""
 msgid "ui.text.font.size.title"
 msgstr ""
 
-msgid "ui.dev.component.route.home"
-msgstr ""
-
-msgid "ui.dev.component.route.search"
-msgstr ""
-
-msgid "ui.dev.component.route.produit"
-msgstr ""
-
-msgid "ui.dev.component.route.partner"
-msgstr ""
-
 msgid "header.cart.component.modal.cart.title"
 msgstr ""
 

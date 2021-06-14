@@ -33,13 +33,13 @@ export default class DevComponent extends AppComponent {
         this.route = window.location.hash;
 
         switch (this.route) {
-            case this.trans("ui.dev.component.route.home"):
+            case '#home':
                 return this.createElement(HomeViewComponent);
-            case this.trans("ui.dev.component.route.search"):
+            case '#search':
                 return this.createElement(SearchViewComponent);
-            case this.trans("ui.dev.component.route.partner"):
+            case '#partner':
                 return this.createElement(PartnerViewComponent, {partnerPostId: 106});
-            case this.trans("ui.dev.component.route.produit"):
+            case '#product':
                 return this.createElement(ProductViewComponent, {productId: 139});
             default:
                 return this.createElement(UiViewComponent);
