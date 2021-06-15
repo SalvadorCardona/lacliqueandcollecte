@@ -7,6 +7,7 @@ import {html, property, TemplateResult} from "lit-element";
 import ModalService from "App/core/modal.service";
 import ModalCartComponent from "App/modules/shared/components/modal.cart.component";
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
 export default class HeaderCartComponent extends AppComponent {
 
@@ -15,7 +16,7 @@ export default class HeaderCartComponent extends AppComponent {
     }
 
     @property({type: Object})
-    private cart: CartType|null = null;
+    private cart: CartType | null = null;
 
     @injector(CartService)
     private cartService: CartService;
@@ -37,14 +38,14 @@ export default class HeaderCartComponent extends AppComponent {
         this.modalService.open(modalCartComponent, this.trans("header.cart.component.modal.cart.title"));
     }
 
-     private cartUpdated(): void {
+    private cartUpdated(): void {
         this.cart = this.cartService.cart;
     }
 
     public render(): TemplateResult {
         return html`
             <span @click="${this.openModal}">
-                ${this.createElement(IconComponent, {icon: 'cart'})}
+                ${this.createElement(IconComponent, {icon: Icon.CART})}
                 <div class="counter
                     text-white
                     bg-primary

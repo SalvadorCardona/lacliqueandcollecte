@@ -7,6 +7,7 @@ import EventService from "App/core/event.service";
 import DevComponent from "App/modules/dev/components/dev.components";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import {Color} from "App/enum/color.enum";
+import {Icon} from "App/enum/icon.enum";
 
 export default class DevMenuComponent extends AppComponent {
 
@@ -32,7 +33,7 @@ export default class DevMenuComponent extends AppComponent {
             </div>
             ${this.createElement(ButtonComponent, {
                 classList: 'ms-2 mb-2 position-fixed start-0 bottom-0',
-                icon: 'biGearWide',
+                icon: Icon.BI_GEAR_WIDE,
                 type: Color.SUCCESS,
                 $click: () => this.toggleShow()
             })};

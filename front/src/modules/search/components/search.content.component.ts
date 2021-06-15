@@ -20,5 +20,4 @@ export default class SearchContentComponent extends AppComponent {
             </div>
         `;
     }
-
 }

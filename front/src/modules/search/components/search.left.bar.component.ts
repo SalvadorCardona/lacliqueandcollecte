@@ -2,6 +2,7 @@ import {AppComponent} from "App/core/custom.element";
 import {html, TemplateResult} from "lit-element";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 import IconComponent from "App/modules/shared/components/icon.component";
+import {Icon} from "App/enum/icon.enum";
 
 interface ItemSearch {
     label: string;
@@ -69,8 +70,7 @@ export default class SearchLeftBarComponent extends AppComponent {
         return 'app-search-left-bar';
     }
 
-    private toggleCategory($e: MouseEvent): void
-    {
+    private toggleCategory($e: MouseEvent): void {
         const $elem = $e.target as Element;
 
         if ($elem.classList.contains(this.closedClass)) {
@@ -81,8 +81,7 @@ export default class SearchLeftBarComponent extends AppComponent {
         $elem.classList.add(this.closedClass)
     }
 
-    private onChange(e: Event): void
-    {
+    private onChange(e: Event): void {
         console.log(e);
         // const elem = e.target as HTMLInputElement;
         // const [value, checked] = [elem.value, elem.checked];
@@ -96,11 +95,11 @@ export default class SearchLeftBarComponent extends AppComponent {
                     ${itemSearch.label}
                 </label>
             </div>
-            
+
         `;
     }
 
-    private renderCategorySearch(categorySearch :CategorySearch): TemplateResult {
+    private renderCategorySearch(categorySearch: CategorySearch): TemplateResult {
         return html`
             <div @click="${this.toggleCategory}" class="head-categories
                 p-3
@@ -109,7 +108,7 @@ export default class SearchLeftBarComponent extends AppComponent {
                 d-flex
                 justify-content-between">
                 <span class="text-white fw-bold fs-5">${categorySearch.categoryLabel}</span>
-                ${this.createElement(IconComponent, {color: 'white', icon: 'biChevronCompactRight'})}
+                ${this.createElement(IconComponent, {color: 'white', icon: Icon.BI_CHEVRON_COMPACT_RIGHT})}
             </div>
             <div class="p-2">
                 ${categorySearch.itemsSearch.map(itemSearch => {
@@ -120,7 +119,7 @@ export default class SearchLeftBarComponent extends AppComponent {
                             this.onChange
                     );
                 })}
-            </div> 
+            </div>
         `;
     }
 
