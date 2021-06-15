@@ -35,7 +35,6 @@ class WordpressMiddleware
         return $wpdb;
     }
 
-
     public function getL10n(): Translations|NOOP_Translations
     {
 

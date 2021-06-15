@@ -5,7 +5,6 @@ namespace App\Infrastructure\PartnerRequest\Api;
 use App\Infrastructure\PartnerRequest\Entity\PartnerRequest;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Api\HttpResponse;
-use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class PartnerRequestApi extends AbstractApiController
 {
