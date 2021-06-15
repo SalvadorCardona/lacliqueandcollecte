@@ -15,15 +15,13 @@ export default class ConfigurationService implements OnInit {
     private _configuration: MiddlewareConfigurationType = {} as MiddlewareConfigurationType;
 
     public set configuration(value: MiddlewareConfigurationType) {
-        this._configuration = keysToCamel(value) as MiddlewareConfigurationType;
-        //TODO : Need to refacto
-        this._configuration.translation = value.translation;
+        this._configuration = value as MiddlewareConfigurationType;
     }
 
     public get configuration(): MiddlewareConfigurationType {
         return this._configuration;
     }
-
+    
     public onInit(): void {
         if (window['middlewareConfiguration']) {
             this.configuration = window['middlewareConfiguration'];

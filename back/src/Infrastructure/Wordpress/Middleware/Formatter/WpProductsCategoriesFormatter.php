@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
+use App\Infrastructure\Formatter\HelperFormatter;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WP_Term;
 
@@ -17,10 +18,14 @@ class WpProductsCategoriesFormatter extends Formatter
      */
     public function format($data): array
     {
-        return array_map(function (WP_Term $term) {
-            $data = $term->to_array();
-            $data['url'] = $this->wordpressMiddleware->getTermLink($term);
-            return $data;
-        }, $data);
+        return array_values(
+            HelperFormatter::keysToCamel(
+                array_map(function (WP_Term $term) {
+                    $data = $term->to_array();
+                    $data['url'] = $this->wordpressMiddleware->getTermLink($term);
+                    return $data;
+                }, $data)
+            )
+        );
     }
 }
