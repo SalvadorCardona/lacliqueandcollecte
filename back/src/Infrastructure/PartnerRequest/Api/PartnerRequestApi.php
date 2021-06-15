@@ -5,17 +5,13 @@ namespace App\Infrastructure\PartnerRequest\Api;
 use App\Infrastructure\PartnerRequest\Entity\PartnerRequest;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Api\HttpResponse;
-use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class PartnerRequestApi extends AbstractApiController
 {
-    public function __construct(
-        private WordpressMiddleware $wordpressMiddleware
-    ) {
-    }
 
     public function __invoke(): HttpResponse
     {
+        $request = $this->request->get_param('request');
         $partnerRequest = new PartnerRequest();
         $partnerRequest->firstName = (string) $this->request->get_param('firstName');
         $partnerRequest->lastName = (string) $this->request->get_param('lastName');
