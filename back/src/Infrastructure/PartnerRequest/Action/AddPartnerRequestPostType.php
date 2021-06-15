@@ -41,7 +41,7 @@ class AddPartnerRequestPostType implements ActionInterface
                 Text::make($this->wordpressMiddleware->trans('phone'), 'phone'),
                 Email::make($this->wordpressMiddleware->trans('email'), 'email'),
                 Text::make($this->wordpressMiddleware->trans('siretNumber'), 'siretNumber'),
-	            Textarea::make($this->wordpressMiddleware->trans('description'), 'description'),
+                Textarea::make($this->wordpressMiddleware->trans('description'), 'description'),
             ]
         ]);
     }
