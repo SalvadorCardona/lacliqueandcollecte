@@ -649,3 +649,9 @@ msgstr "Produits"
 #| msgid "uiViewComponentTitle"
 msgid "ui.view.component.title"
 msgstr "Components"
+
+msgid "uiButtonComponentGeoLatType"
+msgstr "primary"
+
+msgid "uiTextAroundClassList"
+msgstr "app-wrapper"

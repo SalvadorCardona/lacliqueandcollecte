@@ -1,5 +1,4 @@
 import {AppComponent} from 'App/core/custom.element';
-
 import {html, TemplateResult} from 'lit-element';
 import cookie from "Media/shared/cookie.svg";
 import ButtonComponent from "App/modules/shared/components/button.component";
