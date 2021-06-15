@@ -6,7 +6,7 @@ import SearchViewComponent from "App/modules/search/components/search.view.compo
 import UiViewComponent from "App/modules/dev/components/ui/ui.view.component";
 import ProductViewComponent from "App/modules/product/components/product.view.component";
 import PartnerViewComponent from "App/modules/partner/components/partner.view.component";
-import RequestPartnerViewComponent from "App/modules/partner-request/components/request.partner.view.component";
+import RequestPartnerViewComponent from "App/modules/partner-request/components/partner.request.view.component";
 
 export default class DevComponent extends AppComponent {
 

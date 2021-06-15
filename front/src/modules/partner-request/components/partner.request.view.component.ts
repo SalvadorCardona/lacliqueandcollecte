@@ -1,10 +1,10 @@
 import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
 
-export default class RequestPartnerViewComponent extends AppComponent {
+export default class PartnerRequestViewComponent extends AppComponent {
 
     public static getComponentName(): string {
-        return 'app-request-partner-view';
+        return 'app-partner-request-view';
     }
 
     public render(): TemplateResult {
