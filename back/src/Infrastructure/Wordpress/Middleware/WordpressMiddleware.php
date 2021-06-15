@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
-use MO;
 use NOOP_Translations;
 use Translations;
 use WP_Error;
@@ -35,7 +34,6 @@ class WordpressMiddleware
         global $wpdb;
         return $wpdb;
     }
-
 
     public function getL10n(): Translations|NOOP_Translations
     {
@@ -196,7 +194,7 @@ class WordpressMiddleware
 
     public function getHomeUrl(): string
     {
-    	return get_home_url();
+        return get_home_url();
     }
 
     public function getTerms(array $args): ?array
@@ -212,5 +210,15 @@ class WordpressMiddleware
     public function getOption(string $option): mixed
     {
         return get_option($option);
+    }
+
+    public function isProduct(): bool
+    {
+        return is_product();
+    }
+
+    public function isTax(): bool
+    {
+        return is_tax();
     }
 }

@@ -23,10 +23,10 @@ class Kernel
             /** @var ResourcesLoader $masterManager */
             $masterManager = $container->get(ResourcesLoader::class);
         } catch (Exception $e) {
-            if (isset($container)) {
+            if (!empty($container)) {
                 /** @var Logger $logger */
                 $logger = $container->get(Logger::class);
-                $logger->critical($e);
+                $logger->critical($e->getMessage());
             }
 
             return;

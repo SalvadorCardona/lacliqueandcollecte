@@ -3,7 +3,7 @@
 /**
  * The template for displaying singular post-types: posts, pages and user-defined custom post types.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (! defined('ABSPATH')) {

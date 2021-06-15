@@ -3,7 +3,7 @@
 /**
  * The template for displaying search results.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (! defined('ABSPATH')) {

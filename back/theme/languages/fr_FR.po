@@ -122,8 +122,7 @@ msgstr ""
 msgid "home.argumentative.content.arg2"
 msgstr ""
 "Accédez à un catalogue de produits artisanaux de qualité, remplissez votre "
-"panier, nous nous occupons du reste.\n"
-"            "
+"panier, nous nous occupons du reste."
 
 #| msgid "homeArgumentiveContentArg3"
 msgid "home.argumentative.content.arg3"
@@ -287,33 +286,6 @@ msgstr "Description :"
 #| msgid "productViewModalAdded"
 msgid "product.view.modal.added"
 msgstr "Votre produit a été enregistré"
-
-#| msgid "productViewQuantity1"
-msgid "product.view.quantity1"
-msgstr "1"
-
-#| msgid "productViewQuantity2"
-msgid "product.view.quantity2"
-msgstr "2"
-
-#| msgid "productViewQuantity3"
-msgid "product.view.quantity3"
-msgstr "3"
-
-#| msgid "productViewQuantity4"
-msgid "product.view.quantity4"
-msgstr "4"
-
-#| msgid "productViewQuantity5"
-msgid "product.view.quantity5"
-msgstr "5"
-
-#| msgid "productViewQuantity6"
-msgid "product.view.quantity6"
-msgstr "6"
-
-msgid "productViewButtonAdd"
-msgstr "mt-3"
 
 #| msgid "searchLeftBarCategoyBoisLabel"
 msgid "search.left.bar.category.bois.label"

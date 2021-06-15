@@ -6,7 +6,6 @@ import HomeArgumentativeComponent from "App/modules/home/components/home.argumen
 import HomeProductListComponent from "App/modules/home/components/home.product.list.component";
 import HomeCitiesListComponent from "App/modules/home/components/home.cities.list.component";
 import HomeCategoriesListComponent from "App/modules/home/components/home.categories.list.component";
-import HomeJobsListComponent from "App/modules/home/components/home.jobs.list.component";
 import Module from "App/types/module.type";
 
 export default {
@@ -19,6 +18,5 @@ export default {
         HomeProductListComponent,
         HomeCitiesListComponent,
         HomeCategoriesListComponent,
-        HomeJobsListComponent
     ]
 } as Module;

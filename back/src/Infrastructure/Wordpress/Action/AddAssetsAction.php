@@ -32,7 +32,7 @@ class AddAssetsAction implements ActionInterface
         }
     }
 
-    public static function getAction(): string
+    public static function getName(): string
     {
         return 'wp_enqueue_scripts';
     }

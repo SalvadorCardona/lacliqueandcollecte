@@ -5,7 +5,6 @@ import HomeArgumentativeComponent from "App/modules/home/components/home.argumen
 import HomeOtherDirectionComponent from "App/modules/home/components/home.other.direction.component";
 import HomeProductListComponent from "App/modules/home/components/home.product.list.component";
 import HomePartnerListComponent from "App/modules/home/components/home.partner.list.component";
-import HomeJobsListComponent from "App/modules/home/components/home.jobs.list.component";
 import HomeCitiesListComponent from "App/modules/home/components/home.cities.list.component";
 import HomeCategoriesListComponent from "App/modules/home/components/home.categories.list.component";
 
@@ -19,12 +18,11 @@ export default class HomeViewComponent extends AppComponent {
         return html`
             ${this.createElement(HomeHeaderComponent)}
             ${this.createElement(HomeArgumentativeComponent)}
-            ${this.createElement(HomeOtherDirectionComponent)}
             ${this.createElement(HomePartnerListComponent)}
             ${this.createElement(HomeProductListComponent)}
-            ${this.createElement(HomeJobsListComponent)}
             ${this.createElement(HomeCitiesListComponent)}
             ${this.createElement(HomeCategoriesListComponent)}
+            ${this.createElement(HomeOtherDirectionComponent)}
         `;
     }
 }

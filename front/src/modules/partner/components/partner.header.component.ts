@@ -3,7 +3,6 @@ import {html, property, TemplateResult} from "lit-element";
 import {PartnerPost} from "App/types/partner.type";
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Icon} from "App/enum/icon.enum";
-import {Color} from "App/enum/color.enum";
 
 export default class PartnerHeaderComponent extends AppComponent {
 
@@ -42,26 +41,26 @@ export default class PartnerHeaderComponent extends AppComponent {
                 justify-content-end">
                     <a href="">
                         ${this.createElement(IconComponent,
-                                {
-                                    classList: 'md-2',
-                                    icon: Icon.FACEBOOK,
-                                }
+                            {
+                                classList: 'md-2',
+                                icon: Icon.FACEBOOK,
+                            }
                         )}
                     </a>
                     <a href="">
                         ${this.createElement(IconComponent,
-                                {
-                                    classList: 'md-2',
-                                    icon: Icon.INSTAGRAM
-                                }
+                            {
+                                classList: 'md-2',
+                                icon: Icon.INSTAGRAM
+                            }
                         )}
                     </a>
                     <a href="">
                         ${this.createElement(IconComponent,
-                                {
-                                    classList: 'md-2',
-                                    icon: Icon.TWITTER
-                                }
+                            {
+                                classList: 'md-2',
+                                icon: Icon.TWITTER
+                            }
                         )}
                     </a>
                 </div>

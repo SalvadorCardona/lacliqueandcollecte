@@ -228,23 +228,6 @@ msgstr ""
 msgid "product.view.modal.added"
 msgstr ""
 
-msgid "product.view.quantity1"
-msgstr ""
-
-msgid "product.view.quantity2"
-msgstr ""
-
-msgid "product.view.quantity3"
-msgstr ""
-
-msgid "product.view.quantity4"
-msgstr ""
-
-msgid "product.view.quantity5"
-msgstr ""
-
-msgid "product.view.quantity6"
-msgstr ""
 
 msgid "product.view.button.label"
 msgstr ""

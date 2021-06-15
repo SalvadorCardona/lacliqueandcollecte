@@ -59,7 +59,7 @@ class AddCityAction implements ActionInterface
         $this->wordpressMiddleware->registerTaxonomy('city', [Partner::POST_TYPE_NAME, Product::POST_TYPE_NAME], $args);
     }
 
-    public static function getAction(): string
+    public static function getName(): string
     {
         return 'init';
     }

@@ -3,7 +3,7 @@
 /**
  * The template for displaying sidebar.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (! defined('ABSPATH')) {

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace App\Infrastructure\Partner\Action;
 
 use App\Infrastructure\Partner\Entity\Partner;
-use App\Infrastructure\Woocommerce\Entity\Product;
 use App\Infrastructure\Wordpress\Action\ActionInterface;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use WordPlate\Acf\Fields\Email;
@@ -16,7 +15,6 @@ use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Fields\Url;
 use WordPlate\Acf\Location;
 
-// TODO: I need to separated
 class AddPostTypePartnerAction implements ActionInterface
 {
 
@@ -26,24 +24,6 @@ class AddPostTypePartnerAction implements ActionInterface
 
     public function __invoke(): void
     {
-        $this->wordpressMiddleware->addRole(
-            Partner::POST_TYPE_NAME,
-            Partner::POST_TYPE_NAME,
-            ['publish_posts' => true, 'read' => true, 'edit_posts' => true]
-        );
-
-
-        $this->wordpressMiddleware->addFilter('wp_dropdown_users_args', function ($query_args) {
-            $post = $this->wordpressMiddleware->getCurrentPost();
-
-            if ($post->post_type === Partner::POST_TYPE_NAME || $post->post_type === Product::POST_TYPE_NAME) {
-                $query_args['who'] = '';
-                $query_args['role__in'] = [Partner::POST_TYPE_NAME, 'administrator'];
-            }
-
-            return $query_args;
-        }, 10, 2);
-
         $this->wordpressMiddleware->registerPostType(Partner::POST_TYPE_NAME, [
             'label' => $this->wordpressMiddleware->trans('Partenaire'),
             'public' => true,
@@ -84,7 +64,7 @@ class AddPostTypePartnerAction implements ActionInterface
         ]);
     }
 
-    public static function getAction(): string
+    public static function getName(): string
     {
         return 'init';
     }

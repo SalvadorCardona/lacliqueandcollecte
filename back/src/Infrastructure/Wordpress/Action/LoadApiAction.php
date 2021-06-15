@@ -15,7 +15,7 @@ class LoadApiAction implements ActionInterface
         $this->apiLoaderRegister->makeRegister();
     }
 
-    public static function getAction(): string
+    public static function getName(): string
     {
         return 'rest_api_init';
     }
