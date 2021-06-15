@@ -490,6 +490,8 @@ msgstr ""
 msgid "header.component.div.become.partner"
 msgstr ""
 
+msgid "cookies.banner.test"
+msgstr ""
 
 
 
