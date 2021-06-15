@@ -26,6 +26,8 @@ if (is_product()) {
     echo "<app-home-view></app-home-view>";
 } elseif (is_tax()) {
     echo "<app-search-view></app-search-view>";
+} elseif ($post->ID === 91) {
+    echo "<app-request-partner-view></app-request-partner-view>";
 } elseif (is_singular()) {
     get_template_part('template-parts/single');
 } elseif (is_archive()) {

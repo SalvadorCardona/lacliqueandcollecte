@@ -19,6 +19,7 @@ import searchModule from "App/modules/search/search.modules";
 import SearchClient from "App/core/client/search.client";
 import SearchService from "App/core/search.service";
 import TranslateService from "App/core/translate.service";
+import requestModule from "App/modules/partner-request/request.partner.modules";
 
 export default [
     homeModule,
@@ -27,6 +28,7 @@ export default [
     partnerModule,
     devModule,
     searchModule,
+    requestModule,
     {
         services: [
             ModalService,

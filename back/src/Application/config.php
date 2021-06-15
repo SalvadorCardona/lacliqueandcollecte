@@ -8,6 +8,7 @@ use App\Infrastructure\Manager\ResourcesLoader;
 use App\Infrastructure\Partner\Action\AddPostTypePartnerAction;
 use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
+use App\Infrastructure\PartnerRequest\Api\PartnerRequestApi;
 use App\Infrastructure\Search\Api\SearchApi;
 use App\Infrastructure\Woocommerce\Action\WoocommerceSupportAction;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
@@ -27,6 +28,7 @@ return [
     'publicDir' => __DIR__ . '/../../web',
     'resourcesList' => [
         ActionManager::class,
+        PartnerRequestApi::class,
         ApiLoaderManager::class,
         FilterManager::class,
         WordpressThemeSupportAction::class,
