@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
+use App\Infrastructure\Formatter\HelperFormatter;
+use App\Infrastructure\Wordpress\Enum\TaxonomyType;
 use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareConfiguration;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpMenuFormatter;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpProductsCategoriesFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpQueryFormatter;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpTranslateFormatter;
 use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
 
 class MiddlewareConfigurationFactory
@@ -39,9 +44,8 @@ class MiddlewareConfigurationFactory
             ->setSiteUrl($this->wordpressMiddleware->getSiteUrl())
             ->setWpQuery($this->wpQueryFormatter->format($this->wordpressMiddleware->getCurrentWpQuery()))
             ->setWcStoreApi($this->wordpressMiddleware->wpCreateNonce('wc_store_api'))
-            ->setMainMenu($this->wpMenuFormatter->keysToCamel($this->wordpressMiddleware->wpGetNavMenuItems('main-menu')));
+            ->setMainMenu($this->wpMenuFormatter->format($this->wordpressMiddleware->wpGetNavMenuItems('main-menu')))
             ->setTranslation($this->wpTranslateFormatter->format($this->wordpressMiddleware->getL10n()->entries))
             ->setProductsCategories($productCategories);
-            ->setMainMenu($this->wordpressMiddleware->keysToCamel($this->wordpressMiddleware->wpGetNavMenuItems('main-menu')));
     }
 }

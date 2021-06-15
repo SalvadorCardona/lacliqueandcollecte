@@ -8,8 +8,6 @@ import {Collapse} from 'bootstrap';
 import {Color} from "App/enum/color.enum";
 import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 
-//TODO: Change icon's color
-
 export default class HeaderMobileComponent extends AppComponent {
     private selector: string = 'menu-mobile';
 
@@ -21,7 +19,7 @@ export default class HeaderMobileComponent extends AppComponent {
         return 'app-header-mobile';
     }
 
-    @property()
+    @property({type: Array})
     private categories?: Array<MiddlewareCategory> = null;
 
     @injector(ConfigurationService)

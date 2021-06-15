@@ -3,6 +3,7 @@
 namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
+use App\Infrastructure\Formatter\HelperFormatter;
 
 class WpMenuFormatter extends Formatter
 {
@@ -11,5 +12,6 @@ class WpMenuFormatter extends Formatter
      */
     public function format($data): array
     {
+        return HelperFormatter::keysToCamel($data);
     }
 }
