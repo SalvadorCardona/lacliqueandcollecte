@@ -35,6 +35,7 @@ class WordpressMiddleware
         return $wpdb;
     }
 
+
     public function getL10n(): Translations|NOOP_Translations
     {
 
@@ -220,5 +221,10 @@ class WordpressMiddleware
     public function isTax(): bool
     {
         return is_tax();
+    }
+
+    public function wpMail(string|array $to, string $subject, string $message, null|string|array $headers, ?array $attachments): bool
+    {
+        return wp_mail($to, $subject, $message, $headers, $attachments);
     }
 }
