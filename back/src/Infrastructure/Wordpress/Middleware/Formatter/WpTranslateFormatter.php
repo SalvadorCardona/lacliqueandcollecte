@@ -10,7 +10,7 @@ class WpTranslateFormatter extends Formatter
     {
         $translations = [];
         foreach ($data as $key => $trans) {
-            $translations[$key] = $trans->translations[0];
+            $translations[$key] = current($trans->translations);
         }
 
         return $translations;

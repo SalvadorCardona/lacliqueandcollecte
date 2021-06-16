@@ -16,10 +16,6 @@
   "keywords": [
     "wordpress, slim, typescript"
   ],
-  "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
   "repositories": [
     {
       "type": "composer",

@@ -28,15 +28,16 @@ class ProductFormatter extends Formatter
         foreach (Product::META_LIST as $field) {
             if (isset($meta[$field])) {
                 $fieldValue = $meta[$field];
-                $metaCleaned[$field] = count($fieldValue) > 1 ? $fieldValue : $fieldValue[0];
+                $metaCleaned[$field] = count($fieldValue) > 1 ? $fieldValue : current($fieldValue);
             }
         }
 
         if (isset($metaCleaned[MetaType::THUMBNAIL])) {
-            $metaCleaned['thumbnail'] = $this->wordpressMiddleware->getAttachmentImageSrc((int) $metaCleaned[MetaType::THUMBNAIL])[0];
+            $metaCleaned['thumbnail'] = current($this->wordpressMiddleware->getAttachmentImageSrc((int) $metaCleaned[MetaType::THUMBNAIL]));
         }
 
         $dataFormatted = (array) $data;
+        $dataFormatted['guid'] = $this->wordpressMiddleware->getPermalink($data);
         $dataFormatted['meta'] = $metaCleaned;
 
         return $dataFormatted;

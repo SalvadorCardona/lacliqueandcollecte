@@ -8,5 +8,5 @@ abstract class AbstractFilter
 {
     abstract public function __invoke(): mixed;
 
-    abstract public function getFilterName(): string;
+    abstract public static function getName(): string;
 }

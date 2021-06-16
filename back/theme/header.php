@@ -5,7 +5,7 @@
  *
  * This is the template that displays all of the <head> section, opens the <body> tag and adds the site's header.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (! defined('ABSPATH')) {

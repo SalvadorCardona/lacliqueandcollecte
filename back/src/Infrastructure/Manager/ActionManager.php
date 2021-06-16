@@ -12,12 +12,13 @@ class ActionManager extends AbstractManager
     public function __construct(private WordpressMiddleware $wordpressMiddleware)
     {
     }
+
     public function addResource(mixed $resource): void
     {
         /** @var ActionInterface $resource */
         $this->resources [] = $resource;
 
-        $this->wordpressMiddleware->addAction($resource::getAction(), $resource, 1000);
+        $this->wordpressMiddleware->addAction($resource::getName(), $resource, 1000);
     }
 
     public function isAvailableResource(mixed $entity): bool

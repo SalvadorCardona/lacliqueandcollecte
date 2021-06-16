@@ -5,7 +5,7 @@
  *
  * Contains the body & html closing tags.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (!defined('ABSPATH')) {

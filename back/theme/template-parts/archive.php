@@ -3,7 +3,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package HelloElementor
+ * @package ZartizanaTheme
  */
 
 if (! defined('ABSPATH')) {

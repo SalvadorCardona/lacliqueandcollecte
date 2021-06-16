@@ -73,7 +73,7 @@ class WordpressThemeSupportAction implements ActionInterface
             ->addThemeSupport('add_theme_support');
     }
 
-    public static function getAction(): string
+    public static function getName(): string
     {
         return 'after_setup_theme';
     }

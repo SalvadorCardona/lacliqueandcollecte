@@ -4,7 +4,6 @@ FRONT_DIR = ./front
 BACK_DIR = ./back
 
 GREEN	=\033[0m\e[1m\e[32m
-COMPOSER = composer.phar*
 
 install: install-php database-import install-asset install-common clean
 
@@ -16,6 +15,7 @@ install-asset:
 	cd front && yarn install && yarn build
 
 install-php:
+	rm -f ${BACK_DIR}/composer.phar
 	cd ${BACK_DIR} && wget https://getcomposer.org/download/2.0.12/composer.phar
 	cd ${BACK_DIR} && cp .env.dev .env
 	cd ${BACK_DIR} && php composer.phar install
@@ -52,5 +52,4 @@ lint:
 
 clean:
 	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
-	rm -f ${BACK_DIR}/$(COMPOSER)
 	@echo  -e '${GREEN}success : all composer.phar and themes folder delete'

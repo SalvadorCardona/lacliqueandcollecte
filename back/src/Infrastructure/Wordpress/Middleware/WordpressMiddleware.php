@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\Infrastructure\Wordpress\Middleware;
 
-use MO;
 use NOOP_Translations;
 use Translations;
 use WP_Error;
@@ -36,11 +35,15 @@ class WordpressMiddleware
         return $wpdb;
     }
 
-
     public function getL10n(): Translations|NOOP_Translations
     {
 
         return get_translations_for_domain(self::TRANSLATE_DOMAIN);
+    }
+
+    public function getCurrentPost(): ?WP_Post
+    {
+        return get_post();
     }
 
     public function getPost(int $postId): ?WP_Post
@@ -183,6 +186,17 @@ class WordpressMiddleware
         add_post_type_support($postType, $feature, ...$args);
     }
 
+    public function getPermalink(int|WP_Post $post, bool $leaveName = false): ?string
+    {
+        $permalink = get_permalink($post, $leaveName);
+        return $permalink ?: null;
+    }
+
+    public function getHomeUrl(): string
+    {
+        return get_home_url();
+    }
+
     public function getTerms(array $args): ?array
     {
         return get_terms($args);
@@ -196,5 +210,15 @@ class WordpressMiddleware
     public function getOption(string $option): mixed
     {
         return get_option($option);
+    }
+
+    public function isProduct(): bool
+    {
+        return is_product();
+    }
+
+    public function isTax(): bool
+    {
+        return is_tax();
     }
 }

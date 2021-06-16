@@ -6,15 +6,21 @@ use App\Infrastructure\Manager\ApiLoaderManager;
 use App\Infrastructure\Manager\FilterManager;
 use App\Infrastructure\Manager\ResourcesLoader;
 use App\Infrastructure\Partner\Action\AddPostTypePartnerAction;
+use App\Infrastructure\Partner\Action\AddRolePartnerAction;
 use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
+use App\Infrastructure\Partner\Filter\AddPartnerToPostTypeFilter;
 use App\Infrastructure\PartnerRequest\Api\PartnerRequestApi;
 use App\Infrastructure\Search\Api\SearchApi;
-use App\Infrastructure\Woocommerce\Action\WoocommerceSupportAction;
+use App\Infrastructure\Woocommerce\Filter\AddProductCatToPartnerFilter;
+use App\Infrastructure\Woocommerce\Filter\TemplateLoaderFileFilter;
+use App\Infrastructure\Woocommerce\Filter\WoocommerceAddAuthorQueryFilter;
+use App\Infrastructure\Woocommerce\Filter\WoocommerceRestCheckPermissionFilter;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
+use App\Infrastructure\Wordpress\Api\TranslateApi;
 use App\Infrastructure\Wordpress\Middleware\MiddlewareConfigurationFactory;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 use App\Infrastructure\Wordpress\Action\DisableAssetsWordpress;
@@ -35,13 +41,19 @@ return [
         AddAssetsAction::class,
         GetPartnersApi::class,
         GetPartnerByIdApi::class,
-        WoocommerceSupportAction::class,
         LoadApiAction::class,
         GetPartnerByIdApi::class,
         AddPostTypePartnerAction::class,
         SearchApi::class,
         AddCityAction::class,
-        DisableAssetsWordpress::class
+        DisableAssetsWordpress::class,
+        TranslateApi::class,
+        TemplateLoaderFileFilter::class,
+        WoocommerceRestCheckPermissionFilter::class,
+        WoocommerceAddAuthorQueryFilter::class,
+        AddProductCatToPartnerFilter::class,
+        AddPartnerToPostTypeFilter::class,
+        AddRolePartnerAction::class
     ],
     Logger::class => DI\factory(function (ContainerInterface $c) {
         return Logger::create($c->get('logger.name'), $c->get('logger.file'));

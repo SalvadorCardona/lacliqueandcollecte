@@ -27,16 +27,16 @@ class PartnerFormatter extends Formatter
         foreach (Partner::META_LIST as $field) {
             if (isset($meta[$field])) {
                 $fieldValue = $meta[$field];
-                $metaCleaned[$field] = count($fieldValue) > 1 ? $fieldValue : $fieldValue[0];
+                $metaCleaned[$field] = count($fieldValue) > 1 ? $fieldValue : current($fieldValue);
             }
         }
 
         if (isset($metaCleaned[Partner::FIELD_FACE_PICTURE])) {
-            $metaCleaned[Partner::FIELD_FACE_PICTURE] = $this->wordpressMiddleware->getAttachmentImageSrc($metaCleaned[Partner::FIELD_FACE_PICTURE])[0];
+            $metaCleaned[Partner::FIELD_FACE_PICTURE] = current($this->wordpressMiddleware->getAttachmentImageSrc($metaCleaned[Partner::FIELD_FACE_PICTURE]));
         }
 
         if (isset($metaCleaned[Partner::FIELD_SHOP_PICTURE])) {
-            $metaCleaned[Partner::FIELD_SHOP_PICTURE] = $this->wordpressMiddleware->getAttachmentImageSrc($metaCleaned[Partner::FIELD_SHOP_PICTURE])[0];
+            $metaCleaned[Partner::FIELD_SHOP_PICTURE] = current($this->wordpressMiddleware->getAttachmentImageSrc($metaCleaned[Partner::FIELD_SHOP_PICTURE]));
         }
 
         $dataFormatted = (array) $data;
