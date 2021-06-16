@@ -29,6 +29,7 @@ class PartnerRequestApi extends AbstractApiController
             $partnerRequest->email = $user->user_email;
         }
 
+        // TODO : Ajouter au middleWare
         $idPost = wp_insert_post([
             'post_type' => PartnerRequest::POST_TYPE_NAME,
             'meta_input' => (array) $partnerRequest
