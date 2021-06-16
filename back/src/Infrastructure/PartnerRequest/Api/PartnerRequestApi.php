@@ -5,6 +5,7 @@ namespace App\Infrastructure\PartnerRequest\Api;
 use App\Infrastructure\PartnerRequest\Entity\PartnerRequest;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Api\HttpResponse;
+use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class PartnerRequestApi extends AbstractApiController
@@ -28,7 +29,6 @@ class PartnerRequestApi extends AbstractApiController
             $partnerRequest->email = $user->user_email;
         }
 
-        // TODO : Ajouter au middleWare
         $idPost = wp_insert_post([
             'post_type' => PartnerRequest::POST_TYPE_NAME,
             'meta_input' => (array) $partnerRequest
