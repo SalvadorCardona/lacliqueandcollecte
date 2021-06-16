@@ -19,6 +19,7 @@ import InputSelectComponent from "App/modules/shared/components/form/input.selec
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 import HeaderMobileComponent from "App/modules/shared/components/header/header.mobile.component";
 import HeaderDesktopComponent from "App/modules/shared/components/header/header.desktop.component";
+import CookiesBannerComponent from "App/modules/shared/components/cookies-banner/cookies.banner.component";
 
 export default {
     components: [
@@ -42,5 +43,7 @@ export default {
         InputRadioComponent,
         InputSelectComponent,
         InputCheckboxComponent,
+        CookiesBannerComponent,
+
     ]
 } as Module;
