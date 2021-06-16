@@ -10,6 +10,7 @@ use App\Infrastructure\Partner\Action\AddRolePartnerAction;
 use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
 use App\Infrastructure\Partner\Filter\AddPartnerToPostTypeFilter;
+use App\Infrastructure\PartnerRequest\Action\AddPartnerRequestPostType;
 use App\Infrastructure\PartnerRequest\Api\PartnerRequestApi;
 use App\Infrastructure\Search\Api\SearchApi;
 use App\Infrastructure\Woocommerce\Filter\AddProductCatToPartnerFilter;
@@ -33,6 +34,7 @@ return [
     'dir.public' => __DIR__ . '/../../web',
     'publicDir' => __DIR__ . '/../../web',
     'resourcesList' => [
+        AddPartnerRequestPostType::class,
         ActionManager::class,
         PartnerRequestApi::class,
         ApiLoaderManager::class,

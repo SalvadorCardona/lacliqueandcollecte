@@ -5,43 +5,34 @@ namespace App\Infrastructure\PartnerRequest\Api;
 use App\Infrastructure\PartnerRequest\Entity\PartnerRequest;
 use App\Infrastructure\Wordpress\Api\AbstractApiController;
 use App\Infrastructure\Wordpress\Api\HttpResponse;
-use App\Infrastructure\Wordpress\Middleware\Formatter\WpUserFormatter;
 use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 
 class PartnerRequestApi extends AbstractApiController
 {
     public function __construct(
-        private WordpressMiddleware $wordpressMiddleware, private wpUserFormatter $wpUserFormatter)
-    {
+        private WordpressMiddleware $wordpressMiddleware
+    ) {
     }
 
     public function __invoke(): HttpResponse
     {
         $partnerRequest = new PartnerRequest();
-        $request = $this->request->get_param('request');
-        $partnerRequest->firstName = (string)$this->request->get_param('firstName');
-        $partnerRequest->lastName = (string)$this->request->get_param('lastName');
-        $partnerRequest->description = (string)$this->request->get_param('description');
-        $partnerRequest->phone = (string)$this->request->get_param('phone');
-        $partnerRequest->email = (string)$this->request->get_param('email');
-        $partnerRequest->siretNumber = (string)$this->request->get_param('siretNumber');
+        $partnerRequest->firstName = (string) $this->request->get_param('firstName');
+        $partnerRequest->lastName = (string) $this->request->get_param('lastName');
+        $partnerRequest->description = (string) $this->request->get_param('description');
+        $partnerRequest->phone = (string) $this->request->get_param('phone');
+        $partnerRequest->email = (string) $this->request->get_param('email');
+        $partnerRequest->siretNumber = (string) $this->request->get_param('siretNumber');
 
-
-        if ($this->wordpressMiddleware->wpGetCurrentUser()->ID !== 0) {
-            $user = $this->wpUserFormatter->format($this->wordpressMiddleware->wpGetCurrentUser());
-            $partnerRequest->firstName = $user->displayName;
-            $partnerRequest->lastName = 'last';
-        } else {
-            $partnerRequest->firstName = 'camille';
-            $partnerRequest->lastName = 'last21';
-
-            $mailSend = $this->wordpressMiddleware->wpMail('association.zartisana@gmail.com', 'New partner', json_encode($partnerRequest), null, null);
-//          TODO:invert true and false
-            if ($mailSend === true) {
-                return $this->response('Error when sending email. Please try again.', 400);
-            }
-
+        if ($user = $this->wordpressMiddleware->wpGetCurrentUser()) {
+            $partnerRequest->email = $user->user_email;
         }
+
+        $idPost = wp_insert_post([
+            'post_type' => PartnerRequest::POST_TYPE_NAME,
+            'meta_input' => (array) $partnerRequest
+        ]);
+
         return $this->response(json_encode($partnerRequest), 200);
     }
 
