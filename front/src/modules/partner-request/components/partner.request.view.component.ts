@@ -7,6 +7,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
         return 'app-partner-request-view';
     }
 
+    //todo : restyle
     public render(): TemplateResult {
         return html`
             <div class="container p-5">
