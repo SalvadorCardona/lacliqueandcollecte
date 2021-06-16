@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 
 export default interface Module {
     services?: Array<Service>;

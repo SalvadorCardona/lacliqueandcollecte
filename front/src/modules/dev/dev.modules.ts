@@ -11,7 +11,7 @@ import UiTextAroundComponent from "App/modules/dev/components/ui/ui.text.around.
 import UiTextComponent from "App/modules/dev/components/ui/ui.text.component";
 import UiListComponentComponent from "App/modules/dev/components/ui/ui.list.component.component";
 
-export default {
+const DevModule = {
     components: [
         DevMenuComponent,
         DevComponent,
@@ -26,3 +26,5 @@ export default {
         UiListComponentComponent
     ]
 } as Module;
+
+export default DevModule;

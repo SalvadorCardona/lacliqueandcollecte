@@ -1,15 +1,14 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchContentComponent from "App/modules/search/components/search.content.component";
-import {injector} from "App/core/container.service";
+import {injector} from "App/modules/shared/services/container.service";
 import {ProductPost} from "App/types/product.type";
 import {property} from "lit-element/lib/decorators";
-import LoaderService from "App/core/loader.service";
-import {SearchParams} from "App/core/client/search.client";
-import ConfigurationService from "App/core/configuration.service";
-import SearchService from "App/core/search.service";
-import headerProductsPage from "Media/product-page/header_products_page.svg";
+import LoaderService from "App/modules/shared/services/loader.service";
+import {SearchParams} from "App/modules/shared/services/client/search.client";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
+import SearchService from "App/modules/shared/services/search.service";
 
 export default class SearchViewComponent extends AppComponent {
     @injector(SearchService)
@@ -46,6 +45,7 @@ export default class SearchViewComponent extends AppComponent {
                 this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
             }
         }
+
         this.searchService.search(this.searchParams);
     }
 

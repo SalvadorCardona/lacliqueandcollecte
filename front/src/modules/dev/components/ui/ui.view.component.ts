@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import UiTextComponent from "App/modules/dev/components/ui/ui.text.component";
 import UiTextAroundComponent from "App/modules/dev/components/ui/ui.text.around.component";

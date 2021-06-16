@@ -1,12 +1,8 @@
-import ApplicationClient from "App/core/client/application.client";
-import {injector, OnInit} from "App/core/container.service";
+import {injector, OnInit} from "App/modules/shared/services/container.service";
 import {MiddlewareConfigurationType} from "App/types/middleware.configuration.type";
-import EventService, {events} from "App/core/event.service";
+import EventService, {events} from "App/modules/shared/services/event.service";
 
 export default class ConfigurationService implements OnInit {
-
-    @injector(ApplicationClient)
-    private applicationClient: ApplicationClient;
 
     @injector(EventService)
     private eventService: EventService;
@@ -27,11 +23,5 @@ export default class ConfigurationService implements OnInit {
             this.eventService.dispatch(events.CONFIGURATION_LOADED);
             return;
         }
-
-        this.applicationClient.getConfiguration()
-            .then(middleWareConfiguration => {
-                this.configuration = middleWareConfiguration;
-                this.eventService.dispatch(events.CONFIGURATION_LOADED);
-            })
     }
 }

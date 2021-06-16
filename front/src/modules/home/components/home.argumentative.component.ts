@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import argument1 from "Media/home/argument1.svg";
 import argument2 from "Media/home/argument2.svg";

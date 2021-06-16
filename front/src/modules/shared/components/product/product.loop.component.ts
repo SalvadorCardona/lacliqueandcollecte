@@ -1,9 +1,9 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {ProductPost} from "App/types/product.type"
 import {html, property, TemplateResult} from "lit-element";
-import {injector} from "App/core/container.service";
+import {injector} from "App/modules/shared/services/container.service";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
-import SearchClient, {SearchParams} from "App/core/client/search.client";
+import SearchClient, {SearchParams} from "App/modules/shared/services/client/search.client";
 
 export default class ProductLoopComponent extends AppComponent {
 

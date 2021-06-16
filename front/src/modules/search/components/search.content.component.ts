@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import {ProductPost} from "App/types/product.type";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";

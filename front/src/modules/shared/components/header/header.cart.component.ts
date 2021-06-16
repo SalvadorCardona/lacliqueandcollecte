@@ -1,10 +1,10 @@
-import {AppComponent, createElement} from "App/core/custom.element";
+import {AppComponent, createElement} from "App/modules/shared/services/custom.element";
 import {CartType} from "App/types/cart.type";
-import CartService from "App/core/cart.service";
-import EventService, {events} from "App/core/event.service";
-import {injector} from "App/core/container.service";
+import CartService from "App/modules/shared/services/cart.service";
+import EventService, {events} from "App/modules/shared/services/event.service";
+import {injector} from "App/modules/shared/services/container.service";
 import {html, property, TemplateResult} from "lit-element";
-import ModalService from "App/core/modal.service";
+import ModalService from "App/modules/shared/services/modal.service";
 import ModalCartComponent from "App/modules/shared/components/modal.cart.component";
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Icon} from "App/enum/icon.enum";

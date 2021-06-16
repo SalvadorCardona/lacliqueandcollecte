@@ -1,8 +1,8 @@
-import {AppComponent, getComponentSelector} from "App/core/custom.element";
+import {AppComponent, getComponentSelector} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
-import {injector} from "App/core/container.service";
-import ModalService from "App/core/modal.service";
-import EventService from "App/core/event.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ModalService from "App/modules/shared/services/modal.service";
+import EventService from "App/modules/shared/services/event.service";
 
 import DevComponent from "App/modules/dev/components/dev.components";
 import ButtonComponent from "App/modules/shared/components/button.component";

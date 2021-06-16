@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";

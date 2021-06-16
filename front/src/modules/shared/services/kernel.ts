@@ -1,4 +1,4 @@
-import {ContainerService} from "App/core/container.service";
+import {ContainerService} from "App/modules/shared/services/container.service";
 import modules from "App/app.modules";
 import {Component, Service} from "App/types/module.type";
 

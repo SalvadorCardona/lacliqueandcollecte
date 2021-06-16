@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import ProductLoopComponent from "App/modules/shared/components/product/product.loop.component";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import {html, TemplateResult} from "lit-element";

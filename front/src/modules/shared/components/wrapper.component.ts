@@ -1,5 +1,5 @@
 import {property} from "lit-element/lib/decorators";
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 
 export default class WrapperComponent extends AppComponent {

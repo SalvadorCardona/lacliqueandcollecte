@@ -1,5 +1,5 @@
-import {icons} from "App/core/icons";
-import {AppComponent} from "App/core/custom.element";
+import {icons} from "App/modules/shared/services/icons";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 

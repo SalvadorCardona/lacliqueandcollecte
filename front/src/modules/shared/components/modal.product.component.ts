@@ -1,7 +1,7 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {ProductType} from "App/types/product.type";
-import {injector} from "App/core/container.service";
-import ModalService from "App/core/modal.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ModalService from "App/modules/shared/services/modal.service";
 import {html, property, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
 import {Icon} from "App/enum/icon.enum";

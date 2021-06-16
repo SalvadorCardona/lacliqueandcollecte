@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import bakery from "Media/home/jobs/bakery.jpg";
 import brasserie from "Media/home/jobs/brasserie.jpg";

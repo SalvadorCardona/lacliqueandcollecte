@@ -1,5 +1,5 @@
-import EventService, {events} from "App/core/event.service";
-import ConfigurationService from "App/core/configuration.service";
+import EventService, {events} from "App/modules/shared/services/event.service";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
 
 export interface OnInit {
     onInit(containerService: ContainerService): void;

@@ -3,10 +3,13 @@ import SearchContentComponent from "App/modules/search/components/search.content
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchViewComponent from "App/modules/search/components/search.view.component";
 
-export default {
+const SearchModule = {
     components: [
         SearchContentComponent,
         SearchLeftBarComponent,
         SearchViewComponent,
-    ]
+    ],
+    defaultComponent: SearchViewComponent
 } as Module;
+
+export default SearchModule;

@@ -1,5 +1,5 @@
 import {environment} from "App/environement/environement";
-import Abstract from "App/core/client/abstract.client";
+import Abstract from "App/modules/shared/services/client/abstract.client";
 import {CartType} from "App/types/cart.type";
 
 export default class CartClient extends Abstract {

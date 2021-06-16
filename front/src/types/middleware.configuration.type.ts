@@ -1,5 +1,7 @@
 import {PostType} from "App/types/post.type";
 import {UserType} from "App/types/user.type";
+import {WpQuery} from "App/types/wp.query.type";
+import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 import {QueriedObject, WpQuery} from "App/types/wp.query.type";
 import {MiddlewareCategory} from "App/types/midlewarecategory.type";
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
+use App\Infrastructure\Formatter\HelperFormatter;
 use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareWPQuery;
 use WP_Query;
 
@@ -20,7 +21,7 @@ class WpQueryFormatter extends Formatter
     public function format($data): MiddlewareWPQuery
     {
         return (new MiddlewareWPQuery())
-            ->setQueriedObject($data->queried_object)
+	        ->setQueriedObject($data->queried_object ? HelperFormatter::keysToCamel($data->queried_object->to_array()) : null)
             ->setCommentCount($data->comment_count)
             ->setCurrentComment($data->current_comment)
             ->setCurrentPost($data->current_post)

@@ -1,6 +1,6 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {ProductPost} from "App/types/product.type";
-import {filterPrice} from "App/core/helper";
+import {filterPrice} from "App/modules/shared/services/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";

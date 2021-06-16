@@ -1,7 +1,7 @@
-import {injector, OnInit} from "App/core/container.service";
-import EventService, {events} from "App/core/event.service";
+import {injector, OnInit} from "App/modules/shared/services/container.service";
+import EventService, {events} from "App/modules/shared/services/event.service";
 import LoaderComponent from "App/modules/shared/components/loader.component";
-import {createElement} from "App/core/custom.element";
+import {createElement} from "App/modules/shared/services/custom.element";
 
 export default class LoaderService implements OnInit {
     private loaderComponent: LoaderComponent;

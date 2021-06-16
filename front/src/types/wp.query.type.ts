@@ -1,3 +1,5 @@
+import {TermType} from "App/types/term.type";
+import {PostType} from "App/types/post.type";
 
 export interface WpQuery {
     commentCount:       number;
@@ -37,17 +39,5 @@ export interface WpQuery {
     isYear:             boolean;
     maxNumCommentPages: number;
     maxNumPages:        number;
-}
-
-export interface QueriedObject {
-    termID:         number;
-    name:           string;
-    slug:           string;
-    termGroup:      number;
-    termTaxonomyId: number;
-    taxonomy:       string;
-    description:    string;
-    parent:         number;
-    count:          number;
-    filter:         string;
+    queriedObject?: TermType|PostType
 }

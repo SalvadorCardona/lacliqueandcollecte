@@ -1,13 +1,13 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {PostType} from "App/types/post.type";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
-import {injector} from "App/core/container.service";
-import ConfigurationService from "App/core/configuration.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import HeaderCartComponent from "App/modules/shared/components/header/header.cart.component";
-import ProductClient from "App/core/client/product.client";
+import ProductClient from "App/modules/shared/services/client/product.client";
 import {ProductType} from "App/types/product.type";
 import debounce from "lodash.debounce"
 

@@ -1,7 +1,7 @@
-import {injector, OnInit} from "App/core/container.service";
+import {injector, OnInit} from "App/modules/shared/services/container.service";
 import {CartType} from "App/types/cart.type";
-import EventService, {events} from "App/core/event.service";
-import CartClient from "App/core/client/cart.client";
+import EventService, {events} from "App/modules/shared/services/event.service";
+import CartClient from "App/modules/shared/services/client/cart.client";
 
 export default class CartService implements OnInit {
 

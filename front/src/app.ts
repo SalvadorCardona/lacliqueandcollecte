@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import Kernel from "App/core/kernel";
+import Kernel from "App/modules/shared/services/kernel";
 
 const kernel = Kernel.get();
 

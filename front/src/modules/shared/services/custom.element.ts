@@ -1,6 +1,6 @@
 import {LitElement} from 'lit-element';
-import {injector} from "App/core/container.service";
-import TranslateService from "App/core/translate.service";
+import {injector} from "App/modules/shared/services/container.service";
+import TranslateService from "App/modules/shared/services/translate.service";
 
 export const getComponentSelector = (className: typeof AppComponent): string =>  className.getComponentName();
 

@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from "lit-element";
 import HeaderMobileComponent from "App/modules/shared/components/header/header.mobile.component";
 import HeaderDesktopComponent from "App/modules/shared/components/header/header.desktop.component";

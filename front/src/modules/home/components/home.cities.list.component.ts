@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import lyon from "Media/home/cities/lyon.jpg";
 import paris from "Media/home/cities/paris.jpg";

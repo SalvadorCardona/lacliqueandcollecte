@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, property, TemplateResult} from 'lit-element';
 import {Color} from "App/enum/color.enum";
 import IconComponent from "App/modules/shared/components/icon.component";

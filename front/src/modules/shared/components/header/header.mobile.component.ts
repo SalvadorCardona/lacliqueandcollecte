@@ -1,8 +1,8 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {property} from "lit-element/lib/decorators";
 import {html, TemplateResult} from "lit-element";
-import {injector} from "App/core/container.service";
-import ConfigurationService from "App/core/configuration.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Collapse} from 'bootstrap';
 import {Color} from "App/enum/color.enum";

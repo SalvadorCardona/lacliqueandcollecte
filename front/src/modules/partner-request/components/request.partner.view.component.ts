@@ -1,13 +1,15 @@
 import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 
-export default class LoaderComponent extends AppComponent {
+export default class RequestPartnerViewComponent extends AppComponent {
 
     public static getComponentName(): string {
-        return 'app-loader';
+        return 'app-request-partner-view';
     }
 
     public render(): TemplateResult {
-        return html`<div class="donut-spinner"></div>`;
+        return html`
+            <span>Hello World</span>
+        `;
     }
 }

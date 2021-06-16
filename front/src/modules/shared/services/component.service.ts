@@ -1,7 +1,7 @@
-import {AppComponent, getComponentSelector} from "App/core/custom.element";
-import EventService, {events} from "App/core/event.service";
-import {injector} from "App/core/container.service";
-import Kernel from "App/core/kernel";
+import {AppComponent, getComponentSelector} from "App/modules/shared/services/custom.element";
+import EventService, {events} from "App/modules/shared/services/event.service";
+import {injector} from "App/modules/shared/services/container.service";
+import Kernel from "App/modules/shared/services/kernel";
 
 export default class ComponentService {
     private _components: Array<any>;
