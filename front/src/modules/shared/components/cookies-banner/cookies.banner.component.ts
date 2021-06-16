@@ -37,30 +37,27 @@ export default class CookiesBannerComponent extends AppComponent {
                     </div>
                 </div>
                 <div class="row m-1">
-                    <div class="col-md-8 
+                    <div class="col-md-6  col-lg-8
                         fw-bolder 
                         text-body
                         mb-3" id="cookies-text">
                         ${this.trans("cookies.banner.text")}
                     </div>
-                    <div class="col-md-4 
+                    <div class="col-md-6 col-lg-4
                         container
                         text-center">
-                        <div class="row justify-content-md-center mb-3 pr-5 ">
-                            <div class="col-8 position-relative">
-                                ${this.createElement(ButtonComponent, {
-                                    classList: 'p-3 border border-dark rounded text-dark',
-                                    link: '#',
-                                    label: this.trans("cookies.banner.personnaliser"),
-                                })}
-                            </div>
-                            <div class="col-4 position-relative">${this.createElement(ButtonComponent, {
+                        <div class="row d-flex flex-row mb-3">
+                            ${this.createElement(ButtonComponent, {
+                                classList: 'p-3 border border-dark rounded text-dark',
+                                link: '#',
+                                label: this.trans("cookies.banner.personnaliser"),
+                            })}
+                            ${this.createElement(ButtonComponent, {
                                 classList: 'p-3',
                                 link: '#',
                                 label: this.trans("cookies.banner.accept"),
                                 type: Color.DARK
                             })}
-                            </div>
                         </div>
                     </div>
                 </div>
