@@ -68,7 +68,7 @@ export default class CookiesBannerComponent extends AppComponent {
     }
 
     private onRefused(): void {
-        // this.setCookieAcceptance(false);
+        this.setCookieAcceptance(false);
         this.hide();
     }
 
