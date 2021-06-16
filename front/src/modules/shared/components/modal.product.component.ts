@@ -5,6 +5,7 @@ import ModalService from "App/core/modal.service";
 import {html, property, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
 import {Icon} from "App/enum/icon.enum";
+import {Color} from "App/enum/color.enum";
 
 export default class ModalProductComponent extends AppComponent {
 

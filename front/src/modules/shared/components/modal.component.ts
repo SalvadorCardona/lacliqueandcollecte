@@ -2,12 +2,17 @@ import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Icon} from "App/enum/icon.enum";
+import {injector} from "App/core/container.service";
+import ModalService from "App/core/modal.service";
 
 export default class ModalComponent extends AppComponent {
 
     public static getComponentName(): string {
         return 'app-modal';
     }
+
+    @injector(ModalService)
+    private modalService: ModalService;
 
     @property({type: HTMLElement})
     private _body: HTMLElement;
@@ -17,6 +22,7 @@ export default class ModalComponent extends AppComponent {
     private _$close: () => void;
 
     public init(body: HTMLElement, title: string = null): void {
+        console.log("test");
         this._body = body;
         this._title = title;
     }
@@ -30,10 +36,18 @@ export default class ModalComponent extends AppComponent {
         this._$close();
     }
 
+    private closeModal(): void {
+        const modal: HTMLElement = this.querySelector('.modal-background');
+        modal.hidden = true;
+    }
+
     public render(): TemplateResult {
         return html`
             <div @click="${this.close}" class="modal-background">
-                <div class="modal-content col-md-3 position-relative mt-0">
+                <div class="modal-content 
+                    col-md-3 
+                    position-relative 
+                    mt-0">
                     <div class="modal-header
                            gradient-primary 
                            position-absolute 
@@ -41,7 +55,9 @@ export default class ModalComponent extends AppComponent {
                            start-0
                            w-100">
                         <span class="text-uppercase">${this._title || ''}</span>
-                        ${this.createElement(IconComponent, {$click: () => this._$close(), icon: Icon.BIX})}
+                        <div @click="${this.closeModal}">
+                            ${this.createElement(IconComponent, {icon: Icon.BIX})}
+                        </div>
                     </div>
                     <div class="modal-body">${this._body}</div>
                 </div>
