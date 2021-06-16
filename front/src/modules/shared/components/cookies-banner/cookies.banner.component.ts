@@ -5,8 +5,8 @@ import ButtonComponent from "App/modules/shared/components/button.component";
 import {Color} from "App/enum/color.enum";
 
 interface CookieAcceptance {
-   hasAccepted: boolean;
-   dateAccepted: Date;
+    hasAccepted: boolean,
+    dateAccepted: Date,
 }
 
 export default class CookiesBannerComponent extends AppComponent {
@@ -15,26 +15,21 @@ export default class CookiesBannerComponent extends AppComponent {
         return 'app-cookies-banner';
     }
 
-    private maxDayCookie: number = 30;
+    private miliSecondToExpire: number = 30 * 24 * 60 * 60 * 1000;
 
     public connectedCallback(): void {
-
         const cookieAcceptance = this.getCookieAcceptance();
-        console.log(cookieAcceptance)
         if (cookieAcceptance) {
-            const today = new Date();
-            const deltaTime = today.getTime() - cookieAcceptance.dateAccepted.getTime();
-            console.log(deltaTime)
-            console.log(deltaTime / (24*3600))
-            if (deltaTime / (24*3600) < this.maxDayCookie) {
+            const today = new Date().getTime();
+            const dateExpiration = new Date();
+            dateExpiration.setTime(cookieAcceptance.dateAccepted.getTime() + this.miliSecondToExpire);
+            const timeExpiration = dateExpiration.getTime();
+            if (today < timeExpiration) {
                 this.hide();
-
                 return;
             }
         }
-
         this.show();
-
         super.connectedCallback();
     }
 
@@ -46,8 +41,8 @@ export default class CookiesBannerComponent extends AppComponent {
         this.hidden = false;
     }
 
-    private getCookieAcceptance(): CookieAcceptance|null {
-        const dataCookieAcceptance =  JSON.parse(localStorage.getItem(CookiesBannerComponent.getComponentName()));
+    private getCookieAcceptance(): CookieAcceptance | null {
+        const dataCookieAcceptance = JSON.parse(localStorage.getItem(CookiesBannerComponent.getComponentName()));
 
         if (!dataCookieAcceptance) return null;
 
@@ -58,6 +53,7 @@ export default class CookiesBannerComponent extends AppComponent {
     }
 
     private setCookieAcceptance(hasAccepted: boolean): void {
+
         const cookieAcceptance = {
             dateAccepted: new Date(),
             hasAccepted: hasAccepted
@@ -72,7 +68,7 @@ export default class CookiesBannerComponent extends AppComponent {
     }
 
     private onRefused(): void {
-        this.setCookieAcceptance(false);
+        // this.setCookieAcceptance(false);
         this.hide();
     }
 
@@ -83,7 +79,7 @@ export default class CookiesBannerComponent extends AppComponent {
                 rounded 
                 p-3
                 border-radius
-                row" 
+                row"
                  id="cookies-content">
                 <div class="col-md-6
                     col-lg-8
@@ -98,23 +94,23 @@ export default class CookiesBannerComponent extends AppComponent {
                         ${this.trans("cookies.banner.text")}
                     </div>
                 </div>
-                    <div class="col-md-6
+                <div class="col-md-6
                         d-flex
                         flex-row
                         justify-content-center
                         align-items-center
                         col-lg-4
                         ">
-                        ${this.createElement(ButtonComponent, {
-                            label: this.trans("cookies.banner.refuse"),
-                            $click: () => this.onRefused()
-                        })}
-                        ${this.createElement(ButtonComponent, {
-                            label: this.trans("cookies.banner.accept"),
-                            type: Color.DARK,
-                            $click: () => this.onAccepted()
-                        })}
-                    </div>
+                    ${this.createElement(ButtonComponent, {
+                        label: this.trans("cookies.banner.refuse"),
+                        $click: () => this.onRefused()
+                    })}
+                    ${this.createElement(ButtonComponent, {
+                        label: this.trans("cookies.banner.accept"),
+                        type: Color.DARK,
+                        $click: () => this.onAccepted()
+                    })}
+                </div>
             </div>
         `;
     }
