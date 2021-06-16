@@ -24,6 +24,7 @@ class AddPartnerRequestPostType implements ActionInterface
         $this->wordpressMiddleware->registerPostType(PartnerRequest::POST_TYPE_NAME, [
             'label' => $this->wordpressMiddleware->trans('partner.request'),
             'public' => true,
+            'menu_position' => 3,
             'menu_icon' => 'dashicons-admin-users',
             'supports' => ['custom-fields'],
             'show_in_rest' => false,
