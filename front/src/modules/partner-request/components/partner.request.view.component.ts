@@ -10,7 +10,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
     //todo : restyle
     public render(): TemplateResult {
         return html`
-            <div class="container p-5">
+            <div class="container mt-5 mb-5 p-5 shadow-lg">
                 <h2 class="h1-responsive font-weight-bold text-center my-4">Formulaire partenaire</h2>
                     <div class="mb-md-0 mb-5">
                         <form id="partner-request-form" name="partner-request-form" action="../services/partner.request.service.ts" method="POST">
