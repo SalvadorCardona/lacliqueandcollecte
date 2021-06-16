@@ -1,4 +1,4 @@
-export interface RequestPartner {
+export interface PartnerRequest {
     firstName: string;
     lastName: string;
     description: string;
