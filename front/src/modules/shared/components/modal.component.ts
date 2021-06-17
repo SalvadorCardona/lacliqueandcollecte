@@ -22,7 +22,6 @@ export default class ModalComponent extends AppComponent {
     private _$close: () => void;
 
     public init(body: HTMLElement, title: string = null): void {
-        console.log("test");
         this._body = body;
         this._title = title;
     }
