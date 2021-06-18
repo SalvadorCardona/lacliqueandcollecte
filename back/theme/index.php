@@ -12,7 +12,10 @@
 if (! defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
+get_header();
 
 ?>
 <app-router></app-router>
 
+<?php
+get_footer();
