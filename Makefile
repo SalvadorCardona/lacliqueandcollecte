@@ -5,7 +5,7 @@ BACK_DIR = ./back
 
 GREEN	=\033[0m\e[1m\e[32m
 
-install: install-php database-import install-asset install-common clean
+install: install-php database-import trans install-asset install-common clean
 
 install-common:
 	rm -Rf back/web/app/themes/hello-theme-master
@@ -53,3 +53,6 @@ lint:
 clean:
 	rm -Rf ${BACK_DIR}/web/wp/wp-content/themes/**
 	@echo  -e '${GREEN}success : all composer.phar and themes folder delete'
+
+trans:
+	cd ${BACK_DIR} && php wp-cli.phar i18n make-mo './theme/languages'
