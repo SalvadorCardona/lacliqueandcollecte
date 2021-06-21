@@ -10,57 +10,44 @@ export default class CookiesBannerComponent extends AppComponent {
         return 'app-cookies-banner';
     }
 
+
     public render(): TemplateResult {
         return html`
             <div class="cookies-content 
                 border 
                 rounded 
-                mb-3" id="cookies-content">
-                <div class="row 
-                    m-3 
-                    no-gutter">
-                    <div class="col-1 
-                        cookie 
-                        d-none 
-                        d-md-block">
-                        <img class="" id="cookie" src="${cookie}" alt="cookie-banner"/>
+                p-3
+                border-radius
+                row" 
+                 id="cookies-content">
+                <div class="col-md-6
+                    col-lg-8
+                    fw-bolder 
+                    text-body
+                    mb-3" id="cookies-text">
+                    <div class="cookie">
+                        <img src="${cookie}" alt="cookie-banner"/>
+                        <span class="d-none d-md-inline fw-bold text-dark">${this.trans("cookies.banner.title")}</span>
                     </div>
-                    <div class="d-none 
-                        d-md-block 
-                        col-11 
-                        fw-bold 
-                        text-dark" id="cookies-title">
-                        ${this.trans("cookies.banner.title")}
-                    </div>
-                    <div class="d-md-none text-center">
-                        <img class="img-fluid" src="${cookie}" alt="home-header"/>
-                    </div>
-                </div>
-                <div class="row m-1">
-                    <div class="col-md-6  col-lg-8
-                        fw-bolder 
-                        text-body
-                        mb-3" id="cookies-text">
+                    <div class="mt-2">
                         ${this.trans("cookies.banner.text")}
                     </div>
-                    <div class="col-md-6 col-lg-4
-                        container
-                        text-center">
-                        <div class="row d-flex flex-row mb-3">
-                            ${this.createElement(ButtonComponent, {
-                                classList: 'p-3 border border-dark rounded text-dark',
-                                link: '#',
-                                label: this.trans("cookies.banner.personnaliser"),
-                            })}
-                            ${this.createElement(ButtonComponent, {
-                                classList: 'p-3',
-                                link: '#',
-                                label: this.trans("cookies.banner.accept"),
-                                type: Color.DARK
-                            })}
-                        </div>
-                    </div>
                 </div>
+                    <div class="col-md-6
+                        d-flex
+                        flex-row
+                        justify-content-center
+                        align-items-center
+                        col-lg-4
+                        ">
+                        ${this.createElement(ButtonComponent, {
+                            label: this.trans("cookies.banner.refuse"),
+                        })}
+                        ${this.createElement(ButtonComponent, {
+                            label: this.trans("cookies.banner.accept"),
+                            type: Color.DARK
+                        })}
+                    </div>
             </div>
         `;
     }

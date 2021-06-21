@@ -1,21 +1,13 @@
 app-cookies-banner {
-  @import '~bootstrap/scss/variables';
-  z-index: $zindex-tooltip;
-
   .cookies-content {
     background-color: $secondary-lighter-2;
-    border-radius: 1%;
-
-    a {
-      margin-right: 15px;
-    }
-
     .cookie {
-      width: 30px;
-
       img {
         height: auto;
-        width: 20px;
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          width: 25px;
+        }
       }
     }
 

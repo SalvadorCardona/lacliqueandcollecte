@@ -18,7 +18,7 @@
 
   &.bg-undefined {
     color: $body-color;
-
+    background-color: transparent;
     path {
       color: $body-color;
     }

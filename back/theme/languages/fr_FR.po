@@ -20,8 +20,8 @@ msgstr ""
 msgid "cookies.banner.accept"
 msgstr "Accepter"
 
-msgid "cookies.banner.personnaliser"
-msgstr "Personnaliser"
+msgid "cookies.banner.refuse"
+msgstr "Refuser..."
 
 #| msgid "cookies.banner.test"
 msgid "cookies.banner.text"

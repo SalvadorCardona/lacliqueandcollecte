@@ -496,7 +496,7 @@ msgstr ""
 msgid "cookies.banner.title"
 msgstr ""
 
-msgid "cookies.banner.personnaliser"
+msgid "cookies.banner.refuse"
 msgstr ""
 
 msgid "cookies.banner.accept"
