@@ -11,8 +11,10 @@ class WpUserFormatter extends Formatter
     /**
      * @param WP_User $data
      */
-    public function format($data): MiddlewareUser
+    public function format($data): ?MiddlewareUser
     {
+    	if ($data->ID === 0) return null;
+
         return (new MiddlewareUser())
             ->setId($data->ID)
             ->setDisplayName($data->user_lastname)

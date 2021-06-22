@@ -1,5 +1,14 @@
 import {AppComponent} from 'App/core/custom.element';
-import {html, TemplateResult} from 'lit-element';
+import {html, property, TemplateResult} from 'lit-element';
+import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
+import ButtonComponent from "App/modules/shared/components/button.component";
+import {Color} from "App/enum/color.enum";
+import {injector} from "App/core/container.service";
+import ConfigurationService from "App/core/configuration.service";
+import PartnerRequestService from "App/modules/partner-request/services/partner.request.service";
+import {PartnerRequest} from "App/modules/partner-request/types/partner.request";
+import LoaderService from "App/core/loader.service";
+import InputSelectComponent from "App/modules/shared/components/form/input.textarea.component";
 
 export default class PartnerRequestViewComponent extends AppComponent {
 
@@ -7,7 +16,61 @@ export default class PartnerRequestViewComponent extends AppComponent {
         return 'app-partner-request-view';
     }
 
-    //todo : restyle
+    @injector(ConfigurationService)
+    private configurationService: ConfigurationService;
+
+    @injector(LoaderService)
+    private loaderService: LoaderService;
+
+    @injector(PartnerRequestService)
+    private partnerRequestService: PartnerRequestService;
+
+    @property({type: Boolean})
+    private formInvalid: boolean = false;
+
+    @property({type: Object})
+    private errors: {[name: string]: string} = {};
+
+    public connectedCallback() {
+
+
+        super.connectedCallback();
+    }
+
+    private onSendPartnerRequest($event: EventTarget): void {
+        this.loaderService.show();
+
+        $event.preventDefault();
+
+        this.formInvalid = false;
+        this.errors = {};
+
+        const formInput = this.querySelector('#partner-request-form') as HTMLFormElement
+
+        if (!formInput.checkValidity()) {
+            this.formInvalid = true;
+            this.loaderService.hide();
+            return;
+        }
+
+        const data = {
+            description: formInput.querySelector('#description').value,
+            firstName: formInput.querySelector('#firstName').value,
+            lastName: formInput.querySelector('#lastName').value,
+            email: formInput.querySelector('#email').value,
+            phone: formInput.querySelector('#phone').value,
+            siretNumber: formInput.querySelector('#siretNumber').value,
+        } as PartnerRequest
+
+        this.partnerRequestService.addPartnerRequest(data)
+            .then(response => {
+                this.loaderService.hide();
+            }).catch((errors) => {
+                this.errors = errors.response.data;
+                this.loaderService.hide();
+            });
+    }
+
     public render(): TemplateResult {
         return html`
             <div class="container mt-5 mb-5 p-5 shadow-lg">
@@ -18,57 +81,100 @@ export default class PartnerRequestViewComponent extends AppComponent {
                     ${this.trans("partner.request.form.title")}
                 </h2>
                     <div class="mb-md-0 mb-5">
-                        <form id="partner-request-form" name="partner-request-form" action="../services/partner.request.service.ts" method="POST">
+                        <form @submit=${this.onSendPartnerRequest} id="partner-request-form" method="POST">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <label for="firstName" class="">${this.trans("partner.request.firstName.label")}</label>
-                                        <input type="text" id="firstName" name="firstName" class="form-control">
-                                    </div>
+                                    ${this.createElement(InputBaseComponent, {
+                                        type: 'text',
+                                        name: 'firstName',
+                                        label: this.trans("partner.request.firstName.label"),
+                                        required: true,
+                                        error: this.getError('firstName')
+                                    })}
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <label for="lastName" class="">${this.trans("partner.request.lastName.label")}</label>
-                                        <input type="text" id="lastName" name="lastName" class="form-control">
-                                    </div>
+                                    ${this.createElement(InputBaseComponent, {
+                                        type: 'text',
+                                        name: 'lastName',
+                                        label: this.trans("partner.request.lastName.label"),
+                                        error: this.getError('lastName')
+                                    })}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="md-form">
-                                        <label for="description">${this.trans("partner.request.description.label")}</label>
-                                        <textarea type="text" id="description" name="description" rows="2" placeholder="${this.trans("partner.request.description.placeholder")}" class="form-control md-textarea"></textarea>
-                                    </div>
+                                    ${this.createElement(InputSelectComponent, {
+                                        name: 'description',
+                                        label: this.trans("partner.request.description.label"),
+                                        helper: this.trans("partner.request.description.placeholder"),
+                                        error: this.getError('description')
+                                    })}
                                 </div>
                             </div>
+                            
+                            ${this.renderEmail()}
+                            
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="md-form mb-0">
-                                        <label for="email" class="">${this.trans("partner.request.email.label")}</label>
-                                        <input type="text" id="email" name="email" class="form-control">
-                                    </div>
+                                <div class="col-md-6">
+                                    ${this.createElement(InputBaseComponent, {
+                                        type: 'phone',
+                                        name: 'phone',
+                                        label: this.trans("partner.request.phone.label"),
+                                        error: this.getError('phone')
+                                    })}
+                                </div>
+                                <div class="col-md-6">
+                                    ${this.createElement(InputBaseComponent, {
+                                        type: 'phone',
+                                        name: 'siretNumber',
+                                        label: this.trans("partner.request.siret.label"),
+                                        error: this.getError('siretNumber')
+                                    })}
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <label for="phone" class="">${this.trans("partner.request.phone.label")}</label>
-                                        <input type="text" id="phone" name="phone" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <label for="siretNumber" class="">${this.trans("partner.request.siret.label")}</label>
-                                        <input type="text" id="siretNumber" name="siretNumber" class="form-control">
-                                    </div>
-                                </div>
+                            <div class="text-center text-md-left mt-3">
+                                ${this.createElement(ButtonComponent, {
+                                    isSubmit: true,
+                                    type: Color.PRIMARY,
+                                    label: this.trans("partner.request.send.button")
+                                })}
                             </div>
                         </form>
-                        <div class="text-center text-md-left">
-                            <a class="btn btn-primary" onclick="document.getElementById('partner-request-form').submit();">${this.trans("partner.request.send.button")}</a>
-                        </div>
+                        
+                        ${this.renderFormInvalid()}
+                        
+
                     </div>
             </div>
         `;
+    }
+
+    private renderEmail(): TemplateResult|string {
+        const user = this.configurationService.configuration.user;
+
+        return html`
+            <div class="${user ? 'd-none' : 'row'}">
+                <div class="col-md-12">
+                    ${this.createElement(InputBaseComponent, {
+                        type: 'email',
+                        value: user ? user.email : '',
+                        name: 'email',
+                        label: this.trans("partner.request.email.label"),
+                    })}
+                </div>
+            </div>
+        `;
+    }
+
+    private renderFormInvalid(): TemplateResult|string {
+        if (!this.formInvalid) return '';
+
+        return html`<div class="mt-5"><spans class="text-danger">Votre Formulaire n'est pas valide</spans></div>`;
+    }
+
+    private getError(errorName: string) {
+        if (this.errors.hasOwnProperty(errorName)) {
+            return this.errors[errorName];
+        }
     }
 }

@@ -6,6 +6,7 @@ import {Icon} from "App/enum/icon.enum";
 
 export default class ButtonComponent extends AppComponent {
 
+
     public static getComponentName(): string {
         return 'app-button';
     }
@@ -25,6 +26,9 @@ export default class ButtonComponent extends AppComponent {
     @property({type: Function})
     private $click?: CallableFunction;
 
+    @property({type: Boolean})
+    private isSubmit: boolean = false;
+
     public connectedCallback(): void {
         super.connectedCallback();
         if (this.$click) {
@@ -43,6 +47,15 @@ export default class ButtonComponent extends AppComponent {
                 </a>
             `;
         }
+
+        if (this.isSubmit) {
+            return html`
+                <input type="submit" class="btn bg-${this.type}" value=${this.label}>
+                    ${this.getIcon()}
+                </input>
+            `;
+        }
+
         return html`
             <button class="btn bg-${this.type}">
                 ${this.getIcon()}

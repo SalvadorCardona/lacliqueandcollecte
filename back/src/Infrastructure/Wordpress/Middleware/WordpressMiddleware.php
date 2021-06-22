@@ -93,7 +93,7 @@ class WordpressMiddleware
         return get_theme_mod('custom_logo');
     }
 
-    public function wpGetCurrentUser(): ?WP_User
+    public function wpGetCurrentUser(): WP_User
     {
         return wp_get_current_user();
     }

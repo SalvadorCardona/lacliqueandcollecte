@@ -50,7 +50,7 @@ class MiddlewareConfiguration
         return $this;
     }
 
-    public function setUser(MiddlewareUser $user): MiddlewareConfiguration
+    public function setUser(?MiddlewareUser $user): MiddlewareConfiguration
     {
         $this->user = $user;
         return $this;
