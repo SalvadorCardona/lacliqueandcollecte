@@ -221,4 +221,10 @@ class WordpressMiddleware
     {
         return is_tax();
     }
+
+    public function wpMail(string|array $to, string $subject, string $message, null|string|array $headers, ?array $attachments): bool
+    {
+//        $headers = array('Content-Type: text/html; charset=UTF-8','From: My Site Name <support@example.com>');
+        return wp_mail($to, $subject, $message, $headers, $attachments);
+    }
 }

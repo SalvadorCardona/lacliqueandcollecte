@@ -32,9 +32,9 @@ class SearchApi extends AbstractApiController
     public function getArgs(): array
     {
         return [
-            'params' => [
-                'required' => false,
-                'type' => 'JSON',
+            'firstName' => [
+                'required' => true,
+                'type' => 'string',
             ],
         ];
     }
