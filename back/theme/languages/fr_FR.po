@@ -271,6 +271,41 @@ msgstr "Voir sa page"
 msgid "partner.header.city"
 msgstr " Commerce situé dans la ville de "
 
+msgid "partner.request.complete.text"
+msgstr ""
+"Merci d'avoir fait votre demande pour devenir partenaire nous vous "
+"contacterons après avoir traité votre demande. "
+
+msgid "partner.request.complete.title"
+msgstr "Formulaire complété"
+
+msgid "partner.request.description.label"
+msgstr "Description de l'entreprise"
+
+msgid "partner.request.description.placeholder"
+msgstr "le secteur d'activités / les différents produits / la ville"
+
+msgid "partner.request.email.label"
+msgstr "Email"
+
+msgid "partner.request.firstName.label"
+msgstr "Prénom"
+
+msgid "partner.request.form.title"
+msgstr "Formulaire partenaire"
+
+msgid "partner.request.lastName.label"
+msgstr "Nom"
+
+msgid "partner.request.phone.label"
+msgstr "Numéro de téléphone"
+
+msgid "partner.request.send.button"
+msgstr "Envoyer"
+
+msgid "partner.request.siret.label"
+msgstr "Numéro de siret"
+
 #| msgid "partnerViewPartnerName"
 msgid "partner.view.partner.name"
 msgstr "Les produits de "

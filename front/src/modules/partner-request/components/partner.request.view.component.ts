@@ -28,13 +28,16 @@ export default class PartnerRequestViewComponent extends AppComponent {
     @property({type: Boolean})
     private formInvalid: boolean = false;
 
+    @property({type: Boolean})
+    private formSend: boolean = false;
+
     @property({type: Object})
     private errors: {[name: string]: string} = {};
 
     public connectedCallback() {
 
-
         super.connectedCallback();
+
     }
 
     private onSendPartnerRequest($event: EventTarget): void {
@@ -72,14 +75,27 @@ export default class PartnerRequestViewComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
-        return html`
-            <div class="container mt-5 mb-5 p-5 shadow-lg">
+        if (this.formSend) {
+            return html`
+            <div class="container mt-3 mb-5 p-5 shadow-lg">
                 <h2 class="text-success
                             h1-responsive
                             font-weight-bold
                             text-center my-4">
-                    ${this.trans("partner.request.form.title")}
+                    ${this.trans("partner.request.complete.title")}
                 </h2>
+                <span>${this.trans("partner.request.complete.text")}</span>
+            </div>
+        `;
+        } else {
+            return html`
+                <div class="container mt-5 mb-5 p-5 shadow-lg">
+                    <h2 class="text-success
+                            h1-responsive
+                            font-weight-bold
+                            text-center my-4">
+                        ${this.trans("partner.request.form.title")}
+                    </h2>
                     <div class="mb-md-0 mb-5">
                         <form @submit=${this.onSendPartnerRequest} id="partner-request-form" method="POST">
                             <div class="row">
@@ -111,9 +127,9 @@ export default class PartnerRequestViewComponent extends AppComponent {
                                     })}
                                 </div>
                             </div>
-                            
+
                             ${this.renderEmail()}
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     ${this.createElement(InputBaseComponent, {
@@ -140,13 +156,13 @@ export default class PartnerRequestViewComponent extends AppComponent {
                                 })}
                             </div>
                         </form>
-                        
+
                         ${this.renderFormInvalid()}
-                        
 
                     </div>
-            </div>
-        `;
+                </div>
+            `;
+        }
     }
 
     private renderEmail(): TemplateResult|string {
@@ -167,7 +183,9 @@ export default class PartnerRequestViewComponent extends AppComponent {
     }
 
     private renderFormInvalid(): TemplateResult|string {
-        if (!this.formInvalid) return '';
+        if (!this.formInvalid) {
+            this.formSend = true;
+            return '';}
 
         return html`<div class="mt-5"><spans class="text-danger">Votre Formulaire n'est pas valide</spans></div>`;
     }
