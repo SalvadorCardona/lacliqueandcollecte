@@ -1,4 +1,4 @@
-import Module from "App/types/module.type";
+import Module from "App/modules/shared/types/module.type";
 import PageNotFoundViewComponent from "App/modules/page-not-found/components/page.not.found.view.component";
 
 const PageNotFoundModule = {

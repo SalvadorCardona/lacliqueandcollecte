@@ -34,6 +34,7 @@ import SearchService from "App/modules/shared/services/search.service";
 import TranslateService from "App/modules/shared/services/translate.service";
 import RouterService from "App/modules/shared/services/router.service";
 import RouterComponent from "App/modules/shared/components/router.component";
+import ModuleService from "App/modules/shared/services/module.service";
 import InputTextareaComponent from "App/modules/shared/components/form/input.textarea.component";
 import CookiesBannerComponent from "App/modules/shared/components/cookies-banner/cookies.banner.component";
 
@@ -64,11 +65,9 @@ const SharedModule = {
     ],
     services: [
         ModalService,
-        EventService,
         LoaderService,
         ClientService,
         CartService,
-        ComponentService,
         CartClient,
         ProductClient,
         ConfigurationService,

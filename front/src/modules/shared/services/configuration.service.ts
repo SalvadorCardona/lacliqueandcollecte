@@ -1,5 +1,5 @@
 import {injector, OnInit} from "App/modules/shared/services/container.service";
-import {MiddlewareConfigurationType} from "App/types/middleware.configuration.type";
+import {MiddlewareConfigurationType} from "App/modules/shared/types/middleware.configuration.type";
 import EventService, {events} from "App/modules/shared/services/event.service";
 
 export default class ConfigurationService implements OnInit {

@@ -1,4 +1,4 @@
-import {PostType} from "App/types/post.type";
+import {PostType} from "App/modules/shared/types/post.type";
 
 export interface Downloads {
 }

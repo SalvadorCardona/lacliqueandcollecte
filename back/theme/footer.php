@@ -16,9 +16,9 @@ if (!defined('ABSPATH')) {
 </main>
 
 <?php
-get_template_part('template-parts/footer');
-wp_footer();
 
+
+wp_footer();
 ?>
 
 </body>

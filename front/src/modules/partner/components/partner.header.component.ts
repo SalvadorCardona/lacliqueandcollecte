@@ -1,8 +1,8 @@
 import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, property, TemplateResult} from "lit-element";
-import {PartnerPost} from "App/types/partner.type";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
 import IconComponent from "App/modules/shared/components/icon.component";
-import {Icon} from "App/enum/icon.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class PartnerHeaderComponent extends AppComponent {
 

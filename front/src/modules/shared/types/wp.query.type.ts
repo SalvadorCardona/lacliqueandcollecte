@@ -1,5 +1,5 @@
-import {TermType} from "App/types/term.type";
-import {PostType} from "App/types/post.type";
+import {TermType} from "App/modules/shared/types/term.type";
+import {PostType} from "App/modules/shared/types/post.type";
 
 export interface WpQuery {
     commentCount:       number;

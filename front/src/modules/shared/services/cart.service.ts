@@ -1,5 +1,5 @@
 import {injector, OnInit} from "App/modules/shared/services/container.service";
-import {CartType} from "App/types/cart.type";
+import {CartType} from "App/modules/shared/types/cart.type";
 import EventService, {events} from "App/modules/shared/services/event.service";
 import CartClient from "App/modules/shared/services/client/cart.client";
 
@@ -14,7 +14,7 @@ export default class CartService implements OnInit {
     public cart: CartType|null = null;
 
     public onInit(): void {
-        this.loadCart();
+        this.eventService.addSubscriber(events.SERVICE_LOADED, () => this.loadCart())
     }
 
     public loadCart(): void {

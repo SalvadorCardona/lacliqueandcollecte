@@ -1,6 +1,6 @@
 import {environment} from "App/environement/environement";
 import Abstract from "App/modules/shared/services/client/abstract.client";
-import {CartType} from "App/types/cart.type";
+import {CartType} from "App/modules/shared/types/cart.type";
 
 export default class CartClient extends Abstract {
     public addItem(idProduct: number, quantity: number, variation: Array<string> = []): Promise<CartType> {

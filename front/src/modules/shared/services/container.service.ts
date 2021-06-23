@@ -1,46 +1,35 @@
 import EventService, {events} from "App/modules/shared/services/event.service";
-import ConfigurationService from "App/modules/shared/services/configuration.service";
+import {Service, ServiceName} from "App/modules/shared/types/module.type";
 
 export interface OnInit {
     onInit(containerService: ContainerService): void;
 }
 
-export type Class = {new(): Class;};
-
-export interface Type<T> {
-    new (...args: any[]): T;
-}
-
-export function injector<Class>(service: Type<Class>): any {
+export function injector(service: ServiceName): Service {
     return function (): any {
         return {
-            get: (): Class => ContainerService.get().service(service)
+            get: (): Service => ContainerService.get().service(service)
         }
     };
 }
 
 export class ContainerService {
-    public set serviceList(value: Array<Class>) {
-        this._serviceList = value;
-    }
-
     public static self: ContainerService;
 
-    private container: Array<Class> = [];
+    private container: Array<Service> = [];
 
-    private _serviceList: Array<Type<Class>>;
-
-    public loadService(): void
-    {
-        this.container = this._serviceList.map(Service => {
-            return new Service()
+    public addServices(services: Array<ServiceName>): void {
+        const servicesMounted = services.map(Service => {
+            return new Service();
         });
 
-        this.container.forEach(service => {
+        servicesMounted.forEach(service => {
             if (service['onInit']) {
                 service['onInit'](this);
             }
         });
+
+        this.container = [...this.container, ...servicesMounted];
 
         const eventService: EventService = this.service(EventService);
         eventService.dispatch(events.SERVICE_LOADED);
@@ -55,13 +44,12 @@ export class ContainerService {
         return this.self;
     }
 
-    // TODO: I need refacto comment
-    public service<Class>(classReference: Type<Class>): Class|null {
-        // @ts-ignore
-        return this.container.find(elem => elem instanceof classReference) || null;
-    }
+    public service(classReference: ServiceName): Service|null {
+        if (classReference === ContainerService) {
 
-    public get configurationService(): ConfigurationService {
-        return this.service(ConfigurationService);
+            return ContainerService.get();
+        }
+
+        return this.container.find(elem => elem instanceof classReference) || null;
     }
 }

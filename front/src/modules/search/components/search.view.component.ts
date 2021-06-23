@@ -3,7 +3,7 @@ import {html, TemplateResult} from "lit-element";
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchContentComponent from "App/modules/search/components/search.content.component";
 import {injector} from "App/modules/shared/services/container.service";
-import {ProductPost} from "App/types/product.type";
+import {ProductPost} from "App/modules/shared/types/product.type";
 import {property} from "lit-element/lib/decorators";
 import LoaderService from "App/modules/shared/services/loader.service";
 import {SearchParams} from "App/modules/shared/services/client/search.client";

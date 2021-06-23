@@ -1,9 +1,9 @@
 import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
-import {PartnerPost} from "App/types/partner.type";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 export default class PartnerCardComponent extends AppComponent {
 

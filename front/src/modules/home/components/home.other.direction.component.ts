@@ -4,7 +4,7 @@ import image1 from "Media/home/other_direction1.jpg";
 import image2 from "Media/home/other_direction2.jpg";
 import image3 from "Media/home/other_direction3.jpg";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 
 export default class HomeOtherDirectionComponent extends AppComponent {

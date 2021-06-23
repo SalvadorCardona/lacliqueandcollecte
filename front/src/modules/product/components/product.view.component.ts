@@ -1,5 +1,5 @@
 import {AppComponent, createElement} from "App/modules/shared/services/custom.element";
-import {ProductType} from "App/types/product.type";
+import {ProductType} from "App/modules/shared/types/product.type";
 import CartService from "App/modules/shared/services/cart.service";
 import LoaderService from "App/modules/shared/services/loader.service";
 import {injector} from "App/modules/shared/services/container.service";
@@ -11,8 +11,8 @@ import {html, TemplateResult} from "lit-element";
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 import ProductClient from "App/modules/shared/services/client/product.client";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Icon} from "App/enum/icon.enum";
-import {Color} from "App/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 export default class ProductViewComponent extends AppComponent {
 

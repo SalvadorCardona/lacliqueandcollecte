@@ -5,8 +5,8 @@ import {injector} from "App/modules/shared/services/container.service";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Collapse} from 'bootstrap';
-import {Color} from "App/enum/color.enum";
-import {MiddlewareCategory} from "App/types/midlewarecategory.type";
+import {Color} from "App/modules/shared/enum/color.enum";
+import {MiddlewareCategory} from "App/modules/shared/types/midlewarecategory.type";
 
 export default class HeaderMobileComponent extends AppComponent {
     private selector: string = 'menu-mobile';

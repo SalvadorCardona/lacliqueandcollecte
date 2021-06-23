@@ -1,5 +1,5 @@
 import {AppComponent} from "App/modules/shared/services/custom.element";
-import {ProductPost} from "App/types/product.type"
+import {ProductPost} from "App/modules/shared/types/product.type"
 import {html, property, TemplateResult} from "lit-element";
 import {injector} from "App/modules/shared/services/container.service";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";

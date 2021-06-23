@@ -1,8 +1,10 @@
 import {LitElement} from 'lit-element';
 import {injector} from "App/modules/shared/services/container.service";
 import TranslateService from "App/modules/shared/services/translate.service";
+import {ComponentName} from "App/modules/shared/types/module.type";
 
-export const getComponentSelector = (className: typeof AppComponent): string =>  className.getComponentName();
+// @ts-ignore
+export const getComponentSelector = (componentName: ComponentName): string =>  componentName.getComponentName();
 
 export const createElement = <T extends AppComponent>(Component: new() => T, args: {[name: string]: any}|null = null): T => {
     let component = new Component();

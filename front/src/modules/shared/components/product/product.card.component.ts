@@ -1,11 +1,11 @@
 import {AppComponent} from 'App/modules/shared/services/custom.element';
-import {ProductPost} from "App/types/product.type";
+import {ProductPost} from "App/modules/shared/types/product.type";
 import {filterPrice} from "App/modules/shared/services/helper";
 import {property} from 'lit-element/lib/decorators';
 import {html, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Icon} from "App/enum/icon.enum";
-import {Color} from "App/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 export default class ProductCardComponent extends AppComponent {
 

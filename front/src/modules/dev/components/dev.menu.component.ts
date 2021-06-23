@@ -6,8 +6,8 @@ import EventService from "App/modules/shared/services/event.service";
 
 import DevComponent from "App/modules/dev/components/dev.components";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
-import {Icon} from "App/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class DevMenuComponent extends AppComponent {
 

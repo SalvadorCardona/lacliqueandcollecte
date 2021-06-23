@@ -1,44 +1,66 @@
 import {injector} from "App/modules/shared/services/container.service";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
-import ProductModule from "App/modules/product/product.modules";
-import PageNotFoundModule from "App/modules/page-not-found/page.not.found.module";
 import {AppComponent, createElement} from "App/modules/shared/services/custom.element";
-import PartnerModule from "App/modules/partner/partner.modules";
-import HomeModule from "App/modules/home/home.modules";
-import SearchModule from "App/modules/search/search.modules";
-import RequestPartnerModule from "App/modules/partner-request/request.partner.modules";
-
-import('App/modules/product/product.modules')
-    .then((module) => {
-        console.log(module)
-    });
+import ModuleService from "App/modules/shared/services/module.service";
 
 export default class RouterService {
     @injector(ConfigurationService)
     private configurationService: ConfigurationService;
 
-    public rout(): AppComponent
-    {
+    @injector(ModuleService)
+    private moduleService: ModuleService;
+
+    public rout(): Promise<AppComponent> {
         const wpQuery = this.configurationService.configuration.wpQuery;
         const queriedObject = wpQuery?.queriedObject;
 
-        switch (true) {
-            case wpQuery.isSingular && queriedObject.postType === 'partner':
-                return createElement(PartnerModule.defaultComponent, {partnerPostId: queriedObject.iD});
-                break;
-            case wpQuery.isSingular && queriedObject.postType === 'product':
-                return createElement(ProductModule.defaultComponent, {productId: queriedObject.iD});
-                break;
-            case wpQuery.isSingular && queriedObject.iD === 159:
-                return createElement(HomeModule.defaultComponent);
-                break;
-            case wpQuery.isTax:
-                return createElement(SearchModule.defaultComponent);
-                break;
-            case wpQuery.isSingular && queriedObject.iD === 91:
-                return createElement(RequestPartnerModule.defaultComponent);
-                break;
-            default:
-                return createElement(PageNotFoundModule.defaultComponent);
+        return new Promise(resolve => {
+
+            switch (true) {
+                case wpQuery.isSingular && "postType" in queriedObject ? queriedObject.postType === 'partner' :
+                    import('App/modules/partner/partner.modules')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent, {partnerPostId: queriedObject.iD}))
+                        });
+                    break;
+                case wpQuery.isSingular && "postType" in queriedObject ? queriedObject.postType === 'product' :
+                    import('App/modules/product/product.modules')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent, {productId: queriedObject.iD}))
+                        });
+                    break;
+                // @ts-ignore
+                case wpQuery.isSingular && queriedObject.iD === 159:
+                    import('App/modules/home/home.modules')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent))
+                        });
+                    break;
+                case wpQuery.isTax:
+                    import('App/modules/search/search.modules')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent))
+                        });
+                    break;
+                // @ts-ignore
+                case wpQuery.isSingular && queriedObject.iD === 91:
+                    import('App/modules/partner-request/request.partner.modules')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent))
+                        });
+                    break;
+                default:
+                    import('App/modules/page-not-found/page.not.found.module')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent))
+                        });
+            }
+        });
     }
 }
