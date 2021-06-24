@@ -28,14 +28,4 @@ class SearchApi extends AbstractApiController
     {
         return 'search';
     }
-
-    public function getArgs(): array
-    {
-        return [
-            'firstName' => [
-                'required' => true,
-                'type' => 'string',
-            ],
-        ];
-    }
 }
