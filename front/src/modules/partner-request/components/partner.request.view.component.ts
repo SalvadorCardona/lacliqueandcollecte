@@ -67,6 +67,8 @@ export default class PartnerRequestViewComponent extends AppComponent {
 
         this.partnerRequestService.addPartnerRequest(data)
             .then(response => {
+                console.log("test");
+                this.formSend = true;
                 this.loaderService.hide();
             }).catch((errors) => {
                 this.errors = errors.response.data;
@@ -75,6 +77,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
+        console.log(this.formSend)
         if (this.formSend) {
             return html`
             <div class="container mt-3 mb-5 p-5 shadow-lg">
@@ -87,7 +90,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
                 <span>${this.trans("partner.request.complete.text")}</span>
             </div>
         `;
-        } else {
+        }
             return html`
                 <div class="container mt-5 mb-5 p-5 shadow-lg">
                     <h2 class="text-success
@@ -162,7 +165,6 @@ export default class PartnerRequestViewComponent extends AppComponent {
                     </div>
                 </div>
             `;
-        }
     }
 
     private renderEmail(): TemplateResult|string {
@@ -184,7 +186,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
 
     private renderFormInvalid(): TemplateResult|string {
         if (!this.formInvalid) {
-            this.formSend = true;
+
             return '';}
 
         return html`<div class="mt-5"><spans class="text-danger">Votre Formulaire n'est pas valide</spans></div>`;
