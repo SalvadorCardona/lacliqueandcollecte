@@ -15,7 +15,6 @@ use App\Infrastructure\PartnerRequest\Api\PartnerRequestApi;
 use App\Infrastructure\Search\Api\SearchApi;
 use App\Infrastructure\Woocommerce\Filter\AddProductCatToPartnerFilter;
 use App\Infrastructure\Woocommerce\Filter\TemplateLoaderFileFilter;
-use App\Infrastructure\Woocommerce\Filter\WoocommerceAddAuthorQueryFilter;
 use App\Infrastructure\Woocommerce\Filter\WoocommerceRestCheckPermissionFilter;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\AddCityAction;
@@ -52,7 +51,6 @@ return [
         TranslateApi::class,
         TemplateLoaderFileFilter::class,
         WoocommerceRestCheckPermissionFilter::class,
-        WoocommerceAddAuthorQueryFilter::class,
         AddProductCatToPartnerFilter::class,
         AddPartnerToPostTypeFilter::class,
         AddRolePartnerAction::class
