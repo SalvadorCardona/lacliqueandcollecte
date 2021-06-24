@@ -35,13 +35,15 @@ export default class SearchViewComponent extends AppComponent {
 
         this.searchService.onChange(state => {
             this.loaderService.hide();
-            console.log(state);
             this.productList = state.items;
         });
 
         if (!Object.keys(this.searchParams).length) {
-            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject
-            this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
+            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject;
+
+            if  (queriedObject) {
+                this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
+            }
         }
 
         this.searchService.search(this.searchParams);
