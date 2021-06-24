@@ -41,5 +41,4 @@ if (is_product()) {
 
 <?php
 get_template_part('template-parts/cookiesBanner');
-//echo "<app-cookies-banner> </app-cookies-banner>";
 get_footer();
