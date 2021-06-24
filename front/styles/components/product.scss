@@ -15,3 +15,57 @@
     }
   }
 }
+
+ul.products {
+  padding: 10px;
+  list-style-type: none;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+
+  @media (min-width: 572px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  li {
+
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+
+    h2 {
+      color: $secondary;
+      font-size: 1em;
+
+    }
+
+    a {
+      width: 50px;
+      text-align: center;
+
+      bdi {
+        display: block;
+        color: $neutral-4;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    }
+
+    a.button {
+      color: white;
+      width: 50px;
+      display: inline-flex;
+      font-weight: bolder;
+      padding: 20px;
+      border-radius: 10%;
+      background-color: $primary;
+    }
+
+
+  }
+}
+
