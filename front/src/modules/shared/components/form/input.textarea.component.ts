@@ -6,6 +6,10 @@ export default class InputTextareaComponent extends InputBaseComponent {
         return 'app-input-textarea';
     }
 
+    public get input(): HTMLTextAreaElement {
+        return this.querySelector('textarea')
+    }
+
     public render(): TemplateResult {
         return html`
             <div class="form-group">

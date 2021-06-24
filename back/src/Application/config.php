@@ -29,7 +29,7 @@ use Psr\Container\ContainerInterface;
 return [
     'app.name' => 'zartizana',
     'logger.name' => 'default_logger',
-    'logger.file' => __DIR__ . '../../var/journal.log',
+    'logger.file' => __DIR__ . '/../../var/journal.log',
     'dir.public' => __DIR__ . '/../../web',
     'publicDir' => __DIR__ . '/../../web',
     'resourcesList' => [

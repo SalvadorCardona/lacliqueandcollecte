@@ -65,9 +65,10 @@ export default class PartnerRequestViewComponent extends AppComponent {
             siretNumber: formInput.querySelector('#siretNumber').value,
         } as PartnerRequest
 
+        console.log(data);
+
         this.partnerRequestService.addPartnerRequest(data)
             .then(response => {
-                console.log("test");
                 this.formSend = true;
                 this.loaderService.hide();
             }).catch((errors) => {
