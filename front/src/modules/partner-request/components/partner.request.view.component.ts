@@ -65,8 +65,6 @@ export default class PartnerRequestViewComponent extends AppComponent {
             siretNumber: formInput.querySelector('#siretNumber').value,
         } as PartnerRequest
 
-        console.log(data);
-
         this.partnerRequestService.addPartnerRequest(data)
             .then(response => {
                 this.formSend = true;
@@ -78,7 +76,6 @@ export default class PartnerRequestViewComponent extends AppComponent {
     }
 
     public render(): TemplateResult {
-        console.log(this.formSend)
         if (this.formSend) {
             return html`
             <div class="container mt-3 mb-5 p-5 shadow-lg">
@@ -88,7 +85,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
                             text-center my-4">
                     ${this.trans("partner.request.complete.title")}
                 </h2>
-                <span>${this.trans("partner.request.complete.text")}</span>
+                <div class="span12 text-center">${this.trans("partner.request.complete.text")}</div>
             </div>
         `;
         }
