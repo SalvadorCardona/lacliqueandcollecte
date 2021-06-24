@@ -490,8 +490,14 @@ msgstr ""
 msgid "header.component.div.become.partner"
 msgstr ""
 
+msgid "cookies.banner.text"
+msgstr ""
 
+msgid "cookies.banner.title"
+msgstr ""
 
+msgid "cookies.banner.refuse"
+msgstr ""
 
-
-
+msgid "cookies.banner.accept"
+msgstr ""

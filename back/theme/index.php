@@ -40,4 +40,5 @@ if (is_product()) {
 ?>
 
 <?php
+get_template_part('template-parts/cookiesBanner');
 get_footer();
