@@ -2,8 +2,6 @@ import {AppComponent} from 'App/core/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 import IconComponent from "App/modules/shared/components/icon.component";
 import {Icon} from "App/enum/icon.enum";
-import {injector} from "App/core/container.service";
-import ModalService from "App/core/modal.service";
 
 export default class ModalComponent extends AppComponent {
 
@@ -11,15 +9,12 @@ export default class ModalComponent extends AppComponent {
         return 'app-modal';
     }
 
-    @injector(ModalService)
-    private modalService: ModalService;
-
     @property({type: HTMLElement})
     private _body: HTMLElement;
 
     private _title: string;
 
-    private _$close: () => void;
+    private _$close: CallableFunction;
 
     public init(body: HTMLElement, title: string = null): void {
         this._body = body;
@@ -36,8 +31,7 @@ export default class ModalComponent extends AppComponent {
     }
 
     private closeModal(): void {
-        const modal: HTMLElement = this.querySelector('.modal-background');
-        modal.hidden = true;
+        this._$close();
     }
 
     public render(): TemplateResult {
@@ -60,6 +54,7 @@ export default class ModalComponent extends AppComponent {
                     </div>
                     <div class="modal-body">${this._body}</div>
                 </div>
-            </div>`;
+            </div>
+        `;
     }
 }
