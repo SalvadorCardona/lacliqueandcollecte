@@ -31,7 +31,6 @@ export default class RouterService {
                             resolve(createElement(module.default.defaultComponent, {productId: queriedObject.iD}))
                         });
                     break;
-                // @ts-ignore
                 case wpQuery.isSingular && queriedObject.iD === 159:
                     import('App/modules/home/home.modules')
                         .then(module => {
@@ -46,7 +45,6 @@ export default class RouterService {
                             resolve(createElement(module.default.defaultComponent))
                         });
                     break;
-                // @ts-ignore
                 case wpQuery.isSingular && queriedObject.iD === 91:
                     import('App/modules/partner-request/request.partner.modules')
                         .then(module => {
