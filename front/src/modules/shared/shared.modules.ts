@@ -44,7 +44,7 @@ export default {
         InputRadioComponent,
         InputSelectComponent,
         InputCheckboxComponent,
-        InputTextareaComponent
+        InputTextareaComponent,
         CookiesBannerComponent,
     ]
 } as Module;

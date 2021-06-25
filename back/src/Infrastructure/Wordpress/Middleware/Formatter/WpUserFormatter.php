@@ -13,7 +13,9 @@ class WpUserFormatter extends Formatter
      */
     public function format($data): ?MiddlewareUser
     {
-    	if ($data->ID === 0) return null;
+        if ($data->ID === 0) {
+            return null;
+        }
 
         return (new MiddlewareUser())
             ->setId($data->ID)

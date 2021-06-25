@@ -32,13 +32,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
     private formSend: boolean = false;
 
     @property({type: Object})
-    private errors: {[name: string]: string} = {};
-
-    public connectedCallback() {
-
-        super.connectedCallback();
-
-    }
+    private errors: {[key: string]: string} = {};
 
     private onSendPartnerRequest($event: EventTarget): void {
         this.loaderService.show();
@@ -66,7 +60,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
         } as PartnerRequest
 
         this.partnerRequestService.addPartnerRequest(data)
-            .then(response => {
+            .then(() => {
                 this.formSend = true;
                 this.loaderService.hide();
             }).catch((errors) => {
@@ -190,7 +184,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
         return html`<div class="mt-5"><spans class="text-danger">Votre Formulaire n'est pas valide</spans></div>`;
     }
 
-    private getError(errorName: string) {
+    private getError(errorName: string) : string {
         if (this.errors.hasOwnProperty(errorName)) {
             return this.errors[errorName];
         }
