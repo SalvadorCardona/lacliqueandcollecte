@@ -4,6 +4,12 @@ import bakery from "Media/home/jobs/bakery.jpg";
 import brasserie from "Media/home/jobs/brasserie.jpg";
 import woodworking from "Media/home/jobs/woodworking.jpg";
 
+interface Tax {
+    img: string;
+    labelCategory: string;
+    name: string;
+}
+
 export default class HomeCategoriesListComponent extends AppComponent {
 
     private baseUrl: string = "job";
@@ -12,7 +18,7 @@ export default class HomeCategoriesListComponent extends AppComponent {
         return 'app-home-categories-list';
     }
 
-    private FakeList = [
+    private FakeList: Tax[] = [
         {
             img: bakery,
             labelCategory: 'Boulangerie',
@@ -49,7 +55,7 @@ export default class HomeCategoriesListComponent extends AppComponent {
     }
 
     //TODO : typage de category
-    public renderCategories(category): TemplateResult {
+    public renderCategories(category: Tax): TemplateResult {
         return html `
             <div class="text-white mt-3">
                 <a class="btn

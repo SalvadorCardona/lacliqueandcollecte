@@ -501,3 +501,9 @@ msgstr ""
 
 msgid "cookies.banner.accept"
 msgstr ""
+
+msgid "partner.request.complete.title"
+msgstr ""
+
+msgid "partner.request.complete.text"
+msgstr ""

@@ -1,6 +1,6 @@
 .type-product {
-  padding: 0 0 15px;
   @include app-transition();
+  padding: 0 0 15px;
 
   &:hover {
     transform: scale(1.1);

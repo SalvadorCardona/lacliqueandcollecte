@@ -27,10 +27,16 @@ export default class InputBaseComponent extends AppComponent {
     protected helper: string;
 
     @property({type: String})
-    protected value;
+    protected value: string = '';
 
     @property({type: Function})
     protected onChange;
+
+    @property({type: Boolean})
+    protected required: boolean = false;
+
+    @property({type: String})
+    protected error: string = '';
 
     public get input(): HTMLInputElement {
         return this.querySelector('input')
@@ -40,12 +46,24 @@ export default class InputBaseComponent extends AppComponent {
         return 'app-input';
     }
 
+    public firstUpdated(): void {
+        this.input.required = this.required;
+    }
+
     public render(): TemplateResult {
         return html`
             <div class="form-group">
                 <label for="${this.getId()}" class="form-label">${this.label}</label>
-                <input @keyup="${this._onChange}" @change="${this._onChange}" value="${this.value}" placeholder="${this.placeholder}" type="${this.type}" class="form-control" id="${this.getId()}">
+                <input 
+                        @keyup="${this._onChange}" 
+                        @change="${this._onChange}" 
+                        value="${this.value}"
+                        placeholder="${this.placeholder}" 
+                        type="${this.type}" 
+                        class="form-control" 
+                        id="${this.getId()}">
                 ${this.helper ? html`<div class="form-text">${this.helper}</div>` : ''}
+                <span class="text-danger">${this.error}</span>
             </div>
         `;
     }

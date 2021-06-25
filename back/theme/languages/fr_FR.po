@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zartizana\n"
 "POT-Creation-Date: 2021-05-27 17:06+0200\n"
-"PO-Revision-Date: 2021-06-17 14:49+0000\n"
+"PO-Revision-Date: 2021-06-24 16:31+0000\n"
 "Language-Team: Français\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -270,6 +270,41 @@ msgstr "Voir sa page"
 #| msgid "partnerHeaderCity"
 msgid "partner.header.city"
 msgstr " Commerce situé dans la ville de "
+
+msgid "partner.request.complete.text"
+msgstr ""
+"Merci d'avoir fait votre demande pour devenir partenaire nous vous "
+"contacterons après avoir traité votre demande. "
+
+msgid "partner.request.complete.title"
+msgstr "Votre demande à été prise en compte :"
+
+msgid "partner.request.description.label"
+msgstr "Description de l'entreprise"
+
+msgid "partner.request.description.placeholder"
+msgstr "le secteur d'activités / les différents produits / la ville"
+
+msgid "partner.request.email.label"
+msgstr "Email"
+
+msgid "partner.request.firstName.label"
+msgstr "Prénom"
+
+msgid "partner.request.form.title"
+msgstr "Formulaire partenaire"
+
+msgid "partner.request.lastName.label"
+msgstr "Nom"
+
+msgid "partner.request.phone.label"
+msgstr "Numéro de téléphone"
+
+msgid "partner.request.send.button"
+msgstr "Envoyer"
+
+msgid "partner.request.siret.label"
+msgstr "Numéro de siret"
 
 #| msgid "partnerViewPartnerName"
 msgid "partner.view.partner.name"
