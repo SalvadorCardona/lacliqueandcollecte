@@ -40,7 +40,7 @@ export default class SearchViewComponent extends AppComponent {
         });
 
         if (!Object.keys(this.searchParams).length) {
-            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject
+            const queriedObject = this.configurationService.configuration.queriedObject
             this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
         }
 
