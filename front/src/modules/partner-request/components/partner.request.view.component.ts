@@ -185,7 +185,7 @@ export default class PartnerRequestViewComponent extends AppComponent {
     }
 
     private getError(errorName: string) : string {
-        if (this.errors.hasOwnProperty(errorName)) {
+        if (errorName in this.errors) {
             return this.errors[errorName];
         }
     }

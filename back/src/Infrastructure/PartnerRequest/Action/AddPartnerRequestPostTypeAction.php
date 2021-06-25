@@ -12,7 +12,7 @@ use WordPlate\Acf\Fields\Text;
 use WordPlate\Acf\Fields\Textarea;
 use WordPlate\Acf\Location;
 
-class AddPartnerRequestPostType implements ActionInterface
+class AddPartnerRequestPostTypeAction implements ActionInterface
 {
 
     public function __construct(private WordpressMiddleware $wordpressMiddleware)
