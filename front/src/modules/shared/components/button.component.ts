@@ -6,7 +6,6 @@ import {Icon} from "App/enum/icon.enum";
 
 export default class ButtonComponent extends AppComponent {
 
-
     public static getComponentName(): string {
         return 'app-button';
     }

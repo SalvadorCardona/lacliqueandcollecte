@@ -36,12 +36,10 @@ export default class PartnerRequestViewComponent extends AppComponent {
 
     private onSendPartnerRequest($event: EventTarget): void {
         this.loaderService.show();
-
         $event.preventDefault();
 
         this.formInvalid = false;
         this.errors = {};
-
         const formInput = this.querySelector('#partner-request-form') as HTMLFormElement
 
         if (!formInput.checkValidity()) {
