@@ -222,10 +222,10 @@ class WordpressMiddleware
         return is_tax();
     }
 
-	public function isPage(): bool
-	{
-		return is_page();
-	}
+    public function isPage(): bool
+    {
+        return is_page();
+    }
 
     public function wpMail(string|array $to, string $subject, string $message, null|string|array $headers, ?array $attachments): bool
     {

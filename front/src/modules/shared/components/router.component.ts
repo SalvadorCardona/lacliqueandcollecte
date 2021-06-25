@@ -48,7 +48,9 @@ export default class RouterComponent extends AppComponent {
             <footer id="site-footer" class="site-footer" role="contentinfo">
                 ${this.createElement(FooterComponent)}
             </footer>
-            ${this.createElement(CookiesBannerComponent)}
+            <div class="position-fixed bottom-0 p-3 w-100 zindex-sticky" style="z-index: 999" role="banner">
+                ${this.createElement(CookiesBannerComponent)}
+            </div>
         `;
     }
 }

@@ -13,39 +13,41 @@ export default class RouterService {
     public rout(): Promise<AppComponent> {
         const wpQuery = this.configurationService.configuration.wpQuery;
         const queriedObject = wpQuery?.queriedObject;
+        const postId = queriedObject && 'iD' in queriedObject ? queriedObject.iD : null;
+        const postType = queriedObject && 'postType' in queriedObject ? queriedObject.postType : null;
 
         return new Promise(resolve => {
             switch (true) {
-                case wpQuery.isSingular && "postType" in queriedObject ? queriedObject.postType === 'partner' :
+                case wpQuery.isSingular && postType === 'partner' :
                     import('App/modules/partner/partner.modules')
                         .then(module => {
                             this.moduleService.addModule(module.default);
-                            resolve(createElement(module.default.defaultComponent, {partnerPostId: queriedObject.iD}))
+                            resolve(createElement(module.default.defaultComponent, {partnerPostId: postId}))
                         });
                     break;
-                case wpQuery.isSingular && "postType" in queriedObject ? queriedObject.postType === 'product' :
+                case wpQuery.isSingular && postType === 'product' :
                     import('App/modules/product/product.modules')
                         .then(module => {
                             this.moduleService.addModule(module.default);
-                            resolve(createElement(module.default.defaultComponent, {productId: queriedObject.iD}))
+                            resolve(createElement(module.default.defaultComponent, {productId: postId}))
                         });
                     break;
-                case wpQuery.isSingular && queriedObject.iD === 159:
+                case wpQuery.isSingular && postId === 159:
                     import('App/modules/home/home.modules')
                         .then(module => {
                             this.moduleService.addModule(module.default);
                             resolve(createElement(module.default.defaultComponent))
                         });
                     break;
-                case wpQuery.isTax:
+                case wpQuery.isTax || wpQuery.isShop:
                     import('App/modules/search/search.modules')
                         .then(module => {
                             this.moduleService.addModule(module.default);
                             resolve(createElement(module.default.defaultComponent))
                         });
                     break;
-                case wpQuery.isSingular && queriedObject.iD === 91:
-                    import('App/modules/partner-request/request.partner.modules')
+                case wpQuery.isSingular && postId === 91:
+                    import('App/modules/partner-request/partner.request.modules')
                         .then(module => {
                             this.moduleService.addModule(module.default);
                             resolve(createElement(module.default.defaultComponent))

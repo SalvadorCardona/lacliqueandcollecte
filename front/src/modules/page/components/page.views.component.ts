@@ -1,7 +1,7 @@
 import {html, property , TemplateResult} from 'lit-element';
 import {AppComponent} from "App/modules/shared/services/custom.element";
 import {PostType} from "App/modules/shared/types/post.type";
-import { unsafeHTML } from 'lit-html/directives/unsafe-html';
+import {unsafeHTML} from 'lit-html/directives/unsafe-html';
 
 export default class PageViewsComponent extends AppComponent {
 

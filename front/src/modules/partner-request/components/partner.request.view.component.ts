@@ -1,14 +1,15 @@
-import {AppComponent} from 'App/core/custom.element';
+
 import {html, property, TemplateResult} from 'lit-element';
 import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
-import {injector} from "App/core/container.service";
-import ConfigurationService from "App/core/configuration.service";
 import PartnerRequestService from "App/modules/partner-request/services/partner.request.service";
 import {PartnerRequest} from "App/modules/partner-request/types/partner.request";
-import LoaderService from "App/core/loader.service";
 import InputSelectComponent from "App/modules/shared/components/form/input.textarea.component";
+import {AppComponent} from 'App/modules/shared/services/custom.element';
+import ConfigurationService from 'App/modules/shared/services/configuration.service';
+import LoaderService from 'App/modules/shared/services/loader.service';
+import {injector} from 'App/modules/shared/services/container.service';
+import {Color} from 'App/modules/shared/enum/color.enum';
 
 export default class PartnerRequestViewComponent extends AppComponent {
 

@@ -44,7 +44,7 @@ class DisableAssetsWordpress implements ActionInterface
             || $query->is_tax
             || (int) $this->wordpressMiddleware->getOption('page_on_front') === $query->queried_object_id
             || $postName === 'ui'
-	        || $this->wordpressMiddleware->isPage()
+            || $this->wordpressMiddleware->isPage()
         ) {
             foreach (self::STYLE_NOT_EXPECTED as $styleNotExpected) {
                 $this->wordpressMiddleware->wpDeregisterStyle($styleNotExpected);

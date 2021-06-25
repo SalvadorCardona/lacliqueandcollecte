@@ -1,4 +1,4 @@
-import Module from "App/types/module.type";
+import Module from "App/modules/shared/types/module.type";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import ModalProductComponent from "App/modules/shared/components/modal.product.component";
 import ModalComponent from "App/modules/shared/components/modal.component";
@@ -19,12 +19,10 @@ import InputSelectComponent from "App/modules/shared/components/form/input.selec
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 import HeaderMobileComponent from "App/modules/shared/components/header/header.mobile.component";
 import HeaderDesktopComponent from "App/modules/shared/components/header/header.desktop.component";
-import EventService from "App/modules/shared/services/event.service";
 import ModalService from "App/modules/shared/services/modal.service";
 import LoaderService from "App/modules/shared/services/loader.service";
 import ClientService from "App/modules/shared/services/client.service";
 import CartService from "App/modules/shared/services/cart.service";
-import ComponentService from "App/modules/shared/services/component.service";
 import CartClient from "App/modules/shared/services/client/cart.client";
 import ProductClient from "App/modules/shared/services/client/product.client";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
@@ -34,7 +32,6 @@ import SearchService from "App/modules/shared/services/search.service";
 import TranslateService from "App/modules/shared/services/translate.service";
 import RouterService from "App/modules/shared/services/router.service";
 import RouterComponent from "App/modules/shared/components/router.component";
-import ModuleService from "App/modules/shared/services/module.service";
 import InputTextareaComponent from "App/modules/shared/components/form/input.textarea.component";
 import CookiesBannerComponent from "App/modules/shared/components/cookies-banner/cookies.banner.component";
 
@@ -60,6 +57,7 @@ const SharedModule = {
         InputRadioComponent,
         InputSelectComponent,
         InputCheckboxComponent,
+        InputTextareaComponent,
         RouterComponent,
         CookiesBannerComponent
     ],

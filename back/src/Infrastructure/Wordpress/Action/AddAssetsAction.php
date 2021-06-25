@@ -25,7 +25,7 @@ class AddAssetsAction implements ActionInterface
             $this->wordpressMiddleware->wpEnqueueStyle('app-css', $this->wordpressMiddleware->getHomeUrl() . $manifest['styles/app.scss'], [], '1', 'all');
             $this->wordpressMiddleware->wpEnqueueScript('app-js', $this->wordpressMiddleware->getHomeUrl() . $manifest['src/app.ts'], [], '1', true);
 
-	        $this->wordpressMiddleware->wpLocalizeScript(
+            $this->wordpressMiddleware->wpLocalizeScript(
                 'app-js',
                 'middlewareConfiguration',
                 (array) $this->middlewareConfigurationFactory->format()

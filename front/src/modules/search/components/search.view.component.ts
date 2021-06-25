@@ -9,6 +9,7 @@ import LoaderService from "App/modules/shared/services/loader.service";
 import {SearchParams} from "App/modules/shared/services/client/search.client";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
 import SearchService from "App/modules/shared/services/search.service";
+import headerProductsPage from "Media/product-page/header_products_page.svg";
 
 export default class SearchViewComponent extends AppComponent {
     @injector(SearchService)
@@ -35,13 +36,14 @@ export default class SearchViewComponent extends AppComponent {
 
         this.searchService.onChange(state => {
             this.loaderService.hide();
+            console.log(state);
             this.productList = state.items;
         });
 
         if (!Object.keys(this.searchParams).length) {
-            const queriedObject = this.configurationService.configuration.queriedObject
-            this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
-        }
+            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject;
+
+            if (queriedObject && 'taxonomy' in queriedObject) {
                 this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
             }
         }

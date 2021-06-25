@@ -1,6 +1,6 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
 import {getApiEndpoint, keysToCamel} from "App/modules/shared/services/helper";
-import {ContainerService, injector, OnInit} from "App/modules/shared/services/container.service";
+import {injector, OnInit} from "App/modules/shared/services/container.service";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
 
 export default class ClientService implements OnInit {

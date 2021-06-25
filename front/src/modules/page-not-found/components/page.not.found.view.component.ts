@@ -1,4 +1,4 @@
-import {html, property , TemplateResult} from 'lit-element';
+import {html, TemplateResult} from 'lit-element';
 import {AppComponent} from "App/modules/shared/services/custom.element";
 
 export default class PageNotFoundViewComponent extends AppComponent {
