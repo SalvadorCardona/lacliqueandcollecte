@@ -15,8 +15,7 @@ class PartnerRequestApi extends AbstractApiController
         private WordpressMiddleware $wordpressMiddleware,
         private Logger $logger,
         private PartnerRequestValidator $partnerRequestValidator,
-    )
-    {
+    ) {
     }
 
     public function __invoke(): HttpResponse

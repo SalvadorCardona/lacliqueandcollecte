@@ -267,9 +267,10 @@ class MiddlewareWPQuery
         return $this;
     }
 
-	public function setQueriedObject(?WP_Term $queriedObject): MiddlewareWPQuery {
-		$this->queriedObject = $queriedObject;
+    public function setQueriedObject(?WP_Term $queriedObject): MiddlewareWPQuery
+    {
+        $this->queriedObject = $queriedObject;
 
-		return $this;
-	}
+        return $this;
+    }
 }

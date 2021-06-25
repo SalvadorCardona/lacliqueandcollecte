@@ -32,7 +32,6 @@ export default class SearchViewComponent extends AppComponent {
         return 'app-search-view';
     }
 
-
     public connectedCallback(): void {
         super.connectedCallback();
 
@@ -48,7 +47,6 @@ export default class SearchViewComponent extends AppComponent {
                 this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
             }
         }
-
         this.searchService.search(this.searchParams);
     }
 
@@ -63,7 +61,15 @@ export default class SearchViewComponent extends AppComponent {
                     d-flex           
                     justify-content-around
                     bg-white">
-                    <h1 class="text-primary ml-5 text-bold border border-primary border-3 rounded bg-white p-3 text-uppercase ">
+                    <h1 class="text-primary
+                        text-bold 
+                        border 
+                        border-primary 
+                        border-3 
+                        rounded 
+                        bg-white 
+                        p-3 
+                        text-uppercase ">
                         ${this.trans("search.view.title")}</h1>
                 </div>
                 <div class="mt-5 row">

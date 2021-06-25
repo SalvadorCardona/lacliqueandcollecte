@@ -20,7 +20,7 @@ class WpQueryFormatter extends Formatter
     public function format($data): MiddlewareWPQuery
     {
         return (new MiddlewareWPQuery())
-	        ->setQueriedObject($data->queried_object)
+            ->setQueriedObject($data->queried_object)
             ->setCommentCount($data->comment_count)
             ->setCurrentComment($data->current_comment)
             ->setCurrentPost($data->current_post)
