@@ -2,6 +2,7 @@
 
 namespace App\Infrastructure\Wordpress\Middleware\Entity;
 
+use WP_Post;
 use WP_Term;
 
 class MiddlewareWPQuery
@@ -43,7 +44,7 @@ class MiddlewareWPQuery
     public bool $isYear;
     public int $maxNumCommentPages;
     public float $maxNumPages;
-    public ?WP_Term $queriedObject;
+    public null|WP_Post|WP_term $queriedObject;
 
     public function setCommentCount(int $commentCount): MiddlewareWPQuery
     {
@@ -267,10 +268,9 @@ class MiddlewareWPQuery
         return $this;
     }
 
-    public function setQueriedObject(?WP_Term $queriedObject): MiddlewareWPQuery
+    public function setQueriedObject(WP_Term|WP_Post|null $queriedObject): MiddlewareWPQuery
     {
         $this->queriedObject = $queriedObject;
-
         return $this;
     }
 }
