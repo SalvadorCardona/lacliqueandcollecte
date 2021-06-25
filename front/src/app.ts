@@ -1,6 +1,6 @@
 import "reflect-metadata";
 import ModuleService from "App/modules/shared/services/module.service";
-import EventService from "App/modules/shared/services/event.service";
+import EventService, { events } from "App/modules/shared/services/event.service";
 import ComponentService from "App/modules/shared/services/component.service";
 import {ContainerService} from "App/modules/shared/services/container.service";
 import SharedModule from "App/modules/shared/shared.modules";
@@ -26,6 +26,10 @@ export default class Kernel {
         const moduleService = this.containerService.service(ModuleService);
 
         moduleService.addModule(SharedModule);
+
+        const eventService = this.containerService.service(EventService);
+
+        eventService.dispatch(events.APPLICATION_LOADED);
     }
 }
 

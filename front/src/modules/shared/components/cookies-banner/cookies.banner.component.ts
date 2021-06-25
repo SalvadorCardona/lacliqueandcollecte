@@ -1,8 +1,8 @@
-import {AppComponent} from 'App/core/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import cookie from "Media/shared/cookie.svg";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
+import {AppComponent} from "App/modules/shared/services/custom.element";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 interface CookieAcceptance {
     hasAccepted: boolean,

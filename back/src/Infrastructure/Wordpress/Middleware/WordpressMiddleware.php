@@ -222,6 +222,11 @@ class WordpressMiddleware
         return is_tax();
     }
 
+	public function isPage(): bool
+	{
+		return is_page();
+	}
+
     public function wpMail(string|array $to, string $subject, string $message, null|string|array $headers, ?array $attachments): bool
     {
         return wp_mail($to, $subject, $message, $headers, $attachments);

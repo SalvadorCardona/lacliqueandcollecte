@@ -15,7 +15,6 @@ export default class RouterService {
         const queriedObject = wpQuery?.queriedObject;
 
         return new Promise(resolve => {
-
             switch (true) {
                 case wpQuery.isSingular && "postType" in queriedObject ? queriedObject.postType === 'partner' :
                     import('App/modules/partner/partner.modules')
@@ -50,6 +49,13 @@ export default class RouterService {
                         .then(module => {
                             this.moduleService.addModule(module.default);
                             resolve(createElement(module.default.defaultComponent))
+                        });
+                    break;
+                case wpQuery.isPage:
+                    import('App/modules/page/page.module')
+                        .then(module => {
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent, {post: wpQuery.queriedObject}))
                         });
                     break;
                 default:

@@ -6,6 +6,7 @@ import LoaderService from "App/modules/shared/services/loader.service";
 import HeaderComponent from "App/modules/shared/components/header/header.component";
 import FooterComponent from "App/modules/shared/components/footer/footer.component";
 import EventService, {events} from "App/modules/shared/services/event.service";
+import CookiesBannerComponent from "App/modules/shared/components/cookies-banner/cookies.banner.component";
 
 export default class RouterComponent extends AppComponent {
 
@@ -26,7 +27,7 @@ export default class RouterComponent extends AppComponent {
     }
 
     public connectedCallback(): void {
-        this.eventService.addSubscriber(events.SERVICE_LOADED, () => {
+        this.eventService.addSubscriber(events.APPLICATION_LOADED, () => {
             this.loaderService.show();
 
             this.routerService.rout()
@@ -47,6 +48,7 @@ export default class RouterComponent extends AppComponent {
             <footer id="site-footer" class="site-footer" role="contentinfo">
                 ${this.createElement(FooterComponent)}
             </footer>
+            ${this.createElement(CookiesBannerComponent)}
         `;
     }
 }

@@ -1,10 +1,13 @@
 import axios, {AxiosInstance, AxiosResponse, Method} from 'axios'
 import {getApiEndpoint, keysToCamel} from "App/modules/shared/services/helper";
-import {ContainerService, OnInit} from "App/modules/shared/services/container.service";
+import {ContainerService, injector, OnInit} from "App/modules/shared/services/container.service";
 import ConfigurationService from "App/modules/shared/services/configuration.service";
 
 export default class ClientService implements OnInit {
     public http: AxiosInstance;
+
+    @injector(ConfigurationService)
+    private configurationService: ConfigurationService;
 
     public send(method: Method, route: string, data: any = {}): Promise<AxiosResponse> {
         return this.http[method](route, data);
@@ -19,15 +22,12 @@ export default class ClientService implements OnInit {
         });
 
         this.http.interceptors.request.use((response: AxiosResponse) => {
-            const containerService = ContainerService.get();
-            const configurationService: ConfigurationService = containerService.configurationService;
-
-            if (configurationService.configuration.wcStoreApi) {
-                response.headers['X-WC-Store-API-Nonce'] = configurationService.configuration.wcStoreApi || null;
+            if (this.configurationService.configuration.wcStoreApi) {
+                response.headers['X-WC-Store-API-Nonce'] = this.configurationService.configuration.wcStoreApi || null;
             }
 
-            if (configurationService.configuration.wpApiKey) {
-                response.headers['X-WP-Nonce'] = configurationService.configuration.wpApiKey || null;
+            if (this.configurationService.configuration.wpApiKey) {
+                response.headers['X-WP-Nonce'] = this.configurationService.configuration.wpApiKey || null;
             } else {
                 if (window['Settings'] && window['Settings'].nonce)
                 response.headers['X-WP-Nonce'] = window['Settings'].nonce;
