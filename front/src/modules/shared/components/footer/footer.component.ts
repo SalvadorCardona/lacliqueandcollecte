@@ -1,8 +1,8 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {css, CSSResult, html, TemplateResult, unsafeCSS} from "lit-element";
 import image from "Media/shared/pattern-footer.svg";
 import IconComponent from "App/modules/shared/components/icon.component";
-import {Icon} from "App/enum/icon.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class FooterComponent extends AppComponent {
 

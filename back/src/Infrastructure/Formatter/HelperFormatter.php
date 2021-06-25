@@ -25,6 +25,9 @@ class HelperFormatter
                     $data[$k] = $tmp;
                 }
             }
+            if (is_string($k)) {
+                return current(self::keysToCamel([$data]));
+            }
         }
 
         return $data;

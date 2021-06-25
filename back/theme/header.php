@@ -15,10 +15,6 @@ if (! defined('ABSPATH')) {
 <!doctype html>
 <html <?php language_attributes(); ?>>
 
-<div class="loader-application loader-fixed">
-    <div class="donut-spinner"></div>
-</div>
-
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,9 +23,5 @@ if (! defined('ABSPATH')) {
 </head>
 
 <body <?php body_class(); ?>>
-
-<?php
-get_template_part('template-parts/header');
-?>
 
 <main class="site-main" role="main">

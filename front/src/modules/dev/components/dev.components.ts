@@ -1,4 +1,4 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, property, TemplateResult} from "lit-element";
 import DevMenuComponent from "App/modules/dev/components/dev.menu.component";
 import HomeViewComponent from "App/modules/home/components/home.view.component";

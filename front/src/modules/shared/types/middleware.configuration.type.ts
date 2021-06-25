@@ -1,7 +1,7 @@
-import {PostType} from "App/types/post.type";
-import {UserType} from "App/types/user.type";
-import {QueriedObject, WpQuery} from "App/types/wp.query.type";
-import {MiddlewareCategory} from "App/types/midlewarecategory.type";
+import {PostType} from "App/modules/shared/types/post.type";
+import {UserType} from "App/modules/shared/types/user.type";
+import {WpQuery} from "App/modules/shared/types/wp.query.type";
+import {MiddlewareCategory} from "App/modules/shared/types/midlewarecategory.type";
 
 export interface MiddlewareConfigurationType {
     wcStoreApi: string;

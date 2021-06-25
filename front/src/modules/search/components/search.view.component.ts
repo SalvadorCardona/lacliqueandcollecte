@@ -1,14 +1,14 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import SearchLeftBarComponent from "App/modules/search/components/search.left.bar.component";
 import SearchContentComponent from "App/modules/search/components/search.content.component";
-import {injector} from "App/core/container.service";
-import {ProductPost} from "App/types/product.type";
+import {injector} from "App/modules/shared/services/container.service";
+import {ProductPost} from "App/modules/shared/types/product.type";
 import {property} from "lit-element/lib/decorators";
-import LoaderService from "App/core/loader.service";
-import {SearchParams} from "App/core/client/search.client";
-import ConfigurationService from "App/core/configuration.service";
-import SearchService from "App/core/search.service";
+import LoaderService from "App/modules/shared/services/loader.service";
+import {SearchParams} from "App/modules/shared/services/client/search.client";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
+import SearchService from "App/modules/shared/services/search.service";
 import headerProductsPage from "Media/product-page/header_products_page.svg";
 
 export default class SearchViewComponent extends AppComponent {
@@ -36,16 +36,18 @@ export default class SearchViewComponent extends AppComponent {
 
         this.searchService.onChange(state => {
             this.loaderService.hide();
+            console.log(state);
             this.productList = state.items;
         });
 
         if (!Object.keys(this.searchParams).length) {
-            const queriedObject = this.configurationService.configuration.queriedObject
-            this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
-        }
+            const queriedObject = this.configurationService.configuration.wpQuery.queriedObject;
+
+            if (queriedObject && 'taxonomy' in queriedObject) {
                 this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
             }
         }
+
         this.searchService.search(this.searchParams);
     }
 

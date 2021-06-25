@@ -1,9 +1,9 @@
-import {AppComponent} from 'App/core/custom.element';
-import {icons} from 'App/core/icons'
+import {AppComponent} from 'App/modules/shared/services/custom.element';
+import {icons} from 'App/modules/shared/services/icons'
 import {html, property, TemplateResult} from 'lit-element';
 import {unsafeHTML} from 'lit-html/directives/unsafe-html';
-import {Color} from "App/enum/color.enum";
-import {Icon} from "App/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class IconComponent extends AppComponent {
 

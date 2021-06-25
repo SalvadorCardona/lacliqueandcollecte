@@ -1,5 +1,5 @@
-import {injector} from "App/core/container.service";
-import ConfigurationService from "App/core/configuration.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ConfigurationService from "App/modules/shared/services/configuration.service";
 
 export default class TranslateService {
     @injector(ConfigurationService)

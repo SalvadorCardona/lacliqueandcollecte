@@ -1,6 +1,6 @@
 import {environment} from "App/environement/environement";
-import Abstract from "App/core/client/abstract.client";
-import {PartnerPost} from "App/types/partner.type";
+import Abstract from "App/modules/shared/services/client/abstract.client";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
 
 export default class PartnerClient extends Abstract {
     public getPartnerById(idPartner: number): Promise<PartnerPost> {

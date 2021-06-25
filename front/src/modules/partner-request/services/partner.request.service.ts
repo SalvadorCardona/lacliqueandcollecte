@@ -1,4 +1,4 @@
-import Abstract from "App/core/client/abstract.client";
+import Abstract from "App/modules/shared/services/client/abstract.client";
 import {environment} from "App/environement/environement";
 import {PartnerRequest} from "App/modules/partner-request/types/partner.request";
 

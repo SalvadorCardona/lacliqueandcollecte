@@ -1,7 +1,7 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
 import IconComponent from "App/modules/shared/components/icon.component";
-import {Icon} from "App/enum/icon.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class ModalComponent extends AppComponent {
 

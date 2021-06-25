@@ -1,11 +1,11 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import InputBaseComponent from "App/modules/shared/components/form/input.base.component";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 import InputSelectComponent from "App/modules/shared/components/form/input.select.component";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import {html, TemplateResult} from "lit-element";
-import {Color} from "App/enum/color.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 export default class UiFormComponent extends AppComponent {
     public static getComponentName(): string {

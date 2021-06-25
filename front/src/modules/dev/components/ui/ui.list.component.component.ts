@@ -1,8 +1,8 @@
-import {AppComponent, getComponentSelector} from "App/core/custom.element";
+import {AppComponent, getComponentSelector} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
-import {injector} from "App/core/container.service";
-import ComponentService from "App/core/component.service";
+import {injector} from "App/modules/shared/services/container.service";
+import ComponentService from "App/modules/shared/services/component.service";
 
 export default class UiListComponentComponent extends AppComponent {
     @injector(ComponentService)

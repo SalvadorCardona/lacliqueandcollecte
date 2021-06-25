@@ -1,9 +1,9 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
 import {html, TemplateResult} from "lit-element";
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Color} from "App/enum/color.enum";
-import {Icon} from "App/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class UiButtonComponent extends AppComponent {
     public static getComponentName(): string {

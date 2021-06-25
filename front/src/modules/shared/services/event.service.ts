@@ -1,4 +1,5 @@
 export enum events  {
+    APPLICATION_LOADED = 'application_loaded',
     SERVICE_LOADED = 'service_loaded',
     CART_HAS_CHANGED = 'cart_has_changed',
     COMPONENT_LOADED = 'component_loaded',

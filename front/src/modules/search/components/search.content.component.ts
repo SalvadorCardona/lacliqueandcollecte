@@ -1,6 +1,6 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
-import {ProductPost} from "App/types/product.type";
+import {ProductPost} from "App/modules/shared/types/product.type";
 import ProductCardComponent from "App/modules/shared/components/product/product.card.component";
 
 export default class SearchContentComponent extends AppComponent {

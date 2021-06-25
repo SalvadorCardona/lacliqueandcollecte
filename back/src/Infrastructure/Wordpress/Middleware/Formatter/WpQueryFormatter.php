@@ -5,7 +5,10 @@ declare(strict_types=1);
 namespace App\Infrastructure\Wordpress\Middleware\Formatter;
 
 use App\Infrastructure\Formatter\Formatter;
+use App\Infrastructure\Formatter\HelperFormatter;
 use App\Infrastructure\Wordpress\Middleware\Entity\MiddlewareWPQuery;
+use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
+use WP_Post;
 use WP_Query;
 
 /**
@@ -14,13 +17,26 @@ use WP_Query;
 class WpQueryFormatter extends Formatter
 {
     /**
+     * WpQueryFormatter constructor.
+     */
+    public function __construct(private WordpressMiddleware $wordpressMiddleware)
+    {
+    }
+
+    /**
      * @param WP_Query $data
      * @return MiddlewareWPQuery
      */
     public function format($data): MiddlewareWPQuery
     {
+        $queriedObject = $data->queried_object ? HelperFormatter::keysToCamel($data->queried_object->to_array()) : null;
+        if ($queriedObject && $data->queried_object instanceof WP_Post) {
+            $queriedObject['postContent'] = do_shortcode($queriedObject['postContent']);
+        }
+
         return (new MiddlewareWPQuery())
-            ->setQueriedObject($data->queried_object)
+            ->setIsShop($this->wordpressMiddleware->isShop())
+            ->setQueriedObject($queriedObject)
             ->setCommentCount($data->comment_count)
             ->setCurrentComment($data->current_comment)
             ->setCurrentPost($data->current_post)

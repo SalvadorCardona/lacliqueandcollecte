@@ -44,7 +44,8 @@ class MiddlewareWPQuery
     public bool $isYear;
     public int $maxNumCommentPages;
     public float $maxNumPages;
-    public null|WP_Post|WP_term $queriedObject;
+    public null|array $queriedObject;
+    public bool $isShop;
 
     public function setCommentCount(int $commentCount): MiddlewareWPQuery
     {
@@ -268,9 +269,15 @@ class MiddlewareWPQuery
         return $this;
     }
 
-    public function setQueriedObject(WP_Term|WP_Post|null $queriedObject): MiddlewareWPQuery
+    public function setQueriedObject(array|null $queriedObject): MiddlewareWPQuery
     {
         $this->queriedObject = $queriedObject;
+        return $this;
+    }
+
+    public function setIsShop(bool $isShop)
+    {
+        $this->isShop = $isShop;
         return $this;
     }
 }

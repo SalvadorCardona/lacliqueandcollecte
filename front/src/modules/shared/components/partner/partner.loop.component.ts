@@ -1,8 +1,8 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, property, TemplateResult} from "lit-element";
-import {injector} from "App/core/container.service";
-import {PartnerPost} from "App/types/partner.type";
-import PartnerClient from "App/core/client/partner.client";
+import {injector} from "App/modules/shared/services/container.service";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
+import PartnerClient from "App/modules/shared/services/client/partner.client";
 import PartnerCardComponent from "App/modules/shared/components/partner/partner.card.component";
 
 export default class PartnerLoopComponent extends AppComponent {

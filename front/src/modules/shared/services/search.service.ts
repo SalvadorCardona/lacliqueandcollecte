@@ -1,6 +1,6 @@
-import AbstractStore from "App/core/abstract.store";
-import {injector} from "App/core/container.service";
-import SearchClient, {SearchParams, SearchResponse} from "App/core/client/search.client";
+import AbstractStore from "App/modules/shared/services/abstract.store";
+import {injector} from "App/modules/shared/services/container.service";
+import SearchClient, {SearchParams, SearchResponse} from "App/modules/shared/services/client/search.client";
 
 
 export default class SearchService extends AbstractStore<SearchResponse> {

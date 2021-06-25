@@ -1,4 +1,4 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import HomeHeaderComponent from "App/modules/home/components/home.header.component";
 import HomeArgumentativeComponent from "App/modules/home/components/home.argumentative.component";

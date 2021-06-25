@@ -1,8 +1,8 @@
 import {environment} from "App/environement/environement";
-import Abstract from "App/core/client/abstract.client";
-import {PostType} from "App/types/post.type";
-import {ProductPost} from "App/types/product.type";
-import {PartnerPost} from "App/types/partner.type";
+import Abstract from "App/modules/shared/services/client/abstract.client";
+import {PostType} from "App/modules/shared/types/post.type";
+import {ProductPost} from "App/modules/shared/types/product.type";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
 
 export interface SearchParams {
     query?: string;

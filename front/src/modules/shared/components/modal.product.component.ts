@@ -1,11 +1,11 @@
-import {AppComponent} from 'App/core/custom.element';
-import {ProductType} from "App/types/product.type";
-import {injector} from "App/core/container.service";
-import ModalService from "App/core/modal.service";
+import {AppComponent} from 'App/modules/shared/services/custom.element';
+import {ProductType} from "App/modules/shared/types/product.type";
+import {injector} from "App/modules/shared/services/container.service";
+import ModalService from "App/modules/shared/services/modal.service";
 import {html, property, TemplateResult} from 'lit-element';
 import ButtonComponent from "App/modules/shared/components/button.component";
-import {Icon} from "App/enum/icon.enum";
-import {Color} from "App/enum/color.enum";
+import {Icon} from 'App/modules/shared/enum/icon.enum';
+import {Color} from 'App/modules/shared/enum/color.enum';
 
 export default class ModalProductComponent extends AppComponent {
 

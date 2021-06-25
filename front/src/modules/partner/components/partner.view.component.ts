@@ -1,16 +1,16 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, property, TemplateResult} from 'lit-element';
-import {injector} from "App/core/container.service";
-import PartnerClient from "App/core/client/partner.client";
-import LoaderService from "App/core/loader.service";
-import {PartnerPost} from "App/types/partner.type";
+import {injector} from "App/modules/shared/services/container.service";
+import PartnerClient from "App/modules/shared/services/client/partner.client";
+import LoaderService from "App/modules/shared/services/loader.service";
+import {PartnerPost} from "App/modules/shared/types/partner.type";
 import PartnerHeaderComponent from "App/modules/partner/components/partner.header.component";
 import ProductLoopComponent from "App/modules/shared/components/product/product.loop.component";
 import IconComponent from "App/modules/shared/components/icon.component";
 import ButtonComponent from "App/modules/shared/components/button.component";
 import WrapperComponent from "App/modules/shared/components/wrapper.component";
-import {Icon} from "App/enum/icon.enum";
-import {Color} from "App/enum/color.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
+import {Color} from "App/modules/shared/enum/color.enum";
 
 export default class PartnerViewComponent extends AppComponent {
 

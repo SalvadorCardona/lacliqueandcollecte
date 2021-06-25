@@ -1,6 +1,6 @@
 import {environment} from "App/environement/environement";
-import Abstract from "App/core/client/abstract.client";
-import {ProductType} from "App/types/product.type";
+import Abstract from "App/modules/shared/services/client/abstract.client";
+import {ProductType} from "App/modules/shared/types/product.type";
 
 export interface QuerySearch {
     author?: number;

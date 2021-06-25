@@ -6,9 +6,9 @@ import HomeArgumentativeComponent from "App/modules/home/components/home.argumen
 import HomeProductListComponent from "App/modules/home/components/home.product.list.component";
 import HomeCitiesListComponent from "App/modules/home/components/home.cities.list.component";
 import HomeCategoriesListComponent from "App/modules/home/components/home.categories.list.component";
-import Module from "App/types/module.type";
+import Module from "App/modules/shared/types/module.type";
 
-export default {
+const HomeModule = {
     components: [
         HomeViewComponent,
         HomeHeaderComponent,
@@ -18,5 +18,8 @@ export default {
         HomeProductListComponent,
         HomeCitiesListComponent,
         HomeCategoriesListComponent,
-    ]
+    ],
+    defaultComponent: HomeViewComponent
 } as Module;
+
+export default HomeModule;

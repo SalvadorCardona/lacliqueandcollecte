@@ -1,9 +1,9 @@
-import {AppComponent} from 'App/core/custom.element';
+import {AppComponent} from 'App/modules/shared/services/custom.element';
 import {html, TemplateResult} from 'lit-element';
 import logo from "Media/shared/logo.svg";
 import home from "Media/home/home_picture.jpg";
 import IconComponent from "App/modules/shared/components/icon.component";
-import {Icon} from "App/enum/icon.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 export default class HomeHeaderComponent extends AppComponent {
 

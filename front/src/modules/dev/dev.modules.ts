@@ -1,4 +1,4 @@
-import Module from "App/types/module.type";
+import Module from "App/modules/shared/types/module.type";
 import DevMenuComponent from "App/modules/dev/components/dev.menu.component";
 import DevComponent from "App/modules/dev/components/dev.components";
 import UiViewComponent from "App/modules/dev/components/ui/ui.view.component";
@@ -11,7 +11,7 @@ import UiTextAroundComponent from "App/modules/dev/components/ui/ui.text.around.
 import UiTextComponent from "App/modules/dev/components/ui/ui.text.component";
 import UiListComponentComponent from "App/modules/dev/components/ui/ui.list.component.component";
 
-export default {
+const DevModule = {
     components: [
         DevMenuComponent,
         DevComponent,
@@ -26,3 +26,5 @@ export default {
         UiListComponentComponent
     ]
 } as Module;
+
+export default DevModule;

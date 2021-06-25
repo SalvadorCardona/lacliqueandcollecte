@@ -1,8 +1,8 @@
-import {AppComponent} from "App/core/custom.element";
+import {AppComponent} from "App/modules/shared/services/custom.element";
 import {html, TemplateResult} from "lit-element";
 import InputCheckboxComponent from "App/modules/shared/components/form/input.checkbox.component";
 import IconComponent from "App/modules/shared/components/icon.component";
-import {Icon} from "App/enum/icon.enum";
+import {Icon} from "App/modules/shared/enum/icon.enum";
 
 interface ItemSearch {
     label: string;
