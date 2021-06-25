@@ -41,6 +41,7 @@ class MiddlewareWPQuery
     public bool $isYear;
     public int $maxNumCommentPages;
     public float $maxNumPages;
+    public ?WP_Post|WP_term $queriedObject;
 
     public function setCommentCount(int $commentCount): MiddlewareWPQuery
     {
@@ -261,6 +262,12 @@ class MiddlewareWPQuery
     public function setMaxNumPages(int|float $maxNumPages): MiddlewareWPQuery
     {
         $this->maxNumPages = $maxNumPages;
+        return $this;
+    }
+    public function setQueriedObject(?WP_Term $queriedObject): MiddlewareWPQuery
+    {
+        $this->queriedObject = $queriedObject;
+
         return $this;
     }
 }
