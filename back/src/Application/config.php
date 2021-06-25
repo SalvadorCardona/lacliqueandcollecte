@@ -10,7 +10,7 @@ use App\Infrastructure\Partner\Action\AddRolePartnerAction;
 use App\Infrastructure\Partner\Api\GetPartnerByIdApi;
 use App\Infrastructure\Partner\Api\GetPartnersApi;
 use App\Infrastructure\Partner\Filter\AddPartnerToPostTypeFilter;
-use App\Infrastructure\PartnerRequest\Action\AddPartnerRequestPostType;
+use App\Infrastructure\PartnerRequest\Action\AddPartnerRequestPostTypeAction;
 use App\Infrastructure\PartnerRequest\Api\PartnerRequestApi;
 use App\Infrastructure\Search\Api\SearchApi;
 use App\Infrastructure\Woocommerce\Filter\AddProductCatToPartnerFilter;
@@ -29,11 +29,11 @@ use Psr\Container\ContainerInterface;
 return [
     'app.name' => 'zartizana',
     'logger.name' => 'default_logger',
-    'logger.file' => __DIR__ . '../../var/journal.log',
+    'logger.file' => __DIR__ . '/../../var/journal.log',
     'dir.public' => __DIR__ . '/../../web',
     'publicDir' => __DIR__ . '/../../web',
     'resourcesList' => [
-        AddPartnerRequestPostType::class,
+        AddPartnerRequestPostTypeAction::class,
         ActionManager::class,
         PartnerRequestApi::class,
         ApiLoaderManager::class,

@@ -41,6 +41,7 @@ class DisableAssetsWordpress implements ActionInterface
         if (
             $postType === Product::POST_TYPE_NAME
             || $postType === Partner::POST_TYPE_NAME
+            || $this->wordpressMiddleware->isShop()
             || $query->is_tax
             || (int) $this->wordpressMiddleware->getOption('page_on_front') === $query->queried_object_id
             || $postName === 'ui'

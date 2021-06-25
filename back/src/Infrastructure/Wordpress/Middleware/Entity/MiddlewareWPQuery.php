@@ -271,7 +271,6 @@ class MiddlewareWPQuery
     public function setQueriedObject(WP_Term|WP_Post|null $queriedObject): MiddlewareWPQuery
     {
         $this->queriedObject = $queriedObject;
-
         return $this;
     }
 }

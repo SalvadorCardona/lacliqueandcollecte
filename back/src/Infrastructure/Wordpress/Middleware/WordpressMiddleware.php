@@ -93,7 +93,7 @@ class WordpressMiddleware
         return get_theme_mod('custom_logo');
     }
 
-    public function wpGetCurrentUser(): ?WP_User
+    public function wpGetCurrentUser(): WP_User
     {
         return wp_get_current_user();
     }
@@ -224,7 +224,11 @@ class WordpressMiddleware
 
     public function wpMail(string|array $to, string $subject, string $message, null|string|array $headers, ?array $attachments): bool
     {
-//        $headers = array('Content-Type: text/html; charset=UTF-8','From: My Site Name <support@example.com>');
         return wp_mail($to, $subject, $message, $headers, $attachments);
+    }
+
+    public function isShop(): bool
+    {
+        return is_shop();
     }
 }

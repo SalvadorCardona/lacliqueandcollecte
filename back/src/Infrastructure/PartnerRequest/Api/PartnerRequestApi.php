@@ -28,7 +28,9 @@ class PartnerRequestApi extends AbstractApiController
         $partnerRequest->email = (string)$this->request->get_param('email');
         $partnerRequest->siretNumber = (string)$this->request->get_param('siretNumber');
 
-        if ($user = $this->wordpressMiddleware->wpGetCurrentUser()) {
+        $user = $this->wordpressMiddleware->wpGetCurrentUser();
+
+        if ($user->ID !== 0) {
             $partnerRequest->email = $user->user_email;
         }
         if ($errors = $this->partnerRequestValidator->validator($partnerRequest)) {

@@ -6,7 +6,7 @@ import SearchViewComponent from "App/modules/search/components/search.view.compo
 import UiViewComponent from "App/modules/dev/components/ui/ui.view.component";
 import ProductViewComponent from "App/modules/product/components/product.view.component";
 import PartnerViewComponent from "App/modules/partner/components/partner.view.component";
-import RequestPartnerViewComponent from "App/modules/partner-request/components/request.partner.view.component";
+import PartnerRequestViewComponent from "App/modules/partner-request/components/partner.request.view.component";
 
 export default class DevComponent extends AppComponent {
 
@@ -43,7 +43,7 @@ export default class DevComponent extends AppComponent {
             case '#product':
                 return this.createElement(ProductViewComponent, {productId: 139});
             case '#partner-request':
-                return this.createElement(RequestPartnerViewComponent);
+                return this.createElement(PartnerRequestViewComponent);
             default:
                 return this.createElement(UiViewComponent);
         }
