@@ -11,7 +11,6 @@ import ConfigurationService from "App/core/configuration.service";
 import SearchService from "App/core/search.service";
 import headerProductsPage from "Media/product-page/header_products_page.svg";
 
-
 export default class SearchViewComponent extends AppComponent {
     @injector(SearchService)
     private searchService: SearchService;
