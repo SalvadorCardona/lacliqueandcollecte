@@ -9,6 +9,8 @@ import LoaderService from "App/core/loader.service";
 import {SearchParams} from "App/core/client/search.client";
 import ConfigurationService from "App/core/configuration.service";
 import SearchService from "App/core/search.service";
+import headerProductsPage from "Media/product-page/header_products_page.svg";
+
 
 export default class SearchViewComponent extends AppComponent {
     @injector(SearchService)
@@ -30,6 +32,7 @@ export default class SearchViewComponent extends AppComponent {
         return 'app-search-view';
     }
 
+
     public connectedCallback(): void {
         super.connectedCallback();
 
@@ -41,7 +44,7 @@ export default class SearchViewComponent extends AppComponent {
         if (!Object.keys(this.searchParams).length) {
             const queriedObject = this.configurationService.configuration.wpQuery.queriedObject;
 
-            if  (queriedObject) {
+            if (queriedObject) {
                 this.searchParams[queriedObject.taxonomy] = [queriedObject.termTaxonomyId];
             }
         }
@@ -52,8 +55,16 @@ export default class SearchViewComponent extends AppComponent {
     public render(): TemplateResult {
         return html`
             <div class="container-fluid">
-                <div class="col-md-12 text-center mt-5">
-                    <h1 class="title-border">${this.trans("search.view.title")}</h1>
+                <div style="background-image: url('${headerProductsPage}')"
+                     class="col-md-12 
+                    bg-white    
+                    overflow-hidden          
+                    p-5
+                    d-flex           
+                    justify-content-around
+                    bg-white">
+                    <h1 class="text-primary ml-5 text-bold border border-primary border-3 rounded bg-white p-3 text-uppercase ">
+                        ${this.trans("search.view.title")}</h1>
                 </div>
                 <div class="mt-5 row">
                     <div class="col-md-3">
