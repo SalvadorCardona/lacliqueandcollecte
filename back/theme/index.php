@@ -24,7 +24,7 @@ if (is_product()) {
     echo "<app-partner-view partnerPostId=\"{$post->ID}\"></app-partner-view>";
 } elseif (is_front_page()) {
     echo "<app-home-view></app-home-view>";
-} elseif (is_tax()) {
+} elseif (is_tax() || is_shop()) {
     echo "<app-search-view></app-search-view>";
 } elseif ($post->ID === 91) {
     echo "<app-partner-request-view></app-partner-request-view>";

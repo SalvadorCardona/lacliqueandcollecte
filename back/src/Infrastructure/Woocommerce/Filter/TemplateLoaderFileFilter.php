@@ -18,6 +18,7 @@ class TemplateLoaderFileFilter extends AbstractFilter
     {
         return $this->wordpressMiddleware->isTax()
             || $this->wordpressMiddleware->isProduct()
+            || $this->wordpressMiddleware->isShop()
             ? ['index.php'] : [];
     }
 

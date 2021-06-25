@@ -20,6 +20,7 @@ class WpQueryFormatter extends Formatter
     public function format($data): MiddlewareWPQuery
     {
         return (new MiddlewareWPQuery())
+            ->setQueriedObject($data->queried_object)
             ->setCommentCount($data->comment_count)
             ->setCurrentComment($data->current_comment)
             ->setCurrentPost($data->current_post)
@@ -56,6 +57,6 @@ class WpQueryFormatter extends Formatter
             ->setIsTrackback($data->is_trackback)
             ->setIsYear($data->is_year)
             ->setMaxNumCommentPages($data->max_num_comment_pages)
-            ->setMaxNumPages((int)$data->max_num_pages);
+            ->setMaxNumPages($data->max_num_pages);
     }
 }

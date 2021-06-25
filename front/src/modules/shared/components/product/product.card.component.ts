@@ -28,7 +28,7 @@ export default class ProductCardComponent extends AppComponent {
                     <img alt="product-image" src="${this.product.meta.thumbnail}">
                 </a>
                 <div class="product-name
-                    fs-4
+                    fs-5 text
                     text-secondary">${this.product.postTitle}</div>
                 <div class="product-price
                     fw-bold
