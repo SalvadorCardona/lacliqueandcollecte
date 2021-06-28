@@ -10,7 +10,7 @@ use App\Infrastructure\Wordpress\Middleware\WordpressMiddleware;
 class AddAssetsAction implements ActionInterface
 {
 
-/**
+    /**
      * AddAssetsAction constructor.
      */
     public function __construct(private string $publicDir, private MiddlewareConfigurationFactory $middlewareConfigurationFactory, private WordpressMiddleware $wordpressMiddleware)
@@ -24,12 +24,8 @@ class AddAssetsAction implements ActionInterface
 
             $this->wordpressMiddleware->wpEnqueueStyle('app-css', $this->wordpressMiddleware->getHomeUrl() . $manifest['styles/app.scss'], [], '1', 'all');
             $this->wordpressMiddleware->wpEnqueueScript('app-js', $this->wordpressMiddleware->getHomeUrl() . $manifest['src/app.ts'], [], '1', true);
-
-            $this->wordpressMiddleware->wpLocalizeScript(
-                'app-js',
-                'middlewareConfiguration',
-                (array) $this->middlewareConfigurationFactory->format()
-            );
+            $this->wordpressMiddleware->wpAddInlineScript('app-js', 'const main = document.getElementsByClassName("site-main"); main[0].innerHTML="<app-router>";', 'before');
+            $this->wordpressMiddleware->wpLocalizeScript('app-js', 'middlewareConfiguration', (array)$this->middlewareConfigurationFactory->format());
         }
     }
 

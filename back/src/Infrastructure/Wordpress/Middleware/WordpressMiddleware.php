@@ -176,6 +176,11 @@ class WordpressMiddleware
         return wp_localize_script($handle, $objectName, $l10n);
     }
 
+    public function wpAddInlineScript(string $handle, string $data, ?string $position): bool
+    {
+        return wp_add_inline_script($handle, $data, $position);
+    }
+
     public function addThemeSupport(string $feature, mixed ...$args): ?bool
     {
         return add_theme_support($feature, ...$args);
