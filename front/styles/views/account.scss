@@ -33,6 +33,12 @@
     width: 75%;
   }
 
+  div.woocommerce-Message {
+    color: $secondary;
+    display: block;
+    margin-bottom: 15px;
+  }
+
   div.woocommerce-message {
     color: $secondary;
     display: block;
@@ -93,11 +99,11 @@
     }
   }
 
-  nav.woocommerce-myaccount-navigation {
+  nav.woocommerce-MyAccount-navigation {
     display: block;
   }
 
-  div.woocommerce-myaccount-content {
+  div.woocommerce-MyAccount-content {
     @media (min-width: 768px) {
       margin-left: 75px;
     }
@@ -136,11 +142,11 @@
       }
     }
 
-    nav.woocommerce-myaccount-navigation {
+    nav.woocommerce-MyAccount-navigation {
       display: flex;
     }
 
-    div.woocommerce-myaccount-content {
+    div.woocommerce-MyAccount-content {
       display: block;
       margin-left: 75px;
     }
@@ -150,7 +156,7 @@
     }
   }
 
-  a.woocommerce-button {
+  a.woocommerce-Button {
     display: inline-block;
     font-weight: bold;
     margin: auto 20px 15px 30px;
