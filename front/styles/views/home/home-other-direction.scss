@@ -1,12 +1,11 @@
 app-home-other-direction {
+  .other-dir{
+    height: 500px;
+  }
   .with-background {
     background-size: cover;
-  }
 
-  .row > div {
-    height: 700px;
   }
-
   .h-50 {
     display: flex;
     justify-content: center;
