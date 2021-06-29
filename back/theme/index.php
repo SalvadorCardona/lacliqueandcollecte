@@ -15,7 +15,6 @@ if (! defined('ABSPATH')) {
 get_header();
 
 ?>
-<app-router></app-router>
 
 <?php
 get_footer();
