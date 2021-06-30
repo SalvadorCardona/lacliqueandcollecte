@@ -38,7 +38,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
             text: this.trans("home.argumentative.content.arg2"),
             button: this.createElement(ButtonComponent, {
                 classList: 'mt-2',
-                label: this.trans("home.argumentative.text.link.arg1"),
+                label: this.trans("home.argumentative.text.link.arg2"),
                 link: '/a-propos',
                 type: Color.SUCCESS
             })
@@ -49,7 +49,7 @@ export default class HomeArgumentativeComponent extends AppComponent {
             text: this.trans("home.argumentative.content.arg3"),
             button: this.createElement(ButtonComponent, {
                 classList: 'mt-2',
-                label: this.trans("home.argumentative.text.link.arg1"),
+                label: this.trans("home.argumentative.text.link.arg3"),
                 link: '/a-propos',
                 type: Color.SECONDARY
             })
