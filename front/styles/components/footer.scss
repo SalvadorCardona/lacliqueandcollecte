@@ -1,7 +1,13 @@
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
 app-footer {
   background-color: $secondary-darker-1;
   background-size: 750px;
-  z-index: -2;
+  z-index: 5;
 
   &::after {
     background-size: 800px;

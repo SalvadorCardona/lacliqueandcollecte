@@ -17,7 +17,7 @@ export default class RouterComponent extends AppComponent {
     private loaderService: LoaderService;
 
     @property({type: HTMLElement})
-    private content: AppComponent|null;
+    private content: AppComponent | null;
 
     @injector(EventService)
     private eventService: EventService;
@@ -44,8 +44,8 @@ export default class RouterComponent extends AppComponent {
             <header class="position-sticky top-0 bg-white" role="banner">
                 ${this.createElement(HeaderComponent)}
             </header>
-            ${this.content}
-            <footer id="site-footer" class="site-footer" role="contentinfo">
+            <div class="main-content"> ${this.content}</div>
+            <footer id="site-footer" class="site-footer page-footer" role="contentinfo">
                 ${this.createElement(FooterComponent)}
             </footer>
             <div class="position-fixed bottom-0 p-3 w-100 zindex-sticky" style="z-index: 999" role="banner">
