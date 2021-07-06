@@ -1,5 +1,10 @@
 @import url($main-font-url);
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 body {
   margin: 0; //Remove the margin in all browsers.
   font-family: $font-family-base;
@@ -8,6 +13,10 @@ body {
   line-height: $line-height-base;
   background-color: #f8f8fb;
   font-style: normal;
+}
+
+.main-content {
+  padding-bottom: 260px;
 }
 
 h1, h2, h3, h4, h5, h6 {
