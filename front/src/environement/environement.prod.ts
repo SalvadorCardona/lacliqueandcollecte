@@ -1,9 +1,9 @@
 export const environment = {
-    production: false,
+    production: true,
     baseSiteUrl: null,
     apiEndpoint: 'wp-json',
     idHomePage: 2,
-    serverApi: 'local.monpc.fr',
+    serverApi: 'remote.monpc.fr',
     apiEndpoints: {
         getProducts: 'wc/v3/products',
         cart: {

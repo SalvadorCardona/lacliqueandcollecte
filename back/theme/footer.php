@@ -19,6 +19,8 @@ if (!defined('ABSPATH')) {
 
 
 wp_footer();
+
+do_action('print_js');
 ?>
 
 </body>
