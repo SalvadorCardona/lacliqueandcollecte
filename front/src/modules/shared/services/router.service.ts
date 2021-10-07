@@ -53,6 +53,14 @@ export default class RouterService {
                             resolve(createElement(module.default.defaultComponent))
                         });
                     break;
+                case postId === 152:
+                    import('App/modules/dev/dev.modules')
+                        .then(module => {
+                            console.log('test');
+                            this.moduleService.addModule(module.default);
+                            resolve(createElement(module.default.defaultComponent))
+                        });
+                    break;
                 case wpQuery.isPage:
                     import('App/modules/page/page.module')
                         .then(module => {

@@ -18,8 +18,8 @@ export default class ProductCardComponent extends AppComponent {
 
     public render(): TemplateResult {
         return html`
-            <div class="product
-                type-product
+            <div class="zoomable
+                app-wrapper
                 d-flex
                 flex-column
                 align-items-center

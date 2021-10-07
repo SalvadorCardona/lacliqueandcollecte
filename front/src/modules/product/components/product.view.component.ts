@@ -64,7 +64,7 @@ export default class ProductViewComponent extends AppComponent {
 
         return html`
             <div class="container">
-                <div class="type-product">
+                <div class="type-product app-wrapper">
                     <div class="row">
                         <section class="col-md-6">
                             <img class="img-fluid" alt="${this.product.images[0].alt}" src="${this.product.images[0].src}"/>

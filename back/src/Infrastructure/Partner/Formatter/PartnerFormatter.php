@@ -41,6 +41,7 @@ class PartnerFormatter extends Formatter
 
         $dataFormatted = (array) $data;
         $dataFormatted['meta'] = $metaCleaned;
+	    $dataFormatted['guid'] = $this->wordpressMiddleware->getPermalink($data->ID);
 
         return $dataFormatted;
     }
