@@ -22,7 +22,7 @@ app-icon {
   display: inline;
 }
 
-.app-wrapper, .type-product, .modal-content, app-wrapper {
+.app-wrapper, app-wrapper {
   display: block;
   margin: 15px 0 15px 0;
   padding: 30px;
@@ -151,4 +151,12 @@ a {
   margin-bottom: 30px;
   color: $primary;
   text-transform: uppercase;
+}
+
+.zoomable {
+  @include app-transition();
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

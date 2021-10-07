@@ -1,7 +1,7 @@
 app-footer {
   background-color: $secondary-darker-1;
   background-size: 750px;
-  z-index: -2;
+  z-index: 5;
 
   &::after {
     background-size: 800px;
@@ -36,6 +36,11 @@ app-footer {
 
     a {
       color: $white;
+      transition: transform 0.2s;
+    }
+
+    a:hover {
+      color: $neutral-3;
     }
   }
 }

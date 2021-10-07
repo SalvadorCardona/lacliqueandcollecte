@@ -11,11 +11,12 @@
 @import "~bootstrap/scss/images";
 @import "~bootstrap/scss/transitions";
 @import "mixins";
-@import "base";
+@import "global";
 @import "~bootstrap/scss/navbar";
 @import "views/partner";
 @import "views/product";
 @import "views/home/home";
+@import "views/account";
 @import "views/search/search";
 @import "components/loader";
 @import "components/header";
