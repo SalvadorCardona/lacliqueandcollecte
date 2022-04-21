@@ -9,7 +9,7 @@
   "scripts": {
     "eslint": "eslint . --ext .ts",
     "parcel": "parcel ./index.html  --out-dir ./../back/web -o app",
-    "build": "parcel build ./index.html  --out-dir ./../back/web -o app",
+    "build": "parcel build ./index.html  --out-dir ./../back/web -o app ",
     "stylelint": "stylelint styles/**/*.scss --fix"
   },
   "repository": {

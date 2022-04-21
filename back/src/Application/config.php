@@ -19,6 +19,7 @@ use App\Infrastructure\Woocommerce\Filter\WoocommerceRestCheckPermissionFilter;
 use App\Infrastructure\Wordpress\Action\AddAssetsAction;
 use App\Infrastructure\Wordpress\Action\AddCityAction;
 use App\Infrastructure\Wordpress\Action\LoadApiAction;
+use App\Infrastructure\Wordpress\Action\PrintJsAction;
 use App\Infrastructure\Wordpress\Action\WordpressThemeSupportAction;
 use App\Infrastructure\Wordpress\Api\TranslateApi;
 use App\Infrastructure\Wordpress\Middleware\MiddlewareConfigurationFactory;
@@ -53,7 +54,8 @@ return [
         WoocommerceRestCheckPermissionFilter::class,
         AddProductCatToPartnerFilter::class,
         AddPartnerToPostTypeFilter::class,
-        AddRolePartnerAction::class
+        AddRolePartnerAction::class,
+        PrintJsAction::class
     ],
     Logger::class => DI\factory(function (ContainerInterface $c) {
         return Logger::create($c->get('logger.name'), $c->get('logger.file'));
@@ -63,5 +65,8 @@ return [
     }),
     AddAssetsAction::class => DI\factory(function (ContainerInterface $c) {
         return new AddAssetsAction($c->get('dir.public'), $c->get(MiddlewareConfigurationFactory::class), new WordpressMiddleware());
+    }),
+    PrintJsAction::class => DI\factory(function (ContainerInterface $c) {
+        return new PrintJsAction($c->get('dir.public'), $c->get(MiddlewareConfigurationFactory::class));
     })
 ];
